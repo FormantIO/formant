@@ -73,7 +73,7 @@ The Figure Agent ingests tagged streams of datapoints. Below is a diagram descri
 2. Create the `$HOME/.figure/config.toml` configuration file (can be empty)
 3. Extract the `figure-agent` binary from the tar package and run it.
 4. Sign in with your admin credentials when asked.
-5. Run one of the (examples)[examples].
+5. Run one of the [examples](examples).
 
 ### Install & Setup
 
@@ -236,7 +236,7 @@ ros-topic = "/joint_states/joint_2"
 ros-path = "data" #optional
 ```
 
-By deploying the Figure ROS Node, you can listen to specific ros topics with 0 code.
+By deploying the Figure ROS Node, you can listen to specific ros topics without writing code.
 
 We support the following data types (parsed from ros messages):
 
