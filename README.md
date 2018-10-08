@@ -157,7 +157,7 @@ This is the bare minimum required to identify a stream.
 ```toml
 [[streams]]
 name = "robot.arm.state"
-[tags]
+[[streams.tags]]
 arm="arm.12345"
 ```
 
