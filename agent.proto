@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package agent;
+
+//RPC for the Figure Agent Server.
+service Agent {
+    //Accepts a stream of data points.
+    rpc StreamData(stream Datapoint)  returns (StreamDataResponse) {}
+    //Accepts a single data point per RPC call. Also exposed as a HTTP Endpoint.
+    rpc PostData(Datapoint) returns (PostDataResponse) {}
+    //Registers a ROS Topic and its msg type.
+    rpc RegisterROSTopic(ROSTopic) returns (RegisterROSTopicResponse) {}
+    //Gets the ROS topics defined in the agent config.
+    rpc GetROSTopics(GetROSTopicsRequest) returns (GetROSTopicsResponse) {}
+}
+
+
+//Data point Content types.
+enum ContentType {
+    UNKNOWN = 0;
+    TEXT = 1;
+    NUMERIC = 2;
+    PNG = 3;
+    JPEG = 4;
+    VIDEO = 5;
+    FILE = 6;
+    POINTCLOUD = 7;
+    ROS = 11;
+}
+
+//Data message.
+message Datapoint {
+    //Stream name. Must match Stream in config.
+    string stream = 1;
+    //Timestamp in milliseconds since the epoch.
+    int64 timestamp = 2;
+    //Content type defined by enum above.
+    ContentType type = 3;
+    //Raw byte data.
+    bytes data = 4;
+}
+
+message StreamDataResponse {}
+
+message PostDataResponse {}
+
+//ROS-specific
+
+message GetROSTopicsRequest {}
+
+message RegisterROSTopicResponse {}
+
+message GetROSTopicsResponse {
+    repeated string topics = 1;
+}
+
+message ROSTopic {
+    string name = 1;
+    string data_type = 2;
+    string msg_desc = 3;
+    repeated Tag tags = 4;
+}
+
+message Tag {
+    string key = 1;
+    string value = 2;
+}
