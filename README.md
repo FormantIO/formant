@@ -71,7 +71,7 @@ The Figure Agent ingests tagged streams of datapoints. Below is a diagram descri
 
 1. Download the latest release.
 2. Create the `$HOME/.figure/config.toml` configuration file (can be empty)
-3. Extract the `figure-agent-server` binary from the tar package and run it.
+3. Extract the `figure-agent` binary from the tar package and run it.
 4. Sign in with your admin credentials when asked.
 5. Run one of the (examples)[examples].
 
@@ -175,7 +175,7 @@ ext = ".jpg"
 
 This is an example of a directory watching stream. We need to define several components so that the watcher knows how to parse and transmit the files to the Figure Agent.
 
-`dir`: the directory to watch. The figure-Figure Watcher must have read access to this directory.
+`dir`: the directory to watch. The Figure Watcher must have read access to this directory.
 
 `figure-type`: the figure data type for this directory watch stream.
 We currently support the following data types for directory watching:
