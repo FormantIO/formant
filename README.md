@@ -330,5 +330,6 @@ curl -v http://localhost:5502/v1/data -d '{
     "data": "dGhpcyBpcyBhIGRhdGFwb2ludA=="
 }'
 ```
+** For numeric types you will want to convert to a little endian byte array and encode that to base64 **
 
 Examples of these implementations in several languages are available in [examples](examples/).
