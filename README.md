@@ -11,6 +11,9 @@ This repository provides software releases and documentation for development wit
     -   [Figure ROS Node](#figure-ros-node)
     -   [Datapoint Lifecycle](*datapoint-lifecycle)
     -   [Install &amp; Setup](#install--setup)
+        - [Credentials Setup](#credentials-setup)
+        - [Debian Install](#debian-install)
+        - [Standalone Binary](#standalone-binary)
         -   [ROS Setup](#ros-setup)
     -   [Configuration](#configuration)
         -   [Figure](#figure-1)
@@ -70,15 +73,65 @@ The Figure Agent ingests tagged streams of datapoints. Below is a diagram descri
 
 ### Install & Setup
 
-The Figure Agent is currently available for Linux AMD 64-bit operating systems. Binaries are available in the Releases section of this repository. Debian packages, containers, and binaries for additional operating systems and architectures will be available in the near future.
-
-The Figure Agent requires read/write access to the directory `$HOME/.figure/` where `$HOME` is the home directory of the user used to run the Figure Agent.
-
-The Figure Cloud uses asymmetric authentication to verify the identity of each agent. To generate credentials for your agent run the Figure Agent binary. On first launch, it will prompt you to enter your admin `username` and `password`, which authenticates with the Figure Cloud and generates a unique asymmetric key for your agent. Internally, the Figure Agent periodically generates an expiring signed JWT(JSON Web Token) that the Figure Cloud uses to verify the agent's identity. These credentials are stored in `$HOME/.figure/`.
+The Figure Agent is currently available for Linux AMD 64-bit operating systems. Binaries and Debian packages are available in the Releases section of this repository. Debian packages are compatible with systemd. Containers and binaries for additional operating systems and architectures will be available in the near future.
 
 When running sources, ensure the Figure Agent is up and running first. The ROS source and the Watcher source will both attempt reconnections if the Figure Agent is not up or goes down.
 
+#### Credentials Setup
+
+The Figure Cloud uses asymmetric authentication to verify the identity of each agent. On first launch or install, it will prompt you to enter your admin `email` and `password`, which authenticates with the Figure Cloud and generates a unique asymmetric key for your agent. Alternatively, you can set the environment variables `FIGURE_EMAIL` and `FIGURE_PASSWORD` for the initial installation and setup. This can help automate installations for larger fleets. You should also make sure to unset these environment variables after the initial installation.
+
+Internally, the Figure Agent periodically generates an expiring signed JWT(JSON Web Token) that the Figure Cloud uses to verify the agents identity.
+
+#### Debian Install
+
+The Figure Agent debian package will setup a `figure` linux user and group. It also creates the `/home/figure` user directory where its configuration and credentials live. You should first install the Figure Agent by running:
+
+```bash
+dpkg -i figure_agent_amd64.deb
+```
+
+If you ever delete the contents of `/home/figure/`, you will be required to re-provision the Figure Agent and your `config.toml` will be erased.
+
+To install the Figure Watcher you can run:
+
+```bash
+dpkg -i figure_watcher_amd64.deb
+```
+
+systemd makes it easy to manage the application lifecycle. By default, we do not enable auto-starting on boot the Figure Agent or Watcher. To enable this you can run:
+
+```bash
+systemctl enable figure-agent
+systemctl enable figure-watcher
+```
+
+To check the status of any component:
+
+```bash
+systemctl status figure-agent
+```
+
+You can also check the log output of each using `journalctl`, for example:
+
+```bash
+journalctl -u figure-agent
+```
+
+If you make a change to the configuration file specified below you will need to run:
+
+```bash
+systemctl restart figure-agent
+```
+
+### Standalone Binary
+
+To run the standalone Figure Agent, download the latest release and run `./figure-agent`.
+
+The standalone Figure Agent requires read/write access to the directory `$HOME/.figure/` where `$HOME` is the home directory of the user used to run the Figure Agent components.
+
 If you ever delete the contents of `$HOME/.figure/`, you will need to re-run the agent provisioning step to re-generate credentials.
+
 
 #### ROS Setup
 
@@ -94,7 +147,10 @@ You can find an example of a launch file in the [ROS examples](examples/ros/) di
 
 ### Configuration
 
-The Figure Configuration is specified in a `toml` configuration file. This file must be located at `$HOME/.figure/config.toml` where `$HOME` is the home directory of the user used to run the Figure Agent.
+The Figure Configuration is specified in a `toml` configuration file. The file location is dependent on the install type:
+
+1. For debian packages: `/home/figure/config.toml`
+2. For standalone binary: `$HOME/.figure/config.toml`
 
 Please note that both the Figure Agent and Figure sources require access to the `config.toml` file.
 
@@ -132,9 +188,13 @@ The `[tags]` section enumerates tags used for all streaming data points. These t
 
 #### Streams
 
-Streams are defined by a `toml` array. Each Stream is prefixed with a `[[streams]]` identifier. You are limited to 20 streams per agent. Streams with invalid configuration or in excess of the limit will not be accepted.
+Streams are defined by a `toml` array. Each Stream is prefixed with a `[[streams]]` identifier.
 
-The agent will throttle high-frequency data streams to 5Hz.
+Streams managed by a Figure source (such as the Figure ROS Node or Figure Watcher) must be defined in the configuration file.
+
+Streams produced by a custom source will be created dynamically.
+
+In both cases, the agent will support a maximum of 20 total streams. It automatically throttles high-frequency streams to 5Hz. It can accept datapoints up to 4MB
 
 #### Basic Stream
 
@@ -164,6 +224,7 @@ name = "camera.image.drop"
 dir = "/home/camera/upload"
 figure-type = "image"
 ext = ".jpg"
+remote-agent = false #optional
 ```
 
 This is an example of a directory-watch stream used by the Figure Watcher. We need to define several properties so that the watcher knows how to parse and transmit the files to the Figure Agent.
@@ -176,8 +237,11 @@ We currently support the following data types for directory watching:
 1. `image`
 2. `video`
 3. `point cloud`
+4. `file`
 
 `ext` : The extension to watch for. Please note the included `.` in the extension.
+
+`remote-agent` : If set to `false`, the Figure Watcher will stream datapoints with just the file location to the Figure Agent. If set to `true`, the Figure Watcher will read the files and send the raw file data to the Figure Agent. If set to `true` the file size limit is 2MB. This is useful to enable when your watcher and agent are running on seperate machines within a local network. (Defaults to `false`)
 
 #### File Tail Stream
 
@@ -284,22 +348,7 @@ The `PostData` RPC is a unary-type RPC that accepts single `Data` messages.
 
 We recommend the `StreamData` endpoint for better performance.
 
-Both `StreamData` and `PostData` accept the same `Data` message type:
-
-```protobuf
-message Data {
-    // Stream name. Must match stream in config.
-    string stream = 1;
-    // Timestamp in miliseconds from epoch.
-    int64 timestamp = 2;
-    // Content Type defined by enum above.
-    ContentType type = 3;
-    // Raw byte data.
-    bytes data = 4;
-}
-```
-
-** Please note, your stream must be defined in the Figure configuration file. **
+Both `StreamData` and `PostData` accept the same `Datapoint` message type defined in [agent.proto](agent.proto).
 
 Examples of integrating with these endpoints in several languages are available in the [examples](examples/) folder.
 
@@ -313,12 +362,10 @@ You can POST data to the `/v1/data` endpoint with the following JSON payload:
 {
     "stream": "<stream name>",
     "timestamp": 1538624058748,
-    "type": "<content type>",
-    "data": "<base64 encoded bytes>"
+    "<data_type>": { <data_object> }
 }
 ```
 
-`<content type>` is `TEXT`, `NUMERIC`, `PNG`, `JPEG`, `VIDEO`, `FILE`, `POINTCLOUD`, or `ROS`.
 
 So, for example, to send a datapoint with the text "this is a datapoint" to stream "stream.001", POST the following to `/v1/data`:
 
@@ -326,10 +373,9 @@ So, for example, to send a datapoint with the text "this is a datapoint" to stre
 curl -v http://localhost:5502/v1/data -d '{
     "stream": "stream.001",
     "timestamp": 1538624058748,
-    "type": "TEXT",
-    "data": "dGhpcyBpcyBhIGRhdGFwb2ludA=="
+    "text" : {"value" : "this is a datapoint" }
 }'
 ```
-** For numeric types you will want to convert to a little endian byte array and encode that to base64 **
+** For `bytes` types you will need to encode as a base64 string**
 
 Examples of these implementations in several languages are available in [examples](examples/).

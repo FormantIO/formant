@@ -7,7 +7,6 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	context "golang.org/x/net/context"
-	_ "google.golang.org/genproto/googleapis/api/annotations"
 	grpc "google.golang.org/grpc"
 	math "math"
 )
@@ -23,51 +22,167 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-// Data point Content types.
-type ContentType int32
-
-const (
-	ContentType_UNKNOWN    ContentType = 0
-	ContentType_TEXT       ContentType = 1
-	ContentType_NUMERIC    ContentType = 2
-	ContentType_PNG        ContentType = 3
-	ContentType_JPEG       ContentType = 4
-	ContentType_VIDEO      ContentType = 5
-	ContentType_FILE       ContentType = 6
-	ContentType_POINTCLOUD ContentType = 7
-	ContentType_ROS        ContentType = 11
-)
-
-var ContentType_name = map[int32]string{
-	0:  "UNKNOWN",
-	1:  "TEXT",
-	2:  "NUMERIC",
-	3:  "PNG",
-	4:  "JPEG",
-	5:  "VIDEO",
-	6:  "FILE",
-	7:  "POINTCLOUD",
-	11: "ROS",
+type StreamDataResponse struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
 }
 
-var ContentType_value = map[string]int32{
-	"UNKNOWN":    0,
-	"TEXT":       1,
-	"NUMERIC":    2,
-	"PNG":        3,
-	"JPEG":       4,
-	"VIDEO":      5,
-	"FILE":       6,
-	"POINTCLOUD": 7,
-	"ROS":        11,
-}
-
-func (x ContentType) String() string {
-	return proto.EnumName(ContentType_name, int32(x))
-}
-
-func (ContentType) EnumDescriptor() ([]byte, []int) {
+func (m *StreamDataResponse) Reset()         { *m = StreamDataResponse{} }
+func (m *StreamDataResponse) String() string { return proto.CompactTextString(m) }
+func (*StreamDataResponse) ProtoMessage()    {}
+func (*StreamDataResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_56ede974c0020f77, []int{0}
+}
+
+func (m *StreamDataResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_StreamDataResponse.Unmarshal(m, b)
+}
+func (m *StreamDataResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_StreamDataResponse.Marshal(b, m, deterministic)
+}
+func (m *StreamDataResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_StreamDataResponse.Merge(m, src)
+}
+func (m *StreamDataResponse) XXX_Size() int {
+	return xxx_messageInfo_StreamDataResponse.Size(m)
+}
+func (m *StreamDataResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_StreamDataResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_StreamDataResponse proto.InternalMessageInfo
+
+type PostDataResponse struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *PostDataResponse) Reset()         { *m = PostDataResponse{} }
+func (m *PostDataResponse) String() string { return proto.CompactTextString(m) }
+func (*PostDataResponse) ProtoMessage()    {}
+func (*PostDataResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{1}
+}
+
+func (m *PostDataResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PostDataResponse.Unmarshal(m, b)
+}
+func (m *PostDataResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PostDataResponse.Marshal(b, m, deterministic)
+}
+func (m *PostDataResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PostDataResponse.Merge(m, src)
+}
+func (m *PostDataResponse) XXX_Size() int {
+	return xxx_messageInfo_PostDataResponse.Size(m)
+}
+func (m *PostDataResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_PostDataResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PostDataResponse proto.InternalMessageInfo
+
+type GetROSTopicsRequest struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetROSTopicsRequest) Reset()         { *m = GetROSTopicsRequest{} }
+func (m *GetROSTopicsRequest) String() string { return proto.CompactTextString(m) }
+func (*GetROSTopicsRequest) ProtoMessage()    {}
+func (*GetROSTopicsRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{2}
+}
+
+func (m *GetROSTopicsRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetROSTopicsRequest.Unmarshal(m, b)
+}
+func (m *GetROSTopicsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetROSTopicsRequest.Marshal(b, m, deterministic)
+}
+func (m *GetROSTopicsRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetROSTopicsRequest.Merge(m, src)
+}
+func (m *GetROSTopicsRequest) XXX_Size() int {
+	return xxx_messageInfo_GetROSTopicsRequest.Size(m)
+}
+func (m *GetROSTopicsRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetROSTopicsRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetROSTopicsRequest proto.InternalMessageInfo
+
+type RegisterROSTopicResponse struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *RegisterROSTopicResponse) Reset()         { *m = RegisterROSTopicResponse{} }
+func (m *RegisterROSTopicResponse) String() string { return proto.CompactTextString(m) }
+func (*RegisterROSTopicResponse) ProtoMessage()    {}
+func (*RegisterROSTopicResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{3}
+}
+
+func (m *RegisterROSTopicResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RegisterROSTopicResponse.Unmarshal(m, b)
+}
+func (m *RegisterROSTopicResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RegisterROSTopicResponse.Marshal(b, m, deterministic)
+}
+func (m *RegisterROSTopicResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RegisterROSTopicResponse.Merge(m, src)
+}
+func (m *RegisterROSTopicResponse) XXX_Size() int {
+	return xxx_messageInfo_RegisterROSTopicResponse.Size(m)
+}
+func (m *RegisterROSTopicResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_RegisterROSTopicResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_RegisterROSTopicResponse proto.InternalMessageInfo
+
+type GetROSTopicsResponse struct {
+	Topics               []string `protobuf:"bytes,1,rep,name=topics,proto3" json:"topics,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetROSTopicsResponse) Reset()         { *m = GetROSTopicsResponse{} }
+func (m *GetROSTopicsResponse) String() string { return proto.CompactTextString(m) }
+func (*GetROSTopicsResponse) ProtoMessage()    {}
+func (*GetROSTopicsResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{4}
+}
+
+func (m *GetROSTopicsResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetROSTopicsResponse.Unmarshal(m, b)
+}
+func (m *GetROSTopicsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetROSTopicsResponse.Marshal(b, m, deterministic)
+}
+func (m *GetROSTopicsResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetROSTopicsResponse.Merge(m, src)
+}
+func (m *GetROSTopicsResponse) XXX_Size() int {
+	return xxx_messageInfo_GetROSTopicsResponse.Size(m)
+}
+func (m *GetROSTopicsResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetROSTopicsResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetROSTopicsResponse proto.InternalMessageInfo
+
+func (m *GetROSTopicsResponse) GetTopics() []string {
+	if m != nil {
+		return m.Topics
+	}
+	return nil
 }
 
 // Data message.
@@ -76,20 +191,29 @@ type Datapoint struct {
 	Stream string `protobuf:"bytes,1,opt,name=stream,proto3" json:"stream,omitempty"`
 	// Timestamp in milliseconds since the epoch.
 	Timestamp int64 `protobuf:"varint,2,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	// Content type defined by enum above.
-	Type ContentType `protobuf:"varint,3,opt,name=type,proto3,enum=agent.ContentType" json:"type,omitempty"`
-	// Raw byte data.
-	Data                 []byte   `protobuf:"bytes,4,opt,name=data,proto3" json:"data,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	// Data payload, use one of the fields below.
+	//
+	// Types that are valid to be assigned to Data:
+	//	*Datapoint_Raw
+	//	*Datapoint_Text
+	//	*Datapoint_Numeric
+	//	*Datapoint_File
+	//	*Datapoint_Image
+	//	*Datapoint_Video
+	//	*Datapoint_PointCloud
+	//	*Datapoint_Location
+	//	*Datapoint_RosMessage
+	Data                 isDatapoint_Data `protobuf_oneof:"data"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
+	XXX_unrecognized     []byte           `json:"-"`
+	XXX_sizecache        int32            `json:"-"`
 }
 
 func (m *Datapoint) Reset()         { *m = Datapoint{} }
 func (m *Datapoint) String() string { return proto.CompactTextString(m) }
 func (*Datapoint) ProtoMessage()    {}
 func (*Datapoint) Descriptor() ([]byte, []int) {
-	return fileDescriptor_56ede974c0020f77, []int{0}
+	return fileDescriptor_56ede974c0020f77, []int{5}
 }
 
 func (m *Datapoint) XXX_Unmarshal(b []byte) error {
@@ -124,179 +248,1075 @@ func (m *Datapoint) GetTimestamp() int64 {
 	return 0
 }
 
-func (m *Datapoint) GetType() ContentType {
-	if m != nil {
-		return m.Type
-	}
-	return ContentType_UNKNOWN
+type isDatapoint_Data interface {
+	isDatapoint_Data()
 }
 
-func (m *Datapoint) GetData() []byte {
+type Datapoint_Raw struct {
+	Raw []byte `protobuf:"bytes,4,opt,name=raw,proto3,oneof"`
+}
+
+type Datapoint_Text struct {
+	Text *Text `protobuf:"bytes,5,opt,name=text,proto3,oneof"`
+}
+
+type Datapoint_Numeric struct {
+	Numeric *Numeric `protobuf:"bytes,6,opt,name=numeric,proto3,oneof"`
+}
+
+type Datapoint_File struct {
+	File *File `protobuf:"bytes,7,opt,name=file,proto3,oneof"`
+}
+
+type Datapoint_Image struct {
+	Image *Image `protobuf:"bytes,8,opt,name=image,proto3,oneof"`
+}
+
+type Datapoint_Video struct {
+	Video *Video `protobuf:"bytes,9,opt,name=video,proto3,oneof"`
+}
+
+type Datapoint_PointCloud struct {
+	PointCloud *PointCloud `protobuf:"bytes,10,opt,name=point_cloud,json=pointCloud,proto3,oneof"`
+}
+
+type Datapoint_Location struct {
+	Location *Location `protobuf:"bytes,11,opt,name=location,proto3,oneof"`
+}
+
+type Datapoint_RosMessage struct {
+	RosMessage *ROSMessage `protobuf:"bytes,12,opt,name=ros_message,json=rosMessage,proto3,oneof"`
+}
+
+func (*Datapoint_Raw) isDatapoint_Data() {}
+
+func (*Datapoint_Text) isDatapoint_Data() {}
+
+func (*Datapoint_Numeric) isDatapoint_Data() {}
+
+func (*Datapoint_File) isDatapoint_Data() {}
+
+func (*Datapoint_Image) isDatapoint_Data() {}
+
+func (*Datapoint_Video) isDatapoint_Data() {}
+
+func (*Datapoint_PointCloud) isDatapoint_Data() {}
+
+func (*Datapoint_Location) isDatapoint_Data() {}
+
+func (*Datapoint_RosMessage) isDatapoint_Data() {}
+
+func (m *Datapoint) GetData() isDatapoint_Data {
 	if m != nil {
 		return m.Data
 	}
 	return nil
 }
 
-type StreamDataResponse struct {
+func (m *Datapoint) GetRaw() []byte {
+	if x, ok := m.GetData().(*Datapoint_Raw); ok {
+		return x.Raw
+	}
+	return nil
+}
+
+func (m *Datapoint) GetText() *Text {
+	if x, ok := m.GetData().(*Datapoint_Text); ok {
+		return x.Text
+	}
+	return nil
+}
+
+func (m *Datapoint) GetNumeric() *Numeric {
+	if x, ok := m.GetData().(*Datapoint_Numeric); ok {
+		return x.Numeric
+	}
+	return nil
+}
+
+func (m *Datapoint) GetFile() *File {
+	if x, ok := m.GetData().(*Datapoint_File); ok {
+		return x.File
+	}
+	return nil
+}
+
+func (m *Datapoint) GetImage() *Image {
+	if x, ok := m.GetData().(*Datapoint_Image); ok {
+		return x.Image
+	}
+	return nil
+}
+
+func (m *Datapoint) GetVideo() *Video {
+	if x, ok := m.GetData().(*Datapoint_Video); ok {
+		return x.Video
+	}
+	return nil
+}
+
+func (m *Datapoint) GetPointCloud() *PointCloud {
+	if x, ok := m.GetData().(*Datapoint_PointCloud); ok {
+		return x.PointCloud
+	}
+	return nil
+}
+
+func (m *Datapoint) GetLocation() *Location {
+	if x, ok := m.GetData().(*Datapoint_Location); ok {
+		return x.Location
+	}
+	return nil
+}
+
+func (m *Datapoint) GetRosMessage() *ROSMessage {
+	if x, ok := m.GetData().(*Datapoint_RosMessage); ok {
+		return x.RosMessage
+	}
+	return nil
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*Datapoint) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _Datapoint_OneofMarshaler, _Datapoint_OneofUnmarshaler, _Datapoint_OneofSizer, []interface{}{
+		(*Datapoint_Raw)(nil),
+		(*Datapoint_Text)(nil),
+		(*Datapoint_Numeric)(nil),
+		(*Datapoint_File)(nil),
+		(*Datapoint_Image)(nil),
+		(*Datapoint_Video)(nil),
+		(*Datapoint_PointCloud)(nil),
+		(*Datapoint_Location)(nil),
+		(*Datapoint_RosMessage)(nil),
+	}
+}
+
+func _Datapoint_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*Datapoint)
+	// data
+	switch x := m.Data.(type) {
+	case *Datapoint_Raw:
+		b.EncodeVarint(4<<3 | proto.WireBytes)
+		b.EncodeRawBytes(x.Raw)
+	case *Datapoint_Text:
+		b.EncodeVarint(5<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Text); err != nil {
+			return err
+		}
+	case *Datapoint_Numeric:
+		b.EncodeVarint(6<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Numeric); err != nil {
+			return err
+		}
+	case *Datapoint_File:
+		b.EncodeVarint(7<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.File); err != nil {
+			return err
+		}
+	case *Datapoint_Image:
+		b.EncodeVarint(8<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Image); err != nil {
+			return err
+		}
+	case *Datapoint_Video:
+		b.EncodeVarint(9<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Video); err != nil {
+			return err
+		}
+	case *Datapoint_PointCloud:
+		b.EncodeVarint(10<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.PointCloud); err != nil {
+			return err
+		}
+	case *Datapoint_Location:
+		b.EncodeVarint(11<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Location); err != nil {
+			return err
+		}
+	case *Datapoint_RosMessage:
+		b.EncodeVarint(12<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.RosMessage); err != nil {
+			return err
+		}
+	case nil:
+	default:
+		return fmt.Errorf("Datapoint.Data has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _Datapoint_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*Datapoint)
+	switch tag {
+	case 4: // data.raw
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeRawBytes(true)
+		m.Data = &Datapoint_Raw{x}
+		return true, err
+	case 5: // data.text
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(Text)
+		err := b.DecodeMessage(msg)
+		m.Data = &Datapoint_Text{msg}
+		return true, err
+	case 6: // data.numeric
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(Numeric)
+		err := b.DecodeMessage(msg)
+		m.Data = &Datapoint_Numeric{msg}
+		return true, err
+	case 7: // data.file
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(File)
+		err := b.DecodeMessage(msg)
+		m.Data = &Datapoint_File{msg}
+		return true, err
+	case 8: // data.image
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(Image)
+		err := b.DecodeMessage(msg)
+		m.Data = &Datapoint_Image{msg}
+		return true, err
+	case 9: // data.video
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(Video)
+		err := b.DecodeMessage(msg)
+		m.Data = &Datapoint_Video{msg}
+		return true, err
+	case 10: // data.point_cloud
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(PointCloud)
+		err := b.DecodeMessage(msg)
+		m.Data = &Datapoint_PointCloud{msg}
+		return true, err
+	case 11: // data.location
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(Location)
+		err := b.DecodeMessage(msg)
+		m.Data = &Datapoint_Location{msg}
+		return true, err
+	case 12: // data.ros_message
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(ROSMessage)
+		err := b.DecodeMessage(msg)
+		m.Data = &Datapoint_RosMessage{msg}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _Datapoint_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*Datapoint)
+	// data
+	switch x := m.Data.(type) {
+	case *Datapoint_Raw:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Raw)))
+		n += len(x.Raw)
+	case *Datapoint_Text:
+		s := proto.Size(x.Text)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *Datapoint_Numeric:
+		s := proto.Size(x.Numeric)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *Datapoint_File:
+		s := proto.Size(x.File)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *Datapoint_Image:
+		s := proto.Size(x.Image)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *Datapoint_Video:
+		s := proto.Size(x.Video)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *Datapoint_PointCloud:
+		s := proto.Size(x.PointCloud)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *Datapoint_Location:
+		s := proto.Size(x.Location)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *Datapoint_RosMessage:
+		s := proto.Size(x.RosMessage)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+type Text struct {
+	Value                string   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
+	Format               string   `protobuf:"bytes,2,opt,name=format,proto3" json:"format,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *StreamDataResponse) Reset()         { *m = StreamDataResponse{} }
-func (m *StreamDataResponse) String() string { return proto.CompactTextString(m) }
-func (*StreamDataResponse) ProtoMessage()    {}
-func (*StreamDataResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_56ede974c0020f77, []int{1}
+func (m *Text) Reset()         { *m = Text{} }
+func (m *Text) String() string { return proto.CompactTextString(m) }
+func (*Text) ProtoMessage()    {}
+func (*Text) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{6}
 }
 
-func (m *StreamDataResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_StreamDataResponse.Unmarshal(m, b)
+func (m *Text) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Text.Unmarshal(m, b)
 }
-func (m *StreamDataResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_StreamDataResponse.Marshal(b, m, deterministic)
+func (m *Text) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Text.Marshal(b, m, deterministic)
 }
-func (m *StreamDataResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_StreamDataResponse.Merge(m, src)
+func (m *Text) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Text.Merge(m, src)
 }
-func (m *StreamDataResponse) XXX_Size() int {
-	return xxx_messageInfo_StreamDataResponse.Size(m)
+func (m *Text) XXX_Size() int {
+	return xxx_messageInfo_Text.Size(m)
 }
-func (m *StreamDataResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_StreamDataResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_StreamDataResponse proto.InternalMessageInfo
-
-type PostDataResponse struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+func (m *Text) XXX_DiscardUnknown() {
+	xxx_messageInfo_Text.DiscardUnknown(m)
 }
 
-func (m *PostDataResponse) Reset()         { *m = PostDataResponse{} }
-func (m *PostDataResponse) String() string { return proto.CompactTextString(m) }
-func (*PostDataResponse) ProtoMessage()    {}
-func (*PostDataResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_56ede974c0020f77, []int{2}
-}
+var xxx_messageInfo_Text proto.InternalMessageInfo
 
-func (m *PostDataResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PostDataResponse.Unmarshal(m, b)
-}
-func (m *PostDataResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PostDataResponse.Marshal(b, m, deterministic)
-}
-func (m *PostDataResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PostDataResponse.Merge(m, src)
-}
-func (m *PostDataResponse) XXX_Size() int {
-	return xxx_messageInfo_PostDataResponse.Size(m)
-}
-func (m *PostDataResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_PostDataResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PostDataResponse proto.InternalMessageInfo
-
-type GetROSTopicsRequest struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *GetROSTopicsRequest) Reset()         { *m = GetROSTopicsRequest{} }
-func (m *GetROSTopicsRequest) String() string { return proto.CompactTextString(m) }
-func (*GetROSTopicsRequest) ProtoMessage()    {}
-func (*GetROSTopicsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_56ede974c0020f77, []int{3}
-}
-
-func (m *GetROSTopicsRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetROSTopicsRequest.Unmarshal(m, b)
-}
-func (m *GetROSTopicsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetROSTopicsRequest.Marshal(b, m, deterministic)
-}
-func (m *GetROSTopicsRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetROSTopicsRequest.Merge(m, src)
-}
-func (m *GetROSTopicsRequest) XXX_Size() int {
-	return xxx_messageInfo_GetROSTopicsRequest.Size(m)
-}
-func (m *GetROSTopicsRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetROSTopicsRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_GetROSTopicsRequest proto.InternalMessageInfo
-
-type RegisterROSTopicResponse struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *RegisterROSTopicResponse) Reset()         { *m = RegisterROSTopicResponse{} }
-func (m *RegisterROSTopicResponse) String() string { return proto.CompactTextString(m) }
-func (*RegisterROSTopicResponse) ProtoMessage()    {}
-func (*RegisterROSTopicResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_56ede974c0020f77, []int{4}
-}
-
-func (m *RegisterROSTopicResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RegisterROSTopicResponse.Unmarshal(m, b)
-}
-func (m *RegisterROSTopicResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RegisterROSTopicResponse.Marshal(b, m, deterministic)
-}
-func (m *RegisterROSTopicResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RegisterROSTopicResponse.Merge(m, src)
-}
-func (m *RegisterROSTopicResponse) XXX_Size() int {
-	return xxx_messageInfo_RegisterROSTopicResponse.Size(m)
-}
-func (m *RegisterROSTopicResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_RegisterROSTopicResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_RegisterROSTopicResponse proto.InternalMessageInfo
-
-type GetROSTopicsResponse struct {
-	Topics               []string `protobuf:"bytes,1,rep,name=topics,proto3" json:"topics,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *GetROSTopicsResponse) Reset()         { *m = GetROSTopicsResponse{} }
-func (m *GetROSTopicsResponse) String() string { return proto.CompactTextString(m) }
-func (*GetROSTopicsResponse) ProtoMessage()    {}
-func (*GetROSTopicsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_56ede974c0020f77, []int{5}
-}
-
-func (m *GetROSTopicsResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetROSTopicsResponse.Unmarshal(m, b)
-}
-func (m *GetROSTopicsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetROSTopicsResponse.Marshal(b, m, deterministic)
-}
-func (m *GetROSTopicsResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetROSTopicsResponse.Merge(m, src)
-}
-func (m *GetROSTopicsResponse) XXX_Size() int {
-	return xxx_messageInfo_GetROSTopicsResponse.Size(m)
-}
-func (m *GetROSTopicsResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetROSTopicsResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_GetROSTopicsResponse proto.InternalMessageInfo
-
-func (m *GetROSTopicsResponse) GetTopics() []string {
+func (m *Text) GetValue() string {
 	if m != nil {
-		return m.Topics
+		return m.Value
+	}
+	return ""
+}
+
+func (m *Text) GetFormat() string {
+	if m != nil {
+		return m.Format
+	}
+	return ""
+}
+
+type Numeric struct {
+	Value                float64  `protobuf:"fixed64,1,opt,name=value,proto3" json:"value,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Numeric) Reset()         { *m = Numeric{} }
+func (m *Numeric) String() string { return proto.CompactTextString(m) }
+func (*Numeric) ProtoMessage()    {}
+func (*Numeric) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{7}
+}
+
+func (m *Numeric) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Numeric.Unmarshal(m, b)
+}
+func (m *Numeric) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Numeric.Marshal(b, m, deterministic)
+}
+func (m *Numeric) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Numeric.Merge(m, src)
+}
+func (m *Numeric) XXX_Size() int {
+	return xxx_messageInfo_Numeric.Size(m)
+}
+func (m *Numeric) XXX_DiscardUnknown() {
+	xxx_messageInfo_Numeric.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Numeric proto.InternalMessageInfo
+
+func (m *Numeric) GetValue() float64 {
+	if m != nil {
+		return m.Value
+	}
+	return 0
+}
+
+type File struct {
+	// Types that are valid to be assigned to Data:
+	//	*File_Url
+	//	*File_Raw
+	Data                 isFile_Data `protobuf_oneof:"data"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
+	XXX_unrecognized     []byte      `json:"-"`
+	XXX_sizecache        int32       `json:"-"`
+}
+
+func (m *File) Reset()         { *m = File{} }
+func (m *File) String() string { return proto.CompactTextString(m) }
+func (*File) ProtoMessage()    {}
+func (*File) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{8}
+}
+
+func (m *File) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_File.Unmarshal(m, b)
+}
+func (m *File) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_File.Marshal(b, m, deterministic)
+}
+func (m *File) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_File.Merge(m, src)
+}
+func (m *File) XXX_Size() int {
+	return xxx_messageInfo_File.Size(m)
+}
+func (m *File) XXX_DiscardUnknown() {
+	xxx_messageInfo_File.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_File proto.InternalMessageInfo
+
+type isFile_Data interface {
+	isFile_Data()
+}
+
+type File_Url struct {
+	Url string `protobuf:"bytes,1,opt,name=url,proto3,oneof"`
+}
+
+type File_Raw struct {
+	Raw []byte `protobuf:"bytes,2,opt,name=raw,proto3,oneof"`
+}
+
+func (*File_Url) isFile_Data() {}
+
+func (*File_Raw) isFile_Data() {}
+
+func (m *File) GetData() isFile_Data {
+	if m != nil {
+		return m.Data
+	}
+	return nil
+}
+
+func (m *File) GetUrl() string {
+	if x, ok := m.GetData().(*File_Url); ok {
+		return x.Url
+	}
+	return ""
+}
+
+func (m *File) GetRaw() []byte {
+	if x, ok := m.GetData().(*File_Raw); ok {
+		return x.Raw
+	}
+	return nil
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*File) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _File_OneofMarshaler, _File_OneofUnmarshaler, _File_OneofSizer, []interface{}{
+		(*File_Url)(nil),
+		(*File_Raw)(nil),
+	}
+}
+
+func _File_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*File)
+	// data
+	switch x := m.Data.(type) {
+	case *File_Url:
+		b.EncodeVarint(1<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.Url)
+	case *File_Raw:
+		b.EncodeVarint(2<<3 | proto.WireBytes)
+		b.EncodeRawBytes(x.Raw)
+	case nil:
+	default:
+		return fmt.Errorf("File.Data has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _File_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*File)
+	switch tag {
+	case 1: // data.url
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeStringBytes()
+		m.Data = &File_Url{x}
+		return true, err
+	case 2: // data.raw
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeRawBytes(true)
+		m.Data = &File_Raw{x}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _File_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*File)
+	// data
+	switch x := m.Data.(type) {
+	case *File_Url:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Url)))
+		n += len(x.Url)
+	case *File_Raw:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Raw)))
+		n += len(x.Raw)
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+type Image struct {
+	// i.e. "image/png" for png images.
+	ContentType string `protobuf:"bytes,1,opt,name=content_type,json=contentType,proto3" json:"content_type,omitempty"`
+	// Types that are valid to be assigned to Data:
+	//	*Image_Url
+	//	*Image_Raw
+	Data                 isImage_Data `protobuf_oneof:"data"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
+	XXX_unrecognized     []byte       `json:"-"`
+	XXX_sizecache        int32        `json:"-"`
+}
+
+func (m *Image) Reset()         { *m = Image{} }
+func (m *Image) String() string { return proto.CompactTextString(m) }
+func (*Image) ProtoMessage()    {}
+func (*Image) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{9}
+}
+
+func (m *Image) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Image.Unmarshal(m, b)
+}
+func (m *Image) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Image.Marshal(b, m, deterministic)
+}
+func (m *Image) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Image.Merge(m, src)
+}
+func (m *Image) XXX_Size() int {
+	return xxx_messageInfo_Image.Size(m)
+}
+func (m *Image) XXX_DiscardUnknown() {
+	xxx_messageInfo_Image.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Image proto.InternalMessageInfo
+
+func (m *Image) GetContentType() string {
+	if m != nil {
+		return m.ContentType
+	}
+	return ""
+}
+
+type isImage_Data interface {
+	isImage_Data()
+}
+
+type Image_Url struct {
+	Url string `protobuf:"bytes,2,opt,name=url,proto3,oneof"`
+}
+
+type Image_Raw struct {
+	Raw []byte `protobuf:"bytes,3,opt,name=raw,proto3,oneof"`
+}
+
+func (*Image_Url) isImage_Data() {}
+
+func (*Image_Raw) isImage_Data() {}
+
+func (m *Image) GetData() isImage_Data {
+	if m != nil {
+		return m.Data
+	}
+	return nil
+}
+
+func (m *Image) GetUrl() string {
+	if x, ok := m.GetData().(*Image_Url); ok {
+		return x.Url
+	}
+	return ""
+}
+
+func (m *Image) GetRaw() []byte {
+	if x, ok := m.GetData().(*Image_Raw); ok {
+		return x.Raw
+	}
+	return nil
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*Image) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _Image_OneofMarshaler, _Image_OneofUnmarshaler, _Image_OneofSizer, []interface{}{
+		(*Image_Url)(nil),
+		(*Image_Raw)(nil),
+	}
+}
+
+func _Image_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*Image)
+	// data
+	switch x := m.Data.(type) {
+	case *Image_Url:
+		b.EncodeVarint(2<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.Url)
+	case *Image_Raw:
+		b.EncodeVarint(3<<3 | proto.WireBytes)
+		b.EncodeRawBytes(x.Raw)
+	case nil:
+	default:
+		return fmt.Errorf("Image.Data has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _Image_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*Image)
+	switch tag {
+	case 2: // data.url
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeStringBytes()
+		m.Data = &Image_Url{x}
+		return true, err
+	case 3: // data.raw
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeRawBytes(true)
+		m.Data = &Image_Raw{x}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _Image_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*Image)
+	// data
+	switch x := m.Data.(type) {
+	case *Image_Url:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Url)))
+		n += len(x.Url)
+	case *Image_Raw:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Raw)))
+		n += len(x.Raw)
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+type Video struct {
+	// i.e. "video/mp4" for mp4 videos.
+	ContentType string `protobuf:"bytes,1,opt,name=content_type,json=contentType,proto3" json:"content_type,omitempty"`
+	// Types that are valid to be assigned to Data:
+	//	*Video_Url
+	//	*Video_Raw
+	Data                 isVideo_Data `protobuf_oneof:"data"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
+	XXX_unrecognized     []byte       `json:"-"`
+	XXX_sizecache        int32        `json:"-"`
+}
+
+func (m *Video) Reset()         { *m = Video{} }
+func (m *Video) String() string { return proto.CompactTextString(m) }
+func (*Video) ProtoMessage()    {}
+func (*Video) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{10}
+}
+
+func (m *Video) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Video.Unmarshal(m, b)
+}
+func (m *Video) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Video.Marshal(b, m, deterministic)
+}
+func (m *Video) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Video.Merge(m, src)
+}
+func (m *Video) XXX_Size() int {
+	return xxx_messageInfo_Video.Size(m)
+}
+func (m *Video) XXX_DiscardUnknown() {
+	xxx_messageInfo_Video.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Video proto.InternalMessageInfo
+
+func (m *Video) GetContentType() string {
+	if m != nil {
+		return m.ContentType
+	}
+	return ""
+}
+
+type isVideo_Data interface {
+	isVideo_Data()
+}
+
+type Video_Url struct {
+	Url string `protobuf:"bytes,2,opt,name=url,proto3,oneof"`
+}
+
+type Video_Raw struct {
+	Raw []byte `protobuf:"bytes,3,opt,name=raw,proto3,oneof"`
+}
+
+func (*Video_Url) isVideo_Data() {}
+
+func (*Video_Raw) isVideo_Data() {}
+
+func (m *Video) GetData() isVideo_Data {
+	if m != nil {
+		return m.Data
+	}
+	return nil
+}
+
+func (m *Video) GetUrl() string {
+	if x, ok := m.GetData().(*Video_Url); ok {
+		return x.Url
+	}
+	return ""
+}
+
+func (m *Video) GetRaw() []byte {
+	if x, ok := m.GetData().(*Video_Raw); ok {
+		return x.Raw
+	}
+	return nil
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*Video) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _Video_OneofMarshaler, _Video_OneofUnmarshaler, _Video_OneofSizer, []interface{}{
+		(*Video_Url)(nil),
+		(*Video_Raw)(nil),
+	}
+}
+
+func _Video_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*Video)
+	// data
+	switch x := m.Data.(type) {
+	case *Video_Url:
+		b.EncodeVarint(2<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.Url)
+	case *Video_Raw:
+		b.EncodeVarint(3<<3 | proto.WireBytes)
+		b.EncodeRawBytes(x.Raw)
+	case nil:
+	default:
+		return fmt.Errorf("Video.Data has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _Video_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*Video)
+	switch tag {
+	case 2: // data.url
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeStringBytes()
+		m.Data = &Video_Url{x}
+		return true, err
+	case 3: // data.raw
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeRawBytes(true)
+		m.Data = &Video_Raw{x}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _Video_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*Video)
+	// data
+	switch x := m.Data.(type) {
+	case *Video_Url:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Url)))
+		n += len(x.Url)
+	case *Video_Raw:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Raw)))
+		n += len(x.Raw)
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+type PointCloud struct {
+	// Types that are valid to be assigned to Data:
+	//	*PointCloud_Url
+	//	*PointCloud_Raw
+	Data                 isPointCloud_Data `protobuf_oneof:"data"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *PointCloud) Reset()         { *m = PointCloud{} }
+func (m *PointCloud) String() string { return proto.CompactTextString(m) }
+func (*PointCloud) ProtoMessage()    {}
+func (*PointCloud) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{11}
+}
+
+func (m *PointCloud) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PointCloud.Unmarshal(m, b)
+}
+func (m *PointCloud) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PointCloud.Marshal(b, m, deterministic)
+}
+func (m *PointCloud) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PointCloud.Merge(m, src)
+}
+func (m *PointCloud) XXX_Size() int {
+	return xxx_messageInfo_PointCloud.Size(m)
+}
+func (m *PointCloud) XXX_DiscardUnknown() {
+	xxx_messageInfo_PointCloud.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PointCloud proto.InternalMessageInfo
+
+type isPointCloud_Data interface {
+	isPointCloud_Data()
+}
+
+type PointCloud_Url struct {
+	Url string `protobuf:"bytes,1,opt,name=url,proto3,oneof"`
+}
+
+type PointCloud_Raw struct {
+	Raw []byte `protobuf:"bytes,2,opt,name=raw,proto3,oneof"`
+}
+
+func (*PointCloud_Url) isPointCloud_Data() {}
+
+func (*PointCloud_Raw) isPointCloud_Data() {}
+
+func (m *PointCloud) GetData() isPointCloud_Data {
+	if m != nil {
+		return m.Data
+	}
+	return nil
+}
+
+func (m *PointCloud) GetUrl() string {
+	if x, ok := m.GetData().(*PointCloud_Url); ok {
+		return x.Url
+	}
+	return ""
+}
+
+func (m *PointCloud) GetRaw() []byte {
+	if x, ok := m.GetData().(*PointCloud_Raw); ok {
+		return x.Raw
+	}
+	return nil
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*PointCloud) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _PointCloud_OneofMarshaler, _PointCloud_OneofUnmarshaler, _PointCloud_OneofSizer, []interface{}{
+		(*PointCloud_Url)(nil),
+		(*PointCloud_Raw)(nil),
+	}
+}
+
+func _PointCloud_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*PointCloud)
+	// data
+	switch x := m.Data.(type) {
+	case *PointCloud_Url:
+		b.EncodeVarint(1<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.Url)
+	case *PointCloud_Raw:
+		b.EncodeVarint(2<<3 | proto.WireBytes)
+		b.EncodeRawBytes(x.Raw)
+	case nil:
+	default:
+		return fmt.Errorf("PointCloud.Data has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _PointCloud_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*PointCloud)
+	switch tag {
+	case 1: // data.url
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeStringBytes()
+		m.Data = &PointCloud_Url{x}
+		return true, err
+	case 2: // data.raw
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeRawBytes(true)
+		m.Data = &PointCloud_Raw{x}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _PointCloud_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*PointCloud)
+	// data
+	switch x := m.Data.(type) {
+	case *PointCloud_Url:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Url)))
+		n += len(x.Url)
+	case *PointCloud_Raw:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Raw)))
+		n += len(x.Raw)
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+type Location struct {
+	Latitude             float64  `protobuf:"fixed64,1,opt,name=latitude,proto3" json:"latitude,omitempty"`
+	Longitude            float64  `protobuf:"fixed64,2,opt,name=longitude,proto3" json:"longitude,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Location) Reset()         { *m = Location{} }
+func (m *Location) String() string { return proto.CompactTextString(m) }
+func (*Location) ProtoMessage()    {}
+func (*Location) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{12}
+}
+
+func (m *Location) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Location.Unmarshal(m, b)
+}
+func (m *Location) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Location.Marshal(b, m, deterministic)
+}
+func (m *Location) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Location.Merge(m, src)
+}
+func (m *Location) XXX_Size() int {
+	return xxx_messageInfo_Location.Size(m)
+}
+func (m *Location) XXX_DiscardUnknown() {
+	xxx_messageInfo_Location.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Location proto.InternalMessageInfo
+
+func (m *Location) GetLatitude() float64 {
+	if m != nil {
+		return m.Latitude
+	}
+	return 0
+}
+
+func (m *Location) GetLongitude() float64 {
+	if m != nil {
+		return m.Longitude
+	}
+	return 0
+}
+
+type ROSMessage struct {
+	Raw                  []byte   `protobuf:"bytes,1,opt,name=raw,proto3" json:"raw,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ROSMessage) Reset()         { *m = ROSMessage{} }
+func (m *ROSMessage) String() string { return proto.CompactTextString(m) }
+func (*ROSMessage) ProtoMessage()    {}
+func (*ROSMessage) Descriptor() ([]byte, []int) {
+	return fileDescriptor_56ede974c0020f77, []int{13}
+}
+
+func (m *ROSMessage) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ROSMessage.Unmarshal(m, b)
+}
+func (m *ROSMessage) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ROSMessage.Marshal(b, m, deterministic)
+}
+func (m *ROSMessage) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ROSMessage.Merge(m, src)
+}
+func (m *ROSMessage) XXX_Size() int {
+	return xxx_messageInfo_ROSMessage.Size(m)
+}
+func (m *ROSMessage) XXX_DiscardUnknown() {
+	xxx_messageInfo_ROSMessage.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ROSMessage proto.InternalMessageInfo
+
+func (m *ROSMessage) GetRaw() []byte {
+	if m != nil {
+		return m.Raw
 	}
 	return nil
 }
@@ -315,7 +1335,7 @@ func (m *ROSTopic) Reset()         { *m = ROSTopic{} }
 func (m *ROSTopic) String() string { return proto.CompactTextString(m) }
 func (*ROSTopic) ProtoMessage()    {}
 func (*ROSTopic) Descriptor() ([]byte, []int) {
-	return fileDescriptor_56ede974c0020f77, []int{6}
+	return fileDescriptor_56ede974c0020f77, []int{14}
 }
 
 func (m *ROSTopic) XXX_Unmarshal(b []byte) error {
@@ -376,7 +1396,7 @@ func (m *Tag) Reset()         { *m = Tag{} }
 func (m *Tag) String() string { return proto.CompactTextString(m) }
 func (*Tag) ProtoMessage()    {}
 func (*Tag) Descriptor() ([]byte, []int) {
-	return fileDescriptor_56ede974c0020f77, []int{7}
+	return fileDescriptor_56ede974c0020f77, []int{15}
 }
 
 func (m *Tag) XXX_Unmarshal(b []byte) error {
@@ -412,13 +1432,20 @@ func (m *Tag) GetValue() string {
 }
 
 func init() {
-	proto.RegisterEnum("agent.ContentType", ContentType_name, ContentType_value)
-	proto.RegisterType((*Datapoint)(nil), "agent.Datapoint")
 	proto.RegisterType((*StreamDataResponse)(nil), "agent.StreamDataResponse")
 	proto.RegisterType((*PostDataResponse)(nil), "agent.PostDataResponse")
 	proto.RegisterType((*GetROSTopicsRequest)(nil), "agent.GetROSTopicsRequest")
 	proto.RegisterType((*RegisterROSTopicResponse)(nil), "agent.RegisterROSTopicResponse")
 	proto.RegisterType((*GetROSTopicsResponse)(nil), "agent.GetROSTopicsResponse")
+	proto.RegisterType((*Datapoint)(nil), "agent.Datapoint")
+	proto.RegisterType((*Text)(nil), "agent.Text")
+	proto.RegisterType((*Numeric)(nil), "agent.Numeric")
+	proto.RegisterType((*File)(nil), "agent.File")
+	proto.RegisterType((*Image)(nil), "agent.Image")
+	proto.RegisterType((*Video)(nil), "agent.Video")
+	proto.RegisterType((*PointCloud)(nil), "agent.PointCloud")
+	proto.RegisterType((*Location)(nil), "agent.Location")
+	proto.RegisterType((*ROSMessage)(nil), "agent.ROSMessage")
 	proto.RegisterType((*ROSTopic)(nil), "agent.ROSTopic")
 	proto.RegisterType((*Tag)(nil), "agent.Tag")
 }
@@ -426,39 +1453,51 @@ func init() {
 func init() { proto.RegisterFile("agent.proto", fileDescriptor_56ede974c0020f77) }
 
 var fileDescriptor_56ede974c0020f77 = []byte{
-	// 507 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x93, 0x4d, 0x6f, 0xd3, 0x4c,
-	0x10, 0xc7, 0xe3, 0xd8, 0x69, 0xe2, 0x49, 0xd5, 0x67, 0x35, 0x4f, 0x00, 0xd7, 0xad, 0xc0, 0xf2,
-	0x01, 0x59, 0x48, 0xa4, 0x52, 0x38, 0x70, 0xe2, 0x80, 0x92, 0x34, 0x0a, 0x14, 0x3b, 0xda, 0x38,
-	0xc0, 0xad, 0x5a, 0xd2, 0x95, 0x65, 0x51, 0x7b, 0x4d, 0x76, 0x5b, 0x29, 0x07, 0xbe, 0x04, 0x9f,
-	0x18, 0xed, 0xc6, 0xee, 0x0b, 0x84, 0xdb, 0xce, 0x6f, 0x66, 0x3c, 0x2f, 0xff, 0x31, 0xf4, 0x59,
-	0xc6, 0x4b, 0x35, 0xac, 0x36, 0x42, 0x09, 0xec, 0x18, 0xc3, 0x3f, 0xcd, 0x84, 0xc8, 0xae, 0xf9,
-	0x19, 0xab, 0xf2, 0x33, 0x56, 0x96, 0x42, 0x31, 0x95, 0x8b, 0x52, 0xee, 0x82, 0xc2, 0x9f, 0xe0,
-	0x4e, 0x98, 0x62, 0x95, 0xc8, 0x4b, 0x85, 0x4f, 0xe1, 0x40, 0xaa, 0x0d, 0x67, 0x85, 0x67, 0x05,
-	0x56, 0xe4, 0xd2, 0xda, 0xc2, 0x53, 0x70, 0x55, 0x5e, 0x70, 0xa9, 0x58, 0x51, 0x79, 0xed, 0xc0,
-	0x8a, 0x6c, 0x7a, 0x0f, 0xf0, 0x25, 0x38, 0x6a, 0x5b, 0x71, 0xcf, 0x0e, 0xac, 0xe8, 0x68, 0x84,
-	0xc3, 0x5d, 0x0f, 0x63, 0x51, 0x2a, 0x5e, 0xaa, 0x74, 0x5b, 0x71, 0x6a, 0xfc, 0x88, 0xe0, 0x5c,
-	0x31, 0xc5, 0x3c, 0x27, 0xb0, 0xa2, 0x43, 0x6a, 0xde, 0xe1, 0x00, 0x70, 0x69, 0x6a, 0xe8, 0x26,
-	0x28, 0x97, 0x95, 0x28, 0x25, 0x0f, 0x11, 0xc8, 0x42, 0x48, 0xf5, 0x88, 0x3d, 0x81, 0xff, 0x67,
-	0x5c, 0xd1, 0x64, 0x99, 0x8a, 0x2a, 0x5f, 0x4b, 0xca, 0x7f, 0xdc, 0x70, 0xa9, 0x42, 0x1f, 0x3c,
-	0xca, 0xb3, 0x5c, 0x2a, 0xbe, 0x69, 0x7c, 0x77, 0x29, 0x43, 0x18, 0x3c, 0x4e, 0xd9, 0x71, 0x3d,
-	0xa6, 0x32, 0xc4, 0xb3, 0x02, 0x5b, 0x8f, 0xb9, 0xb3, 0xc2, 0x5b, 0xe8, 0x35, 0xc1, 0xba, 0xd9,
-	0x92, 0x15, 0xbc, 0x5e, 0x84, 0x79, 0xe3, 0x09, 0xb8, 0xba, 0xe9, 0x4b, 0x33, 0x6d, 0xdb, 0x38,
-	0x7a, 0x1a, 0xe8, 0x19, 0xf1, 0x18, 0x7a, 0x85, 0xcc, 0x2e, 0xaf, 0xb8, 0x5c, 0x9b, 0x4d, 0xb8,
-	0xb4, 0x5b, 0xc8, 0x6c, 0xc2, 0xe5, 0x1a, 0x9f, 0x83, 0xa3, 0x58, 0x26, 0x3d, 0x27, 0xb0, 0xa3,
-	0xfe, 0x08, 0xea, 0x05, 0xa5, 0x2c, 0xa3, 0x86, 0x87, 0xaf, 0xc1, 0x4e, 0x59, 0x86, 0x04, 0xec,
-	0xef, 0x7c, 0x5b, 0x57, 0xd4, 0x4f, 0x1c, 0x40, 0xe7, 0x96, 0x5d, 0xdf, 0x34, 0xc5, 0x76, 0xc6,
-	0xab, 0x0d, 0xf4, 0x1f, 0x2c, 0x17, 0xfb, 0xd0, 0x5d, 0xc5, 0x1f, 0xe3, 0xe4, 0x4b, 0x4c, 0x5a,
-	0xd8, 0x03, 0x27, 0x9d, 0x7e, 0x4d, 0x89, 0xa5, 0x71, 0xbc, 0xfa, 0x34, 0xa5, 0xf3, 0x31, 0x69,
-	0x63, 0x17, 0xec, 0x45, 0x3c, 0x23, 0xb6, 0xf6, 0x7f, 0x58, 0x4c, 0x67, 0xc4, 0x41, 0x17, 0x3a,
-	0x9f, 0xe7, 0x93, 0x69, 0x42, 0x3a, 0x1a, 0x9e, 0xcf, 0x2f, 0xa6, 0xe4, 0x00, 0x8f, 0x00, 0x16,
-	0xc9, 0x3c, 0x4e, 0xc7, 0x17, 0xc9, 0x6a, 0x42, 0xba, 0x3a, 0x8f, 0x26, 0x4b, 0xd2, 0x1f, 0xfd,
-	0x6a, 0x43, 0xe7, 0xbd, 0x6e, 0x1b, 0xdf, 0x01, 0xdc, 0x2b, 0x86, 0xa4, 0x1e, 0xe6, 0xee, 0x86,
-	0xfc, 0xe3, 0x9a, 0xec, 0x91, 0xb5, 0x15, 0x59, 0xf8, 0x16, 0x7a, 0x8d, 0xb4, 0x7b, 0x92, 0x9f,
-	0xd5, 0xe4, 0x2f, 0xf5, 0x5b, 0x78, 0x0e, 0xe4, 0x4f, 0xa1, 0xf1, 0xbf, 0x3a, 0xbc, 0x01, 0xfe,
-	0x8b, 0x06, 0xfc, 0xeb, 0x24, 0x5a, 0x38, 0x87, 0xc3, 0x87, 0x47, 0x81, 0x7e, 0x9d, 0xb2, 0xe7,
-	0xb8, 0xfc, 0x93, 0xbd, 0xbe, 0xe6, 0x53, 0xdf, 0x0e, 0xcc, 0x2f, 0xf4, 0xe6, 0x77, 0x00, 0x00,
-	0x00, 0xff, 0xff, 0x3c, 0x0a, 0x79, 0xf4, 0x76, 0x03, 0x00, 0x00,
+	// 689 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x54, 0xc1, 0x6e, 0xd3, 0x40,
+	0x10, 0xb5, 0x13, 0x27, 0x71, 0x26, 0x11, 0x0d, 0x4b, 0x01, 0x37, 0x45, 0x6d, 0x6a, 0x71, 0x88,
+	0x90, 0xda, 0x43, 0xa9, 0xe0, 0x02, 0x07, 0xa0, 0x2a, 0xa9, 0x04, 0xb4, 0xda, 0x46, 0x1c, 0xb8,
+	0x44, 0x8b, 0xb3, 0xb5, 0x2c, 0x6c, 0xaf, 0xf1, 0xae, 0x4b, 0xfb, 0x1b, 0x7c, 0x0c, 0xdf, 0x87,
+	0x66, 0xbd, 0xb6, 0x9b, 0x2a, 0x3d, 0x70, 0xe0, 0x96, 0x79, 0xf3, 0xe6, 0xcd, 0x64, 0x9e, 0x77,
+	0x60, 0xc0, 0x42, 0x9e, 0xaa, 0x83, 0x2c, 0x17, 0x4a, 0x90, 0x8e, 0x0e, 0xfc, 0x4d, 0x20, 0x17,
+	0x2a, 0xe7, 0x2c, 0x39, 0x66, 0x8a, 0x51, 0x2e, 0x33, 0x91, 0x4a, 0xee, 0x13, 0x18, 0x9d, 0x0b,
+	0xa9, 0x56, 0xb0, 0xc7, 0xf0, 0xe8, 0x23, 0x57, 0xf4, 0xec, 0x62, 0x2e, 0xb2, 0x28, 0x90, 0x94,
+	0xff, 0x2c, 0xb8, 0x54, 0xfe, 0x18, 0x3c, 0xca, 0xc3, 0x48, 0x2a, 0x9e, 0x57, 0xb9, 0xba, 0xe4,
+	0x00, 0x36, 0x57, 0x4b, 0x4a, 0x9c, 0x3c, 0x81, 0xae, 0xd2, 0x88, 0x67, 0x4f, 0xda, 0xd3, 0x3e,
+	0x35, 0x91, 0xff, 0xa7, 0x0d, 0x7d, 0xec, 0x99, 0x89, 0x28, 0x55, 0xc8, 0x92, 0x7a, 0x34, 0xcf,
+	0x9e, 0xd8, 0xc8, 0x2a, 0x23, 0xf2, 0x0c, 0xfa, 0x2a, 0x4a, 0xb8, 0x54, 0x2c, 0xc9, 0xbc, 0xd6,
+	0xc4, 0x9e, 0xb6, 0x69, 0x03, 0x10, 0x02, 0xed, 0x9c, 0xfd, 0xf2, 0x9c, 0x89, 0x3d, 0x1d, 0xce,
+	0x2c, 0x8a, 0x01, 0xd9, 0x03, 0x47, 0xf1, 0x6b, 0xe5, 0x75, 0x26, 0xf6, 0x74, 0x70, 0x38, 0x38,
+	0x28, 0xf7, 0x30, 0xe7, 0xd7, 0x6a, 0x66, 0x51, 0x9d, 0x22, 0x2f, 0xa0, 0x97, 0x16, 0x09, 0xcf,
+	0xa3, 0xc0, 0xeb, 0x6a, 0xd6, 0x03, 0xc3, 0xfa, 0x52, 0xa2, 0x33, 0x8b, 0x56, 0x04, 0x94, 0xbb,
+	0x8c, 0x62, 0xee, 0xf5, 0x56, 0xe4, 0x4e, 0xa2, 0x98, 0xa3, 0x1c, 0xa6, 0xc8, 0x73, 0xe8, 0x44,
+	0x09, 0x0b, 0xb9, 0xe7, 0x6a, 0xce, 0xd0, 0x70, 0x4e, 0x11, 0x9b, 0x59, 0xb4, 0x4c, 0x22, 0xeb,
+	0x2a, 0x5a, 0x72, 0xe1, 0xf5, 0x57, 0x58, 0x5f, 0x11, 0x43, 0x96, 0x4e, 0x92, 0x23, 0x18, 0xe8,
+	0x85, 0x2c, 0x82, 0x58, 0x14, 0x4b, 0x0f, 0x34, 0xf7, 0xa1, 0xe1, 0x9e, 0x63, 0xe6, 0x03, 0x26,
+	0x66, 0x16, 0x85, 0xac, 0x8e, 0xc8, 0x3e, 0xb8, 0xb1, 0x08, 0x98, 0x8a, 0x44, 0xea, 0x0d, 0x74,
+	0xc9, 0x86, 0x29, 0xf9, 0x64, 0xe0, 0x99, 0x45, 0x6b, 0x0a, 0x36, 0xc9, 0x85, 0x5c, 0x24, 0x5c,
+	0x4a, 0x1c, 0x7b, 0xb8, 0xd2, 0x84, 0x9e, 0x5d, 0x7c, 0x2e, 0x13, 0xd8, 0x24, 0x17, 0xd2, 0x44,
+	0xef, 0xbb, 0xe0, 0x2c, 0x99, 0x62, 0xfe, 0x11, 0x38, 0xb8, 0x4d, 0xb2, 0x09, 0x9d, 0x2b, 0x16,
+	0x17, 0xdc, 0x38, 0x56, 0x06, 0x68, 0xe4, 0xa5, 0xc8, 0x13, 0xa6, 0xb4, 0x5b, 0x7d, 0x6a, 0x22,
+	0x7f, 0x17, 0x7a, 0x66, 0xbb, 0xab, 0x85, 0xb6, 0x29, 0xf4, 0x5f, 0x81, 0x83, 0x5b, 0x45, 0x4f,
+	0x8b, 0x3c, 0x2e, 0x45, 0xd1, 0xd3, 0x22, 0x8f, 0x2b, 0x9f, 0x5b, 0xb7, 0x7c, 0xae, 0xc7, 0xf9,
+	0x06, 0x1d, 0xbd, 0x69, 0xb2, 0x07, 0xc3, 0x40, 0xa4, 0x8a, 0xa7, 0x6a, 0xa1, 0x6e, 0xb2, 0x6a,
+	0xac, 0x81, 0xc1, 0xe6, 0x37, 0x59, 0xad, 0xdd, 0x5a, 0xa3, 0xdd, 0xbe, 0x47, 0x5b, 0xfb, 0xf3,
+	0x3f, 0xb4, 0xdf, 0x00, 0x34, 0x7e, 0xfe, 0xf3, 0xbf, 0x3e, 0x06, 0xb7, 0xb2, 0x96, 0x8c, 0xc1,
+	0x8d, 0x99, 0x8a, 0x54, 0xb1, 0xac, 0x56, 0x5a, 0xc7, 0xf8, 0x7e, 0x62, 0x91, 0x86, 0x65, 0xb2,
+	0xa5, 0x93, 0x0d, 0xe0, 0xef, 0x00, 0x34, 0x76, 0x93, 0x51, 0xd9, 0x0f, 0x25, 0x86, 0xba, 0x9b,
+	0x7f, 0x05, 0x6e, 0xf5, 0xa0, 0x09, 0x01, 0x27, 0x65, 0x49, 0xf5, 0xd7, 0xf5, 0x6f, 0xb2, 0x0d,
+	0x7d, 0x9c, 0xa6, 0xdc, 0x49, 0xe9, 0xb7, 0x8b, 0x80, 0x5e, 0xc8, 0x16, 0xb8, 0x89, 0x0c, 0x17,
+	0x4b, 0x2e, 0x03, 0xbd, 0x81, 0x3e, 0xed, 0x25, 0x32, 0x3c, 0xe6, 0x32, 0x20, 0x3b, 0xe0, 0x28,
+	0x16, 0x4a, 0xcf, 0x99, 0xb4, 0xa7, 0x83, 0x43, 0xa8, 0xde, 0x28, 0x0b, 0xa9, 0xc6, 0xfd, 0x7d,
+	0x68, 0xcf, 0x59, 0x88, 0x03, 0xfd, 0xe0, 0x37, 0xa6, 0x23, 0xfe, 0x6c, 0x3e, 0x9d, 0xd6, 0xad,
+	0x6f, 0xee, 0xf0, 0x77, 0x0b, 0x3a, 0xef, 0x50, 0x82, 0xbc, 0x05, 0x68, 0x2e, 0x1c, 0x19, 0x19,
+	0xe1, 0xfa, 0xcc, 0x8c, 0xb7, 0x0c, 0xb2, 0xe6, 0x0c, 0x5a, 0x53, 0x9b, 0xbc, 0x06, 0xb7, 0x3a,
+	0x85, 0x6b, 0x8a, 0x9f, 0xd6, 0xcf, 0xf0, 0xce, 0xb5, 0xb4, 0xc8, 0x09, 0x8c, 0xee, 0x1e, 0x46,
+	0xb2, 0xd1, 0x3c, 0x28, 0x0d, 0x8c, 0x77, 0x2b, 0xe0, 0xbe, 0x13, 0x6a, 0x91, 0x53, 0x18, 0xde,
+	0x3e, 0xa2, 0x64, 0x6c, 0x4a, 0xd6, 0x1c, 0xe3, 0xf1, 0xf6, 0xda, 0x5c, 0x25, 0xf5, 0xbd, 0xab,
+	0x4f, 0xff, 0xcb, 0xbf, 0x01, 0x00, 0x00, 0xff, 0xff, 0xdb, 0xc9, 0x0d, 0xa3, 0x09, 0x06, 0x00,
+	0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
