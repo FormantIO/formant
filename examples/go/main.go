@@ -2,15 +2,11 @@ package main
 
 import (
 	"bytes"
-	"encoding/base64"
-	"encoding/binary"
+	"context"
 	"fmt"
 	"io/ioutil"
-	"math"
-	"net/http"
-
-	"context"
 	"log"
+	"net/http"
 	"time"
 
 	"github.com/FigureWorks/figure/examples/go/agent"
@@ -36,14 +32,17 @@ func streamData() {
 				streamData()
 			}
 			timestampMs := time.Now().UnixNano() / int64(time.Millisecond)
-			datapoint := []byte("i am a streaming datapoint")
-			data := agent.Datapoint{
+			datapoint := "i am a streaming datapoint"
+			data := &agent.Datapoint{
 				Stream:    "stream.001",
 				Timestamp: timestampMs,
-				Type:      agent.ContentType_TEXT,
-				Data:      datapoint,
+				Data: &agent.Datapoint_Text{
+					Text: &agent.Text{
+						Value: datapoint,
+					},
+				},
 			}
-			err = stream.Send(&data)
+			err = stream.Send(data)
 			if err != nil {
 				log.Printf("Error streaming data %v", err)
 			}
@@ -61,12 +60,15 @@ func postData() {
 	defer conn.Close()
 	agentClient := agent.NewAgentClient(conn)
 	timestampMs := time.Now().UnixNano() / int64(time.Millisecond)
-	datapoint := []byte("i am a posted datapoint")
+	datapoint := "i am a posted datapoint"
 	data := &agent.Datapoint{
 		Stream:    "stream.001",
 		Timestamp: timestampMs,
-		Type:      agent.ContentType_TEXT,
-		Data:      datapoint,
+		Data: &agent.Datapoint_Text{
+			Text: &agent.Text{
+				Value: datapoint,
+			},
+		},
 	}
 	_, err = agentClient.PostData(context.Background(), data)
 	if err != nil {
@@ -81,15 +83,17 @@ func postNumericData() {
 	defer conn.Close()
 	agentClient := agent.NewAgentClient(conn)
 	timestampMs := time.Now().UnixNano() / int64(time.Millisecond)
-	datapointNumeric := make([]byte, 8)
-	binary.LittleEndian.PutUint64(datapointNumeric[:], math.Float64bits(2.33))
-	dataNumeric := &agent.Datapoint{
+	datapoint := 2.33
+	data := &agent.Datapoint{
 		Stream:    "stream.002",
 		Timestamp: timestampMs,
-		Type:      agent.ContentType_NUMERIC,
-		Data:      datapointNumeric,
+		Data: &agent.Datapoint_Numeric{
+			Numeric: &agent.Numeric{
+				Value: datapoint,
+			},
+		},
 	}
-	_, err = agentClient.PostData(context.Background(), dataNumeric)
+	_, err = agentClient.PostData(context.Background(), data)
 	if err != nil {
 		log.Printf("Error posting data %v", err)
 	}
@@ -99,16 +103,14 @@ func postHTTPData() {
 
 	datapoint := "this is a http posted datapoint"
 	curTime := time.Now().UnixNano() / int64(time.Millisecond)
-	encodedDatapoint := base64.StdEncoding.EncodeToString([]byte(datapoint))
 
 	var jsonStr = []byte(fmt.Sprintf(`
 	{
 		"stream": "stream.001",
-		"type": "TEXT",
 		"timestamp": %v,
-		"data": "%v"
+		"text" : { "value" : "%v" }
 	}
-	`, curTime, encodedDatapoint))
+	`, curTime, datapoint))
 	req, err := http.NewRequest("POST", fmt.Sprintf("%v/%v", "http://localhost:5502", "v1/data"), bytes.NewBuffer(jsonStr))
 	req.Header.Set("Content-Type", "application/json")
 
@@ -127,18 +129,14 @@ func postHTTPData() {
 
 func postHTTPNumericData() {
 	curTime := time.Now().UnixNano() / int64(time.Millisecond)
-	datapointNumeric := make([]byte, 8)
-	binary.LittleEndian.PutUint64(datapointNumeric[:], math.Float64bits(2.33))
-	encodedDatapoint := base64.StdEncoding.EncodeToString(datapointNumeric)
-
+	datapoint := 2.33
 	var jsonStr = []byte(fmt.Sprintf(`
 	{
 		"stream": "stream.002",
-		"type": "NUMERIC",
 		"timestamp": %v,
-		"data": "%v"
+		"numeric" : { "value" : %v }
 	}
-	`, curTime, encodedDatapoint))
+	`, curTime, datapoint))
 	req, err := http.NewRequest("POST", fmt.Sprintf("%v/%v", "http://localhost:5502", "v1/data"), bytes.NewBuffer(jsonStr))
 	req.Header.Set("Content-Type", "application/json")
 

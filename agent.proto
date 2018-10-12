@@ -2,49 +2,23 @@ syntax = "proto3";
 
 package agent;
 
-//RPC for the Figure Agent Server.
+// gRPC service for the Figure Agent
 service Agent {
-    //Accepts a stream of data points.
+    // Accepts a stream of data points.
     rpc StreamData(stream Datapoint)  returns (StreamDataResponse) {}
-    //Accepts a single data point per RPC call. Also exposed as a HTTP Endpoint.
+    // Accepts a single data point per RPC call. Also exposed as a HTTP Endpoint.
     rpc PostData(Datapoint) returns (PostDataResponse) {}
-    //Registers a ROS Topic and its msg type.
+    // Registers a ROS Topic and its msg type.
     rpc RegisterROSTopic(ROSTopic) returns (RegisterROSTopicResponse) {}
-    //Gets the ROS topics defined in the agent config.
+    // Gets the ROS topics defined in the agent config.
     rpc GetROSTopics(GetROSTopicsRequest) returns (GetROSTopicsResponse) {}
 }
 
-
-//Data point Content types.
-enum ContentType {
-    UNKNOWN = 0;
-    TEXT = 1;
-    NUMERIC = 2;
-    PNG = 3;
-    JPEG = 4;
-    VIDEO = 5;
-    FILE = 6;
-    POINTCLOUD = 7;
-    ROS = 11;
-}
-
-//Data message.
-message Datapoint {
-    //Stream name. Must match Stream in config.
-    string stream = 1;
-    //Timestamp in milliseconds since the epoch.
-    int64 timestamp = 2;
-    //Content type defined by enum above.
-    ContentType type = 3;
-    //Raw byte data.
-    bytes data = 4;
-}
+// gRPC request response types
 
 message StreamDataResponse {}
 
 message PostDataResponse {}
-
-//ROS-specific
 
 message GetROSTopicsRequest {}
 
@@ -53,6 +27,79 @@ message RegisterROSTopicResponse {}
 message GetROSTopicsResponse {
     repeated string topics = 1;
 }
+
+
+// Data message.
+message Datapoint {
+    string stream = 1;
+    // Timestamp in milliseconds since the epoch.
+    int64 timestamp = 2;
+    // Data payload, use one of the fields below.
+    oneof data {
+        Text text = 3;
+        Numeric numeric = 4;
+        File file = 5;
+        Image image = 6;
+        Video video = 7;
+        PointCloud point_cloud = 8;
+        Location location = 9;
+        ROSMessage ros_message = 10;
+    }
+}
+
+message Text {
+    string value = 1;
+}
+
+message Numeric {
+    double value = 1;
+}
+
+message File {
+    oneof data {
+        // local files must be prefixed with 'file://'. Currently only local files are supported.
+        string url = 1;
+        bytes raw = 2;
+    }
+    string filename = 3;
+    // size in bytes
+    int64 size = 4;
+}
+
+message Image {
+    // e.g. "image/png" for png images.
+    string content_type = 1;
+    oneof data {
+        string url = 2;
+        bytes raw = 3;
+    }
+}
+
+message Video {
+    // e.g. "video/mp4" for mp4 videos.
+    string content_type = 1;
+    oneof data {
+        string url = 2;
+        bytes raw = 3;
+    }
+}
+
+message PointCloud {
+    oneof data {
+        string url = 1;
+        bytes raw = 2;
+    }
+}
+
+message Location {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+message ROSMessage {
+    bytes raw = 1;
+}
+
 
 message ROSTopic {
     string name = 1;
