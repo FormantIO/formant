@@ -6,8 +6,6 @@ import base64
 import json
 import time
 import urllib2
-from multiprocessing import Queue
-from os.path import expanduser
 
 import grpc
 
