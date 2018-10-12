@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -19,7 +18,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='agent.proto',
   package='agent',
   syntax='proto3',
-  serialized_pb=_b('\n\x0b\x61gent.proto\x12\x05\x61gent\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"\x15\n\x13GetROSTopicsRequest\"\x1a\n\x18RegisterROSTopicResponse\"&\n\x14GetROSTopicsResponse\x12\x0e\n\x06topics\x18\x01 \x03(\t\"\xd9\x02\n\tDatapoint\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\r\n\x03raw\x18\x04 \x01(\x0cH\x00\x12\x1b\n\x04text\x18\x05 \x01(\x0b\x32\x0b.agent.TextH\x00\x12!\n\x07numeric\x18\x06 \x01(\x0b\x32\x0e.agent.NumericH\x00\x12\x1b\n\x04\x66ile\x18\x07 \x01(\x0b\x32\x0b.agent.FileH\x00\x12\x1d\n\x05image\x18\x08 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x1d\n\x05video\x18\t \x01(\x0b\x32\x0c.agent.VideoH\x00\x12(\n\x0bpoint_cloud\x18\n \x01(\x0b\x32\x11.agent.PointCloudH\x00\x12#\n\x08location\x18\x0b \x01(\x0b\x32\x0f.agent.LocationH\x00\x12(\n\x0bros_message\x18\x0c \x01(\x0b\x32\x11.agent.ROSMessageH\x00\x42\x06\n\x04\x64\x61ta\"%\n\x04Text\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0e\n\x06\x66ormat\x18\x02 \x01(\t\"\x18\n\x07Numeric\x12\r\n\x05value\x18\x01 \x01(\x01\",\n\x04\x46ile\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Image\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Video\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"2\n\nPointCloud\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\"\x19\n\nROSMessage\x12\x0b\n\x03raw\x18\x01 \x01(\x0c\"W\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x10\n\x08msg_desc\x18\x03 \x01(\t\x12\x18\n\x04tags\x18\x04 \x03(\x0b\x32\n.agent.Tag\"!\n\x03Tag\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t2\x92\x02\n\x05\x41gent\x12=\n\nStreamData\x12\x10.agent.Datapoint\x1a\x19.agent.StreamDataResponse\"\x00(\x01\x12\x37\n\x08PostData\x12\x10.agent.Datapoint\x1a\x17.agent.PostDataResponse\"\x00\x12\x46\n\x10RegisterROSTopic\x12\x0f.agent.ROSTopic\x1a\x1f.agent.RegisterROSTopicResponse\"\x00\x12I\n\x0cGetROSTopics\x12\x1a.agent.GetROSTopicsRequest\x1a\x1b.agent.GetROSTopicsResponse\"\x00\x62\x06proto3')
+  serialized_options=None,
+  serialized_pb=_b('\n\x0b\x61gent.proto\x12\x05\x61gent\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"\x15\n\x13GetROSTopicsRequest\"\x1a\n\x18RegisterROSTopicResponse\"&\n\x14GetROSTopicsResponse\x12\x0e\n\x06topics\x18\x01 \x03(\t\"\xca\x02\n\tDatapoint\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x1b\n\x04text\x18\x03 \x01(\x0b\x32\x0b.agent.TextH\x00\x12!\n\x07numeric\x18\x04 \x01(\x0b\x32\x0e.agent.NumericH\x00\x12\x1b\n\x04\x66ile\x18\x05 \x01(\x0b\x32\x0b.agent.FileH\x00\x12\x1d\n\x05image\x18\x06 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x1d\n\x05video\x18\x07 \x01(\x0b\x32\x0c.agent.VideoH\x00\x12(\n\x0bpoint_cloud\x18\x08 \x01(\x0b\x32\x11.agent.PointCloudH\x00\x12#\n\x08location\x18\t \x01(\x0b\x32\x0f.agent.LocationH\x00\x12(\n\x0bros_message\x18\n \x01(\x0b\x32\x11.agent.ROSMessageH\x00\x42\x06\n\x04\x64\x61ta\"\x15\n\x04Text\x12\r\n\x05value\x18\x01 \x01(\t\"\x18\n\x07Numeric\x12\r\n\x05value\x18\x01 \x01(\x01\"L\n\x04\x46ile\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x12\x10\n\x08\x66ilename\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\x03\x42\x06\n\x04\x64\x61ta\"C\n\x05Image\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Video\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"2\n\nPointCloud\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\"\x19\n\nROSMessage\x12\x0b\n\x03raw\x18\x01 \x01(\x0c\"W\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x10\n\x08msg_desc\x18\x03 \x01(\t\x12\x18\n\x04tags\x18\x04 \x03(\x0b\x32\n.agent.Tag\"!\n\x03Tag\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t2\x92\x02\n\x05\x41gent\x12=\n\nStreamData\x12\x10.agent.Datapoint\x1a\x19.agent.StreamDataResponse\"\x00(\x01\x12\x37\n\x08PostData\x12\x10.agent.Datapoint\x1a\x17.agent.PostDataResponse\"\x00\x12\x46\n\x10RegisterROSTopic\x12\x0f.agent.ROSTopic\x1a\x1f.agent.RegisterROSTopicResponse\"\x00\x12I\n\x0cGetROSTopics\x12\x1a.agent.GetROSTopicsRequest\x1a\x1b.agent.GetROSTopicsResponse\"\x00\x62\x06proto3')
 )
 
 
@@ -38,7 +38,7 @@ _STREAMDATARESPONSE = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -62,7 +62,7 @@ _POSTDATARESPONSE = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -86,7 +86,7 @@ _GETROSTOPICSREQUEST = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -110,7 +110,7 @@ _REGISTERROSTOPICRESPONSE = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -134,14 +134,14 @@ _GETROSTOPICSRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -165,84 +165,77 @@ _DATAPOINT = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='timestamp', full_name='agent.Datapoint.timestamp', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='raw', full_name='agent.Datapoint.raw', index=2,
-      number=4, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
+      name='text', full_name='agent.Datapoint.text', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='text', full_name='agent.Datapoint.text', index=3,
+      name='numeric', full_name='agent.Datapoint.numeric', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='file', full_name='agent.Datapoint.file', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='numeric', full_name='agent.Datapoint.numeric', index=4,
+      name='image', full_name='agent.Datapoint.image', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='file', full_name='agent.Datapoint.file', index=5,
+      name='video', full_name='agent.Datapoint.video', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='image', full_name='agent.Datapoint.image', index=6,
+      name='point_cloud', full_name='agent.Datapoint.point_cloud', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='video', full_name='agent.Datapoint.video', index=7,
+      name='location', full_name='agent.Datapoint.location', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='point_cloud', full_name='agent.Datapoint.point_cloud', index=8,
+      name='ros_message', full_name='agent.Datapoint.ros_message', index=9,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='location', full_name='agent.Datapoint.location', index=9,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ros_message', full_name='agent.Datapoint.ros_message', index=10,
-      number=12, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -252,7 +245,7 @@ _DATAPOINT = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=156,
-  serialized_end=501,
+  serialized_end=486,
 )
 
 
@@ -269,28 +262,21 @@ _TEXT = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='format', full_name='agent.Text.format', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=503,
-  serialized_end=540,
+  serialized_start=488,
+  serialized_end=509,
 )
 
 
@@ -307,21 +293,21 @@ _NUMERIC = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=542,
-  serialized_end=566,
+  serialized_start=511,
+  serialized_end=535,
 )
 
 
@@ -338,21 +324,35 @@ _FILE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='raw', full_name='agent.File.raw', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='filename', full_name='agent.File.filename', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='size', full_name='agent.File.size', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -361,8 +361,8 @@ _FILE = _descriptor.Descriptor(
       name='data', full_name='agent.File.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=568,
-  serialized_end=612,
+  serialized_start=537,
+  serialized_end=613,
 )
 
 
@@ -379,28 +379,28 @@ _IMAGE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='url', full_name='agent.Image.url', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='raw', full_name='agent.Image.raw', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -409,8 +409,8 @@ _IMAGE = _descriptor.Descriptor(
       name='data', full_name='agent.Image.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=614,
-  serialized_end=681,
+  serialized_start=615,
+  serialized_end=682,
 )
 
 
@@ -427,28 +427,28 @@ _VIDEO = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='url', full_name='agent.Video.url', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='raw', full_name='agent.Video.raw', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -457,8 +457,8 @@ _VIDEO = _descriptor.Descriptor(
       name='data', full_name='agent.Video.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=683,
-  serialized_end=750,
+  serialized_start=684,
+  serialized_end=751,
 )
 
 
@@ -475,21 +475,21 @@ _POINTCLOUD = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='raw', full_name='agent.PointCloud.raw', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -498,8 +498,8 @@ _POINTCLOUD = _descriptor.Descriptor(
       name='data', full_name='agent.PointCloud.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=752,
-  serialized_end=802,
+  serialized_start=753,
+  serialized_end=803,
 )
 
 
@@ -516,28 +516,28 @@ _LOCATION = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='longitude', full_name='agent.Location.longitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=804,
-  serialized_end=851,
+  serialized_start=805,
+  serialized_end=852,
 )
 
 
@@ -554,21 +554,21 @@ _ROSMESSAGE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=853,
-  serialized_end=878,
+  serialized_start=854,
+  serialized_end=879,
 )
 
 
@@ -585,42 +585,42 @@ _ROSTOPIC = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data_type', full_name='agent.ROSTopic.data_type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='msg_desc', full_name='agent.ROSTopic.msg_desc', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='tags', full_name='agent.ROSTopic.tags', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=880,
-  serialized_end=967,
+  serialized_start=881,
+  serialized_end=968,
 )
 
 
@@ -637,28 +637,28 @@ _TAG = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='agent.Tag.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=969,
-  serialized_end=1002,
+  serialized_start=970,
+  serialized_end=1003,
 )
 
 _DATAPOINT.fields_by_name['text'].message_type = _TEXT
@@ -669,9 +669,6 @@ _DATAPOINT.fields_by_name['video'].message_type = _VIDEO
 _DATAPOINT.fields_by_name['point_cloud'].message_type = _POINTCLOUD
 _DATAPOINT.fields_by_name['location'].message_type = _LOCATION
 _DATAPOINT.fields_by_name['ros_message'].message_type = _ROSMESSAGE
-_DATAPOINT.oneofs_by_name['data'].fields.append(
-  _DATAPOINT.fields_by_name['raw'])
-_DATAPOINT.fields_by_name['raw'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
 _DATAPOINT.oneofs_by_name['data'].fields.append(
   _DATAPOINT.fields_by_name['text'])
 _DATAPOINT.fields_by_name['text'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
@@ -858,9 +855,9 @@ _AGENT = _descriptor.ServiceDescriptor(
   full_name='agent.Agent',
   file=DESCRIPTOR,
   index=0,
-  options=None,
-  serialized_start=1005,
-  serialized_end=1279,
+  serialized_options=None,
+  serialized_start=1006,
+  serialized_end=1280,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamData',
@@ -869,7 +866,7 @@ _AGENT = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_DATAPOINT,
     output_type=_STREAMDATARESPONSE,
-    options=None,
+    serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='PostData',
@@ -878,7 +875,7 @@ _AGENT = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_DATAPOINT,
     output_type=_POSTDATARESPONSE,
-    options=None,
+    serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='RegisterROSTopic',
@@ -887,7 +884,7 @@ _AGENT = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ROSTOPIC,
     output_type=_REGISTERROSTOPICRESPONSE,
-    options=None,
+    serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetROSTopics',
@@ -896,7 +893,7 @@ _AGENT = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETROSTOPICSREQUEST,
     output_type=_GETROSTOPICSRESPONSE,
-    options=None,
+    serialized_options=None,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_AGENT)
