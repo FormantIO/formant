@@ -3,6 +3,7 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -19,9 +20,79 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='agent.proto',
   package='agent',
   syntax='proto3',
-  serialized_pb=_b('\n\x0b\x61gent.proto\x12\x05\x61gent\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"\x15\n\x13GetROSTopicsRequest\"\x1a\n\x18RegisterROSTopicResponse\"&\n\x14GetROSTopicsResponse\x12\x0e\n\x06topics\x18\x01 \x03(\t\"\xd9\x02\n\tDatapoint\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\r\n\x03raw\x18\x04 \x01(\x0cH\x00\x12\x1b\n\x04text\x18\x05 \x01(\x0b\x32\x0b.agent.TextH\x00\x12!\n\x07numeric\x18\x06 \x01(\x0b\x32\x0e.agent.NumericH\x00\x12\x1b\n\x04\x66ile\x18\x07 \x01(\x0b\x32\x0b.agent.FileH\x00\x12\x1d\n\x05image\x18\x08 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x1d\n\x05video\x18\t \x01(\x0b\x32\x0c.agent.VideoH\x00\x12(\n\x0bpoint_cloud\x18\n \x01(\x0b\x32\x11.agent.PointCloudH\x00\x12#\n\x08location\x18\x0b \x01(\x0b\x32\x0f.agent.LocationH\x00\x12(\n\x0bros_message\x18\x0c \x01(\x0b\x32\x11.agent.ROSMessageH\x00\x42\x06\n\x04\x64\x61ta\"%\n\x04Text\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0e\n\x06\x66ormat\x18\x02 \x01(\t\"\x18\n\x07Numeric\x12\r\n\x05value\x18\x01 \x01(\x01\",\n\x04\x46ile\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Image\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Video\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"2\n\nPointCloud\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\"\x19\n\nROSMessage\x12\x0b\n\x03raw\x18\x01 \x01(\x0c\"W\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x10\n\x08msg_desc\x18\x03 \x01(\t\x12\x18\n\x04tags\x18\x04 \x03(\x0b\x32\n.agent.Tag\"!\n\x03Tag\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t2\x92\x02\n\x05\x41gent\x12=\n\nStreamData\x12\x10.agent.Datapoint\x1a\x19.agent.StreamDataResponse\"\x00(\x01\x12\x37\n\x08PostData\x12\x10.agent.Datapoint\x1a\x17.agent.PostDataResponse\"\x00\x12\x46\n\x10RegisterROSTopic\x12\x0f.agent.ROSTopic\x1a\x1f.agent.RegisterROSTopicResponse\"\x00\x12I\n\x0cGetROSTopics\x12\x1a.agent.GetROSTopicsRequest\x1a\x1b.agent.GetROSTopicsResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0b\x61gent.proto\x12\x05\x61gent\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"\x15\n\x13GetROSTopicsRequest\"\x1a\n\x18RegisterROSTopicResponse\"&\n\x14GetROSTopicsResponse\x12\x0e\n\x06topics\x18\x01 \x03(\t\"+\n\x1dGetInterventionRequestRequest\x12\n\n\x02id\x18\x01 \x01(\t\"4\n\x1eGetInterventionResponseRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\"\xe6\x02\n\x13InterventionRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12!\n\x08severity\x18\x03 \x01(\x0e\x32\x0f.agent.Severity\x12\x34\n\x11selection_request\x18\x04 \x01(\x0b\x32\x17.agent.SelectionRequestH\x00\x12>\n\x17\x62ounding_box_2d_request\x18\x05 \x01(\x0b\x32\x1b.agent.BoundingBox2dRequestH\x00\x12\x32\n\x04tags\x18\x06 \x03(\x0b\x32$.agent.InterventionRequest.TagsEntry\x12.\n\tresponses\x18\x07 \x03(\x0b\x32\x1b.agent.InterventionResponse\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x06\n\x04\x64\x61ta\"\xcb\x01\n\x14InterventionResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nrequest_id\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x36\n\x12selection_response\x18\x04 \x01(\x0b\x32\x18.agent.SelectionResponseH\x00\x12@\n\x18\x62ounding_box_2d_response\x18\x05 \x01(\x0b\x32\x1c.agent.BoundingBox2dResponseH\x00\x42\x06\n\x04\x64\x61ta\"D\n\rBoundingBox2d\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\r\n\x05width\x18\x03 \x01(\x01\x12\x0e\n\x06height\x18\x04 \x01(\x01\"l\n\x14\x42oundingBox2dRequest\x12\x1b\n\x05image\x18\x01 \x01(\x0b\x32\x0c.agent.Image\x12\x13\n\x0binstruction\x18\x02 \x01(\t\x12\"\n\x04hint\x18\x03 \x03(\x0b\x32\x14.agent.BoundingBox2d\"<\n\x15\x42oundingBox2dResponse\x12#\n\x05value\x18\x01 \x03(\x0b\x32\x14.agent.BoundingBox2d\"m\n\x10SelectionRequest\x12\x1d\n\x05image\x18\x01 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x13\n\x0binstruction\x18\x02 \x01(\t\x12\x0f\n\x07options\x18\x03 \x03(\t\x12\x0c\n\x04hint\x18\x04 \x01(\x03\x42\x06\n\x04\x64\x61ta\"\"\n\x11SelectionResponse\x12\r\n\x05value\x18\x01 \x01(\x03\"\xca\x02\n\tDatapoint\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x1b\n\x04text\x18\x03 \x01(\x0b\x32\x0b.agent.TextH\x00\x12!\n\x07numeric\x18\x04 \x01(\x0b\x32\x0e.agent.NumericH\x00\x12\x1b\n\x04\x66ile\x18\x05 \x01(\x0b\x32\x0b.agent.FileH\x00\x12\x1d\n\x05image\x18\x06 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x1d\n\x05video\x18\x07 \x01(\x0b\x32\x0c.agent.VideoH\x00\x12(\n\x0bpoint_cloud\x18\x08 \x01(\x0b\x32\x11.agent.PointCloudH\x00\x12#\n\x08location\x18\t \x01(\x0b\x32\x0f.agent.LocationH\x00\x12(\n\x0bros_message\x18\n \x01(\x0b\x32\x11.agent.ROSMessageH\x00\x42\x06\n\x04\x64\x61ta\"8\n\x04Text\x12\r\n\x05value\x18\x01 \x01(\t\x12!\n\x06\x66ormat\x18\x02 \x01(\x0e\x32\x11.agent.TextFormat\"\x18\n\x07Numeric\x12\r\n\x05value\x18\x01 \x01(\x01\"L\n\x04\x46ile\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x12\x10\n\x08\x66ilename\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\x03\x42\x06\n\x04\x64\x61ta\"C\n\x05Image\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Video\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"2\n\nPointCloud\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\"\x19\n\nROSMessage\x12\x0b\n\x03raw\x18\x01 \x01(\x0c\"\x93\x01\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x10\n\x08msg_desc\x18\x03 \x01(\t\x12\'\n\x04tags\x18\x04 \x03(\x0b\x32\x19.agent.ROSTopic.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*:\n\x08Severity\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x0c\n\x08\x43RITICAL\x10\x03*4\n\nTextFormat\x12\t\n\x05PLAIN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x08\n\x04YAML\x10\x02\x12\x07\n\x03\x43SV\x10\x03\x32\xa8\x04\n\x05\x41gent\x12=\n\nStreamData\x12\x10.agent.Datapoint\x1a\x19.agent.StreamDataResponse\"\x00(\x01\x12\x37\n\x08PostData\x12\x10.agent.Datapoint\x1a\x17.agent.PostDataResponse\"\x00\x12\x46\n\x10RegisterROSTopic\x12\x0f.agent.ROSTopic\x1a\x1f.agent.RegisterROSTopicResponse\"\x00\x12I\n\x0cGetROSTopics\x12\x1a.agent.GetROSTopicsRequest\x1a\x1b.agent.GetROSTopicsResponse\"\x00\x12U\n\x19\x43reateInterventionRequest\x12\x1a.agent.InterventionRequest\x1a\x1a.agent.InterventionRequest\"\x00\x12\\\n\x16GetInterventionRequest\x12$.agent.GetInterventionRequestRequest\x1a\x1a.agent.InterventionRequest\"\x00\x12_\n\x17GetInterventionResponse\x12%.agent.GetInterventionResponseRequest\x1a\x1b.agent.InterventionResponse\"\x00\x62\x06proto3')
 )
 
+_SEVERITY = _descriptor.EnumDescriptor(
+  name='Severity',
+  full_name='agent.Severity',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='INFO', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='WARNING', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CRITICAL', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2121,
+  serialized_end=2179,
+)
+_sym_db.RegisterEnumDescriptor(_SEVERITY)
+
+Severity = enum_type_wrapper.EnumTypeWrapper(_SEVERITY)
+_TEXTFORMAT = _descriptor.EnumDescriptor(
+  name='TextFormat',
+  full_name='agent.TextFormat',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='PLAIN', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='JSON', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='YAML', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CSV', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2181,
+  serialized_end=2233,
+)
+_sym_db.RegisterEnumDescriptor(_TEXTFORMAT)
+
+TextFormat = enum_type_wrapper.EnumTypeWrapper(_TEXTFORMAT)
+INFO = 0
+WARNING = 1
+ERROR = 2
+CRITICAL = 3
+PLAIN = 0
+JSON = 1
+YAML = 2
+CSV = 3
 
 
 
@@ -152,6 +223,457 @@ _GETROSTOPICSRESPONSE = _descriptor.Descriptor(
 )
 
 
+_GETINTERVENTIONREQUESTREQUEST = _descriptor.Descriptor(
+  name='GetInterventionRequestRequest',
+  full_name='agent.GetInterventionRequestRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='agent.GetInterventionRequestRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=155,
+  serialized_end=198,
+)
+
+
+_GETINTERVENTIONRESPONSEREQUEST = _descriptor.Descriptor(
+  name='GetInterventionResponseRequest',
+  full_name='agent.GetInterventionResponseRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='request_id', full_name='agent.GetInterventionResponseRequest.request_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=200,
+  serialized_end=252,
+)
+
+
+_INTERVENTIONREQUEST_TAGSENTRY = _descriptor.Descriptor(
+  name='TagsEntry',
+  full_name='agent.InterventionRequest.TagsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='agent.InterventionRequest.TagsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='agent.InterventionRequest.TagsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=562,
+  serialized_end=605,
+)
+
+_INTERVENTIONREQUEST = _descriptor.Descriptor(
+  name='InterventionRequest',
+  full_name='agent.InterventionRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='agent.InterventionRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='timestamp', full_name='agent.InterventionRequest.timestamp', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='severity', full_name='agent.InterventionRequest.severity', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='selection_request', full_name='agent.InterventionRequest.selection_request', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bounding_box_2d_request', full_name='agent.InterventionRequest.bounding_box_2d_request', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='agent.InterventionRequest.tags', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='responses', full_name='agent.InterventionRequest.responses', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_INTERVENTIONREQUEST_TAGSENTRY, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='data', full_name='agent.InterventionRequest.data',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=255,
+  serialized_end=613,
+)
+
+
+_INTERVENTIONRESPONSE = _descriptor.Descriptor(
+  name='InterventionResponse',
+  full_name='agent.InterventionResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='agent.InterventionResponse.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='request_id', full_name='agent.InterventionResponse.request_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='timestamp', full_name='agent.InterventionResponse.timestamp', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='selection_response', full_name='agent.InterventionResponse.selection_response', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bounding_box_2d_response', full_name='agent.InterventionResponse.bounding_box_2d_response', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='data', full_name='agent.InterventionResponse.data',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=616,
+  serialized_end=819,
+)
+
+
+_BOUNDINGBOX2D = _descriptor.Descriptor(
+  name='BoundingBox2d',
+  full_name='agent.BoundingBox2d',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='agent.BoundingBox2d.x', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='agent.BoundingBox2d.y', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='width', full_name='agent.BoundingBox2d.width', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='height', full_name='agent.BoundingBox2d.height', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=821,
+  serialized_end=889,
+)
+
+
+_BOUNDINGBOX2DREQUEST = _descriptor.Descriptor(
+  name='BoundingBox2dRequest',
+  full_name='agent.BoundingBox2dRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='image', full_name='agent.BoundingBox2dRequest.image', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='instruction', full_name='agent.BoundingBox2dRequest.instruction', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='hint', full_name='agent.BoundingBox2dRequest.hint', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=891,
+  serialized_end=999,
+)
+
+
+_BOUNDINGBOX2DRESPONSE = _descriptor.Descriptor(
+  name='BoundingBox2dResponse',
+  full_name='agent.BoundingBox2dResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='agent.BoundingBox2dResponse.value', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1001,
+  serialized_end=1061,
+)
+
+
+_SELECTIONREQUEST = _descriptor.Descriptor(
+  name='SelectionRequest',
+  full_name='agent.SelectionRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='image', full_name='agent.SelectionRequest.image', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='instruction', full_name='agent.SelectionRequest.instruction', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='options', full_name='agent.SelectionRequest.options', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='hint', full_name='agent.SelectionRequest.hint', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='data', full_name='agent.SelectionRequest.data',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=1063,
+  serialized_end=1172,
+)
+
+
+_SELECTIONRESPONSE = _descriptor.Descriptor(
+  name='SelectionResponse',
+  full_name='agent.SelectionResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='agent.SelectionResponse.value', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1174,
+  serialized_end=1208,
+)
+
+
 _DATAPOINT = _descriptor.Descriptor(
   name='Datapoint',
   full_name='agent.Datapoint',
@@ -174,64 +696,57 @@ _DATAPOINT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='raw', full_name='agent.Datapoint.raw', index=2,
-      number=4, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
+      name='text', full_name='agent.Datapoint.text', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='text', full_name='agent.Datapoint.text', index=3,
+      name='numeric', full_name='agent.Datapoint.numeric', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='file', full_name='agent.Datapoint.file', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='numeric', full_name='agent.Datapoint.numeric', index=4,
+      name='image', full_name='agent.Datapoint.image', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='file', full_name='agent.Datapoint.file', index=5,
+      name='video', full_name='agent.Datapoint.video', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='image', full_name='agent.Datapoint.image', index=6,
+      name='point_cloud', full_name='agent.Datapoint.point_cloud', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='video', full_name='agent.Datapoint.video', index=7,
+      name='location', full_name='agent.Datapoint.location', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='point_cloud', full_name='agent.Datapoint.point_cloud', index=8,
+      name='ros_message', full_name='agent.Datapoint.ros_message', index=9,
       number=10, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='location', full_name='agent.Datapoint.location', index=9,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ros_message', full_name='agent.Datapoint.ros_message', index=10,
-      number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -251,8 +766,8 @@ _DATAPOINT = _descriptor.Descriptor(
       name='data', full_name='agent.Datapoint.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=156,
-  serialized_end=501,
+  serialized_start=1211,
+  serialized_end=1541,
 )
 
 
@@ -272,8 +787,8 @@ _TEXT = _descriptor.Descriptor(
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='format', full_name='agent.Text.format', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -289,8 +804,8 @@ _TEXT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=503,
-  serialized_end=540,
+  serialized_start=1543,
+  serialized_end=1599,
 )
 
 
@@ -320,8 +835,8 @@ _NUMERIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=542,
-  serialized_end=566,
+  serialized_start=1601,
+  serialized_end=1625,
 )
 
 
@@ -346,6 +861,20 @@ _FILE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='filename', full_name='agent.File.filename', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='size', full_name='agent.File.size', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -361,8 +890,8 @@ _FILE = _descriptor.Descriptor(
       name='data', full_name='agent.File.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=568,
-  serialized_end=612,
+  serialized_start=1627,
+  serialized_end=1703,
 )
 
 
@@ -409,8 +938,8 @@ _IMAGE = _descriptor.Descriptor(
       name='data', full_name='agent.Image.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=614,
-  serialized_end=681,
+  serialized_start=1705,
+  serialized_end=1772,
 )
 
 
@@ -457,8 +986,8 @@ _VIDEO = _descriptor.Descriptor(
       name='data', full_name='agent.Video.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=683,
-  serialized_end=750,
+  serialized_start=1774,
+  serialized_end=1841,
 )
 
 
@@ -498,8 +1027,8 @@ _POINTCLOUD = _descriptor.Descriptor(
       name='data', full_name='agent.PointCloud.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=752,
-  serialized_end=802,
+  serialized_start=1843,
+  serialized_end=1893,
 )
 
 
@@ -536,8 +1065,8 @@ _LOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=804,
-  serialized_end=851,
+  serialized_start=1895,
+  serialized_end=1942,
 )
 
 
@@ -567,10 +1096,47 @@ _ROSMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=853,
-  serialized_end=878,
+  serialized_start=1944,
+  serialized_end=1969,
 )
 
+
+_ROSTOPIC_TAGSENTRY = _descriptor.Descriptor(
+  name='TagsEntry',
+  full_name='agent.ROSTopic.TagsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='agent.ROSTopic.TagsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='agent.ROSTopic.TagsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=562,
+  serialized_end=605,
+)
 
 _ROSTOPIC = _descriptor.Descriptor(
   name='ROSTopic',
@@ -610,7 +1176,7 @@ _ROSTOPIC = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_ROSTOPIC_TAGSENTRY, ],
   enum_types=[
   ],
   options=None,
@@ -619,48 +1185,37 @@ _ROSTOPIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=880,
-  serialized_end=967,
+  serialized_start=1972,
+  serialized_end=2119,
 )
 
-
-_TAG = _descriptor.Descriptor(
-  name='Tag',
-  full_name='agent.Tag',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='agent.Tag.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='agent.Tag.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=969,
-  serialized_end=1002,
-)
-
+_INTERVENTIONREQUEST_TAGSENTRY.containing_type = _INTERVENTIONREQUEST
+_INTERVENTIONREQUEST.fields_by_name['severity'].enum_type = _SEVERITY
+_INTERVENTIONREQUEST.fields_by_name['selection_request'].message_type = _SELECTIONREQUEST
+_INTERVENTIONREQUEST.fields_by_name['bounding_box_2d_request'].message_type = _BOUNDINGBOX2DREQUEST
+_INTERVENTIONREQUEST.fields_by_name['tags'].message_type = _INTERVENTIONREQUEST_TAGSENTRY
+_INTERVENTIONREQUEST.fields_by_name['responses'].message_type = _INTERVENTIONRESPONSE
+_INTERVENTIONREQUEST.oneofs_by_name['data'].fields.append(
+  _INTERVENTIONREQUEST.fields_by_name['selection_request'])
+_INTERVENTIONREQUEST.fields_by_name['selection_request'].containing_oneof = _INTERVENTIONREQUEST.oneofs_by_name['data']
+_INTERVENTIONREQUEST.oneofs_by_name['data'].fields.append(
+  _INTERVENTIONREQUEST.fields_by_name['bounding_box_2d_request'])
+_INTERVENTIONREQUEST.fields_by_name['bounding_box_2d_request'].containing_oneof = _INTERVENTIONREQUEST.oneofs_by_name['data']
+_INTERVENTIONRESPONSE.fields_by_name['selection_response'].message_type = _SELECTIONRESPONSE
+_INTERVENTIONRESPONSE.fields_by_name['bounding_box_2d_response'].message_type = _BOUNDINGBOX2DRESPONSE
+_INTERVENTIONRESPONSE.oneofs_by_name['data'].fields.append(
+  _INTERVENTIONRESPONSE.fields_by_name['selection_response'])
+_INTERVENTIONRESPONSE.fields_by_name['selection_response'].containing_oneof = _INTERVENTIONRESPONSE.oneofs_by_name['data']
+_INTERVENTIONRESPONSE.oneofs_by_name['data'].fields.append(
+  _INTERVENTIONRESPONSE.fields_by_name['bounding_box_2d_response'])
+_INTERVENTIONRESPONSE.fields_by_name['bounding_box_2d_response'].containing_oneof = _INTERVENTIONRESPONSE.oneofs_by_name['data']
+_BOUNDINGBOX2DREQUEST.fields_by_name['image'].message_type = _IMAGE
+_BOUNDINGBOX2DREQUEST.fields_by_name['hint'].message_type = _BOUNDINGBOX2D
+_BOUNDINGBOX2DRESPONSE.fields_by_name['value'].message_type = _BOUNDINGBOX2D
+_SELECTIONREQUEST.fields_by_name['image'].message_type = _IMAGE
+_SELECTIONREQUEST.oneofs_by_name['data'].fields.append(
+  _SELECTIONREQUEST.fields_by_name['image'])
+_SELECTIONREQUEST.fields_by_name['image'].containing_oneof = _SELECTIONREQUEST.oneofs_by_name['data']
 _DATAPOINT.fields_by_name['text'].message_type = _TEXT
 _DATAPOINT.fields_by_name['numeric'].message_type = _NUMERIC
 _DATAPOINT.fields_by_name['file'].message_type = _FILE
@@ -669,9 +1224,6 @@ _DATAPOINT.fields_by_name['video'].message_type = _VIDEO
 _DATAPOINT.fields_by_name['point_cloud'].message_type = _POINTCLOUD
 _DATAPOINT.fields_by_name['location'].message_type = _LOCATION
 _DATAPOINT.fields_by_name['ros_message'].message_type = _ROSMESSAGE
-_DATAPOINT.oneofs_by_name['data'].fields.append(
-  _DATAPOINT.fields_by_name['raw'])
-_DATAPOINT.fields_by_name['raw'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
 _DATAPOINT.oneofs_by_name['data'].fields.append(
   _DATAPOINT.fields_by_name['text'])
 _DATAPOINT.fields_by_name['text'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
@@ -696,6 +1248,7 @@ _DATAPOINT.fields_by_name['location'].containing_oneof = _DATAPOINT.oneofs_by_na
 _DATAPOINT.oneofs_by_name['data'].fields.append(
   _DATAPOINT.fields_by_name['ros_message'])
 _DATAPOINT.fields_by_name['ros_message'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
+_TEXT.fields_by_name['format'].enum_type = _TEXTFORMAT
 _FILE.oneofs_by_name['data'].fields.append(
   _FILE.fields_by_name['url'])
 _FILE.fields_by_name['url'].containing_oneof = _FILE.oneofs_by_name['data']
@@ -720,12 +1273,22 @@ _POINTCLOUD.fields_by_name['url'].containing_oneof = _POINTCLOUD.oneofs_by_name[
 _POINTCLOUD.oneofs_by_name['data'].fields.append(
   _POINTCLOUD.fields_by_name['raw'])
 _POINTCLOUD.fields_by_name['raw'].containing_oneof = _POINTCLOUD.oneofs_by_name['data']
-_ROSTOPIC.fields_by_name['tags'].message_type = _TAG
+_ROSTOPIC_TAGSENTRY.containing_type = _ROSTOPIC
+_ROSTOPIC.fields_by_name['tags'].message_type = _ROSTOPIC_TAGSENTRY
 DESCRIPTOR.message_types_by_name['StreamDataResponse'] = _STREAMDATARESPONSE
 DESCRIPTOR.message_types_by_name['PostDataResponse'] = _POSTDATARESPONSE
 DESCRIPTOR.message_types_by_name['GetROSTopicsRequest'] = _GETROSTOPICSREQUEST
 DESCRIPTOR.message_types_by_name['RegisterROSTopicResponse'] = _REGISTERROSTOPICRESPONSE
 DESCRIPTOR.message_types_by_name['GetROSTopicsResponse'] = _GETROSTOPICSRESPONSE
+DESCRIPTOR.message_types_by_name['GetInterventionRequestRequest'] = _GETINTERVENTIONREQUESTREQUEST
+DESCRIPTOR.message_types_by_name['GetInterventionResponseRequest'] = _GETINTERVENTIONRESPONSEREQUEST
+DESCRIPTOR.message_types_by_name['InterventionRequest'] = _INTERVENTIONREQUEST
+DESCRIPTOR.message_types_by_name['InterventionResponse'] = _INTERVENTIONRESPONSE
+DESCRIPTOR.message_types_by_name['BoundingBox2d'] = _BOUNDINGBOX2D
+DESCRIPTOR.message_types_by_name['BoundingBox2dRequest'] = _BOUNDINGBOX2DREQUEST
+DESCRIPTOR.message_types_by_name['BoundingBox2dResponse'] = _BOUNDINGBOX2DRESPONSE
+DESCRIPTOR.message_types_by_name['SelectionRequest'] = _SELECTIONREQUEST
+DESCRIPTOR.message_types_by_name['SelectionResponse'] = _SELECTIONRESPONSE
 DESCRIPTOR.message_types_by_name['Datapoint'] = _DATAPOINT
 DESCRIPTOR.message_types_by_name['Text'] = _TEXT
 DESCRIPTOR.message_types_by_name['Numeric'] = _NUMERIC
@@ -736,7 +1299,8 @@ DESCRIPTOR.message_types_by_name['PointCloud'] = _POINTCLOUD
 DESCRIPTOR.message_types_by_name['Location'] = _LOCATION
 DESCRIPTOR.message_types_by_name['ROSMessage'] = _ROSMESSAGE
 DESCRIPTOR.message_types_by_name['ROSTopic'] = _ROSTOPIC
-DESCRIPTOR.message_types_by_name['Tag'] = _TAG
+DESCRIPTOR.enum_types_by_name['Severity'] = _SEVERITY
+DESCRIPTOR.enum_types_by_name['TextFormat'] = _TEXTFORMAT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 StreamDataResponse = _reflection.GeneratedProtocolMessageType('StreamDataResponse', (_message.Message,), dict(
@@ -773,6 +1337,77 @@ GetROSTopicsResponse = _reflection.GeneratedProtocolMessageType('GetROSTopicsRes
   # @@protoc_insertion_point(class_scope:agent.GetROSTopicsResponse)
   ))
 _sym_db.RegisterMessage(GetROSTopicsResponse)
+
+GetInterventionRequestRequest = _reflection.GeneratedProtocolMessageType('GetInterventionRequestRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETINTERVENTIONREQUESTREQUEST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.GetInterventionRequestRequest)
+  ))
+_sym_db.RegisterMessage(GetInterventionRequestRequest)
+
+GetInterventionResponseRequest = _reflection.GeneratedProtocolMessageType('GetInterventionResponseRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETINTERVENTIONRESPONSEREQUEST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.GetInterventionResponseRequest)
+  ))
+_sym_db.RegisterMessage(GetInterventionResponseRequest)
+
+InterventionRequest = _reflection.GeneratedProtocolMessageType('InterventionRequest', (_message.Message,), dict(
+
+  TagsEntry = _reflection.GeneratedProtocolMessageType('TagsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _INTERVENTIONREQUEST_TAGSENTRY,
+    __module__ = 'agent_pb2'
+    # @@protoc_insertion_point(class_scope:agent.InterventionRequest.TagsEntry)
+    ))
+  ,
+  DESCRIPTOR = _INTERVENTIONREQUEST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.InterventionRequest)
+  ))
+_sym_db.RegisterMessage(InterventionRequest)
+_sym_db.RegisterMessage(InterventionRequest.TagsEntry)
+
+InterventionResponse = _reflection.GeneratedProtocolMessageType('InterventionResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INTERVENTIONRESPONSE,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.InterventionResponse)
+  ))
+_sym_db.RegisterMessage(InterventionResponse)
+
+BoundingBox2d = _reflection.GeneratedProtocolMessageType('BoundingBox2d', (_message.Message,), dict(
+  DESCRIPTOR = _BOUNDINGBOX2D,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.BoundingBox2d)
+  ))
+_sym_db.RegisterMessage(BoundingBox2d)
+
+BoundingBox2dRequest = _reflection.GeneratedProtocolMessageType('BoundingBox2dRequest', (_message.Message,), dict(
+  DESCRIPTOR = _BOUNDINGBOX2DREQUEST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.BoundingBox2dRequest)
+  ))
+_sym_db.RegisterMessage(BoundingBox2dRequest)
+
+BoundingBox2dResponse = _reflection.GeneratedProtocolMessageType('BoundingBox2dResponse', (_message.Message,), dict(
+  DESCRIPTOR = _BOUNDINGBOX2DRESPONSE,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.BoundingBox2dResponse)
+  ))
+_sym_db.RegisterMessage(BoundingBox2dResponse)
+
+SelectionRequest = _reflection.GeneratedProtocolMessageType('SelectionRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SELECTIONREQUEST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.SelectionRequest)
+  ))
+_sym_db.RegisterMessage(SelectionRequest)
+
+SelectionResponse = _reflection.GeneratedProtocolMessageType('SelectionResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SELECTIONRESPONSE,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.SelectionResponse)
+  ))
+_sym_db.RegisterMessage(SelectionResponse)
 
 Datapoint = _reflection.GeneratedProtocolMessageType('Datapoint', (_message.Message,), dict(
   DESCRIPTOR = _DATAPOINT,
@@ -838,20 +1473,25 @@ ROSMessage = _reflection.GeneratedProtocolMessageType('ROSMessage', (_message.Me
 _sym_db.RegisterMessage(ROSMessage)
 
 ROSTopic = _reflection.GeneratedProtocolMessageType('ROSTopic', (_message.Message,), dict(
+
+  TagsEntry = _reflection.GeneratedProtocolMessageType('TagsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _ROSTOPIC_TAGSENTRY,
+    __module__ = 'agent_pb2'
+    # @@protoc_insertion_point(class_scope:agent.ROSTopic.TagsEntry)
+    ))
+  ,
   DESCRIPTOR = _ROSTOPIC,
   __module__ = 'agent_pb2'
   # @@protoc_insertion_point(class_scope:agent.ROSTopic)
   ))
 _sym_db.RegisterMessage(ROSTopic)
-
-Tag = _reflection.GeneratedProtocolMessageType('Tag', (_message.Message,), dict(
-  DESCRIPTOR = _TAG,
-  __module__ = 'agent_pb2'
-  # @@protoc_insertion_point(class_scope:agent.Tag)
-  ))
-_sym_db.RegisterMessage(Tag)
+_sym_db.RegisterMessage(ROSTopic.TagsEntry)
 
 
+_INTERVENTIONREQUEST_TAGSENTRY.has_options = True
+_INTERVENTIONREQUEST_TAGSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_ROSTOPIC_TAGSENTRY.has_options = True
+_ROSTOPIC_TAGSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 
 _AGENT = _descriptor.ServiceDescriptor(
   name='Agent',
@@ -859,8 +1499,8 @@ _AGENT = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=1005,
-  serialized_end=1279,
+  serialized_start=2236,
+  serialized_end=2788,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamData',
@@ -896,6 +1536,33 @@ _AGENT = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETROSTOPICSREQUEST,
     output_type=_GETROSTOPICSRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateInterventionRequest',
+    full_name='agent.Agent.CreateInterventionRequest',
+    index=4,
+    containing_service=None,
+    input_type=_INTERVENTIONREQUEST,
+    output_type=_INTERVENTIONREQUEST,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetInterventionRequest',
+    full_name='agent.Agent.GetInterventionRequest',
+    index=5,
+    containing_service=None,
+    input_type=_GETINTERVENTIONREQUESTREQUEST,
+    output_type=_INTERVENTIONREQUEST,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetInterventionResponse',
+    full_name='agent.Agent.GetInterventionResponse',
+    index=6,
+    containing_service=None,
+    input_type=_GETINTERVENTIONRESPONSEREQUEST,
+    output_type=_INTERVENTIONRESPONSE,
     options=None,
   ),
 ])

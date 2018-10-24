@@ -12,6 +12,12 @@ service Agent {
     rpc RegisterROSTopic(ROSTopic) returns (RegisterROSTopicResponse) {}
     // Gets the ROS topics defined in the agent config.
     rpc GetROSTopics(GetROSTopicsRequest) returns (GetROSTopicsResponse) {}
+    // Creates a InterventionRequest. Returns a InterventionRequest with a populated id.
+    rpc CreateInterventionRequest(InterventionRequest) returns (InterventionRequest) {}
+    // Returns a InterventionRequest. NOTE: the responses object will be empty if a operator has not responded.
+    rpc GetInterventionRequest(GetInterventionRequestRequest) returns (InterventionRequest) {}
+    // Blocks till the InterventionRequest with request_id has a response.
+    rpc GetInterventionResponse(GetInterventionResponseRequest) returns (InterventionResponse) {}
 }
 
 // gRPC request response types
@@ -28,6 +34,75 @@ message GetROSTopicsResponse {
     repeated string topics = 1;
 }
 
+
+// Intervention message types
+
+enum Severity {
+    INFO = 0;
+    WARNING = 1;
+    ERROR = 2;
+    CRITICAL = 3;
+}
+
+message GetInterventionRequestRequest {
+    string id = 1;
+}
+
+message GetInterventionResponseRequest {
+    string request_id = 1;
+}
+
+message InterventionRequest {
+    string id = 1;
+    int64 timestamp = 2;
+    Severity severity = 3;
+    oneof data {
+        SelectionRequest selection_request = 4;
+        BoundingBox2dRequest bounding_box_2d_request = 5;
+    }
+    map <string, string> tags = 6;
+    repeated InterventionResponse responses = 7;
+}
+
+message InterventionResponse {
+    string id = 1;
+    string request_id = 2;
+    int64 timestamp = 3;
+    oneof data {
+        SelectionResponse selection_response = 4;
+        BoundingBox2dResponse bounding_box_2d_response = 5;
+    }
+}
+
+message BoundingBox2d {
+    double x = 1;
+    double y = 2;
+    double width = 3;
+    double height = 4;
+}
+
+message BoundingBox2dRequest {
+    Image image = 1;
+    string instruction = 2;
+    repeated BoundingBox2d hint = 3;
+}
+
+message BoundingBox2dResponse {
+    repeated BoundingBox2d value = 1;
+}
+
+message SelectionRequest {
+    oneof data {
+        Image image = 1;
+    }
+    string instruction = 2;
+    repeated string options = 3;
+    int64 hint = 4;
+}
+
+message SelectionResponse {
+    int64 value = 1;
+}
 
 // Data message.
 message Datapoint {
@@ -47,8 +122,16 @@ message Datapoint {
     }
 }
 
+enum TextFormat {
+    PLAIN = 0;
+    JSON = 1;
+    YAML = 2;
+    CSV = 3;
+}
+
 message Text {
     string value = 1;
+    TextFormat format = 2;
 }
 
 message Numeric {
@@ -59,8 +142,11 @@ message File {
     oneof data {
         // local files must be prefixed with 'file://'. Currently only local files are supported.
         string url = 1;
+        // 2MB limit
         bytes raw = 2;
     }
+    // If the field `filename` is not provided we will use a path-stripped filename based on the `url` field.
+    // If sending files through the `raw` field and no `filename` is provided, we generate a filename of `<stream_name>.timestamp`
     string filename = 3;
     // size in bytes
     int64 size = 4;
@@ -70,7 +156,9 @@ message Image {
     // e.g. "image/png" for png images.
     string content_type = 1;
     oneof data {
+        // local files must be prefixed with 'file://'. Currently only local files are supported.
         string url = 2;
+        // 2MB limit
         bytes raw = 3;
     }
 }
@@ -79,14 +167,18 @@ message Video {
     // e.g. "video/mp4" for mp4 videos.
     string content_type = 1;
     oneof data {
+        // local files must be prefixed with 'file://'. Currently only local files are supported.
         string url = 2;
+        // 2MB limit
         bytes raw = 3;
     }
 }
 
 message PointCloud {
     oneof data {
+        // local files must be prefixed with 'file://'. Currently only local files are supported.
         string url = 1;
+        // 2MB limit
         bytes raw = 2;
     }
 }
@@ -105,10 +197,5 @@ message ROSTopic {
     string name = 1;
     string data_type = 2;
     string msg_desc = 3;
-    repeated Tag tags = 4;
-}
-
-message Tag {
-    string key = 1;
-    string value = 2;
+    map <string, string> tags = 4;
 }

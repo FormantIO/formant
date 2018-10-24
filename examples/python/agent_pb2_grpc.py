@@ -34,6 +34,21 @@ class AgentStub(object):
         request_serializer=agent__pb2.GetROSTopicsRequest.SerializeToString,
         response_deserializer=agent__pb2.GetROSTopicsResponse.FromString,
         )
+    self.CreateInterventionRequest = channel.unary_unary(
+        '/agent.Agent/CreateInterventionRequest',
+        request_serializer=agent__pb2.InterventionRequest.SerializeToString,
+        response_deserializer=agent__pb2.InterventionRequest.FromString,
+        )
+    self.GetInterventionRequest = channel.unary_unary(
+        '/agent.Agent/GetInterventionRequest',
+        request_serializer=agent__pb2.GetInterventionRequestRequest.SerializeToString,
+        response_deserializer=agent__pb2.InterventionRequest.FromString,
+        )
+    self.GetInterventionResponse = channel.unary_unary(
+        '/agent.Agent/GetInterventionResponse',
+        request_serializer=agent__pb2.GetInterventionResponseRequest.SerializeToString,
+        response_deserializer=agent__pb2.InterventionResponse.FromString,
+        )
 
 
 class AgentServicer(object):
@@ -68,6 +83,27 @@ class AgentServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def CreateInterventionRequest(self, request, context):
+    """Creates a InterventionRequest. Returns a InterventionRequest with a populated id.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetInterventionRequest(self, request, context):
+    """Returns a InterventionRequest. NOTE: the responses object will be empty if a user has not responsed.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetInterventionResponse(self, request, context):
+    """Blocks till the InterventionRequest with request_id has a response.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_AgentServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -90,6 +126,21 @@ def add_AgentServicer_to_server(servicer, server):
           servicer.GetROSTopics,
           request_deserializer=agent__pb2.GetROSTopicsRequest.FromString,
           response_serializer=agent__pb2.GetROSTopicsResponse.SerializeToString,
+      ),
+      'CreateInterventionRequest': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateInterventionRequest,
+          request_deserializer=agent__pb2.InterventionRequest.FromString,
+          response_serializer=agent__pb2.InterventionRequest.SerializeToString,
+      ),
+      'GetInterventionRequest': grpc.unary_unary_rpc_method_handler(
+          servicer.GetInterventionRequest,
+          request_deserializer=agent__pb2.GetInterventionRequestRequest.FromString,
+          response_serializer=agent__pb2.InterventionRequest.SerializeToString,
+      ),
+      'GetInterventionResponse': grpc.unary_unary_rpc_method_handler(
+          servicer.GetInterventionResponse,
+          request_deserializer=agent__pb2.GetInterventionResponseRequest.FromString,
+          response_serializer=agent__pb2.InterventionResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
