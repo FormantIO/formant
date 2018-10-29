@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "lib": ["dom", "esnext.asynciterable", "es2017"],
+        "module": "commonjs",
+        "target": "es2017",
+        "sourceMap": true,
+        "strict": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true
+    }
+}
