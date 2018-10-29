@@ -1,1 +1,17 @@
+secrets
+secrets.tar
+*.pem
+dist
+build
+kube-config
+node_modules
+yarn-error.log
+.DS_Store
+*.idea/
+*.iml
+env
+lerna-debug.log
 *.pyc
+temp
+temp.pdf
+TODO
