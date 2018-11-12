@@ -335,7 +335,7 @@ Figure supports human-in-the-loop and labeling workflows via `Intervention Reque
 
 We currently support the following types of Intervention Requests:
 
--   2D Bounding Box Annotation
+-   Polygon Labeling Annotation
 -   Multiple Choice Selection
 
 Please see the [Developing](#developing) section for more implementation details.
