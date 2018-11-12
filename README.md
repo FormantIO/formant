@@ -11,9 +11,9 @@ This repository provides software releases and documentation for development wit
     -   [Figure ROS Node](#figure-ros-node)
     -   [Datapoint Lifecycle](#datapoint-lifecycle)
     -   [Install &amp; Setup](#install--setup)
-        - [Credentials Setup](#credentials-setup)
-        - [Debian Install](#debian-install)
-        - [Standalone Binary](#standalone-binary)
+        -   [Credentials Setup](#credentials-setup)
+        -   [Debian Install](#debian-install)
+        -   [Standalone Binary](#standalone-binary)
         -   [ROS Setup](#ros-setup)
     -   [Configuration](#configuration)
         -   [Figure](#figure-1)
@@ -90,7 +90,7 @@ Internally, the Figure Agent periodically generates an expiring signed JWT(JSON 
 The Figure Agent debian package will setup a `figure` linux user and group. It also creates the `/home/figure` user directory where its configuration and credentials live. You should first install the Figure Agent by running:
 
 ```bash
-dpkg -i figure_agent_amd64.deb
+dpkg -i figure-agent_amd64.deb
 ```
 
 If you ever delete the contents of `/home/figure/`, you will be required to re-provision the Figure Agent and your `config.toml` will be erased.
@@ -98,7 +98,7 @@ If you ever delete the contents of `/home/figure/`, you will be required to re-p
 To install the Figure Watcher you can run:
 
 ```bash
-dpkg -i figure_watcher_amd64.deb
+dpkg -i figure-watcher_amd64.deb
 ```
 
 systemd makes it easy to manage the application lifecycle. By default, we do not enable auto-starting on boot the Figure Agent or Watcher. To enable this you can run:
@@ -133,7 +133,6 @@ To run the standalone Figure Agent, download the latest release and run `./figur
 The standalone Figure Agent requires read/write access to the directory `$HOME/.figure/` where `$HOME` is the home directory of the user used to run the Figure Agent components.
 
 If you ever delete the contents of `$HOME/.figure/`, you will need to re-run the agent provisioning step to re-generate credentials.
-
 
 #### ROS Setup
 
@@ -173,9 +172,9 @@ The `[figure]` section configures the Figure Agent server.
 
 `agent-server-ip`: The IP on the local network where the Figure Agent is running. (Default: `localhost`)
 
-`agent-server-port-grpc`: The port on which the Figure Agent will  expose its GRPC endpoint. (Default: `5501`)
+`agent-server-port-grpc`: The port on which the Figure Agent will expose its GRPC endpoint. (Default: `5501`)
 
-`agent-server-port-http`: The port on which the Figure Agent will  expose its HTTP endpoint. (Default: `5502`)
+`agent-server-port-http`: The port on which the Figure Agent will expose its HTTP endpoint. (Default: `5502`)
 
 #### Tags
 
@@ -335,8 +334,9 @@ ros-topic = "/image_topic"
 Figure supports human-in-the-loop and labeling workflows via `Intervention Requests`. Your application may use the Figure agent to issue an intervention request, then synchronously or asynchronously wait for a response from an operator.
 
 We currently support the following types of Intervention Requests:
-- 2D Bounding Box Annotation
-- Multiple Choice Selection
+
+-   2D Bounding Box Annotation
+-   Multiple Choice Selection
 
 Please see the [Developing](#developing) section for more implementation details.
 
@@ -362,7 +362,6 @@ We recommend the `StreamData` endpoint for better performance.
 
 Both `StreamData` and `PostData` accept the same `Datapoint` message type defined in [agent.proto](agent.proto).
 
-
 For Intervention Requests there are several important rpc's:
 
 The `CreateInterventionRequest` rpc will create a InterventionRequest. It will return a `InterventionRequest` object that contains the `id`. You will use this `id` to retrieve responses.
@@ -387,7 +386,6 @@ You can `POST` data to the `/v1/data` endpoint with the following JSON payload:
 }
 ```
 
-
 So, for example, to send a datapoint with the text "this is a datapoint" to stream "stream.001", POST the following to `/v1/data`:
 
 ```bash
@@ -397,10 +395,11 @@ curl -v http://localhost:5502/v1/data -d '{
     "text" : {"value" : "this is a datapoint" }
 }'
 ```
+
 ** For `bytes` types you will need to encode as a base64 string**
 
+You can create Intervention Requests with a `POST` to the `/v1/intervention-requests` endpoint. Here is an example is of a `selection` Intervention Request:
 
-You can create Intervention Requests with a `POST` to the `/v1/intervention-requests` endpoint.  Here is an example is of a `selection` Intervention Request:
 ```json
 {
     "timestamp": 1538624058748,
@@ -410,15 +409,11 @@ You can create Intervention Requests with a `POST` to the `/v1/intervention-requ
             "content_type": "image/png",
             "url": "file://path/to/image"
         },
-        "hint" : 0,
-        "options": [
-            "option 1",
-            "option 2",
-            "option 3"
-        ],
+        "hint": 0,
+        "options": ["option 1", "option 2", "option 3"],
         "instruction": "Please select one of these options",
         "tags": {
-            "tag1":"tagvalue1"
+            "tag1": "tagvalue1"
         }
     }
 }
@@ -427,6 +422,5 @@ You can create Intervention Requests with a `POST` to the `/v1/intervention-requ
 To check on the status of a Intervention Request, use a `GET` on `/v1/intervention-requests/:id` where `:id` is the `id` returned when creating an Intervention Request.
 
 To wait for an Intervention Response, use a `GET` on `/v1/intervention-responses/:id` where `:id` is the `id` returned when creating an Intervention Request. This will block till a response is generated.
-
 
 Examples of these implementations in several languages are available in [examples](examples/).

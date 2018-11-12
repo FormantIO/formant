@@ -58,7 +58,7 @@ message InterventionRequest {
     Severity severity = 3;
     oneof data {
         SelectionRequest selection_request = 4;
-        BoundingBox2dRequest bounding_box_2d_request = 5;
+        LabelingRequest labeling_request = 5;
     }
     map <string, string> tags = 6;
     repeated InterventionResponse responses = 7;
@@ -70,25 +70,35 @@ message InterventionResponse {
     int64 timestamp = 3;
     oneof data {
         SelectionResponse selection_response = 4;
-        BoundingBox2dResponse bounding_box_2d_response = 5;
+        LabelingResponse labeling_response = 5;
     }
 }
 
-message BoundingBox2d {
+message Label {
+    string value = 1;
+    string display_name = 2;
+}
+
+message LabeledPolygon {
+    repeated Vertex vertices = 1;
+    repeated string labels = 2;
+}
+
+message Vertex {
     double x = 1;
     double y = 2;
-    double width = 3;
-    double height = 4;
 }
 
-message BoundingBox2dRequest {
-    Image image = 1;
+message LabelingRequest {
+    string title = 1;
     string instruction = 2;
-    repeated BoundingBox2d hint = 3;
+    Image image = 3;
+    repeated Label labels = 4;
+    repeated LabeledPolygon hint = 5;
 }
 
-message BoundingBox2dResponse {
-    repeated BoundingBox2d value = 1;
+message LabelingResponse {
+    repeated LabeledPolygon value = 1;
 }
 
 message SelectionRequest {
@@ -97,11 +107,11 @@ message SelectionRequest {
     }
     string instruction = 2;
     repeated string options = 3;
-    int64 hint = 4;
+    uint32 hint = 4;
 }
 
 message SelectionResponse {
-    int64 value = 1;
+    uint32 value = 1;
 }
 
 // Data message.
@@ -122,8 +132,16 @@ message Datapoint {
     }
 }
 
+enum TextFormat {
+    PLAIN = 0;
+    JSON = 1;
+    YAML = 2;
+    CSV = 3;
+}
+
 message Text {
     string value = 1;
+    TextFormat format = 2;
 }
 
 message Numeric {

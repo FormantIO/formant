@@ -15,6 +15,7 @@ import agent_pb2_grpc
 
 #### gRPC Implementations ####
 
+
 def create_data_point(point):
     timestamp = int(time.time() * 1000)
     text_msg = agent_pb2.Text()
@@ -25,9 +26,15 @@ def create_data_point(point):
 
 
 def write_datapoints():
-    while agent_stub is not None:
-        yield create_data_point("stream")
-        time.sleep(10)
+    i = 0
+    while agent_stub is not None and i < 10:
+        point = create_data_point("stream")
+        print_example_break()
+        print("streaming datapoint:\n %s" % point)
+        print_example_break()
+        yield point
+        time.sleep(0.2)
+        i = i+1
 
 
 def post_data():
@@ -37,11 +44,12 @@ def post_data():
 def stream_data():
     agent_stub.StreamData(write_datapoints())
 
+
 def upload_file(path):
     file_datapoint = agent_pb2.File()
     file_datapoint.url = "file://%s/fruit-single.png" % path
     request = agent_pb2.Datapoint(
-        stream = "file.log", file = file_datapoint, timestamp = int(time.time() * 1000)
+        stream="file.log", file=file_datapoint, timestamp=int(time.time() * 1000)
     )
     agent_stub.PostData(request)
 
@@ -51,9 +59,10 @@ def post_geolocation():
     geo.latitude = 37.434417
     geo.longitude = -122.142925
     geo_datapoint = agent_pb2.Datapoint(
-        stream = "geo.001", location = geo, timestamp = int(time.time() * 1000)
+        stream="geo.001", location=geo, timestamp=int(time.time() * 1000)
     )
     agent_stub.PostData(geo_datapoint)
+
 
 def create_intervention_request(path):
     request = agent_pb2.InterventionRequest()
@@ -85,6 +94,7 @@ def get_intervention_response(id):
 
 #### HTTP Implementations ####
 
+
 def post_data_http():
     data = {
         'stream': "stream.001",
@@ -95,22 +105,23 @@ def post_data_http():
     req.add_header('Content-Type', 'application/json')
     return urllib2.urlopen(req, json.dumps(data))
 
+
 def create_intervention_request_http(path):
     data = {
         'severity': "INFO",
         'timestamp': int(time.time() * 1000),
-        "selection_request": {
-            "hint": 1,
+        "labeling_request": {
             "image": {
                 "content-type": "image/png",
-                "url": ("file://%s/fruit-single.png" % path)
+                "url": ("file://%s/fruit-many.png" % path)
             },
-            "options": [
-                "option 1",
-                "option 2",
-                "option 3"
-            ],
-            "instruction": "What is in the image?"
+            "instruction": "Select all the fruit.",
+            "labels": [
+                {
+                    "value": "53e3f75e-63a6-4e38-a19a-02893021be89",
+                    "display_name": "pear",
+                }
+            ]
         }
     }
     req = urllib2.Request('http://localhost:5502/v1/intervention-requests')
@@ -200,26 +211,27 @@ print_example_break()
 
 print('creating intervention request http')
 request = create_intervention_request_http(path)
-print(request)
+print(json.dumps(request, indent=4))
 request_id_http = request.get("id")
 time.sleep(1)
 
 print_example_break()
 
 print('getting intervention request http')
-print(get_intervention_request_http(request_id_http))
+print(json.dumps(get_intervention_request_http(request_id_http), indent=4))
 time.sleep(1)
 
 print_example_break()
 
 print('getting intervention response http')
 # this will wait for you to respond in the #all channel
-print(get_intervention_response_http(request_id_http))
+print(json.dumps(get_intervention_response_http(request_id_http), indent=4))
 
 print_example_break()
 
 #### Datapoint Streaming ####
 time.sleep(10)
 print('streaming datapoints\nuse ctrl+c to exit')
+time.sleep(2)
 # stream data
 stream_data()
