@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+from __future__ import print_function
+
+import figure
+import rospy
+
+
+def main():
+    """Launch the Figure Bridge Node and spin forever. """
+    try:
+        rospy.init_node('figure_bridge_node')
+        node = figure.BridgeNode()
+        rospy.spin()
+    except rospy.ROSInterruptException as e:
+        print(e)
+        pass
+
+
+if __name__ == '__main__':
+    main()

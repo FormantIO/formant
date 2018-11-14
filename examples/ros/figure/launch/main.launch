@@ -1,0 +1,3 @@
+<launch>
+    <node name="figure_bridge_node" pkg="figure" type="bridge" output="screen"></node>
+</launch>

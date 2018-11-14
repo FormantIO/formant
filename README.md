@@ -8,11 +8,11 @@ This repository provides software releases and documentation for development wit
 -   [Agent](#agent)
     -   [Figure Agent](#figure-agent)
     -   [Figure Watcher](#figure-watcher)
-    -   [Figure ROS Node](#figure-ros-node)
+    -   [Figure ROS Bridge](#figure-ros-bridge)
     -   [Datapoint Lifecycle](#datapoint-lifecycle)
     -   [Install &amp; Setup](#install--setup)
         -   [Credentials Setup](#credentials-setup)
-        -   [Debian Install](#debian-install)
+        -   [Debian](#debian)
         -   [Standalone Binary](#standalone-binary)
         -   [ROS Setup](#ros-setup)
     -   [Configuration](#configuration)
@@ -52,9 +52,9 @@ The Figure Agent is the ingestion funnel to the Figure Cloud. It handles secure 
 
 The Figure Watcher is a source capable of watching directories and tailing files.
 
-### Figure ROS Node
+### Figure ROS Bridge
 
-The Figure ROS Node is a source capable of low-overhead forwarding of ROS topics. It provides an easy way to integrate your existing ROS stack with the Figure Agent. It will automatically subscribe to topics and stream ROS messages from those topics to the Figure Agent. The Figure Agent and Figure ROS Node communicate the message types and message descriptions necessary for the Figure Agent to parse the different message types. There is no (de)serialization overhead in the Figure ROS Node.
+The Figure ROS Bridge is a source capable of low-overhead forwarding of ROS topics. It provides an easy way to integrate your existing ROS stack with the Figure Agent. Please see [examples/ros](examples/ros) for more information.
 
 ### Datapoint Lifecycle
 
@@ -75,7 +75,7 @@ The Figure Agent ingests tagged streams of datapoints. Below is a diagram descri
 
 The Figure Agent is currently available for Linux AMD 64-bit operating systems. Binaries and Debian packages are available in the Releases section of this repository. Debian packages are compatible with systemd. Containers and binaries for additional operating systems and architectures will be available in the near future.
 
-When running sources, ensure the Figure Agent is up and running first. The ROS source and the Watcher source will both attempt reconnections if the Figure Agent is not up or goes down.
+When running sources, ensure the Figure Agent is up and running first. The ROS Bridge source and the Watcher source will both attempt reconnections if the Figure Agent is not up or goes down.
 
 On startup, the Figure Agent and Watcher will check for updates and auto-update if one is available.
 
@@ -85,7 +85,7 @@ The Figure Cloud uses asymmetric authentication to verify the identity of each a
 
 Internally, the Figure Agent periodically generates an expiring signed JWT(JSON Web Token) that the Figure Cloud uses to verify the agents identity.
 
-#### Debian Install
+#### Debian
 
 The Figure Agent debian package will setup a `figure` linux user and group. It also creates the `/home/figure` user directory where its configuration and credentials live. You should first install the Figure Agent by running:
 
@@ -134,18 +134,6 @@ The standalone Figure Agent requires read/write access to the directory `$HOME/.
 
 If you ever delete the contents of `$HOME/.figure/`, you will need to re-run the agent provisioning step to re-generate credentials.
 
-#### ROS Setup
-
-The Figure Agent provides first-class support for the ingestion of ROS topics. There are several options for adding our Figure ROS Node to your ROS system.
-
-The first, and preferred, option is to add the `figure-ros-node.par` binary to a launch file. The `par` binary contains all the necessary dependencies and manages a communication channel with the Figure Agent.
-
-The second option is to manage the `figure-ros-node.par` binary as a binary executable, and run it after your ROS master and nodes are up. This will be a simpler path for initial development and debugging but includes the overhead of managing the lifecycle outside of a launch file.
-
-The third option is to develop your own ROS node against the Figure Agent GRPC or HTTP endpoints. This requires manually registering ROS message descriptions with the Figure Agent.
-
-You can find an example of a launch file in the [ROS examples](examples/ros/) directory.
-
 ### Configuration
 
 The Figure Configuration is specified in a `toml` configuration file. The file location is dependent on the install type:
@@ -191,7 +179,7 @@ The `[tags]` section enumerates tags used for all streaming data points. These t
 
 Streams are defined by a `toml` array. Each Stream is prefixed with a `[[streams]]` identifier.
 
-Streams managed by a Figure source (such as the Figure ROS Node or Figure Watcher) must be defined in the configuration file.
+Streams managed by a Figure source (such as the Figure ROS Bridge or Figure Watcher) must be defined in the configuration file.
 
 Streams produced by a custom source will be created dynamically.
 
@@ -295,7 +283,7 @@ ros-topic = "/joint_states/joint_2"
 ros-path = "data" #optional
 ```
 
-ROS streams allow you to ingest ROS topics with the Figure ROS Node.
+ROS streams allow you to ingest ROS topics with the Figure ROS Bridge.
 
 We support parsing and conversion of the following ROS data types:
 
@@ -304,7 +292,17 @@ We support parsing and conversion of the following ROS data types:
 3. image (from both `sensor_msgs/CompressedImage` and `sensor_msgs/Image` message types)
 4. point clouds (from `sensor_msgs/PointCloud2` message type)
 
-The optional `ros-data` parameter allows you to specify (using dot notation) a path to a subfield of the ROS message you wish to extract. If the ROS data cannot be interpreted as one of the supported ROS data types, we will attempt to translate it to `JSON` and log it as a text datapoint. Even if your message only has one value but is under a `data` key you will need to specify that in the config.
+The optional `ros-path` parameter allows you to specify (using dot notation) a path to a subfield of the ROS message you wish to extract. If the ROS data cannot be interpreted as one of the supported ROS data types, we will attempt to translate it to `JSON` and log it as a JSON datapoint. Even if your message only has one value but is under a `data` key you will need to specify that in the config.
+
+If you would like to visualize a numeric ROS topic as text, add a `figure-type = "text"` to the stream's config:
+
+```toml
+[[streams]]
+name = "abb.joint_2.position"
+ros-topic = "/joint_states/joint_2"
+ros-path = "data"
+figure-type = "text"
+```
 
 ### Images as Video Stream
 
@@ -335,14 +333,14 @@ Figure supports human-in-the-loop and labeling workflows via `Intervention Reque
 
 We currently support the following types of Intervention Requests:
 
--   Polygon Labeling Annotation
+-   2D Bounding Box Annotation
 -   Multiple Choice Selection
 
 Please see the [Developing](#developing) section for more implementation details.
 
 ### Developing
 
-If you are using just the Figure ROS Node and the Figure Watcher to create data points then there is nothing left for you to do! However, if you want to develop against the Figure Agent and stream your own datapoints then please continue reading.
+If you are using just the Figure ROS Bridge and the Figure Watcher to create data points then there is nothing left for you to do! However, if you want to develop against the Figure Agent and stream your own datapoints then please continue reading.
 
 There are several ways to develop against the Figure Agent. The preferred method is via its gRPC endpoints.
 
