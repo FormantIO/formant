@@ -68,6 +68,7 @@ def create_intervention_request(path):
     request = agent_pb2.InterventionRequest()
     request.timestamp = int(time.time() * 1000)
     request.severity = agent_pb2.INFO
+    request.selection_request.title = "Selection Request"
     request.selection_request.hint = 1
     request.selection_request.instruction = "What is in the image?"
     request.selection_request.image.content_type = "image/png"
@@ -111,6 +112,7 @@ def create_intervention_request_http(path):
         'severity': "INFO",
         'timestamp': int(time.time() * 1000),
         "labeling_request": {
+            "title": "Labeling Request",
             "image": {
                 "content-type": "image/png",
                 "url": ("file://%s/fruit-many.png" % path)

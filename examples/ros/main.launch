@@ -1,3 +1,0 @@
-  <launch>
-    <node name="figure_ros_node" pkg="<your_pkg>" type="figure-ros-node.par" respawn="false"  output="screen"></node>
-  </launch>

@@ -102,13 +102,15 @@ message LabelingResponse {
 }
 
 message SelectionRequest {
+    string title = 1;
     oneof data {
-        Image image = 1;
+        Image image = 2;
     }
-    string instruction = 2;
-    repeated string options = 3;
-    uint32 hint = 4;
+    string instruction = 3;
+    repeated string options = 4;
+    uint32 hint = 5;
 }
+
 
 message SelectionResponse {
     uint32 value = 1;
