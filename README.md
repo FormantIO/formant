@@ -13,7 +13,6 @@ This repository provides software releases and documentation for development wit
     -   [Install &amp; Setup](#install--setup)
         -   [Credentials Setup](#credentials-setup)
         -   [Debian](#debian)
-        -   [Docker](#docker)
         -   [Standalone Binary](#standalone-binary)
         -   [ROS Setup](#ros-setup)
     -   [Configuration](#configuration)
