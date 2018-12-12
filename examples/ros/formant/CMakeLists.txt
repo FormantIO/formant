@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(figure)
+project(formant)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -102,7 +102,7 @@ catkin_python_setup()
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES figure
+#  LIBRARIES formant
 #  CATKIN_DEPENDS grpcio protobuf rospy std_msgs toml
 #  DEPENDS system_lib
 )
@@ -120,7 +120,7 @@ catkin_package(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/figure.cpp
+#   src/${PROJECT_NAME}/formant.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -131,7 +131,7 @@ catkin_package(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/figure_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/formant_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -187,7 +187,7 @@ catkin_install_python(PROGRAMS nodes/bridge
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_figure.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_formant.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

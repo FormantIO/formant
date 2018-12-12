@@ -1,4 +1,4 @@
-[figure]
+[formant]
 agent-server-port-grpc = "5501"
 agent-server-port-http = "5502"
 agent-server-ip = "localhost"
@@ -18,7 +18,7 @@ name = "stream.001"
 [[streams]]
 name = "cognex.001"
 dir = "/home/ftp/upload"
-figure-type = "image"
+formant-type = "image"
 ext = ".jpg"
 
 [[streams]]

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package agent;
 
-// gRPC service for the Figure Agent
+// gRPC service for the Formant Agent
 service Agent {
     // Accepts a stream of data points.
     rpc StreamData(stream Datapoint)  returns (StreamDataResponse) {}

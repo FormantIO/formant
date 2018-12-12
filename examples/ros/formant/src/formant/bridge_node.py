@@ -7,8 +7,8 @@ import time
 
 import grpc
 
-import figure.agent_pb2 as agent_pb2
-import figure.agent_pb2_grpc as agent_pb2_grpc
+import formant.agent_pb2 as agent_pb2
+import formant.agent_pb2_grpc as agent_pb2_grpc
 import roslib
 import rospy
 import rostopic
@@ -21,7 +21,7 @@ except ImportError:
 
 
 class BridgeNode(object):
-    """A ROS node that forwards ROS topics to the Figure Agent.
+    """A ROS node that forwards ROS topics to the Formant Agent.
     
     This node will:
     - Subscribe to ROS topics specified in the Agent configuration file
@@ -36,29 +36,29 @@ class BridgeNode(object):
         self._setup_agent_communication()
 
     def _configure(self):
-        """Reads the Figure Agent configuration file."""
+        """Reads the Formant Agent configuration file."""
 
         # The location of the configuration file depends on whether the agent was
         # installed locally or via debian package.
         try:
             home = os.path.expanduser("~")
-            config = toml.load('%s/.figure/config.toml' % home)
+            config = toml.load('%s/.formant/config.toml' % home)
         except:
-            config = toml.load('/home/figure/config.toml')
+            config = toml.load('/home/formant/config.toml')
 
         self.agent_address = "%s:%s" % (
-            config['figure']['agent-server-ip'],
-            config['figure']['agent-server-port-grpc'])
+            config['formant']['agent-server-ip'],
+            config['formant']['agent-server-port-grpc'])
 
         # Experimental -- use the agent's certificate for secure gRPC communication
-        if 'agent-server-cert' in config['figure']:
-            self._agent_server_cert = config['figure']['agent-server-cert']
+        if 'agent-server-cert' in config['formant']:
+            self._agent_server_cert = config['formant']['agent-server-cert']
             if self._agent_server_cert:
                 if not os.path.isfile(self._agent_server_cert):
                     print("Server certificate does not exist or is unreadable.")
 
     def _setup_agent_communication(self):
-        """Creates a gRPC stub for communication with the Figure Agent."""
+        """Creates a gRPC stub for communication with the Formant Agent."""
         if self._agent_server_cert:
             creds = grpc.ssl_channel_credentials(
                 open(self._agent_server_cert).read())

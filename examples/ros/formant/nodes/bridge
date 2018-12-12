@@ -2,15 +2,15 @@
 
 from __future__ import print_function
 
-import figure
+import formant
 import rospy
 
 
 def main():
-    """Launch the Figure Bridge Node and spin forever. """
+    """Launch the Formant Bridge Node and spin forever. """
     try:
-        rospy.init_node('figure_bridge_node')
-        node = figure.BridgeNode()
+        rospy.init_node('formant_bridge_node')
+        node = formant.BridgeNode()
         rospy.spin()
     except rospy.ROSInterruptException as e:
         print(e)
