@@ -5,7 +5,7 @@ import agent_pb2 as agent__pb2
 
 
 class AgentStub(object):
-  """gRPC service for the Figure Agent
+  """gRPC service for the Formant Agent
   """
 
   def __init__(self, channel):
@@ -52,7 +52,7 @@ class AgentStub(object):
 
 
 class AgentServicer(object):
-  """gRPC service for the Figure Agent
+  """gRPC service for the Formant Agent
   """
 
   def StreamData(self, request_iterator, context):

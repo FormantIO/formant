@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>figure</name>
-  <version>0.2.2</version>
-  <description>The Figure package</description>
-  <maintainer email="support@figure.works">Figure</maintainer>
+  <name>formant</name>
+  <version>0.3.17</version>
+  <description>The Formant package</description>
+  <maintainer email="support@formant.io">formant</maintainer>
   <license>All Rights Reserved</license>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>rospy</build_depend>
