@@ -3,6 +3,12 @@ agent-server-port-grpc = "5501"
 agent-server-port-http = "5502"
 agent-server-ip = "localhost"
 
+#### ROS Global configuration ####
+
+[ros]
+# the name of a common reference frame relative to which any ROS messages associated with a `frame_id` will be expressed
+world-reference-frame-id = "world_frame"
+
 [tags]
 site = "san_francisco_1"
 environment = "dev"
@@ -38,3 +44,8 @@ ros-topic = "/turtle1/cmd_vel"
 name = "abb.joint_1.position"
 ros-topic = "/joint_states/joint_1"
 ros-path = "data"
+
+[[streams]]
+name = "robot.localization.001"
+ros-odom-topic = "/odom"
+ros-map-topic = "/map"

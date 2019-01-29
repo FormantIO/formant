@@ -123,6 +123,43 @@ def post_geolocation():
         print(e)
 
 
+def post_localization():
+    file_path = "%s/map.json" % path
+    with open(file_path, "rb") as map_json_data:
+        map_data = json.load(map_json_data)
+        localization = agent_pb2.Localization(
+            map=agent_pb2.Map(
+                height=map_data["height"],
+                width=map_data["width"],
+                resolution=map_data["resolution"],
+                occupancy_grid=agent_pb2.OccupancyGrid(data=map_data["data"]),
+                # we're using the map as the base reference frame
+                world_to_local=agent_pb2.Transform(
+                    translation=agent_pb2.Vector3(x=0, y=0, z=0),
+                    rotation=agent_pb2.Quaternion(x=0, y=0, z=0, w=1)),
+            ),
+            odometry=agent_pb2.Odometry(
+                pose=agent_pb2.Transform(
+                    translation=agent_pb2.Vector3(x=0, y=0, z=0),
+                    rotation=agent_pb2.Quaternion(x=0, y=0, z=0, w=1)),
+                twist=agent_pb2.Twist(
+                    linear=agent_pb2.Vector3(x=0, y=0, z=0),
+                    angular=agent_pb2.Vector3(x=0, y=0, z=0)),
+                # transform to map coordinates
+                world_to_local=agent_pb2.Transform(
+                    translation=agent_pb2.Vector3(x=8, y=10, z=0),
+                    rotation=agent_pb2.Quaternion(x=0, y=0, z=0, w=1)),
+            ))
+        localization_datapoint = agent_pb2.Datapoint(
+            stream="localization.001",
+            timestamp=int(time.time() * 1000),
+            localization=localization)
+        try:
+            agent_stub.PostData(localization_datapoint)
+        except grpc.RpcError as e:
+            print(e)
+
+
 def create_intervention_request():
     request = agent_pb2.InterventionRequest()
     request.timestamp = int(time.time() * 1000)
@@ -239,6 +276,13 @@ print('posting local file')
 upload_file()
 
 print_example_break()
+
+print('posting localization')
+post_localization()
+time.sleep(0.2)
+
+print_example_break()
+
 print('posting data http')
 post_data_http()
 time.sleep(0.2)
