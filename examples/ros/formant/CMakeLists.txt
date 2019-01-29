@@ -9,6 +9,8 @@ project(formant)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
+  tf2
+  tf2_ros
 )
 
 ## System dependencies are found with CMake's conventions

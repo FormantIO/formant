@@ -34,6 +34,16 @@ class AgentStub(object):
         request_serializer=agent__pb2.GetROSTopicsRequest.SerializeToString,
         response_deserializer=agent__pb2.GetROSTopicsResponse.FromString,
         )
+    self.GetROSTopicsSubscriptionConfig = channel.unary_unary(
+        '/agent.Agent/GetROSTopicsSubscriptionConfig',
+        request_serializer=agent__pb2.GetROSTopicsSubscriptionConfigRequest.SerializeToString,
+        response_deserializer=agent__pb2.GetROSTopicsSubscriptionConfigResponse.FromString,
+        )
+    self.GetROSWorldReferenceFrameID = channel.unary_unary(
+        '/agent.Agent/GetROSWorldReferenceFrameID',
+        request_serializer=agent__pb2.GetROSWorldReferenceFrameIDRequest.SerializeToString,
+        response_deserializer=agent__pb2.GetROSWorldReferenceFrameIDResponse.FromString,
+        )
     self.CreateInterventionRequest = channel.unary_unary(
         '/agent.Agent/CreateInterventionRequest',
         request_serializer=agent__pb2.InterventionRequest.SerializeToString,
@@ -77,7 +87,21 @@ class AgentServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def GetROSTopics(self, request, context):
-    """Gets the ROS topics defined in the agent config.
+    """DEPRECATED Gets the ROS topics defined in the agent config.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetROSTopicsSubscriptionConfig(self, request, context):
+    """Gets the ROS localization configuration information
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetROSWorldReferenceFrameID(self, request, context):
+    """Gets the ROS World Reference Frame ID from the configuration defined in config.toml.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -126,6 +150,16 @@ def add_AgentServicer_to_server(servicer, server):
           servicer.GetROSTopics,
           request_deserializer=agent__pb2.GetROSTopicsRequest.FromString,
           response_serializer=agent__pb2.GetROSTopicsResponse.SerializeToString,
+      ),
+      'GetROSTopicsSubscriptionConfig': grpc.unary_unary_rpc_method_handler(
+          servicer.GetROSTopicsSubscriptionConfig,
+          request_deserializer=agent__pb2.GetROSTopicsSubscriptionConfigRequest.FromString,
+          response_serializer=agent__pb2.GetROSTopicsSubscriptionConfigResponse.SerializeToString,
+      ),
+      'GetROSWorldReferenceFrameID': grpc.unary_unary_rpc_method_handler(
+          servicer.GetROSWorldReferenceFrameID,
+          request_deserializer=agent__pb2.GetROSWorldReferenceFrameIDRequest.FromString,
+          response_serializer=agent__pb2.GetROSWorldReferenceFrameIDResponse.SerializeToString,
       ),
       'CreateInterventionRequest': grpc.unary_unary_rpc_method_handler(
           servicer.CreateInterventionRequest,

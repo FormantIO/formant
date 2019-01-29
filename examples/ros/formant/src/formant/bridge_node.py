@@ -6,13 +6,14 @@ import os
 import time
 
 import grpc
-
-import formant.agent_pb2 as agent_pb2
-import formant.agent_pb2_grpc as agent_pb2_grpc
 import roslib
 import rospy
 import rostopic
+import tf2_ros
 import toml
+
+import formant.agent_pb2 as agent_pb2
+import formant.agent_pb2_grpc as agent_pb2_grpc
 
 try:
     from cStringIO import StringIO  # Python 2.x
@@ -31,9 +32,13 @@ class BridgeNode(object):
 
     def __init__(self):
         self._subscribers = []
+        self._include_transform = {}
         self._agent_server_cert = None
         self._configure()
         self._setup_agent_communication()
+        # setup tf2 listener
+        self._tf_buffer = tf2_ros.Buffer()
+        self._tf_listener = tf2_ros.TransformListener(self._tf_buffer)
 
     def _configure(self):
         """Reads the Formant Agent configuration file."""
@@ -73,9 +78,16 @@ class BridgeNode(object):
     def _handle_connectivity_change(self, connectivity):
         """Handle changes to gRPC channel connectivity."""
         if connectivity == grpc.ChannelConnectivity.READY:
-            response = self.agent_stub.GetROSTopics(
-                agent_pb2.GetROSTopicsRequest())
-            self._subscribe_to_topics(response.topics)
+            response = self.agent_stub.GetROSWorldReferenceFrameID(
+                agent_pb2.GetROSWorldReferenceFrameIDRequest())
+            self._world_reference_frame_id = response.world_reference_frame_id
+            response = self.agent_stub.GetROSTopicsSubscriptionConfig(
+                agent_pb2.GetROSTopicsSubscriptionConfigRequest())
+            for topic_config in (response.topics):
+                self._include_transform[topic_config.
+                                        topic] = topic_config.include_transform
+            self._subscribe_to_topics(
+                [topic_config.topic for topic_config in response.topics])
             print("Agent communication established.")
         if connectivity == grpc.ChannelConnectivity.SHUTDOWN:
             # In the case of shutdown, re-establish the connection from scratch
@@ -116,7 +128,6 @@ class BridgeNode(object):
                 "Cannot subscribe to %s; no agent stub to register message description with."
                 % topic_name)
             return
-
         self.agent_stub.RegisterROSTopic(
             agent_pb2.ROSTopic(
                 name=topic_name, data_type=data_type, msg_desc=msg_desc))
@@ -143,21 +154,41 @@ class BridgeNode(object):
 
         # Take the timestamp from the message header if present,
         # otherwise use the current time
+        local_frame_id = ""
+        timestamp = int(time.time() * 1000)
         if hasattr(msg, 'header'):
-            timestamp = (
+            header_timestamp = (
                 msg.header.stamp.secs * 1000 + msg.header.stamp.nsecs / 1000000)
-        else:
-            timestamp = int(time.time() * 1000)
-
+            # sanity check to make sure ros header stamp is in epoch time
+            if header_timestamp > 1500000000000:
+                timestamp = header_timestamp
+            stamp = msg.header.stamp
+            local_frame_id = msg.header.frame_id
         # Embed the ROS message in a gRPC message and send it to the Agent.
         ros_msg_data = agent_pb2.ROSMessage()
         buffer = StringIO()
         msg.serialize(buffer)
         ros_msg_data.raw = buffer.getvalue()
+        # if transform required include it
+        if self._include_transform[topic_name] and local_frame_id:
+            try:
+                transform_stamped = self._tf_buffer.lookup_transform(
+                    self._world_reference_frame_id, local_frame_id, stamp)
+                buffer = StringIO()
+
+                transform_stamped.transform.serialize(buffer)
+                ros_msg_data.world_to_local = buffer.getvalue()
+            except Exception as e:
+                print(
+                    "Error getting transform for %s with world_reference_frame_id=%s and local_reference_frame_id=%s"
+                    % (topic_name, self._world_reference_frame_id,
+                       local_frame_id))
+                print(e)
+                return
         datapoint = agent_pb2.Datapoint(
             stream=topic_name, ros_message=ros_msg_data, timestamp=timestamp)
         try:
             self.agent_stub.PostData(datapoint)
-        except grpc.RpcError:
-            print("Cannot handle message from %s; agent connection unavailable."
-                  % topic_name)
+        except grpc.RpcError as e:
+            print("Exception handling message from %s" % topic_name)
+            print(e)

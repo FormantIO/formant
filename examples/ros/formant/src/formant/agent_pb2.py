@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='agent.proto',
   package='agent',
   syntax='proto3',
-  serialized_pb=_b('\n\x0b\x61gent.proto\x12\x05\x61gent\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"\x15\n\x13GetROSTopicsRequest\"\x1a\n\x18RegisterROSTopicResponse\"&\n\x14GetROSTopicsResponse\x12\x0e\n\x06topics\x18\x01 \x03(\t\"+\n\x1dGetInterventionRequestRequest\x12\n\n\x02id\x18\x01 \x01(\t\"4\n\x1eGetInterventionResponseRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\"\xda\x02\n\x13InterventionRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12!\n\x08severity\x18\x03 \x01(\x0e\x32\x0f.agent.Severity\x12\x34\n\x11selection_request\x18\x04 \x01(\x0b\x32\x17.agent.SelectionRequestH\x00\x12\x32\n\x10labeling_request\x18\x05 \x01(\x0b\x32\x16.agent.LabelingRequestH\x00\x12\x32\n\x04tags\x18\x06 \x03(\x0b\x32$.agent.InterventionRequest.TagsEntry\x12.\n\tresponses\x18\x07 \x03(\x0b\x32\x1b.agent.InterventionResponse\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x06\n\x04\x64\x61ta\"\xbf\x01\n\x14InterventionResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nrequest_id\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x36\n\x12selection_response\x18\x04 \x01(\x0b\x32\x18.agent.SelectionResponseH\x00\x12\x34\n\x11labeling_response\x18\x05 \x01(\x0b\x32\x17.agent.LabelingResponseH\x00\x42\x06\n\x04\x64\x61ta\",\n\x05Label\x12\r\n\x05value\x18\x01 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x02 \x01(\t\"A\n\x0eLabeledPolygon\x12\x1f\n\x08vertices\x18\x01 \x03(\x0b\x32\r.agent.Vertex\x12\x0e\n\x06labels\x18\x02 \x03(\t\"\x1e\n\x06Vertex\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"\x95\x01\n\x0fLabelingRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x13\n\x0binstruction\x18\x02 \x01(\t\x12\x1b\n\x05image\x18\x03 \x01(\x0b\x32\x0c.agent.Image\x12\x1c\n\x06labels\x18\x04 \x03(\x0b\x32\x0c.agent.Label\x12#\n\x04hint\x18\x05 \x03(\x0b\x32\x15.agent.LabeledPolygon\"8\n\x10LabelingResponse\x12$\n\x05value\x18\x01 \x03(\x0b\x32\x15.agent.LabeledPolygon\"|\n\x10SelectionRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x1d\n\x05image\x18\x02 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x13\n\x0binstruction\x18\x03 \x01(\t\x12\x0f\n\x07options\x18\x04 \x03(\t\x12\x0c\n\x04hint\x18\x05 \x01(\rB\x06\n\x04\x64\x61ta\"\"\n\x11SelectionResponse\x12\r\n\x05value\x18\x01 \x01(\r\"\xca\x02\n\tDatapoint\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x1b\n\x04text\x18\x03 \x01(\x0b\x32\x0b.agent.TextH\x00\x12!\n\x07numeric\x18\x04 \x01(\x0b\x32\x0e.agent.NumericH\x00\x12\x1b\n\x04\x66ile\x18\x05 \x01(\x0b\x32\x0b.agent.FileH\x00\x12\x1d\n\x05image\x18\x06 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x1d\n\x05video\x18\x07 \x01(\x0b\x32\x0c.agent.VideoH\x00\x12(\n\x0bpoint_cloud\x18\x08 \x01(\x0b\x32\x11.agent.PointCloudH\x00\x12#\n\x08location\x18\t \x01(\x0b\x32\x0f.agent.LocationH\x00\x12(\n\x0bros_message\x18\n \x01(\x0b\x32\x11.agent.ROSMessageH\x00\x42\x06\n\x04\x64\x61ta\"8\n\x04Text\x12\r\n\x05value\x18\x01 \x01(\t\x12!\n\x06\x66ormat\x18\x02 \x01(\x0e\x32\x11.agent.TextFormat\"\x18\n\x07Numeric\x12\r\n\x05value\x18\x01 \x01(\x01\"L\n\x04\x46ile\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x12\x10\n\x08\x66ilename\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\x03\x42\x06\n\x04\x64\x61ta\"C\n\x05Image\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Video\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"2\n\nPointCloud\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\"\x19\n\nROSMessage\x12\x0b\n\x03raw\x18\x01 \x01(\x0c\"\x93\x01\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x10\n\x08msg_desc\x18\x03 \x01(\t\x12\'\n\x04tags\x18\x04 \x03(\x0b\x32\x19.agent.ROSTopic.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*:\n\x08Severity\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x0c\n\x08\x43RITICAL\x10\x03*4\n\nTextFormat\x12\t\n\x05PLAIN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x08\n\x04YAML\x10\x02\x12\x07\n\x03\x43SV\x10\x03\x32\xa8\x04\n\x05\x41gent\x12=\n\nStreamData\x12\x10.agent.Datapoint\x1a\x19.agent.StreamDataResponse\"\x00(\x01\x12\x37\n\x08PostData\x12\x10.agent.Datapoint\x1a\x17.agent.PostDataResponse\"\x00\x12\x46\n\x10RegisterROSTopic\x12\x0f.agent.ROSTopic\x1a\x1f.agent.RegisterROSTopicResponse\"\x00\x12I\n\x0cGetROSTopics\x12\x1a.agent.GetROSTopicsRequest\x1a\x1b.agent.GetROSTopicsResponse\"\x00\x12U\n\x19\x43reateInterventionRequest\x12\x1a.agent.InterventionRequest\x1a\x1a.agent.InterventionRequest\"\x00\x12\\\n\x16GetInterventionRequest\x12$.agent.GetInterventionRequestRequest\x1a\x1a.agent.InterventionRequest\"\x00\x12_\n\x17GetInterventionResponse\x12%.agent.GetInterventionResponseRequest\x1a\x1b.agent.InterventionResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0b\x61gent.proto\x12\x05\x61gent\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"\x1a\n\x18RegisterROSTopicResponse\"\x15\n\x13GetROSTopicsRequest\"&\n\x14GetROSTopicsResponse\x12\x0e\n\x06topics\x18\x01 \x03(\t\"\'\n%GetROSTopicsSubscriptionConfigRequest\"[\n&GetROSTopicsSubscriptionConfigResponse\x12\x31\n\x06topics\x18\x01 \x03(\x0b\x32!.agent.ROSTopicSubscriptionConfig\"$\n\"GetROSWorldReferenceFrameIDRequest\"G\n#GetROSWorldReferenceFrameIDResponse\x12 \n\x18world_reference_frame_id\x18\x01 \x01(\t\"+\n\x1dGetInterventionRequestRequest\x12\n\n\x02id\x18\x01 \x01(\t\"4\n\x1eGetInterventionResponseRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\"\xda\x02\n\x13InterventionRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12!\n\x08severity\x18\x03 \x01(\x0e\x32\x0f.agent.Severity\x12\x34\n\x11selection_request\x18\x04 \x01(\x0b\x32\x17.agent.SelectionRequestH\x00\x12\x32\n\x10labeling_request\x18\x05 \x01(\x0b\x32\x16.agent.LabelingRequestH\x00\x12\x32\n\x04tags\x18\x06 \x03(\x0b\x32$.agent.InterventionRequest.TagsEntry\x12.\n\tresponses\x18\x07 \x03(\x0b\x32\x1b.agent.InterventionResponse\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x06\n\x04\x64\x61ta\"\xbf\x01\n\x14InterventionResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nrequest_id\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x36\n\x12selection_response\x18\x04 \x01(\x0b\x32\x18.agent.SelectionResponseH\x00\x12\x34\n\x11labeling_response\x18\x05 \x01(\x0b\x32\x17.agent.LabelingResponseH\x00\x42\x06\n\x04\x64\x61ta\",\n\x05Label\x12\r\n\x05value\x18\x01 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x02 \x01(\t\"A\n\x0eLabeledPolygon\x12\x1f\n\x08vertices\x18\x01 \x03(\x0b\x32\r.agent.Vertex\x12\x0e\n\x06labels\x18\x02 \x03(\t\"\x1e\n\x06Vertex\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"\x95\x01\n\x0fLabelingRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x13\n\x0binstruction\x18\x02 \x01(\t\x12\x1b\n\x05image\x18\x03 \x01(\x0b\x32\x0c.agent.Image\x12\x1c\n\x06labels\x18\x04 \x03(\x0b\x32\x0c.agent.Label\x12#\n\x04hint\x18\x05 \x03(\x0b\x32\x15.agent.LabeledPolygon\"8\n\x10LabelingResponse\x12$\n\x05value\x18\x01 \x03(\x0b\x32\x15.agent.LabeledPolygon\"|\n\x10SelectionRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x1d\n\x05image\x18\x02 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x13\n\x0binstruction\x18\x03 \x01(\t\x12\x0f\n\x07options\x18\x04 \x03(\t\x12\x0c\n\x04hint\x18\x05 \x01(\rB\x06\n\x04\x64\x61ta\"\"\n\x11SelectionResponse\x12\r\n\x05value\x18\x01 \x01(\r\"\xf7\x02\n\tDatapoint\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x1b\n\x04text\x18\x03 \x01(\x0b\x32\x0b.agent.TextH\x00\x12!\n\x07numeric\x18\x04 \x01(\x0b\x32\x0e.agent.NumericH\x00\x12\x1b\n\x04\x66ile\x18\x05 \x01(\x0b\x32\x0b.agent.FileH\x00\x12\x1d\n\x05image\x18\x06 \x01(\x0b\x32\x0c.agent.ImageH\x00\x12\x1d\n\x05video\x18\x07 \x01(\x0b\x32\x0c.agent.VideoH\x00\x12(\n\x0bpoint_cloud\x18\x08 \x01(\x0b\x32\x11.agent.PointCloudH\x00\x12#\n\x08location\x18\t \x01(\x0b\x32\x0f.agent.LocationH\x00\x12(\n\x0bros_message\x18\n \x01(\x0b\x32\x11.agent.ROSMessageH\x00\x12+\n\x0clocalization\x18\x0b \x01(\x0b\x32\x13.agent.LocalizationH\x00\x42\x06\n\x04\x64\x61ta\"8\n\x04Text\x12\r\n\x05value\x18\x01 \x01(\t\x12!\n\x06\x66ormat\x18\x02 \x01(\x0e\x32\x11.agent.TextFormat\"\x18\n\x07Numeric\x12\r\n\x05value\x18\x01 \x01(\x01\"L\n\x04\x46ile\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x12\x10\n\x08\x66ilename\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\x03\x42\x06\n\x04\x64\x61ta\"C\n\x05Image\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Video\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"2\n\nPointCloud\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\"J\n\x0cLocalization\x12!\n\x08odometry\x18\x01 \x01(\x0b\x32\x0f.agent.Odometry\x12\x17\n\x03map\x18\x02 \x01(\x0b\x32\n.agent.Map\"q\n\x08Odometry\x12\x1e\n\x04pose\x18\x01 \x01(\x0b\x32\x10.agent.Transform\x12\x1b\n\x05twist\x18\x02 \x01(\x0b\x32\x0c.agent.Twist\x12(\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x10.agent.Transform\"\xda\x01\n\x03Map\x12\x12\n\nresolution\x18\x01 \x01(\x01\x12\r\n\x05width\x18\x02 \x01(\r\x12\x0e\n\x06height\x18\x03 \x01(\r\x12 \n\x06origin\x18\x04 \x01(\x0b\x32\x10.agent.Transform\x12(\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x10.agent.Transform\x12.\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x14.agent.OccupancyGridH\x00\x12\r\n\x03url\x18\x07 \x01(\tH\x00\x12\r\n\x03raw\x18\x08 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"\x1d\n\rOccupancyGrid\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x05\"H\n\x05Twist\x12\x1e\n\x06linear\x18\x01 \x01(\x0b\x32\x0e.agent.Vector3\x12\x1f\n\x07\x61ngular\x18\x02 \x01(\x0b\x32\x0e.agent.Vector3\"U\n\tTransform\x12#\n\x0btranslation\x18\x01 \x01(\x0b\x32\x0e.agent.Vector3\x12#\n\x08rotation\x18\x02 \x01(\x0b\x32\x11.agent.Quaternion\"*\n\x07Vector3\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"8\n\nQuaternion\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01w\x18\x04 \x01(\x01\"1\n\nROSMessage\x12\x0b\n\x03raw\x18\x01 \x01(\x0c\x12\x16\n\x0eworld_to_local\x18\x02 \x01(\x0c\"F\n\x1aROSTopicSubscriptionConfig\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x19\n\x11include_transform\x18\x02 \x01(\x08\"\x93\x01\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x10\n\x08msg_desc\x18\x03 \x01(\t\x12\'\n\x04tags\x18\x04 \x03(\x0b\x32\x19.agent.ROSTopic.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*:\n\x08Severity\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x0c\n\x08\x43RITICAL\x10\x03*4\n\nTextFormat\x12\t\n\x05PLAIN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x08\n\x04YAML\x10\x02\x12\x07\n\x03\x43SV\x10\x03\x32\xa1\x06\n\x05\x41gent\x12=\n\nStreamData\x12\x10.agent.Datapoint\x1a\x19.agent.StreamDataResponse\"\x00(\x01\x12\x37\n\x08PostData\x12\x10.agent.Datapoint\x1a\x17.agent.PostDataResponse\"\x00\x12\x46\n\x10RegisterROSTopic\x12\x0f.agent.ROSTopic\x1a\x1f.agent.RegisterROSTopicResponse\"\x00\x12I\n\x0cGetROSTopics\x12\x1a.agent.GetROSTopicsRequest\x1a\x1b.agent.GetROSTopicsResponse\"\x00\x12\x7f\n\x1eGetROSTopicsSubscriptionConfig\x12,.agent.GetROSTopicsSubscriptionConfigRequest\x1a-.agent.GetROSTopicsSubscriptionConfigResponse\"\x00\x12v\n\x1bGetROSWorldReferenceFrameID\x12).agent.GetROSWorldReferenceFrameIDRequest\x1a*.agent.GetROSWorldReferenceFrameIDResponse\"\x00\x12U\n\x19\x43reateInterventionRequest\x12\x1a.agent.InterventionRequest\x1a\x1a.agent.InterventionRequest\"\x00\x12\\\n\x16GetInterventionRequest\x12$.agent.GetInterventionRequestRequest\x1a\x1a.agent.InterventionRequest\"\x00\x12_\n\x17GetInterventionResponse\x12%.agent.GetInterventionResponseRequest\x1a\x1b.agent.InterventionResponse\"\x00\x62\x06proto3')
 )
 
 _SEVERITY = _descriptor.EnumDescriptor(
@@ -48,8 +48,8 @@ _SEVERITY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2225,
-  serialized_end=2283,
+  serialized_start=3317,
+  serialized_end=3375,
 )
 _sym_db.RegisterEnumDescriptor(_SEVERITY)
 
@@ -79,8 +79,8 @@ _TEXTFORMAT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2285,
-  serialized_end=2337,
+  serialized_start=3377,
+  serialized_end=3429,
 )
 _sym_db.RegisterEnumDescriptor(_TEXTFORMAT)
 
@@ -144,30 +144,6 @@ _POSTDATARESPONSE = _descriptor.Descriptor(
 )
 
 
-_GETROSTOPICSREQUEST = _descriptor.Descriptor(
-  name='GetROSTopicsRequest',
-  full_name='agent.GetROSTopicsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=64,
-  serialized_end=85,
-)
-
-
 _REGISTERROSTOPICRESPONSE = _descriptor.Descriptor(
   name='RegisterROSTopicResponse',
   full_name='agent.RegisterROSTopicResponse',
@@ -187,7 +163,31 @@ _REGISTERROSTOPICRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=87,
+  serialized_start=64,
+  serialized_end=90,
+)
+
+
+_GETROSTOPICSREQUEST = _descriptor.Descriptor(
+  name='GetROSTopicsRequest',
+  full_name='agent.GetROSTopicsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=92,
   serialized_end=113,
 )
 
@@ -223,6 +223,116 @@ _GETROSTOPICSRESPONSE = _descriptor.Descriptor(
 )
 
 
+_GETROSTOPICSSUBSCRIPTIONCONFIGREQUEST = _descriptor.Descriptor(
+  name='GetROSTopicsSubscriptionConfigRequest',
+  full_name='agent.GetROSTopicsSubscriptionConfigRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=155,
+  serialized_end=194,
+)
+
+
+_GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE = _descriptor.Descriptor(
+  name='GetROSTopicsSubscriptionConfigResponse',
+  full_name='agent.GetROSTopicsSubscriptionConfigResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='topics', full_name='agent.GetROSTopicsSubscriptionConfigResponse.topics', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=196,
+  serialized_end=287,
+)
+
+
+_GETROSWORLDREFERENCEFRAMEIDREQUEST = _descriptor.Descriptor(
+  name='GetROSWorldReferenceFrameIDRequest',
+  full_name='agent.GetROSWorldReferenceFrameIDRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=289,
+  serialized_end=325,
+)
+
+
+_GETROSWORLDREFERENCEFRAMEIDRESPONSE = _descriptor.Descriptor(
+  name='GetROSWorldReferenceFrameIDResponse',
+  full_name='agent.GetROSWorldReferenceFrameIDResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='world_reference_frame_id', full_name='agent.GetROSWorldReferenceFrameIDResponse.world_reference_frame_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=327,
+  serialized_end=398,
+)
+
+
 _GETINTERVENTIONREQUESTREQUEST = _descriptor.Descriptor(
   name='GetInterventionRequestRequest',
   full_name='agent.GetInterventionRequestRequest',
@@ -249,8 +359,8 @@ _GETINTERVENTIONREQUESTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=155,
-  serialized_end=198,
+  serialized_start=400,
+  serialized_end=443,
 )
 
 
@@ -280,8 +390,8 @@ _GETINTERVENTIONRESPONSEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=200,
-  serialized_end=252,
+  serialized_start=445,
+  serialized_end=497,
 )
 
 
@@ -318,8 +428,8 @@ _INTERVENTIONREQUEST_TAGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=550,
-  serialized_end=593,
+  serialized_start=795,
+  serialized_end=838,
 )
 
 _INTERVENTIONREQUEST = _descriptor.Descriptor(
@@ -393,8 +503,8 @@ _INTERVENTIONREQUEST = _descriptor.Descriptor(
       name='data', full_name='agent.InterventionRequest.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=255,
-  serialized_end=601,
+  serialized_start=500,
+  serialized_end=846,
 )
 
 
@@ -455,8 +565,8 @@ _INTERVENTIONRESPONSE = _descriptor.Descriptor(
       name='data', full_name='agent.InterventionResponse.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=604,
-  serialized_end=795,
+  serialized_start=849,
+  serialized_end=1040,
 )
 
 
@@ -493,8 +603,8 @@ _LABEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=797,
-  serialized_end=841,
+  serialized_start=1042,
+  serialized_end=1086,
 )
 
 
@@ -531,8 +641,8 @@ _LABELEDPOLYGON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=843,
-  serialized_end=908,
+  serialized_start=1088,
+  serialized_end=1153,
 )
 
 
@@ -569,8 +679,8 @@ _VERTEX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=910,
-  serialized_end=940,
+  serialized_start=1155,
+  serialized_end=1185,
 )
 
 
@@ -628,8 +738,8 @@ _LABELINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=943,
-  serialized_end=1092,
+  serialized_start=1188,
+  serialized_end=1337,
 )
 
 
@@ -659,8 +769,8 @@ _LABELINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1094,
-  serialized_end=1150,
+  serialized_start=1339,
+  serialized_end=1395,
 )
 
 
@@ -721,8 +831,8 @@ _SELECTIONREQUEST = _descriptor.Descriptor(
       name='data', full_name='agent.SelectionRequest.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1152,
-  serialized_end=1276,
+  serialized_start=1397,
+  serialized_end=1521,
 )
 
 
@@ -752,8 +862,8 @@ _SELECTIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1278,
-  serialized_end=1312,
+  serialized_start=1523,
+  serialized_end=1557,
 )
 
 
@@ -834,6 +944,13 @@ _DATAPOINT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='localization', full_name='agent.Datapoint.localization', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -849,8 +966,8 @@ _DATAPOINT = _descriptor.Descriptor(
       name='data', full_name='agent.Datapoint.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1315,
-  serialized_end=1645,
+  serialized_start=1560,
+  serialized_end=1935,
 )
 
 
@@ -887,8 +1004,8 @@ _TEXT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1647,
-  serialized_end=1703,
+  serialized_start=1937,
+  serialized_end=1993,
 )
 
 
@@ -918,8 +1035,8 @@ _NUMERIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1705,
-  serialized_end=1729,
+  serialized_start=1995,
+  serialized_end=2019,
 )
 
 
@@ -973,8 +1090,8 @@ _FILE = _descriptor.Descriptor(
       name='data', full_name='agent.File.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1731,
-  serialized_end=1807,
+  serialized_start=2021,
+  serialized_end=2097,
 )
 
 
@@ -1021,8 +1138,8 @@ _IMAGE = _descriptor.Descriptor(
       name='data', full_name='agent.Image.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1809,
-  serialized_end=1876,
+  serialized_start=2099,
+  serialized_end=2166,
 )
 
 
@@ -1069,8 +1186,8 @@ _VIDEO = _descriptor.Descriptor(
       name='data', full_name='agent.Video.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1878,
-  serialized_end=1945,
+  serialized_start=2168,
+  serialized_end=2235,
 )
 
 
@@ -1110,8 +1227,8 @@ _POINTCLOUD = _descriptor.Descriptor(
       name='data', full_name='agent.PointCloud.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1947,
-  serialized_end=1997,
+  serialized_start=2237,
+  serialized_end=2287,
 )
 
 
@@ -1148,8 +1265,378 @@ _LOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1999,
-  serialized_end=2046,
+  serialized_start=2289,
+  serialized_end=2336,
+)
+
+
+_LOCALIZATION = _descriptor.Descriptor(
+  name='Localization',
+  full_name='agent.Localization',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='odometry', full_name='agent.Localization.odometry', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='map', full_name='agent.Localization.map', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2338,
+  serialized_end=2412,
+)
+
+
+_ODOMETRY = _descriptor.Descriptor(
+  name='Odometry',
+  full_name='agent.Odometry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='pose', full_name='agent.Odometry.pose', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='twist', full_name='agent.Odometry.twist', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='world_to_local', full_name='agent.Odometry.world_to_local', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2414,
+  serialized_end=2527,
+)
+
+
+_MAP = _descriptor.Descriptor(
+  name='Map',
+  full_name='agent.Map',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='resolution', full_name='agent.Map.resolution', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='width', full_name='agent.Map.width', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='height', full_name='agent.Map.height', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='origin', full_name='agent.Map.origin', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='world_to_local', full_name='agent.Map.world_to_local', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='occupancy_grid', full_name='agent.Map.occupancy_grid', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='url', full_name='agent.Map.url', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='raw', full_name='agent.Map.raw', index=7,
+      number=8, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='data', full_name='agent.Map.data',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=2530,
+  serialized_end=2748,
+)
+
+
+_OCCUPANCYGRID = _descriptor.Descriptor(
+  name='OccupancyGrid',
+  full_name='agent.OccupancyGrid',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='agent.OccupancyGrid.data', index=0,
+      number=1, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2750,
+  serialized_end=2779,
+)
+
+
+_TWIST = _descriptor.Descriptor(
+  name='Twist',
+  full_name='agent.Twist',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='linear', full_name='agent.Twist.linear', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='angular', full_name='agent.Twist.angular', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2781,
+  serialized_end=2853,
+)
+
+
+_TRANSFORM = _descriptor.Descriptor(
+  name='Transform',
+  full_name='agent.Transform',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='translation', full_name='agent.Transform.translation', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rotation', full_name='agent.Transform.rotation', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2855,
+  serialized_end=2940,
+)
+
+
+_VECTOR3 = _descriptor.Descriptor(
+  name='Vector3',
+  full_name='agent.Vector3',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='agent.Vector3.x', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='agent.Vector3.y', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='agent.Vector3.z', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2942,
+  serialized_end=2984,
+)
+
+
+_QUATERNION = _descriptor.Descriptor(
+  name='Quaternion',
+  full_name='agent.Quaternion',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='agent.Quaternion.x', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='agent.Quaternion.y', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='agent.Quaternion.z', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='w', full_name='agent.Quaternion.w', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2986,
+  serialized_end=3042,
 )
 
 
@@ -1167,6 +1654,13 @@ _ROSMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='world_to_local', full_name='agent.ROSMessage.world_to_local', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1179,8 +1673,46 @@ _ROSMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2048,
-  serialized_end=2073,
+  serialized_start=3044,
+  serialized_end=3093,
+)
+
+
+_ROSTOPICSUBSCRIPTIONCONFIG = _descriptor.Descriptor(
+  name='ROSTopicSubscriptionConfig',
+  full_name='agent.ROSTopicSubscriptionConfig',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='topic', full_name='agent.ROSTopicSubscriptionConfig.topic', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='include_transform', full_name='agent.ROSTopicSubscriptionConfig.include_transform', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3095,
+  serialized_end=3165,
 )
 
 
@@ -1217,8 +1749,8 @@ _ROSTOPIC_TAGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=550,
-  serialized_end=593,
+  serialized_start=795,
+  serialized_end=838,
 )
 
 _ROSTOPIC = _descriptor.Descriptor(
@@ -1268,10 +1800,11 @@ _ROSTOPIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2076,
-  serialized_end=2223,
+  serialized_start=3168,
+  serialized_end=3315,
 )
 
+_GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE.fields_by_name['topics'].message_type = _ROSTOPICSUBSCRIPTIONCONFIG
 _INTERVENTIONREQUEST_TAGSENTRY.containing_type = _INTERVENTIONREQUEST
 _INTERVENTIONREQUEST.fields_by_name['severity'].enum_type = _SEVERITY
 _INTERVENTIONREQUEST.fields_by_name['selection_request'].message_type = _SELECTIONREQUEST
@@ -1309,6 +1842,7 @@ _DATAPOINT.fields_by_name['video'].message_type = _VIDEO
 _DATAPOINT.fields_by_name['point_cloud'].message_type = _POINTCLOUD
 _DATAPOINT.fields_by_name['location'].message_type = _LOCATION
 _DATAPOINT.fields_by_name['ros_message'].message_type = _ROSMESSAGE
+_DATAPOINT.fields_by_name['localization'].message_type = _LOCALIZATION
 _DATAPOINT.oneofs_by_name['data'].fields.append(
   _DATAPOINT.fields_by_name['text'])
 _DATAPOINT.fields_by_name['text'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
@@ -1333,6 +1867,9 @@ _DATAPOINT.fields_by_name['location'].containing_oneof = _DATAPOINT.oneofs_by_na
 _DATAPOINT.oneofs_by_name['data'].fields.append(
   _DATAPOINT.fields_by_name['ros_message'])
 _DATAPOINT.fields_by_name['ros_message'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
+_DATAPOINT.oneofs_by_name['data'].fields.append(
+  _DATAPOINT.fields_by_name['localization'])
+_DATAPOINT.fields_by_name['localization'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
 _TEXT.fields_by_name['format'].enum_type = _TEXTFORMAT
 _FILE.oneofs_by_name['data'].fields.append(
   _FILE.fields_by_name['url'])
@@ -1358,13 +1895,38 @@ _POINTCLOUD.fields_by_name['url'].containing_oneof = _POINTCLOUD.oneofs_by_name[
 _POINTCLOUD.oneofs_by_name['data'].fields.append(
   _POINTCLOUD.fields_by_name['raw'])
 _POINTCLOUD.fields_by_name['raw'].containing_oneof = _POINTCLOUD.oneofs_by_name['data']
+_LOCALIZATION.fields_by_name['odometry'].message_type = _ODOMETRY
+_LOCALIZATION.fields_by_name['map'].message_type = _MAP
+_ODOMETRY.fields_by_name['pose'].message_type = _TRANSFORM
+_ODOMETRY.fields_by_name['twist'].message_type = _TWIST
+_ODOMETRY.fields_by_name['world_to_local'].message_type = _TRANSFORM
+_MAP.fields_by_name['origin'].message_type = _TRANSFORM
+_MAP.fields_by_name['world_to_local'].message_type = _TRANSFORM
+_MAP.fields_by_name['occupancy_grid'].message_type = _OCCUPANCYGRID
+_MAP.oneofs_by_name['data'].fields.append(
+  _MAP.fields_by_name['occupancy_grid'])
+_MAP.fields_by_name['occupancy_grid'].containing_oneof = _MAP.oneofs_by_name['data']
+_MAP.oneofs_by_name['data'].fields.append(
+  _MAP.fields_by_name['url'])
+_MAP.fields_by_name['url'].containing_oneof = _MAP.oneofs_by_name['data']
+_MAP.oneofs_by_name['data'].fields.append(
+  _MAP.fields_by_name['raw'])
+_MAP.fields_by_name['raw'].containing_oneof = _MAP.oneofs_by_name['data']
+_TWIST.fields_by_name['linear'].message_type = _VECTOR3
+_TWIST.fields_by_name['angular'].message_type = _VECTOR3
+_TRANSFORM.fields_by_name['translation'].message_type = _VECTOR3
+_TRANSFORM.fields_by_name['rotation'].message_type = _QUATERNION
 _ROSTOPIC_TAGSENTRY.containing_type = _ROSTOPIC
 _ROSTOPIC.fields_by_name['tags'].message_type = _ROSTOPIC_TAGSENTRY
 DESCRIPTOR.message_types_by_name['StreamDataResponse'] = _STREAMDATARESPONSE
 DESCRIPTOR.message_types_by_name['PostDataResponse'] = _POSTDATARESPONSE
-DESCRIPTOR.message_types_by_name['GetROSTopicsRequest'] = _GETROSTOPICSREQUEST
 DESCRIPTOR.message_types_by_name['RegisterROSTopicResponse'] = _REGISTERROSTOPICRESPONSE
+DESCRIPTOR.message_types_by_name['GetROSTopicsRequest'] = _GETROSTOPICSREQUEST
 DESCRIPTOR.message_types_by_name['GetROSTopicsResponse'] = _GETROSTOPICSRESPONSE
+DESCRIPTOR.message_types_by_name['GetROSTopicsSubscriptionConfigRequest'] = _GETROSTOPICSSUBSCRIPTIONCONFIGREQUEST
+DESCRIPTOR.message_types_by_name['GetROSTopicsSubscriptionConfigResponse'] = _GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE
+DESCRIPTOR.message_types_by_name['GetROSWorldReferenceFrameIDRequest'] = _GETROSWORLDREFERENCEFRAMEIDREQUEST
+DESCRIPTOR.message_types_by_name['GetROSWorldReferenceFrameIDResponse'] = _GETROSWORLDREFERENCEFRAMEIDRESPONSE
 DESCRIPTOR.message_types_by_name['GetInterventionRequestRequest'] = _GETINTERVENTIONREQUESTREQUEST
 DESCRIPTOR.message_types_by_name['GetInterventionResponseRequest'] = _GETINTERVENTIONRESPONSEREQUEST
 DESCRIPTOR.message_types_by_name['InterventionRequest'] = _INTERVENTIONREQUEST
@@ -1384,7 +1946,16 @@ DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
 DESCRIPTOR.message_types_by_name['Video'] = _VIDEO
 DESCRIPTOR.message_types_by_name['PointCloud'] = _POINTCLOUD
 DESCRIPTOR.message_types_by_name['Location'] = _LOCATION
+DESCRIPTOR.message_types_by_name['Localization'] = _LOCALIZATION
+DESCRIPTOR.message_types_by_name['Odometry'] = _ODOMETRY
+DESCRIPTOR.message_types_by_name['Map'] = _MAP
+DESCRIPTOR.message_types_by_name['OccupancyGrid'] = _OCCUPANCYGRID
+DESCRIPTOR.message_types_by_name['Twist'] = _TWIST
+DESCRIPTOR.message_types_by_name['Transform'] = _TRANSFORM
+DESCRIPTOR.message_types_by_name['Vector3'] = _VECTOR3
+DESCRIPTOR.message_types_by_name['Quaternion'] = _QUATERNION
 DESCRIPTOR.message_types_by_name['ROSMessage'] = _ROSMESSAGE
+DESCRIPTOR.message_types_by_name['ROSTopicSubscriptionConfig'] = _ROSTOPICSUBSCRIPTIONCONFIG
 DESCRIPTOR.message_types_by_name['ROSTopic'] = _ROSTOPIC
 DESCRIPTOR.enum_types_by_name['Severity'] = _SEVERITY
 DESCRIPTOR.enum_types_by_name['TextFormat'] = _TEXTFORMAT
@@ -1404,13 +1975,6 @@ PostDataResponse = _reflection.GeneratedProtocolMessageType('PostDataResponse', 
   ))
 _sym_db.RegisterMessage(PostDataResponse)
 
-GetROSTopicsRequest = _reflection.GeneratedProtocolMessageType('GetROSTopicsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETROSTOPICSREQUEST,
-  __module__ = 'agent_pb2'
-  # @@protoc_insertion_point(class_scope:agent.GetROSTopicsRequest)
-  ))
-_sym_db.RegisterMessage(GetROSTopicsRequest)
-
 RegisterROSTopicResponse = _reflection.GeneratedProtocolMessageType('RegisterROSTopicResponse', (_message.Message,), dict(
   DESCRIPTOR = _REGISTERROSTOPICRESPONSE,
   __module__ = 'agent_pb2'
@@ -1418,12 +1982,47 @@ RegisterROSTopicResponse = _reflection.GeneratedProtocolMessageType('RegisterROS
   ))
 _sym_db.RegisterMessage(RegisterROSTopicResponse)
 
+GetROSTopicsRequest = _reflection.GeneratedProtocolMessageType('GetROSTopicsRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETROSTOPICSREQUEST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.GetROSTopicsRequest)
+  ))
+_sym_db.RegisterMessage(GetROSTopicsRequest)
+
 GetROSTopicsResponse = _reflection.GeneratedProtocolMessageType('GetROSTopicsResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETROSTOPICSRESPONSE,
   __module__ = 'agent_pb2'
   # @@protoc_insertion_point(class_scope:agent.GetROSTopicsResponse)
   ))
 _sym_db.RegisterMessage(GetROSTopicsResponse)
+
+GetROSTopicsSubscriptionConfigRequest = _reflection.GeneratedProtocolMessageType('GetROSTopicsSubscriptionConfigRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETROSTOPICSSUBSCRIPTIONCONFIGREQUEST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.GetROSTopicsSubscriptionConfigRequest)
+  ))
+_sym_db.RegisterMessage(GetROSTopicsSubscriptionConfigRequest)
+
+GetROSTopicsSubscriptionConfigResponse = _reflection.GeneratedProtocolMessageType('GetROSTopicsSubscriptionConfigResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.GetROSTopicsSubscriptionConfigResponse)
+  ))
+_sym_db.RegisterMessage(GetROSTopicsSubscriptionConfigResponse)
+
+GetROSWorldReferenceFrameIDRequest = _reflection.GeneratedProtocolMessageType('GetROSWorldReferenceFrameIDRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETROSWORLDREFERENCEFRAMEIDREQUEST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.GetROSWorldReferenceFrameIDRequest)
+  ))
+_sym_db.RegisterMessage(GetROSWorldReferenceFrameIDRequest)
+
+GetROSWorldReferenceFrameIDResponse = _reflection.GeneratedProtocolMessageType('GetROSWorldReferenceFrameIDResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETROSWORLDREFERENCEFRAMEIDRESPONSE,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.GetROSWorldReferenceFrameIDResponse)
+  ))
+_sym_db.RegisterMessage(GetROSWorldReferenceFrameIDResponse)
 
 GetInterventionRequestRequest = _reflection.GeneratedProtocolMessageType('GetInterventionRequestRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETINTERVENTIONREQUESTREQUEST,
@@ -1566,12 +2165,75 @@ Location = _reflection.GeneratedProtocolMessageType('Location', (_message.Messag
   ))
 _sym_db.RegisterMessage(Location)
 
+Localization = _reflection.GeneratedProtocolMessageType('Localization', (_message.Message,), dict(
+  DESCRIPTOR = _LOCALIZATION,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.Localization)
+  ))
+_sym_db.RegisterMessage(Localization)
+
+Odometry = _reflection.GeneratedProtocolMessageType('Odometry', (_message.Message,), dict(
+  DESCRIPTOR = _ODOMETRY,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.Odometry)
+  ))
+_sym_db.RegisterMessage(Odometry)
+
+Map = _reflection.GeneratedProtocolMessageType('Map', (_message.Message,), dict(
+  DESCRIPTOR = _MAP,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.Map)
+  ))
+_sym_db.RegisterMessage(Map)
+
+OccupancyGrid = _reflection.GeneratedProtocolMessageType('OccupancyGrid', (_message.Message,), dict(
+  DESCRIPTOR = _OCCUPANCYGRID,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.OccupancyGrid)
+  ))
+_sym_db.RegisterMessage(OccupancyGrid)
+
+Twist = _reflection.GeneratedProtocolMessageType('Twist', (_message.Message,), dict(
+  DESCRIPTOR = _TWIST,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.Twist)
+  ))
+_sym_db.RegisterMessage(Twist)
+
+Transform = _reflection.GeneratedProtocolMessageType('Transform', (_message.Message,), dict(
+  DESCRIPTOR = _TRANSFORM,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.Transform)
+  ))
+_sym_db.RegisterMessage(Transform)
+
+Vector3 = _reflection.GeneratedProtocolMessageType('Vector3', (_message.Message,), dict(
+  DESCRIPTOR = _VECTOR3,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.Vector3)
+  ))
+_sym_db.RegisterMessage(Vector3)
+
+Quaternion = _reflection.GeneratedProtocolMessageType('Quaternion', (_message.Message,), dict(
+  DESCRIPTOR = _QUATERNION,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.Quaternion)
+  ))
+_sym_db.RegisterMessage(Quaternion)
+
 ROSMessage = _reflection.GeneratedProtocolMessageType('ROSMessage', (_message.Message,), dict(
   DESCRIPTOR = _ROSMESSAGE,
   __module__ = 'agent_pb2'
   # @@protoc_insertion_point(class_scope:agent.ROSMessage)
   ))
 _sym_db.RegisterMessage(ROSMessage)
+
+ROSTopicSubscriptionConfig = _reflection.GeneratedProtocolMessageType('ROSTopicSubscriptionConfig', (_message.Message,), dict(
+  DESCRIPTOR = _ROSTOPICSUBSCRIPTIONCONFIG,
+  __module__ = 'agent_pb2'
+  # @@protoc_insertion_point(class_scope:agent.ROSTopicSubscriptionConfig)
+  ))
+_sym_db.RegisterMessage(ROSTopicSubscriptionConfig)
 
 ROSTopic = _reflection.GeneratedProtocolMessageType('ROSTopic', (_message.Message,), dict(
 
@@ -1600,8 +2262,8 @@ _AGENT = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=2340,
-  serialized_end=2892,
+  serialized_start=3432,
+  serialized_end=4233,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamData',
@@ -1640,9 +2302,27 @@ _AGENT = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
+    name='GetROSTopicsSubscriptionConfig',
+    full_name='agent.Agent.GetROSTopicsSubscriptionConfig',
+    index=4,
+    containing_service=None,
+    input_type=_GETROSTOPICSSUBSCRIPTIONCONFIGREQUEST,
+    output_type=_GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetROSWorldReferenceFrameID',
+    full_name='agent.Agent.GetROSWorldReferenceFrameID',
+    index=5,
+    containing_service=None,
+    input_type=_GETROSWORLDREFERENCEFRAMEIDREQUEST,
+    output_type=_GETROSWORLDREFERENCEFRAMEIDRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
     name='CreateInterventionRequest',
     full_name='agent.Agent.CreateInterventionRequest',
-    index=4,
+    index=6,
     containing_service=None,
     input_type=_INTERVENTIONREQUEST,
     output_type=_INTERVENTIONREQUEST,
@@ -1651,7 +2331,7 @@ _AGENT = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetInterventionRequest',
     full_name='agent.Agent.GetInterventionRequest',
-    index=5,
+    index=7,
     containing_service=None,
     input_type=_GETINTERVENTIONREQUESTREQUEST,
     output_type=_INTERVENTIONREQUEST,
@@ -1660,7 +2340,7 @@ _AGENT = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetInterventionResponse',
     full_name='agent.Agent.GetInterventionResponse',
-    index=6,
+    index=8,
     containing_service=None,
     input_type=_GETINTERVENTIONRESPONSEREQUEST,
     output_type=_INTERVENTIONRESPONSE,
