@@ -1,0 +1,29 @@
+[formant]
+agent-server-port-grpc = "5501"
+agent-server-port-http = "5502"
+agent-server-ip = "localhost"
+
+[tags]
+site = "san_francisco_1"
+environment = "dev"
+group = "engineering"
+
+##### Basic Streams #####
+
+[[streams]]
+name = "stream.001"
+
+##### Watch Streams #####
+
+[[streams]]
+name = "cognex.001"
+dir = "/home/ftp/upload"
+formant-type = "image"
+ext = ".jpg"
+
+[[streams]]
+name = "test.log"
+filename = "/home/logs/test.log"
+file-format = "json"
+time-key = "timestamp"
+time-format = "2006-01-02T15:04:05Z07:00"

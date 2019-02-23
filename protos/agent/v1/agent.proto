@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package v1.agent;
+
+import "protos/model/v1/datapoint.proto";
+import "protos/model/v1/intervention.proto";
+import "protos/model/v1/ros.proto";
+
+option go_package = "github.com/FormantIO/genproto/go/v1/agent";
+
+// gRPC service for the Formant Agent
+service Agent {
+    // Accepts a stream of data points.
+    rpc StreamData(stream model.Datapoint)  returns (StreamDataResponse) {}
+    // Accepts a single data point per RPC call. Also exposed as a HTTP Endpoint.
+    rpc PostData(model.Datapoint) returns (PostDataResponse) {}
+    // Registers a ROS Topic and its msg type.
+    rpc RegisterROSTopic(model.ROSTopic) returns (RegisterROSTopicResponse) {}
+    // DEPRECATED Gets the ROS topics defined in the agent config.
+    rpc GetROSTopics(GetROSTopicsRequest) returns (GetROSTopicsResponse) {}
+    // Gets the ROS localization configuration information
+    rpc GetROSTopicsSubscriptionConfig(GetROSTopicsSubscriptionConfigRequest) returns (GetROSTopicsSubscriptionConfigResponse) {}
+    // Gets the ROS World Reference Frame ID from the configuration defined in config.toml.
+    rpc GetROSWorldReferenceFrameID(GetROSWorldReferenceFrameIDRequest) returns (GetROSWorldReferenceFrameIDResponse) {}
+    // Creates a InterventionRequest. Returns a InterventionRequest with a populated id.
+    rpc CreateInterventionRequest(model.InterventionRequest) returns (model.InterventionRequest) {}
+    // Returns a InterventionRequest. NOTE: the responses object will be empty if a operator has not responded.
+    rpc GetInterventionRequest(GetInterventionRequestRequest) returns (model.InterventionRequest) {}
+    // Blocks till the InterventionRequest with request_id has a response.
+    rpc GetInterventionResponse(GetInterventionResponseRequest) returns (model.InterventionResponse) {}
+}
+
+// gRPC request response types
+
+message StreamDataResponse {}
+
+message PostDataResponse {}
+
+message RegisterROSTopicResponse {}
+
+// DEPRECATED
+message GetROSTopicsRequest {}
+
+// DEPRECATED
+message GetROSTopicsResponse {
+    repeated string topics = 1;
+}
+
+message GetROSTopicsSubscriptionConfigRequest {}
+
+message GetROSTopicsSubscriptionConfigResponse {
+    repeated model.ROSTopicSubscriptionConfig topics = 1;
+}
+
+message GetROSWorldReferenceFrameIDRequest {}
+
+message GetROSWorldReferenceFrameIDResponse{
+    string world_reference_frame_id = 1;
+}
+
+
+message GetInterventionRequestRequest {
+    string id = 1;
+}
+
+message GetInterventionResponseRequest {
+    string request_id = 1;
+}

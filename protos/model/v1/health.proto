@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package v1.model;
+
+option go_package = "github.com/FormantIO/genproto/go/v1/model";
+
+
+enum HealthStatus {
+    HEALTH_UNKNOWN = 0;
+    HEALTH_OPERATIONAL = 1;
+    HEALTH_OFFLINE = 2;
+    HEALTH_ERROR = 3;
+}
+message Health {
+    HealthStatus status = 1;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package v1.model;
+
+option go_package = "github.com/FormantIO/genproto/go/v1/model";
+
+message ROSMessage {
+    bytes raw = 1;
+    bytes world_to_local = 2;
+}
+
+message ROSTopicSubscriptionConfig {
+    string topic = 1;
+    bool include_transform = 2;
+}
+
+message ROSTopic {
+    string name = 1;
+    string data_type = 2;
+    string msg_desc = 3;
+    map <string, string> tags = 4;
+}

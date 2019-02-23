@@ -12,8 +12,9 @@ import urllib2
 
 import grpc
 
-import agent_pb2
-import agent_pb2_grpc
+from protos.agent.v1 import agent_pb2, agent_pb2_grpc
+from protos.model.v1 import text_pb2, math_pb2, media_pb2, file_pb2, intervention_pb2, datapoint_pb2, navigation_pb2
+
 
 path = os.path.dirname(os.path.realpath(__file__))
 
@@ -22,18 +23,18 @@ path = os.path.dirname(os.path.realpath(__file__))
 
 def create_data_point(point):
     timestamp = int(time.time() * 1000)
-    text_msg = agent_pb2.Text()
+    text_msg = text_pb2.Text()
     text_msg.value = 'this is a %s data point' % point
-    data_point = agent_pb2.Datapoint(
+    data_point = datapoint_pb2.Datapoint(
         stream="stream.001.text", text=text_msg, timestamp=timestamp)
     return data_point
 
 
 def create_numeric_data_point():
     timestamp = int(time.time() * 1000)
-    numeric_msg = agent_pb2.Numeric()
+    numeric_msg = math_pb2.Numeric()
     numeric_msg.value = random.uniform(0, 1)
-    data_point = agent_pb2.Datapoint(
+    data_point = datapoint_pb2.Datapoint(
         stream="stream.001.numeric", numeric=numeric_msg, timestamp=timestamp)
     return data_point
 
@@ -81,10 +82,11 @@ def stream_data():
 
 
 def upload_file():
-    file_datapoint = agent_pb2.File()
+    file_datapoint = file_pb2.File()
     file_path = "file://%s/fruit-single.png" % path
     file_datapoint.url = file_path
-    request = agent_pb2.Datapoint(
+    file_datapoint.preview_url = file_path
+    request = datapoint_pb2.Datapoint(
         stream="file.log",
         file=file_datapoint,
         timestamp=int(time.time() * 1000))
@@ -95,13 +97,13 @@ def upload_file():
 
 
 def upload_data_file():
-    file_datapoint = agent_pb2.File()
+    file_datapoint = file_pb2.File()
     file_path = "%s/fruit-single.png" % path
     with open(file_path, "rb") as f:
         data = f.read()
         file_datapoint.raw = data
         file_datapoint.filename = "testfile1"
-        request = agent_pb2.Datapoint(
+        request = datapoint_pb2.Datapoint(
             stream="file.log",
             file=file_datapoint,
             timestamp=int(time.time() * 1000))
@@ -112,10 +114,10 @@ def upload_data_file():
 
 
 def post_geolocation():
-    geo = agent_pb2.Location()
+    geo = navigation_pb2.Location()
     geo.latitude = 37.434417
     geo.longitude = -122.142925
-    geo_datapoint = agent_pb2.Datapoint(
+    geo_datapoint = datapoint_pb2.Datapoint(
         stream="geo.001", location=geo, timestamp=int(time.time() * 1000))
     try:
         agent_stub.PostData(geo_datapoint)
@@ -127,30 +129,30 @@ def post_localization():
     file_path = "%s/map.json" % path
     with open(file_path, "rb") as map_json_data:
         map_data = json.load(map_json_data)
-        localization = agent_pb2.Localization(
-            map=agent_pb2.Map(
+        localization = navigation_pb2.Localization(
+            map=navigation_pb2.Map(
                 height=map_data["height"],
                 width=map_data["width"],
                 resolution=map_data["resolution"],
-                occupancy_grid=agent_pb2.OccupancyGrid(data=map_data["data"]),
+                occupancy_grid=navigation_pb2.OccupancyGrid(data=map_data["data"]),
                 # we're using the map as the base reference frame
-                world_to_local=agent_pb2.Transform(
-                    translation=agent_pb2.Vector3(x=0, y=0, z=0),
-                    rotation=agent_pb2.Quaternion(x=0, y=0, z=0, w=1)),
+                world_to_local=math_pb2.Transform(
+                    translation=math_pb2.Vector3(x=0, y=0, z=0),
+                    rotation=math_pb2.Quaternion(x=0, y=0, z=0, w=1)),
             ),
-            odometry=agent_pb2.Odometry(
-                pose=agent_pb2.Transform(
-                    translation=agent_pb2.Vector3(x=0, y=0, z=0),
-                    rotation=agent_pb2.Quaternion(x=0, y=0, z=0, w=1)),
-                twist=agent_pb2.Twist(
-                    linear=agent_pb2.Vector3(x=0, y=0, z=0),
-                    angular=agent_pb2.Vector3(x=0, y=0, z=0)),
+            odometry=navigation_pb2.Odometry(
+                pose=math_pb2.Transform(
+                    translation=math_pb2.Vector3(x=0, y=0, z=0),
+                    rotation=math_pb2.Quaternion(x=0, y=0, z=0, w=1)),
+                twist=math_pb2.Twist(
+                    linear=math_pb2.Vector3(x=0, y=0, z=0),
+                    angular=math_pb2.Vector3(x=0, y=0, z=0)),
                 # transform to map coordinates
-                world_to_local=agent_pb2.Transform(
-                    translation=agent_pb2.Vector3(x=8, y=10, z=0),
-                    rotation=agent_pb2.Quaternion(x=0, y=0, z=0, w=1)),
+                world_to_local=math_pb2.Transform(
+                    translation=math_pb2.Vector3(x=8, y=10, z=0),
+                    rotation=math_pb2.Quaternion(x=0, y=0, z=0, w=1)),
             ))
-        localization_datapoint = agent_pb2.Datapoint(
+        localization_datapoint = datapoint_pb2.Datapoint(
             stream="localization.001",
             timestamp=int(time.time() * 1000),
             localization=localization)
@@ -161,9 +163,9 @@ def post_localization():
 
 
 def create_intervention_request():
-    request = agent_pb2.InterventionRequest()
+    request = intervention_pb2.InterventionRequest()
     request.timestamp = int(time.time() * 1000)
-    request.severity = agent_pb2.INFO
+    request.severity = intervention_pb2.INFO
     request.selection_request.title = "Selection Request"
     request.selection_request.hint = 1
     request.selection_request.instruction = "What is in the image?"
