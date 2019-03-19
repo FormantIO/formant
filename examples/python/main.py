@@ -13,20 +13,21 @@ import urllib2
 import grpc
 
 from protos.agent.v1 import agent_pb2, agent_pb2_grpc
-from protos.model.v1 import text_pb2, math_pb2, media_pb2, file_pb2, intervention_pb2, datapoint_pb2, navigation_pb2
-
+from protos.model.v1 import (datapoint_pb2, file_pb2, intervention_pb2,
+                             math_pb2, media_pb2, navigation_pb2, text_pb2)
 
 path = os.path.dirname(os.path.realpath(__file__))
+host = "localhost"
 
 #### gRPC Implementations ####
 
 
-def create_data_point(point):
+def create_data_point(point, tags=None):
     timestamp = int(time.time() * 1000)
     text_msg = text_pb2.Text()
     text_msg.value = 'this is a %s data point' % point
     data_point = datapoint_pb2.Datapoint(
-        stream="stream.001.text", text=text_msg, timestamp=timestamp)
+        stream="stream.001.text", text=text_msg, timestamp=timestamp, tags=tags)
     return data_point
 
 
@@ -67,9 +68,9 @@ def write_datapoints():
         i += 1
 
 
-def post_data():
+def post_data(tags=None):
     try:
-        agent_stub.PostData(create_data_point("posted"))
+        agent_stub.PostData(create_data_point("posted", tags))
     except grpc.RpcError as e:
         print(e)
 
@@ -192,15 +193,16 @@ def get_intervention_response(id):
 #### HTTP Implementations ####
 
 
-def post_data_http():
+def post_data_http(tags=None):
     data = {
         'stream': "stream.001",
         'timestamp': int(time.time() * 1000),
         'text': {
             'value': 'this is a python http posted data point'
-        }
+        },
+        'tags': {} if tags is None else tags
     }
-    req = urllib2.Request('http://localhost:5502/v1/data')
+    req = urllib2.Request('http://%s:5502/v1/data' % host)
     req.add_header('Content-Type', 'application/json')
     return urllib2.urlopen(req, json.dumps(data))
 
@@ -224,7 +226,7 @@ def create_intervention_request_http():
             }]
         }
     }
-    req = urllib2.Request('http://localhost:5502/v1/intervention-requests')
+    req = urllib2.Request('http://%s:5502/v1/intervention-requests' % host)
     req.add_header('Content-Type', 'application/json')
     response = urllib2.urlopen(req, json.dumps(data))
     response_body = response.read()
@@ -234,7 +236,7 @@ def create_intervention_request_http():
 
 def get_intervention_request_http(id):
     req = urllib2.Request(
-        'http://localhost:5502/v1/intervention-requests/%s' % id)
+        'http://%s:5502/v1/intervention-requests/%s' % (host, id))
     response = urllib2.urlopen(req)
     response_body = response.read()
     response_json = json.loads(response_body)
@@ -243,7 +245,7 @@ def get_intervention_request_http(id):
 
 def get_intervention_response_http(id):
     req = urllib2.Request(
-        'http://localhost:5502/v1/intervention-responses/%s' % id)
+        'http://%s:5502/v1/intervention-responses/%s' % (host, id))
     response = urllib2.urlopen(req)
     response_body = response.read()
     response_json = json.loads(response_body)
@@ -258,12 +260,16 @@ def print_example_break():
 
 #### Datapoints ####
 
-channel = grpc.insecure_channel("localhost:5501")
+channel = grpc.insecure_channel("%s:5501" % host)
 agent_stub = agent_pb2_grpc.AgentStub(channel)
 print('agent comm established.')
 
 print('posting data grpc')
 post_data()
+time.sleep(0.2)
+
+print('posting data grpc with tags')
+post_data({ 'sw_rev': '1.0' })
 time.sleep(0.2)
 
 print_example_break()
@@ -287,6 +293,10 @@ print_example_break()
 
 print('posting data http')
 post_data_http()
+time.sleep(0.2)
+
+print('posting data http with tags')
+post_data_http({ 'sw_rev': '1.0' })
 time.sleep(0.2)
 
 print_example_break()

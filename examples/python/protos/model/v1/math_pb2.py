@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=_b('Z)github.com/FormantIO/genproto/go/v1/model'),
-  serialized_pb=_b('\n\x1aprotos/model/v1/math.proto\x12\x08v1.model\"\x18\n\x07Numeric\x12\r\n\x05value\x18\x01 \x01(\x01\"!\n\x03\x42it\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08\"%\n\x06\x42itSet\x12\x1b\n\x04\x62its\x18\x01 \x03(\x0b\x32\r.v1.model.Bit\"N\n\x05Twist\x12!\n\x06linear\x18\x01 \x01(\x0b\x32\x11.v1.model.Vector3\x12\"\n\x07\x61ngular\x18\x02 \x01(\x0b\x32\x11.v1.model.Vector3\"[\n\tTransform\x12&\n\x0btranslation\x18\x01 \x01(\x0b\x32\x11.v1.model.Vector3\x12&\n\x08rotation\x18\x02 \x01(\x0b\x32\x14.v1.model.Quaternion\"*\n\x07Vector3\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"8\n\nQuaternion\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01w\x18\x04 \x01(\x01\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
+  serialized_pb=_b('\n\x1aprotos/model/v1/math.proto\x12\x08v1.model\"\x18\n\x07Numeric\x12\r\n\x05value\x18\x01 \x01(\x01\".\n\tMetricSet\x12!\n\x07metrics\x18\x01 \x03(\x0b\x32\x10.v1.model.Metric\"%\n\x06Metric\x12\r\n\x05value\x18\x01 \x01(\x01\x12\x0c\n\x04unit\x18\x02 \x01(\t\"!\n\x03\x42it\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08\"%\n\x06\x42itSet\x12\x1b\n\x04\x62its\x18\x01 \x03(\x0b\x32\r.v1.model.Bit\"N\n\x05Twist\x12!\n\x06linear\x18\x01 \x01(\x0b\x32\x11.v1.model.Vector3\x12\"\n\x07\x61ngular\x18\x02 \x01(\x0b\x32\x11.v1.model.Vector3\"[\n\tTransform\x12&\n\x0btranslation\x18\x01 \x01(\x0b\x32\x11.v1.model.Vector3\x12&\n\x08rotation\x18\x02 \x01(\x0b\x32\x14.v1.model.Quaternion\"*\n\x07Vector3\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"8\n\nQuaternion\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01w\x18\x04 \x01(\x01\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
 )
 
 
@@ -57,6 +57,75 @@ _NUMERIC = _descriptor.Descriptor(
 )
 
 
+_METRICSET = _descriptor.Descriptor(
+  name='MetricSet',
+  full_name='v1.model.MetricSet',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='metrics', full_name='v1.model.MetricSet.metrics', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66,
+  serialized_end=112,
+)
+
+
+_METRIC = _descriptor.Descriptor(
+  name='Metric',
+  full_name='v1.model.Metric',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='v1.model.Metric.value', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='unit', full_name='v1.model.Metric.unit', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=114,
+  serialized_end=151,
+)
+
+
 _BIT = _descriptor.Descriptor(
   name='Bit',
   full_name='v1.model.Bit',
@@ -90,8 +159,8 @@ _BIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=66,
-  serialized_end=99,
+  serialized_start=153,
+  serialized_end=186,
 )
 
 
@@ -121,8 +190,8 @@ _BITSET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=101,
-  serialized_end=138,
+  serialized_start=188,
+  serialized_end=225,
 )
 
 
@@ -159,8 +228,8 @@ _TWIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=140,
-  serialized_end=218,
+  serialized_start=227,
+  serialized_end=305,
 )
 
 
@@ -197,8 +266,8 @@ _TRANSFORM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=220,
-  serialized_end=311,
+  serialized_start=307,
+  serialized_end=398,
 )
 
 
@@ -242,8 +311,8 @@ _VECTOR3 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=313,
-  serialized_end=355,
+  serialized_start=400,
+  serialized_end=442,
 )
 
 
@@ -294,16 +363,19 @@ _QUATERNION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=357,
-  serialized_end=413,
+  serialized_start=444,
+  serialized_end=500,
 )
 
+_METRICSET.fields_by_name['metrics'].message_type = _METRIC
 _BITSET.fields_by_name['bits'].message_type = _BIT
 _TWIST.fields_by_name['linear'].message_type = _VECTOR3
 _TWIST.fields_by_name['angular'].message_type = _VECTOR3
 _TRANSFORM.fields_by_name['translation'].message_type = _VECTOR3
 _TRANSFORM.fields_by_name['rotation'].message_type = _QUATERNION
 DESCRIPTOR.message_types_by_name['Numeric'] = _NUMERIC
+DESCRIPTOR.message_types_by_name['MetricSet'] = _METRICSET
+DESCRIPTOR.message_types_by_name['Metric'] = _METRIC
 DESCRIPTOR.message_types_by_name['Bit'] = _BIT
 DESCRIPTOR.message_types_by_name['BitSet'] = _BITSET
 DESCRIPTOR.message_types_by_name['Twist'] = _TWIST
@@ -318,6 +390,20 @@ Numeric = _reflection.GeneratedProtocolMessageType('Numeric', (_message.Message,
   # @@protoc_insertion_point(class_scope:v1.model.Numeric)
   ))
 _sym_db.RegisterMessage(Numeric)
+
+MetricSet = _reflection.GeneratedProtocolMessageType('MetricSet', (_message.Message,), dict(
+  DESCRIPTOR = _METRICSET,
+  __module__ = 'protos.model.v1.math_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.MetricSet)
+  ))
+_sym_db.RegisterMessage(MetricSet)
+
+Metric = _reflection.GeneratedProtocolMessageType('Metric', (_message.Message,), dict(
+  DESCRIPTOR = _METRIC,
+  __module__ = 'protos.model.v1.math_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.Metric)
+  ))
+_sym_db.RegisterMessage(Metric)
 
 Bit = _reflection.GeneratedProtocolMessageType('Bit', (_message.Message,), dict(
   DESCRIPTOR = _BIT,

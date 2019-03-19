@@ -27,7 +27,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=_b('Z)github.com/FormantIO/genproto/go/v1/model'),
-  serialized_pb=_b('\n\x1fprotos/model/v1/datapoint.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/file.proto\x1a\x1cprotos/model/v1/health.proto\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\x1a\x19protos/model/v1/ros.proto\x1a\x1aprotos/model/v1/text.proto\x1a\x1bprotos/model/v1/media.proto\"\xb4\x04\n\tDatapoint\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12+\n\x04tags\x18\x0e \x03(\x0b\x32\x1d.v1.model.Datapoint.TagsEntry\x12\x1e\n\x04text\x18\x03 \x01(\x0b\x32\x0e.v1.model.TextH\x00\x12$\n\x07numeric\x18\x04 \x01(\x0b\x32\x11.v1.model.NumericH\x00\x12\"\n\x06\x62itset\x18\r \x01(\x0b\x32\x10.v1.model.BitSetH\x00\x12\x1e\n\x04\x66ile\x18\x05 \x01(\x0b\x32\x0e.v1.model.FileH\x00\x12 \n\x05image\x18\x06 \x01(\x0b\x32\x0f.v1.model.ImageH\x00\x12 \n\x05video\x18\x07 \x01(\x0b\x32\x0f.v1.model.VideoH\x00\x12+\n\x0bpoint_cloud\x18\x08 \x01(\x0b\x32\x14.v1.model.PointCloudH\x00\x12&\n\x08location\x18\t \x01(\x0b\x32\x12.v1.model.LocationH\x00\x12+\n\x0bros_message\x18\n \x01(\x0b\x32\x14.v1.model.ROSMessageH\x00\x12.\n\x0clocalization\x18\x0b \x01(\x0b\x32\x16.v1.model.LocalizationH\x00\x12\"\n\x06health\x18\x0c \x01(\x0b\x32\x10.v1.model.HealthH\x00\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
+  serialized_pb=_b('\n\x1fprotos/model/v1/datapoint.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/file.proto\x1a\x1cprotos/model/v1/health.proto\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\x1a\x19protos/model/v1/ros.proto\x1a\x1aprotos/model/v1/text.proto\x1a\x1bprotos/model/v1/media.proto\"\xdf\x04\n\tDatapoint\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12+\n\x04tags\x18\x0e \x03(\x0b\x32\x1d.v1.model.Datapoint.TagsEntry\x12\x1e\n\x04text\x18\x03 \x01(\x0b\x32\x0e.v1.model.TextH\x00\x12$\n\x07numeric\x18\x04 \x01(\x0b\x32\x11.v1.model.NumericH\x00\x12)\n\nmetric_set\x18\x0f \x01(\x0b\x32\x13.v1.model.MetricSetH\x00\x12\"\n\x06\x62itset\x18\r \x01(\x0b\x32\x10.v1.model.BitSetH\x00\x12\x1e\n\x04\x66ile\x18\x05 \x01(\x0b\x32\x0e.v1.model.FileH\x00\x12 \n\x05image\x18\x06 \x01(\x0b\x32\x0f.v1.model.ImageH\x00\x12 \n\x05video\x18\x07 \x01(\x0b\x32\x0f.v1.model.VideoH\x00\x12+\n\x0bpoint_cloud\x18\x08 \x01(\x0b\x32\x14.v1.model.PointCloudH\x00\x12&\n\x08location\x18\t \x01(\x0b\x32\x12.v1.model.LocationH\x00\x12+\n\x0bros_message\x18\n \x01(\x0b\x32\x14.v1.model.ROSMessageH\x00\x12.\n\x0clocalization\x18\x0b \x01(\x0b\x32\x16.v1.model.LocalizationH\x00\x12\"\n\x06health\x18\x0c \x01(\x0b\x32\x10.v1.model.HealthH\x00\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
   ,
   dependencies=[protos_dot_model_dot_v1_dot_file__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_health__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_navigation__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_ros__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_text__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_media__pb2.DESCRIPTOR,])
 
@@ -67,8 +67,8 @@ _DATAPOINT_TAGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=763,
-  serialized_end=806,
+  serialized_start=806,
+  serialized_end=849,
 )
 
 _DATAPOINT = _descriptor.Descriptor(
@@ -114,63 +114,70 @@ _DATAPOINT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='bitset', full_name='v1.model.Datapoint.bitset', index=5,
+      name='metric_set', full_name='v1.model.Datapoint.metric_set', index=5,
+      number=15, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bitset', full_name='v1.model.Datapoint.bitset', index=6,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='file', full_name='v1.model.Datapoint.file', index=6,
+      name='file', full_name='v1.model.Datapoint.file', index=7,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='image', full_name='v1.model.Datapoint.image', index=7,
+      name='image', full_name='v1.model.Datapoint.image', index=8,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='video', full_name='v1.model.Datapoint.video', index=8,
+      name='video', full_name='v1.model.Datapoint.video', index=9,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='point_cloud', full_name='v1.model.Datapoint.point_cloud', index=9,
+      name='point_cloud', full_name='v1.model.Datapoint.point_cloud', index=10,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='location', full_name='v1.model.Datapoint.location', index=10,
+      name='location', full_name='v1.model.Datapoint.location', index=11,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ros_message', full_name='v1.model.Datapoint.ros_message', index=11,
+      name='ros_message', full_name='v1.model.Datapoint.ros_message', index=12,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='localization', full_name='v1.model.Datapoint.localization', index=12,
+      name='localization', full_name='v1.model.Datapoint.localization', index=13,
       number=11, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='health', full_name='v1.model.Datapoint.health', index=13,
+      name='health', full_name='v1.model.Datapoint.health', index=14,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -192,13 +199,14 @@ _DATAPOINT = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=250,
-  serialized_end=814,
+  serialized_end=857,
 )
 
 _DATAPOINT_TAGSENTRY.containing_type = _DATAPOINT
 _DATAPOINT.fields_by_name['tags'].message_type = _DATAPOINT_TAGSENTRY
 _DATAPOINT.fields_by_name['text'].message_type = protos_dot_model_dot_v1_dot_text__pb2._TEXT
 _DATAPOINT.fields_by_name['numeric'].message_type = protos_dot_model_dot_v1_dot_math__pb2._NUMERIC
+_DATAPOINT.fields_by_name['metric_set'].message_type = protos_dot_model_dot_v1_dot_math__pb2._METRICSET
 _DATAPOINT.fields_by_name['bitset'].message_type = protos_dot_model_dot_v1_dot_math__pb2._BITSET
 _DATAPOINT.fields_by_name['file'].message_type = protos_dot_model_dot_v1_dot_file__pb2._FILE
 _DATAPOINT.fields_by_name['image'].message_type = protos_dot_model_dot_v1_dot_media__pb2._IMAGE
@@ -214,6 +222,9 @@ _DATAPOINT.fields_by_name['text'].containing_oneof = _DATAPOINT.oneofs_by_name['
 _DATAPOINT.oneofs_by_name['data'].fields.append(
   _DATAPOINT.fields_by_name['numeric'])
 _DATAPOINT.fields_by_name['numeric'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
+_DATAPOINT.oneofs_by_name['data'].fields.append(
+  _DATAPOINT.fields_by_name['metric_set'])
+_DATAPOINT.fields_by_name['metric_set'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
 _DATAPOINT.oneofs_by_name['data'].fields.append(
   _DATAPOINT.fields_by_name['bitset'])
 _DATAPOINT.fields_by_name['bitset'].containing_oneof = _DATAPOINT.oneofs_by_name['data']
