@@ -8,6 +8,15 @@ message Numeric {
     double value = 1;
 }
 
+message MetricSet{
+    repeated Metric metrics = 1;
+}
+
+message Metric {
+    double value = 1;
+    string unit = 2;
+}
+
 message Bit {
     string key = 1;
     bool value = 2;

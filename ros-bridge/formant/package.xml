@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>formant</name>
-  <version>0.11.78</version>
+  <version>0.16.43</version>
   <description>The Formant package</description>
   <maintainer email="support@formant.io">formant</maintainer>
   <license>All Rights Reserved</license>

@@ -1,0 +1,23 @@
+version: "2.2"
+
+networks:
+  formant:
+    driver: bridge
+
+volumes:
+  formant:
+
+services:
+  formant-agent:
+    container_name: formant-agent
+    image: formant/agent:0.16.43
+    restart: always
+    env_file:
+      - formant.env
+    ports:
+      - "5501:5501"
+      - "5502:5502"
+    volumes:
+      - "formant:/home/.formant"
+    networks:
+      - formant

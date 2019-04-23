@@ -23,6 +23,7 @@ message Datapoint {
     oneof data {
         Text text = 3;
         Numeric numeric = 4;
+        MetricSet metric_set = 15;
         BitSet bitset = 13;
         File file = 5;
         Image image = 6;
