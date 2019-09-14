@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=_b('Z)github.com/FormantIO/genproto/go/v1/model'),
-  serialized_pb=_b('\n\x1aprotos/model/v1/file.proto\x12\x08v1.model\"\x85\x01\n\x04\x46ile\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x12\x10\n\x08\x66ilename\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\x03\x12\x15\n\x0bpreview_url\x18\x05 \x01(\tH\x01\x12\x15\n\x0bpreview_raw\x18\x06 \x01(\x0cH\x01\x42\x06\n\x04\x64\x61taB\t\n\x07previewB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
+  serialized_pb=_b('\n\x1aprotos/model/v1/file.proto\x12\x08v1.model\"f\n\x04\x46ile\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03raw\x12\x1a\n\x08\x66ilename\x18\x03 \x01(\tR\x08\x66ilename\x12\x12\n\x04size\x18\x04 \x01(\x03R\x04sizeB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
 )
 
 
@@ -39,42 +39,28 @@ _FILE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='url', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='raw', full_name='v1.model.File.raw', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='raw', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='filename', full_name='v1.model.File.filename', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='filename', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='size', full_name='v1.model.File.size', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='preview_url', full_name='v1.model.File.preview_url', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='preview_raw', full_name='v1.model.File.preview_raw', index=5,
-      number=6, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='size', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -89,12 +75,9 @@ _FILE = _descriptor.Descriptor(
     _descriptor.OneofDescriptor(
       name='data', full_name='v1.model.File.data',
       index=0, containing_type=None, fields=[]),
-    _descriptor.OneofDescriptor(
-      name='preview', full_name='v1.model.File.preview',
-      index=1, containing_type=None, fields=[]),
   ],
-  serialized_start=41,
-  serialized_end=174,
+  serialized_start=40,
+  serialized_end=142,
 )
 
 _FILE.oneofs_by_name['data'].fields.append(
@@ -103,12 +86,6 @@ _FILE.fields_by_name['url'].containing_oneof = _FILE.oneofs_by_name['data']
 _FILE.oneofs_by_name['data'].fields.append(
   _FILE.fields_by_name['raw'])
 _FILE.fields_by_name['raw'].containing_oneof = _FILE.oneofs_by_name['data']
-_FILE.oneofs_by_name['preview'].fields.append(
-  _FILE.fields_by_name['preview_url'])
-_FILE.fields_by_name['preview_url'].containing_oneof = _FILE.oneofs_by_name['preview']
-_FILE.oneofs_by_name['preview'].fields.append(
-  _FILE.fields_by_name['preview_raw'])
-_FILE.fields_by_name['preview_raw'].containing_oneof = _FILE.oneofs_by_name['preview']
 DESCRIPTOR.message_types_by_name['File'] = _FILE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

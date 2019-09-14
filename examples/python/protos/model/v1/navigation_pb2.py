@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=_b('Z)github.com/FormantIO/genproto/go/v1/model'),
-  serialized_pb=_b('\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\"P\n\x0cLocalization\x12$\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.Odometry\x12\x1a\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.Map\"z\n\x08Odometry\x12!\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\x1e\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.Twist\x12+\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.Transform\"\xe3\x01\n\x03Map\x12\x12\n\nresolution\x18\x01 \x01(\x01\x12\r\n\x05width\x18\x02 \x01(\r\x12\x0e\n\x06height\x18\x03 \x01(\r\x12#\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.Transform\x12+\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.Transform\x12\x31\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00\x12\r\n\x03url\x18\x07 \x01(\tH\x00\x12\r\n\x03raw\x18\x08 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"\x1d\n\rOccupancyGrid\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x05\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
+  serialized_pb=_b('\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"D\n\x08Location\x12\x1a\n\x08latitude\x18\x01 \x01(\x01R\x08latitude\x12\x1c\n\tlongitude\x18\x02 \x01(\x01R\tlongitude\"_\n\x0cLocalization\x12.\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.OdometryR\x08odometry\x12\x1f\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.MapR\x03map\"\x95\x01\n\x08Odometry\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12%\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistR\x05twist\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"\xad\x02\n\x03Map\x12\x1e\n\nresolution\x18\x01 \x01(\x01R\nresolution\x12\x14\n\x05width\x18\x02 \x01(\rR\x05width\x12\x16\n\x06height\x18\x03 \x01(\rR\x06height\x12+\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.TransformR\x06origin\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12@\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00R\roccupancyGrid\x12\x12\n\x03url\x18\x07 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x08 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"#\n\rOccupancyGrid\x12\x12\n\x04\x64\x61ta\x18\x01 \x03(\x05R\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,])
 
@@ -41,14 +41,14 @@ _LOCATION = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='latitude', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='longitude', full_name='v1.model.Location.longitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='longitude', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -62,7 +62,7 @@ _LOCATION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=74,
-  serialized_end=121,
+  serialized_end=142,
 )
 
 
@@ -79,14 +79,14 @@ _LOCALIZATION = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='odometry', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='map', full_name='v1.model.Localization.map', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='map', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -99,8 +99,8 @@ _LOCALIZATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=123,
-  serialized_end=203,
+  serialized_start=144,
+  serialized_end=239,
 )
 
 
@@ -117,21 +117,21 @@ _ODOMETRY = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='pose', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='twist', full_name='v1.model.Odometry.twist', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='twist', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='world_to_local', full_name='v1.model.Odometry.world_to_local', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -144,8 +144,8 @@ _ODOMETRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=205,
-  serialized_end=327,
+  serialized_start=242,
+  serialized_end=391,
 )
 
 
@@ -162,56 +162,56 @@ _MAP = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='resolution', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='width', full_name='v1.model.Map.width', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='width', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='height', full_name='v1.model.Map.height', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='height', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='origin', full_name='v1.model.Map.origin', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='origin', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='world_to_local', full_name='v1.model.Map.world_to_local', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='occupancy_grid', full_name='v1.model.Map.occupancy_grid', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='occupancyGrid', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='url', full_name='v1.model.Map.url', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='url', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='raw', full_name='v1.model.Map.raw', index=7,
       number=8, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='raw', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -227,8 +227,8 @@ _MAP = _descriptor.Descriptor(
       name='data', full_name='v1.model.Map.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=330,
-  serialized_end=557,
+  serialized_start=394,
+  serialized_end=695,
 )
 
 
@@ -245,7 +245,7 @@ _OCCUPANCYGRID = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='data', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -258,8 +258,8 @@ _OCCUPANCYGRID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=559,
-  serialized_end=588,
+  serialized_start=697,
+  serialized_end=732,
 )
 
 _LOCALIZATION.fields_by_name['odometry'].message_type = _ODOMETRY

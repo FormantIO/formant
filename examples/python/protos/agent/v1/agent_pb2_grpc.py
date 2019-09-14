@@ -4,12 +4,11 @@ import grpc
 from protos.agent.v1 import agent_pb2 as protos_dot_agent_dot_v1_dot_agent__pb2
 from protos.model.v1 import datapoint_pb2 as protos_dot_model_dot_v1_dot_datapoint__pb2
 from protos.model.v1 import intervention_pb2 as protos_dot_model_dot_v1_dot_intervention__pb2
-from protos.model.v1 import ros_pb2 as protos_dot_model_dot_v1_dot_ros__pb2
 
 
 class AgentStub(object):
-  """gRPC service for the Formant Agent
-  """
+  # missing associated documentation comment in .proto file
+  pass
 
   def __init__(self, channel):
     """Constructor.
@@ -27,26 +26,6 @@ class AgentStub(object):
         request_serializer=protos_dot_model_dot_v1_dot_datapoint__pb2.Datapoint.SerializeToString,
         response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostDataResponse.FromString,
         )
-    self.RegisterROSTopic = channel.unary_unary(
-        '/v1.agent.Agent/RegisterROSTopic',
-        request_serializer=protos_dot_model_dot_v1_dot_ros__pb2.ROSTopic.SerializeToString,
-        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.RegisterROSTopicResponse.FromString,
-        )
-    self.GetROSTopics = channel.unary_unary(
-        '/v1.agent.Agent/GetROSTopics',
-        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSTopicsRequest.SerializeToString,
-        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSTopicsResponse.FromString,
-        )
-    self.GetROSTopicsSubscriptionConfig = channel.unary_unary(
-        '/v1.agent.Agent/GetROSTopicsSubscriptionConfig',
-        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSTopicsSubscriptionConfigRequest.SerializeToString,
-        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSTopicsSubscriptionConfigResponse.FromString,
-        )
-    self.GetROSWorldReferenceFrameID = channel.unary_unary(
-        '/v1.agent.Agent/GetROSWorldReferenceFrameID',
-        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSWorldReferenceFrameIDRequest.SerializeToString,
-        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSWorldReferenceFrameIDResponse.FromString,
-        )
     self.CreateInterventionRequest = channel.unary_unary(
         '/v1.agent.Agent/CreateInterventionRequest',
         request_serializer=protos_dot_model_dot_v1_dot_intervention__pb2.InterventionRequest.SerializeToString,
@@ -62,71 +41,91 @@ class AgentStub(object):
         request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetInterventionResponseRequest.SerializeToString,
         response_deserializer=protos_dot_model_dot_v1_dot_intervention__pb2.InterventionResponse.FromString,
         )
+    self.GetStreamsConfiguration = channel.unary_unary(
+        '/v1.agent.Agent/GetStreamsConfiguration',
+        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetStreamsConfigurationRequest.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetStreamsConfigurationResponse.FromString,
+        )
+    self.GetApplicationConfiguration = channel.unary_unary(
+        '/v1.agent.Agent/GetApplicationConfiguration',
+        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetApplicationConfigurationRequest.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetApplicationConfigurationResponse.FromString,
+        )
+    self.GetAgentConfiguration = channel.unary_unary(
+        '/v1.agent.Agent/GetAgentConfiguration',
+        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationRequest.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationResponse.FromString,
+        )
+    self.Health = channel.unary_unary(
+        '/v1.agent.Agent/Health',
+        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthRequest.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthResponse.FromString,
+        )
 
 
 class AgentServicer(object):
-  """gRPC service for the Formant Agent
-  """
+  # missing associated documentation comment in .proto file
+  pass
 
   def StreamData(self, request_iterator, context):
-    """Accepts a stream of data points.
-    """
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
   def PostData(self, request, context):
-    """Accepts a single data point per RPC call. Also exposed as a HTTP Endpoint.
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def RegisterROSTopic(self, request, context):
-    """Registers a ROS Topic and its msg type.
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetROSTopics(self, request, context):
-    """DEPRECATED Gets the ROS topics defined in the agent config.
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetROSTopicsSubscriptionConfig(self, request, context):
-    """Gets the ROS localization configuration information
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetROSWorldReferenceFrameID(self, request, context):
-    """Gets the ROS World Reference Frame ID from the configuration defined in config.toml.
-    """
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
   def CreateInterventionRequest(self, request, context):
-    """Creates a InterventionRequest. Returns a InterventionRequest with a populated id.
-    """
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
   def GetInterventionRequest(self, request, context):
-    """Returns a InterventionRequest. NOTE: the responses object will be empty if a operator has not responded.
-    """
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
   def GetInterventionResponse(self, request, context):
-    """Blocks till the InterventionRequest with request_id has a response.
-    """
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetStreamsConfiguration(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetApplicationConfiguration(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetAgentConfiguration(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Health(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -144,26 +143,6 @@ def add_AgentServicer_to_server(servicer, server):
           request_deserializer=protos_dot_model_dot_v1_dot_datapoint__pb2.Datapoint.FromString,
           response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostDataResponse.SerializeToString,
       ),
-      'RegisterROSTopic': grpc.unary_unary_rpc_method_handler(
-          servicer.RegisterROSTopic,
-          request_deserializer=protos_dot_model_dot_v1_dot_ros__pb2.ROSTopic.FromString,
-          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.RegisterROSTopicResponse.SerializeToString,
-      ),
-      'GetROSTopics': grpc.unary_unary_rpc_method_handler(
-          servicer.GetROSTopics,
-          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSTopicsRequest.FromString,
-          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSTopicsResponse.SerializeToString,
-      ),
-      'GetROSTopicsSubscriptionConfig': grpc.unary_unary_rpc_method_handler(
-          servicer.GetROSTopicsSubscriptionConfig,
-          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSTopicsSubscriptionConfigRequest.FromString,
-          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSTopicsSubscriptionConfigResponse.SerializeToString,
-      ),
-      'GetROSWorldReferenceFrameID': grpc.unary_unary_rpc_method_handler(
-          servicer.GetROSWorldReferenceFrameID,
-          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSWorldReferenceFrameIDRequest.FromString,
-          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetROSWorldReferenceFrameIDResponse.SerializeToString,
-      ),
       'CreateInterventionRequest': grpc.unary_unary_rpc_method_handler(
           servicer.CreateInterventionRequest,
           request_deserializer=protos_dot_model_dot_v1_dot_intervention__pb2.InterventionRequest.FromString,
@@ -178,6 +157,26 @@ def add_AgentServicer_to_server(servicer, server):
           servicer.GetInterventionResponse,
           request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetInterventionResponseRequest.FromString,
           response_serializer=protos_dot_model_dot_v1_dot_intervention__pb2.InterventionResponse.SerializeToString,
+      ),
+      'GetStreamsConfiguration': grpc.unary_unary_rpc_method_handler(
+          servicer.GetStreamsConfiguration,
+          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetStreamsConfigurationRequest.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetStreamsConfigurationResponse.SerializeToString,
+      ),
+      'GetApplicationConfiguration': grpc.unary_unary_rpc_method_handler(
+          servicer.GetApplicationConfiguration,
+          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetApplicationConfigurationRequest.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetApplicationConfigurationResponse.SerializeToString,
+      ),
+      'GetAgentConfiguration': grpc.unary_unary_rpc_method_handler(
+          servicer.GetAgentConfiguration,
+          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationRequest.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationResponse.SerializeToString,
+      ),
+      'Health': grpc.unary_unary_rpc_method_handler(
+          servicer.Health,
+          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthRequest.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

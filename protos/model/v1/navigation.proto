@@ -38,7 +38,7 @@ message Map {
     oneof data {
         OccupancyGrid occupancy_grid = 6;
         // The 'url' and 'raw' fields are for png data only.
-        // Local files must be prefixed with 'file://'. Currently only local files are supported.
+        // Must be a file on the local filesystem
         string url = 7;
         // 2MB limit
         bytes raw = 8;

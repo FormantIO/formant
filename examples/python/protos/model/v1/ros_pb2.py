@@ -20,124 +20,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=_b('Z)github.com/FormantIO/genproto/go/v1/model'),
-  serialized_pb=_b('\n\x19protos/model/v1/ros.proto\x12\x08v1.model\"1\n\nROSMessage\x12\x0b\n\x03raw\x18\x01 \x01(\x0c\x12\x16\n\x0eworld_to_local\x18\x02 \x01(\x0c\"F\n\x1aROSTopicSubscriptionConfig\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x19\n\x11include_transform\x18\x02 \x01(\x08\"\x96\x01\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x10\n\x08msg_desc\x18\x03 \x01(\t\x12*\n\x04tags\x18\x04 \x03(\x0b\x32\x1c.v1.model.ROSTopic.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
+  serialized_pb=_b('\n\x19protos/model/v1/ros.proto\x12\x08v1.model\"2\n\x08ROSTopic\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04path\x18\x02 \x01(\tR\x04path\"M\n\x0fROSLocalization\x12\x1b\n\tmap_topic\x18\x01 \x01(\tR\x08mapTopic\x12\x1d\n\nodom_topic\x18\x02 \x01(\tR\todomTopicB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
 )
 
 
 
-
-_ROSMESSAGE = _descriptor.Descriptor(
-  name='ROSMessage',
-  full_name='v1.model.ROSMessage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='raw', full_name='v1.model.ROSMessage.raw', index=0,
-      number=1, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='world_to_local', full_name='v1.model.ROSMessage.world_to_local', index=1,
-      number=2, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=39,
-  serialized_end=88,
-)
-
-
-_ROSTOPICSUBSCRIPTIONCONFIG = _descriptor.Descriptor(
-  name='ROSTopicSubscriptionConfig',
-  full_name='v1.model.ROSTopicSubscriptionConfig',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='topic', full_name='v1.model.ROSTopicSubscriptionConfig.topic', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='include_transform', full_name='v1.model.ROSTopicSubscriptionConfig.include_transform', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=90,
-  serialized_end=160,
-)
-
-
-_ROSTOPIC_TAGSENTRY = _descriptor.Descriptor(
-  name='TagsEntry',
-  full_name='v1.model.ROSTopic.TagsEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='v1.model.ROSTopic.TagsEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='v1.model.ROSTopic.TagsEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=_b('8\001'),
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=270,
-  serialized_end=313,
-)
 
 _ROSTOPIC = _descriptor.Descriptor(
   name='ROSTopic',
@@ -152,32 +39,18 @@ _ROSTOPIC = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='name', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='data_type', full_name='v1.model.ROSTopic.data_type', index=1,
+      name='path', full_name='v1.model.ROSTopic.path', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='msg_desc', full_name='v1.model.ROSTopic.msg_desc', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='tags', full_name='v1.model.ROSTopic.tags', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='path', file=DESCRIPTOR),
   ],
   extensions=[
   ],
-  nested_types=[_ROSTOPIC_TAGSENTRY, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -186,47 +59,66 @@ _ROSTOPIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=163,
-  serialized_end=313,
+  serialized_start=39,
+  serialized_end=89,
 )
 
-_ROSTOPIC_TAGSENTRY.containing_type = _ROSTOPIC
-_ROSTOPIC.fields_by_name['tags'].message_type = _ROSTOPIC_TAGSENTRY
-DESCRIPTOR.message_types_by_name['ROSMessage'] = _ROSMESSAGE
-DESCRIPTOR.message_types_by_name['ROSTopicSubscriptionConfig'] = _ROSTOPICSUBSCRIPTIONCONFIG
+
+_ROSLOCALIZATION = _descriptor.Descriptor(
+  name='ROSLocalization',
+  full_name='v1.model.ROSLocalization',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='map_topic', full_name='v1.model.ROSLocalization.map_topic', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='mapTopic', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='odom_topic', full_name='v1.model.ROSLocalization.odom_topic', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='odomTopic', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=91,
+  serialized_end=168,
+)
+
 DESCRIPTOR.message_types_by_name['ROSTopic'] = _ROSTOPIC
+DESCRIPTOR.message_types_by_name['ROSLocalization'] = _ROSLOCALIZATION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-ROSMessage = _reflection.GeneratedProtocolMessageType('ROSMessage', (_message.Message,), dict(
-  DESCRIPTOR = _ROSMESSAGE,
-  __module__ = 'protos.model.v1.ros_pb2'
-  # @@protoc_insertion_point(class_scope:v1.model.ROSMessage)
-  ))
-_sym_db.RegisterMessage(ROSMessage)
-
-ROSTopicSubscriptionConfig = _reflection.GeneratedProtocolMessageType('ROSTopicSubscriptionConfig', (_message.Message,), dict(
-  DESCRIPTOR = _ROSTOPICSUBSCRIPTIONCONFIG,
-  __module__ = 'protos.model.v1.ros_pb2'
-  # @@protoc_insertion_point(class_scope:v1.model.ROSTopicSubscriptionConfig)
-  ))
-_sym_db.RegisterMessage(ROSTopicSubscriptionConfig)
-
 ROSTopic = _reflection.GeneratedProtocolMessageType('ROSTopic', (_message.Message,), dict(
-
-  TagsEntry = _reflection.GeneratedProtocolMessageType('TagsEntry', (_message.Message,), dict(
-    DESCRIPTOR = _ROSTOPIC_TAGSENTRY,
-    __module__ = 'protos.model.v1.ros_pb2'
-    # @@protoc_insertion_point(class_scope:v1.model.ROSTopic.TagsEntry)
-    ))
-  ,
   DESCRIPTOR = _ROSTOPIC,
   __module__ = 'protos.model.v1.ros_pb2'
   # @@protoc_insertion_point(class_scope:v1.model.ROSTopic)
   ))
 _sym_db.RegisterMessage(ROSTopic)
-_sym_db.RegisterMessage(ROSTopic.TagsEntry)
+
+ROSLocalization = _reflection.GeneratedProtocolMessageType('ROSLocalization', (_message.Message,), dict(
+  DESCRIPTOR = _ROSLOCALIZATION,
+  __module__ = 'protos.model.v1.ros_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.ROSLocalization)
+  ))
+_sym_db.RegisterMessage(ROSLocalization)
 
 
 DESCRIPTOR._options = None
-_ROSTOPIC_TAGSENTRY._options = None
 # @@protoc_insertion_point(module_scope)

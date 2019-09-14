@@ -1,3 +1,0 @@
-<launch>
-    <node name="formant_bridge_node" pkg="formant" type="bridge" output="screen"></node>
-</launch>

@@ -6,34 +6,27 @@ import "protos/model/v1/file.proto";
 import "protos/model/v1/health.proto";
 import "protos/model/v1/math.proto";
 import "protos/model/v1/navigation.proto";
-import "protos/model/v1/ros.proto";
 import "protos/model/v1/text.proto";
 import "protos/model/v1/media.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/model";
 
-// Data message.
+/* Datapoint contains data and associated metadata to be sent to the Formant
+ * cloud. */
 message Datapoint {
-    string stream = 1;
-    // Timestamp in milliseconds since the epoch.
-    int64 timestamp = 2;
-    // Additional tags to add to the datapoint.
-    map <string, string> tags = 14;
-    // Data payload, use one of the fields below.
-    oneof data {
-        Text text = 3;
-        Numeric numeric = 4;
-        MetricSet metric_set = 15;
-        BitSet bitset = 13;
-        File file = 5;
-        Image image = 6;
-        Video video = 7;
-        PointCloud point_cloud = 8;
-        Location location = 9;
-        ROSMessage ros_message = 10;
-        Localization localization = 11;
-        Health health = 12;
-    }
+  string stream = 1;
+  int64 timestamp = 2;  // unix epoch time in milliseconds
+  map<string, string> tags = 3;
+  oneof data {  // payload, use one of the fields below.
+    Text text = 4;
+    Numeric numeric = 5;
+    MetricSet metric_set = 6;
+    Bitset bitset = 7;
+    File file = 8;
+    Image image = 9;
+    PointCloud point_cloud = 10;
+    Location location = 11;
+    Localization localization = 12;
+    Health health = 13;
+  }
 }
-
-

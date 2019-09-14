@@ -38,10 +38,10 @@ class BitDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Bit> _instance;
 } _Bit_default_instance_;
-class BitSetDefaultTypeInternal {
+class BitsetDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<BitSet> _instance;
-} _BitSet_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<Bitset> _instance;
+} _Bitset_default_instance_;
 class TwistDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Twist> _instance;
@@ -117,19 +117,19 @@ static void InitDefaultsBit_protos_2fmodel_2fv1_2fmath_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_Bit_protos_2fmodel_2fv1_2fmath_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsBit_protos_2fmodel_2fv1_2fmath_2eproto}, {}};
 
-static void InitDefaultsBitSet_protos_2fmodel_2fv1_2fmath_2eproto() {
+static void InitDefaultsBitset_protos_2fmodel_2fv1_2fmath_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::v1::model::_BitSet_default_instance_;
-    new (ptr) ::v1::model::BitSet();
+    void* ptr = &::v1::model::_Bitset_default_instance_;
+    new (ptr) ::v1::model::Bitset();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::v1::model::BitSet::InitAsDefaultInstance();
+  ::v1::model::Bitset::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_BitSet_protos_2fmodel_2fv1_2fmath_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsBitSet_protos_2fmodel_2fv1_2fmath_2eproto}, {
+::google::protobuf::internal::SCCInfo<1> scc_info_Bitset_protos_2fmodel_2fv1_2fmath_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsBitset_protos_2fmodel_2fv1_2fmath_2eproto}, {
       &scc_info_Bit_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
 
 static void InitDefaultsTwist_protos_2fmodel_2fv1_2fmath_2eproto() {
@@ -196,7 +196,7 @@ void InitDefaults_protos_2fmodel_2fv1_2fmath_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_MetricSet_protos_2fmodel_2fv1_2fmath_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Metric_protos_2fmodel_2fv1_2fmath_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Bit_protos_2fmodel_2fv1_2fmath_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_BitSet_protos_2fmodel_2fv1_2fmath_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Bitset_protos_2fmodel_2fv1_2fmath_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Vector3_protos_2fmodel_2fv1_2fmath_2eproto.base);
@@ -235,11 +235,11 @@ const ::google::protobuf::uint32 TableStruct_protos_2fmodel_2fv1_2fmath_2eproto:
   PROTOBUF_FIELD_OFFSET(::v1::model::Bit, key_),
   PROTOBUF_FIELD_OFFSET(::v1::model::Bit, value_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::v1::model::BitSet, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Bitset, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::v1::model::BitSet, bits_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Bitset, bits_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::model::Twist, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -277,7 +277,7 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 6, -1, sizeof(::v1::model::MetricSet)},
   { 12, -1, sizeof(::v1::model::Metric)},
   { 19, -1, sizeof(::v1::model::Bit)},
-  { 26, -1, sizeof(::v1::model::BitSet)},
+  { 26, -1, sizeof(::v1::model::Bitset)},
   { 32, -1, sizeof(::v1::model::Twist)},
   { 39, -1, sizeof(::v1::model::Transform)},
   { 46, -1, sizeof(::v1::model::Vector3)},
@@ -289,7 +289,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_MetricSet_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Metric_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Bit_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_BitSet_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Bitset_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Twist_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Transform_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Vector3_default_instance_),
@@ -307,7 +307,7 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fmath_2eproto[] =
   "\n\007Numeric\022\r\n\005value\030\001 \001(\001\".\n\tMetricSet\022!\n"
   "\007metrics\030\001 \003(\0132\020.v1.model.Metric\"%\n\006Metr"
   "ic\022\r\n\005value\030\001 \001(\001\022\014\n\004unit\030\002 \001(\t\"!\n\003Bit\022\013"
-  "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010\"%\n\006BitSet\022\033\n\004"
+  "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010\"%\n\006Bitset\022\033\n\004"
   "bits\030\001 \003(\0132\r.v1.model.Bit\"N\n\005Twist\022!\n\006li"
   "near\030\001 \001(\0132\021.v1.model.Vector3\022\"\n\007angular"
   "\030\002 \001(\0132\021.v1.model.Vector3\"[\n\tTransform\022&"
@@ -1556,53 +1556,53 @@ void Bit::InternalSwap(Bit* other) {
 
 // ===================================================================
 
-void BitSet::InitAsDefaultInstance() {
+void Bitset::InitAsDefaultInstance() {
 }
-class BitSet::HasBitSetters {
+class Bitset::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int BitSet::kBitsFieldNumber;
+const int Bitset::kBitsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-BitSet::BitSet()
+Bitset::Bitset()
   : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.BitSet)
+  // @@protoc_insertion_point(constructor:v1.model.Bitset)
 }
-BitSet::BitSet(const BitSet& from)
+Bitset::Bitset(const Bitset& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(nullptr),
       bits_(from.bits_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:v1.model.BitSet)
+  // @@protoc_insertion_point(copy_constructor:v1.model.Bitset)
 }
 
-void BitSet::SharedCtor() {
+void Bitset::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
-      &scc_info_BitSet_protos_2fmodel_2fv1_2fmath_2eproto.base);
+      &scc_info_Bitset_protos_2fmodel_2fv1_2fmath_2eproto.base);
 }
 
-BitSet::~BitSet() {
-  // @@protoc_insertion_point(destructor:v1.model.BitSet)
+Bitset::~Bitset() {
+  // @@protoc_insertion_point(destructor:v1.model.Bitset)
   SharedDtor();
 }
 
-void BitSet::SharedDtor() {
+void Bitset::SharedDtor() {
 }
 
-void BitSet::SetCachedSize(int size) const {
+void Bitset::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const BitSet& BitSet::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_BitSet_protos_2fmodel_2fv1_2fmath_2eproto.base);
+const Bitset& Bitset::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_Bitset_protos_2fmodel_2fv1_2fmath_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void BitSet::Clear() {
-// @@protoc_insertion_point(message_clear_start:v1.model.BitSet)
+void Bitset::Clear() {
+// @@protoc_insertion_point(message_clear_start:v1.model.Bitset)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1612,9 +1612,9 @@ void BitSet::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* BitSet::_InternalParse(const char* begin, const char* end, void* object,
+const char* Bitset::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<BitSet*>(object);
+  auto msg = static_cast<Bitset*>(object);
   ::google::protobuf::int32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::uint32 tag;
@@ -1660,11 +1660,11 @@ len_delim_till_end:
                                {parser_till_end, object}, size);
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool BitSet::MergePartialFromCodedStream(
+bool Bitset::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:v1.model.BitSet)
+  // @@protoc_insertion_point(parse_start:v1.model.Bitset)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -1693,18 +1693,18 @@ bool BitSet::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:v1.model.BitSet)
+  // @@protoc_insertion_point(parse_success:v1.model.Bitset)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:v1.model.BitSet)
+  // @@protoc_insertion_point(parse_failure:v1.model.Bitset)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void BitSet::SerializeWithCachedSizes(
+void Bitset::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:v1.model.BitSet)
+  // @@protoc_insertion_point(serialize_start:v1.model.Bitset)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1721,12 +1721,12 @@ void BitSet::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:v1.model.BitSet)
+  // @@protoc_insertion_point(serialize_end:v1.model.Bitset)
 }
 
-::google::protobuf::uint8* BitSet::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* Bitset::InternalSerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:v1.model.BitSet)
+  // @@protoc_insertion_point(serialize_to_array_start:v1.model.Bitset)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1742,12 +1742,12 @@ void BitSet::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:v1.model.BitSet)
+  // @@protoc_insertion_point(serialize_to_array_end:v1.model.Bitset)
   return target;
 }
 
-size_t BitSet::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:v1.model.BitSet)
+size_t Bitset::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:v1.model.Bitset)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1775,23 +1775,23 @@ size_t BitSet::ByteSizeLong() const {
   return total_size;
 }
 
-void BitSet::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:v1.model.BitSet)
+void Bitset::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:v1.model.Bitset)
   GOOGLE_DCHECK_NE(&from, this);
-  const BitSet* source =
-      ::google::protobuf::DynamicCastToGenerated<BitSet>(
+  const Bitset* source =
+      ::google::protobuf::DynamicCastToGenerated<Bitset>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.BitSet)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Bitset)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.BitSet)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Bitset)
     MergeFrom(*source);
   }
 }
 
-void BitSet::MergeFrom(const BitSet& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:v1.model.BitSet)
+void Bitset::MergeFrom(const Bitset& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Bitset)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -1800,35 +1800,35 @@ void BitSet::MergeFrom(const BitSet& from) {
   bits_.MergeFrom(from.bits_);
 }
 
-void BitSet::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:v1.model.BitSet)
+void Bitset::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:v1.model.Bitset)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void BitSet::CopyFrom(const BitSet& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:v1.model.BitSet)
+void Bitset::CopyFrom(const Bitset& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:v1.model.Bitset)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool BitSet::IsInitialized() const {
+bool Bitset::IsInitialized() const {
   return true;
 }
 
-void BitSet::Swap(BitSet* other) {
+void Bitset::Swap(Bitset* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void BitSet::InternalSwap(BitSet* other) {
+void Bitset::InternalSwap(Bitset* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&bits_)->InternalSwap(CastToBase(&other->bits_));
 }
 
-::google::protobuf::Metadata BitSet::GetMetadata() const {
+::google::protobuf::Metadata Bitset::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_protos_2fmodel_2fv1_2fmath_2eproto);
   return ::file_level_metadata_protos_2fmodel_2fv1_2fmath_2eproto[kIndexInFileMessages];
 }
@@ -3289,8 +3289,8 @@ template<> PROTOBUF_NOINLINE ::v1::model::Metric* Arena::CreateMaybeMessage< ::v
 template<> PROTOBUF_NOINLINE ::v1::model::Bit* Arena::CreateMaybeMessage< ::v1::model::Bit >(Arena* arena) {
   return Arena::CreateInternal< ::v1::model::Bit >(arena);
 }
-template<> PROTOBUF_NOINLINE ::v1::model::BitSet* Arena::CreateMaybeMessage< ::v1::model::BitSet >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::BitSet >(arena);
+template<> PROTOBUF_NOINLINE ::v1::model::Bitset* Arena::CreateMaybeMessage< ::v1::model::Bitset >(Arena* arena) {
+  return Arena::CreateInternal< ::v1::model::Bitset >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::Twist* Arena::CreateMaybeMessage< ::v1::model::Twist >(Arena* arena) {
   return Arena::CreateInternal< ::v1::model::Twist >(arena);

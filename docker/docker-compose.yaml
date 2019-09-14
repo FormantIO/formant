@@ -10,7 +10,7 @@ volumes:
 services:
   formant-agent:
     container_name: formant-agent
-    image: formant/agent:0.16.43
+    image: formant/agent:latest
     restart: always
     env_file:
       - formant.env
@@ -18,6 +18,6 @@ services:
       - "5501:5501"
       - "5502:5502"
     volumes:
-      - "formant:/home/.formant"
+      - "formant:/root/.formant"
     networks:
       - formant

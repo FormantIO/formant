@@ -24,12 +24,6 @@ class ImageDefaultTypeInternal {
   ::google::protobuf::internal::ArenaStringPtr url_;
   ::google::protobuf::internal::ArenaStringPtr raw_;
 } _Image_default_instance_;
-class VideoDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Video> _instance;
-  ::google::protobuf::internal::ArenaStringPtr url_;
-  ::google::protobuf::internal::ArenaStringPtr raw_;
-} _Video_default_instance_;
 class PointCloudDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<PointCloud> _instance;
@@ -52,20 +46,6 @@ static void InitDefaultsImage_protos_2fmodel_2fv1_2fmedia_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_Image_protos_2fmodel_2fv1_2fmedia_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsImage_protos_2fmodel_2fv1_2fmedia_2eproto}, {}};
 
-static void InitDefaultsVideo_protos_2fmodel_2fv1_2fmedia_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::v1::model::_Video_default_instance_;
-    new (ptr) ::v1::model::Video();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::v1::model::Video::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_Video_protos_2fmodel_2fv1_2fmedia_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsVideo_protos_2fmodel_2fv1_2fmedia_2eproto}, {}};
-
 static void InitDefaultsPointCloud_protos_2fmodel_2fv1_2fmedia_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -82,11 +62,10 @@ static void InitDefaultsPointCloud_protos_2fmodel_2fv1_2fmedia_2eproto() {
 
 void InitDefaults_protos_2fmodel_2fv1_2fmedia_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_Image_protos_2fmodel_2fv1_2fmedia_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Video_protos_2fmodel_2fv1_2fmedia_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_protos_2fmodel_2fv1_2fmedia_2eproto[3];
+::google::protobuf::Metadata file_level_metadata_protos_2fmodel_2fv1_2fmedia_2eproto[2];
 constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto = nullptr;
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto = nullptr;
 
@@ -101,15 +80,6 @@ const ::google::protobuf::uint32 TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto
   offsetof(::v1::model::ImageDefaultTypeInternal, raw_),
   PROTOBUF_FIELD_OFFSET(::v1::model::Image, data_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::v1::model::Video, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::v1::model::Video, _oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::v1::model::Video, content_type_),
-  offsetof(::v1::model::VideoDefaultTypeInternal, url_),
-  offsetof(::v1::model::VideoDefaultTypeInternal, raw_),
-  PROTOBUF_FIELD_OFFSET(::v1::model::Video, data_),
-  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::model::PointCloud, _internal_metadata_),
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::v1::model::PointCloud, _oneof_case_[0]),
@@ -120,36 +90,32 @@ const ::google::protobuf::uint32 TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::v1::model::Image)},
-  { 9, -1, sizeof(::v1::model::Video)},
-  { 18, -1, sizeof(::v1::model::PointCloud)},
+  { 9, -1, sizeof(::v1::model::PointCloud)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Image_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Video_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_PointCloud_default_instance_),
 };
 
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_protos_2fmodel_2fv1_2fmedia_2eproto = {
   {}, AddDescriptors_protos_2fmodel_2fv1_2fmedia_2eproto, "protos/model/v1/media.proto", schemas,
   file_default_instances, TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto::offsets,
-  file_level_metadata_protos_2fmodel_2fv1_2fmedia_2eproto, 3, file_level_enum_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto,
+  file_level_metadata_protos_2fmodel_2fv1_2fmedia_2eproto, 2, file_level_enum_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto,
 };
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2fmedia_2eproto[] =
   "\n\033protos/model/v1/media.proto\022\010v1.model\""
   "C\n\005Image\022\024\n\014content_type\030\001 \001(\t\022\r\n\003url\030\002 "
-  "\001(\tH\000\022\r\n\003raw\030\003 \001(\014H\000B\006\n\004data\"C\n\005Video\022\024\n"
-  "\014content_type\030\001 \001(\t\022\r\n\003url\030\002 \001(\tH\000\022\r\n\003ra"
-  "w\030\003 \001(\014H\000B\006\n\004data\"2\n\nPointCloud\022\r\n\003url\030\001"
-  " \001(\tH\000\022\r\n\003raw\030\002 \001(\014H\000B\006\n\004dataB+Z)github."
-  "com/FormantIO/genproto/go/v1/modelb\006prot"
-  "o3"
+  "\001(\tH\000\022\r\n\003raw\030\003 \001(\014H\000B\006\n\004data\"2\n\nPointClo"
+  "ud\022\r\n\003url\030\001 \001(\tH\000\022\r\n\003raw\030\002 \001(\014H\000B\006\n\004data"
+  "B+Z)github.com/FormantIO/genproto/go/v1/"
+  "modelb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto = {
   false, InitDefaults_protos_2fmodel_2fv1_2fmedia_2eproto, 
   descriptor_table_protodef_protos_2fmodel_2fv1_2fmedia_2eproto,
-  "protos/model/v1/media.proto", &assign_descriptors_table_protos_2fmodel_2fv1_2fmedia_2eproto, 282,
+  "protos/model/v1/media.proto", &assign_descriptors_table_protos_2fmodel_2fv1_2fmedia_2eproto, 213,
 };
 
 void AddDescriptors_protos_2fmodel_2fv1_2fmedia_2eproto() {
@@ -632,472 +598,6 @@ void Image::InternalSwap(Image* other) {
 
 // ===================================================================
 
-void Video::InitAsDefaultInstance() {
-  ::v1::model::_Video_default_instance_.url_.UnsafeSetDefault(
-      &::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::v1::model::_Video_default_instance_.raw_.UnsafeSetDefault(
-      &::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-class Video::HasBitSetters {
- public:
-};
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Video::kContentTypeFieldNumber;
-const int Video::kUrlFieldNumber;
-const int Video::kRawFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Video::Video()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.Video)
-}
-Video::Video(const Video& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  content_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.content_type().size() > 0) {
-    content_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.content_type_);
-  }
-  clear_has_data();
-  switch (from.data_case()) {
-    case kUrl: {
-      set_url(from.url());
-      break;
-    }
-    case kRaw: {
-      set_raw(from.raw());
-      break;
-    }
-    case DATA_NOT_SET: {
-      break;
-    }
-  }
-  // @@protoc_insertion_point(copy_constructor:v1.model.Video)
-}
-
-void Video::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_Video_protos_2fmodel_2fv1_2fmedia_2eproto.base);
-  content_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_data();
-}
-
-Video::~Video() {
-  // @@protoc_insertion_point(destructor:v1.model.Video)
-  SharedDtor();
-}
-
-void Video::SharedDtor() {
-  content_type_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (has_data()) {
-    clear_data();
-  }
-}
-
-void Video::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const Video& Video::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_Video_protos_2fmodel_2fv1_2fmedia_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void Video::clear_data() {
-// @@protoc_insertion_point(one_of_clear_start:v1.model.Video)
-  switch (data_case()) {
-    case kUrl: {
-      data_.url_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-      break;
-    }
-    case kRaw: {
-      data_.raw_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-      break;
-    }
-    case DATA_NOT_SET: {
-      break;
-    }
-  }
-  _oneof_case_[0] = DATA_NOT_SET;
-}
-
-
-void Video::Clear() {
-// @@protoc_insertion_point(message_clear_start:v1.model.Video)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  content_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_data();
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Video::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<Video*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // string content_type = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("v1.model.Video.content_type");
-        object = msg->mutable_content_type();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string url = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("v1.model.Video.url");
-        object = msg->mutable_url();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // bytes raw = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        object = msg->mutable_raw();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Video::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:v1.model.Video)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string content_type = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_content_type()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->content_type().data(), static_cast<int>(this->content_type().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "v1.model.Video.content_type"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string url = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_url()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->url().data(), static_cast<int>(this->url().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "v1.model.Video.url"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bytes raw = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_raw()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:v1.model.Video)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:v1.model.Video)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Video::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:v1.model.Video)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string content_type = 1;
-  if (this->content_type().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->content_type().data(), static_cast<int>(this->content_type().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "v1.model.Video.content_type");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->content_type(), output);
-  }
-
-  // string url = 2;
-  if (has_url()) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->url().data(), static_cast<int>(this->url().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "v1.model.Video.url");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->url(), output);
-  }
-
-  // bytes raw = 3;
-  if (has_raw()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      3, this->raw(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:v1.model.Video)
-}
-
-::google::protobuf::uint8* Video::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:v1.model.Video)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string content_type = 1;
-  if (this->content_type().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->content_type().data(), static_cast<int>(this->content_type().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "v1.model.Video.content_type");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->content_type(), target);
-  }
-
-  // string url = 2;
-  if (has_url()) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->url().data(), static_cast<int>(this->url().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "v1.model.Video.url");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->url(), target);
-  }
-
-  // bytes raw = 3;
-  if (has_raw()) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        3, this->raw(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:v1.model.Video)
-  return target;
-}
-
-size_t Video::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:v1.model.Video)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string content_type = 1;
-  if (this->content_type().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->content_type());
-  }
-
-  switch (data_case()) {
-    // string url = 2;
-    case kUrl: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->url());
-      break;
-    }
-    // bytes raw = 3;
-    case kRaw: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::BytesSize(
-          this->raw());
-      break;
-    }
-    case DATA_NOT_SET: {
-      break;
-    }
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Video::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:v1.model.Video)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Video* source =
-      ::google::protobuf::DynamicCastToGenerated<Video>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Video)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Video)
-    MergeFrom(*source);
-  }
-}
-
-void Video::MergeFrom(const Video& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Video)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.content_type().size() > 0) {
-
-    content_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.content_type_);
-  }
-  switch (from.data_case()) {
-    case kUrl: {
-      set_url(from.url());
-      break;
-    }
-    case kRaw: {
-      set_raw(from.raw());
-      break;
-    }
-    case DATA_NOT_SET: {
-      break;
-    }
-  }
-}
-
-void Video::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:v1.model.Video)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void Video::CopyFrom(const Video& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:v1.model.Video)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Video::IsInitialized() const {
-  return true;
-}
-
-void Video::Swap(Video* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void Video::InternalSwap(Video* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  content_type_.Swap(&other->content_type_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(data_, other->data_);
-  swap(_oneof_case_[0], other->_oneof_case_[0]);
-}
-
-::google::protobuf::Metadata Video::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_protos_2fmodel_2fv1_2fmedia_2eproto);
-  return ::file_level_metadata_protos_2fmodel_2fv1_2fmedia_2eproto[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
 void PointCloud::InitAsDefaultInstance() {
   ::v1::model::_PointCloud_default_instance_.url_.UnsafeSetDefault(
       &::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1496,9 +996,6 @@ namespace google {
 namespace protobuf {
 template<> PROTOBUF_NOINLINE ::v1::model::Image* Arena::CreateMaybeMessage< ::v1::model::Image >(Arena* arena) {
   return Arena::CreateInternal< ::v1::model::Image >(arena);
-}
-template<> PROTOBUF_NOINLINE ::v1::model::Video* Arena::CreateMaybeMessage< ::v1::model::Video >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::Video >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::PointCloud* Arena::CreateMaybeMessage< ::v1::model::PointCloud >(Arena* arena) {
   return Arena::CreateInternal< ::v1::model::PointCloud >(arena);

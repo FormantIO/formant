@@ -23,8 +23,6 @@ class FileDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<File> _instance;
   ::google::protobuf::internal::ArenaStringPtr url_;
   ::google::protobuf::internal::ArenaStringPtr raw_;
-  ::google::protobuf::internal::ArenaStringPtr preview_url_;
-  ::google::protobuf::internal::ArenaStringPtr preview_raw_;
 } _File_default_instance_;
 }  // namespace model
 }  // namespace v1
@@ -60,10 +58,7 @@ const ::google::protobuf::uint32 TableStruct_protos_2fmodel_2fv1_2ffile_2eproto:
   offsetof(::v1::model::FileDefaultTypeInternal, raw_),
   PROTOBUF_FIELD_OFFSET(::v1::model::File, filename_),
   PROTOBUF_FIELD_OFFSET(::v1::model::File, size_),
-  offsetof(::v1::model::FileDefaultTypeInternal, preview_url_),
-  offsetof(::v1::model::FileDefaultTypeInternal, preview_raw_),
   PROTOBUF_FIELD_OFFSET(::v1::model::File, data_),
-  PROTOBUF_FIELD_OFFSET(::v1::model::File, preview_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::v1::model::File)},
@@ -80,17 +75,16 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 };
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2ffile_2eproto[] =
-  "\n\032protos/model/v1/file.proto\022\010v1.model\"\205"
-  "\001\n\004File\022\r\n\003url\030\001 \001(\tH\000\022\r\n\003raw\030\002 \001(\014H\000\022\020\n"
-  "\010filename\030\003 \001(\t\022\014\n\004size\030\004 \001(\003\022\025\n\013preview"
-  "_url\030\005 \001(\tH\001\022\025\n\013preview_raw\030\006 \001(\014H\001B\006\n\004d"
-  "ataB\t\n\007previewB+Z)github.com/FormantIO/g"
-  "enproto/go/v1/modelb\006proto3"
+  "\n\032protos/model/v1/file.proto\022\010v1.model\"L"
+  "\n\004File\022\r\n\003url\030\001 \001(\tH\000\022\r\n\003raw\030\002 \001(\014H\000\022\020\n\010"
+  "filename\030\003 \001(\t\022\014\n\004size\030\004 \001(\003B\006\n\004dataB+Z)"
+  "github.com/FormantIO/genproto/go/v1/mode"
+  "lb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto = {
   false, InitDefaults_protos_2fmodel_2fv1_2ffile_2eproto, 
   descriptor_table_protodef_protos_2fmodel_2fv1_2ffile_2eproto,
-  "protos/model/v1/file.proto", &assign_descriptors_table_protos_2fmodel_2fv1_2ffile_2eproto, 227,
+  "protos/model/v1/file.proto", &assign_descriptors_table_protos_2fmodel_2fv1_2ffile_2eproto, 169,
 };
 
 void AddDescriptors_protos_2fmodel_2fv1_2ffile_2eproto() {
@@ -112,10 +106,6 @@ void File::InitAsDefaultInstance() {
       &::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::v1::model::_File_default_instance_.raw_.UnsafeSetDefault(
       &::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::v1::model::_File_default_instance_.preview_url_.UnsafeSetDefault(
-      &::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::v1::model::_File_default_instance_.preview_raw_.UnsafeSetDefault(
-      &::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 class File::HasBitSetters {
  public:
@@ -126,8 +116,6 @@ const int File::kUrlFieldNumber;
 const int File::kRawFieldNumber;
 const int File::kFilenameFieldNumber;
 const int File::kSizeFieldNumber;
-const int File::kPreviewUrlFieldNumber;
-const int File::kPreviewRawFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 File::File()
@@ -158,20 +146,6 @@ File::File(const File& from)
       break;
     }
   }
-  clear_has_preview();
-  switch (from.preview_case()) {
-    case kPreviewUrl: {
-      set_preview_url(from.preview_url());
-      break;
-    }
-    case kPreviewRaw: {
-      set_preview_raw(from.preview_raw());
-      break;
-    }
-    case PREVIEW_NOT_SET: {
-      break;
-    }
-  }
   // @@protoc_insertion_point(copy_constructor:v1.model.File)
 }
 
@@ -181,7 +155,6 @@ void File::SharedCtor() {
   filename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   size_ = PROTOBUF_LONGLONG(0);
   clear_has_data();
-  clear_has_preview();
 }
 
 File::~File() {
@@ -193,9 +166,6 @@ void File::SharedDtor() {
   filename_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (has_data()) {
     clear_data();
-  }
-  if (has_preview()) {
-    clear_preview();
   }
 }
 
@@ -226,24 +196,6 @@ void File::clear_data() {
   _oneof_case_[0] = DATA_NOT_SET;
 }
 
-void File::clear_preview() {
-// @@protoc_insertion_point(one_of_clear_start:v1.model.File)
-  switch (preview_case()) {
-    case kPreviewUrl: {
-      preview_.preview_url_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-      break;
-    }
-    case kPreviewRaw: {
-      preview_.preview_raw_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-      break;
-    }
-    case PREVIEW_NOT_SET: {
-      break;
-    }
-  }
-  _oneof_case_[1] = PREVIEW_NOT_SET;
-}
-
 
 void File::Clear() {
 // @@protoc_insertion_point(message_clear_start:v1.model.File)
@@ -254,7 +206,6 @@ void File::Clear() {
   filename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   size_ = PROTOBUF_LONGLONG(0);
   clear_data();
-  clear_preview();
   _internal_metadata_.Clear();
 }
 
@@ -323,37 +274,6 @@ const char* File::_InternalParse(const char* begin, const char* end, void* objec
         if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
         msg->set_size(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // string preview_url = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("v1.model.File.preview_url");
-        object = msg->mutable_preview_url();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // bytes preview_raw = 6;
-      case 6: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        object = msg->mutable_preview_raw();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
         break;
       }
       default: {
@@ -444,32 +364,6 @@ bool File::MergePartialFromCodedStream(
         break;
       }
 
-      // string preview_url = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_preview_url()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->preview_url().data(), static_cast<int>(this->preview_url().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "v1.model.File.preview_url"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bytes preview_raw = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_preview_raw()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -528,22 +422,6 @@ void File::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(4, this->size(), output);
   }
 
-  // string preview_url = 5;
-  if (has_preview_url()) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->preview_url().data(), static_cast<int>(this->preview_url().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "v1.model.File.preview_url");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->preview_url(), output);
-  }
-
-  // bytes preview_raw = 6;
-  if (has_preview_raw()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      6, this->preview_raw(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -589,24 +467,6 @@ void File::SerializeWithCachedSizes(
   // int64 size = 4;
   if (this->size() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(4, this->size(), target);
-  }
-
-  // string preview_url = 5;
-  if (has_preview_url()) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->preview_url().data(), static_cast<int>(this->preview_url().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "v1.model.File.preview_url");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        5, this->preview_url(), target);
-  }
-
-  // bytes preview_raw = 6;
-  if (has_preview_raw()) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        6, this->preview_raw(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -663,25 +523,6 @@ size_t File::ByteSizeLong() const {
       break;
     }
   }
-  switch (preview_case()) {
-    // string preview_url = 5;
-    case kPreviewUrl: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->preview_url());
-      break;
-    }
-    // bytes preview_raw = 6;
-    case kPreviewRaw: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::BytesSize(
-          this->preview_raw());
-      break;
-    }
-    case PREVIEW_NOT_SET: {
-      break;
-    }
-  }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -729,19 +570,6 @@ void File::MergeFrom(const File& from) {
       break;
     }
   }
-  switch (from.preview_case()) {
-    case kPreviewUrl: {
-      set_preview_url(from.preview_url());
-      break;
-    }
-    case kPreviewRaw: {
-      set_preview_raw(from.preview_raw());
-      break;
-    }
-    case PREVIEW_NOT_SET: {
-      break;
-    }
-  }
 }
 
 void File::CopyFrom(const ::google::protobuf::Message& from) {
@@ -773,9 +601,7 @@ void File::InternalSwap(File* other) {
     GetArenaNoVirtual());
   swap(size_, other->size_);
   swap(data_, other->data_);
-  swap(preview_, other->preview_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
-  swap(_oneof_case_[1], other->_oneof_case_[1]);
 }
 
 ::google::protobuf::Metadata File::GetMetadata() const {

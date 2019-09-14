@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=_b('Z)github.com/FormantIO/genproto/go/v1/model'),
-  serialized_pb=_b('\n\x1cprotos/model/v1/health.proto\x12\x08v1.model\"0\n\x06Health\x12&\n\x06status\x18\x01 \x01(\x0e\x32\x16.v1.model.HealthStatus*`\n\x0cHealthStatus\x12\x12\n\x0eHEALTH_UNKNOWN\x10\x00\x12\x16\n\x12HEALTH_OPERATIONAL\x10\x01\x12\x12\n\x0eHEALTH_OFFLINE\x10\x02\x12\x10\n\x0cHEALTH_ERROR\x10\x03\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
+  serialized_pb=_b('\n\x1cprotos/model/v1/health.proto\x12\x08v1.model\"8\n\x06Health\x12.\n\x06status\x18\x01 \x01(\x0e\x32\x16.v1.model.HealthStatusR\x06status*`\n\x0cHealthStatus\x12\x12\n\x0eHEALTH_UNKNOWN\x10\x00\x12\x16\n\x12HEALTH_OPERATIONAL\x10\x01\x12\x12\n\x0eHEALTH_OFFLINE\x10\x02\x12\x10\n\x0cHEALTH_ERROR\x10\x03\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
 )
 
 _HEALTHSTATUS = _descriptor.EnumDescriptor(
@@ -49,8 +49,8 @@ _HEALTHSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=92,
-  serialized_end=188,
+  serialized_start=100,
+  serialized_end=196,
 )
 _sym_db.RegisterEnumDescriptor(_HEALTHSTATUS)
 
@@ -75,7 +75,7 @@ _HEALTH = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='status', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -89,7 +89,7 @@ _HEALTH = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=42,
-  serialized_end=90,
+  serialized_end=98,
 )
 
 _HEALTH.fields_by_name['status'].enum_type = _HEALTHSTATUS

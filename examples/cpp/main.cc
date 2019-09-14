@@ -46,7 +46,7 @@ public:
     std::cout << "posting file datapoint on " << stream << std::endl;
     Datapoint datapoint;
     (*datapoint.mutable_tags())["annotation"] = "formant_exp_002";
-    datapoint.mutable_file()->set_url("file://" + filePath);
+    datapoint.mutable_file()->set_url(filePath);
     datapoint.set_stream(stream);
     datapoint.set_timestamp(GetCurrentTimestamp());
     PostDataResponse response;

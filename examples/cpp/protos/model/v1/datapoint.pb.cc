@@ -20,14 +20,12 @@ extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fdatapoint_2eproto ::google
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2ffile_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_File_protos_2fmodel_2fv1_2ffile_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fhealth_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Numeric_protos_2fmodel_2fv1_2fmath_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_BitSet_protos_2fmodel_2fv1_2fmath_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Bitset_protos_2fmodel_2fv1_2fmath_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_MetricSet_protos_2fmodel_2fv1_2fmath_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmedia_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Image_protos_2fmodel_2fv1_2fmedia_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmedia_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmedia_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Video_protos_2fmodel_2fv1_2fmedia_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fros_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ROSMessage_protos_2fmodel_2fv1_2fros_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2ftext_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Text_protos_2fmodel_2fv1_2ftext_2eproto;
 namespace v1 {
 namespace model {
@@ -41,13 +39,11 @@ class DatapointDefaultTypeInternal {
   const ::v1::model::Text* text_;
   const ::v1::model::Numeric* numeric_;
   const ::v1::model::MetricSet* metric_set_;
-  const ::v1::model::BitSet* bitset_;
+  const ::v1::model::Bitset* bitset_;
   const ::v1::model::File* file_;
   const ::v1::model::Image* image_;
-  const ::v1::model::Video* video_;
   const ::v1::model::PointCloud* point_cloud_;
   const ::v1::model::Location* location_;
-  const ::v1::model::ROSMessage* ros_message_;
   const ::v1::model::Localization* localization_;
   const ::v1::model::Health* health_;
 } _Datapoint_default_instance_;
@@ -77,19 +73,17 @@ static void InitDefaultsDatapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto() {
   ::v1::model::Datapoint::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<13> scc_info_Datapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 13, InitDefaultsDatapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto}, {
+::google::protobuf::internal::SCCInfo<11> scc_info_Datapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 11, InitDefaultsDatapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto}, {
       &scc_info_Datapoint_TagsEntry_DoNotUse_protos_2fmodel_2fv1_2fdatapoint_2eproto.base,
       &scc_info_Text_protos_2fmodel_2fv1_2ftext_2eproto.base,
       &scc_info_Numeric_protos_2fmodel_2fv1_2fmath_2eproto.base,
       &scc_info_MetricSet_protos_2fmodel_2fv1_2fmath_2eproto.base,
-      &scc_info_BitSet_protos_2fmodel_2fv1_2fmath_2eproto.base,
+      &scc_info_Bitset_protos_2fmodel_2fv1_2fmath_2eproto.base,
       &scc_info_File_protos_2fmodel_2fv1_2ffile_2eproto.base,
       &scc_info_Image_protos_2fmodel_2fv1_2fmedia_2eproto.base,
-      &scc_info_Video_protos_2fmodel_2fv1_2fmedia_2eproto.base,
       &scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto.base,
       &scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
-      &scc_info_ROSMessage_protos_2fmodel_2fv1_2fros_2eproto.base,
       &scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
       &scc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto.base,}};
 
@@ -126,10 +120,8 @@ const ::google::protobuf::uint32 TableStruct_protos_2fmodel_2fv1_2fdatapoint_2ep
   offsetof(::v1::model::DatapointDefaultTypeInternal, bitset_),
   offsetof(::v1::model::DatapointDefaultTypeInternal, file_),
   offsetof(::v1::model::DatapointDefaultTypeInternal, image_),
-  offsetof(::v1::model::DatapointDefaultTypeInternal, video_),
   offsetof(::v1::model::DatapointDefaultTypeInternal, point_cloud_),
   offsetof(::v1::model::DatapointDefaultTypeInternal, location_),
-  offsetof(::v1::model::DatapointDefaultTypeInternal, ros_message_),
   offsetof(::v1::model::DatapointDefaultTypeInternal, localization_),
   offsetof(::v1::model::DatapointDefaultTypeInternal, health_),
   PROTOBUF_FIELD_OFFSET(::v1::model::Datapoint, data_),
@@ -155,44 +147,41 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto[] =
   "del\032\032protos/model/v1/file.proto\032\034protos/"
   "model/v1/health.proto\032\032protos/model/v1/m"
   "ath.proto\032 protos/model/v1/navigation.pr"
-  "oto\032\031protos/model/v1/ros.proto\032\032protos/m"
-  "odel/v1/text.proto\032\033protos/model/v1/medi"
-  "a.proto\"\337\004\n\tDatapoint\022\016\n\006stream\030\001 \001(\t\022\021\n"
-  "\ttimestamp\030\002 \001(\003\022+\n\004tags\030\016 \003(\0132\035.v1.mode"
-  "l.Datapoint.TagsEntry\022\036\n\004text\030\003 \001(\0132\016.v1"
-  ".model.TextH\000\022$\n\007numeric\030\004 \001(\0132\021.v1.mode"
-  "l.NumericH\000\022)\n\nmetric_set\030\017 \001(\0132\023.v1.mod"
-  "el.MetricSetH\000\022\"\n\006bitset\030\r \001(\0132\020.v1.mode"
-  "l.BitSetH\000\022\036\n\004file\030\005 \001(\0132\016.v1.model.File"
-  "H\000\022 \n\005image\030\006 \001(\0132\017.v1.model.ImageH\000\022 \n\005"
-  "video\030\007 \001(\0132\017.v1.model.VideoH\000\022+\n\013point_"
-  "cloud\030\010 \001(\0132\024.v1.model.PointCloudH\000\022&\n\010l"
-  "ocation\030\t \001(\0132\022.v1.model.LocationH\000\022+\n\013r"
-  "os_message\030\n \001(\0132\024.v1.model.ROSMessageH\000"
-  "\022.\n\014localization\030\013 \001(\0132\026.v1.model.Locali"
-  "zationH\000\022\"\n\006health\030\014 \001(\0132\020.v1.model.Heal"
-  "thH\000\032+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030"
-  "\002 \001(\t:\0028\001B\006\n\004dataB+Z)github.com/FormantI"
-  "O/genproto/go/v1/modelb\006proto3"
+  "oto\032\032protos/model/v1/text.proto\032\033protos/"
+  "model/v1/media.proto\"\220\004\n\tDatapoint\022\016\n\006st"
+  "ream\030\001 \001(\t\022\021\n\ttimestamp\030\002 \001(\003\022+\n\004tags\030\003 "
+  "\003(\0132\035.v1.model.Datapoint.TagsEntry\022\036\n\004te"
+  "xt\030\004 \001(\0132\016.v1.model.TextH\000\022$\n\007numeric\030\005 "
+  "\001(\0132\021.v1.model.NumericH\000\022)\n\nmetric_set\030\006"
+  " \001(\0132\023.v1.model.MetricSetH\000\022\"\n\006bitset\030\007 "
+  "\001(\0132\020.v1.model.BitsetH\000\022\036\n\004file\030\010 \001(\0132\016."
+  "v1.model.FileH\000\022 \n\005image\030\t \001(\0132\017.v1.mode"
+  "l.ImageH\000\022+\n\013point_cloud\030\n \001(\0132\024.v1.mode"
+  "l.PointCloudH\000\022&\n\010location\030\013 \001(\0132\022.v1.mo"
+  "del.LocationH\000\022.\n\014localization\030\014 \001(\0132\026.v"
+  "1.model.LocalizationH\000\022\"\n\006health\030\r \001(\0132\020"
+  ".v1.model.HealthH\000\032+\n\tTagsEntry\022\013\n\003key\030\001"
+  " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\006\n\004dataB+Z)githu"
+  "b.com/FormantIO/genproto/go/v1/modelb\006pr"
+  "oto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto = {
   false, InitDefaults_protos_2fmodel_2fv1_2fdatapoint_2eproto, 
   descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto,
-  "protos/model/v1/datapoint.proto", &assign_descriptors_table_protos_2fmodel_2fv1_2fdatapoint_2eproto, 910,
+  "protos/model/v1/datapoint.proto", &assign_descriptors_table_protos_2fmodel_2fv1_2fdatapoint_2eproto, 804,
 };
 
 void AddDescriptors_protos_2fmodel_2fv1_2fdatapoint_2eproto() {
-  static constexpr ::google::protobuf::internal::InitFunc deps[7] =
+  static constexpr ::google::protobuf::internal::InitFunc deps[6] =
   {
     ::AddDescriptors_protos_2fmodel_2fv1_2ffile_2eproto,
     ::AddDescriptors_protos_2fmodel_2fv1_2fhealth_2eproto,
     ::AddDescriptors_protos_2fmodel_2fv1_2fmath_2eproto,
     ::AddDescriptors_protos_2fmodel_2fv1_2fnavigation_2eproto,
-    ::AddDescriptors_protos_2fmodel_2fv1_2fros_2eproto,
     ::AddDescriptors_protos_2fmodel_2fv1_2ftext_2eproto,
     ::AddDescriptors_protos_2fmodel_2fv1_2fmedia_2eproto,
   };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto, deps, 7);
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto, deps, 6);
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -250,20 +239,16 @@ void Datapoint::InitAsDefaultInstance() {
       ::v1::model::Numeric::internal_default_instance());
   ::v1::model::_Datapoint_default_instance_.metric_set_ = const_cast< ::v1::model::MetricSet*>(
       ::v1::model::MetricSet::internal_default_instance());
-  ::v1::model::_Datapoint_default_instance_.bitset_ = const_cast< ::v1::model::BitSet*>(
-      ::v1::model::BitSet::internal_default_instance());
+  ::v1::model::_Datapoint_default_instance_.bitset_ = const_cast< ::v1::model::Bitset*>(
+      ::v1::model::Bitset::internal_default_instance());
   ::v1::model::_Datapoint_default_instance_.file_ = const_cast< ::v1::model::File*>(
       ::v1::model::File::internal_default_instance());
   ::v1::model::_Datapoint_default_instance_.image_ = const_cast< ::v1::model::Image*>(
       ::v1::model::Image::internal_default_instance());
-  ::v1::model::_Datapoint_default_instance_.video_ = const_cast< ::v1::model::Video*>(
-      ::v1::model::Video::internal_default_instance());
   ::v1::model::_Datapoint_default_instance_.point_cloud_ = const_cast< ::v1::model::PointCloud*>(
       ::v1::model::PointCloud::internal_default_instance());
   ::v1::model::_Datapoint_default_instance_.location_ = const_cast< ::v1::model::Location*>(
       ::v1::model::Location::internal_default_instance());
-  ::v1::model::_Datapoint_default_instance_.ros_message_ = const_cast< ::v1::model::ROSMessage*>(
-      ::v1::model::ROSMessage::internal_default_instance());
   ::v1::model::_Datapoint_default_instance_.localization_ = const_cast< ::v1::model::Localization*>(
       ::v1::model::Localization::internal_default_instance());
   ::v1::model::_Datapoint_default_instance_.health_ = const_cast< ::v1::model::Health*>(
@@ -274,13 +259,11 @@ class Datapoint::HasBitSetters {
   static const ::v1::model::Text& text(const Datapoint* msg);
   static const ::v1::model::Numeric& numeric(const Datapoint* msg);
   static const ::v1::model::MetricSet& metric_set(const Datapoint* msg);
-  static const ::v1::model::BitSet& bitset(const Datapoint* msg);
+  static const ::v1::model::Bitset& bitset(const Datapoint* msg);
   static const ::v1::model::File& file(const Datapoint* msg);
   static const ::v1::model::Image& image(const Datapoint* msg);
-  static const ::v1::model::Video& video(const Datapoint* msg);
   static const ::v1::model::PointCloud& point_cloud(const Datapoint* msg);
   static const ::v1::model::Location& location(const Datapoint* msg);
-  static const ::v1::model::ROSMessage& ros_message(const Datapoint* msg);
   static const ::v1::model::Localization& localization(const Datapoint* msg);
   static const ::v1::model::Health& health(const Datapoint* msg);
 };
@@ -297,7 +280,7 @@ const ::v1::model::MetricSet&
 Datapoint::HasBitSetters::metric_set(const Datapoint* msg) {
   return *msg->data_.metric_set_;
 }
-const ::v1::model::BitSet&
+const ::v1::model::Bitset&
 Datapoint::HasBitSetters::bitset(const Datapoint* msg) {
   return *msg->data_.bitset_;
 }
@@ -309,10 +292,6 @@ const ::v1::model::Image&
 Datapoint::HasBitSetters::image(const Datapoint* msg) {
   return *msg->data_.image_;
 }
-const ::v1::model::Video&
-Datapoint::HasBitSetters::video(const Datapoint* msg) {
-  return *msg->data_.video_;
-}
 const ::v1::model::PointCloud&
 Datapoint::HasBitSetters::point_cloud(const Datapoint* msg) {
   return *msg->data_.point_cloud_;
@@ -320,10 +299,6 @@ Datapoint::HasBitSetters::point_cloud(const Datapoint* msg) {
 const ::v1::model::Location&
 Datapoint::HasBitSetters::location(const Datapoint* msg) {
   return *msg->data_.location_;
-}
-const ::v1::model::ROSMessage&
-Datapoint::HasBitSetters::ros_message(const Datapoint* msg) {
-  return *msg->data_.ros_message_;
 }
 const ::v1::model::Localization&
 Datapoint::HasBitSetters::localization(const Datapoint* msg) {
@@ -393,7 +368,7 @@ void Datapoint::clear_metric_set() {
     clear_has_data();
   }
 }
-void Datapoint::set_allocated_bitset(::v1::model::BitSet* bitset) {
+void Datapoint::set_allocated_bitset(::v1::model::Bitset* bitset) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_data();
   if (bitset) {
@@ -453,26 +428,6 @@ void Datapoint::clear_image() {
     clear_has_data();
   }
 }
-void Datapoint::set_allocated_video(::v1::model::Video* video) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_data();
-  if (video) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      video = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, video, submessage_arena);
-    }
-    set_has_video();
-    data_.video_ = video;
-  }
-  // @@protoc_insertion_point(field_set_allocated:v1.model.Datapoint.video)
-}
-void Datapoint::clear_video() {
-  if (has_video()) {
-    delete data_.video_;
-    clear_has_data();
-  }
-}
 void Datapoint::set_allocated_point_cloud(::v1::model::PointCloud* point_cloud) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_data();
@@ -510,26 +465,6 @@ void Datapoint::set_allocated_location(::v1::model::Location* location) {
 void Datapoint::clear_location() {
   if (has_location()) {
     delete data_.location_;
-    clear_has_data();
-  }
-}
-void Datapoint::set_allocated_ros_message(::v1::model::ROSMessage* ros_message) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_data();
-  if (ros_message) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      ros_message = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, ros_message, submessage_arena);
-    }
-    set_has_ros_message();
-    data_.ros_message_ = ros_message;
-  }
-  // @@protoc_insertion_point(field_set_allocated:v1.model.Datapoint.ros_message)
-}
-void Datapoint::clear_ros_message() {
-  if (has_ros_message()) {
-    delete data_.ros_message_;
     clear_has_data();
   }
 }
@@ -583,10 +518,8 @@ const int Datapoint::kMetricSetFieldNumber;
 const int Datapoint::kBitsetFieldNumber;
 const int Datapoint::kFileFieldNumber;
 const int Datapoint::kImageFieldNumber;
-const int Datapoint::kVideoFieldNumber;
 const int Datapoint::kPointCloudFieldNumber;
 const int Datapoint::kLocationFieldNumber;
-const int Datapoint::kRosMessageFieldNumber;
 const int Datapoint::kLocalizationFieldNumber;
 const int Datapoint::kHealthFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -621,7 +554,7 @@ Datapoint::Datapoint(const Datapoint& from)
       break;
     }
     case kBitset: {
-      mutable_bitset()->::v1::model::BitSet::MergeFrom(from.bitset());
+      mutable_bitset()->::v1::model::Bitset::MergeFrom(from.bitset());
       break;
     }
     case kFile: {
@@ -632,20 +565,12 @@ Datapoint::Datapoint(const Datapoint& from)
       mutable_image()->::v1::model::Image::MergeFrom(from.image());
       break;
     }
-    case kVideo: {
-      mutable_video()->::v1::model::Video::MergeFrom(from.video());
-      break;
-    }
     case kPointCloud: {
       mutable_point_cloud()->::v1::model::PointCloud::MergeFrom(from.point_cloud());
       break;
     }
     case kLocation: {
       mutable_location()->::v1::model::Location::MergeFrom(from.location());
-      break;
-    }
-    case kRosMessage: {
-      mutable_ros_message()->::v1::model::ROSMessage::MergeFrom(from.ros_message());
       break;
     }
     case kLocalization: {
@@ -719,20 +644,12 @@ void Datapoint::clear_data() {
       delete data_.image_;
       break;
     }
-    case kVideo: {
-      delete data_.video_;
-      break;
-    }
     case kPointCloud: {
       delete data_.point_cloud_;
       break;
     }
     case kLocation: {
       delete data_.location_;
-      break;
-    }
-    case kRosMessage: {
-      delete data_.ros_message_;
       break;
     }
     case kLocalization: {
@@ -800,152 +717,9 @@ const char* Datapoint::_InternalParse(const char* begin, const char* end, void* 
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // .v1.model.Text text = 3;
+      // map<string, string> tags = 3;
       case 3: {
         if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Text::_InternalParse;
-        object = msg->mutable_text();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Numeric numeric = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Numeric::_InternalParse;
-        object = msg->mutable_numeric();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.File file = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::File::_InternalParse;
-        object = msg->mutable_file();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Image image = 6;
-      case 6: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Image::_InternalParse;
-        object = msg->mutable_image();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Video video = 7;
-      case 7: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Video::_InternalParse;
-        object = msg->mutable_video();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.PointCloud point_cloud = 8;
-      case 8: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::PointCloud::_InternalParse;
-        object = msg->mutable_point_cloud();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Location location = 9;
-      case 9: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Location::_InternalParse;
-        object = msg->mutable_location();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.ROSMessage ros_message = 10;
-      case 10: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::ROSMessage::_InternalParse;
-        object = msg->mutable_ros_message();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Localization localization = 11;
-      case 11: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Localization::_InternalParse;
-        object = msg->mutable_localization();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Health health = 12;
-      case 12: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Health::_InternalParse;
-        object = msg->mutable_health();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.BitSet bitset = 13;
-      case 13: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::BitSet::_InternalParse;
-        object = msg->mutable_bitset();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // map<string, string> tags = 14;
-      case 14: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 114) goto handle_unusual;
         do {
           ptr = ::google::protobuf::io::ReadSize(ptr, &size);
           GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
@@ -959,16 +733,133 @@ const char* Datapoint::_InternalParse(const char* begin, const char* end, void* 
           GOOGLE_PROTOBUF_PARSER_ASSERT(parse_map(ptr, newend, object, ctx));
           ptr = newend;
           if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 114 && (ptr += 1));
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 26 && (ptr += 1));
         break;
       }
-      // .v1.model.MetricSet metric_set = 15;
-      case 15: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 122) goto handle_unusual;
+      // .v1.model.Text text = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::Text::_InternalParse;
+        object = msg->mutable_text();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.Numeric numeric = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::Numeric::_InternalParse;
+        object = msg->mutable_numeric();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.MetricSet metric_set = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         parser_till_end = ::v1::model::MetricSet::_InternalParse;
         object = msg->mutable_metric_set();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.Bitset bitset = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::Bitset::_InternalParse;
+        object = msg->mutable_bitset();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.File file = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::File::_InternalParse;
+        object = msg->mutable_file();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.Image image = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::Image::_InternalParse;
+        object = msg->mutable_image();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.PointCloud point_cloud = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::PointCloud::_InternalParse;
+        object = msg->mutable_point_cloud();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.Location location = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::Location::_InternalParse;
+        object = msg->mutable_location();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.Localization localization = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::Localization::_InternalParse;
+        object = msg->mutable_localization();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .v1.model.Health health = 13;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::v1::model::Health::_InternalParse;
+        object = msg->mutable_health();
         if (size > end - ptr) goto len_delim_till_end;
         ptr += size;
         GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
@@ -1037,130 +928,9 @@ bool Datapoint::MergePartialFromCodedStream(
         break;
       }
 
-      // .v1.model.Text text = 3;
+      // map<string, string> tags = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_text()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Numeric numeric = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_numeric()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.File file = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_file()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Image image = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_image()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Video video = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_video()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.PointCloud point_cloud = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_point_cloud()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Location location = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_location()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.ROSMessage ros_message = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ros_message()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Localization localization = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_localization()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Health health = 12;
-      case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_health()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.BitSet bitset = 13;
-      case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_bitset()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<string, string> tags = 14;
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (114 & 0xFF)) {
           Datapoint_TagsEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
               Datapoint_TagsEntry_DoNotUse,
               ::std::string, ::std::string,
@@ -1184,11 +954,110 @@ bool Datapoint::MergePartialFromCodedStream(
         break;
       }
 
-      // .v1.model.MetricSet metric_set = 15;
-      case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (122 & 0xFF)) {
+      // .v1.model.Text text = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_text()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.Numeric numeric = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_numeric()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.MetricSet metric_set = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_metric_set()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.Bitset bitset = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_bitset()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.File file = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_file()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.Image image = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_image()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.PointCloud point_cloud = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_point_cloud()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.Location location = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_location()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.Localization localization = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_localization()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .v1.model.Health health = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_health()));
         } else {
           goto handle_unusual;
         }
@@ -1237,73 +1106,7 @@ void Datapoint::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->timestamp(), output);
   }
 
-  // .v1.model.Text text = 3;
-  if (has_text()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::text(this), output);
-  }
-
-  // .v1.model.Numeric numeric = 4;
-  if (has_numeric()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::numeric(this), output);
-  }
-
-  // .v1.model.File file = 5;
-  if (has_file()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, HasBitSetters::file(this), output);
-  }
-
-  // .v1.model.Image image = 6;
-  if (has_image()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, HasBitSetters::image(this), output);
-  }
-
-  // .v1.model.Video video = 7;
-  if (has_video()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, HasBitSetters::video(this), output);
-  }
-
-  // .v1.model.PointCloud point_cloud = 8;
-  if (has_point_cloud()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, HasBitSetters::point_cloud(this), output);
-  }
-
-  // .v1.model.Location location = 9;
-  if (has_location()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, HasBitSetters::location(this), output);
-  }
-
-  // .v1.model.ROSMessage ros_message = 10;
-  if (has_ros_message()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, HasBitSetters::ros_message(this), output);
-  }
-
-  // .v1.model.Localization localization = 11;
-  if (has_localization()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, HasBitSetters::localization(this), output);
-  }
-
-  // .v1.model.Health health = 12;
-  if (has_health()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, HasBitSetters::health(this), output);
-  }
-
-  // .v1.model.BitSet bitset = 13;
-  if (has_bitset()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      13, HasBitSetters::bitset(this), output);
-  }
-
-  // map<string, string> tags = 14;
+  // map<string, string> tags = 3;
   if (!this->tags().empty()) {
     typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
         ConstPtr;
@@ -1337,7 +1140,7 @@ void Datapoint::SerializeWithCachedSizes(
       ::std::unique_ptr<Datapoint_TagsEntry_DoNotUse> entry;
       for (size_type i = 0; i < n; i++) {
         entry.reset(tags_.NewEntryWrapper(items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(14, *entry, output);
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(3, *entry, output);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
@@ -1346,16 +1149,70 @@ void Datapoint::SerializeWithCachedSizes(
           it = this->tags().begin();
           it != this->tags().end(); ++it) {
         entry.reset(tags_.NewEntryWrapper(it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(14, *entry, output);
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(3, *entry, output);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
-  // .v1.model.MetricSet metric_set = 15;
+  // .v1.model.Text text = 4;
+  if (has_text()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::text(this), output);
+  }
+
+  // .v1.model.Numeric numeric = 5;
+  if (has_numeric()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::numeric(this), output);
+  }
+
+  // .v1.model.MetricSet metric_set = 6;
   if (has_metric_set()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      15, HasBitSetters::metric_set(this), output);
+      6, HasBitSetters::metric_set(this), output);
+  }
+
+  // .v1.model.Bitset bitset = 7;
+  if (has_bitset()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, HasBitSetters::bitset(this), output);
+  }
+
+  // .v1.model.File file = 8;
+  if (has_file()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, HasBitSetters::file(this), output);
+  }
+
+  // .v1.model.Image image = 9;
+  if (has_image()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, HasBitSetters::image(this), output);
+  }
+
+  // .v1.model.PointCloud point_cloud = 10;
+  if (has_point_cloud()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, HasBitSetters::point_cloud(this), output);
+  }
+
+  // .v1.model.Location location = 11;
+  if (has_location()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, HasBitSetters::location(this), output);
+  }
+
+  // .v1.model.Localization localization = 12;
+  if (has_localization()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      12, HasBitSetters::localization(this), output);
+  }
+
+  // .v1.model.Health health = 13;
+  if (has_health()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, HasBitSetters::health(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1387,84 +1244,7 @@ void Datapoint::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->timestamp(), target);
   }
 
-  // .v1.model.Text text = 3;
-  if (has_text()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::text(this), target);
-  }
-
-  // .v1.model.Numeric numeric = 4;
-  if (has_numeric()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::numeric(this), target);
-  }
-
-  // .v1.model.File file = 5;
-  if (has_file()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, HasBitSetters::file(this), target);
-  }
-
-  // .v1.model.Image image = 6;
-  if (has_image()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, HasBitSetters::image(this), target);
-  }
-
-  // .v1.model.Video video = 7;
-  if (has_video()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, HasBitSetters::video(this), target);
-  }
-
-  // .v1.model.PointCloud point_cloud = 8;
-  if (has_point_cloud()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, HasBitSetters::point_cloud(this), target);
-  }
-
-  // .v1.model.Location location = 9;
-  if (has_location()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, HasBitSetters::location(this), target);
-  }
-
-  // .v1.model.ROSMessage ros_message = 10;
-  if (has_ros_message()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, HasBitSetters::ros_message(this), target);
-  }
-
-  // .v1.model.Localization localization = 11;
-  if (has_localization()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, HasBitSetters::localization(this), target);
-  }
-
-  // .v1.model.Health health = 12;
-  if (has_health()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        12, HasBitSetters::health(this), target);
-  }
-
-  // .v1.model.BitSet bitset = 13;
-  if (has_bitset()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        13, HasBitSetters::bitset(this), target);
-  }
-
-  // map<string, string> tags = 14;
+  // map<string, string> tags = 3;
   if (!this->tags().empty()) {
     typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
         ConstPtr;
@@ -1498,7 +1278,7 @@ void Datapoint::SerializeWithCachedSizes(
       ::std::unique_ptr<Datapoint_TagsEntry_DoNotUse> entry;
       for (size_type i = 0; i < n; i++) {
         entry.reset(tags_.NewEntryWrapper(items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
-        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(14, *entry, target);
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(3, *entry, target);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
@@ -1507,17 +1287,80 @@ void Datapoint::SerializeWithCachedSizes(
           it = this->tags().begin();
           it != this->tags().end(); ++it) {
         entry.reset(tags_.NewEntryWrapper(it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(14, *entry, target);
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(3, *entry, target);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
-  // .v1.model.MetricSet metric_set = 15;
+  // .v1.model.Text text = 4;
+  if (has_text()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::text(this), target);
+  }
+
+  // .v1.model.Numeric numeric = 5;
+  if (has_numeric()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::numeric(this), target);
+  }
+
+  // .v1.model.MetricSet metric_set = 6;
   if (has_metric_set()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        15, HasBitSetters::metric_set(this), target);
+        6, HasBitSetters::metric_set(this), target);
+  }
+
+  // .v1.model.Bitset bitset = 7;
+  if (has_bitset()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, HasBitSetters::bitset(this), target);
+  }
+
+  // .v1.model.File file = 8;
+  if (has_file()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, HasBitSetters::file(this), target);
+  }
+
+  // .v1.model.Image image = 9;
+  if (has_image()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        9, HasBitSetters::image(this), target);
+  }
+
+  // .v1.model.PointCloud point_cloud = 10;
+  if (has_point_cloud()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, HasBitSetters::point_cloud(this), target);
+  }
+
+  // .v1.model.Location location = 11;
+  if (has_location()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, HasBitSetters::location(this), target);
+  }
+
+  // .v1.model.Localization localization = 12;
+  if (has_localization()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        12, HasBitSetters::localization(this), target);
+  }
+
+  // .v1.model.Health health = 13;
+  if (has_health()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        13, HasBitSetters::health(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1541,7 +1384,7 @@ size_t Datapoint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // map<string, string> tags = 14;
+  // map<string, string> tags = 3;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->tags_size());
   {
@@ -1570,84 +1413,70 @@ size_t Datapoint::ByteSizeLong() const {
   }
 
   switch (data_case()) {
-    // .v1.model.Text text = 3;
+    // .v1.model.Text text = 4;
     case kText: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.text_);
       break;
     }
-    // .v1.model.Numeric numeric = 4;
+    // .v1.model.Numeric numeric = 5;
     case kNumeric: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.numeric_);
       break;
     }
-    // .v1.model.MetricSet metric_set = 15;
+    // .v1.model.MetricSet metric_set = 6;
     case kMetricSet: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.metric_set_);
       break;
     }
-    // .v1.model.BitSet bitset = 13;
+    // .v1.model.Bitset bitset = 7;
     case kBitset: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.bitset_);
       break;
     }
-    // .v1.model.File file = 5;
+    // .v1.model.File file = 8;
     case kFile: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.file_);
       break;
     }
-    // .v1.model.Image image = 6;
+    // .v1.model.Image image = 9;
     case kImage: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.image_);
       break;
     }
-    // .v1.model.Video video = 7;
-    case kVideo: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *data_.video_);
-      break;
-    }
-    // .v1.model.PointCloud point_cloud = 8;
+    // .v1.model.PointCloud point_cloud = 10;
     case kPointCloud: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.point_cloud_);
       break;
     }
-    // .v1.model.Location location = 9;
+    // .v1.model.Location location = 11;
     case kLocation: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.location_);
       break;
     }
-    // .v1.model.ROSMessage ros_message = 10;
-    case kRosMessage: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *data_.ros_message_);
-      break;
-    }
-    // .v1.model.Localization localization = 11;
+    // .v1.model.Localization localization = 12;
     case kLocalization: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *data_.localization_);
       break;
     }
-    // .v1.model.Health health = 12;
+    // .v1.model.Health health = 13;
     case kHealth: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -1707,7 +1536,7 @@ void Datapoint::MergeFrom(const Datapoint& from) {
       break;
     }
     case kBitset: {
-      mutable_bitset()->::v1::model::BitSet::MergeFrom(from.bitset());
+      mutable_bitset()->::v1::model::Bitset::MergeFrom(from.bitset());
       break;
     }
     case kFile: {
@@ -1718,20 +1547,12 @@ void Datapoint::MergeFrom(const Datapoint& from) {
       mutable_image()->::v1::model::Image::MergeFrom(from.image());
       break;
     }
-    case kVideo: {
-      mutable_video()->::v1::model::Video::MergeFrom(from.video());
-      break;
-    }
     case kPointCloud: {
       mutable_point_cloud()->::v1::model::PointCloud::MergeFrom(from.point_cloud());
       break;
     }
     case kLocation: {
       mutable_location()->::v1::model::Location::MergeFrom(from.location());
-      break;
-    }
-    case kRosMessage: {
-      mutable_ros_message()->::v1::model::ROSMessage::MergeFrom(from.ros_message());
       break;
     }
     case kLocalization: {

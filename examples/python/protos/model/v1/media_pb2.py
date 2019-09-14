@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=_b('Z)github.com/FormantIO/genproto/go/v1/model'),
-  serialized_pb=_b('\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\"C\n\x05Image\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"C\n\x05Video\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"2\n\nPointCloud\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
+  serialized_pb=_b('\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\"Z\n\x05Image\x12!\n\x0c\x63ontent_type\x18\x01 \x01(\tR\x0b\x63ontentType\x12\x12\n\x03url\x18\x02 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x03 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"<\n\nPointCloud\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3')
 )
 
 
@@ -39,21 +39,21 @@ _IMAGE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='contentType', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='url', full_name='v1.model.Image.url', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='url', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='raw', full_name='v1.model.Image.raw', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='raw', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -70,55 +70,7 @@ _IMAGE = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=41,
-  serialized_end=108,
-)
-
-
-_VIDEO = _descriptor.Descriptor(
-  name='Video',
-  full_name='v1.model.Video',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='content_type', full_name='v1.model.Video.content_type', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='url', full_name='v1.model.Video.url', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='raw', full_name='v1.model.Video.raw', index=2,
-      number=3, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='data', full_name='v1.model.Video.data',
-      index=0, containing_type=None, fields=[]),
-  ],
-  serialized_start=110,
-  serialized_end=177,
+  serialized_end=131,
 )
 
 
@@ -135,14 +87,14 @@ _POINTCLOUD = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='url', file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='raw', full_name='v1.model.PointCloud.raw', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='raw', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -158,8 +110,8 @@ _POINTCLOUD = _descriptor.Descriptor(
       name='data', full_name='v1.model.PointCloud.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=179,
-  serialized_end=229,
+  serialized_start=133,
+  serialized_end=193,
 )
 
 _IMAGE.oneofs_by_name['data'].fields.append(
@@ -168,12 +120,6 @@ _IMAGE.fields_by_name['url'].containing_oneof = _IMAGE.oneofs_by_name['data']
 _IMAGE.oneofs_by_name['data'].fields.append(
   _IMAGE.fields_by_name['raw'])
 _IMAGE.fields_by_name['raw'].containing_oneof = _IMAGE.oneofs_by_name['data']
-_VIDEO.oneofs_by_name['data'].fields.append(
-  _VIDEO.fields_by_name['url'])
-_VIDEO.fields_by_name['url'].containing_oneof = _VIDEO.oneofs_by_name['data']
-_VIDEO.oneofs_by_name['data'].fields.append(
-  _VIDEO.fields_by_name['raw'])
-_VIDEO.fields_by_name['raw'].containing_oneof = _VIDEO.oneofs_by_name['data']
 _POINTCLOUD.oneofs_by_name['data'].fields.append(
   _POINTCLOUD.fields_by_name['url'])
 _POINTCLOUD.fields_by_name['url'].containing_oneof = _POINTCLOUD.oneofs_by_name['data']
@@ -181,7 +127,6 @@ _POINTCLOUD.oneofs_by_name['data'].fields.append(
   _POINTCLOUD.fields_by_name['raw'])
 _POINTCLOUD.fields_by_name['raw'].containing_oneof = _POINTCLOUD.oneofs_by_name['data']
 DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
-DESCRIPTOR.message_types_by_name['Video'] = _VIDEO
 DESCRIPTOR.message_types_by_name['PointCloud'] = _POINTCLOUD
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -191,13 +136,6 @@ Image = _reflection.GeneratedProtocolMessageType('Image', (_message.Message,), d
   # @@protoc_insertion_point(class_scope:v1.model.Image)
   ))
 _sym_db.RegisterMessage(Image)
-
-Video = _reflection.GeneratedProtocolMessageType('Video', (_message.Message,), dict(
-  DESCRIPTOR = _VIDEO,
-  __module__ = 'protos.model.v1.media_pb2'
-  # @@protoc_insertion_point(class_scope:v1.model.Video)
-  ))
-_sym_db.RegisterMessage(Video)
 
 PointCloud = _reflection.GeneratedProtocolMessageType('PointCloud', (_message.Message,), dict(
   DESCRIPTOR = _POINTCLOUD,

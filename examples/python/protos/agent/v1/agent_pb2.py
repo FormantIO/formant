@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 
 from protos.model.v1 import datapoint_pb2 as protos_dot_model_dot_v1_dot_datapoint__pb2
 from protos.model.v1 import intervention_pb2 as protos_dot_model_dot_v1_dot_intervention__pb2
-from protos.model.v1 import ros_pb2 as protos_dot_model_dot_v1_dot_ros__pb2
+from protos.model.v1 import config_pb2 as protos_dot_model_dot_v1_dot_config__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -23,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.agent',
   syntax='proto3',
   serialized_options=_b('Z)github.com/FormantIO/genproto/go/v1/agent'),
-  serialized_pb=_b('\n\x1bprotos/agent/v1/agent.proto\x12\x08v1.agent\x1a\x1fprotos/model/v1/datapoint.proto\x1a\"protos/model/v1/intervention.proto\x1a\x19protos/model/v1/ros.proto\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"\x1a\n\x18RegisterROSTopicResponse\"\x15\n\x13GetROSTopicsRequest\"&\n\x14GetROSTopicsResponse\x12\x0e\n\x06topics\x18\x01 \x03(\t\"\'\n%GetROSTopicsSubscriptionConfigRequest\"^\n&GetROSTopicsSubscriptionConfigResponse\x12\x34\n\x06topics\x18\x01 \x03(\x0b\x32$.v1.model.ROSTopicSubscriptionConfig\"$\n\"GetROSWorldReferenceFrameIDRequest\"G\n#GetROSWorldReferenceFrameIDResponse\x12 \n\x18world_reference_frame_id\x18\x01 \x01(\t\"+\n\x1dGetInterventionRequestRequest\x12\n\n\x02id\x18\x01 \x01(\t\"4\n\x1eGetInterventionResponseRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t2\xd8\x06\n\x05\x41gent\x12\x43\n\nStreamData\x12\x13.v1.model.Datapoint\x1a\x1c.v1.agent.StreamDataResponse\"\x00(\x01\x12=\n\x08PostData\x12\x13.v1.model.Datapoint\x1a\x1a.v1.agent.PostDataResponse\"\x00\x12L\n\x10RegisterROSTopic\x12\x12.v1.model.ROSTopic\x1a\".v1.agent.RegisterROSTopicResponse\"\x00\x12O\n\x0cGetROSTopics\x12\x1d.v1.agent.GetROSTopicsRequest\x1a\x1e.v1.agent.GetROSTopicsResponse\"\x00\x12\x85\x01\n\x1eGetROSTopicsSubscriptionConfig\x12/.v1.agent.GetROSTopicsSubscriptionConfigRequest\x1a\x30.v1.agent.GetROSTopicsSubscriptionConfigResponse\"\x00\x12|\n\x1bGetROSWorldReferenceFrameID\x12,.v1.agent.GetROSWorldReferenceFrameIDRequest\x1a-.v1.agent.GetROSWorldReferenceFrameIDResponse\"\x00\x12[\n\x19\x43reateInterventionRequest\x12\x1d.v1.model.InterventionRequest\x1a\x1d.v1.model.InterventionRequest\"\x00\x12\x62\n\x16GetInterventionRequest\x12\'.v1.agent.GetInterventionRequestRequest\x1a\x1d.v1.model.InterventionRequest\"\x00\x12\x65\n\x17GetInterventionResponse\x12(.v1.agent.GetInterventionResponseRequest\x1a\x1e.v1.model.InterventionResponse\"\x00\x42+Z)github.com/FormantIO/genproto/go/v1/agentb\x06proto3')
+  serialized_pb=_b('\n\x1bprotos/agent/v1/agent.proto\x12\x08v1.agent\x1a\x1fprotos/model/v1/datapoint.proto\x1a\"protos/model/v1/intervention.proto\x1a\x1cprotos/model/v1/config.proto\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"/\n\x1dGetInterventionRequestRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"?\n\x1eGetInterventionResponseRequest\x12\x1d\n\nrequest_id\x18\x01 \x01(\tR\trequestId\" \n\x1eGetStreamsConfigurationRequest\"Z\n\x1fGetStreamsConfigurationResponse\x12\x37\n\x07streams\x18\x01 \x03(\x0b\x32\x1d.v1.model.StreamConfigurationR\x07streams\"$\n\"GetApplicationConfigurationRequest\"o\n#GetApplicationConfigurationResponse\x12H\n\rconfiguration\x18\x01 \x01(\x0b\x32\".v1.model.ApplicationConfigurationR\rconfiguration\"\x1e\n\x1cGetAgentConfigurationRequest\"c\n\x1dGetAgentConfigurationResponse\x12\x42\n\rconfiguration\x18\x01 \x01(\x0b\x32\x1c.v1.model.AgentConfigurationR\rconfiguration\"\x0f\n\rHealthRequest\"\x10\n\x0eHealthResponse2\xce\x06\n\x05\x41gent\x12\x43\n\nStreamData\x12\x13.v1.model.Datapoint\x1a\x1c.v1.agent.StreamDataResponse\"\x00(\x01\x12=\n\x08PostData\x12\x13.v1.model.Datapoint\x1a\x1a.v1.agent.PostDataResponse\"\x00\x12[\n\x19\x43reateInterventionRequest\x12\x1d.v1.model.InterventionRequest\x1a\x1d.v1.model.InterventionRequest\"\x00\x12\x62\n\x16GetInterventionRequest\x12\'.v1.agent.GetInterventionRequestRequest\x1a\x1d.v1.model.InterventionRequest\"\x00\x12\x65\n\x17GetInterventionResponse\x12(.v1.agent.GetInterventionResponseRequest\x1a\x1e.v1.model.InterventionResponse\"\x00\x12p\n\x17GetStreamsConfiguration\x12(.v1.agent.GetStreamsConfigurationRequest\x1a).v1.agent.GetStreamsConfigurationResponse\"\x00\x12|\n\x1bGetApplicationConfiguration\x12,.v1.agent.GetApplicationConfigurationRequest\x1a-.v1.agent.GetApplicationConfigurationResponse\"\x00\x12j\n\x15GetAgentConfiguration\x12&.v1.agent.GetAgentConfigurationRequest\x1a\'.v1.agent.GetAgentConfigurationResponse\"\x00\x12=\n\x06Health\x12\x17.v1.agent.HealthRequest\x1a\x18.v1.agent.HealthResponse\"\x00\x42+Z)github.com/FormantIO/genproto/go/v1/agentb\x06proto3')
   ,
-  dependencies=[protos_dot_model_dot_v1_dot_datapoint__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_intervention__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_ros__pb2.DESCRIPTOR,])
+  dependencies=[protos_dot_model_dot_v1_dot_datapoint__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_intervention__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_config__pb2.DESCRIPTOR,])
 
 
 
@@ -49,8 +49,8 @@ _STREAMDATARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=137,
-  serialized_end=157,
+  serialized_start=140,
+  serialized_end=160,
 )
 
 
@@ -73,197 +73,8 @@ _POSTDATARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=159,
-  serialized_end=177,
-)
-
-
-_REGISTERROSTOPICRESPONSE = _descriptor.Descriptor(
-  name='RegisterROSTopicResponse',
-  full_name='v1.agent.RegisterROSTopicResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=179,
-  serialized_end=205,
-)
-
-
-_GETROSTOPICSREQUEST = _descriptor.Descriptor(
-  name='GetROSTopicsRequest',
-  full_name='v1.agent.GetROSTopicsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=207,
-  serialized_end=228,
-)
-
-
-_GETROSTOPICSRESPONSE = _descriptor.Descriptor(
-  name='GetROSTopicsResponse',
-  full_name='v1.agent.GetROSTopicsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='topics', full_name='v1.agent.GetROSTopicsResponse.topics', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=230,
-  serialized_end=268,
-)
-
-
-_GETROSTOPICSSUBSCRIPTIONCONFIGREQUEST = _descriptor.Descriptor(
-  name='GetROSTopicsSubscriptionConfigRequest',
-  full_name='v1.agent.GetROSTopicsSubscriptionConfigRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=270,
-  serialized_end=309,
-)
-
-
-_GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE = _descriptor.Descriptor(
-  name='GetROSTopicsSubscriptionConfigResponse',
-  full_name='v1.agent.GetROSTopicsSubscriptionConfigResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='topics', full_name='v1.agent.GetROSTopicsSubscriptionConfigResponse.topics', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=311,
-  serialized_end=405,
-)
-
-
-_GETROSWORLDREFERENCEFRAMEIDREQUEST = _descriptor.Descriptor(
-  name='GetROSWorldReferenceFrameIDRequest',
-  full_name='v1.agent.GetROSWorldReferenceFrameIDRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=407,
-  serialized_end=443,
-)
-
-
-_GETROSWORLDREFERENCEFRAMEIDRESPONSE = _descriptor.Descriptor(
-  name='GetROSWorldReferenceFrameIDResponse',
-  full_name='v1.agent.GetROSWorldReferenceFrameIDResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='world_reference_frame_id', full_name='v1.agent.GetROSWorldReferenceFrameIDResponse.world_reference_frame_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=445,
-  serialized_end=516,
+  serialized_start=162,
+  serialized_end=180,
 )
 
 
@@ -280,7 +91,7 @@ _GETINTERVENTIONREQUESTREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='id', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -293,8 +104,8 @@ _GETINTERVENTIONREQUESTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=518,
-  serialized_end=561,
+  serialized_start=182,
+  serialized_end=229,
 )
 
 
@@ -311,7 +122,7 @@ _GETINTERVENTIONRESPONSEREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, json_name='requestId', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -324,22 +135,238 @@ _GETINTERVENTIONRESPONSEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=563,
-  serialized_end=615,
+  serialized_start=231,
+  serialized_end=294,
 )
 
-_GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE.fields_by_name['topics'].message_type = protos_dot_model_dot_v1_dot_ros__pb2._ROSTOPICSUBSCRIPTIONCONFIG
+
+_GETSTREAMSCONFIGURATIONREQUEST = _descriptor.Descriptor(
+  name='GetStreamsConfigurationRequest',
+  full_name='v1.agent.GetStreamsConfigurationRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=296,
+  serialized_end=328,
+)
+
+
+_GETSTREAMSCONFIGURATIONRESPONSE = _descriptor.Descriptor(
+  name='GetStreamsConfigurationResponse',
+  full_name='v1.agent.GetStreamsConfigurationResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='streams', full_name='v1.agent.GetStreamsConfigurationResponse.streams', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='streams', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=330,
+  serialized_end=420,
+)
+
+
+_GETAPPLICATIONCONFIGURATIONREQUEST = _descriptor.Descriptor(
+  name='GetApplicationConfigurationRequest',
+  full_name='v1.agent.GetApplicationConfigurationRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=422,
+  serialized_end=458,
+)
+
+
+_GETAPPLICATIONCONFIGURATIONRESPONSE = _descriptor.Descriptor(
+  name='GetApplicationConfigurationResponse',
+  full_name='v1.agent.GetApplicationConfigurationResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='configuration', full_name='v1.agent.GetApplicationConfigurationResponse.configuration', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='configuration', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=460,
+  serialized_end=571,
+)
+
+
+_GETAGENTCONFIGURATIONREQUEST = _descriptor.Descriptor(
+  name='GetAgentConfigurationRequest',
+  full_name='v1.agent.GetAgentConfigurationRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=573,
+  serialized_end=603,
+)
+
+
+_GETAGENTCONFIGURATIONRESPONSE = _descriptor.Descriptor(
+  name='GetAgentConfigurationResponse',
+  full_name='v1.agent.GetAgentConfigurationResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='configuration', full_name='v1.agent.GetAgentConfigurationResponse.configuration', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='configuration', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=605,
+  serialized_end=704,
+)
+
+
+_HEALTHREQUEST = _descriptor.Descriptor(
+  name='HealthRequest',
+  full_name='v1.agent.HealthRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=706,
+  serialized_end=721,
+)
+
+
+_HEALTHRESPONSE = _descriptor.Descriptor(
+  name='HealthResponse',
+  full_name='v1.agent.HealthResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=723,
+  serialized_end=739,
+)
+
+_GETSTREAMSCONFIGURATIONRESPONSE.fields_by_name['streams'].message_type = protos_dot_model_dot_v1_dot_config__pb2._STREAMCONFIGURATION
+_GETAPPLICATIONCONFIGURATIONRESPONSE.fields_by_name['configuration'].message_type = protos_dot_model_dot_v1_dot_config__pb2._APPLICATIONCONFIGURATION
+_GETAGENTCONFIGURATIONRESPONSE.fields_by_name['configuration'].message_type = protos_dot_model_dot_v1_dot_config__pb2._AGENTCONFIGURATION
 DESCRIPTOR.message_types_by_name['StreamDataResponse'] = _STREAMDATARESPONSE
 DESCRIPTOR.message_types_by_name['PostDataResponse'] = _POSTDATARESPONSE
-DESCRIPTOR.message_types_by_name['RegisterROSTopicResponse'] = _REGISTERROSTOPICRESPONSE
-DESCRIPTOR.message_types_by_name['GetROSTopicsRequest'] = _GETROSTOPICSREQUEST
-DESCRIPTOR.message_types_by_name['GetROSTopicsResponse'] = _GETROSTOPICSRESPONSE
-DESCRIPTOR.message_types_by_name['GetROSTopicsSubscriptionConfigRequest'] = _GETROSTOPICSSUBSCRIPTIONCONFIGREQUEST
-DESCRIPTOR.message_types_by_name['GetROSTopicsSubscriptionConfigResponse'] = _GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE
-DESCRIPTOR.message_types_by_name['GetROSWorldReferenceFrameIDRequest'] = _GETROSWORLDREFERENCEFRAMEIDREQUEST
-DESCRIPTOR.message_types_by_name['GetROSWorldReferenceFrameIDResponse'] = _GETROSWORLDREFERENCEFRAMEIDRESPONSE
 DESCRIPTOR.message_types_by_name['GetInterventionRequestRequest'] = _GETINTERVENTIONREQUESTREQUEST
 DESCRIPTOR.message_types_by_name['GetInterventionResponseRequest'] = _GETINTERVENTIONRESPONSEREQUEST
+DESCRIPTOR.message_types_by_name['GetStreamsConfigurationRequest'] = _GETSTREAMSCONFIGURATIONREQUEST
+DESCRIPTOR.message_types_by_name['GetStreamsConfigurationResponse'] = _GETSTREAMSCONFIGURATIONRESPONSE
+DESCRIPTOR.message_types_by_name['GetApplicationConfigurationRequest'] = _GETAPPLICATIONCONFIGURATIONREQUEST
+DESCRIPTOR.message_types_by_name['GetApplicationConfigurationResponse'] = _GETAPPLICATIONCONFIGURATIONRESPONSE
+DESCRIPTOR.message_types_by_name['GetAgentConfigurationRequest'] = _GETAGENTCONFIGURATIONREQUEST
+DESCRIPTOR.message_types_by_name['GetAgentConfigurationResponse'] = _GETAGENTCONFIGURATIONRESPONSE
+DESCRIPTOR.message_types_by_name['HealthRequest'] = _HEALTHREQUEST
+DESCRIPTOR.message_types_by_name['HealthResponse'] = _HEALTHRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 StreamDataResponse = _reflection.GeneratedProtocolMessageType('StreamDataResponse', (_message.Message,), dict(
@@ -356,55 +383,6 @@ PostDataResponse = _reflection.GeneratedProtocolMessageType('PostDataResponse', 
   ))
 _sym_db.RegisterMessage(PostDataResponse)
 
-RegisterROSTopicResponse = _reflection.GeneratedProtocolMessageType('RegisterROSTopicResponse', (_message.Message,), dict(
-  DESCRIPTOR = _REGISTERROSTOPICRESPONSE,
-  __module__ = 'protos.agent.v1.agent_pb2'
-  # @@protoc_insertion_point(class_scope:v1.agent.RegisterROSTopicResponse)
-  ))
-_sym_db.RegisterMessage(RegisterROSTopicResponse)
-
-GetROSTopicsRequest = _reflection.GeneratedProtocolMessageType('GetROSTopicsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETROSTOPICSREQUEST,
-  __module__ = 'protos.agent.v1.agent_pb2'
-  # @@protoc_insertion_point(class_scope:v1.agent.GetROSTopicsRequest)
-  ))
-_sym_db.RegisterMessage(GetROSTopicsRequest)
-
-GetROSTopicsResponse = _reflection.GeneratedProtocolMessageType('GetROSTopicsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETROSTOPICSRESPONSE,
-  __module__ = 'protos.agent.v1.agent_pb2'
-  # @@protoc_insertion_point(class_scope:v1.agent.GetROSTopicsResponse)
-  ))
-_sym_db.RegisterMessage(GetROSTopicsResponse)
-
-GetROSTopicsSubscriptionConfigRequest = _reflection.GeneratedProtocolMessageType('GetROSTopicsSubscriptionConfigRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETROSTOPICSSUBSCRIPTIONCONFIGREQUEST,
-  __module__ = 'protos.agent.v1.agent_pb2'
-  # @@protoc_insertion_point(class_scope:v1.agent.GetROSTopicsSubscriptionConfigRequest)
-  ))
-_sym_db.RegisterMessage(GetROSTopicsSubscriptionConfigRequest)
-
-GetROSTopicsSubscriptionConfigResponse = _reflection.GeneratedProtocolMessageType('GetROSTopicsSubscriptionConfigResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE,
-  __module__ = 'protos.agent.v1.agent_pb2'
-  # @@protoc_insertion_point(class_scope:v1.agent.GetROSTopicsSubscriptionConfigResponse)
-  ))
-_sym_db.RegisterMessage(GetROSTopicsSubscriptionConfigResponse)
-
-GetROSWorldReferenceFrameIDRequest = _reflection.GeneratedProtocolMessageType('GetROSWorldReferenceFrameIDRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETROSWORLDREFERENCEFRAMEIDREQUEST,
-  __module__ = 'protos.agent.v1.agent_pb2'
-  # @@protoc_insertion_point(class_scope:v1.agent.GetROSWorldReferenceFrameIDRequest)
-  ))
-_sym_db.RegisterMessage(GetROSWorldReferenceFrameIDRequest)
-
-GetROSWorldReferenceFrameIDResponse = _reflection.GeneratedProtocolMessageType('GetROSWorldReferenceFrameIDResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETROSWORLDREFERENCEFRAMEIDRESPONSE,
-  __module__ = 'protos.agent.v1.agent_pb2'
-  # @@protoc_insertion_point(class_scope:v1.agent.GetROSWorldReferenceFrameIDResponse)
-  ))
-_sym_db.RegisterMessage(GetROSWorldReferenceFrameIDResponse)
-
 GetInterventionRequestRequest = _reflection.GeneratedProtocolMessageType('GetInterventionRequestRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETINTERVENTIONREQUESTREQUEST,
   __module__ = 'protos.agent.v1.agent_pb2'
@@ -419,6 +397,62 @@ GetInterventionResponseRequest = _reflection.GeneratedProtocolMessageType('GetIn
   ))
 _sym_db.RegisterMessage(GetInterventionResponseRequest)
 
+GetStreamsConfigurationRequest = _reflection.GeneratedProtocolMessageType('GetStreamsConfigurationRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETSTREAMSCONFIGURATIONREQUEST,
+  __module__ = 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.GetStreamsConfigurationRequest)
+  ))
+_sym_db.RegisterMessage(GetStreamsConfigurationRequest)
+
+GetStreamsConfigurationResponse = _reflection.GeneratedProtocolMessageType('GetStreamsConfigurationResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETSTREAMSCONFIGURATIONRESPONSE,
+  __module__ = 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.GetStreamsConfigurationResponse)
+  ))
+_sym_db.RegisterMessage(GetStreamsConfigurationResponse)
+
+GetApplicationConfigurationRequest = _reflection.GeneratedProtocolMessageType('GetApplicationConfigurationRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETAPPLICATIONCONFIGURATIONREQUEST,
+  __module__ = 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.GetApplicationConfigurationRequest)
+  ))
+_sym_db.RegisterMessage(GetApplicationConfigurationRequest)
+
+GetApplicationConfigurationResponse = _reflection.GeneratedProtocolMessageType('GetApplicationConfigurationResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETAPPLICATIONCONFIGURATIONRESPONSE,
+  __module__ = 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.GetApplicationConfigurationResponse)
+  ))
+_sym_db.RegisterMessage(GetApplicationConfigurationResponse)
+
+GetAgentConfigurationRequest = _reflection.GeneratedProtocolMessageType('GetAgentConfigurationRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETAGENTCONFIGURATIONREQUEST,
+  __module__ = 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.GetAgentConfigurationRequest)
+  ))
+_sym_db.RegisterMessage(GetAgentConfigurationRequest)
+
+GetAgentConfigurationResponse = _reflection.GeneratedProtocolMessageType('GetAgentConfigurationResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETAGENTCONFIGURATIONRESPONSE,
+  __module__ = 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.GetAgentConfigurationResponse)
+  ))
+_sym_db.RegisterMessage(GetAgentConfigurationResponse)
+
+HealthRequest = _reflection.GeneratedProtocolMessageType('HealthRequest', (_message.Message,), dict(
+  DESCRIPTOR = _HEALTHREQUEST,
+  __module__ = 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.HealthRequest)
+  ))
+_sym_db.RegisterMessage(HealthRequest)
+
+HealthResponse = _reflection.GeneratedProtocolMessageType('HealthResponse', (_message.Message,), dict(
+  DESCRIPTOR = _HEALTHRESPONSE,
+  __module__ = 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.HealthResponse)
+  ))
+_sym_db.RegisterMessage(HealthResponse)
+
 
 DESCRIPTOR._options = None
 
@@ -428,8 +462,8 @@ _AGENT = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=618,
-  serialized_end=1474,
+  serialized_start=742,
+  serialized_end=1588,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamData',
@@ -450,45 +484,9 @@ _AGENT = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='RegisterROSTopic',
-    full_name='v1.agent.Agent.RegisterROSTopic',
-    index=2,
-    containing_service=None,
-    input_type=protos_dot_model_dot_v1_dot_ros__pb2._ROSTOPIC,
-    output_type=_REGISTERROSTOPICRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetROSTopics',
-    full_name='v1.agent.Agent.GetROSTopics',
-    index=3,
-    containing_service=None,
-    input_type=_GETROSTOPICSREQUEST,
-    output_type=_GETROSTOPICSRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetROSTopicsSubscriptionConfig',
-    full_name='v1.agent.Agent.GetROSTopicsSubscriptionConfig',
-    index=4,
-    containing_service=None,
-    input_type=_GETROSTOPICSSUBSCRIPTIONCONFIGREQUEST,
-    output_type=_GETROSTOPICSSUBSCRIPTIONCONFIGRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetROSWorldReferenceFrameID',
-    full_name='v1.agent.Agent.GetROSWorldReferenceFrameID',
-    index=5,
-    containing_service=None,
-    input_type=_GETROSWORLDREFERENCEFRAMEIDREQUEST,
-    output_type=_GETROSWORLDREFERENCEFRAMEIDRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
     name='CreateInterventionRequest',
     full_name='v1.agent.Agent.CreateInterventionRequest',
-    index=6,
+    index=2,
     containing_service=None,
     input_type=protos_dot_model_dot_v1_dot_intervention__pb2._INTERVENTIONREQUEST,
     output_type=protos_dot_model_dot_v1_dot_intervention__pb2._INTERVENTIONREQUEST,
@@ -497,7 +495,7 @@ _AGENT = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetInterventionRequest',
     full_name='v1.agent.Agent.GetInterventionRequest',
-    index=7,
+    index=3,
     containing_service=None,
     input_type=_GETINTERVENTIONREQUESTREQUEST,
     output_type=protos_dot_model_dot_v1_dot_intervention__pb2._INTERVENTIONREQUEST,
@@ -506,10 +504,46 @@ _AGENT = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetInterventionResponse',
     full_name='v1.agent.Agent.GetInterventionResponse',
-    index=8,
+    index=4,
     containing_service=None,
     input_type=_GETINTERVENTIONRESPONSEREQUEST,
     output_type=protos_dot_model_dot_v1_dot_intervention__pb2._INTERVENTIONRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetStreamsConfiguration',
+    full_name='v1.agent.Agent.GetStreamsConfiguration',
+    index=5,
+    containing_service=None,
+    input_type=_GETSTREAMSCONFIGURATIONREQUEST,
+    output_type=_GETSTREAMSCONFIGURATIONRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetApplicationConfiguration',
+    full_name='v1.agent.Agent.GetApplicationConfiguration',
+    index=6,
+    containing_service=None,
+    input_type=_GETAPPLICATIONCONFIGURATIONREQUEST,
+    output_type=_GETAPPLICATIONCONFIGURATIONRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetAgentConfiguration',
+    full_name='v1.agent.Agent.GetAgentConfiguration',
+    index=7,
+    containing_service=None,
+    input_type=_GETAGENTCONFIGURATIONREQUEST,
+    output_type=_GETAGENTCONFIGURATIONRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Health',
+    full_name='v1.agent.Agent.Health',
+    index=8,
+    containing_service=None,
+    input_type=_HEALTHREQUEST,
+    output_type=_HEALTHRESPONSE,
     serialized_options=None,
   ),
 ])

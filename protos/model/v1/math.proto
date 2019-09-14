@@ -22,7 +22,7 @@ message Bit {
     bool value = 2;
 }
 
-message BitSet {
+message Bitset {
     repeated Bit bits = 1;
 }
 
