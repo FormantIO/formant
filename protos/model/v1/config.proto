@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+package v1.model;
+
+import "protos/model/v1/ros.proto";
+
+option go_package = "github.com/FormantIO/genproto/go/v1/model";
+
+message AgentConfiguration {
+  string id = 1;
+  string name = 2;
+  AgentConfigurationDocument document = 3;
+}
+
+message AgentConfigurationDocument {
+  int32 version = 1;
+  map<string, string> tags = 2;
+  TelemetryConfiguration telemetry = 3;
+  ResourcesConfiguration resources = 4;
+  ApplicationConfiguration application = 5;
+}
+
+message TelemetryConfiguration {
+  repeated StreamConfiguration streams = 1;
+  ROSConfiguration ros = 2;
+}
+
+message ApplicationConfiguration {
+  map<string, string> configuration_map = 1;
+}
+
+message ResourcesConfiguration {
+  DiskConfiguration disk = 1;
+}
+
+message DiskConfiguration {
+  // size of the datapoints on-disk buffer. default is 100MB, max is 50GB
+  int64 buffer_size = 1;
+}
+
+message ROSConfiguration {
+  string world_reference_frame_id = 1;
+}
+
+message StreamConfiguration {
+  string name = 1;
+  map<string, string> tags = 2;
+  oneof configuration {
+    ROSTopic ros_topic = 3;
+    ROSLocalization ros_localization = 4;
+    DirectoryWatch directory_watch = 5;
+    FileTail file_tail = 6;
+  }
+}
+
+enum FileFormat {
+  PLAIN_TEXT = 0;
+  JSON = 1;
+}
+
+enum FileType {
+  FILE = 0;
+  IMAGE = 1;
+  POINT_CLOUD = 4;
+}
+
+message DirectoryWatch {
+  string directory = 1;
+  string extension = 2;
+  FileType file_type = 3;
+  bool remote_agent = 4;
+}
+
+message FileTail {
+  string filename = 1;
+  FileFormat file_format = 2;
+  string time_key = 3;
+  string time_format = 4;
+  string regex = 5;
+}

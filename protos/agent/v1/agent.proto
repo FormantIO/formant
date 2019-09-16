@@ -1,0 +1,102 @@
+syntax = "proto3";
+
+package v1.agent;
+
+import "protos/model/v1/datapoint.proto";
+import "protos/model/v1/intervention.proto";
+import "protos/model/v1/config.proto";
+
+option go_package = "github.com/FormantIO/genproto/go/v1/agent";
+
+/* Agent is the Formant Agent gRPC API. */
+service Agent {
+  /* StreamData accepts a stream of data points. See PostData for information on
+   * expected error conditions and codes. */
+  rpc StreamData(stream model.Datapoint) returns (StreamDataResponse) {
+  }
+  /* PostData accepts a single data point per invocation. An OK status code will
+   * be returned if the data point was accepted and queued for uploading to the
+   * Formant cloud. PostData will return an InvalidArgument status code if the
+   * data point is malformed or has more than 10 tags attached. A
+   * ResourceExhausted code will be returned if the data point was throttled. An
+   * Unavailable code will be returned if the Agent is in the process of
+   * shutting down. */
+  rpc PostData(model.Datapoint) returns (PostDataResponse) {
+  }
+  /* CreateInterventionRequest creates an intervention request. The returned
+   * InterventionRequest's 'id' field will be populated if the call succeeds. An
+   * Unavailable status code will be returned if an upstream network error
+   * occurs while trying to create the request. */
+  rpc CreateInterventionRequest(model.InterventionRequest)
+      returns (model.InterventionRequest) {
+  }
+  /* GetInterventionRequest returns an existing InterventionRequest. The
+   * InterventionRequest's 'responses' field will be empty if an operator has
+   * yet to respond. */
+  rpc GetInterventionRequest(GetInterventionRequestRequest)
+      returns (model.InterventionRequest) {
+  }
+  /* GetInterventionResponse returns the first InterventionResponse for the
+   * provided intervention request. This RPC blocks until an
+   * InterventionResponse is available to be returned. */
+  rpc GetInterventionResponse(GetInterventionResponseRequest)
+      returns (model.InterventionResponse) {
+  }
+  /* GetStreamsConfiguration returns the configured streams. */
+  rpc GetStreamsConfiguration(GetStreamsConfigurationRequest)
+      returns (GetStreamsConfigurationResponse) {
+  }
+  /* GetApplicationConfiguration returns application (user-defined)
+   * configuration data. */
+  rpc GetApplicationConfiguration(GetApplicationConfigurationRequest)
+      returns (GetApplicationConfigurationResponse) {
+  }
+  /* GetAgentConfiguration returns the Agent configuration. */
+  rpc GetAgentConfiguration(GetAgentConfigurationRequest)
+      returns (GetAgentConfigurationResponse) {
+  }
+  /* Health can be used to check if the Agent is running and its gRPC API is
+   * available. */
+  rpc Health(HealthRequest) returns (HealthResponse) {
+  }
+}
+
+message StreamDataResponse {
+}
+
+message PostDataResponse {
+}
+
+message GetInterventionRequestRequest {
+  string id = 1;
+}
+
+message GetInterventionResponseRequest {
+  string request_id = 1;
+}
+
+message GetStreamsConfigurationRequest {
+}
+
+message GetStreamsConfigurationResponse {
+  repeated model.StreamConfiguration streams = 1;
+}
+
+message GetApplicationConfigurationRequest {
+}
+
+message GetApplicationConfigurationResponse {
+  model.ApplicationConfiguration configuration = 1;
+}
+
+message GetAgentConfigurationRequest {
+}
+
+message GetAgentConfigurationResponse {
+  model.AgentConfiguration configuration = 1;
+}
+message HealthRequest {
+}
+
+message HealthResponse {
+}
