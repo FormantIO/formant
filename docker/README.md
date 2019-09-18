@@ -29,3 +29,8 @@ We have included a ROS-based [docker-compose](ros/docker-compose.yaml) as well. 
 The agent uses a docker volume to store state and persistent data. If the volume is deleted you will need to reprovision the agent.
 
 The provisioning token you use to initialize the agent is a one-time use token. You can remove it from the [formant.env](formant.env) file after the credentialing process is done.
+
+### MacOS
+
+Docker for Mac users may need to set `FORMANT_AGENT_IP=0.0.0.0` in the [formant.env](formant.env) file in order to access the local HTTP/GRPC interface from their host machine.
+This is to ensure that the Formant agent is reachable from outside its container networking namespace.
