@@ -24,6 +24,6 @@ services:
       - "5501:5501"
       - "5502:5502"
     volumes:
-      - "formant:/root/.formant"
+      - "formant:/var/lib/formant"
     networks:
       - formant

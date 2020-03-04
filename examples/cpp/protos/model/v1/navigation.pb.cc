@@ -5,138 +5,128 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-
-extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto;
 namespace v1 {
 namespace model {
 class LocationDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Location> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Location> _instance;
 } _Location_default_instance_;
 class LocalizationDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Localization> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Localization> _instance;
 } _Localization_default_instance_;
 class OdometryDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Odometry> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Odometry> _instance;
 } _Odometry_default_instance_;
 class MapDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Map> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Map> _instance;
   const ::v1::model::OccupancyGrid* occupancy_grid_;
-  ::google::protobuf::internal::ArenaStringPtr url_;
-  ::google::protobuf::internal::ArenaStringPtr raw_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr raw_;
 } _Map_default_instance_;
 class OccupancyGridDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OccupancyGrid> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OccupancyGrid> _instance;
 } _OccupancyGrid_default_instance_;
 }  // namespace model
 }  // namespace v1
-static void InitDefaultsLocation_protos_2fmodel_2fv1_2fnavigation_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::v1::model::_Location_default_instance_;
-    new (ptr) ::v1::model::Location();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::v1::model::Location::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsLocation_protos_2fmodel_2fv1_2fnavigation_2eproto}, {}};
-
-static void InitDefaultsLocalization_protos_2fmodel_2fv1_2fnavigation_2eproto() {
+static void InitDefaultsscc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
     void* ptr = &::v1::model::_Localization_default_instance_;
     new (ptr) ::v1::model::Localization();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
   ::v1::model::Localization::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsLocalization_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
       &scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
       &scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base,}};
 
-static void InitDefaultsOdometry_protos_2fmodel_2fv1_2fnavigation_2eproto() {
+static void InitDefaultsscc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::v1::model::_Odometry_default_instance_;
-    new (ptr) ::v1::model::Odometry();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    void* ptr = &::v1::model::_Location_default_instance_;
+    new (ptr) ::v1::model::Location();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::v1::model::Odometry::InitAsDefaultInstance();
+  ::v1::model::Location::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsOdometry_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
-      &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,
-      &scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto}, {}};
 
-static void InitDefaultsMap_protos_2fmodel_2fv1_2fnavigation_2eproto() {
+static void InitDefaultsscc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
     void* ptr = &::v1::model::_Map_default_instance_;
     new (ptr) ::v1::model::Map();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
   ::v1::model::Map::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsMap_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
       &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,
       &scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto.base,}};
 
-static void InitDefaultsOccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto() {
+static void InitDefaultsscc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
     void* ptr = &::v1::model::_OccupancyGrid_default_instance_;
     new (ptr) ::v1::model::OccupancyGrid();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
   ::v1::model::OccupancyGrid::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto}, {}};
 
-void InitDefaults_protos_2fmodel_2fv1_2fnavigation_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+static void InitDefaultsscc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::v1::model::_Odometry_default_instance_;
+    new (ptr) ::v1::model::Odometry();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::v1::model::Odometry::InitAsDefaultInstance();
 }
 
-::google::protobuf::Metadata file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[5];
-constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto = nullptr;
-constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto = nullptr;
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
+      &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,
+      &scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
 
-const ::google::protobuf::uint32 TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[5];
+static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto = nullptr;
+static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto = nullptr;
+
+const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::model::Location, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -180,7 +170,7 @@ const ::google::protobuf::uint32 TableStruct_protos_2fmodel_2fv1_2fnavigation_2e
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::v1::model::OccupancyGrid, data_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::v1::model::Location)},
   { 7, -1, sizeof(::v1::model::Localization)},
   { 14, -1, sizeof(::v1::model::Odometry)},
@@ -188,55 +178,57 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 36, -1, sizeof(::v1::model::OccupancyGrid)},
 };
 
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Location_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Localization_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Odometry_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_Map_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::v1::model::_OccupancyGrid_default_instance_),
+static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Location_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Localization_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Odometry_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Map_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_OccupancyGrid_default_instance_),
 };
 
-::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_protos_2fmodel_2fv1_2fnavigation_2eproto = {
-  {}, AddDescriptors_protos_2fmodel_2fv1_2fnavigation_2eproto, "protos/model/v1/navigation.proto", schemas,
-  file_default_instances, TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto::offsets,
+const char descriptor_table_protodef_protos_2fmodel_2fv1_2fnavigation_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n protos/model/v1/navigation.proto\022\010v1.m"
+  "odel\032\032protos/model/v1/math.proto\"D\n\010Loca"
+  "tion\022\032\n\010latitude\030\001 \001(\001R\010latitude\022\034\n\tlong"
+  "itude\030\002 \001(\001R\tlongitude\"_\n\014Localization\022."
+  "\n\010odometry\030\001 \001(\0132\022.v1.model.OdometryR\010od"
+  "ometry\022\037\n\003map\030\002 \001(\0132\r.v1.model.MapR\003map\""
+  "\225\001\n\010Odometry\022\'\n\004pose\030\001 \001(\0132\023.v1.model.Tr"
+  "ansformR\004pose\022%\n\005twist\030\002 \001(\0132\017.v1.model."
+  "TwistR\005twist\0229\n\016world_to_local\030\003 \001(\0132\023.v"
+  "1.model.TransformR\014worldToLocal\"\255\002\n\003Map\022"
+  "\036\n\nresolution\030\001 \001(\001R\nresolution\022\024\n\005width"
+  "\030\002 \001(\rR\005width\022\026\n\006height\030\003 \001(\rR\006height\022+\n"
+  "\006origin\030\004 \001(\0132\023.v1.model.TransformR\006orig"
+  "in\0229\n\016world_to_local\030\005 \001(\0132\023.v1.model.Tr"
+  "ansformR\014worldToLocal\022@\n\016occupancy_grid\030"
+  "\006 \001(\0132\027.v1.model.OccupancyGridH\000R\roccupa"
+  "ncyGrid\022\022\n\003url\030\007 \001(\tH\000R\003url\022\022\n\003raw\030\010 \001(\014"
+  "H\000R\003rawB\006\n\004data\"#\n\rOccupancyGrid\022\022\n\004data"
+  "\030\001 \003(\005R\004dataB+Z)github.com/FormantIO/gen"
+  "proto/go/v1/modelb\006proto3"
+  ;
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_deps[1] = {
+  &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_sccs[5] = {
+  &scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+  &scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+  &scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+  &scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+  &scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_once;
+static bool descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_initialized = false;
+const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto = {
+  &descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fnavigation_2eproto, "protos/model/v1/navigation.proto", 785,
+  &descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_deps, 5, 1,
+  schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto, 5, file_level_enum_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto,
 };
 
-const char descriptor_table_protodef_protos_2fmodel_2fv1_2fnavigation_2eproto[] =
-  "\n protos/model/v1/navigation.proto\022\010v1.m"
-  "odel\032\032protos/model/v1/math.proto\"/\n\010Loca"
-  "tion\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001("
-  "\001\"P\n\014Localization\022$\n\010odometry\030\001 \001(\0132\022.v1"
-  ".model.Odometry\022\032\n\003map\030\002 \001(\0132\r.v1.model."
-  "Map\"z\n\010Odometry\022!\n\004pose\030\001 \001(\0132\023.v1.model"
-  ".Transform\022\036\n\005twist\030\002 \001(\0132\017.v1.model.Twi"
-  "st\022+\n\016world_to_local\030\003 \001(\0132\023.v1.model.Tr"
-  "ansform\"\343\001\n\003Map\022\022\n\nresolution\030\001 \001(\001\022\r\n\005w"
-  "idth\030\002 \001(\r\022\016\n\006height\030\003 \001(\r\022#\n\006origin\030\004 \001"
-  "(\0132\023.v1.model.Transform\022+\n\016world_to_loca"
-  "l\030\005 \001(\0132\023.v1.model.Transform\0221\n\016occupanc"
-  "y_grid\030\006 \001(\0132\027.v1.model.OccupancyGridH\000\022"
-  "\r\n\003url\030\007 \001(\tH\000\022\r\n\003raw\030\010 \001(\014H\000B\006\n\004data\"\035\n"
-  "\rOccupancyGrid\022\014\n\004data\030\001 \003(\005B+Z)github.c"
-  "om/FormantIO/genproto/go/v1/modelb\006proto"
-  "3"
-  ;
-::google::protobuf::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto = {
-  false, InitDefaults_protos_2fmodel_2fv1_2fnavigation_2eproto, 
-  descriptor_table_protodef_protos_2fmodel_2fv1_2fnavigation_2eproto,
-  "protos/model/v1/navigation.proto", &assign_descriptors_table_protos_2fmodel_2fv1_2fnavigation_2eproto, 641,
-};
-
-void AddDescriptors_protos_2fmodel_2fv1_2fnavigation_2eproto() {
-  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
-  {
-    ::AddDescriptors_protos_2fmodel_2fv1_2fmath_2eproto,
-  };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto, deps, 1);
-}
-
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fnavigation_2eproto = []() { AddDescriptors_protos_2fmodel_2fv1_2fnavigation_2eproto(); return true; }();
+static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fnavigation_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto), true);
 namespace v1 {
 namespace model {
 
@@ -244,22 +236,17 @@ namespace model {
 
 void Location::InitAsDefaultInstance() {
 }
-class Location::HasBitSetters {
+class Location::_Internal {
  public:
 };
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Location::kLatitudeFieldNumber;
-const int Location::kLongitudeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
 Location::Location()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:v1.model.Location)
 }
 Location::Location(const Location& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&latitude_, &from.latitude_,
@@ -286,14 +273,14 @@ void Location::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const Location& Location::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Location::Clear() {
 // @@protoc_insertion_point(message_clear_start:v1.model.Location)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -303,149 +290,68 @@ void Location::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Location::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<Location*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* Location::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
-      // double latitude = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 9) goto handle_unusual;
-        msg->set_latitude(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // double longitude = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 17) goto handle_unusual;
-        msg->set_longitude(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
+      // double latitude = 1[json_name = "latitude"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 9)) {
+          latitude_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // double longitude = 2[json_name = "longitude"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
+          longitude_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Location::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:v1.model.Location)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double latitude = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (9 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &latitude_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double longitude = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (17 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &longitude_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:v1.model.Location)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:v1.model.Location)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Location::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:v1.model.Location)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // double latitude = 1;
-  if (this->latitude() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->latitude(), output);
-  }
-
-  // double longitude = 2;
-  if (this->longitude() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->longitude(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:v1.model.Location)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* Location::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Location::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:v1.model.Location)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double latitude = 1;
-  if (this->latitude() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->latitude(), target);
+  // double latitude = 1[json_name = "latitude"];
+  if (!(this->latitude() <= 0 && this->latitude() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_latitude(), target);
   }
 
-  // double longitude = 2;
-  if (this->longitude() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->longitude(), target);
+  // double longitude = 2[json_name = "longitude"];
+  if (!(this->longitude() <= 0 && this->longitude() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_longitude(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.Location)
   return target;
@@ -455,39 +361,38 @@ size_t Location::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:v1.model.Location)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // double latitude = 1;
-  if (this->latitude() != 0) {
+  // double latitude = 1[json_name = "latitude"];
+  if (!(this->latitude() <= 0 && this->latitude() >= 0)) {
     total_size += 1 + 8;
   }
 
-  // double longitude = 2;
-  if (this->longitude() != 0) {
+  // double longitude = 2[json_name = "longitude"];
+  if (!(this->longitude() <= 0 && this->longitude() >= 0)) {
     total_size += 1 + 8;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Location::MergeFrom(const ::google::protobuf::Message& from) {
+void Location::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:v1.model.Location)
   GOOGLE_DCHECK_NE(&from, this);
   const Location* source =
-      ::google::protobuf::DynamicCastToGenerated<Location>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Location>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Location)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Location)
     MergeFrom(*source);
@@ -498,18 +403,18 @@ void Location::MergeFrom(const Location& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Location)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.latitude() != 0) {
-    set_latitude(from.latitude());
+  if (!(from.latitude() <= 0 && from.latitude() >= 0)) {
+    _internal_set_latitude(from._internal_latitude());
   }
-  if (from.longitude() != 0) {
-    set_longitude(from.longitude());
+  if (!(from.longitude() <= 0 && from.longitude() >= 0)) {
+    _internal_set_longitude(from._internal_longitude());
   }
 }
 
-void Location::CopyFrom(const ::google::protobuf::Message& from) {
+void Location::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:v1.model.Location)
   if (&from == this) return;
   Clear();
@@ -527,10 +432,6 @@ bool Location::IsInitialized() const {
   return true;
 }
 
-void Location::Swap(Location* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Location::InternalSwap(Location* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -538,9 +439,8 @@ void Location::InternalSwap(Location* other) {
   swap(longitude_, other->longitude_);
 }
 
-::google::protobuf::Metadata Location::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_protos_2fmodel_2fv1_2fnavigation_2eproto);
-  return ::file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Location::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -552,40 +452,35 @@ void Localization::InitAsDefaultInstance() {
   ::v1::model::_Localization_default_instance_._instance.get_mutable()->map_ = const_cast< ::v1::model::Map*>(
       ::v1::model::Map::internal_default_instance());
 }
-class Localization::HasBitSetters {
+class Localization::_Internal {
  public:
   static const ::v1::model::Odometry& odometry(const Localization* msg);
   static const ::v1::model::Map& map(const Localization* msg);
 };
 
 const ::v1::model::Odometry&
-Localization::HasBitSetters::odometry(const Localization* msg) {
+Localization::_Internal::odometry(const Localization* msg) {
   return *msg->odometry_;
 }
 const ::v1::model::Map&
-Localization::HasBitSetters::map(const Localization* msg) {
+Localization::_Internal::map(const Localization* msg) {
   return *msg->map_;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Localization::kOdometryFieldNumber;
-const int Localization::kMapFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
 Localization::Localization()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:v1.model.Localization)
 }
 Localization::Localization(const Localization& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_odometry()) {
+  if (from._internal_has_odometry()) {
     odometry_ = new ::v1::model::Odometry(*from.odometry_);
   } else {
     odometry_ = nullptr;
   }
-  if (from.has_map()) {
+  if (from._internal_has_map()) {
     map_ = new ::v1::model::Map(*from.map_);
   } else {
     map_ = nullptr;
@@ -594,8 +489,7 @@ Localization::Localization(const Localization& from)
 }
 
 void Localization::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   ::memset(&odometry_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&map_) -
       reinterpret_cast<char*>(&odometry_)) + sizeof(map_));
@@ -615,14 +509,14 @@ void Localization::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const Localization& Localization::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Localization::Clear() {
 // @@protoc_insertion_point(message_clear_start:v1.model.Localization)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -637,166 +531,72 @@ void Localization::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Localization::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<Localization*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* Localization::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
-      // .v1.model.Odometry odometry = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Odometry::_InternalParse;
-        object = msg->mutable_odometry();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Map map = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Map::_InternalParse;
-        object = msg->mutable_map();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      // .v1.model.Odometry odometry = 1[json_name = "odometry"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_odometry(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Map map = 2[json_name = "map"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_map(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Localization::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:v1.model.Localization)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .v1.model.Odometry odometry = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_odometry()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Map map = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_map()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:v1.model.Localization)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:v1.model.Localization)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Localization::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:v1.model.Localization)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .v1.model.Odometry odometry = 1;
-  if (this->has_odometry()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::odometry(this), output);
-  }
-
-  // .v1.model.Map map = 2;
-  if (this->has_map()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::map(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:v1.model.Localization)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* Localization::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Localization::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:v1.model.Localization)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .v1.model.Odometry odometry = 1;
+  // .v1.model.Odometry odometry = 1[json_name = "odometry"];
   if (this->has_odometry()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::odometry(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::odometry(this), target, stream);
   }
 
-  // .v1.model.Map map = 2;
+  // .v1.model.Map map = 2[json_name = "map"];
   if (this->has_map()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::map(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::map(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.Localization)
   return target;
@@ -806,43 +606,42 @@ size_t Localization::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:v1.model.Localization)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .v1.model.Odometry odometry = 1;
+  // .v1.model.Odometry odometry = 1[json_name = "odometry"];
   if (this->has_odometry()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *odometry_);
   }
 
-  // .v1.model.Map map = 2;
+  // .v1.model.Map map = 2[json_name = "map"];
   if (this->has_map()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *map_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Localization::MergeFrom(const ::google::protobuf::Message& from) {
+void Localization::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:v1.model.Localization)
   GOOGLE_DCHECK_NE(&from, this);
   const Localization* source =
-      ::google::protobuf::DynamicCastToGenerated<Localization>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Localization>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Localization)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Localization)
     MergeFrom(*source);
@@ -853,18 +652,18 @@ void Localization::MergeFrom(const Localization& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Localization)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_odometry()) {
-    mutable_odometry()->::v1::model::Odometry::MergeFrom(from.odometry());
+    _internal_mutable_odometry()->::v1::model::Odometry::MergeFrom(from._internal_odometry());
   }
   if (from.has_map()) {
-    mutable_map()->::v1::model::Map::MergeFrom(from.map());
+    _internal_mutable_map()->::v1::model::Map::MergeFrom(from._internal_map());
   }
 }
 
-void Localization::CopyFrom(const ::google::protobuf::Message& from) {
+void Localization::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:v1.model.Localization)
   if (&from == this) return;
   Clear();
@@ -882,10 +681,6 @@ bool Localization::IsInitialized() const {
   return true;
 }
 
-void Localization::Swap(Localization* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Localization::InternalSwap(Localization* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -893,9 +688,8 @@ void Localization::InternalSwap(Localization* other) {
   swap(map_, other->map_);
 }
 
-::google::protobuf::Metadata Localization::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_protos_2fmodel_2fv1_2fnavigation_2eproto);
-  return ::file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Localization::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -909,7 +703,7 @@ void Odometry::InitAsDefaultInstance() {
   ::v1::model::_Odometry_default_instance_._instance.get_mutable()->world_to_local_ = const_cast< ::v1::model::Transform*>(
       ::v1::model::Transform::internal_default_instance());
 }
-class Odometry::HasBitSetters {
+class Odometry::_Internal {
  public:
   static const ::v1::model::Transform& pose(const Odometry* msg);
   static const ::v1::model::Twist& twist(const Odometry* msg);
@@ -917,15 +711,15 @@ class Odometry::HasBitSetters {
 };
 
 const ::v1::model::Transform&
-Odometry::HasBitSetters::pose(const Odometry* msg) {
+Odometry::_Internal::pose(const Odometry* msg) {
   return *msg->pose_;
 }
 const ::v1::model::Twist&
-Odometry::HasBitSetters::twist(const Odometry* msg) {
+Odometry::_Internal::twist(const Odometry* msg) {
   return *msg->twist_;
 }
 const ::v1::model::Transform&
-Odometry::HasBitSetters::world_to_local(const Odometry* msg) {
+Odometry::_Internal::world_to_local(const Odometry* msg) {
   return *msg->world_to_local_;
 }
 void Odometry::clear_pose() {
@@ -946,32 +740,26 @@ void Odometry::clear_world_to_local() {
   }
   world_to_local_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Odometry::kPoseFieldNumber;
-const int Odometry::kTwistFieldNumber;
-const int Odometry::kWorldToLocalFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
 Odometry::Odometry()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:v1.model.Odometry)
 }
 Odometry::Odometry(const Odometry& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_pose()) {
+  if (from._internal_has_pose()) {
     pose_ = new ::v1::model::Transform(*from.pose_);
   } else {
     pose_ = nullptr;
   }
-  if (from.has_twist()) {
+  if (from._internal_has_twist()) {
     twist_ = new ::v1::model::Twist(*from.twist_);
   } else {
     twist_ = nullptr;
   }
-  if (from.has_world_to_local()) {
+  if (from._internal_has_world_to_local()) {
     world_to_local_ = new ::v1::model::Transform(*from.world_to_local_);
   } else {
     world_to_local_ = nullptr;
@@ -980,8 +768,7 @@ Odometry::Odometry(const Odometry& from)
 }
 
 void Odometry::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   ::memset(&pose_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&world_to_local_) -
       reinterpret_cast<char*>(&pose_)) + sizeof(world_to_local_));
@@ -1002,14 +789,14 @@ void Odometry::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const Odometry& Odometry::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Odometry::Clear() {
 // @@protoc_insertion_point(message_clear_start:v1.model.Odometry)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -1028,203 +815,87 @@ void Odometry::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Odometry::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<Odometry*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* Odometry::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
-      // .v1.model.Transform pose = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Transform::_InternalParse;
-        object = msg->mutable_pose();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Twist twist = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Twist::_InternalParse;
-        object = msg->mutable_twist();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Transform world_to_local = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Transform::_InternalParse;
-        object = msg->mutable_world_to_local();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      // .v1.model.Transform pose = 1[json_name = "pose"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pose(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Twist twist = 2[json_name = "twist"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_twist(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_world_to_local(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Odometry::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:v1.model.Odometry)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .v1.model.Transform pose = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pose()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Twist twist = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_twist()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Transform world_to_local = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_world_to_local()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:v1.model.Odometry)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:v1.model.Odometry)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Odometry::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:v1.model.Odometry)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .v1.model.Transform pose = 1;
-  if (this->has_pose()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::pose(this), output);
-  }
-
-  // .v1.model.Twist twist = 2;
-  if (this->has_twist()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::twist(this), output);
-  }
-
-  // .v1.model.Transform world_to_local = 3;
-  if (this->has_world_to_local()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::world_to_local(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:v1.model.Odometry)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* Odometry::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Odometry::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:v1.model.Odometry)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .v1.model.Transform pose = 1;
+  // .v1.model.Transform pose = 1[json_name = "pose"];
   if (this->has_pose()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::pose(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::pose(this), target, stream);
   }
 
-  // .v1.model.Twist twist = 2;
+  // .v1.model.Twist twist = 2[json_name = "twist"];
   if (this->has_twist()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::twist(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::twist(this), target, stream);
   }
 
-  // .v1.model.Transform world_to_local = 3;
+  // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
   if (this->has_world_to_local()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::world_to_local(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::world_to_local(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.Odometry)
   return target;
@@ -1234,50 +905,49 @@ size_t Odometry::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:v1.model.Odometry)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .v1.model.Transform pose = 1;
+  // .v1.model.Transform pose = 1[json_name = "pose"];
   if (this->has_pose()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pose_);
   }
 
-  // .v1.model.Twist twist = 2;
+  // .v1.model.Twist twist = 2[json_name = "twist"];
   if (this->has_twist()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *twist_);
   }
 
-  // .v1.model.Transform world_to_local = 3;
+  // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
   if (this->has_world_to_local()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *world_to_local_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Odometry::MergeFrom(const ::google::protobuf::Message& from) {
+void Odometry::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:v1.model.Odometry)
   GOOGLE_DCHECK_NE(&from, this);
   const Odometry* source =
-      ::google::protobuf::DynamicCastToGenerated<Odometry>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Odometry>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Odometry)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Odometry)
     MergeFrom(*source);
@@ -1288,21 +958,21 @@ void Odometry::MergeFrom(const Odometry& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Odometry)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_pose()) {
-    mutable_pose()->::v1::model::Transform::MergeFrom(from.pose());
+    _internal_mutable_pose()->::v1::model::Transform::MergeFrom(from._internal_pose());
   }
   if (from.has_twist()) {
-    mutable_twist()->::v1::model::Twist::MergeFrom(from.twist());
+    _internal_mutable_twist()->::v1::model::Twist::MergeFrom(from._internal_twist());
   }
   if (from.has_world_to_local()) {
-    mutable_world_to_local()->::v1::model::Transform::MergeFrom(from.world_to_local());
+    _internal_mutable_world_to_local()->::v1::model::Transform::MergeFrom(from._internal_world_to_local());
   }
 }
 
-void Odometry::CopyFrom(const ::google::protobuf::Message& from) {
+void Odometry::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:v1.model.Odometry)
   if (&from == this) return;
   Clear();
@@ -1320,10 +990,6 @@ bool Odometry::IsInitialized() const {
   return true;
 }
 
-void Odometry::Swap(Odometry* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Odometry::InternalSwap(Odometry* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -1332,9 +998,8 @@ void Odometry::InternalSwap(Odometry* other) {
   swap(world_to_local_, other->world_to_local_);
 }
 
-::google::protobuf::Metadata Odometry::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_protos_2fmodel_2fv1_2fnavigation_2eproto);
-  return ::file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Odometry::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -1348,11 +1013,11 @@ void Map::InitAsDefaultInstance() {
   ::v1::model::_Map_default_instance_.occupancy_grid_ = const_cast< ::v1::model::OccupancyGrid*>(
       ::v1::model::OccupancyGrid::internal_default_instance());
   ::v1::model::_Map_default_instance_.url_.UnsafeSetDefault(
-      &::google::protobuf::internal::GetEmptyStringAlreadyInited());
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::v1::model::_Map_default_instance_.raw_.UnsafeSetDefault(
-      &::google::protobuf::internal::GetEmptyStringAlreadyInited());
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-class Map::HasBitSetters {
+class Map::_Internal {
  public:
   static const ::v1::model::Transform& origin(const Map* msg);
   static const ::v1::model::Transform& world_to_local(const Map* msg);
@@ -1360,15 +1025,15 @@ class Map::HasBitSetters {
 };
 
 const ::v1::model::Transform&
-Map::HasBitSetters::origin(const Map* msg) {
+Map::_Internal::origin(const Map* msg) {
   return *msg->origin_;
 }
 const ::v1::model::Transform&
-Map::HasBitSetters::world_to_local(const Map* msg) {
+Map::_Internal::world_to_local(const Map* msg) {
   return *msg->world_to_local_;
 }
 const ::v1::model::OccupancyGrid&
-Map::HasBitSetters::occupancy_grid(const Map* msg) {
+Map::_Internal::occupancy_grid(const Map* msg) {
   return *msg->data_.occupancy_grid_;
 }
 void Map::clear_origin() {
@@ -1384,12 +1049,12 @@ void Map::clear_world_to_local() {
   world_to_local_ = nullptr;
 }
 void Map::set_allocated_occupancy_grid(::v1::model::OccupancyGrid* occupancy_grid) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_data();
   if (occupancy_grid) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
-      occupancy_grid = ::google::protobuf::internal::GetOwnedMessage(
+      occupancy_grid = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, occupancy_grid, submessage_arena);
     }
     set_has_occupancy_grid();
@@ -1397,32 +1062,21 @@ void Map::set_allocated_occupancy_grid(::v1::model::OccupancyGrid* occupancy_gri
   }
   // @@protoc_insertion_point(field_set_allocated:v1.model.Map.occupancy_grid)
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Map::kResolutionFieldNumber;
-const int Map::kWidthFieldNumber;
-const int Map::kHeightFieldNumber;
-const int Map::kOriginFieldNumber;
-const int Map::kWorldToLocalFieldNumber;
-const int Map::kOccupancyGridFieldNumber;
-const int Map::kUrlFieldNumber;
-const int Map::kRawFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
 Map::Map()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:v1.model.Map)
 }
 Map::Map(const Map& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_origin()) {
+  if (from._internal_has_origin()) {
     origin_ = new ::v1::model::Transform(*from.origin_);
   } else {
     origin_ = nullptr;
   }
-  if (from.has_world_to_local()) {
+  if (from._internal_has_world_to_local()) {
     world_to_local_ = new ::v1::model::Transform(*from.world_to_local_);
   } else {
     world_to_local_ = nullptr;
@@ -1433,15 +1087,15 @@ Map::Map(const Map& from)
   clear_has_data();
   switch (from.data_case()) {
     case kOccupancyGrid: {
-      mutable_occupancy_grid()->::v1::model::OccupancyGrid::MergeFrom(from.occupancy_grid());
+      _internal_mutable_occupancy_grid()->::v1::model::OccupancyGrid::MergeFrom(from._internal_occupancy_grid());
       break;
     }
     case kUrl: {
-      set_url(from.url());
+      _internal_set_url(from._internal_url());
       break;
     }
     case kRaw: {
-      set_raw(from.raw());
+      _internal_set_raw(from._internal_raw());
       break;
     }
     case DATA_NOT_SET: {
@@ -1452,8 +1106,7 @@ Map::Map(const Map& from)
 }
 
 void Map::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   ::memset(&origin_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&height_) -
       reinterpret_cast<char*>(&origin_)) + sizeof(height_));
@@ -1477,7 +1130,7 @@ void Map::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const Map& Map::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -1490,11 +1143,11 @@ void Map::clear_data() {
       break;
     }
     case kUrl: {
-      data_.url_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+      data_.url_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
       break;
     }
     case kRaw: {
-      data_.raw_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+      data_.raw_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
       break;
     }
     case DATA_NOT_SET: {
@@ -1507,7 +1160,7 @@ void Map::clear_data() {
 
 void Map::Clear() {
 // @@protoc_insertion_point(message_clear_start:v1.model.Map)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -1526,388 +1179,159 @@ void Map::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Map::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<Map*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* Map::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
-      // double resolution = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 9) goto handle_unusual;
-        msg->set_resolution(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // uint32 width = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
-        msg->set_width(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // uint32 height = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
-        msg->set_height(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // .v1.model.Transform origin = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Transform::_InternalParse;
-        object = msg->mutable_origin();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.Transform world_to_local = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::Transform::_InternalParse;
-        object = msg->mutable_world_to_local();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .v1.model.OccupancyGrid occupancy_grid = 6;
-      case 6: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::v1::model::OccupancyGrid::_InternalParse;
-        object = msg->mutable_occupancy_grid();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // string url = 7;
-      case 7: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("v1.model.Map.url");
-        object = msg->mutable_url();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // bytes raw = 8;
-      case 8: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        object = msg->mutable_raw();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
+      // double resolution = 1[json_name = "resolution"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 9)) {
+          resolution_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // uint32 width = 2[json_name = "width"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          width_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 height = 3[json_name = "height"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          height_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Transform origin = 4[json_name = "origin"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_origin(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Transform world_to_local = 5[json_name = "worldToLocal"];
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_world_to_local(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.OccupancyGrid occupancy_grid = 6[json_name = "occupancyGrid"];
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_occupancy_grid(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string url = 7[json_name = "url"];
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          auto str = _internal_mutable_url();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.Map.url"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bytes raw = 8[json_name = "raw"];
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          auto str = _internal_mutable_raw();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Map::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:v1.model.Map)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double resolution = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (9 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &resolution_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 width = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &width_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 height = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &height_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Transform origin = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_origin()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.Transform world_to_local = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_world_to_local()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .v1.model.OccupancyGrid occupancy_grid = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_occupancy_grid()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string url = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_url()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->url().data(), static_cast<int>(this->url().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "v1.model.Map.url"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bytes raw = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_raw()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:v1.model.Map)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:v1.model.Map)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Map::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:v1.model.Map)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // double resolution = 1;
-  if (this->resolution() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->resolution(), output);
-  }
-
-  // uint32 width = 2;
-  if (this->width() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->width(), output);
-  }
-
-  // uint32 height = 3;
-  if (this->height() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->height(), output);
-  }
-
-  // .v1.model.Transform origin = 4;
-  if (this->has_origin()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::origin(this), output);
-  }
-
-  // .v1.model.Transform world_to_local = 5;
-  if (this->has_world_to_local()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, HasBitSetters::world_to_local(this), output);
-  }
-
-  // .v1.model.OccupancyGrid occupancy_grid = 6;
-  if (has_occupancy_grid()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, HasBitSetters::occupancy_grid(this), output);
-  }
-
-  // string url = 7;
-  if (has_url()) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->url().data(), static_cast<int>(this->url().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "v1.model.Map.url");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->url(), output);
-  }
-
-  // bytes raw = 8;
-  if (has_raw()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      8, this->raw(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:v1.model.Map)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* Map::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Map::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:v1.model.Map)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double resolution = 1;
-  if (this->resolution() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->resolution(), target);
+  // double resolution = 1[json_name = "resolution"];
+  if (!(this->resolution() <= 0 && this->resolution() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_resolution(), target);
   }
 
-  // uint32 width = 2;
+  // uint32 width = 2[json_name = "width"];
   if (this->width() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->width(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_width(), target);
   }
 
-  // uint32 height = 3;
+  // uint32 height = 3[json_name = "height"];
   if (this->height() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->height(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_height(), target);
   }
 
-  // .v1.model.Transform origin = 4;
+  // .v1.model.Transform origin = 4[json_name = "origin"];
   if (this->has_origin()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::origin(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::origin(this), target, stream);
   }
 
-  // .v1.model.Transform world_to_local = 5;
+  // .v1.model.Transform world_to_local = 5[json_name = "worldToLocal"];
   if (this->has_world_to_local()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, HasBitSetters::world_to_local(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::world_to_local(this), target, stream);
   }
 
-  // .v1.model.OccupancyGrid occupancy_grid = 6;
-  if (has_occupancy_grid()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, HasBitSetters::occupancy_grid(this), target);
+  // .v1.model.OccupancyGrid occupancy_grid = 6[json_name = "occupancyGrid"];
+  if (_internal_has_occupancy_grid()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::occupancy_grid(this), target, stream);
   }
 
-  // string url = 7;
-  if (has_url()) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->url().data(), static_cast<int>(this->url().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  // string url = 7[json_name = "url"];
+  if (_internal_has_url()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_url().data(), static_cast<int>(this->_internal_url().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "v1.model.Map.url");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        7, this->url(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_url(), target);
   }
 
-  // bytes raw = 8;
-  if (has_raw()) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        8, this->raw(), target);
+  // bytes raw = 8[json_name = "raw"];
+  if (_internal_has_raw()) {
+    target = stream->WriteBytesMaybeAliased(
+        8, this->_internal_raw(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.Map)
   return target;
@@ -1917,88 +1341,87 @@ size_t Map::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:v1.model.Map)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .v1.model.Transform origin = 4;
+  // .v1.model.Transform origin = 4[json_name = "origin"];
   if (this->has_origin()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *origin_);
   }
 
-  // .v1.model.Transform world_to_local = 5;
+  // .v1.model.Transform world_to_local = 5[json_name = "worldToLocal"];
   if (this->has_world_to_local()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *world_to_local_);
   }
 
-  // double resolution = 1;
-  if (this->resolution() != 0) {
+  // double resolution = 1[json_name = "resolution"];
+  if (!(this->resolution() <= 0 && this->resolution() >= 0)) {
     total_size += 1 + 8;
   }
 
-  // uint32 width = 2;
+  // uint32 width = 2[json_name = "width"];
   if (this->width() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->width());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_width());
   }
 
-  // uint32 height = 3;
+  // uint32 height = 3[json_name = "height"];
   if (this->height() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->height());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_height());
   }
 
   switch (data_case()) {
-    // .v1.model.OccupancyGrid occupancy_grid = 6;
+    // .v1.model.OccupancyGrid occupancy_grid = 6[json_name = "occupancyGrid"];
     case kOccupancyGrid: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.occupancy_grid_);
       break;
     }
-    // string url = 7;
+    // string url = 7[json_name = "url"];
     case kUrl: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->url());
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_url());
       break;
     }
-    // bytes raw = 8;
+    // bytes raw = 8[json_name = "raw"];
     case kRaw: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::BytesSize(
-          this->raw());
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_raw());
       break;
     }
     case DATA_NOT_SET: {
       break;
     }
   }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Map::MergeFrom(const ::google::protobuf::Message& from) {
+void Map::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:v1.model.Map)
   GOOGLE_DCHECK_NE(&from, this);
   const Map* source =
-      ::google::protobuf::DynamicCastToGenerated<Map>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Map>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Map)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Map)
     MergeFrom(*source);
@@ -2009,35 +1432,35 @@ void Map::MergeFrom(const Map& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Map)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_origin()) {
-    mutable_origin()->::v1::model::Transform::MergeFrom(from.origin());
+    _internal_mutable_origin()->::v1::model::Transform::MergeFrom(from._internal_origin());
   }
   if (from.has_world_to_local()) {
-    mutable_world_to_local()->::v1::model::Transform::MergeFrom(from.world_to_local());
+    _internal_mutable_world_to_local()->::v1::model::Transform::MergeFrom(from._internal_world_to_local());
   }
-  if (from.resolution() != 0) {
-    set_resolution(from.resolution());
+  if (!(from.resolution() <= 0 && from.resolution() >= 0)) {
+    _internal_set_resolution(from._internal_resolution());
   }
   if (from.width() != 0) {
-    set_width(from.width());
+    _internal_set_width(from._internal_width());
   }
   if (from.height() != 0) {
-    set_height(from.height());
+    _internal_set_height(from._internal_height());
   }
   switch (from.data_case()) {
     case kOccupancyGrid: {
-      mutable_occupancy_grid()->::v1::model::OccupancyGrid::MergeFrom(from.occupancy_grid());
+      _internal_mutable_occupancy_grid()->::v1::model::OccupancyGrid::MergeFrom(from._internal_occupancy_grid());
       break;
     }
     case kUrl: {
-      set_url(from.url());
+      _internal_set_url(from._internal_url());
       break;
     }
     case kRaw: {
-      set_raw(from.raw());
+      _internal_set_raw(from._internal_raw());
       break;
     }
     case DATA_NOT_SET: {
@@ -2046,7 +1469,7 @@ void Map::MergeFrom(const Map& from) {
   }
 }
 
-void Map::CopyFrom(const ::google::protobuf::Message& from) {
+void Map::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:v1.model.Map)
   if (&from == this) return;
   Clear();
@@ -2064,10 +1487,6 @@ bool Map::IsInitialized() const {
   return true;
 }
 
-void Map::Swap(Map* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Map::InternalSwap(Map* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -2080,9 +1499,8 @@ void Map::InternalSwap(Map* other) {
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
 
-::google::protobuf::Metadata Map::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_protos_2fmodel_2fv1_2fnavigation_2eproto);
-  return ::file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Map::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -2090,21 +1508,17 @@ void Map::InternalSwap(Map* other) {
 
 void OccupancyGrid::InitAsDefaultInstance() {
 }
-class OccupancyGrid::HasBitSetters {
+class OccupancyGrid::_Internal {
  public:
 };
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int OccupancyGrid::kDataFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
 OccupancyGrid::OccupancyGrid()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:v1.model.OccupancyGrid)
 }
 OccupancyGrid::OccupancyGrid(const OccupancyGrid& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr),
       data_(from.data_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
@@ -2126,14 +1540,14 @@ void OccupancyGrid::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const OccupancyGrid& OccupancyGrid::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void OccupancyGrid::Clear() {
 // @@protoc_insertion_point(message_clear_start:v1.model.OccupancyGrid)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -2141,152 +1555,61 @@ void OccupancyGrid::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* OccupancyGrid::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<OccupancyGrid*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* OccupancyGrid::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
-      // repeated int32 data = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) == 10) {
-          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::google::protobuf::internal::PackedInt32Parser;
-          object = msg->mutable_data();
-          if (size > end - ptr) goto len_delim_till_end;
-          auto newend = ptr + size;
-          if (size) ptr = parser_till_end(ptr, newend, object, ctx);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr == newend);
-          break;
-        } else if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        do {
-          msg->add_data(::google::protobuf::internal::ReadVarint(&ptr));
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 8 && (ptr += 1));
-        break;
-      }
+      // repeated int32 data = 1[json_name = "data"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_data(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
+          _internal_add_data(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
+success:
   return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool OccupancyGrid::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:v1.model.OccupancyGrid)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated int32 data = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, this->mutable_data())));
-        } else if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 1, 10u, input, this->mutable_data())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+::PROTOBUF_NAMESPACE_ID::uint8* OccupancyGrid::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:v1.model.OccupancyGrid)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated int32 data = 1[json_name = "data"];
+  {
+    int byte_size = _data_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteInt32Packed(
+          1, _internal_data(), byte_size, target);
     }
   }
-success:
-  // @@protoc_insertion_point(parse_success:v1.model.OccupancyGrid)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:v1.model.OccupancyGrid)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void OccupancyGrid::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:v1.model.OccupancyGrid)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated int32 data = 1;
-  if (this->data_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(1, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_data_cached_byte_size_.load(
-        std::memory_order_relaxed));
-  }
-  for (int i = 0, n = this->data_size(); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32NoTag(
-      this->data(i), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:v1.model.OccupancyGrid)
-}
-
-::google::protobuf::uint8* OccupancyGrid::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:v1.model.OccupancyGrid)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated int32 data = 1;
-  if (this->data_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      1,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        _data_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteInt32NoTagToArray(this->data_, target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.OccupancyGrid)
   return target;
@@ -2296,44 +1619,43 @@ size_t OccupancyGrid::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:v1.model.OccupancyGrid)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 data = 1;
+  // repeated int32 data = 1[json_name = "data"];
   {
-    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       Int32Size(this->data_);
     if (data_size > 0) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast<::google::protobuf::int32>(data_size));
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
     }
-    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
     _data_cached_byte_size_.store(cached_size,
                                     std::memory_order_relaxed);
     total_size += data_size;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void OccupancyGrid::MergeFrom(const ::google::protobuf::Message& from) {
+void OccupancyGrid::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:v1.model.OccupancyGrid)
   GOOGLE_DCHECK_NE(&from, this);
   const OccupancyGrid* source =
-      ::google::protobuf::DynamicCastToGenerated<OccupancyGrid>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OccupancyGrid>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.OccupancyGrid)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.OccupancyGrid)
     MergeFrom(*source);
@@ -2344,13 +1666,13 @@ void OccupancyGrid::MergeFrom(const OccupancyGrid& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.OccupancyGrid)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   data_.MergeFrom(from.data_);
 }
 
-void OccupancyGrid::CopyFrom(const ::google::protobuf::Message& from) {
+void OccupancyGrid::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:v1.model.OccupancyGrid)
   if (&from == this) return;
   Clear();
@@ -2368,27 +1690,21 @@ bool OccupancyGrid::IsInitialized() const {
   return true;
 }
 
-void OccupancyGrid::Swap(OccupancyGrid* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void OccupancyGrid::InternalSwap(OccupancyGrid* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   data_.InternalSwap(&other->data_);
 }
 
-::google::protobuf::Metadata OccupancyGrid::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_protos_2fmodel_2fv1_2fnavigation_2eproto);
-  return ::file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata OccupancyGrid::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace model
 }  // namespace v1
-namespace google {
-namespace protobuf {
+PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::v1::model::Location* Arena::CreateMaybeMessage< ::v1::model::Location >(Arena* arena) {
   return Arena::CreateInternal< ::v1::model::Location >(arena);
 }
@@ -2404,8 +1720,7 @@ template<> PROTOBUF_NOINLINE ::v1::model::Map* Arena::CreateMaybeMessage< ::v1::
 template<> PROTOBUF_NOINLINE ::v1::model::OccupancyGrid* Arena::CreateMaybeMessage< ::v1::model::OccupancyGrid >(Arena* arena) {
   return Arena::CreateInternal< ::v1::model::OccupancyGrid >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 #include <google/protobuf/port_undef.inc>

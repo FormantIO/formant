@@ -3,6 +3,7 @@ syntax = "proto3";
 package v1.model;
 
 import "protos/model/v1/ros.proto";
+import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/model";
 
@@ -13,11 +14,35 @@ message AgentConfiguration {
 }
 
 message AgentConfigurationDocument {
-  int32 version = 1;
+  int64 version = 1;
   map<string, string> tags = 2;
   TelemetryConfiguration telemetry = 3;
   ResourcesConfiguration resources = 4;
   ApplicationConfiguration application = 5;
+  TeleopConfiguration teleop = 6;
+}
+
+message TeleopConfiguration {
+  repeated TeleopRosStreamConfiguration ros_streams = 1;
+}
+
+enum TeleopRosStreamConfigurationTopicType {
+  GEOMETRY_MSGS_TWIST = 0;
+  STD_MSGS_BOOL = 1;
+  SENSOR_MSGS_COMPRESSED_IMAGE = 2;
+  STD_MSGS_STRING = 3;
+  GEOMETRY_MSGS_POSE = 4;
+}
+
+enum TeleopRosStreamConfigurationMode {
+  COMMAND = 0;
+  OBSERVE = 1;
+}
+
+message TeleopRosStreamConfiguration {
+  string topic_name = 1;
+  TeleopRosStreamConfigurationTopicType topic_type = 2;
+  TeleopRosStreamConfigurationMode mode = 3;
 }
 
 message TelemetryConfiguration {
@@ -31,6 +56,7 @@ message ApplicationConfiguration {
 
 message ResourcesConfiguration {
   DiskConfiguration disk = 1;
+  google.protobuf.DoubleValue stream_throttle_hz = 2;
 }
 
 message DiskConfiguration {
@@ -48,6 +74,7 @@ message StreamConfiguration {
   oneof configuration {
     ROSTopic ros_topic = 3;
     ROSLocalization ros_localization = 4;
+    ROSTransformTree ros_transform_tree = 7;
     DirectoryWatch directory_watch = 5;
     FileTail file_tail = 6;
   }

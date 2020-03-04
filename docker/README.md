@@ -32,5 +32,5 @@ The provisioning token you use to initialize the agent is a one-time use token. 
 
 ### MacOS
 
-Docker for Mac users may need to set `FORMANT_AGENT_IP=0.0.0.0` in the [formant.env](formant.env) file in order to access the local HTTP/GRPC interface from their host machine.
+Docker for Mac users may need to set `FORMANT_AGENT_IP=0.0.0.0` in the [formant.env](formant.env) file in order to access the local gRPC and HTTP interfaces from their host machine.
 This is to ensure that the Formant agent is reachable from outside its container networking namespace.
