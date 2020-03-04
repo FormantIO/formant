@@ -11,7 +11,6 @@ message Location {
     double longitude = 2;
 }
 
-
 message Localization {
     Odometry odometry = 1;
     Map map = 2;

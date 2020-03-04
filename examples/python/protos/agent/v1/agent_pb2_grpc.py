@@ -4,6 +4,7 @@ import grpc
 from protos.agent.v1 import agent_pb2 as protos_dot_agent_dot_v1_dot_agent__pb2
 from protos.model.v1 import datapoint_pb2 as protos_dot_model_dot_v1_dot_datapoint__pb2
 from protos.model.v1 import intervention_pb2 as protos_dot_model_dot_v1_dot_intervention__pb2
+from protos.model.v1 import math_pb2 as protos_dot_model_dot_v1_dot_math__pb2
 
 
 class AgentStub(object):
@@ -60,6 +61,31 @@ class AgentStub(object):
         '/v1.agent.Agent/Health',
         request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthRequest.SerializeToString,
         response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthResponse.FromString,
+        )
+    self.GetCommandRequest = channel.unary_unary(
+        '/v1.agent.Agent/GetCommandRequest',
+        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCommandRequestRequest.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCommandRequestResponse.FromString,
+        )
+    self.GetCommandRequestStream = channel.unary_stream(
+        '/v1.agent.Agent/GetCommandRequestStream',
+        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCommandRequestStreamRequest.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCommandRequestStreamResponse.FromString,
+        )
+    self.SendCommandResponse = channel.unary_unary(
+        '/v1.agent.Agent/SendCommandResponse',
+        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendCommandResponseRequest.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendCommandResponseResponse.FromString,
+        )
+    self.PostTransformFrame = channel.unary_unary(
+        '/v1.agent.Agent/PostTransformFrame',
+        request_serializer=protos_dot_model_dot_v1_dot_math__pb2.TransformFrame.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostTransformFrameResponse.FromString,
+        )
+    self.SetBaseFrameID = channel.unary_unary(
+        '/v1.agent.Agent/SetBaseFrameID',
+        request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.SetBaseFrameIDRequest.SerializeToString,
+        response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.SetBaseFrameIDResponse.FromString,
         )
 
 
@@ -130,6 +156,41 @@ class AgentServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def GetCommandRequest(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetCommandRequestStream(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def SendCommandResponse(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def PostTransformFrame(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def SetBaseFrameID(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_AgentServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -177,6 +238,31 @@ def add_AgentServicer_to_server(servicer, server):
           servicer.Health,
           request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthRequest.FromString,
           response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthResponse.SerializeToString,
+      ),
+      'GetCommandRequest': grpc.unary_unary_rpc_method_handler(
+          servicer.GetCommandRequest,
+          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCommandRequestRequest.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCommandRequestResponse.SerializeToString,
+      ),
+      'GetCommandRequestStream': grpc.unary_stream_rpc_method_handler(
+          servicer.GetCommandRequestStream,
+          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCommandRequestStreamRequest.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCommandRequestStreamResponse.SerializeToString,
+      ),
+      'SendCommandResponse': grpc.unary_unary_rpc_method_handler(
+          servicer.SendCommandResponse,
+          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendCommandResponseRequest.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendCommandResponseResponse.SerializeToString,
+      ),
+      'PostTransformFrame': grpc.unary_unary_rpc_method_handler(
+          servicer.PostTransformFrame,
+          request_deserializer=protos_dot_model_dot_v1_dot_math__pb2.TransformFrame.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostTransformFrameResponse.SerializeToString,
+      ),
+      'SetBaseFrameID': grpc.unary_unary_rpc_method_handler(
+          servicer.SetBaseFrameID,
+          request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.SetBaseFrameIDRequest.FromString,
+          response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.SetBaseFrameIDResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

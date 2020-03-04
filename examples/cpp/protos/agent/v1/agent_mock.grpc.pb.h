@@ -40,6 +40,21 @@ class MockAgentStub : public Agent::StubInterface {
   MOCK_METHOD3(Health, ::grpc::Status(::grpc::ClientContext* context, const ::v1::agent::HealthRequest& request, ::v1::agent::HealthResponse* response));
   MOCK_METHOD3(AsyncHealthRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::HealthResponse>*(::grpc::ClientContext* context, const ::v1::agent::HealthRequest& request, ::grpc::CompletionQueue* cq));
   MOCK_METHOD3(PrepareAsyncHealthRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::HealthResponse>*(::grpc::ClientContext* context, const ::v1::agent::HealthRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(GetCommandRequest, ::grpc::Status(::grpc::ClientContext* context, const ::v1::agent::GetCommandRequestRequest& request, ::v1::agent::GetCommandRequestResponse* response));
+  MOCK_METHOD3(AsyncGetCommandRequestRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::GetCommandRequestResponse>*(::grpc::ClientContext* context, const ::v1::agent::GetCommandRequestRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(PrepareAsyncGetCommandRequestRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::GetCommandRequestResponse>*(::grpc::ClientContext* context, const ::v1::agent::GetCommandRequestRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD2(GetCommandRequestStreamRaw, ::grpc::ClientReaderInterface< ::v1::agent::GetCommandRequestStreamResponse>*(::grpc::ClientContext* context, const ::v1::agent::GetCommandRequestStreamRequest& request));
+  MOCK_METHOD4(AsyncGetCommandRequestStreamRaw, ::grpc::ClientAsyncReaderInterface< ::v1::agent::GetCommandRequestStreamResponse>*(::grpc::ClientContext* context, const ::v1::agent::GetCommandRequestStreamRequest& request, ::grpc::CompletionQueue* cq, void* tag));
+  MOCK_METHOD3(PrepareAsyncGetCommandRequestStreamRaw, ::grpc::ClientAsyncReaderInterface< ::v1::agent::GetCommandRequestStreamResponse>*(::grpc::ClientContext* context, const ::v1::agent::GetCommandRequestStreamRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(SendCommandResponse, ::grpc::Status(::grpc::ClientContext* context, const ::v1::agent::SendCommandResponseRequest& request, ::v1::agent::SendCommandResponseResponse* response));
+  MOCK_METHOD3(AsyncSendCommandResponseRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::SendCommandResponseResponse>*(::grpc::ClientContext* context, const ::v1::agent::SendCommandResponseRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(PrepareAsyncSendCommandResponseRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::SendCommandResponseResponse>*(::grpc::ClientContext* context, const ::v1::agent::SendCommandResponseRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(PostTransformFrame, ::grpc::Status(::grpc::ClientContext* context, const ::v1::model::TransformFrame& request, ::v1::agent::PostTransformFrameResponse* response));
+  MOCK_METHOD3(AsyncPostTransformFrameRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::PostTransformFrameResponse>*(::grpc::ClientContext* context, const ::v1::model::TransformFrame& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(PrepareAsyncPostTransformFrameRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::PostTransformFrameResponse>*(::grpc::ClientContext* context, const ::v1::model::TransformFrame& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(SetBaseFrameID, ::grpc::Status(::grpc::ClientContext* context, const ::v1::agent::SetBaseFrameIDRequest& request, ::v1::agent::SetBaseFrameIDResponse* response));
+  MOCK_METHOD3(AsyncSetBaseFrameIDRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::SetBaseFrameIDResponse>*(::grpc::ClientContext* context, const ::v1::agent::SetBaseFrameIDRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(PrepareAsyncSetBaseFrameIDRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::SetBaseFrameIDResponse>*(::grpc::ClientContext* context, const ::v1::agent::SetBaseFrameIDRequest& request, ::grpc::CompletionQueue* cq));
 };
 
 } // namespace v1

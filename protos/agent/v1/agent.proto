@@ -4,7 +4,9 @@ package v1.agent;
 
 import "protos/model/v1/datapoint.proto";
 import "protos/model/v1/intervention.proto";
+import "protos/model/v1/commands.proto";
 import "protos/model/v1/config.proto";
+import "protos/model/v1/math.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/agent";
 
@@ -59,6 +61,26 @@ service Agent {
    * available. */
   rpc Health(HealthRequest) returns (HealthResponse) {
   }
+  /* GetCommandRequest returns the latest pending command request. */
+  rpc GetCommandRequest(GetCommandRequestRequest)
+      returns (GetCommandRequestResponse) {
+  }
+  rpc GetCommandRequestStream(GetCommandRequestStreamRequest)
+      returns (stream GetCommandRequestStreamResponse) {
+  }
+  /* SendCommandResponse sends a response to a command request. */
+  rpc SendCommandResponse(SendCommandResponseRequest)
+      returns (SendCommandResponseResponse) {
+  }
+  /* PostTransformFrame posts a transform between a parent and child. This
+   * updates a transform tree within the agent. */
+  rpc PostTransformFrame(model.TransformFrame)
+      returns (PostTransformFrameResponse) {
+  }
+  /* SetBaseFrameID sets the base frame Id to be used for transform
+   * visualizations. */
+  rpc SetBaseFrameID(SetBaseFrameIDRequest) returns (SetBaseFrameIDResponse) {
+  }
 }
 
 message StreamDataResponse {
@@ -99,4 +121,37 @@ message HealthRequest {
 }
 
 message HealthResponse {
+}
+
+message GetCommandRequestRequest {
+  repeated string command_filter = 1;
+}
+
+message GetCommandRequestResponse {
+  model.CommandRequest request = 1;
+}
+
+message SendCommandResponseRequest {
+  model.CommandResponse response = 1;
+}
+
+message SendCommandResponseResponse {
+}
+
+message GetCommandRequestStreamRequest {
+  repeated string command_filter = 1;
+}
+
+message GetCommandRequestStreamResponse {
+  model.CommandRequest request = 1;
+}
+
+message PostTransformFrameResponse {
+}
+
+message SetBaseFrameIDRequest {
+  string id = 1;
+}
+
+message SetBaseFrameIDResponse {
 }
