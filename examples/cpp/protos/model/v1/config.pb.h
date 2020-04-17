@@ -53,7 +53,7 @@ struct TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[15]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[18]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -71,12 +71,18 @@ extern AgentConfigurationDocumentDefaultTypeInternal _AgentConfigurationDocument
 class AgentConfigurationDocument_TagsEntry_DoNotUse;
 class AgentConfigurationDocument_TagsEntry_DoNotUseDefaultTypeInternal;
 extern AgentConfigurationDocument_TagsEntry_DoNotUseDefaultTypeInternal _AgentConfigurationDocument_TagsEntry_DoNotUse_default_instance_;
+class AgentConfigurationStore;
+class AgentConfigurationStoreDefaultTypeInternal;
+extern AgentConfigurationStoreDefaultTypeInternal _AgentConfigurationStore_default_instance_;
 class ApplicationConfiguration;
 class ApplicationConfigurationDefaultTypeInternal;
 extern ApplicationConfigurationDefaultTypeInternal _ApplicationConfiguration_default_instance_;
 class ApplicationConfiguration_ConfigurationMapEntry_DoNotUse;
 class ApplicationConfiguration_ConfigurationMapEntry_DoNotUseDefaultTypeInternal;
 extern ApplicationConfiguration_ConfigurationMapEntry_DoNotUseDefaultTypeInternal _ApplicationConfiguration_ConfigurationMapEntry_DoNotUse_default_instance_;
+class Custom;
+class CustomDefaultTypeInternal;
+extern CustomDefaultTypeInternal _Custom_default_instance_;
 class DirectoryWatch;
 class DirectoryWatchDefaultTypeInternal;
 extern DirectoryWatchDefaultTypeInternal _DirectoryWatch_default_instance_;
@@ -86,6 +92,9 @@ extern DiskConfigurationDefaultTypeInternal _DiskConfiguration_default_instance_
 class FileTail;
 class FileTailDefaultTypeInternal;
 extern FileTailDefaultTypeInternal _FileTail_default_instance_;
+class PortForwardingConfiguration;
+class PortForwardingConfigurationDefaultTypeInternal;
+extern PortForwardingConfigurationDefaultTypeInternal _PortForwardingConfiguration_default_instance_;
 class ROSConfiguration;
 class ROSConfigurationDefaultTypeInternal;
 extern ROSConfigurationDefaultTypeInternal _ROSConfiguration_default_instance_;
@@ -113,11 +122,14 @@ PROTOBUF_NAMESPACE_OPEN
 template<> ::v1::model::AgentConfiguration* Arena::CreateMaybeMessage<::v1::model::AgentConfiguration>(Arena*);
 template<> ::v1::model::AgentConfigurationDocument* Arena::CreateMaybeMessage<::v1::model::AgentConfigurationDocument>(Arena*);
 template<> ::v1::model::AgentConfigurationDocument_TagsEntry_DoNotUse* Arena::CreateMaybeMessage<::v1::model::AgentConfigurationDocument_TagsEntry_DoNotUse>(Arena*);
+template<> ::v1::model::AgentConfigurationStore* Arena::CreateMaybeMessage<::v1::model::AgentConfigurationStore>(Arena*);
 template<> ::v1::model::ApplicationConfiguration* Arena::CreateMaybeMessage<::v1::model::ApplicationConfiguration>(Arena*);
 template<> ::v1::model::ApplicationConfiguration_ConfigurationMapEntry_DoNotUse* Arena::CreateMaybeMessage<::v1::model::ApplicationConfiguration_ConfigurationMapEntry_DoNotUse>(Arena*);
+template<> ::v1::model::Custom* Arena::CreateMaybeMessage<::v1::model::Custom>(Arena*);
 template<> ::v1::model::DirectoryWatch* Arena::CreateMaybeMessage<::v1::model::DirectoryWatch>(Arena*);
 template<> ::v1::model::DiskConfiguration* Arena::CreateMaybeMessage<::v1::model::DiskConfiguration>(Arena*);
 template<> ::v1::model::FileTail* Arena::CreateMaybeMessage<::v1::model::FileTail>(Arena*);
+template<> ::v1::model::PortForwardingConfiguration* Arena::CreateMaybeMessage<::v1::model::PortForwardingConfiguration>(Arena*);
 template<> ::v1::model::ROSConfiguration* Arena::CreateMaybeMessage<::v1::model::ROSConfiguration>(Arena*);
 template<> ::v1::model::ResourcesConfiguration* Arena::CreateMaybeMessage<::v1::model::ResourcesConfiguration>(Arena*);
 template<> ::v1::model::StreamConfiguration* Arena::CreateMaybeMessage<::v1::model::StreamConfiguration>(Arena*);
@@ -135,12 +147,13 @@ enum TeleopRosStreamConfigurationTopicType : int {
   SENSOR_MSGS_COMPRESSED_IMAGE = 2,
   STD_MSGS_STRING = 3,
   GEOMETRY_MSGS_POSE = 4,
+  ACTIONLIB_MSGS_GOALID = 5,
   TeleopRosStreamConfigurationTopicType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   TeleopRosStreamConfigurationTopicType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool TeleopRosStreamConfigurationTopicType_IsValid(int value);
 constexpr TeleopRosStreamConfigurationTopicType TeleopRosStreamConfigurationTopicType_MIN = GEOMETRY_MSGS_TWIST;
-constexpr TeleopRosStreamConfigurationTopicType TeleopRosStreamConfigurationTopicType_MAX = GEOMETRY_MSGS_POSE;
+constexpr TeleopRosStreamConfigurationTopicType TeleopRosStreamConfigurationTopicType_MAX = ACTIONLIB_MSGS_GOALID;
 constexpr int TeleopRosStreamConfigurationTopicType_ARRAYSIZE = TeleopRosStreamConfigurationTopicType_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* TeleopRosStreamConfigurationTopicType_descriptor();
@@ -235,6 +248,158 @@ inline bool FileType_Parse(
 }
 // ===================================================================
 
+class AgentConfigurationStore :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.AgentConfigurationStore) */ {
+ public:
+  AgentConfigurationStore();
+  virtual ~AgentConfigurationStore();
+
+  AgentConfigurationStore(const AgentConfigurationStore& from);
+  AgentConfigurationStore(AgentConfigurationStore&& from) noexcept
+    : AgentConfigurationStore() {
+    *this = ::std::move(from);
+  }
+
+  inline AgentConfigurationStore& operator=(const AgentConfigurationStore& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AgentConfigurationStore& operator=(AgentConfigurationStore&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AgentConfigurationStore& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AgentConfigurationStore* internal_default_instance() {
+    return reinterpret_cast<const AgentConfigurationStore*>(
+               &_AgentConfigurationStore_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(AgentConfigurationStore& a, AgentConfigurationStore& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AgentConfigurationStore* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AgentConfigurationStore* New() const final {
+    return CreateMaybeMessage<AgentConfigurationStore>(nullptr);
+  }
+
+  AgentConfigurationStore* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AgentConfigurationStore>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AgentConfigurationStore& from);
+  void MergeFrom(const AgentConfigurationStore& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AgentConfigurationStore* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.model.AgentConfigurationStore";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
+    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAgentVersionFieldNumber = 1,
+    kConfigurationFieldNumber = 2,
+  };
+  // string agent_version = 1[json_name = "agentVersion"];
+  void clear_agent_version();
+  const std::string& agent_version() const;
+  void set_agent_version(const std::string& value);
+  void set_agent_version(std::string&& value);
+  void set_agent_version(const char* value);
+  void set_agent_version(const char* value, size_t size);
+  std::string* mutable_agent_version();
+  std::string* release_agent_version();
+  void set_allocated_agent_version(std::string* agent_version);
+  private:
+  const std::string& _internal_agent_version() const;
+  void _internal_set_agent_version(const std::string& value);
+  std::string* _internal_mutable_agent_version();
+  public:
+
+  // .v1.model.AgentConfiguration configuration = 2[json_name = "configuration"];
+  bool has_configuration() const;
+  private:
+  bool _internal_has_configuration() const;
+  public:
+  void clear_configuration();
+  const ::v1::model::AgentConfiguration& configuration() const;
+  ::v1::model::AgentConfiguration* release_configuration();
+  ::v1::model::AgentConfiguration* mutable_configuration();
+  void set_allocated_configuration(::v1::model::AgentConfiguration* configuration);
+  private:
+  const ::v1::model::AgentConfiguration& _internal_configuration() const;
+  ::v1::model::AgentConfiguration* _internal_mutable_configuration();
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.model.AgentConfigurationStore)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr agent_version_;
+  ::v1::model::AgentConfiguration* configuration_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto;
+};
+// -------------------------------------------------------------------
+
 class AgentConfiguration :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.AgentConfiguration) */ {
  public:
@@ -277,7 +442,7 @@ class AgentConfiguration :
                &_AgentConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    1;
 
   friend void swap(AgentConfiguration& a, AgentConfiguration& b) {
     a.Swap(&b);
@@ -431,7 +596,7 @@ public:
   private:
   static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
     ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
-    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[1];
+    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[2];
   }
 
   public:
@@ -481,7 +646,7 @@ class AgentConfigurationDocument :
                &_AgentConfigurationDocument_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(AgentConfigurationDocument& a, AgentConfigurationDocument& b) {
     a.Swap(&b);
@@ -551,6 +716,7 @@ class AgentConfigurationDocument :
     kResourcesFieldNumber = 4,
     kApplicationFieldNumber = 5,
     kTeleopFieldNumber = 6,
+    kPortForwardingFieldNumber = 7,
     kVersionFieldNumber = 1,
   };
   // map<string, string> tags = 2[json_name = "tags"];
@@ -630,6 +796,21 @@ class AgentConfigurationDocument :
   ::v1::model::TeleopConfiguration* _internal_mutable_teleop();
   public:
 
+  // .v1.model.PortForwardingConfiguration port_forwarding = 7[json_name = "portForwarding"];
+  bool has_port_forwarding() const;
+  private:
+  bool _internal_has_port_forwarding() const;
+  public:
+  void clear_port_forwarding();
+  const ::v1::model::PortForwardingConfiguration& port_forwarding() const;
+  ::v1::model::PortForwardingConfiguration* release_port_forwarding();
+  ::v1::model::PortForwardingConfiguration* mutable_port_forwarding();
+  void set_allocated_port_forwarding(::v1::model::PortForwardingConfiguration* port_forwarding);
+  private:
+  const ::v1::model::PortForwardingConfiguration& _internal_port_forwarding() const;
+  ::v1::model::PortForwardingConfiguration* _internal_mutable_port_forwarding();
+  public:
+
   // int64 version = 1[json_name = "version"];
   void clear_version();
   ::PROTOBUF_NAMESPACE_ID::int64 version() const;
@@ -654,6 +835,7 @@ class AgentConfigurationDocument :
   ::v1::model::ResourcesConfiguration* resources_;
   ::v1::model::ApplicationConfiguration* application_;
   ::v1::model::TeleopConfiguration* teleop_;
+  ::v1::model::PortForwardingConfiguration* port_forwarding_;
   ::PROTOBUF_NAMESPACE_ID::int64 version_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto;
@@ -702,7 +884,7 @@ class TeleopConfiguration :
                &_TeleopConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   friend void swap(TeleopConfiguration& a, TeleopConfiguration& b) {
     a.Swap(&b);
@@ -797,6 +979,140 @@ class TeleopConfiguration :
 };
 // -------------------------------------------------------------------
 
+class PortForwardingConfiguration :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.PortForwardingConfiguration) */ {
+ public:
+  PortForwardingConfiguration();
+  virtual ~PortForwardingConfiguration();
+
+  PortForwardingConfiguration(const PortForwardingConfiguration& from);
+  PortForwardingConfiguration(PortForwardingConfiguration&& from) noexcept
+    : PortForwardingConfiguration() {
+    *this = ::std::move(from);
+  }
+
+  inline PortForwardingConfiguration& operator=(const PortForwardingConfiguration& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PortForwardingConfiguration& operator=(PortForwardingConfiguration&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const PortForwardingConfiguration& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PortForwardingConfiguration* internal_default_instance() {
+    return reinterpret_cast<const PortForwardingConfiguration*>(
+               &_PortForwardingConfiguration_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(PortForwardingConfiguration& a, PortForwardingConfiguration& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PortForwardingConfiguration* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PortForwardingConfiguration* New() const final {
+    return CreateMaybeMessage<PortForwardingConfiguration>(nullptr);
+  }
+
+  PortForwardingConfiguration* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PortForwardingConfiguration>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const PortForwardingConfiguration& from);
+  void MergeFrom(const PortForwardingConfiguration& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PortForwardingConfiguration* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.model.PortForwardingConfiguration";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
+    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEnabledFieldNumber = 1,
+  };
+  // .google.protobuf.BoolValue enabled = 1[json_name = "enabled"];
+  bool has_enabled() const;
+  private:
+  bool _internal_has_enabled() const;
+  public:
+  void clear_enabled();
+  const PROTOBUF_NAMESPACE_ID::BoolValue& enabled() const;
+  PROTOBUF_NAMESPACE_ID::BoolValue* release_enabled();
+  PROTOBUF_NAMESPACE_ID::BoolValue* mutable_enabled();
+  void set_allocated_enabled(PROTOBUF_NAMESPACE_ID::BoolValue* enabled);
+  private:
+  const PROTOBUF_NAMESPACE_ID::BoolValue& _internal_enabled() const;
+  PROTOBUF_NAMESPACE_ID::BoolValue* _internal_mutable_enabled();
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.model.PortForwardingConfiguration)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  PROTOBUF_NAMESPACE_ID::BoolValue* enabled_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto;
+};
+// -------------------------------------------------------------------
+
 class TeleopRosStreamConfiguration :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.TeleopRosStreamConfiguration) */ {
  public:
@@ -839,7 +1155,7 @@ class TeleopRosStreamConfiguration :
                &_TeleopRosStreamConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    6;
 
   friend void swap(TeleopRosStreamConfiguration& a, TeleopRosStreamConfiguration& b) {
     a.Swap(&b);
@@ -996,7 +1312,7 @@ class TelemetryConfiguration :
                &_TelemetryConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    7;
 
   friend void swap(TelemetryConfiguration& a, TelemetryConfiguration& b) {
     a.Swap(&b);
@@ -1134,7 +1450,7 @@ public:
   private:
   static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
     ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
-    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[6];
+    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[8];
   }
 
   public:
@@ -1184,7 +1500,7 @@ class ApplicationConfiguration :
                &_ApplicationConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    9;
 
   friend void swap(ApplicationConfiguration& a, ApplicationConfiguration& b) {
     a.Swap(&b);
@@ -1326,7 +1642,7 @@ class ResourcesConfiguration :
                &_ResourcesConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    10;
 
   friend void swap(ResourcesConfiguration& a, ResourcesConfiguration& b) {
     a.Swap(&b);
@@ -1477,7 +1793,7 @@ class DiskConfiguration :
                &_DiskConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    11;
 
   friend void swap(DiskConfiguration& a, DiskConfiguration& b) {
     a.Swap(&b);
@@ -1605,7 +1921,7 @@ class ROSConfiguration :
                &_ROSConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    12;
 
   friend void swap(ROSConfiguration& a, ROSConfiguration& b) {
     a.Swap(&b);
@@ -1724,7 +2040,7 @@ public:
   private:
   static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
     ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
-    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[11];
+    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[13];
   }
 
   public:
@@ -1771,9 +2087,10 @@ class StreamConfiguration :
   enum ConfigurationCase {
     kRosTopic = 3,
     kRosLocalization = 4,
-    kRosTransformTree = 7,
     kDirectoryWatch = 5,
     kFileTail = 6,
+    kRosTransformTree = 7,
+    kCustom = 9,
     CONFIGURATION_NOT_SET = 0,
   };
 
@@ -1783,7 +2100,7 @@ class StreamConfiguration :
                &_StreamConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    14;
 
   friend void swap(StreamConfiguration& a, StreamConfiguration& b) {
     a.Swap(&b);
@@ -1850,11 +2167,13 @@ class StreamConfiguration :
   enum : int {
     kTagsFieldNumber = 2,
     kNameFieldNumber = 1,
+    kThrottleHzFieldNumber = 8,
     kRosTopicFieldNumber = 3,
     kRosLocalizationFieldNumber = 4,
-    kRosTransformTreeFieldNumber = 7,
     kDirectoryWatchFieldNumber = 5,
     kFileTailFieldNumber = 6,
+    kRosTransformTreeFieldNumber = 7,
+    kCustomFieldNumber = 9,
   };
   // map<string, string> tags = 2[json_name = "tags"];
   int tags_size() const;
@@ -1889,6 +2208,21 @@ class StreamConfiguration :
   std::string* _internal_mutable_name();
   public:
 
+  // .google.protobuf.DoubleValue throttle_hz = 8[json_name = "throttleHz"];
+  bool has_throttle_hz() const;
+  private:
+  bool _internal_has_throttle_hz() const;
+  public:
+  void clear_throttle_hz();
+  const PROTOBUF_NAMESPACE_ID::DoubleValue& throttle_hz() const;
+  PROTOBUF_NAMESPACE_ID::DoubleValue* release_throttle_hz();
+  PROTOBUF_NAMESPACE_ID::DoubleValue* mutable_throttle_hz();
+  void set_allocated_throttle_hz(PROTOBUF_NAMESPACE_ID::DoubleValue* throttle_hz);
+  private:
+  const PROTOBUF_NAMESPACE_ID::DoubleValue& _internal_throttle_hz() const;
+  PROTOBUF_NAMESPACE_ID::DoubleValue* _internal_mutable_throttle_hz();
+  public:
+
   // .v1.model.ROSTopic ros_topic = 3[json_name = "rosTopic"];
   bool has_ros_topic() const;
   private:
@@ -1917,21 +2251,6 @@ class StreamConfiguration :
   private:
   const ::v1::model::ROSLocalization& _internal_ros_localization() const;
   ::v1::model::ROSLocalization* _internal_mutable_ros_localization();
-  public:
-
-  // .v1.model.ROSTransformTree ros_transform_tree = 7[json_name = "rosTransformTree"];
-  bool has_ros_transform_tree() const;
-  private:
-  bool _internal_has_ros_transform_tree() const;
-  public:
-  void clear_ros_transform_tree();
-  const ::v1::model::ROSTransformTree& ros_transform_tree() const;
-  ::v1::model::ROSTransformTree* release_ros_transform_tree();
-  ::v1::model::ROSTransformTree* mutable_ros_transform_tree();
-  void set_allocated_ros_transform_tree(::v1::model::ROSTransformTree* ros_transform_tree);
-  private:
-  const ::v1::model::ROSTransformTree& _internal_ros_transform_tree() const;
-  ::v1::model::ROSTransformTree* _internal_mutable_ros_transform_tree();
   public:
 
   // .v1.model.DirectoryWatch directory_watch = 5[json_name = "directoryWatch"];
@@ -1964,6 +2283,36 @@ class StreamConfiguration :
   ::v1::model::FileTail* _internal_mutable_file_tail();
   public:
 
+  // .v1.model.ROSTransformTree ros_transform_tree = 7[json_name = "rosTransformTree"];
+  bool has_ros_transform_tree() const;
+  private:
+  bool _internal_has_ros_transform_tree() const;
+  public:
+  void clear_ros_transform_tree();
+  const ::v1::model::ROSTransformTree& ros_transform_tree() const;
+  ::v1::model::ROSTransformTree* release_ros_transform_tree();
+  ::v1::model::ROSTransformTree* mutable_ros_transform_tree();
+  void set_allocated_ros_transform_tree(::v1::model::ROSTransformTree* ros_transform_tree);
+  private:
+  const ::v1::model::ROSTransformTree& _internal_ros_transform_tree() const;
+  ::v1::model::ROSTransformTree* _internal_mutable_ros_transform_tree();
+  public:
+
+  // .v1.model.Custom custom = 9[json_name = "custom"];
+  bool has_custom() const;
+  private:
+  bool _internal_has_custom() const;
+  public:
+  void clear_custom();
+  const ::v1::model::Custom& custom() const;
+  ::v1::model::Custom* release_custom();
+  ::v1::model::Custom* mutable_custom();
+  void set_allocated_custom(::v1::model::Custom* custom);
+  private:
+  const ::v1::model::Custom& _internal_custom() const;
+  ::v1::model::Custom* _internal_mutable_custom();
+  public:
+
   void clear_configuration();
   ConfigurationCase configuration_case() const;
   // @@protoc_insertion_point(class_scope:v1.model.StreamConfiguration)
@@ -1971,9 +2320,10 @@ class StreamConfiguration :
   class _Internal;
   void set_has_ros_topic();
   void set_has_ros_localization();
-  void set_has_ros_transform_tree();
   void set_has_directory_watch();
   void set_has_file_tail();
+  void set_has_ros_transform_tree();
+  void set_has_custom();
 
   inline bool has_configuration() const;
   inline void clear_has_configuration();
@@ -1986,17 +2336,134 @@ class StreamConfiguration :
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
       0 > tags_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  PROTOBUF_NAMESPACE_ID::DoubleValue* throttle_hz_;
   union ConfigurationUnion {
     ConfigurationUnion() {}
     ::v1::model::ROSTopic* ros_topic_;
     ::v1::model::ROSLocalization* ros_localization_;
-    ::v1::model::ROSTransformTree* ros_transform_tree_;
     ::v1::model::DirectoryWatch* directory_watch_;
     ::v1::model::FileTail* file_tail_;
+    ::v1::model::ROSTransformTree* ros_transform_tree_;
+    ::v1::model::Custom* custom_;
   } configuration_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
 
+  friend struct ::TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Custom :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.Custom) */ {
+ public:
+  Custom();
+  virtual ~Custom();
+
+  Custom(const Custom& from);
+  Custom(Custom&& from) noexcept
+    : Custom() {
+    *this = ::std::move(from);
+  }
+
+  inline Custom& operator=(const Custom& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Custom& operator=(Custom&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Custom& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Custom* internal_default_instance() {
+    return reinterpret_cast<const Custom*>(
+               &_Custom_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  friend void swap(Custom& a, Custom& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Custom* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Custom* New() const final {
+    return CreateMaybeMessage<Custom>(nullptr);
+  }
+
+  Custom* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Custom>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Custom& from);
+  void MergeFrom(const Custom& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Custom* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.model.Custom";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
+    return ::descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:v1.model.Custom)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2043,7 +2510,7 @@ class DirectoryWatch :
                &_DirectoryWatch_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    16;
 
   friend void swap(DirectoryWatch& a, DirectoryWatch& b) {
     a.Swap(&b);
@@ -2218,7 +2685,7 @@ class FileTail :
                &_FileTail_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    17;
 
   friend void swap(FileTail& a, FileTail& b) {
     a.Swap(&b);
@@ -2383,6 +2850,130 @@ class FileTail :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// AgentConfigurationStore
+
+// string agent_version = 1[json_name = "agentVersion"];
+inline void AgentConfigurationStore::clear_agent_version() {
+  agent_version_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& AgentConfigurationStore::agent_version() const {
+  // @@protoc_insertion_point(field_get:v1.model.AgentConfigurationStore.agent_version)
+  return _internal_agent_version();
+}
+inline void AgentConfigurationStore::set_agent_version(const std::string& value) {
+  _internal_set_agent_version(value);
+  // @@protoc_insertion_point(field_set:v1.model.AgentConfigurationStore.agent_version)
+}
+inline std::string* AgentConfigurationStore::mutable_agent_version() {
+  // @@protoc_insertion_point(field_mutable:v1.model.AgentConfigurationStore.agent_version)
+  return _internal_mutable_agent_version();
+}
+inline const std::string& AgentConfigurationStore::_internal_agent_version() const {
+  return agent_version_.GetNoArena();
+}
+inline void AgentConfigurationStore::_internal_set_agent_version(const std::string& value) {
+  
+  agent_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void AgentConfigurationStore::set_agent_version(std::string&& value) {
+  
+  agent_version_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:v1.model.AgentConfigurationStore.agent_version)
+}
+inline void AgentConfigurationStore::set_agent_version(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  agent_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.model.AgentConfigurationStore.agent_version)
+}
+inline void AgentConfigurationStore::set_agent_version(const char* value, size_t size) {
+  
+  agent_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:v1.model.AgentConfigurationStore.agent_version)
+}
+inline std::string* AgentConfigurationStore::_internal_mutable_agent_version() {
+  
+  return agent_version_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* AgentConfigurationStore::release_agent_version() {
+  // @@protoc_insertion_point(field_release:v1.model.AgentConfigurationStore.agent_version)
+  
+  return agent_version_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void AgentConfigurationStore::set_allocated_agent_version(std::string* agent_version) {
+  if (agent_version != nullptr) {
+    
+  } else {
+    
+  }
+  agent_version_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), agent_version);
+  // @@protoc_insertion_point(field_set_allocated:v1.model.AgentConfigurationStore.agent_version)
+}
+
+// .v1.model.AgentConfiguration configuration = 2[json_name = "configuration"];
+inline bool AgentConfigurationStore::_internal_has_configuration() const {
+  return this != internal_default_instance() && configuration_ != nullptr;
+}
+inline bool AgentConfigurationStore::has_configuration() const {
+  return _internal_has_configuration();
+}
+inline void AgentConfigurationStore::clear_configuration() {
+  if (GetArenaNoVirtual() == nullptr && configuration_ != nullptr) {
+    delete configuration_;
+  }
+  configuration_ = nullptr;
+}
+inline const ::v1::model::AgentConfiguration& AgentConfigurationStore::_internal_configuration() const {
+  const ::v1::model::AgentConfiguration* p = configuration_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::AgentConfiguration*>(
+      &::v1::model::_AgentConfiguration_default_instance_);
+}
+inline const ::v1::model::AgentConfiguration& AgentConfigurationStore::configuration() const {
+  // @@protoc_insertion_point(field_get:v1.model.AgentConfigurationStore.configuration)
+  return _internal_configuration();
+}
+inline ::v1::model::AgentConfiguration* AgentConfigurationStore::release_configuration() {
+  // @@protoc_insertion_point(field_release:v1.model.AgentConfigurationStore.configuration)
+  
+  ::v1::model::AgentConfiguration* temp = configuration_;
+  configuration_ = nullptr;
+  return temp;
+}
+inline ::v1::model::AgentConfiguration* AgentConfigurationStore::_internal_mutable_configuration() {
+  
+  if (configuration_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::AgentConfiguration>(GetArenaNoVirtual());
+    configuration_ = p;
+  }
+  return configuration_;
+}
+inline ::v1::model::AgentConfiguration* AgentConfigurationStore::mutable_configuration() {
+  // @@protoc_insertion_point(field_mutable:v1.model.AgentConfigurationStore.configuration)
+  return _internal_mutable_configuration();
+}
+inline void AgentConfigurationStore::set_allocated_configuration(::v1::model::AgentConfiguration* configuration) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete configuration_;
+  }
+  if (configuration) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      configuration = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, configuration, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  configuration_ = configuration;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.AgentConfigurationStore.configuration)
+}
+
+// -------------------------------------------------------------------
+
 // AgentConfiguration
 
 // string id = 1[json_name = "id"];
@@ -2860,6 +3451,66 @@ inline void AgentConfigurationDocument::set_allocated_teleop(::v1::model::Teleop
   // @@protoc_insertion_point(field_set_allocated:v1.model.AgentConfigurationDocument.teleop)
 }
 
+// .v1.model.PortForwardingConfiguration port_forwarding = 7[json_name = "portForwarding"];
+inline bool AgentConfigurationDocument::_internal_has_port_forwarding() const {
+  return this != internal_default_instance() && port_forwarding_ != nullptr;
+}
+inline bool AgentConfigurationDocument::has_port_forwarding() const {
+  return _internal_has_port_forwarding();
+}
+inline void AgentConfigurationDocument::clear_port_forwarding() {
+  if (GetArenaNoVirtual() == nullptr && port_forwarding_ != nullptr) {
+    delete port_forwarding_;
+  }
+  port_forwarding_ = nullptr;
+}
+inline const ::v1::model::PortForwardingConfiguration& AgentConfigurationDocument::_internal_port_forwarding() const {
+  const ::v1::model::PortForwardingConfiguration* p = port_forwarding_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::PortForwardingConfiguration*>(
+      &::v1::model::_PortForwardingConfiguration_default_instance_);
+}
+inline const ::v1::model::PortForwardingConfiguration& AgentConfigurationDocument::port_forwarding() const {
+  // @@protoc_insertion_point(field_get:v1.model.AgentConfigurationDocument.port_forwarding)
+  return _internal_port_forwarding();
+}
+inline ::v1::model::PortForwardingConfiguration* AgentConfigurationDocument::release_port_forwarding() {
+  // @@protoc_insertion_point(field_release:v1.model.AgentConfigurationDocument.port_forwarding)
+  
+  ::v1::model::PortForwardingConfiguration* temp = port_forwarding_;
+  port_forwarding_ = nullptr;
+  return temp;
+}
+inline ::v1::model::PortForwardingConfiguration* AgentConfigurationDocument::_internal_mutable_port_forwarding() {
+  
+  if (port_forwarding_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::PortForwardingConfiguration>(GetArenaNoVirtual());
+    port_forwarding_ = p;
+  }
+  return port_forwarding_;
+}
+inline ::v1::model::PortForwardingConfiguration* AgentConfigurationDocument::mutable_port_forwarding() {
+  // @@protoc_insertion_point(field_mutable:v1.model.AgentConfigurationDocument.port_forwarding)
+  return _internal_mutable_port_forwarding();
+}
+inline void AgentConfigurationDocument::set_allocated_port_forwarding(::v1::model::PortForwardingConfiguration* port_forwarding) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete port_forwarding_;
+  }
+  if (port_forwarding) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      port_forwarding = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, port_forwarding, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  port_forwarding_ = port_forwarding;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.AgentConfigurationDocument.port_forwarding)
+}
+
 // -------------------------------------------------------------------
 
 // TeleopConfiguration
@@ -2901,6 +3552,65 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::TeleopRosSt
 TeleopConfiguration::ros_streams() const {
   // @@protoc_insertion_point(field_list:v1.model.TeleopConfiguration.ros_streams)
   return ros_streams_;
+}
+
+// -------------------------------------------------------------------
+
+// PortForwardingConfiguration
+
+// .google.protobuf.BoolValue enabled = 1[json_name = "enabled"];
+inline bool PortForwardingConfiguration::_internal_has_enabled() const {
+  return this != internal_default_instance() && enabled_ != nullptr;
+}
+inline bool PortForwardingConfiguration::has_enabled() const {
+  return _internal_has_enabled();
+}
+inline const PROTOBUF_NAMESPACE_ID::BoolValue& PortForwardingConfiguration::_internal_enabled() const {
+  const PROTOBUF_NAMESPACE_ID::BoolValue* p = enabled_;
+  return p != nullptr ? *p : *reinterpret_cast<const PROTOBUF_NAMESPACE_ID::BoolValue*>(
+      &PROTOBUF_NAMESPACE_ID::_BoolValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::BoolValue& PortForwardingConfiguration::enabled() const {
+  // @@protoc_insertion_point(field_get:v1.model.PortForwardingConfiguration.enabled)
+  return _internal_enabled();
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* PortForwardingConfiguration::release_enabled() {
+  // @@protoc_insertion_point(field_release:v1.model.PortForwardingConfiguration.enabled)
+  
+  PROTOBUF_NAMESPACE_ID::BoolValue* temp = enabled_;
+  enabled_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* PortForwardingConfiguration::_internal_mutable_enabled() {
+  
+  if (enabled_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::BoolValue>(GetArenaNoVirtual());
+    enabled_ = p;
+  }
+  return enabled_;
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* PortForwardingConfiguration::mutable_enabled() {
+  // @@protoc_insertion_point(field_mutable:v1.model.PortForwardingConfiguration.enabled)
+  return _internal_mutable_enabled();
+}
+inline void PortForwardingConfiguration::set_allocated_enabled(PROTOBUF_NAMESPACE_ID::BoolValue* enabled) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(enabled_);
+  }
+  if (enabled) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(enabled)->GetArena();
+    if (message_arena != submessage_arena) {
+      enabled = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, enabled, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  enabled_ = enabled;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.PortForwardingConfiguration.enabled)
 }
 
 // -------------------------------------------------------------------
@@ -3535,50 +4245,6 @@ inline ::v1::model::ROSLocalization* StreamConfiguration::mutable_ros_localizati
   return _internal_mutable_ros_localization();
 }
 
-// .v1.model.ROSTransformTree ros_transform_tree = 7[json_name = "rosTransformTree"];
-inline bool StreamConfiguration::_internal_has_ros_transform_tree() const {
-  return configuration_case() == kRosTransformTree;
-}
-inline bool StreamConfiguration::has_ros_transform_tree() const {
-  return _internal_has_ros_transform_tree();
-}
-inline void StreamConfiguration::set_has_ros_transform_tree() {
-  _oneof_case_[0] = kRosTransformTree;
-}
-inline ::v1::model::ROSTransformTree* StreamConfiguration::release_ros_transform_tree() {
-  // @@protoc_insertion_point(field_release:v1.model.StreamConfiguration.ros_transform_tree)
-  if (_internal_has_ros_transform_tree()) {
-    clear_has_configuration();
-      ::v1::model::ROSTransformTree* temp = configuration_.ros_transform_tree_;
-    configuration_.ros_transform_tree_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline const ::v1::model::ROSTransformTree& StreamConfiguration::_internal_ros_transform_tree() const {
-  return _internal_has_ros_transform_tree()
-      ? *configuration_.ros_transform_tree_
-      : *reinterpret_cast< ::v1::model::ROSTransformTree*>(&::v1::model::_ROSTransformTree_default_instance_);
-}
-inline const ::v1::model::ROSTransformTree& StreamConfiguration::ros_transform_tree() const {
-  // @@protoc_insertion_point(field_get:v1.model.StreamConfiguration.ros_transform_tree)
-  return _internal_ros_transform_tree();
-}
-inline ::v1::model::ROSTransformTree* StreamConfiguration::_internal_mutable_ros_transform_tree() {
-  if (!_internal_has_ros_transform_tree()) {
-    clear_configuration();
-    set_has_ros_transform_tree();
-    configuration_.ros_transform_tree_ = CreateMaybeMessage< ::v1::model::ROSTransformTree >(
-        GetArenaNoVirtual());
-  }
-  return configuration_.ros_transform_tree_;
-}
-inline ::v1::model::ROSTransformTree* StreamConfiguration::mutable_ros_transform_tree() {
-  // @@protoc_insertion_point(field_mutable:v1.model.StreamConfiguration.ros_transform_tree)
-  return _internal_mutable_ros_transform_tree();
-}
-
 // .v1.model.DirectoryWatch directory_watch = 5[json_name = "directoryWatch"];
 inline bool StreamConfiguration::_internal_has_directory_watch() const {
   return configuration_case() == kDirectoryWatch;
@@ -3679,6 +4345,155 @@ inline ::v1::model::FileTail* StreamConfiguration::mutable_file_tail() {
   return _internal_mutable_file_tail();
 }
 
+// .v1.model.ROSTransformTree ros_transform_tree = 7[json_name = "rosTransformTree"];
+inline bool StreamConfiguration::_internal_has_ros_transform_tree() const {
+  return configuration_case() == kRosTransformTree;
+}
+inline bool StreamConfiguration::has_ros_transform_tree() const {
+  return _internal_has_ros_transform_tree();
+}
+inline void StreamConfiguration::set_has_ros_transform_tree() {
+  _oneof_case_[0] = kRosTransformTree;
+}
+inline ::v1::model::ROSTransformTree* StreamConfiguration::release_ros_transform_tree() {
+  // @@protoc_insertion_point(field_release:v1.model.StreamConfiguration.ros_transform_tree)
+  if (_internal_has_ros_transform_tree()) {
+    clear_has_configuration();
+      ::v1::model::ROSTransformTree* temp = configuration_.ros_transform_tree_;
+    configuration_.ros_transform_tree_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::v1::model::ROSTransformTree& StreamConfiguration::_internal_ros_transform_tree() const {
+  return _internal_has_ros_transform_tree()
+      ? *configuration_.ros_transform_tree_
+      : *reinterpret_cast< ::v1::model::ROSTransformTree*>(&::v1::model::_ROSTransformTree_default_instance_);
+}
+inline const ::v1::model::ROSTransformTree& StreamConfiguration::ros_transform_tree() const {
+  // @@protoc_insertion_point(field_get:v1.model.StreamConfiguration.ros_transform_tree)
+  return _internal_ros_transform_tree();
+}
+inline ::v1::model::ROSTransformTree* StreamConfiguration::_internal_mutable_ros_transform_tree() {
+  if (!_internal_has_ros_transform_tree()) {
+    clear_configuration();
+    set_has_ros_transform_tree();
+    configuration_.ros_transform_tree_ = CreateMaybeMessage< ::v1::model::ROSTransformTree >(
+        GetArenaNoVirtual());
+  }
+  return configuration_.ros_transform_tree_;
+}
+inline ::v1::model::ROSTransformTree* StreamConfiguration::mutable_ros_transform_tree() {
+  // @@protoc_insertion_point(field_mutable:v1.model.StreamConfiguration.ros_transform_tree)
+  return _internal_mutable_ros_transform_tree();
+}
+
+// .v1.model.Custom custom = 9[json_name = "custom"];
+inline bool StreamConfiguration::_internal_has_custom() const {
+  return configuration_case() == kCustom;
+}
+inline bool StreamConfiguration::has_custom() const {
+  return _internal_has_custom();
+}
+inline void StreamConfiguration::set_has_custom() {
+  _oneof_case_[0] = kCustom;
+}
+inline void StreamConfiguration::clear_custom() {
+  if (_internal_has_custom()) {
+    delete configuration_.custom_;
+    clear_has_configuration();
+  }
+}
+inline ::v1::model::Custom* StreamConfiguration::release_custom() {
+  // @@protoc_insertion_point(field_release:v1.model.StreamConfiguration.custom)
+  if (_internal_has_custom()) {
+    clear_has_configuration();
+      ::v1::model::Custom* temp = configuration_.custom_;
+    configuration_.custom_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::v1::model::Custom& StreamConfiguration::_internal_custom() const {
+  return _internal_has_custom()
+      ? *configuration_.custom_
+      : *reinterpret_cast< ::v1::model::Custom*>(&::v1::model::_Custom_default_instance_);
+}
+inline const ::v1::model::Custom& StreamConfiguration::custom() const {
+  // @@protoc_insertion_point(field_get:v1.model.StreamConfiguration.custom)
+  return _internal_custom();
+}
+inline ::v1::model::Custom* StreamConfiguration::_internal_mutable_custom() {
+  if (!_internal_has_custom()) {
+    clear_configuration();
+    set_has_custom();
+    configuration_.custom_ = CreateMaybeMessage< ::v1::model::Custom >(
+        GetArenaNoVirtual());
+  }
+  return configuration_.custom_;
+}
+inline ::v1::model::Custom* StreamConfiguration::mutable_custom() {
+  // @@protoc_insertion_point(field_mutable:v1.model.StreamConfiguration.custom)
+  return _internal_mutable_custom();
+}
+
+// .google.protobuf.DoubleValue throttle_hz = 8[json_name = "throttleHz"];
+inline bool StreamConfiguration::_internal_has_throttle_hz() const {
+  return this != internal_default_instance() && throttle_hz_ != nullptr;
+}
+inline bool StreamConfiguration::has_throttle_hz() const {
+  return _internal_has_throttle_hz();
+}
+inline const PROTOBUF_NAMESPACE_ID::DoubleValue& StreamConfiguration::_internal_throttle_hz() const {
+  const PROTOBUF_NAMESPACE_ID::DoubleValue* p = throttle_hz_;
+  return p != nullptr ? *p : *reinterpret_cast<const PROTOBUF_NAMESPACE_ID::DoubleValue*>(
+      &PROTOBUF_NAMESPACE_ID::_DoubleValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::DoubleValue& StreamConfiguration::throttle_hz() const {
+  // @@protoc_insertion_point(field_get:v1.model.StreamConfiguration.throttle_hz)
+  return _internal_throttle_hz();
+}
+inline PROTOBUF_NAMESPACE_ID::DoubleValue* StreamConfiguration::release_throttle_hz() {
+  // @@protoc_insertion_point(field_release:v1.model.StreamConfiguration.throttle_hz)
+  
+  PROTOBUF_NAMESPACE_ID::DoubleValue* temp = throttle_hz_;
+  throttle_hz_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::DoubleValue* StreamConfiguration::_internal_mutable_throttle_hz() {
+  
+  if (throttle_hz_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::DoubleValue>(GetArenaNoVirtual());
+    throttle_hz_ = p;
+  }
+  return throttle_hz_;
+}
+inline PROTOBUF_NAMESPACE_ID::DoubleValue* StreamConfiguration::mutable_throttle_hz() {
+  // @@protoc_insertion_point(field_mutable:v1.model.StreamConfiguration.throttle_hz)
+  return _internal_mutable_throttle_hz();
+}
+inline void StreamConfiguration::set_allocated_throttle_hz(PROTOBUF_NAMESPACE_ID::DoubleValue* throttle_hz) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(throttle_hz_);
+  }
+  if (throttle_hz) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(throttle_hz)->GetArena();
+    if (message_arena != submessage_arena) {
+      throttle_hz = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, throttle_hz, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  throttle_hz_ = throttle_hz;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.StreamConfiguration.throttle_hz)
+}
+
 inline bool StreamConfiguration::has_configuration() const {
   return configuration_case() != CONFIGURATION_NOT_SET;
 }
@@ -3688,6 +4503,10 @@ inline void StreamConfiguration::clear_has_configuration() {
 inline StreamConfiguration::ConfigurationCase StreamConfiguration::configuration_case() const {
   return StreamConfiguration::ConfigurationCase(_oneof_case_[0]);
 }
+// -------------------------------------------------------------------
+
+// Custom
+
 // -------------------------------------------------------------------
 
 // DirectoryWatch
@@ -4119,6 +4938,12 @@ inline void FileTail::set_allocated_regex(std::string* regex) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

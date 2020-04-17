@@ -14,9 +14,12 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Goal_protos_2fmodel_2fv1_2fnavigation_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Path_protos_2fmodel_2fv1_2fnavigation_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmedia_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto;
 namespace v1 {
@@ -44,8 +47,49 @@ class OccupancyGridDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OccupancyGrid> _instance;
 } _OccupancyGrid_default_instance_;
+class PathDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Path> _instance;
+} _Path_default_instance_;
+class GoalDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Goal> _instance;
+} _Goal_default_instance_;
+class GoalIDDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GoalID> _instance;
+} _GoalID_default_instance_;
 }  // namespace model
 }  // namespace v1
+static void InitDefaultsscc_info_Goal_protos_2fmodel_2fv1_2fnavigation_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::v1::model::_Goal_default_instance_;
+    new (ptr) ::v1::model::Goal();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::v1::model::Goal::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Goal_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Goal_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
+      &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
+
+static void InitDefaultsscc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::v1::model::_GoalID_default_instance_;
+    new (ptr) ::v1::model::GoalID();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::v1::model::GoalID::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto}, {}};
+
 static void InitDefaultsscc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -57,10 +101,13 @@ static void InitDefaultsscc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2
   ::v1::model::Localization::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, 0, InitDefaultsscc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
       &scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
-      &scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base,}};
+      &scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+      &scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto.base,
+      &scc_info_Path_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+      &scc_info_Goal_protos_2fmodel_2fv1_2fnavigation_2eproto.base,}};
 
 static void InitDefaultsscc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -122,7 +169,22 @@ static void InitDefaultsscc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2epro
       &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,
       &scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[5];
+static void InitDefaultsscc_info_Path_protos_2fmodel_2fv1_2fnavigation_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::v1::model::_Path_default_instance_;
+    new (ptr) ::v1::model::Path();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::v1::model::Path::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Path_protos_2fmodel_2fv1_2fnavigation_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Path_protos_2fmodel_2fv1_2fnavigation_2eproto}, {
+      &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto[8];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto = nullptr;
 
@@ -141,6 +203,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fnavigati
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::v1::model::Localization, odometry_),
   PROTOBUF_FIELD_OFFSET(::v1::model::Localization, map_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Localization, point_clouds_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Localization, path_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Localization, goal_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::model::Odometry, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -169,13 +234,36 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fnavigati
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::v1::model::OccupancyGrid, data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::v1::model::Path, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::v1::model::Path, world_to_local_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Path, poses_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::v1::model::Goal, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::v1::model::Goal, world_to_local_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Goal, pose_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::v1::model::GoalID, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::v1::model::GoalID, id_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::v1::model::Location)},
   { 7, -1, sizeof(::v1::model::Localization)},
-  { 14, -1, sizeof(::v1::model::Odometry)},
-  { 22, -1, sizeof(::v1::model::Map)},
-  { 36, -1, sizeof(::v1::model::OccupancyGrid)},
+  { 17, -1, sizeof(::v1::model::Odometry)},
+  { 25, -1, sizeof(::v1::model::Map)},
+  { 39, -1, sizeof(::v1::model::OccupancyGrid)},
+  { 45, -1, sizeof(::v1::model::Path)},
+  { 52, -1, sizeof(::v1::model::Goal)},
+  { 59, -1, sizeof(::v1::model::GoalID)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -184,47 +272,64 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Odometry_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Map_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_OccupancyGrid_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Path_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Goal_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_GoalID_default_instance_),
 };
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2fnavigation_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n protos/model/v1/navigation.proto\022\010v1.m"
-  "odel\032\032protos/model/v1/math.proto\"D\n\010Loca"
-  "tion\022\032\n\010latitude\030\001 \001(\001R\010latitude\022\034\n\tlong"
-  "itude\030\002 \001(\001R\tlongitude\"_\n\014Localization\022."
-  "\n\010odometry\030\001 \001(\0132\022.v1.model.OdometryR\010od"
-  "ometry\022\037\n\003map\030\002 \001(\0132\r.v1.model.MapR\003map\""
-  "\225\001\n\010Odometry\022\'\n\004pose\030\001 \001(\0132\023.v1.model.Tr"
-  "ansformR\004pose\022%\n\005twist\030\002 \001(\0132\017.v1.model."
-  "TwistR\005twist\0229\n\016world_to_local\030\003 \001(\0132\023.v"
-  "1.model.TransformR\014worldToLocal\"\255\002\n\003Map\022"
-  "\036\n\nresolution\030\001 \001(\001R\nresolution\022\024\n\005width"
-  "\030\002 \001(\rR\005width\022\026\n\006height\030\003 \001(\rR\006height\022+\n"
-  "\006origin\030\004 \001(\0132\023.v1.model.TransformR\006orig"
-  "in\0229\n\016world_to_local\030\005 \001(\0132\023.v1.model.Tr"
-  "ansformR\014worldToLocal\022@\n\016occupancy_grid\030"
-  "\006 \001(\0132\027.v1.model.OccupancyGridH\000R\roccupa"
-  "ncyGrid\022\022\n\003url\030\007 \001(\tH\000R\003url\022\022\n\003raw\030\010 \001(\014"
-  "H\000R\003rawB\006\n\004data\"#\n\rOccupancyGrid\022\022\n\004data"
-  "\030\001 \003(\005R\004dataB+Z)github.com/FormantIO/gen"
-  "proto/go/v1/modelb\006proto3"
+  "odel\032\032protos/model/v1/math.proto\032\033protos"
+  "/model/v1/media.proto\"D\n\010Location\022\032\n\010lat"
+  "itude\030\001 \001(\001R\010latitude\022\034\n\tlongitude\030\002 \001(\001"
+  "R\tlongitude\"\340\001\n\014Localization\022.\n\010odometry"
+  "\030\001 \001(\0132\022.v1.model.OdometryR\010odometry\022\037\n\003"
+  "map\030\002 \001(\0132\r.v1.model.MapR\003map\0227\n\014point_c"
+  "louds\030\003 \003(\0132\024.v1.model.PointCloudR\013point"
+  "Clouds\022\"\n\004path\030\004 \001(\0132\016.v1.model.PathR\004pa"
+  "th\022\"\n\004goal\030\005 \001(\0132\016.v1.model.GoalR\004goal\"\225"
+  "\001\n\010Odometry\022\'\n\004pose\030\001 \001(\0132\023.v1.model.Tra"
+  "nsformR\004pose\022%\n\005twist\030\002 \001(\0132\017.v1.model.T"
+  "wistR\005twist\0229\n\016world_to_local\030\003 \001(\0132\023.v1"
+  ".model.TransformR\014worldToLocal\"\255\002\n\003Map\022\036"
+  "\n\nresolution\030\001 \001(\001R\nresolution\022\024\n\005width\030"
+  "\002 \001(\rR\005width\022\026\n\006height\030\003 \001(\rR\006height\022+\n\006"
+  "origin\030\004 \001(\0132\023.v1.model.TransformR\006origi"
+  "n\0229\n\016world_to_local\030\005 \001(\0132\023.v1.model.Tra"
+  "nsformR\014worldToLocal\022@\n\016occupancy_grid\030\006"
+  " \001(\0132\027.v1.model.OccupancyGridH\000R\roccupan"
+  "cyGrid\022\022\n\003url\030\007 \001(\tH\000R\003url\022\022\n\003raw\030\010 \001(\014H"
+  "\000R\003rawB\006\n\004data\"#\n\rOccupancyGrid\022\022\n\004data\030"
+  "\001 \003(\005R\004data\"l\n\004Path\0229\n\016world_to_local\030\001 "
+  "\001(\0132\023.v1.model.TransformR\014worldToLocal\022)"
+  "\n\005poses\030\002 \003(\0132\023.v1.model.TransformR\005pose"
+  "s\"j\n\004Goal\0229\n\016world_to_local\030\001 \001(\0132\023.v1.m"
+  "odel.TransformR\014worldToLocal\022\'\n\004pose\030\002 \001"
+  "(\0132\023.v1.model.TransformR\004pose\"\030\n\006GoalID\022"
+  "\016\n\002id\030\001 \001(\tR\002idB+Z)github.com/FormantIO/"
+  "genproto/go/v1/modelb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_deps[1] = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_deps[2] = {
   &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
+  &::descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_sccs[5] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_sccs[8] = {
+  &scc_info_Goal_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+  &scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
   &scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
   &scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
   &scc_info_Map_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
   &scc_info_OccupancyGrid_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
   &scc_info_Odometry_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+  &scc_info_Path_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fnavigation_2eproto, "protos/model/v1/navigation.proto", 785,
-  &descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_deps, 5, 1,
+  &descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fnavigation_2eproto, "protos/model/v1/navigation.proto", 1188,
+  &descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto_deps, 8, 2,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto::offsets,
-  file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto, 5, file_level_enum_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto,
+  file_level_metadata_protos_2fmodel_2fv1_2fnavigation_2eproto, 8, file_level_enum_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fnavigation_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -451,11 +556,17 @@ void Localization::InitAsDefaultInstance() {
       ::v1::model::Odometry::internal_default_instance());
   ::v1::model::_Localization_default_instance_._instance.get_mutable()->map_ = const_cast< ::v1::model::Map*>(
       ::v1::model::Map::internal_default_instance());
+  ::v1::model::_Localization_default_instance_._instance.get_mutable()->path_ = const_cast< ::v1::model::Path*>(
+      ::v1::model::Path::internal_default_instance());
+  ::v1::model::_Localization_default_instance_._instance.get_mutable()->goal_ = const_cast< ::v1::model::Goal*>(
+      ::v1::model::Goal::internal_default_instance());
 }
 class Localization::_Internal {
  public:
   static const ::v1::model::Odometry& odometry(const Localization* msg);
   static const ::v1::model::Map& map(const Localization* msg);
+  static const ::v1::model::Path& path(const Localization* msg);
+  static const ::v1::model::Goal& goal(const Localization* msg);
 };
 
 const ::v1::model::Odometry&
@@ -466,6 +577,17 @@ const ::v1::model::Map&
 Localization::_Internal::map(const Localization* msg) {
   return *msg->map_;
 }
+const ::v1::model::Path&
+Localization::_Internal::path(const Localization* msg) {
+  return *msg->path_;
+}
+const ::v1::model::Goal&
+Localization::_Internal::goal(const Localization* msg) {
+  return *msg->goal_;
+}
+void Localization::clear_point_clouds() {
+  point_clouds_.Clear();
+}
 Localization::Localization()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -473,7 +595,8 @@ Localization::Localization()
 }
 Localization::Localization(const Localization& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(nullptr),
+      point_clouds_(from.point_clouds_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from._internal_has_odometry()) {
     odometry_ = new ::v1::model::Odometry(*from.odometry_);
@@ -485,14 +608,24 @@ Localization::Localization(const Localization& from)
   } else {
     map_ = nullptr;
   }
+  if (from._internal_has_path()) {
+    path_ = new ::v1::model::Path(*from.path_);
+  } else {
+    path_ = nullptr;
+  }
+  if (from._internal_has_goal()) {
+    goal_ = new ::v1::model::Goal(*from.goal_);
+  } else {
+    goal_ = nullptr;
+  }
   // @@protoc_insertion_point(copy_constructor:v1.model.Localization)
 }
 
 void Localization::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
   ::memset(&odometry_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&map_) -
-      reinterpret_cast<char*>(&odometry_)) + sizeof(map_));
+      reinterpret_cast<char*>(&goal_) -
+      reinterpret_cast<char*>(&odometry_)) + sizeof(goal_));
 }
 
 Localization::~Localization() {
@@ -503,6 +636,8 @@ Localization::~Localization() {
 void Localization::SharedDtor() {
   if (this != internal_default_instance()) delete odometry_;
   if (this != internal_default_instance()) delete map_;
+  if (this != internal_default_instance()) delete path_;
+  if (this != internal_default_instance()) delete goal_;
 }
 
 void Localization::SetCachedSize(int size) const {
@@ -520,6 +655,7 @@ void Localization::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  point_clouds_.Clear();
   if (GetArenaNoVirtual() == nullptr && odometry_ != nullptr) {
     delete odometry_;
   }
@@ -528,6 +664,14 @@ void Localization::Clear() {
     delete map_;
   }
   map_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && path_ != nullptr) {
+    delete path_;
+  }
+  path_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && goal_ != nullptr) {
+    delete goal_;
+  }
+  goal_ = nullptr;
   _internal_metadata_.Clear();
 }
 
@@ -549,6 +693,32 @@ const char* Localization::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_map(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .v1.model.PointCloud point_clouds = 3[json_name = "pointClouds"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_point_clouds(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Path path = 4[json_name = "path"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_path(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Goal goal = 5[json_name = "goal"];
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_goal(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -594,6 +764,30 @@ failure:
         2, _Internal::map(this), target, stream);
   }
 
+  // repeated .v1.model.PointCloud point_clouds = 3[json_name = "pointClouds"];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_point_clouds_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, this->_internal_point_clouds(i), target, stream);
+  }
+
+  // .v1.model.Path path = 4[json_name = "path"];
+  if (this->has_path()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::path(this), target, stream);
+  }
+
+  // .v1.model.Goal goal = 5[json_name = "goal"];
+  if (this->has_goal()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::goal(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -610,6 +804,13 @@ size_t Localization::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // repeated .v1.model.PointCloud point_clouds = 3[json_name = "pointClouds"];
+  total_size += 1UL * this->_internal_point_clouds_size();
+  for (const auto& msg : this->point_clouds_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
   // .v1.model.Odometry odometry = 1[json_name = "odometry"];
   if (this->has_odometry()) {
     total_size += 1 +
@@ -622,6 +823,20 @@ size_t Localization::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *map_);
+  }
+
+  // .v1.model.Path path = 4[json_name = "path"];
+  if (this->has_path()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *path_);
+  }
+
+  // .v1.model.Goal goal = 5[json_name = "goal"];
+  if (this->has_goal()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *goal_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -655,11 +870,18 @@ void Localization::MergeFrom(const Localization& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  point_clouds_.MergeFrom(from.point_clouds_);
   if (from.has_odometry()) {
     _internal_mutable_odometry()->::v1::model::Odometry::MergeFrom(from._internal_odometry());
   }
   if (from.has_map()) {
     _internal_mutable_map()->::v1::model::Map::MergeFrom(from._internal_map());
+  }
+  if (from.has_path()) {
+    _internal_mutable_path()->::v1::model::Path::MergeFrom(from._internal_path());
+  }
+  if (from.has_goal()) {
+    _internal_mutable_goal()->::v1::model::Goal::MergeFrom(from._internal_goal());
   }
 }
 
@@ -684,8 +906,11 @@ bool Localization::IsInitialized() const {
 void Localization::InternalSwap(Localization* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  point_clouds_.InternalSwap(&other->point_clouds_);
   swap(odometry_, other->odometry_);
   swap(map_, other->map_);
+  swap(path_, other->path_);
+  swap(goal_, other->goal_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Localization::GetMetadata() const {
@@ -1701,6 +1926,710 @@ void OccupancyGrid::InternalSwap(OccupancyGrid* other) {
 }
 
 
+// ===================================================================
+
+void Path::InitAsDefaultInstance() {
+  ::v1::model::_Path_default_instance_._instance.get_mutable()->world_to_local_ = const_cast< ::v1::model::Transform*>(
+      ::v1::model::Transform::internal_default_instance());
+}
+class Path::_Internal {
+ public:
+  static const ::v1::model::Transform& world_to_local(const Path* msg);
+};
+
+const ::v1::model::Transform&
+Path::_Internal::world_to_local(const Path* msg) {
+  return *msg->world_to_local_;
+}
+void Path::clear_world_to_local() {
+  if (GetArenaNoVirtual() == nullptr && world_to_local_ != nullptr) {
+    delete world_to_local_;
+  }
+  world_to_local_ = nullptr;
+}
+void Path::clear_poses() {
+  poses_.Clear();
+}
+Path::Path()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:v1.model.Path)
+}
+Path::Path(const Path& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      poses_(from.poses_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from._internal_has_world_to_local()) {
+    world_to_local_ = new ::v1::model::Transform(*from.world_to_local_);
+  } else {
+    world_to_local_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:v1.model.Path)
+}
+
+void Path::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Path_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  world_to_local_ = nullptr;
+}
+
+Path::~Path() {
+  // @@protoc_insertion_point(destructor:v1.model.Path)
+  SharedDtor();
+}
+
+void Path::SharedDtor() {
+  if (this != internal_default_instance()) delete world_to_local_;
+}
+
+void Path::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Path& Path::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Path_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Path::Clear() {
+// @@protoc_insertion_point(message_clear_start:v1.model.Path)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  poses_.Clear();
+  if (GetArenaNoVirtual() == nullptr && world_to_local_ != nullptr) {
+    delete world_to_local_;
+  }
+  world_to_local_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+const char* Path::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_world_to_local(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .v1.model.Transform poses = 2[json_name = "poses"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_poses(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Path::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:v1.model.Path)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+  if (this->has_world_to_local()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::world_to_local(this), target, stream);
+  }
+
+  // repeated .v1.model.Transform poses = 2[json_name = "poses"];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_poses_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, this->_internal_poses(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:v1.model.Path)
+  return target;
+}
+
+size_t Path::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:v1.model.Path)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .v1.model.Transform poses = 2[json_name = "poses"];
+  total_size += 1UL * this->_internal_poses_size();
+  for (const auto& msg : this->poses_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+  if (this->has_world_to_local()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *world_to_local_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Path::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:v1.model.Path)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Path* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Path>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Path)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Path)
+    MergeFrom(*source);
+  }
+}
+
+void Path::MergeFrom(const Path& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Path)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  poses_.MergeFrom(from.poses_);
+  if (from.has_world_to_local()) {
+    _internal_mutable_world_to_local()->::v1::model::Transform::MergeFrom(from._internal_world_to_local());
+  }
+}
+
+void Path::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:v1.model.Path)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Path::CopyFrom(const Path& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:v1.model.Path)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Path::IsInitialized() const {
+  return true;
+}
+
+void Path::InternalSwap(Path* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  poses_.InternalSwap(&other->poses_);
+  swap(world_to_local_, other->world_to_local_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Path::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void Goal::InitAsDefaultInstance() {
+  ::v1::model::_Goal_default_instance_._instance.get_mutable()->world_to_local_ = const_cast< ::v1::model::Transform*>(
+      ::v1::model::Transform::internal_default_instance());
+  ::v1::model::_Goal_default_instance_._instance.get_mutable()->pose_ = const_cast< ::v1::model::Transform*>(
+      ::v1::model::Transform::internal_default_instance());
+}
+class Goal::_Internal {
+ public:
+  static const ::v1::model::Transform& world_to_local(const Goal* msg);
+  static const ::v1::model::Transform& pose(const Goal* msg);
+};
+
+const ::v1::model::Transform&
+Goal::_Internal::world_to_local(const Goal* msg) {
+  return *msg->world_to_local_;
+}
+const ::v1::model::Transform&
+Goal::_Internal::pose(const Goal* msg) {
+  return *msg->pose_;
+}
+void Goal::clear_world_to_local() {
+  if (GetArenaNoVirtual() == nullptr && world_to_local_ != nullptr) {
+    delete world_to_local_;
+  }
+  world_to_local_ = nullptr;
+}
+void Goal::clear_pose() {
+  if (GetArenaNoVirtual() == nullptr && pose_ != nullptr) {
+    delete pose_;
+  }
+  pose_ = nullptr;
+}
+Goal::Goal()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:v1.model.Goal)
+}
+Goal::Goal(const Goal& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from._internal_has_world_to_local()) {
+    world_to_local_ = new ::v1::model::Transform(*from.world_to_local_);
+  } else {
+    world_to_local_ = nullptr;
+  }
+  if (from._internal_has_pose()) {
+    pose_ = new ::v1::model::Transform(*from.pose_);
+  } else {
+    pose_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:v1.model.Goal)
+}
+
+void Goal::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Goal_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  ::memset(&world_to_local_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&pose_) -
+      reinterpret_cast<char*>(&world_to_local_)) + sizeof(pose_));
+}
+
+Goal::~Goal() {
+  // @@protoc_insertion_point(destructor:v1.model.Goal)
+  SharedDtor();
+}
+
+void Goal::SharedDtor() {
+  if (this != internal_default_instance()) delete world_to_local_;
+  if (this != internal_default_instance()) delete pose_;
+}
+
+void Goal::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Goal& Goal::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Goal_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Goal::Clear() {
+// @@protoc_insertion_point(message_clear_start:v1.model.Goal)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && world_to_local_ != nullptr) {
+    delete world_to_local_;
+  }
+  world_to_local_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && pose_ != nullptr) {
+    delete pose_;
+  }
+  pose_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+const char* Goal::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_world_to_local(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Transform pose = 2[json_name = "pose"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pose(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Goal::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:v1.model.Goal)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+  if (this->has_world_to_local()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::world_to_local(this), target, stream);
+  }
+
+  // .v1.model.Transform pose = 2[json_name = "pose"];
+  if (this->has_pose()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::pose(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:v1.model.Goal)
+  return target;
+}
+
+size_t Goal::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:v1.model.Goal)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+  if (this->has_world_to_local()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *world_to_local_);
+  }
+
+  // .v1.model.Transform pose = 2[json_name = "pose"];
+  if (this->has_pose()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *pose_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Goal::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:v1.model.Goal)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Goal* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Goal>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Goal)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Goal)
+    MergeFrom(*source);
+  }
+}
+
+void Goal::MergeFrom(const Goal& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Goal)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_world_to_local()) {
+    _internal_mutable_world_to_local()->::v1::model::Transform::MergeFrom(from._internal_world_to_local());
+  }
+  if (from.has_pose()) {
+    _internal_mutable_pose()->::v1::model::Transform::MergeFrom(from._internal_pose());
+  }
+}
+
+void Goal::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:v1.model.Goal)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Goal::CopyFrom(const Goal& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:v1.model.Goal)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Goal::IsInitialized() const {
+  return true;
+}
+
+void Goal::InternalSwap(Goal* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(world_to_local_, other->world_to_local_);
+  swap(pose_, other->pose_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Goal::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void GoalID::InitAsDefaultInstance() {
+}
+class GoalID::_Internal {
+ public:
+};
+
+GoalID::GoalID()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:v1.model.GoalID)
+}
+GoalID::GoalID(const GoalID& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_id().empty()) {
+    id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
+  }
+  // @@protoc_insertion_point(copy_constructor:v1.model.GoalID)
+}
+
+void GoalID::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+GoalID::~GoalID() {
+  // @@protoc_insertion_point(destructor:v1.model.GoalID)
+  SharedDtor();
+}
+
+void GoalID::SharedDtor() {
+  id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void GoalID::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const GoalID& GoalID::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void GoalID::Clear() {
+// @@protoc_insertion_point(message_clear_start:v1.model.GoalID)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+const char* GoalID::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string id = 1[json_name = "id"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.GoalID.id"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* GoalID::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:v1.model.GoalID)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string id = 1[json_name = "id"];
+  if (this->id().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "v1.model.GoalID.id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_id(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:v1.model.GoalID)
+  return target;
+}
+
+size_t GoalID::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:v1.model.GoalID)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string id = 1[json_name = "id"];
+  if (this->id().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_id());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void GoalID::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:v1.model.GoalID)
+  GOOGLE_DCHECK_NE(&from, this);
+  const GoalID* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GoalID>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.GoalID)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.GoalID)
+    MergeFrom(*source);
+  }
+}
+
+void GoalID::MergeFrom(const GoalID& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:v1.model.GoalID)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.id().size() > 0) {
+
+    id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
+  }
+}
+
+void GoalID::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:v1.model.GoalID)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void GoalID::CopyFrom(const GoalID& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:v1.model.GoalID)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GoalID::IsInitialized() const {
+  return true;
+}
+
+void GoalID::InternalSwap(GoalID* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  id_.Swap(&other->id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GoalID::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace model
 }  // namespace v1
@@ -1719,6 +2648,15 @@ template<> PROTOBUF_NOINLINE ::v1::model::Map* Arena::CreateMaybeMessage< ::v1::
 }
 template<> PROTOBUF_NOINLINE ::v1::model::OccupancyGrid* Arena::CreateMaybeMessage< ::v1::model::OccupancyGrid >(Arena* arena) {
   return Arena::CreateInternal< ::v1::model::OccupancyGrid >(arena);
+}
+template<> PROTOBUF_NOINLINE ::v1::model::Path* Arena::CreateMaybeMessage< ::v1::model::Path >(Arena* arena) {
+  return Arena::CreateInternal< ::v1::model::Path >(arena);
+}
+template<> PROTOBUF_NOINLINE ::v1::model::Goal* Arena::CreateMaybeMessage< ::v1::model::Goal >(Arena* arena) {
+  return Arena::CreateInternal< ::v1::model::Goal >(arena);
+}
+template<> PROTOBUF_NOINLINE ::v1::model::GoalID* Arena::CreateMaybeMessage< ::v1::model::GoalID >(Arena* arena) {
+  return Arena::CreateInternal< ::v1::model::GoalID >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

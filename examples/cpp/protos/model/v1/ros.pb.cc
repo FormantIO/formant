@@ -14,6 +14,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto;
 namespace v1 {
@@ -38,6 +39,7 @@ class ROSMessageToPublishDefaultTypeInternal {
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compressed_image_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr text_;
   const ::v1::model::Transform* pose_;
+  const ::v1::model::GoalID* goalid_;
 } _ROSMessageToPublish_default_instance_;
 }  // namespace model
 }  // namespace v1
@@ -66,10 +68,11 @@ static void InitDefaultsscc_info_ROSMessageToPublish_protos_2fmodel_2fv1_2fros_2
   ::v1::model::ROSMessageToPublish::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ROSMessageToPublish_protos_2fmodel_2fv1_2fros_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_ROSMessageToPublish_protos_2fmodel_2fv1_2fros_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ROSMessageToPublish_protos_2fmodel_2fv1_2fros_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_ROSMessageToPublish_protos_2fmodel_2fv1_2fros_2eproto}, {
       &scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto.base,
-      &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
+      &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,
+      &scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto.base,}};
 
 static void InitDefaultsscc_info_ROSTopic_protos_2fmodel_2fv1_2fros_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -118,6 +121,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fros_2epr
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, map_topic_),
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, odom_topic_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, point_cloud_topics_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, path_topic_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, goal_topic_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSTransformTree, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -137,13 +143,14 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fros_2epr
   offsetof(::v1::model::ROSMessageToPublishDefaultTypeInternal, compressed_image_),
   offsetof(::v1::model::ROSMessageToPublishDefaultTypeInternal, text_),
   offsetof(::v1::model::ROSMessageToPublishDefaultTypeInternal, pose_),
+  offsetof(::v1::model::ROSMessageToPublishDefaultTypeInternal, goalid_),
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSMessageToPublish, data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::v1::model::ROSTopic)},
   { 7, -1, sizeof(::v1::model::ROSLocalization)},
-  { 14, -1, sizeof(::v1::model::ROSTransformTree)},
-  { 20, -1, sizeof(::v1::model::ROSMessageToPublish)},
+  { 17, -1, sizeof(::v1::model::ROSTransformTree)},
+  { 23, -1, sizeof(::v1::model::ROSMessageToPublish)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -155,24 +162,29 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\031protos/model/v1/ros.proto\022\010v1.model\032\032p"
-  "rotos/model/v1/math.proto\"2\n\010ROSTopic\022\022\n"
-  "\004name\030\001 \001(\tR\004name\022\022\n\004path\030\002 \001(\tR\004path\"M\n"
-  "\017ROSLocalization\022\033\n\tmap_topic\030\001 \001(\tR\010map"
-  "Topic\022\035\n\nodom_topic\030\002 \001(\tR\todomTopic\"D\n\020"
-  "ROSTransformTree\0220\n\024base_reference_frame"
-  "\030\001 \001(\tR\022baseReferenceFrame\"\233\002\n\023ROSMessag"
-  "eToPublish\022\026\n\006stream\030\001 \001(\tR\006stream\022\031\n\010fr"
-  "ame_id\030\007 \001(\tR\007frameId\022\034\n\ttimestamp\030\010 \001(\004"
-  "R\ttimestamp\022\'\n\005twist\030\002 \001(\0132\017.v1.model.Tw"
-  "istH\000R\005twist\022\024\n\004bool\030\003 \001(\010H\000R\004bool\022+\n\020co"
-  "mpressed_image\030\004 \001(\014H\000R\017compressedImage\022"
-  "\024\n\004text\030\005 \001(\tH\000R\004text\022)\n\004pose\030\006 \001(\0132\023.v1"
-  ".model.TransformH\000R\004poseB\006\n\004dataB+Z)gith"
-  "ub.com/FormantIO/genproto/go/v1/modelb\006p"
-  "roto3"
+  "rotos/model/v1/math.proto\032 protos/model/"
+  "v1/navigation.proto\"2\n\010ROSTopic\022\022\n\004name\030"
+  "\001 \001(\tR\004name\022\022\n\004path\030\002 \001(\tR\004path\"\271\001\n\017ROSL"
+  "ocalization\022\033\n\tmap_topic\030\001 \001(\tR\010mapTopic"
+  "\022\035\n\nodom_topic\030\002 \001(\tR\todomTopic\022,\n\022point"
+  "_cloud_topics\030\003 \003(\tR\020pointCloudTopics\022\035\n"
+  "\npath_topic\030\004 \001(\tR\tpathTopic\022\035\n\ngoal_top"
+  "ic\030\005 \001(\tR\tgoalTopic\"D\n\020ROSTransformTree\022"
+  "0\n\024base_reference_frame\030\001 \001(\tR\022baseRefer"
+  "enceFrame\"\307\002\n\023ROSMessageToPublish\022\026\n\006str"
+  "eam\030\001 \001(\tR\006stream\022\031\n\010frame_id\030\007 \001(\tR\007fra"
+  "meId\022\034\n\ttimestamp\030\010 \001(\004R\ttimestamp\022\'\n\005tw"
+  "ist\030\002 \001(\0132\017.v1.model.TwistH\000R\005twist\022\024\n\004b"
+  "ool\030\003 \001(\010H\000R\004bool\022+\n\020compressed_image\030\004 "
+  "\001(\014H\000R\017compressedImage\022\024\n\004text\030\005 \001(\tH\000R\004"
+  "text\022)\n\004pose\030\006 \001(\0132\023.v1.model.TransformH"
+  "\000R\004pose\022*\n\006goalID\030\t \001(\0132\020.v1.model.GoalI"
+  "DH\000R\006goalIDB\006\n\004dataB+Z)github.com/Forman"
+  "tIO/genproto/go/v1/modelb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_deps[1] = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_deps[2] = {
   &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
+  &::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_sccs[4] = {
   &scc_info_ROSLocalization_protos_2fmodel_2fv1_2fros_2eproto.base,
@@ -183,8 +195,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fros_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto, "protos/model/v1/ros.proto", 605,
-  &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_deps, 4, 1,
+  &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto, "protos/model/v1/ros.proto", 792,
+  &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_deps, 4, 2,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fros_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fros_2eproto, 4, file_level_enum_descriptors_protos_2fmodel_2fv1_2fros_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fros_2eproto,
 };
@@ -447,7 +459,8 @@ ROSLocalization::ROSLocalization()
 }
 ROSLocalization::ROSLocalization(const ROSLocalization& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(nullptr),
+      point_cloud_topics_(from.point_cloud_topics_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   map_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_map_topic().empty()) {
@@ -457,6 +470,14 @@ ROSLocalization::ROSLocalization(const ROSLocalization& from)
   if (!from._internal_odom_topic().empty()) {
     odom_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.odom_topic_);
   }
+  path_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_path_topic().empty()) {
+    path_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.path_topic_);
+  }
+  goal_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_goal_topic().empty()) {
+    goal_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.goal_topic_);
+  }
   // @@protoc_insertion_point(copy_constructor:v1.model.ROSLocalization)
 }
 
@@ -464,6 +485,8 @@ void ROSLocalization::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ROSLocalization_protos_2fmodel_2fv1_2fros_2eproto.base);
   map_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   odom_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  path_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  goal_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ROSLocalization::~ROSLocalization() {
@@ -474,6 +497,8 @@ ROSLocalization::~ROSLocalization() {
 void ROSLocalization::SharedDtor() {
   map_topic_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   odom_topic_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  path_topic_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  goal_topic_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void ROSLocalization::SetCachedSize(int size) const {
@@ -491,8 +516,11 @@ void ROSLocalization::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  point_cloud_topics_.Clear();
   map_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   odom_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  path_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  goal_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
@@ -518,6 +546,38 @@ const char* ROSLocalization::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           auto str = _internal_mutable_odom_topic();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.ROSLocalization.odom_topic"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string point_cloud_topics = 3[json_name = "pointCloudTopics"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_point_cloud_topics();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.ROSLocalization.point_cloud_topics"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // string path_topic = 4[json_name = "pathTopic"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_path_topic();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.ROSLocalization.path_topic"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string goal_topic = 5[json_name = "goalTopic"];
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_goal_topic();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.ROSLocalization.goal_topic"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -567,6 +627,36 @@ failure:
         2, this->_internal_odom_topic(), target);
   }
 
+  // repeated string point_cloud_topics = 3[json_name = "pointCloudTopics"];
+  for (int i = 0, n = this->_internal_point_cloud_topics_size(); i < n; i++) {
+    const auto& s = this->_internal_point_cloud_topics(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "v1.model.ROSLocalization.point_cloud_topics");
+    target = stream->WriteString(3, s, target);
+  }
+
+  // string path_topic = 4[json_name = "pathTopic"];
+  if (this->path_topic().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_path_topic().data(), static_cast<int>(this->_internal_path_topic().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "v1.model.ROSLocalization.path_topic");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_path_topic(), target);
+  }
+
+  // string goal_topic = 5[json_name = "goalTopic"];
+  if (this->goal_topic().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_goal_topic().data(), static_cast<int>(this->_internal_goal_topic().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "v1.model.ROSLocalization.goal_topic");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_goal_topic(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -583,6 +673,14 @@ size_t ROSLocalization::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // repeated string point_cloud_topics = 3[json_name = "pointCloudTopics"];
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(point_cloud_topics_.size());
+  for (int i = 0, n = point_cloud_topics_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      point_cloud_topics_.Get(i));
+  }
+
   // string map_topic = 1[json_name = "mapTopic"];
   if (this->map_topic().size() > 0) {
     total_size += 1 +
@@ -595,6 +693,20 @@ size_t ROSLocalization::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_odom_topic());
+  }
+
+  // string path_topic = 4[json_name = "pathTopic"];
+  if (this->path_topic().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_path_topic());
+  }
+
+  // string goal_topic = 5[json_name = "goalTopic"];
+  if (this->goal_topic().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_goal_topic());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -628,6 +740,7 @@ void ROSLocalization::MergeFrom(const ROSLocalization& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  point_cloud_topics_.MergeFrom(from.point_cloud_topics_);
   if (from.map_topic().size() > 0) {
 
     map_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.map_topic_);
@@ -635,6 +748,14 @@ void ROSLocalization::MergeFrom(const ROSLocalization& from) {
   if (from.odom_topic().size() > 0) {
 
     odom_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.odom_topic_);
+  }
+  if (from.path_topic().size() > 0) {
+
+    path_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.path_topic_);
+  }
+  if (from.goal_topic().size() > 0) {
+
+    goal_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.goal_topic_);
   }
 }
 
@@ -659,9 +780,14 @@ bool ROSLocalization::IsInitialized() const {
 void ROSLocalization::InternalSwap(ROSLocalization* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  point_cloud_topics_.InternalSwap(&other->point_cloud_topics_);
   map_topic_.Swap(&other->map_topic_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   odom_topic_.Swap(&other->odom_topic_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  path_topic_.Swap(&other->path_topic_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  goal_topic_.Swap(&other->goal_topic_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
 }
 
@@ -881,11 +1007,14 @@ void ROSMessageToPublish::InitAsDefaultInstance() {
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::v1::model::_ROSMessageToPublish_default_instance_.pose_ = const_cast< ::v1::model::Transform*>(
       ::v1::model::Transform::internal_default_instance());
+  ::v1::model::_ROSMessageToPublish_default_instance_.goalid_ = const_cast< ::v1::model::GoalID*>(
+      ::v1::model::GoalID::internal_default_instance());
 }
 class ROSMessageToPublish::_Internal {
  public:
   static const ::v1::model::Twist& twist(const ROSMessageToPublish* msg);
   static const ::v1::model::Transform& pose(const ROSMessageToPublish* msg);
+  static const ::v1::model::GoalID& goalid(const ROSMessageToPublish* msg);
 };
 
 const ::v1::model::Twist&
@@ -895,6 +1024,10 @@ ROSMessageToPublish::_Internal::twist(const ROSMessageToPublish* msg) {
 const ::v1::model::Transform&
 ROSMessageToPublish::_Internal::pose(const ROSMessageToPublish* msg) {
   return *msg->data_.pose_;
+}
+const ::v1::model::GoalID&
+ROSMessageToPublish::_Internal::goalid(const ROSMessageToPublish* msg) {
+  return *msg->data_.goalid_;
 }
 void ROSMessageToPublish::set_allocated_twist(::v1::model::Twist* twist) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
@@ -936,6 +1069,26 @@ void ROSMessageToPublish::clear_pose() {
     clear_has_data();
   }
 }
+void ROSMessageToPublish::set_allocated_goalid(::v1::model::GoalID* goalid) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  clear_data();
+  if (goalid) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      goalid = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, goalid, submessage_arena);
+    }
+    set_has_goalid();
+    data_.goalid_ = goalid;
+  }
+  // @@protoc_insertion_point(field_set_allocated:v1.model.ROSMessageToPublish.goalID)
+}
+void ROSMessageToPublish::clear_goalid() {
+  if (_internal_has_goalid()) {
+    delete data_.goalid_;
+    clear_has_data();
+  }
+}
 ROSMessageToPublish::ROSMessageToPublish()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -974,6 +1127,10 @@ ROSMessageToPublish::ROSMessageToPublish(const ROSMessageToPublish& from)
     }
     case kPose: {
       _internal_mutable_pose()->::v1::model::Transform::MergeFrom(from._internal_pose());
+      break;
+    }
+    case kGoalID: {
+      _internal_mutable_goalid()->::v1::model::GoalID::MergeFrom(from._internal_goalid());
       break;
     }
     case DATA_NOT_SET: {
@@ -1034,6 +1191,10 @@ void ROSMessageToPublish::clear_data() {
     }
     case kPose: {
       delete data_.pose_;
+      break;
+    }
+    case kGoalID: {
+      delete data_.goalid_;
       break;
     }
     case DATA_NOT_SET: {
@@ -1127,6 +1288,13 @@ const char* ROSMessageToPublish::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // .v1.model.GoalID goalID = 9[json_name = "goalID"];
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_goalid(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
@@ -1217,6 +1385,14 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(8, this->_internal_timestamp(), target);
   }
 
+  // .v1.model.GoalID goalID = 9[json_name = "goalID"];
+  if (_internal_has_goalid()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        9, _Internal::goalid(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -1288,6 +1464,13 @@ size_t ROSMessageToPublish::ByteSizeLong() const {
           *data_.pose_);
       break;
     }
+    // .v1.model.GoalID goalID = 9[json_name = "goalID"];
+    case kGoalID: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *data_.goalid_);
+      break;
+    }
     case DATA_NOT_SET: {
       break;
     }
@@ -1353,6 +1536,10 @@ void ROSMessageToPublish::MergeFrom(const ROSMessageToPublish& from) {
     }
     case kPose: {
       _internal_mutable_pose()->::v1::model::Transform::MergeFrom(from._internal_pose());
+      break;
+    }
+    case kGoalID: {
+      _internal_mutable_goalid()->::v1::model::GoalID::MergeFrom(from._internal_goalid());
       break;
     }
     case DATA_NOT_SET: {

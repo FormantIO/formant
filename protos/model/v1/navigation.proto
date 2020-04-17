@@ -3,6 +3,7 @@ syntax = "proto3";
 package v1.model;
 
 import "protos/model/v1/math.proto";
+import "protos/model/v1/media.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/model";
 
@@ -14,8 +15,10 @@ message Location {
 message Localization {
     Odometry odometry = 1;
     Map map = 2;
+    repeated PointCloud point_clouds = 3;
+    Path path = 4;
+    Goal goal = 5;
 }
-
 
 message Odometry {
     Transform pose = 1;
@@ -48,4 +51,18 @@ message OccupancyGrid {
     // The map data, in row-major order, starting with (0,0).
     // Occupancy probabilities are in the range [0,100], unknown is -1.
     repeated int32 data = 1;
+}
+
+message Path {
+    Transform world_to_local = 1;
+    repeated Transform poses = 2;
+}
+
+message Goal {
+    Transform world_to_local = 1;
+    Transform pose = 2;
+}
+
+message GoalID {
+    string id = 1;
 }

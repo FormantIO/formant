@@ -33,6 +33,7 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "protos/model/v1/math.pb.h"
+#include "protos/model/v1/navigation.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2frtc_2eproto
@@ -110,6 +111,7 @@ class RTCMessage :
     kTwist = 3,
     kBool = 4,
     kCompressedImage = 5,
+    kGoalId = 6,
     DATA_NOT_SET = 0,
   };
 
@@ -188,6 +190,7 @@ class RTCMessage :
     kTwistFieldNumber = 3,
     kBoolFieldNumber = 4,
     kCompressedImageFieldNumber = 5,
+    kGoalIdFieldNumber = 6,
   };
   // string stream = 1[json_name = "stream"];
   void clear_stream();
@@ -260,6 +263,21 @@ class RTCMessage :
   std::string* _internal_mutable_compressed_image();
   public:
 
+  // .v1.model.GoalID goal_id = 6[json_name = "goalId"];
+  bool has_goal_id() const;
+  private:
+  bool _internal_has_goal_id() const;
+  public:
+  void clear_goal_id();
+  const ::v1::model::GoalID& goal_id() const;
+  ::v1::model::GoalID* release_goal_id();
+  ::v1::model::GoalID* mutable_goal_id();
+  void set_allocated_goal_id(::v1::model::GoalID* goal_id);
+  private:
+  const ::v1::model::GoalID& _internal_goal_id() const;
+  ::v1::model::GoalID* _internal_mutable_goal_id();
+  public:
+
   void clear_data();
   DataCase data_case() const;
   // @@protoc_insertion_point(class_scope:v1.model.RTCMessage)
@@ -268,6 +286,7 @@ class RTCMessage :
   void set_has_twist();
   void set_has_bool_();
   void set_has_compressed_image();
+  void set_has_goal_id();
 
   inline bool has_data() const;
   inline void clear_has_data();
@@ -280,6 +299,7 @@ class RTCMessage :
     ::v1::model::Twist* twist_;
     bool bool__;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compressed_image_;
+    ::v1::model::GoalID* goal_id_;
   } data_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -552,6 +572,50 @@ inline void RTCMessage::set_allocated_compressed_image(std::string* compressed_i
     data_.compressed_image_.UnsafeSetDefault(compressed_image);
   }
   // @@protoc_insertion_point(field_set_allocated:v1.model.RTCMessage.compressed_image)
+}
+
+// .v1.model.GoalID goal_id = 6[json_name = "goalId"];
+inline bool RTCMessage::_internal_has_goal_id() const {
+  return data_case() == kGoalId;
+}
+inline bool RTCMessage::has_goal_id() const {
+  return _internal_has_goal_id();
+}
+inline void RTCMessage::set_has_goal_id() {
+  _oneof_case_[0] = kGoalId;
+}
+inline ::v1::model::GoalID* RTCMessage::release_goal_id() {
+  // @@protoc_insertion_point(field_release:v1.model.RTCMessage.goal_id)
+  if (_internal_has_goal_id()) {
+    clear_has_data();
+      ::v1::model::GoalID* temp = data_.goal_id_;
+    data_.goal_id_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::v1::model::GoalID& RTCMessage::_internal_goal_id() const {
+  return _internal_has_goal_id()
+      ? *data_.goal_id_
+      : *reinterpret_cast< ::v1::model::GoalID*>(&::v1::model::_GoalID_default_instance_);
+}
+inline const ::v1::model::GoalID& RTCMessage::goal_id() const {
+  // @@protoc_insertion_point(field_get:v1.model.RTCMessage.goal_id)
+  return _internal_goal_id();
+}
+inline ::v1::model::GoalID* RTCMessage::_internal_mutable_goal_id() {
+  if (!_internal_has_goal_id()) {
+    clear_data();
+    set_has_goal_id();
+    data_.goal_id_ = CreateMaybeMessage< ::v1::model::GoalID >(
+        GetArenaNoVirtual());
+  }
+  return data_.goal_id_;
+}
+inline ::v1::model::GoalID* RTCMessage::mutable_goal_id() {
+  // @@protoc_insertion_point(field_mutable:v1.model.RTCMessage.goal_id)
+  return _internal_mutable_goal_id();
 }
 
 inline bool RTCMessage::has_data() const {

@@ -14,6 +14,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto;
 namespace v1 {
 namespace model {
@@ -23,6 +24,7 @@ class RTCMessageDefaultTypeInternal {
   const ::v1::model::Twist* twist_;
   bool bool__;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compressed_image_;
+  const ::v1::model::GoalID* goal_id_;
 } _RTCMessage_default_instance_;
 }  // namespace model
 }  // namespace v1
@@ -37,9 +39,10 @@ static void InitDefaultsscc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto() 
   ::v1::model::RTCMessage::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto}, {
-      &scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto}, {
+      &scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto.base,
+      &scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto.base,}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2frtc_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_protos_2fmodel_2fv1_2frtc_2eproto = nullptr;
@@ -56,6 +59,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2frtc_2epr
   offsetof(::v1::model::RTCMessageDefaultTypeInternal, twist_),
   offsetof(::v1::model::RTCMessageDefaultTypeInternal, bool__),
   offsetof(::v1::model::RTCMessageDefaultTypeInternal, compressed_image_),
+  offsetof(::v1::model::RTCMessageDefaultTypeInternal, goal_id_),
   PROTOBUF_FIELD_OFFSET(::v1::model::RTCMessage, data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -68,16 +72,19 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\031protos/model/v1/rtc.proto\022\010v1.model\032\032p"
-  "rotos/model/v1/math.proto\"\266\001\n\nRTCMessage"
-  "\022\026\n\006stream\030\001 \001(\tR\006stream\022\034\n\ttimestamp\030\002 "
-  "\001(\003R\ttimestamp\022\'\n\005twist\030\003 \001(\0132\017.v1.model"
-  ".TwistH\000R\005twist\022\024\n\004bool\030\004 \001(\010H\000R\004bool\022+\n"
-  "\020compressed_image\030\005 \001(\014H\000R\017compressedIma"
-  "geB\006\n\004dataB+Z)github.com/FormantIO/genpr"
-  "oto/go/v1/modelb\006proto3"
+  "rotos/model/v1/math.proto\032 protos/model/"
+  "v1/navigation.proto\"\343\001\n\nRTCMessage\022\026\n\006st"
+  "ream\030\001 \001(\tR\006stream\022\034\n\ttimestamp\030\002 \001(\003R\tt"
+  "imestamp\022\'\n\005twist\030\003 \001(\0132\017.v1.model.Twist"
+  "H\000R\005twist\022\024\n\004bool\030\004 \001(\010H\000R\004bool\022+\n\020compr"
+  "essed_image\030\005 \001(\014H\000R\017compressedImage\022+\n\007"
+  "goal_id\030\006 \001(\0132\020.v1.model.GoalIDH\000R\006goalI"
+  "dB\006\n\004dataB+Z)github.com/FormantIO/genpro"
+  "to/go/v1/modelb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps[1] = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps[2] = {
   &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
+  &::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_sccs[1] = {
   &scc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto.base,
@@ -85,8 +92,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto, "protos/model/v1/rtc.proto", 303,
-  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps, 1, 1,
+  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto, "protos/model/v1/rtc.proto", 382,
+  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps, 1, 2,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2frtc_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2frtc_2eproto, 1, file_level_enum_descriptors_protos_2fmodel_2fv1_2frtc_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2frtc_2eproto,
 };
@@ -104,15 +111,22 @@ void RTCMessage::InitAsDefaultInstance() {
   ::v1::model::_RTCMessage_default_instance_.bool__ = false;
   ::v1::model::_RTCMessage_default_instance_.compressed_image_.UnsafeSetDefault(
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::v1::model::_RTCMessage_default_instance_.goal_id_ = const_cast< ::v1::model::GoalID*>(
+      ::v1::model::GoalID::internal_default_instance());
 }
 class RTCMessage::_Internal {
  public:
   static const ::v1::model::Twist& twist(const RTCMessage* msg);
+  static const ::v1::model::GoalID& goal_id(const RTCMessage* msg);
 };
 
 const ::v1::model::Twist&
 RTCMessage::_Internal::twist(const RTCMessage* msg) {
   return *msg->data_.twist_;
+}
+const ::v1::model::GoalID&
+RTCMessage::_Internal::goal_id(const RTCMessage* msg) {
+  return *msg->data_.goal_id_;
 }
 void RTCMessage::set_allocated_twist(::v1::model::Twist* twist) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
@@ -131,6 +145,26 @@ void RTCMessage::set_allocated_twist(::v1::model::Twist* twist) {
 void RTCMessage::clear_twist() {
   if (_internal_has_twist()) {
     delete data_.twist_;
+    clear_has_data();
+  }
+}
+void RTCMessage::set_allocated_goal_id(::v1::model::GoalID* goal_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  clear_data();
+  if (goal_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      goal_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, goal_id, submessage_arena);
+    }
+    set_has_goal_id();
+    data_.goal_id_ = goal_id;
+  }
+  // @@protoc_insertion_point(field_set_allocated:v1.model.RTCMessage.goal_id)
+}
+void RTCMessage::clear_goal_id() {
+  if (_internal_has_goal_id()) {
+    delete data_.goal_id_;
     clear_has_data();
   }
 }
@@ -160,6 +194,10 @@ RTCMessage::RTCMessage(const RTCMessage& from)
     }
     case kCompressedImage: {
       _internal_set_compressed_image(from._internal_compressed_image());
+      break;
+    }
+    case kGoalId: {
+      _internal_mutable_goal_id()->::v1::model::GoalID::MergeFrom(from._internal_goal_id());
       break;
     }
     case DATA_NOT_SET: {
@@ -210,6 +248,10 @@ void RTCMessage::clear_data() {
     }
     case kCompressedImage: {
       data_.compressed_image_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+      break;
+    }
+    case kGoalId: {
+      delete data_.goal_id_;
       break;
     }
     case DATA_NOT_SET: {
@@ -277,6 +319,13 @@ const char* RTCMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // .v1.model.GoalID goal_id = 6[json_name = "goalId"];
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_goal_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
@@ -339,6 +388,14 @@ failure:
         5, this->_internal_compressed_image(), target);
   }
 
+  // .v1.model.GoalID goal_id = 6[json_name = "goalId"];
+  if (_internal_has_goal_id()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::goal_id(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -387,6 +444,13 @@ size_t RTCMessage::ByteSizeLong() const {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_compressed_image());
+      break;
+    }
+    // .v1.model.GoalID goal_id = 6[json_name = "goalId"];
+    case kGoalId: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *data_.goal_id_);
       break;
     }
     case DATA_NOT_SET: {
@@ -442,6 +506,10 @@ void RTCMessage::MergeFrom(const RTCMessage& from) {
     }
     case kCompressedImage: {
       _internal_set_compressed_image(from._internal_compressed_image());
+      break;
+    }
+    case kGoalId: {
+      _internal_mutable_goal_id()->::v1::model::GoalID::MergeFrom(from._internal_goal_id());
       break;
     }
     case DATA_NOT_SET: {

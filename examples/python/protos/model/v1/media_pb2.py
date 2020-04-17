@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from protos.model.v1 import math_pb2 as protos_dot_model_dot_v1_dot_math__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -18,8 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
-  serialized_pb=b'\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\"Z\n\x05Image\x12!\n\x0c\x63ontent_type\x18\x01 \x01(\tR\x0b\x63ontentType\x12\x12\n\x03url\x18\x02 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x03 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"<\n\nPointCloud\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
-)
+  serialized_pb=b'\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"Z\n\x05Image\x12!\n\x0c\x63ontent_type\x18\x01 \x01(\tR\x0b\x63ontentType\x12\x12\n\x03url\x18\x02 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x03 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"\x86\x01\n\nPointCloud\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03raw\x12;\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformH\x01R\x0cworldToLocalB\x06\n\x04\x64\x61taB\x0b\n\ttransformB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  ,
+  dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,])
 
 
 
@@ -67,8 +69,8 @@ _IMAGE = _descriptor.Descriptor(
       name='data', full_name='v1.model.Image.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=41,
-  serialized_end=131,
+  serialized_start=69,
+  serialized_end=159,
 )
 
 
@@ -93,6 +95,13 @@ _POINTCLOUD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='raw', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='world_to_local', full_name='v1.model.PointCloud.world_to_local', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -107,9 +116,12 @@ _POINTCLOUD = _descriptor.Descriptor(
     _descriptor.OneofDescriptor(
       name='data', full_name='v1.model.PointCloud.data',
       index=0, containing_type=None, fields=[]),
+    _descriptor.OneofDescriptor(
+      name='transform', full_name='v1.model.PointCloud.transform',
+      index=1, containing_type=None, fields=[]),
   ],
-  serialized_start=133,
-  serialized_end=193,
+  serialized_start=162,
+  serialized_end=296,
 )
 
 _IMAGE.oneofs_by_name['data'].fields.append(
@@ -118,12 +130,16 @@ _IMAGE.fields_by_name['url'].containing_oneof = _IMAGE.oneofs_by_name['data']
 _IMAGE.oneofs_by_name['data'].fields.append(
   _IMAGE.fields_by_name['raw'])
 _IMAGE.fields_by_name['raw'].containing_oneof = _IMAGE.oneofs_by_name['data']
+_POINTCLOUD.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _POINTCLOUD.oneofs_by_name['data'].fields.append(
   _POINTCLOUD.fields_by_name['url'])
 _POINTCLOUD.fields_by_name['url'].containing_oneof = _POINTCLOUD.oneofs_by_name['data']
 _POINTCLOUD.oneofs_by_name['data'].fields.append(
   _POINTCLOUD.fields_by_name['raw'])
 _POINTCLOUD.fields_by_name['raw'].containing_oneof = _POINTCLOUD.oneofs_by_name['data']
+_POINTCLOUD.oneofs_by_name['transform'].fields.append(
+  _POINTCLOUD.fields_by_name['world_to_local'])
+_POINTCLOUD.fields_by_name['world_to_local'].containing_oneof = _POINTCLOUD.oneofs_by_name['transform']
 DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
 DESCRIPTOR.message_types_by_name['PointCloud'] = _POINTCLOUD
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)

@@ -14,6 +14,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto;
 namespace v1 {
 namespace model {
 class ImageDefaultTypeInternal {
@@ -27,6 +28,7 @@ class PointCloudDefaultTypeInternal {
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PointCloud> _instance;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr raw_;
+  const ::v1::model::Transform* world_to_local_;
 } _PointCloud_default_instance_;
 }  // namespace model
 }  // namespace v1
@@ -55,8 +57,9 @@ static void InitDefaultsscc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto(
   ::v1::model::PointCloud::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto}, {
+      &scc_info_Transform_protos_2fmodel_2fv1_2fmath_2eproto.base,}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2fmedia_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto = nullptr;
@@ -79,7 +82,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fmedia_2e
   ~0u,  // no _weak_field_map_
   offsetof(::v1::model::PointCloudDefaultTypeInternal, url_),
   offsetof(::v1::model::PointCloudDefaultTypeInternal, raw_),
+  offsetof(::v1::model::PointCloudDefaultTypeInternal, world_to_local_),
   PROTOBUF_FIELD_OFFSET(::v1::model::PointCloud, data_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::PointCloud, transform_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::v1::model::Image)},
@@ -92,15 +97,18 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2fmedia_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\033protos/model/v1/media.proto\022\010v1.model\""
-  "Z\n\005Image\022!\n\014content_type\030\001 \001(\tR\013contentT"
-  "ype\022\022\n\003url\030\002 \001(\tH\000R\003url\022\022\n\003raw\030\003 \001(\014H\000R\003"
-  "rawB\006\n\004data\"<\n\nPointCloud\022\022\n\003url\030\001 \001(\tH\000"
-  "R\003url\022\022\n\003raw\030\002 \001(\014H\000R\003rawB\006\n\004dataB+Z)git"
-  "hub.com/FormantIO/genproto/go/v1/modelb\006"
-  "proto3"
+  "\n\033protos/model/v1/media.proto\022\010v1.model\032"
+  "\032protos/model/v1/math.proto\"Z\n\005Image\022!\n\014"
+  "content_type\030\001 \001(\tR\013contentType\022\022\n\003url\030\002"
+  " \001(\tH\000R\003url\022\022\n\003raw\030\003 \001(\014H\000R\003rawB\006\n\004data\""
+  "\206\001\n\nPointCloud\022\022\n\003url\030\001 \001(\tH\000R\003url\022\022\n\003ra"
+  "w\030\002 \001(\014H\000R\003raw\022;\n\016world_to_local\030\003 \001(\0132\023"
+  ".v1.model.TransformH\001R\014worldToLocalB\006\n\004d"
+  "ataB\013\n\ttransformB+Z)github.com/FormantIO"
+  "/genproto/go/v1/modelb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_deps[1] = {
+  &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_sccs[2] = {
   &scc_info_Image_protos_2fmodel_2fv1_2fmedia_2eproto.base,
@@ -109,8 +117,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fmedia_2eproto, "protos/model/v1/media.proto", 246,
-  &descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_deps, 2, 0,
+  &descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fmedia_2eproto, "protos/model/v1/media.proto", 349,
+  &descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto_deps, 2, 1,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fmedia_2eproto, 2, file_level_enum_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fmedia_2eproto,
 };
@@ -435,11 +443,38 @@ void PointCloud::InitAsDefaultInstance() {
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::v1::model::_PointCloud_default_instance_.raw_.UnsafeSetDefault(
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::v1::model::_PointCloud_default_instance_.world_to_local_ = const_cast< ::v1::model::Transform*>(
+      ::v1::model::Transform::internal_default_instance());
 }
 class PointCloud::_Internal {
  public:
+  static const ::v1::model::Transform& world_to_local(const PointCloud* msg);
 };
 
+const ::v1::model::Transform&
+PointCloud::_Internal::world_to_local(const PointCloud* msg) {
+  return *msg->transform_.world_to_local_;
+}
+void PointCloud::set_allocated_world_to_local(::v1::model::Transform* world_to_local) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  clear_transform();
+  if (world_to_local) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      world_to_local = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, world_to_local, submessage_arena);
+    }
+    set_has_world_to_local();
+    transform_.world_to_local_ = world_to_local;
+  }
+  // @@protoc_insertion_point(field_set_allocated:v1.model.PointCloud.world_to_local)
+}
+void PointCloud::clear_world_to_local() {
+  if (_internal_has_world_to_local()) {
+    delete transform_.world_to_local_;
+    clear_has_transform();
+  }
+}
 PointCloud::PointCloud()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -463,12 +498,23 @@ PointCloud::PointCloud(const PointCloud& from)
       break;
     }
   }
+  clear_has_transform();
+  switch (from.transform_case()) {
+    case kWorldToLocal: {
+      _internal_mutable_world_to_local()->::v1::model::Transform::MergeFrom(from._internal_world_to_local());
+      break;
+    }
+    case TRANSFORM_NOT_SET: {
+      break;
+    }
+  }
   // @@protoc_insertion_point(copy_constructor:v1.model.PointCloud)
 }
 
 void PointCloud::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto.base);
   clear_has_data();
+  clear_has_transform();
 }
 
 PointCloud::~PointCloud() {
@@ -479,6 +525,9 @@ PointCloud::~PointCloud() {
 void PointCloud::SharedDtor() {
   if (has_data()) {
     clear_data();
+  }
+  if (has_transform()) {
+    clear_transform();
   }
 }
 
@@ -509,6 +558,20 @@ void PointCloud::clear_data() {
   _oneof_case_[0] = DATA_NOT_SET;
 }
 
+void PointCloud::clear_transform() {
+// @@protoc_insertion_point(one_of_clear_start:v1.model.PointCloud)
+  switch (transform_case()) {
+    case kWorldToLocal: {
+      delete transform_.world_to_local_;
+      break;
+    }
+    case TRANSFORM_NOT_SET: {
+      break;
+    }
+  }
+  _oneof_case_[1] = TRANSFORM_NOT_SET;
+}
+
 
 void PointCloud::Clear() {
 // @@protoc_insertion_point(message_clear_start:v1.model.PointCloud)
@@ -517,6 +580,7 @@ void PointCloud::Clear() {
   (void) cached_has_bits;
 
   clear_data();
+  clear_transform();
   _internal_metadata_.Clear();
 }
 
@@ -541,6 +605,13 @@ const char* PointCloud::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_raw();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_world_to_local(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -586,6 +657,14 @@ failure:
         2, this->_internal_raw(), target);
   }
 
+  // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
+  if (_internal_has_world_to_local()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::world_to_local(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -618,6 +697,18 @@ size_t PointCloud::ByteSizeLong() const {
       break;
     }
     case DATA_NOT_SET: {
+      break;
+    }
+  }
+  switch (transform_case()) {
+    // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
+    case kWorldToLocal: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *transform_.world_to_local_);
+      break;
+    }
+    case TRANSFORM_NOT_SET: {
       break;
     }
   }
@@ -665,6 +756,15 @@ void PointCloud::MergeFrom(const PointCloud& from) {
       break;
     }
   }
+  switch (from.transform_case()) {
+    case kWorldToLocal: {
+      _internal_mutable_world_to_local()->::v1::model::Transform::MergeFrom(from._internal_world_to_local());
+      break;
+    }
+    case TRANSFORM_NOT_SET: {
+      break;
+    }
+  }
 }
 
 void PointCloud::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -689,7 +789,9 @@ void PointCloud::InternalSwap(PointCloud* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(data_, other->data_);
+  swap(transform_, other->transform_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
+  swap(_oneof_case_[1], other->_oneof_case_[1]);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PointCloud::GetMetadata() const {

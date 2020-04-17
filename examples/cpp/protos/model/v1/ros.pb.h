@@ -33,6 +33,7 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "protos/model/v1/math.pb.h"
+#include "protos/model/v1/navigation.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fros_2eproto
@@ -341,9 +342,36 @@ class ROSLocalization :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kPointCloudTopicsFieldNumber = 3,
     kMapTopicFieldNumber = 1,
     kOdomTopicFieldNumber = 2,
+    kPathTopicFieldNumber = 4,
+    kGoalTopicFieldNumber = 5,
   };
+  // repeated string point_cloud_topics = 3[json_name = "pointCloudTopics"];
+  int point_cloud_topics_size() const;
+  private:
+  int _internal_point_cloud_topics_size() const;
+  public:
+  void clear_point_cloud_topics();
+  const std::string& point_cloud_topics(int index) const;
+  std::string* mutable_point_cloud_topics(int index);
+  void set_point_cloud_topics(int index, const std::string& value);
+  void set_point_cloud_topics(int index, std::string&& value);
+  void set_point_cloud_topics(int index, const char* value);
+  void set_point_cloud_topics(int index, const char* value, size_t size);
+  std::string* add_point_cloud_topics();
+  void add_point_cloud_topics(const std::string& value);
+  void add_point_cloud_topics(std::string&& value);
+  void add_point_cloud_topics(const char* value);
+  void add_point_cloud_topics(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& point_cloud_topics() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_point_cloud_topics();
+  private:
+  const std::string& _internal_point_cloud_topics(int index) const;
+  std::string* _internal_add_point_cloud_topics();
+  public:
+
   // string map_topic = 1[json_name = "mapTopic"];
   void clear_map_topic();
   const std::string& map_topic() const;
@@ -376,13 +404,48 @@ class ROSLocalization :
   std::string* _internal_mutable_odom_topic();
   public:
 
+  // string path_topic = 4[json_name = "pathTopic"];
+  void clear_path_topic();
+  const std::string& path_topic() const;
+  void set_path_topic(const std::string& value);
+  void set_path_topic(std::string&& value);
+  void set_path_topic(const char* value);
+  void set_path_topic(const char* value, size_t size);
+  std::string* mutable_path_topic();
+  std::string* release_path_topic();
+  void set_allocated_path_topic(std::string* path_topic);
+  private:
+  const std::string& _internal_path_topic() const;
+  void _internal_set_path_topic(const std::string& value);
+  std::string* _internal_mutable_path_topic();
+  public:
+
+  // string goal_topic = 5[json_name = "goalTopic"];
+  void clear_goal_topic();
+  const std::string& goal_topic() const;
+  void set_goal_topic(const std::string& value);
+  void set_goal_topic(std::string&& value);
+  void set_goal_topic(const char* value);
+  void set_goal_topic(const char* value, size_t size);
+  std::string* mutable_goal_topic();
+  std::string* release_goal_topic();
+  void set_allocated_goal_topic(std::string* goal_topic);
+  private:
+  const std::string& _internal_goal_topic() const;
+  void _internal_set_goal_topic(const std::string& value);
+  std::string* _internal_mutable_goal_topic();
+  public:
+
   // @@protoc_insertion_point(class_scope:v1.model.ROSLocalization)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> point_cloud_topics_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr map_topic_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr odom_topic_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr path_topic_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr goal_topic_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fros_2eproto;
 };
@@ -565,6 +628,7 @@ class ROSMessageToPublish :
     kCompressedImage = 4,
     kText = 5,
     kPose = 6,
+    kGoalID = 9,
     DATA_NOT_SET = 0,
   };
 
@@ -646,6 +710,7 @@ class ROSMessageToPublish :
     kCompressedImageFieldNumber = 4,
     kTextFieldNumber = 5,
     kPoseFieldNumber = 6,
+    kGoalIDFieldNumber = 9,
   };
   // string stream = 1[json_name = "stream"];
   void clear_stream();
@@ -768,6 +833,21 @@ class ROSMessageToPublish :
   ::v1::model::Transform* _internal_mutable_pose();
   public:
 
+  // .v1.model.GoalID goalID = 9[json_name = "goalID"];
+  bool has_goalid() const;
+  private:
+  bool _internal_has_goalid() const;
+  public:
+  void clear_goalid();
+  const ::v1::model::GoalID& goalid() const;
+  ::v1::model::GoalID* release_goalid();
+  ::v1::model::GoalID* mutable_goalid();
+  void set_allocated_goalid(::v1::model::GoalID* goalid);
+  private:
+  const ::v1::model::GoalID& _internal_goalid() const;
+  ::v1::model::GoalID* _internal_mutable_goalid();
+  public:
+
   void clear_data();
   DataCase data_case() const;
   // @@protoc_insertion_point(class_scope:v1.model.ROSMessageToPublish)
@@ -778,6 +858,7 @@ class ROSMessageToPublish :
   void set_has_compressed_image();
   void set_has_text();
   void set_has_pose();
+  void set_has_goalid();
 
   inline bool has_data() const;
   inline void clear_has_data();
@@ -793,6 +874,7 @@ class ROSMessageToPublish :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compressed_image_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr text_;
     ::v1::model::Transform* pose_;
+    ::v1::model::GoalID* goalid_;
   } data_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -1052,6 +1134,200 @@ inline void ROSLocalization::set_allocated_odom_topic(std::string* odom_topic) {
   }
   odom_topic_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), odom_topic);
   // @@protoc_insertion_point(field_set_allocated:v1.model.ROSLocalization.odom_topic)
+}
+
+// repeated string point_cloud_topics = 3[json_name = "pointCloudTopics"];
+inline int ROSLocalization::_internal_point_cloud_topics_size() const {
+  return point_cloud_topics_.size();
+}
+inline int ROSLocalization::point_cloud_topics_size() const {
+  return _internal_point_cloud_topics_size();
+}
+inline void ROSLocalization::clear_point_cloud_topics() {
+  point_cloud_topics_.Clear();
+}
+inline std::string* ROSLocalization::add_point_cloud_topics() {
+  // @@protoc_insertion_point(field_add_mutable:v1.model.ROSLocalization.point_cloud_topics)
+  return _internal_add_point_cloud_topics();
+}
+inline const std::string& ROSLocalization::_internal_point_cloud_topics(int index) const {
+  return point_cloud_topics_.Get(index);
+}
+inline const std::string& ROSLocalization::point_cloud_topics(int index) const {
+  // @@protoc_insertion_point(field_get:v1.model.ROSLocalization.point_cloud_topics)
+  return _internal_point_cloud_topics(index);
+}
+inline std::string* ROSLocalization::mutable_point_cloud_topics(int index) {
+  // @@protoc_insertion_point(field_mutable:v1.model.ROSLocalization.point_cloud_topics)
+  return point_cloud_topics_.Mutable(index);
+}
+inline void ROSLocalization::set_point_cloud_topics(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:v1.model.ROSLocalization.point_cloud_topics)
+  point_cloud_topics_.Mutable(index)->assign(value);
+}
+inline void ROSLocalization::set_point_cloud_topics(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:v1.model.ROSLocalization.point_cloud_topics)
+  point_cloud_topics_.Mutable(index)->assign(std::move(value));
+}
+inline void ROSLocalization::set_point_cloud_topics(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  point_cloud_topics_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:v1.model.ROSLocalization.point_cloud_topics)
+}
+inline void ROSLocalization::set_point_cloud_topics(int index, const char* value, size_t size) {
+  point_cloud_topics_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:v1.model.ROSLocalization.point_cloud_topics)
+}
+inline std::string* ROSLocalization::_internal_add_point_cloud_topics() {
+  return point_cloud_topics_.Add();
+}
+inline void ROSLocalization::add_point_cloud_topics(const std::string& value) {
+  point_cloud_topics_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:v1.model.ROSLocalization.point_cloud_topics)
+}
+inline void ROSLocalization::add_point_cloud_topics(std::string&& value) {
+  point_cloud_topics_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:v1.model.ROSLocalization.point_cloud_topics)
+}
+inline void ROSLocalization::add_point_cloud_topics(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  point_cloud_topics_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:v1.model.ROSLocalization.point_cloud_topics)
+}
+inline void ROSLocalization::add_point_cloud_topics(const char* value, size_t size) {
+  point_cloud_topics_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:v1.model.ROSLocalization.point_cloud_topics)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ROSLocalization::point_cloud_topics() const {
+  // @@protoc_insertion_point(field_list:v1.model.ROSLocalization.point_cloud_topics)
+  return point_cloud_topics_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ROSLocalization::mutable_point_cloud_topics() {
+  // @@protoc_insertion_point(field_mutable_list:v1.model.ROSLocalization.point_cloud_topics)
+  return &point_cloud_topics_;
+}
+
+// string path_topic = 4[json_name = "pathTopic"];
+inline void ROSLocalization::clear_path_topic() {
+  path_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& ROSLocalization::path_topic() const {
+  // @@protoc_insertion_point(field_get:v1.model.ROSLocalization.path_topic)
+  return _internal_path_topic();
+}
+inline void ROSLocalization::set_path_topic(const std::string& value) {
+  _internal_set_path_topic(value);
+  // @@protoc_insertion_point(field_set:v1.model.ROSLocalization.path_topic)
+}
+inline std::string* ROSLocalization::mutable_path_topic() {
+  // @@protoc_insertion_point(field_mutable:v1.model.ROSLocalization.path_topic)
+  return _internal_mutable_path_topic();
+}
+inline const std::string& ROSLocalization::_internal_path_topic() const {
+  return path_topic_.GetNoArena();
+}
+inline void ROSLocalization::_internal_set_path_topic(const std::string& value) {
+  
+  path_topic_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void ROSLocalization::set_path_topic(std::string&& value) {
+  
+  path_topic_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:v1.model.ROSLocalization.path_topic)
+}
+inline void ROSLocalization::set_path_topic(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  path_topic_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.model.ROSLocalization.path_topic)
+}
+inline void ROSLocalization::set_path_topic(const char* value, size_t size) {
+  
+  path_topic_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:v1.model.ROSLocalization.path_topic)
+}
+inline std::string* ROSLocalization::_internal_mutable_path_topic() {
+  
+  return path_topic_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* ROSLocalization::release_path_topic() {
+  // @@protoc_insertion_point(field_release:v1.model.ROSLocalization.path_topic)
+  
+  return path_topic_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void ROSLocalization::set_allocated_path_topic(std::string* path_topic) {
+  if (path_topic != nullptr) {
+    
+  } else {
+    
+  }
+  path_topic_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), path_topic);
+  // @@protoc_insertion_point(field_set_allocated:v1.model.ROSLocalization.path_topic)
+}
+
+// string goal_topic = 5[json_name = "goalTopic"];
+inline void ROSLocalization::clear_goal_topic() {
+  goal_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& ROSLocalization::goal_topic() const {
+  // @@protoc_insertion_point(field_get:v1.model.ROSLocalization.goal_topic)
+  return _internal_goal_topic();
+}
+inline void ROSLocalization::set_goal_topic(const std::string& value) {
+  _internal_set_goal_topic(value);
+  // @@protoc_insertion_point(field_set:v1.model.ROSLocalization.goal_topic)
+}
+inline std::string* ROSLocalization::mutable_goal_topic() {
+  // @@protoc_insertion_point(field_mutable:v1.model.ROSLocalization.goal_topic)
+  return _internal_mutable_goal_topic();
+}
+inline const std::string& ROSLocalization::_internal_goal_topic() const {
+  return goal_topic_.GetNoArena();
+}
+inline void ROSLocalization::_internal_set_goal_topic(const std::string& value) {
+  
+  goal_topic_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void ROSLocalization::set_goal_topic(std::string&& value) {
+  
+  goal_topic_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:v1.model.ROSLocalization.goal_topic)
+}
+inline void ROSLocalization::set_goal_topic(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  goal_topic_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.model.ROSLocalization.goal_topic)
+}
+inline void ROSLocalization::set_goal_topic(const char* value, size_t size) {
+  
+  goal_topic_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:v1.model.ROSLocalization.goal_topic)
+}
+inline std::string* ROSLocalization::_internal_mutable_goal_topic() {
+  
+  return goal_topic_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* ROSLocalization::release_goal_topic() {
+  // @@protoc_insertion_point(field_release:v1.model.ROSLocalization.goal_topic)
+  
+  return goal_topic_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void ROSLocalization::set_allocated_goal_topic(std::string* goal_topic) {
+  if (goal_topic != nullptr) {
+    
+  } else {
+    
+  }
+  goal_topic_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), goal_topic);
+  // @@protoc_insertion_point(field_set_allocated:v1.model.ROSLocalization.goal_topic)
 }
 
 // -------------------------------------------------------------------
@@ -1579,6 +1855,50 @@ inline ::v1::model::Transform* ROSMessageToPublish::_internal_mutable_pose() {
 inline ::v1::model::Transform* ROSMessageToPublish::mutable_pose() {
   // @@protoc_insertion_point(field_mutable:v1.model.ROSMessageToPublish.pose)
   return _internal_mutable_pose();
+}
+
+// .v1.model.GoalID goalID = 9[json_name = "goalID"];
+inline bool ROSMessageToPublish::_internal_has_goalid() const {
+  return data_case() == kGoalID;
+}
+inline bool ROSMessageToPublish::has_goalid() const {
+  return _internal_has_goalid();
+}
+inline void ROSMessageToPublish::set_has_goalid() {
+  _oneof_case_[0] = kGoalID;
+}
+inline ::v1::model::GoalID* ROSMessageToPublish::release_goalid() {
+  // @@protoc_insertion_point(field_release:v1.model.ROSMessageToPublish.goalID)
+  if (_internal_has_goalid()) {
+    clear_has_data();
+      ::v1::model::GoalID* temp = data_.goalid_;
+    data_.goalid_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::v1::model::GoalID& ROSMessageToPublish::_internal_goalid() const {
+  return _internal_has_goalid()
+      ? *data_.goalid_
+      : *reinterpret_cast< ::v1::model::GoalID*>(&::v1::model::_GoalID_default_instance_);
+}
+inline const ::v1::model::GoalID& ROSMessageToPublish::goalid() const {
+  // @@protoc_insertion_point(field_get:v1.model.ROSMessageToPublish.goalID)
+  return _internal_goalid();
+}
+inline ::v1::model::GoalID* ROSMessageToPublish::_internal_mutable_goalid() {
+  if (!_internal_has_goalid()) {
+    clear_data();
+    set_has_goalid();
+    data_.goalid_ = CreateMaybeMessage< ::v1::model::GoalID >(
+        GetArenaNoVirtual());
+  }
+  return data_.goalid_;
+}
+inline ::v1::model::GoalID* ROSMessageToPublish::mutable_goalid() {
+  // @@protoc_insertion_point(field_mutable:v1.model.ROSMessageToPublish.goalID)
+  return _internal_mutable_goalid();
 }
 
 inline bool ROSMessageToPublish::has_data() const {

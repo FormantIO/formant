@@ -7,6 +7,11 @@ import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/model";
 
+message AgentConfigurationStore {
+  string agent_version = 1;
+  AgentConfiguration configuration = 2;
+}
+
 message AgentConfiguration {
   string id = 1;
   string name = 2;
@@ -20,10 +25,14 @@ message AgentConfigurationDocument {
   ResourcesConfiguration resources = 4;
   ApplicationConfiguration application = 5;
   TeleopConfiguration teleop = 6;
+  PortForwardingConfiguration port_forwarding = 7;
 }
 
 message TeleopConfiguration {
   repeated TeleopRosStreamConfiguration ros_streams = 1;
+}
+message PortForwardingConfiguration {
+  google.protobuf.BoolValue enabled = 1;
 }
 
 enum TeleopRosStreamConfigurationTopicType {
@@ -32,6 +41,7 @@ enum TeleopRosStreamConfigurationTopicType {
   SENSOR_MSGS_COMPRESSED_IMAGE = 2;
   STD_MSGS_STRING = 3;
   GEOMETRY_MSGS_POSE = 4;
+  ACTIONLIB_MSGS_GOALID = 5;
 }
 
 enum TeleopRosStreamConfigurationMode {
@@ -74,10 +84,12 @@ message StreamConfiguration {
   oneof configuration {
     ROSTopic ros_topic = 3;
     ROSLocalization ros_localization = 4;
-    ROSTransformTree ros_transform_tree = 7;
     DirectoryWatch directory_watch = 5;
     FileTail file_tail = 6;
+    ROSTransformTree ros_transform_tree = 7;
+    Custom custom = 9;
   }
+  google.protobuf.DoubleValue throttle_hz = 8;
 }
 
 enum FileFormat {
@@ -90,6 +102,8 @@ enum FileType {
   IMAGE = 1;
   POINT_CLOUD = 4;
 }
+
+message Custom {}
 
 message DirectoryWatch {
   string directory = 1;

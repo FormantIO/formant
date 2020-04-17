@@ -12,6 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from protos.model.v1 import math_pb2 as protos_dot_model_dot_v1_dot_math__pb2
+from protos.model.v1 import media_pb2 as protos_dot_model_dot_v1_dot_media__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
-  serialized_pb=b'\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"D\n\x08Location\x12\x1a\n\x08latitude\x18\x01 \x01(\x01R\x08latitude\x12\x1c\n\tlongitude\x18\x02 \x01(\x01R\tlongitude\"_\n\x0cLocalization\x12.\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.OdometryR\x08odometry\x12\x1f\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.MapR\x03map\"\x95\x01\n\x08Odometry\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12%\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistR\x05twist\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"\xad\x02\n\x03Map\x12\x1e\n\nresolution\x18\x01 \x01(\x01R\nresolution\x12\x14\n\x05width\x18\x02 \x01(\rR\x05width\x12\x16\n\x06height\x18\x03 \x01(\rR\x06height\x12+\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.TransformR\x06origin\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12@\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00R\roccupancyGrid\x12\x12\n\x03url\x18\x07 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x08 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"#\n\rOccupancyGrid\x12\x12\n\x04\x64\x61ta\x18\x01 \x03(\x05R\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/media.proto\"D\n\x08Location\x12\x1a\n\x08latitude\x18\x01 \x01(\x01R\x08latitude\x12\x1c\n\tlongitude\x18\x02 \x01(\x01R\tlongitude\"\xe0\x01\n\x0cLocalization\x12.\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.OdometryR\x08odometry\x12\x1f\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.MapR\x03map\x12\x37\n\x0cpoint_clouds\x18\x03 \x03(\x0b\x32\x14.v1.model.PointCloudR\x0bpointClouds\x12\"\n\x04path\x18\x04 \x01(\x0b\x32\x0e.v1.model.PathR\x04path\x12\"\n\x04goal\x18\x05 \x01(\x0b\x32\x0e.v1.model.GoalR\x04goal\"\x95\x01\n\x08Odometry\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12%\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistR\x05twist\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"\xad\x02\n\x03Map\x12\x1e\n\nresolution\x18\x01 \x01(\x01R\nresolution\x12\x14\n\x05width\x18\x02 \x01(\rR\x05width\x12\x16\n\x06height\x18\x03 \x01(\rR\x06height\x12+\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.TransformR\x06origin\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12@\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00R\roccupancyGrid\x12\x12\n\x03url\x18\x07 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x08 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"#\n\rOccupancyGrid\x12\x12\n\x04\x64\x61ta\x18\x01 \x03(\x05R\x04\x64\x61ta\"l\n\x04Path\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12)\n\x05poses\x18\x02 \x03(\x0b\x32\x13.v1.model.TransformR\x05poses\"j\n\x04Goal\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\'\n\x04pose\x18\x02 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\"\x18\n\x06GoalID\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02idB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
-  dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,])
+  dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_media__pb2.DESCRIPTOR,])
 
 
 
@@ -59,8 +60,8 @@ _LOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=74,
-  serialized_end=142,
+  serialized_start=103,
+  serialized_end=171,
 )
 
 
@@ -85,6 +86,27 @@ _LOCALIZATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='map', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='point_clouds', full_name='v1.model.Localization.point_clouds', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='pointClouds', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='path', full_name='v1.model.Localization.path', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='path', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='goal', full_name='v1.model.Localization.goal', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='goal', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -97,8 +119,8 @@ _LOCALIZATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=144,
-  serialized_end=239,
+  serialized_start=174,
+  serialized_end=398,
 )
 
 
@@ -142,8 +164,8 @@ _ODOMETRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=242,
-  serialized_end=391,
+  serialized_start=401,
+  serialized_end=550,
 )
 
 
@@ -225,8 +247,8 @@ _MAP = _descriptor.Descriptor(
       name='data', full_name='v1.model.Map.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=394,
-  serialized_end=695,
+  serialized_start=553,
+  serialized_end=854,
 )
 
 
@@ -256,12 +278,122 @@ _OCCUPANCYGRID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=697,
-  serialized_end=732,
+  serialized_start=856,
+  serialized_end=891,
+)
+
+
+_PATH = _descriptor.Descriptor(
+  name='Path',
+  full_name='v1.model.Path',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='world_to_local', full_name='v1.model.Path.world_to_local', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='poses', full_name='v1.model.Path.poses', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='poses', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=893,
+  serialized_end=1001,
+)
+
+
+_GOAL = _descriptor.Descriptor(
+  name='Goal',
+  full_name='v1.model.Goal',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='world_to_local', full_name='v1.model.Goal.world_to_local', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pose', full_name='v1.model.Goal.pose', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='pose', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1003,
+  serialized_end=1109,
+)
+
+
+_GOALID = _descriptor.Descriptor(
+  name='GoalID',
+  full_name='v1.model.GoalID',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='v1.model.GoalID.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='id', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1111,
+  serialized_end=1135,
 )
 
 _LOCALIZATION.fields_by_name['odometry'].message_type = _ODOMETRY
 _LOCALIZATION.fields_by_name['map'].message_type = _MAP
+_LOCALIZATION.fields_by_name['point_clouds'].message_type = protos_dot_model_dot_v1_dot_media__pb2._POINTCLOUD
+_LOCALIZATION.fields_by_name['path'].message_type = _PATH
+_LOCALIZATION.fields_by_name['goal'].message_type = _GOAL
 _ODOMETRY.fields_by_name['pose'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _ODOMETRY.fields_by_name['twist'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TWIST
 _ODOMETRY.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
@@ -277,11 +409,18 @@ _MAP.fields_by_name['url'].containing_oneof = _MAP.oneofs_by_name['data']
 _MAP.oneofs_by_name['data'].fields.append(
   _MAP.fields_by_name['raw'])
 _MAP.fields_by_name['raw'].containing_oneof = _MAP.oneofs_by_name['data']
+_PATH.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
+_PATH.fields_by_name['poses'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
+_GOAL.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
+_GOAL.fields_by_name['pose'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 DESCRIPTOR.message_types_by_name['Location'] = _LOCATION
 DESCRIPTOR.message_types_by_name['Localization'] = _LOCALIZATION
 DESCRIPTOR.message_types_by_name['Odometry'] = _ODOMETRY
 DESCRIPTOR.message_types_by_name['Map'] = _MAP
 DESCRIPTOR.message_types_by_name['OccupancyGrid'] = _OCCUPANCYGRID
+DESCRIPTOR.message_types_by_name['Path'] = _PATH
+DESCRIPTOR.message_types_by_name['Goal'] = _GOAL
+DESCRIPTOR.message_types_by_name['GoalID'] = _GOALID
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Location = _reflection.GeneratedProtocolMessageType('Location', (_message.Message,), {
@@ -318,6 +457,27 @@ OccupancyGrid = _reflection.GeneratedProtocolMessageType('OccupancyGrid', (_mess
   # @@protoc_insertion_point(class_scope:v1.model.OccupancyGrid)
   })
 _sym_db.RegisterMessage(OccupancyGrid)
+
+Path = _reflection.GeneratedProtocolMessageType('Path', (_message.Message,), {
+  'DESCRIPTOR' : _PATH,
+  '__module__' : 'protos.model.v1.navigation_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.Path)
+  })
+_sym_db.RegisterMessage(Path)
+
+Goal = _reflection.GeneratedProtocolMessageType('Goal', (_message.Message,), {
+  'DESCRIPTOR' : _GOAL,
+  '__module__' : 'protos.model.v1.navigation_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.Goal)
+  })
+_sym_db.RegisterMessage(Goal)
+
+GoalID = _reflection.GeneratedProtocolMessageType('GoalID', (_message.Message,), {
+  'DESCRIPTOR' : _GOALID,
+  '__module__' : 'protos.model.v1.navigation_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.GoalID)
+  })
+_sym_db.RegisterMessage(GoalID)
 
 
 DESCRIPTOR._options = None

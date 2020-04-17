@@ -3,6 +3,7 @@ syntax = "proto3";
 package v1.model;
 
 import "protos/model/v1/math.proto";
+import "protos/model/v1/navigation.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/model";
 
@@ -14,6 +15,9 @@ message ROSTopic {
 message ROSLocalization {
   string map_topic = 1;
   string odom_topic = 2;
+  repeated string point_cloud_topics = 3;
+  string path_topic = 4;
+  string goal_topic = 5;
 }
 
 message ROSTransformTree {
@@ -30,5 +34,6 @@ message ROSMessageToPublish {
     bytes compressed_image = 4;  // jpeg encoded compressed image
     string text = 5;
     model.Transform pose = 6;
+    model.GoalID goalID = 9;
   }
 }

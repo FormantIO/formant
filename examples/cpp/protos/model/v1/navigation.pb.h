@@ -33,6 +33,7 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "protos/model/v1/math.pb.h"
+#include "protos/model/v1/media.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto
@@ -48,7 +49,7 @@ struct TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[8]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -57,6 +58,12 @@ struct TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto;
 namespace v1 {
 namespace model {
+class Goal;
+class GoalDefaultTypeInternal;
+extern GoalDefaultTypeInternal _Goal_default_instance_;
+class GoalID;
+class GoalIDDefaultTypeInternal;
+extern GoalIDDefaultTypeInternal _GoalID_default_instance_;
 class Localization;
 class LocalizationDefaultTypeInternal;
 extern LocalizationDefaultTypeInternal _Localization_default_instance_;
@@ -72,14 +79,20 @@ extern OccupancyGridDefaultTypeInternal _OccupancyGrid_default_instance_;
 class Odometry;
 class OdometryDefaultTypeInternal;
 extern OdometryDefaultTypeInternal _Odometry_default_instance_;
+class Path;
+class PathDefaultTypeInternal;
+extern PathDefaultTypeInternal _Path_default_instance_;
 }  // namespace model
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
+template<> ::v1::model::Goal* Arena::CreateMaybeMessage<::v1::model::Goal>(Arena*);
+template<> ::v1::model::GoalID* Arena::CreateMaybeMessage<::v1::model::GoalID>(Arena*);
 template<> ::v1::model::Localization* Arena::CreateMaybeMessage<::v1::model::Localization>(Arena*);
 template<> ::v1::model::Location* Arena::CreateMaybeMessage<::v1::model::Location>(Arena*);
 template<> ::v1::model::Map* Arena::CreateMaybeMessage<::v1::model::Map>(Arena*);
 template<> ::v1::model::OccupancyGrid* Arena::CreateMaybeMessage<::v1::model::OccupancyGrid>(Arena*);
 template<> ::v1::model::Odometry* Arena::CreateMaybeMessage<::v1::model::Odometry>(Arena*);
+template<> ::v1::model::Path* Arena::CreateMaybeMessage<::v1::model::Path>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace v1 {
 namespace model {
@@ -331,9 +344,30 @@ class Localization :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kPointCloudsFieldNumber = 3,
     kOdometryFieldNumber = 1,
     kMapFieldNumber = 2,
+    kPathFieldNumber = 4,
+    kGoalFieldNumber = 5,
   };
+  // repeated .v1.model.PointCloud point_clouds = 3[json_name = "pointClouds"];
+  int point_clouds_size() const;
+  private:
+  int _internal_point_clouds_size() const;
+  public:
+  void clear_point_clouds();
+  ::v1::model::PointCloud* mutable_point_clouds(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::PointCloud >*
+      mutable_point_clouds();
+  private:
+  const ::v1::model::PointCloud& _internal_point_clouds(int index) const;
+  ::v1::model::PointCloud* _internal_add_point_clouds();
+  public:
+  const ::v1::model::PointCloud& point_clouds(int index) const;
+  ::v1::model::PointCloud* add_point_clouds();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::PointCloud >&
+      point_clouds() const;
+
   // .v1.model.Odometry odometry = 1[json_name = "odometry"];
   bool has_odometry() const;
   private:
@@ -364,13 +398,46 @@ class Localization :
   ::v1::model::Map* _internal_mutable_map();
   public:
 
+  // .v1.model.Path path = 4[json_name = "path"];
+  bool has_path() const;
+  private:
+  bool _internal_has_path() const;
+  public:
+  void clear_path();
+  const ::v1::model::Path& path() const;
+  ::v1::model::Path* release_path();
+  ::v1::model::Path* mutable_path();
+  void set_allocated_path(::v1::model::Path* path);
+  private:
+  const ::v1::model::Path& _internal_path() const;
+  ::v1::model::Path* _internal_mutable_path();
+  public:
+
+  // .v1.model.Goal goal = 5[json_name = "goal"];
+  bool has_goal() const;
+  private:
+  bool _internal_has_goal() const;
+  public:
+  void clear_goal();
+  const ::v1::model::Goal& goal() const;
+  ::v1::model::Goal* release_goal();
+  ::v1::model::Goal* mutable_goal();
+  void set_allocated_goal(::v1::model::Goal* goal);
+  private:
+  const ::v1::model::Goal& _internal_goal() const;
+  ::v1::model::Goal* _internal_mutable_goal();
+  public:
+
   // @@protoc_insertion_point(class_scope:v1.model.Localization)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::PointCloud > point_clouds_;
   ::v1::model::Odometry* odometry_;
   ::v1::model::Map* map_;
+  ::v1::model::Path* path_;
+  ::v1::model::Goal* goal_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto;
 };
@@ -947,6 +1014,446 @@ class OccupancyGrid :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto;
 };
+// -------------------------------------------------------------------
+
+class Path :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.Path) */ {
+ public:
+  Path();
+  virtual ~Path();
+
+  Path(const Path& from);
+  Path(Path&& from) noexcept
+    : Path() {
+    *this = ::std::move(from);
+  }
+
+  inline Path& operator=(const Path& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Path& operator=(Path&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Path& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Path* internal_default_instance() {
+    return reinterpret_cast<const Path*>(
+               &_Path_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(Path& a, Path& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Path* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Path* New() const final {
+    return CreateMaybeMessage<Path>(nullptr);
+  }
+
+  Path* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Path>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Path& from);
+  void MergeFrom(const Path& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Path* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.model.Path";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto);
+    return ::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPosesFieldNumber = 2,
+    kWorldToLocalFieldNumber = 1,
+  };
+  // repeated .v1.model.Transform poses = 2[json_name = "poses"];
+  int poses_size() const;
+  private:
+  int _internal_poses_size() const;
+  public:
+  void clear_poses();
+  ::v1::model::Transform* mutable_poses(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Transform >*
+      mutable_poses();
+  private:
+  const ::v1::model::Transform& _internal_poses(int index) const;
+  ::v1::model::Transform* _internal_add_poses();
+  public:
+  const ::v1::model::Transform& poses(int index) const;
+  ::v1::model::Transform* add_poses();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Transform >&
+      poses() const;
+
+  // .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+  bool has_world_to_local() const;
+  private:
+  bool _internal_has_world_to_local() const;
+  public:
+  void clear_world_to_local();
+  const ::v1::model::Transform& world_to_local() const;
+  ::v1::model::Transform* release_world_to_local();
+  ::v1::model::Transform* mutable_world_to_local();
+  void set_allocated_world_to_local(::v1::model::Transform* world_to_local);
+  private:
+  const ::v1::model::Transform& _internal_world_to_local() const;
+  ::v1::model::Transform* _internal_mutable_world_to_local();
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.model.Path)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Transform > poses_;
+  ::v1::model::Transform* world_to_local_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Goal :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.Goal) */ {
+ public:
+  Goal();
+  virtual ~Goal();
+
+  Goal(const Goal& from);
+  Goal(Goal&& from) noexcept
+    : Goal() {
+    *this = ::std::move(from);
+  }
+
+  inline Goal& operator=(const Goal& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Goal& operator=(Goal&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Goal& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Goal* internal_default_instance() {
+    return reinterpret_cast<const Goal*>(
+               &_Goal_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  friend void swap(Goal& a, Goal& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Goal* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Goal* New() const final {
+    return CreateMaybeMessage<Goal>(nullptr);
+  }
+
+  Goal* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Goal>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Goal& from);
+  void MergeFrom(const Goal& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Goal* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.model.Goal";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto);
+    return ::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kWorldToLocalFieldNumber = 1,
+    kPoseFieldNumber = 2,
+  };
+  // .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+  bool has_world_to_local() const;
+  private:
+  bool _internal_has_world_to_local() const;
+  public:
+  void clear_world_to_local();
+  const ::v1::model::Transform& world_to_local() const;
+  ::v1::model::Transform* release_world_to_local();
+  ::v1::model::Transform* mutable_world_to_local();
+  void set_allocated_world_to_local(::v1::model::Transform* world_to_local);
+  private:
+  const ::v1::model::Transform& _internal_world_to_local() const;
+  ::v1::model::Transform* _internal_mutable_world_to_local();
+  public:
+
+  // .v1.model.Transform pose = 2[json_name = "pose"];
+  bool has_pose() const;
+  private:
+  bool _internal_has_pose() const;
+  public:
+  void clear_pose();
+  const ::v1::model::Transform& pose() const;
+  ::v1::model::Transform* release_pose();
+  ::v1::model::Transform* mutable_pose();
+  void set_allocated_pose(::v1::model::Transform* pose);
+  private:
+  const ::v1::model::Transform& _internal_pose() const;
+  ::v1::model::Transform* _internal_mutable_pose();
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.model.Goal)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::v1::model::Transform* world_to_local_;
+  ::v1::model::Transform* pose_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GoalID :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.GoalID) */ {
+ public:
+  GoalID();
+  virtual ~GoalID();
+
+  GoalID(const GoalID& from);
+  GoalID(GoalID&& from) noexcept
+    : GoalID() {
+    *this = ::std::move(from);
+  }
+
+  inline GoalID& operator=(const GoalID& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GoalID& operator=(GoalID&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const GoalID& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GoalID* internal_default_instance() {
+    return reinterpret_cast<const GoalID*>(
+               &_GoalID_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  friend void swap(GoalID& a, GoalID& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GoalID* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GoalID* New() const final {
+    return CreateMaybeMessage<GoalID>(nullptr);
+  }
+
+  GoalID* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<GoalID>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const GoalID& from);
+  void MergeFrom(const GoalID& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GoalID* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.model.GoalID";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto);
+    return ::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIdFieldNumber = 1,
+  };
+  // string id = 1[json_name = "id"];
+  void clear_id();
+  const std::string& id() const;
+  void set_id(const std::string& value);
+  void set_id(std::string&& value);
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  std::string* mutable_id();
+  std::string* release_id();
+  void set_allocated_id(std::string* id);
+  private:
+  const std::string& _internal_id() const;
+  void _internal_set_id(const std::string& value);
+  std::string* _internal_mutable_id();
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.model.GoalID)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fmodel_2fv1_2fnavigation_2eproto;
+};
 // ===================================================================
 
 
@@ -1120,6 +1627,162 @@ inline void Localization::set_allocated_map(::v1::model::Map* map) {
   }
   map_ = map;
   // @@protoc_insertion_point(field_set_allocated:v1.model.Localization.map)
+}
+
+// repeated .v1.model.PointCloud point_clouds = 3[json_name = "pointClouds"];
+inline int Localization::_internal_point_clouds_size() const {
+  return point_clouds_.size();
+}
+inline int Localization::point_clouds_size() const {
+  return _internal_point_clouds_size();
+}
+inline ::v1::model::PointCloud* Localization::mutable_point_clouds(int index) {
+  // @@protoc_insertion_point(field_mutable:v1.model.Localization.point_clouds)
+  return point_clouds_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::PointCloud >*
+Localization::mutable_point_clouds() {
+  // @@protoc_insertion_point(field_mutable_list:v1.model.Localization.point_clouds)
+  return &point_clouds_;
+}
+inline const ::v1::model::PointCloud& Localization::_internal_point_clouds(int index) const {
+  return point_clouds_.Get(index);
+}
+inline const ::v1::model::PointCloud& Localization::point_clouds(int index) const {
+  // @@protoc_insertion_point(field_get:v1.model.Localization.point_clouds)
+  return _internal_point_clouds(index);
+}
+inline ::v1::model::PointCloud* Localization::_internal_add_point_clouds() {
+  return point_clouds_.Add();
+}
+inline ::v1::model::PointCloud* Localization::add_point_clouds() {
+  // @@protoc_insertion_point(field_add:v1.model.Localization.point_clouds)
+  return _internal_add_point_clouds();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::PointCloud >&
+Localization::point_clouds() const {
+  // @@protoc_insertion_point(field_list:v1.model.Localization.point_clouds)
+  return point_clouds_;
+}
+
+// .v1.model.Path path = 4[json_name = "path"];
+inline bool Localization::_internal_has_path() const {
+  return this != internal_default_instance() && path_ != nullptr;
+}
+inline bool Localization::has_path() const {
+  return _internal_has_path();
+}
+inline void Localization::clear_path() {
+  if (GetArenaNoVirtual() == nullptr && path_ != nullptr) {
+    delete path_;
+  }
+  path_ = nullptr;
+}
+inline const ::v1::model::Path& Localization::_internal_path() const {
+  const ::v1::model::Path* p = path_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::Path*>(
+      &::v1::model::_Path_default_instance_);
+}
+inline const ::v1::model::Path& Localization::path() const {
+  // @@protoc_insertion_point(field_get:v1.model.Localization.path)
+  return _internal_path();
+}
+inline ::v1::model::Path* Localization::release_path() {
+  // @@protoc_insertion_point(field_release:v1.model.Localization.path)
+  
+  ::v1::model::Path* temp = path_;
+  path_ = nullptr;
+  return temp;
+}
+inline ::v1::model::Path* Localization::_internal_mutable_path() {
+  
+  if (path_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::Path>(GetArenaNoVirtual());
+    path_ = p;
+  }
+  return path_;
+}
+inline ::v1::model::Path* Localization::mutable_path() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Localization.path)
+  return _internal_mutable_path();
+}
+inline void Localization::set_allocated_path(::v1::model::Path* path) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete path_;
+  }
+  if (path) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      path = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, path, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  path_ = path;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.Localization.path)
+}
+
+// .v1.model.Goal goal = 5[json_name = "goal"];
+inline bool Localization::_internal_has_goal() const {
+  return this != internal_default_instance() && goal_ != nullptr;
+}
+inline bool Localization::has_goal() const {
+  return _internal_has_goal();
+}
+inline void Localization::clear_goal() {
+  if (GetArenaNoVirtual() == nullptr && goal_ != nullptr) {
+    delete goal_;
+  }
+  goal_ = nullptr;
+}
+inline const ::v1::model::Goal& Localization::_internal_goal() const {
+  const ::v1::model::Goal* p = goal_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::Goal*>(
+      &::v1::model::_Goal_default_instance_);
+}
+inline const ::v1::model::Goal& Localization::goal() const {
+  // @@protoc_insertion_point(field_get:v1.model.Localization.goal)
+  return _internal_goal();
+}
+inline ::v1::model::Goal* Localization::release_goal() {
+  // @@protoc_insertion_point(field_release:v1.model.Localization.goal)
+  
+  ::v1::model::Goal* temp = goal_;
+  goal_ = nullptr;
+  return temp;
+}
+inline ::v1::model::Goal* Localization::_internal_mutable_goal() {
+  
+  if (goal_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::Goal>(GetArenaNoVirtual());
+    goal_ = p;
+  }
+  return goal_;
+}
+inline ::v1::model::Goal* Localization::mutable_goal() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Localization.goal)
+  return _internal_mutable_goal();
+}
+inline void Localization::set_allocated_goal(::v1::model::Goal* goal) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete goal_;
+  }
+  if (goal) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      goal = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, goal, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  goal_ = goal;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.Localization.goal)
 }
 
 // -------------------------------------------------------------------
@@ -1766,9 +2429,285 @@ OccupancyGrid::mutable_data() {
   return _internal_mutable_data();
 }
 
+// -------------------------------------------------------------------
+
+// Path
+
+// .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+inline bool Path::_internal_has_world_to_local() const {
+  return this != internal_default_instance() && world_to_local_ != nullptr;
+}
+inline bool Path::has_world_to_local() const {
+  return _internal_has_world_to_local();
+}
+inline const ::v1::model::Transform& Path::_internal_world_to_local() const {
+  const ::v1::model::Transform* p = world_to_local_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::Transform*>(
+      &::v1::model::_Transform_default_instance_);
+}
+inline const ::v1::model::Transform& Path::world_to_local() const {
+  // @@protoc_insertion_point(field_get:v1.model.Path.world_to_local)
+  return _internal_world_to_local();
+}
+inline ::v1::model::Transform* Path::release_world_to_local() {
+  // @@protoc_insertion_point(field_release:v1.model.Path.world_to_local)
+  
+  ::v1::model::Transform* temp = world_to_local_;
+  world_to_local_ = nullptr;
+  return temp;
+}
+inline ::v1::model::Transform* Path::_internal_mutable_world_to_local() {
+  
+  if (world_to_local_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::Transform>(GetArenaNoVirtual());
+    world_to_local_ = p;
+  }
+  return world_to_local_;
+}
+inline ::v1::model::Transform* Path::mutable_world_to_local() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Path.world_to_local)
+  return _internal_mutable_world_to_local();
+}
+inline void Path::set_allocated_world_to_local(::v1::model::Transform* world_to_local) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(world_to_local_);
+  }
+  if (world_to_local) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      world_to_local = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, world_to_local, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  world_to_local_ = world_to_local;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.Path.world_to_local)
+}
+
+// repeated .v1.model.Transform poses = 2[json_name = "poses"];
+inline int Path::_internal_poses_size() const {
+  return poses_.size();
+}
+inline int Path::poses_size() const {
+  return _internal_poses_size();
+}
+inline ::v1::model::Transform* Path::mutable_poses(int index) {
+  // @@protoc_insertion_point(field_mutable:v1.model.Path.poses)
+  return poses_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Transform >*
+Path::mutable_poses() {
+  // @@protoc_insertion_point(field_mutable_list:v1.model.Path.poses)
+  return &poses_;
+}
+inline const ::v1::model::Transform& Path::_internal_poses(int index) const {
+  return poses_.Get(index);
+}
+inline const ::v1::model::Transform& Path::poses(int index) const {
+  // @@protoc_insertion_point(field_get:v1.model.Path.poses)
+  return _internal_poses(index);
+}
+inline ::v1::model::Transform* Path::_internal_add_poses() {
+  return poses_.Add();
+}
+inline ::v1::model::Transform* Path::add_poses() {
+  // @@protoc_insertion_point(field_add:v1.model.Path.poses)
+  return _internal_add_poses();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Transform >&
+Path::poses() const {
+  // @@protoc_insertion_point(field_list:v1.model.Path.poses)
+  return poses_;
+}
+
+// -------------------------------------------------------------------
+
+// Goal
+
+// .v1.model.Transform world_to_local = 1[json_name = "worldToLocal"];
+inline bool Goal::_internal_has_world_to_local() const {
+  return this != internal_default_instance() && world_to_local_ != nullptr;
+}
+inline bool Goal::has_world_to_local() const {
+  return _internal_has_world_to_local();
+}
+inline const ::v1::model::Transform& Goal::_internal_world_to_local() const {
+  const ::v1::model::Transform* p = world_to_local_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::Transform*>(
+      &::v1::model::_Transform_default_instance_);
+}
+inline const ::v1::model::Transform& Goal::world_to_local() const {
+  // @@protoc_insertion_point(field_get:v1.model.Goal.world_to_local)
+  return _internal_world_to_local();
+}
+inline ::v1::model::Transform* Goal::release_world_to_local() {
+  // @@protoc_insertion_point(field_release:v1.model.Goal.world_to_local)
+  
+  ::v1::model::Transform* temp = world_to_local_;
+  world_to_local_ = nullptr;
+  return temp;
+}
+inline ::v1::model::Transform* Goal::_internal_mutable_world_to_local() {
+  
+  if (world_to_local_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::Transform>(GetArenaNoVirtual());
+    world_to_local_ = p;
+  }
+  return world_to_local_;
+}
+inline ::v1::model::Transform* Goal::mutable_world_to_local() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Goal.world_to_local)
+  return _internal_mutable_world_to_local();
+}
+inline void Goal::set_allocated_world_to_local(::v1::model::Transform* world_to_local) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(world_to_local_);
+  }
+  if (world_to_local) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      world_to_local = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, world_to_local, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  world_to_local_ = world_to_local;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.Goal.world_to_local)
+}
+
+// .v1.model.Transform pose = 2[json_name = "pose"];
+inline bool Goal::_internal_has_pose() const {
+  return this != internal_default_instance() && pose_ != nullptr;
+}
+inline bool Goal::has_pose() const {
+  return _internal_has_pose();
+}
+inline const ::v1::model::Transform& Goal::_internal_pose() const {
+  const ::v1::model::Transform* p = pose_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::Transform*>(
+      &::v1::model::_Transform_default_instance_);
+}
+inline const ::v1::model::Transform& Goal::pose() const {
+  // @@protoc_insertion_point(field_get:v1.model.Goal.pose)
+  return _internal_pose();
+}
+inline ::v1::model::Transform* Goal::release_pose() {
+  // @@protoc_insertion_point(field_release:v1.model.Goal.pose)
+  
+  ::v1::model::Transform* temp = pose_;
+  pose_ = nullptr;
+  return temp;
+}
+inline ::v1::model::Transform* Goal::_internal_mutable_pose() {
+  
+  if (pose_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::Transform>(GetArenaNoVirtual());
+    pose_ = p;
+  }
+  return pose_;
+}
+inline ::v1::model::Transform* Goal::mutable_pose() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Goal.pose)
+  return _internal_mutable_pose();
+}
+inline void Goal::set_allocated_pose(::v1::model::Transform* pose) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(pose_);
+  }
+  if (pose) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      pose = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, pose, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  pose_ = pose;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.Goal.pose)
+}
+
+// -------------------------------------------------------------------
+
+// GoalID
+
+// string id = 1[json_name = "id"];
+inline void GoalID::clear_id() {
+  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& GoalID::id() const {
+  // @@protoc_insertion_point(field_get:v1.model.GoalID.id)
+  return _internal_id();
+}
+inline void GoalID::set_id(const std::string& value) {
+  _internal_set_id(value);
+  // @@protoc_insertion_point(field_set:v1.model.GoalID.id)
+}
+inline std::string* GoalID::mutable_id() {
+  // @@protoc_insertion_point(field_mutable:v1.model.GoalID.id)
+  return _internal_mutable_id();
+}
+inline const std::string& GoalID::_internal_id() const {
+  return id_.GetNoArena();
+}
+inline void GoalID::_internal_set_id(const std::string& value) {
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void GoalID::set_id(std::string&& value) {
+  
+  id_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:v1.model.GoalID.id)
+}
+inline void GoalID::set_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.model.GoalID.id)
+}
+inline void GoalID::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:v1.model.GoalID.id)
+}
+inline std::string* GoalID::_internal_mutable_id() {
+  
+  return id_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* GoalID::release_id() {
+  // @@protoc_insertion_point(field_release:v1.model.GoalID.id)
+  
+  return id_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void GoalID::set_allocated_id(std::string* id) {
+  if (id != nullptr) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:v1.model.GoalID.id)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
