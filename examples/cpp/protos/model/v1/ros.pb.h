@@ -31,6 +31,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include "protos/model/v1/math.pb.h"
 #include "protos/model/v1/navigation.pb.h"
@@ -81,6 +82,36 @@ PROTOBUF_NAMESPACE_CLOSE
 namespace v1 {
 namespace model {
 
+enum ROSTopicType : int {
+  UNKNOWN = 0,
+  STD_MSGS_BOOL = 1,
+  SENSOR_MSGS_COMPRESSED_IMAGE = 2,
+  STD_MSGS_STRING = 3,
+  GEOMETRY_MSGS_POSE = 4,
+  ACTIONLIB_MSGS_GOALID = 5,
+  GEOMETRY_MSGS_TWIST = 6,
+  ROSTopicType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ROSTopicType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ROSTopicType_IsValid(int value);
+constexpr ROSTopicType ROSTopicType_MIN = UNKNOWN;
+constexpr ROSTopicType ROSTopicType_MAX = GEOMETRY_MSGS_TWIST;
+constexpr int ROSTopicType_ARRAYSIZE = ROSTopicType_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ROSTopicType_descriptor();
+template<typename T>
+inline const std::string& ROSTopicType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ROSTopicType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ROSTopicType_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ROSTopicType_descriptor(), enum_t_value);
+}
+inline bool ROSTopicType_Parse(
+    const std::string& name, ROSTopicType* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ROSTopicType>(
+    ROSTopicType_descriptor(), name, value);
+}
 // ===================================================================
 
 class ROSTopic :
@@ -1924,6 +1955,16 @@ inline ROSMessageToPublish::DataCase ROSMessageToPublish::data_case() const {
 
 }  // namespace model
 }  // namespace v1
+
+PROTOBUF_NAMESPACE_OPEN
+
+template <> struct is_proto_enum< ::v1::model::ROSTopicType> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::v1::model::ROSTopicType>() {
+  return ::v1::model::ROSTopicType_descriptor();
+}
+
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 

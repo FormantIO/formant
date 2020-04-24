@@ -37,3 +37,13 @@ message ROSMessageToPublish {
     model.GoalID goalID = 9;
   }
 }
+
+enum ROSTopicType {
+  UNKNOWN = 0;
+  STD_MSGS_BOOL = 1;
+  SENSOR_MSGS_COMPRESSED_IMAGE = 2;
+  STD_MSGS_STRING = 3;
+  GEOMETRY_MSGS_POSE = 4;
+  ACTIONLIB_MSGS_GOALID = 5;
+  GEOMETRY_MSGS_TWIST = 6;
+}

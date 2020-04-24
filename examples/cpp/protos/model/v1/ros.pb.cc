@@ -103,7 +103,7 @@ static void InitDefaultsscc_info_ROSTransformTree_protos_2fmodel_2fv1_2fros_2epr
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ROSTransformTree_protos_2fmodel_2fv1_2fros_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2fros_2eproto[4];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_protos_2fmodel_2fv1_2fros_2eproto = nullptr;
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_protos_2fmodel_2fv1_2fros_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_protos_2fmodel_2fv1_2fros_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fros_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -179,8 +179,13 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto[] PROTOBU
   "\001(\014H\000R\017compressedImage\022\024\n\004text\030\005 \001(\tH\000R\004"
   "text\022)\n\004pose\030\006 \001(\0132\023.v1.model.TransformH"
   "\000R\004pose\022*\n\006goalID\030\t \001(\0132\020.v1.model.GoalI"
-  "DH\000R\006goalIDB\006\n\004dataB+Z)github.com/Forman"
-  "tIO/genproto/go/v1/modelb\006proto3"
+  "DH\000R\006goalIDB\006\n\004data*\261\001\n\014ROSTopicType\022\013\n\007"
+  "UNKNOWN\020\000\022\021\n\rSTD_MSGS_BOOL\020\001\022 \n\034SENSOR_M"
+  "SGS_COMPRESSED_IMAGE\020\002\022\023\n\017STD_MSGS_STRIN"
+  "G\020\003\022\026\n\022GEOMETRY_MSGS_POSE\020\004\022\031\n\025ACTIONLIB"
+  "_MSGS_GOALID\020\005\022\027\n\023GEOMETRY_MSGS_TWIST\020\006B"
+  "+Z)github.com/FormantIO/genproto/go/v1/m"
+  "odelb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_deps[2] = {
   &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
@@ -195,7 +200,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fros_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto, "protos/model/v1/ros.proto", 792,
+  &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto, "protos/model/v1/ros.proto", 972,
   &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_deps, 4, 2,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fros_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fros_2eproto, 4, file_level_enum_descriptors_protos_2fmodel_2fv1_2fros_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fros_2eproto,
@@ -205,6 +210,25 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos
 static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fros_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fros_2eproto), true);
 namespace v1 {
 namespace model {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ROSTopicType_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fros_2eproto);
+  return file_level_enum_descriptors_protos_2fmodel_2fv1_2fros_2eproto[0];
+}
+bool ROSTopicType_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      return true;
+    default:
+      return false;
+  }
+}
+
 
 // ===================================================================
 

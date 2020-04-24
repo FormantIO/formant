@@ -141,35 +141,6 @@ PROTOBUF_NAMESPACE_CLOSE
 namespace v1 {
 namespace model {
 
-enum TeleopRosStreamConfigurationTopicType : int {
-  GEOMETRY_MSGS_TWIST = 0,
-  STD_MSGS_BOOL = 1,
-  SENSOR_MSGS_COMPRESSED_IMAGE = 2,
-  STD_MSGS_STRING = 3,
-  GEOMETRY_MSGS_POSE = 4,
-  ACTIONLIB_MSGS_GOALID = 5,
-  TeleopRosStreamConfigurationTopicType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  TeleopRosStreamConfigurationTopicType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool TeleopRosStreamConfigurationTopicType_IsValid(int value);
-constexpr TeleopRosStreamConfigurationTopicType TeleopRosStreamConfigurationTopicType_MIN = GEOMETRY_MSGS_TWIST;
-constexpr TeleopRosStreamConfigurationTopicType TeleopRosStreamConfigurationTopicType_MAX = ACTIONLIB_MSGS_GOALID;
-constexpr int TeleopRosStreamConfigurationTopicType_ARRAYSIZE = TeleopRosStreamConfigurationTopicType_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* TeleopRosStreamConfigurationTopicType_descriptor();
-template<typename T>
-inline const std::string& TeleopRosStreamConfigurationTopicType_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, TeleopRosStreamConfigurationTopicType>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function TeleopRosStreamConfigurationTopicType_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    TeleopRosStreamConfigurationTopicType_descriptor(), enum_t_value);
-}
-inline bool TeleopRosStreamConfigurationTopicType_Parse(
-    const std::string& name, TeleopRosStreamConfigurationTopicType* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<TeleopRosStreamConfigurationTopicType>(
-    TeleopRosStreamConfigurationTopicType_descriptor(), name, value);
-}
 enum TeleopRosStreamConfigurationMode : int {
   COMMAND = 0,
   OBSERVE = 1,
@@ -1239,13 +1210,13 @@ class TeleopRosStreamConfiguration :
   std::string* _internal_mutable_topic_name();
   public:
 
-  // .v1.model.TeleopRosStreamConfigurationTopicType topic_type = 2[json_name = "topicType"];
+  // .v1.model.ROSTopicType topic_type = 2[json_name = "topicType"];
   void clear_topic_type();
-  ::v1::model::TeleopRosStreamConfigurationTopicType topic_type() const;
-  void set_topic_type(::v1::model::TeleopRosStreamConfigurationTopicType value);
+  ::v1::model::ROSTopicType topic_type() const;
+  void set_topic_type(::v1::model::ROSTopicType value);
   private:
-  ::v1::model::TeleopRosStreamConfigurationTopicType _internal_topic_type() const;
-  void _internal_set_topic_type(::v1::model::TeleopRosStreamConfigurationTopicType value);
+  ::v1::model::ROSTopicType _internal_topic_type() const;
+  void _internal_set_topic_type(::v1::model::ROSTopicType value);
   public:
 
   // .v1.model.TeleopRosStreamConfigurationMode mode = 3[json_name = "mode"];
@@ -3677,22 +3648,22 @@ inline void TeleopRosStreamConfiguration::set_allocated_topic_name(std::string* 
   // @@protoc_insertion_point(field_set_allocated:v1.model.TeleopRosStreamConfiguration.topic_name)
 }
 
-// .v1.model.TeleopRosStreamConfigurationTopicType topic_type = 2[json_name = "topicType"];
+// .v1.model.ROSTopicType topic_type = 2[json_name = "topicType"];
 inline void TeleopRosStreamConfiguration::clear_topic_type() {
   topic_type_ = 0;
 }
-inline ::v1::model::TeleopRosStreamConfigurationTopicType TeleopRosStreamConfiguration::_internal_topic_type() const {
-  return static_cast< ::v1::model::TeleopRosStreamConfigurationTopicType >(topic_type_);
+inline ::v1::model::ROSTopicType TeleopRosStreamConfiguration::_internal_topic_type() const {
+  return static_cast< ::v1::model::ROSTopicType >(topic_type_);
 }
-inline ::v1::model::TeleopRosStreamConfigurationTopicType TeleopRosStreamConfiguration::topic_type() const {
+inline ::v1::model::ROSTopicType TeleopRosStreamConfiguration::topic_type() const {
   // @@protoc_insertion_point(field_get:v1.model.TeleopRosStreamConfiguration.topic_type)
   return _internal_topic_type();
 }
-inline void TeleopRosStreamConfiguration::_internal_set_topic_type(::v1::model::TeleopRosStreamConfigurationTopicType value) {
+inline void TeleopRosStreamConfiguration::_internal_set_topic_type(::v1::model::ROSTopicType value) {
   
   topic_type_ = value;
 }
-inline void TeleopRosStreamConfiguration::set_topic_type(::v1::model::TeleopRosStreamConfigurationTopicType value) {
+inline void TeleopRosStreamConfiguration::set_topic_type(::v1::model::ROSTopicType value) {
   _internal_set_topic_type(value);
   // @@protoc_insertion_point(field_set:v1.model.TeleopRosStreamConfiguration.topic_type)
 }
@@ -4980,11 +4951,6 @@ inline void FileTail::set_allocated_regex(std::string* regex) {
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::v1::model::TeleopRosStreamConfigurationTopicType> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::v1::model::TeleopRosStreamConfigurationTopicType>() {
-  return ::v1::model::TeleopRosStreamConfigurationTopicType_descriptor();
-}
 template <> struct is_proto_enum< ::v1::model::TeleopRosStreamConfigurationMode> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::v1::model::TeleopRosStreamConfigurationMode>() {

@@ -391,7 +391,7 @@ static void InitDefaultsscc_info_TeleopRosStreamConfiguration_protos_2fmodel_2fv
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TeleopRosStreamConfiguration_protos_2fmodel_2fv1_2fconfig_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2fconfig_2eproto[18];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[4];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -610,61 +610,56 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto[] PROT
   ".model.TeleopRosStreamConfigurationR\nros"
   "Streams\"S\n\033PortForwardingConfiguration\0224"
   "\n\007enabled\030\001 \001(\0132\032.google.protobuf.BoolVa"
-  "lueR\007enabled\"\315\001\n\034TeleopRosStreamConfigur"
-  "ation\022\035\n\ntopic_name\030\001 \001(\tR\ttopicName\022N\n\n"
-  "topic_type\030\002 \001(\0162/.v1.model.TeleopRosStr"
-  "eamConfigurationTopicTypeR\ttopicType\022>\n\004"
-  "mode\030\003 \001(\0162*.v1.model.TeleopRosStreamCon"
-  "figurationModeR\004mode\"\177\n\026TelemetryConfigu"
-  "ration\0227\n\007streams\030\001 \003(\0132\035.v1.model.Strea"
-  "mConfigurationR\007streams\022,\n\003ros\030\002 \001(\0132\032.v"
-  "1.model.ROSConfigurationR\003ros\"\306\001\n\030Applic"
-  "ationConfiguration\022e\n\021configuration_map\030"
-  "\001 \003(\01328.v1.model.ApplicationConfiguratio"
-  "n.ConfigurationMapEntryR\020configurationMa"
-  "p\032C\n\025ConfigurationMapEntry\022\020\n\003key\030\001 \001(\tR"
-  "\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\225\001\n\026Resou"
-  "rcesConfiguration\022/\n\004disk\030\001 \001(\0132\033.v1.mod"
-  "el.DiskConfigurationR\004disk\022J\n\022stream_thr"
-  "ottle_hz\030\002 \001(\0132\034.google.protobuf.DoubleV"
-  "alueR\020streamThrottleHz\"4\n\021DiskConfigurat"
-  "ion\022\037\n\013buffer_size\030\001 \001(\003R\nbufferSize\"K\n\020"
-  "ROSConfiguration\0227\n\030world_reference_fram"
-  "e_id\030\001 \001(\tR\025worldReferenceFrameId\"\332\004\n\023St"
-  "reamConfiguration\022\022\n\004name\030\001 \001(\tR\004name\022;\n"
-  "\004tags\030\002 \003(\0132\'.v1.model.StreamConfigurati"
-  "on.TagsEntryR\004tags\0221\n\tros_topic\030\003 \001(\0132\022."
-  "v1.model.ROSTopicH\000R\010rosTopic\022F\n\020ros_loc"
-  "alization\030\004 \001(\0132\031.v1.model.ROSLocalizati"
-  "onH\000R\017rosLocalization\022C\n\017directory_watch"
-  "\030\005 \001(\0132\030.v1.model.DirectoryWatchH\000R\016dire"
-  "ctoryWatch\0221\n\tfile_tail\030\006 \001(\0132\022.v1.model"
-  ".FileTailH\000R\010fileTail\022J\n\022ros_transform_t"
-  "ree\030\007 \001(\0132\032.v1.model.ROSTransformTreeH\000R"
-  "\020rosTransformTree\022*\n\006custom\030\t \001(\0132\020.v1.m"
-  "odel.CustomH\000R\006custom\022=\n\013throttle_hz\030\010 \001"
-  "(\0132\034.google.protobuf.DoubleValueR\nthrott"
-  "leHz\0327\n\tTagsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v"
-  "alue\030\002 \001(\tR\005value:\0028\001B\017\n\rconfiguration\"\010"
-  "\n\006Custom\"\240\001\n\016DirectoryWatch\022\034\n\tdirectory"
-  "\030\001 \001(\tR\tdirectory\022\034\n\textension\030\002 \001(\tR\tex"
-  "tension\022/\n\tfile_type\030\003 \001(\0162\022.v1.model.Fi"
-  "leTypeR\010fileType\022!\n\014remote_agent\030\004 \001(\010R\013"
-  "remoteAgent\"\257\001\n\010FileTail\022\032\n\010filename\030\001 \001"
-  "(\tR\010filename\0225\n\013file_format\030\002 \001(\0162\024.v1.m"
-  "odel.FileFormatR\nfileFormat\022\031\n\010time_key\030"
-  "\003 \001(\tR\007timeKey\022\037\n\013time_format\030\004 \001(\tR\ntim"
-  "eFormat\022\024\n\005regex\030\005 \001(\tR\005regex*\275\001\n%Teleop"
-  "RosStreamConfigurationTopicType\022\027\n\023GEOME"
-  "TRY_MSGS_TWIST\020\000\022\021\n\rSTD_MSGS_BOOL\020\001\022 \n\034S"
-  "ENSOR_MSGS_COMPRESSED_IMAGE\020\002\022\023\n\017STD_MSG"
-  "S_STRING\020\003\022\026\n\022GEOMETRY_MSGS_POSE\020\004\022\031\n\025AC"
-  "TIONLIB_MSGS_GOALID\020\005*<\n TeleopRosStream"
-  "ConfigurationMode\022\013\n\007COMMAND\020\000\022\013\n\007OBSERV"
-  "E\020\001*&\n\nFileFormat\022\016\n\nPLAIN_TEXT\020\000\022\010\n\004JSO"
-  "N\020\001*0\n\010FileType\022\010\n\004FILE\020\000\022\t\n\005IMAGE\020\001\022\017\n\013"
-  "POINT_CLOUD\020\004B+Z)github.com/FormantIO/ge"
-  "nproto/go/v1/modelb\006proto3"
+  "lueR\007enabled\"\264\001\n\034TeleopRosStreamConfigur"
+  "ation\022\035\n\ntopic_name\030\001 \001(\tR\ttopicName\0225\n\n"
+  "topic_type\030\002 \001(\0162\026.v1.model.ROSTopicType"
+  "R\ttopicType\022>\n\004mode\030\003 \001(\0162*.v1.model.Tel"
+  "eopRosStreamConfigurationModeR\004mode\"\177\n\026T"
+  "elemetryConfiguration\0227\n\007streams\030\001 \003(\0132\035"
+  ".v1.model.StreamConfigurationR\007streams\022,"
+  "\n\003ros\030\002 \001(\0132\032.v1.model.ROSConfigurationR"
+  "\003ros\"\306\001\n\030ApplicationConfiguration\022e\n\021con"
+  "figuration_map\030\001 \003(\01328.v1.model.Applicat"
+  "ionConfiguration.ConfigurationMapEntryR\020"
+  "configurationMap\032C\n\025ConfigurationMapEntr"
+  "y\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005valu"
+  "e:\0028\001\"\225\001\n\026ResourcesConfiguration\022/\n\004disk"
+  "\030\001 \001(\0132\033.v1.model.DiskConfigurationR\004dis"
+  "k\022J\n\022stream_throttle_hz\030\002 \001(\0132\034.google.p"
+  "rotobuf.DoubleValueR\020streamThrottleHz\"4\n"
+  "\021DiskConfiguration\022\037\n\013buffer_size\030\001 \001(\003R"
+  "\nbufferSize\"K\n\020ROSConfiguration\0227\n\030world"
+  "_reference_frame_id\030\001 \001(\tR\025worldReferenc"
+  "eFrameId\"\332\004\n\023StreamConfiguration\022\022\n\004name"
+  "\030\001 \001(\tR\004name\022;\n\004tags\030\002 \003(\0132\'.v1.model.St"
+  "reamConfiguration.TagsEntryR\004tags\0221\n\tros"
+  "_topic\030\003 \001(\0132\022.v1.model.ROSTopicH\000R\010rosT"
+  "opic\022F\n\020ros_localization\030\004 \001(\0132\031.v1.mode"
+  "l.ROSLocalizationH\000R\017rosLocalization\022C\n\017"
+  "directory_watch\030\005 \001(\0132\030.v1.model.Directo"
+  "ryWatchH\000R\016directoryWatch\0221\n\tfile_tail\030\006"
+  " \001(\0132\022.v1.model.FileTailH\000R\010fileTail\022J\n\022"
+  "ros_transform_tree\030\007 \001(\0132\032.v1.model.ROST"
+  "ransformTreeH\000R\020rosTransformTree\022*\n\006cust"
+  "om\030\t \001(\0132\020.v1.model.CustomH\000R\006custom\022=\n\013"
+  "throttle_hz\030\010 \001(\0132\034.google.protobuf.Doub"
+  "leValueR\nthrottleHz\0327\n\tTagsEntry\022\020\n\003key\030"
+  "\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001B\017\n\r"
+  "configuration\"\010\n\006Custom\"\240\001\n\016DirectoryWat"
+  "ch\022\034\n\tdirectory\030\001 \001(\tR\tdirectory\022\034\n\texte"
+  "nsion\030\002 \001(\tR\textension\022/\n\tfile_type\030\003 \001("
+  "\0162\022.v1.model.FileTypeR\010fileType\022!\n\014remot"
+  "e_agent\030\004 \001(\010R\013remoteAgent\"\257\001\n\010FileTail\022"
+  "\032\n\010filename\030\001 \001(\tR\010filename\0225\n\013file_form"
+  "at\030\002 \001(\0162\024.v1.model.FileFormatR\nfileForm"
+  "at\022\031\n\010time_key\030\003 \001(\tR\007timeKey\022\037\n\013time_fo"
+  "rmat\030\004 \001(\tR\ntimeFormat\022\024\n\005regex\030\005 \001(\tR\005r"
+  "egex*<\n TeleopRosStreamConfigurationMode"
+  "\022\013\n\007COMMAND\020\000\022\013\n\007OBSERVE\020\001*&\n\nFileFormat"
+  "\022\016\n\nPLAIN_TEXT\020\000\022\010\n\004JSON\020\001*0\n\010FileType\022\010"
+  "\n\004FILE\020\000\022\t\n\005IMAGE\020\001\022\017\n\013POINT_CLOUD\020\004B+Z)"
+  "github.com/FormantIO/genproto/go/v1/mode"
+  "lb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_deps[2] = {
   &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
@@ -693,7 +688,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto, "protos/model/v1/config.proto", 3226,
+  &descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto, "protos/model/v1/config.proto", 3009,
   &descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_deps, 18, 2,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fconfig_2eproto, 18, file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto,
@@ -703,27 +698,9 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos
 static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fconfig_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto), true);
 namespace v1 {
 namespace model {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* TeleopRosStreamConfigurationTopicType_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
-  return file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[0];
-}
-bool TeleopRosStreamConfigurationTopicType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-      return true;
-    default:
-      return false;
-  }
-}
-
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* TeleopRosStreamConfigurationMode_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
-  return file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[1];
+  return file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[0];
 }
 bool TeleopRosStreamConfigurationMode_IsValid(int value) {
   switch (value) {
@@ -737,7 +714,7 @@ bool TeleopRosStreamConfigurationMode_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* FileFormat_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
-  return file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[2];
+  return file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[1];
 }
 bool FileFormat_IsValid(int value) {
   switch (value) {
@@ -751,7 +728,7 @@ bool FileFormat_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* FileType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto);
-  return file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[3];
+  return file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto[2];
 }
 bool FileType_IsValid(int value) {
   switch (value) {
@@ -2264,12 +2241,12 @@ const char* TeleopRosStreamConfiguration::_InternalParse(const char* ptr, ::PROT
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.TeleopRosStreamConfigurationTopicType topic_type = 2[json_name = "topicType"];
+      // .v1.model.ROSTopicType topic_type = 2[json_name = "topicType"];
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          _internal_set_topic_type(static_cast<::v1::model::TeleopRosStreamConfigurationTopicType>(val));
+          _internal_set_topic_type(static_cast<::v1::model::ROSTopicType>(val));
         } else goto handle_unusual;
         continue;
       // .v1.model.TeleopRosStreamConfigurationMode mode = 3[json_name = "mode"];
@@ -2316,7 +2293,7 @@ failure:
         1, this->_internal_topic_name(), target);
   }
 
-  // .v1.model.TeleopRosStreamConfigurationTopicType topic_type = 2[json_name = "topicType"];
+  // .v1.model.ROSTopicType topic_type = 2[json_name = "topicType"];
   if (this->topic_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -2353,7 +2330,7 @@ size_t TeleopRosStreamConfiguration::ByteSizeLong() const {
         this->_internal_topic_name());
   }
 
-  // .v1.model.TeleopRosStreamConfigurationTopicType topic_type = 2[json_name = "topicType"];
+  // .v1.model.ROSTopicType topic_type = 2[json_name = "topicType"];
   if (this->topic_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_topic_type());

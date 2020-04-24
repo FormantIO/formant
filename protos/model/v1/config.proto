@@ -35,15 +35,6 @@ message PortForwardingConfiguration {
   google.protobuf.BoolValue enabled = 1;
 }
 
-enum TeleopRosStreamConfigurationTopicType {
-  GEOMETRY_MSGS_TWIST = 0;
-  STD_MSGS_BOOL = 1;
-  SENSOR_MSGS_COMPRESSED_IMAGE = 2;
-  STD_MSGS_STRING = 3;
-  GEOMETRY_MSGS_POSE = 4;
-  ACTIONLIB_MSGS_GOALID = 5;
-}
-
 enum TeleopRosStreamConfigurationMode {
   COMMAND = 0;
   OBSERVE = 1;
@@ -51,7 +42,7 @@ enum TeleopRosStreamConfigurationMode {
 
 message TeleopRosStreamConfiguration {
   string topic_name = 1;
-  TeleopRosStreamConfigurationTopicType topic_type = 2;
+  ROSTopicType topic_type = 2;
   TeleopRosStreamConfigurationMode mode = 3;
 }
 
