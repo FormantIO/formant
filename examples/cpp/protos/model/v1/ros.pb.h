@@ -90,12 +90,13 @@ enum ROSTopicType : int {
   GEOMETRY_MSGS_POSE = 4,
   ACTIONLIB_MSGS_GOALID = 5,
   GEOMETRY_MSGS_TWIST = 6,
+  H264_VIDEO_FRAME = 7,
   ROSTopicType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   ROSTopicType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool ROSTopicType_IsValid(int value);
 constexpr ROSTopicType ROSTopicType_MIN = UNKNOWN;
-constexpr ROSTopicType ROSTopicType_MAX = GEOMETRY_MSGS_TWIST;
+constexpr ROSTopicType ROSTopicType_MAX = H264_VIDEO_FRAME;
 constexpr int ROSTopicType_ARRAYSIZE = ROSTopicType_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ROSTopicType_descriptor();

@@ -15,6 +15,7 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmedia_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_H264VideoFrame_protos_2fmodel_2fv1_2fmedia_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto;
 namespace v1 {
 namespace model {
@@ -25,6 +26,7 @@ class RTCMessageDefaultTypeInternal {
   bool bool__;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compressed_image_;
   const ::v1::model::GoalID* goal_id_;
+  const ::v1::model::H264VideoFrame* h264_video_frame_;
 } _RTCMessage_default_instance_;
 }  // namespace model
 }  // namespace v1
@@ -39,10 +41,11 @@ static void InitDefaultsscc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto() 
   ::v1::model::RTCMessage::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto}, {
       &scc_info_Twist_protos_2fmodel_2fv1_2fmath_2eproto.base,
-      &scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto.base,}};
+      &scc_info_GoalID_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
+      &scc_info_H264VideoFrame_protos_2fmodel_2fv1_2fmedia_2eproto.base,}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2frtc_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_protos_2fmodel_2fv1_2frtc_2eproto = nullptr;
@@ -60,6 +63,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2frtc_2epr
   offsetof(::v1::model::RTCMessageDefaultTypeInternal, bool__),
   offsetof(::v1::model::RTCMessageDefaultTypeInternal, compressed_image_),
   offsetof(::v1::model::RTCMessageDefaultTypeInternal, goal_id_),
+  offsetof(::v1::model::RTCMessageDefaultTypeInternal, h264_video_frame_),
   PROTOBUF_FIELD_OFFSET(::v1::model::RTCMessage, data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -73,17 +77,21 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\031protos/model/v1/rtc.proto\022\010v1.model\032\032p"
   "rotos/model/v1/math.proto\032 protos/model/"
-  "v1/navigation.proto\"\343\001\n\nRTCMessage\022\026\n\006st"
-  "ream\030\001 \001(\tR\006stream\022\034\n\ttimestamp\030\002 \001(\003R\tt"
-  "imestamp\022\'\n\005twist\030\003 \001(\0132\017.v1.model.Twist"
-  "H\000R\005twist\022\024\n\004bool\030\004 \001(\010H\000R\004bool\022+\n\020compr"
-  "essed_image\030\005 \001(\014H\000R\017compressedImage\022+\n\007"
-  "goal_id\030\006 \001(\0132\020.v1.model.GoalIDH\000R\006goalI"
-  "dB\006\n\004dataB+Z)github.com/FormantIO/genpro"
-  "to/go/v1/modelb\006proto3"
+  "v1/navigation.proto\032\033protos/model/v1/med"
+  "ia.proto\"\251\002\n\nRTCMessage\022\026\n\006stream\030\001 \001(\tR"
+  "\006stream\022\034\n\ttimestamp\030\002 \001(\003R\ttimestamp\022\'\n"
+  "\005twist\030\003 \001(\0132\017.v1.model.TwistH\000R\005twist\022\024"
+  "\n\004bool\030\004 \001(\010H\000R\004bool\022+\n\020compressed_image"
+  "\030\005 \001(\014H\000R\017compressedImage\022+\n\007goal_id\030\006 \001"
+  "(\0132\020.v1.model.GoalIDH\000R\006goalId\022D\n\020h264_v"
+  "ideo_frame\030\007 \001(\0132\030.v1.model.H264VideoFra"
+  "meH\000R\016h264VideoFrameB\006\n\004dataB+Z)github.c"
+  "om/FormantIO/genproto/go/v1/modelb\006proto"
+  "3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps[2] = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps[3] = {
   &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
+  &::descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto,
   &::descriptor_table_protos_2fmodel_2fv1_2fnavigation_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_sccs[1] = {
@@ -92,8 +100,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto, "protos/model/v1/rtc.proto", 382,
-  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps, 1, 2,
+  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto, "protos/model/v1/rtc.proto", 481,
+  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps, 1, 3,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2frtc_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2frtc_2eproto, 1, file_level_enum_descriptors_protos_2fmodel_2fv1_2frtc_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2frtc_2eproto,
 };
@@ -113,11 +121,14 @@ void RTCMessage::InitAsDefaultInstance() {
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::v1::model::_RTCMessage_default_instance_.goal_id_ = const_cast< ::v1::model::GoalID*>(
       ::v1::model::GoalID::internal_default_instance());
+  ::v1::model::_RTCMessage_default_instance_.h264_video_frame_ = const_cast< ::v1::model::H264VideoFrame*>(
+      ::v1::model::H264VideoFrame::internal_default_instance());
 }
 class RTCMessage::_Internal {
  public:
   static const ::v1::model::Twist& twist(const RTCMessage* msg);
   static const ::v1::model::GoalID& goal_id(const RTCMessage* msg);
+  static const ::v1::model::H264VideoFrame& h264_video_frame(const RTCMessage* msg);
 };
 
 const ::v1::model::Twist&
@@ -127,6 +138,10 @@ RTCMessage::_Internal::twist(const RTCMessage* msg) {
 const ::v1::model::GoalID&
 RTCMessage::_Internal::goal_id(const RTCMessage* msg) {
   return *msg->data_.goal_id_;
+}
+const ::v1::model::H264VideoFrame&
+RTCMessage::_Internal::h264_video_frame(const RTCMessage* msg) {
+  return *msg->data_.h264_video_frame_;
 }
 void RTCMessage::set_allocated_twist(::v1::model::Twist* twist) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
@@ -168,6 +183,26 @@ void RTCMessage::clear_goal_id() {
     clear_has_data();
   }
 }
+void RTCMessage::set_allocated_h264_video_frame(::v1::model::H264VideoFrame* h264_video_frame) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  clear_data();
+  if (h264_video_frame) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      h264_video_frame = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, h264_video_frame, submessage_arena);
+    }
+    set_has_h264_video_frame();
+    data_.h264_video_frame_ = h264_video_frame;
+  }
+  // @@protoc_insertion_point(field_set_allocated:v1.model.RTCMessage.h264_video_frame)
+}
+void RTCMessage::clear_h264_video_frame() {
+  if (_internal_has_h264_video_frame()) {
+    delete data_.h264_video_frame_;
+    clear_has_data();
+  }
+}
 RTCMessage::RTCMessage()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -198,6 +233,10 @@ RTCMessage::RTCMessage(const RTCMessage& from)
     }
     case kGoalId: {
       _internal_mutable_goal_id()->::v1::model::GoalID::MergeFrom(from._internal_goal_id());
+      break;
+    }
+    case kH264VideoFrame: {
+      _internal_mutable_h264_video_frame()->::v1::model::H264VideoFrame::MergeFrom(from._internal_h264_video_frame());
       break;
     }
     case DATA_NOT_SET: {
@@ -252,6 +291,10 @@ void RTCMessage::clear_data() {
     }
     case kGoalId: {
       delete data_.goal_id_;
+      break;
+    }
+    case kH264VideoFrame: {
+      delete data_.h264_video_frame_;
       break;
     }
     case DATA_NOT_SET: {
@@ -326,6 +369,13 @@ const char* RTCMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // .v1.model.H264VideoFrame h264_video_frame = 7[json_name = "h264VideoFrame"];
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_h264_video_frame(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
@@ -396,6 +446,14 @@ failure:
         6, _Internal::goal_id(this), target, stream);
   }
 
+  // .v1.model.H264VideoFrame h264_video_frame = 7[json_name = "h264VideoFrame"];
+  if (_internal_has_h264_video_frame()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::h264_video_frame(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -451,6 +509,13 @@ size_t RTCMessage::ByteSizeLong() const {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.goal_id_);
+      break;
+    }
+    // .v1.model.H264VideoFrame h264_video_frame = 7[json_name = "h264VideoFrame"];
+    case kH264VideoFrame: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *data_.h264_video_frame_);
       break;
     }
     case DATA_NOT_SET: {
@@ -510,6 +575,10 @@ void RTCMessage::MergeFrom(const RTCMessage& from) {
     }
     case kGoalId: {
       _internal_mutable_goal_id()->::v1::model::GoalID::MergeFrom(from._internal_goal_id());
+      break;
+    }
+    case kH264VideoFrame: {
+      _internal_mutable_h264_video_frame()->::v1::model::H264VideoFrame::MergeFrom(from._internal_h264_video_frame());
       break;
     }
     case DATA_NOT_SET: {

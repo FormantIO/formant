@@ -48,7 +48,7 @@ struct TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[2]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -57,6 +57,9 @@ struct TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto;
 namespace v1 {
 namespace model {
+class H264VideoFrame;
+class H264VideoFrameDefaultTypeInternal;
+extern H264VideoFrameDefaultTypeInternal _H264VideoFrame_default_instance_;
 class Image;
 class ImageDefaultTypeInternal;
 extern ImageDefaultTypeInternal _Image_default_instance_;
@@ -66,6 +69,7 @@ extern PointCloudDefaultTypeInternal _PointCloud_default_instance_;
 }  // namespace model
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
+template<> ::v1::model::H264VideoFrame* Arena::CreateMaybeMessage<::v1::model::H264VideoFrame>(Arena*);
 template<> ::v1::model::Image* Arena::CreateMaybeMessage<::v1::model::Image>(Arena*);
 template<> ::v1::model::PointCloud* Arena::CreateMaybeMessage<::v1::model::PointCloud>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -473,6 +477,163 @@ class PointCloud :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[2];
 
+  friend struct ::TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto;
+};
+// -------------------------------------------------------------------
+
+class H264VideoFrame :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.H264VideoFrame) */ {
+ public:
+  H264VideoFrame();
+  virtual ~H264VideoFrame();
+
+  H264VideoFrame(const H264VideoFrame& from);
+  H264VideoFrame(H264VideoFrame&& from) noexcept
+    : H264VideoFrame() {
+    *this = ::std::move(from);
+  }
+
+  inline H264VideoFrame& operator=(const H264VideoFrame& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline H264VideoFrame& operator=(H264VideoFrame&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const H264VideoFrame& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const H264VideoFrame* internal_default_instance() {
+    return reinterpret_cast<const H264VideoFrame*>(
+               &_H264VideoFrame_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(H264VideoFrame& a, H264VideoFrame& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(H264VideoFrame* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline H264VideoFrame* New() const final {
+    return CreateMaybeMessage<H264VideoFrame>(nullptr);
+  }
+
+  H264VideoFrame* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<H264VideoFrame>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const H264VideoFrame& from);
+  void MergeFrom(const H264VideoFrame& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(H264VideoFrame* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.model.H264VideoFrame";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto);
+    return ::descriptor_table_protos_2fmodel_2fv1_2fmedia_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kFrameDataFieldNumber = 3,
+    kIndexFieldNumber = 1,
+    kFlagsFieldNumber = 2,
+  };
+  // bytes frame_data = 3[json_name = "frameData"];
+  void clear_frame_data();
+  const std::string& frame_data() const;
+  void set_frame_data(const std::string& value);
+  void set_frame_data(std::string&& value);
+  void set_frame_data(const char* value);
+  void set_frame_data(const void* value, size_t size);
+  std::string* mutable_frame_data();
+  std::string* release_frame_data();
+  void set_allocated_frame_data(std::string* frame_data);
+  private:
+  const std::string& _internal_frame_data() const;
+  void _internal_set_frame_data(const std::string& value);
+  std::string* _internal_mutable_frame_data();
+  public:
+
+  // int32 index = 1[json_name = "index"];
+  void clear_index();
+  ::PROTOBUF_NAMESPACE_ID::int32 index() const;
+  void set_index(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_index() const;
+  void _internal_set_index(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 flags = 2[json_name = "flags"];
+  void clear_flags();
+  ::PROTOBUF_NAMESPACE_ID::int32 flags() const;
+  void set_flags(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_flags() const;
+  void _internal_set_flags(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.model.H264VideoFrame)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr frame_data_;
+  ::PROTOBUF_NAMESPACE_ID::int32 index_;
+  ::PROTOBUF_NAMESPACE_ID::int32 flags_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto;
 };
 // ===================================================================
@@ -1013,9 +1174,115 @@ inline PointCloud::DataCase PointCloud::data_case() const {
 inline PointCloud::TransformCase PointCloud::transform_case() const {
   return PointCloud::TransformCase(_oneof_case_[1]);
 }
+// -------------------------------------------------------------------
+
+// H264VideoFrame
+
+// int32 index = 1[json_name = "index"];
+inline void H264VideoFrame::clear_index() {
+  index_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 H264VideoFrame::_internal_index() const {
+  return index_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 H264VideoFrame::index() const {
+  // @@protoc_insertion_point(field_get:v1.model.H264VideoFrame.index)
+  return _internal_index();
+}
+inline void H264VideoFrame::_internal_set_index(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  index_ = value;
+}
+inline void H264VideoFrame::set_index(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_index(value);
+  // @@protoc_insertion_point(field_set:v1.model.H264VideoFrame.index)
+}
+
+// int32 flags = 2[json_name = "flags"];
+inline void H264VideoFrame::clear_flags() {
+  flags_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 H264VideoFrame::_internal_flags() const {
+  return flags_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 H264VideoFrame::flags() const {
+  // @@protoc_insertion_point(field_get:v1.model.H264VideoFrame.flags)
+  return _internal_flags();
+}
+inline void H264VideoFrame::_internal_set_flags(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  flags_ = value;
+}
+inline void H264VideoFrame::set_flags(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_flags(value);
+  // @@protoc_insertion_point(field_set:v1.model.H264VideoFrame.flags)
+}
+
+// bytes frame_data = 3[json_name = "frameData"];
+inline void H264VideoFrame::clear_frame_data() {
+  frame_data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& H264VideoFrame::frame_data() const {
+  // @@protoc_insertion_point(field_get:v1.model.H264VideoFrame.frame_data)
+  return _internal_frame_data();
+}
+inline void H264VideoFrame::set_frame_data(const std::string& value) {
+  _internal_set_frame_data(value);
+  // @@protoc_insertion_point(field_set:v1.model.H264VideoFrame.frame_data)
+}
+inline std::string* H264VideoFrame::mutable_frame_data() {
+  // @@protoc_insertion_point(field_mutable:v1.model.H264VideoFrame.frame_data)
+  return _internal_mutable_frame_data();
+}
+inline const std::string& H264VideoFrame::_internal_frame_data() const {
+  return frame_data_.GetNoArena();
+}
+inline void H264VideoFrame::_internal_set_frame_data(const std::string& value) {
+  
+  frame_data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void H264VideoFrame::set_frame_data(std::string&& value) {
+  
+  frame_data_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:v1.model.H264VideoFrame.frame_data)
+}
+inline void H264VideoFrame::set_frame_data(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  frame_data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.model.H264VideoFrame.frame_data)
+}
+inline void H264VideoFrame::set_frame_data(const void* value, size_t size) {
+  
+  frame_data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:v1.model.H264VideoFrame.frame_data)
+}
+inline std::string* H264VideoFrame::_internal_mutable_frame_data() {
+  
+  return frame_data_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* H264VideoFrame::release_frame_data() {
+  // @@protoc_insertion_point(field_release:v1.model.H264VideoFrame.frame_data)
+  
+  return frame_data_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void H264VideoFrame::set_allocated_frame_data(std::string* frame_data) {
+  if (frame_data != nullptr) {
+    
+  } else {
+    
+  }
+  frame_data_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), frame_data);
+  // @@protoc_insertion_point(field_set_allocated:v1.model.H264VideoFrame.frame_data)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

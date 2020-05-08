@@ -34,6 +34,7 @@
 #include <google/protobuf/unknown_field_set.h>
 #include "protos/model/v1/math.pb.h"
 #include "protos/model/v1/navigation.pb.h"
+#include "protos/model/v1/media.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2frtc_2eproto
@@ -112,6 +113,7 @@ class RTCMessage :
     kBool = 4,
     kCompressedImage = 5,
     kGoalId = 6,
+    kH264VideoFrame = 7,
     DATA_NOT_SET = 0,
   };
 
@@ -191,6 +193,7 @@ class RTCMessage :
     kBoolFieldNumber = 4,
     kCompressedImageFieldNumber = 5,
     kGoalIdFieldNumber = 6,
+    kH264VideoFrameFieldNumber = 7,
   };
   // string stream = 1[json_name = "stream"];
   void clear_stream();
@@ -278,6 +281,21 @@ class RTCMessage :
   ::v1::model::GoalID* _internal_mutable_goal_id();
   public:
 
+  // .v1.model.H264VideoFrame h264_video_frame = 7[json_name = "h264VideoFrame"];
+  bool has_h264_video_frame() const;
+  private:
+  bool _internal_has_h264_video_frame() const;
+  public:
+  void clear_h264_video_frame();
+  const ::v1::model::H264VideoFrame& h264_video_frame() const;
+  ::v1::model::H264VideoFrame* release_h264_video_frame();
+  ::v1::model::H264VideoFrame* mutable_h264_video_frame();
+  void set_allocated_h264_video_frame(::v1::model::H264VideoFrame* h264_video_frame);
+  private:
+  const ::v1::model::H264VideoFrame& _internal_h264_video_frame() const;
+  ::v1::model::H264VideoFrame* _internal_mutable_h264_video_frame();
+  public:
+
   void clear_data();
   DataCase data_case() const;
   // @@protoc_insertion_point(class_scope:v1.model.RTCMessage)
@@ -287,6 +305,7 @@ class RTCMessage :
   void set_has_bool_();
   void set_has_compressed_image();
   void set_has_goal_id();
+  void set_has_h264_video_frame();
 
   inline bool has_data() const;
   inline void clear_has_data();
@@ -300,6 +319,7 @@ class RTCMessage :
     bool bool__;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compressed_image_;
     ::v1::model::GoalID* goal_id_;
+    ::v1::model::H264VideoFrame* h264_video_frame_;
   } data_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -616,6 +636,50 @@ inline ::v1::model::GoalID* RTCMessage::_internal_mutable_goal_id() {
 inline ::v1::model::GoalID* RTCMessage::mutable_goal_id() {
   // @@protoc_insertion_point(field_mutable:v1.model.RTCMessage.goal_id)
   return _internal_mutable_goal_id();
+}
+
+// .v1.model.H264VideoFrame h264_video_frame = 7[json_name = "h264VideoFrame"];
+inline bool RTCMessage::_internal_has_h264_video_frame() const {
+  return data_case() == kH264VideoFrame;
+}
+inline bool RTCMessage::has_h264_video_frame() const {
+  return _internal_has_h264_video_frame();
+}
+inline void RTCMessage::set_has_h264_video_frame() {
+  _oneof_case_[0] = kH264VideoFrame;
+}
+inline ::v1::model::H264VideoFrame* RTCMessage::release_h264_video_frame() {
+  // @@protoc_insertion_point(field_release:v1.model.RTCMessage.h264_video_frame)
+  if (_internal_has_h264_video_frame()) {
+    clear_has_data();
+      ::v1::model::H264VideoFrame* temp = data_.h264_video_frame_;
+    data_.h264_video_frame_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::v1::model::H264VideoFrame& RTCMessage::_internal_h264_video_frame() const {
+  return _internal_has_h264_video_frame()
+      ? *data_.h264_video_frame_
+      : *reinterpret_cast< ::v1::model::H264VideoFrame*>(&::v1::model::_H264VideoFrame_default_instance_);
+}
+inline const ::v1::model::H264VideoFrame& RTCMessage::h264_video_frame() const {
+  // @@protoc_insertion_point(field_get:v1.model.RTCMessage.h264_video_frame)
+  return _internal_h264_video_frame();
+}
+inline ::v1::model::H264VideoFrame* RTCMessage::_internal_mutable_h264_video_frame() {
+  if (!_internal_has_h264_video_frame()) {
+    clear_data();
+    set_has_h264_video_frame();
+    data_.h264_video_frame_ = CreateMaybeMessage< ::v1::model::H264VideoFrame >(
+        GetArenaNoVirtual());
+  }
+  return data_.h264_video_frame_;
+}
+inline ::v1::model::H264VideoFrame* RTCMessage::mutable_h264_video_frame() {
+  // @@protoc_insertion_point(field_mutable:v1.model.RTCMessage.h264_video_frame)
+  return _internal_mutable_h264_video_frame();
 }
 
 inline bool RTCMessage::has_data() const {

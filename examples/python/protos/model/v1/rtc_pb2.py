@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 from protos.model.v1 import math_pb2 as protos_dot_model_dot_v1_dot_math__pb2
 from protos.model.v1 import navigation_pb2 as protos_dot_model_dot_v1_dot_navigation__pb2
+from protos.model.v1 import media_pb2 as protos_dot_model_dot_v1_dot_media__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
-  serialized_pb=b'\n\x19protos/model/v1/rtc.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\"\xe3\x01\n\nRTCMessage\x12\x16\n\x06stream\x18\x01 \x01(\tR\x06stream\x12\x1c\n\ttimestamp\x18\x02 \x01(\x03R\ttimestamp\x12\'\n\x05twist\x18\x03 \x01(\x0b\x32\x0f.v1.model.TwistH\x00R\x05twist\x12\x14\n\x04\x62ool\x18\x04 \x01(\x08H\x00R\x04\x62ool\x12+\n\x10\x63ompressed_image\x18\x05 \x01(\x0cH\x00R\x0f\x63ompressedImage\x12+\n\x07goal_id\x18\x06 \x01(\x0b\x32\x10.v1.model.GoalIDH\x00R\x06goalIdB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x19protos/model/v1/rtc.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\x1a\x1bprotos/model/v1/media.proto\"\xa9\x02\n\nRTCMessage\x12\x16\n\x06stream\x18\x01 \x01(\tR\x06stream\x12\x1c\n\ttimestamp\x18\x02 \x01(\x03R\ttimestamp\x12\'\n\x05twist\x18\x03 \x01(\x0b\x32\x0f.v1.model.TwistH\x00R\x05twist\x12\x14\n\x04\x62ool\x18\x04 \x01(\x08H\x00R\x04\x62ool\x12+\n\x10\x63ompressed_image\x18\x05 \x01(\x0cH\x00R\x0f\x63ompressedImage\x12+\n\x07goal_id\x18\x06 \x01(\x0b\x32\x10.v1.model.GoalIDH\x00R\x06goalId\x12\x44\n\x10h264_video_frame\x18\x07 \x01(\x0b\x32\x18.v1.model.H264VideoFrameH\x00R\x0eh264VideoFrameB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
-  dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_navigation__pb2.DESCRIPTOR,])
+  dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_navigation__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_media__pb2.DESCRIPTOR,])
 
 
 
@@ -76,6 +77,13 @@ _RTCMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='goalId', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='h264_video_frame', full_name='v1.model.RTCMessage.h264_video_frame', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='h264VideoFrame', file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -91,12 +99,13 @@ _RTCMESSAGE = _descriptor.Descriptor(
       name='data', full_name='v1.model.RTCMessage.data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=102,
-  serialized_end=329,
+  serialized_start=131,
+  serialized_end=428,
 )
 
 _RTCMESSAGE.fields_by_name['twist'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TWIST
 _RTCMESSAGE.fields_by_name['goal_id'].message_type = protos_dot_model_dot_v1_dot_navigation__pb2._GOALID
+_RTCMESSAGE.fields_by_name['h264_video_frame'].message_type = protos_dot_model_dot_v1_dot_media__pb2._H264VIDEOFRAME
 _RTCMESSAGE.oneofs_by_name['data'].fields.append(
   _RTCMESSAGE.fields_by_name['twist'])
 _RTCMESSAGE.fields_by_name['twist'].containing_oneof = _RTCMESSAGE.oneofs_by_name['data']
@@ -109,6 +118,9 @@ _RTCMESSAGE.fields_by_name['compressed_image'].containing_oneof = _RTCMESSAGE.on
 _RTCMESSAGE.oneofs_by_name['data'].fields.append(
   _RTCMESSAGE.fields_by_name['goal_id'])
 _RTCMESSAGE.fields_by_name['goal_id'].containing_oneof = _RTCMESSAGE.oneofs_by_name['data']
+_RTCMESSAGE.oneofs_by_name['data'].fields.append(
+  _RTCMESSAGE.fields_by_name['h264_video_frame'])
+_RTCMESSAGE.fields_by_name['h264_video_frame'].containing_oneof = _RTCMESSAGE.oneofs_by_name['data']
 DESCRIPTOR.message_types_by_name['RTCMessage'] = _RTCMESSAGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
