@@ -379,6 +379,7 @@ class ROSLocalization :
     kOdomTopicFieldNumber = 2,
     kPathTopicFieldNumber = 4,
     kGoalTopicFieldNumber = 5,
+    kBaseReferenceFrameFieldNumber = 6,
   };
   // repeated string point_cloud_topics = 3[json_name = "pointCloudTopics"];
   int point_cloud_topics_size() const;
@@ -468,6 +469,22 @@ class ROSLocalization :
   std::string* _internal_mutable_goal_topic();
   public:
 
+  // string base_reference_frame = 6[json_name = "baseReferenceFrame"];
+  void clear_base_reference_frame();
+  const std::string& base_reference_frame() const;
+  void set_base_reference_frame(const std::string& value);
+  void set_base_reference_frame(std::string&& value);
+  void set_base_reference_frame(const char* value);
+  void set_base_reference_frame(const char* value, size_t size);
+  std::string* mutable_base_reference_frame();
+  std::string* release_base_reference_frame();
+  void set_allocated_base_reference_frame(std::string* base_reference_frame);
+  private:
+  const std::string& _internal_base_reference_frame() const;
+  void _internal_set_base_reference_frame(const std::string& value);
+  std::string* _internal_mutable_base_reference_frame();
+  public:
+
   // @@protoc_insertion_point(class_scope:v1.model.ROSLocalization)
  private:
   class _Internal;
@@ -478,6 +495,7 @@ class ROSLocalization :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr odom_topic_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr path_topic_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr goal_topic_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr base_reference_frame_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fros_2eproto;
 };
@@ -1360,6 +1378,66 @@ inline void ROSLocalization::set_allocated_goal_topic(std::string* goal_topic) {
   }
   goal_topic_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), goal_topic);
   // @@protoc_insertion_point(field_set_allocated:v1.model.ROSLocalization.goal_topic)
+}
+
+// string base_reference_frame = 6[json_name = "baseReferenceFrame"];
+inline void ROSLocalization::clear_base_reference_frame() {
+  base_reference_frame_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& ROSLocalization::base_reference_frame() const {
+  // @@protoc_insertion_point(field_get:v1.model.ROSLocalization.base_reference_frame)
+  return _internal_base_reference_frame();
+}
+inline void ROSLocalization::set_base_reference_frame(const std::string& value) {
+  _internal_set_base_reference_frame(value);
+  // @@protoc_insertion_point(field_set:v1.model.ROSLocalization.base_reference_frame)
+}
+inline std::string* ROSLocalization::mutable_base_reference_frame() {
+  // @@protoc_insertion_point(field_mutable:v1.model.ROSLocalization.base_reference_frame)
+  return _internal_mutable_base_reference_frame();
+}
+inline const std::string& ROSLocalization::_internal_base_reference_frame() const {
+  return base_reference_frame_.GetNoArena();
+}
+inline void ROSLocalization::_internal_set_base_reference_frame(const std::string& value) {
+  
+  base_reference_frame_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void ROSLocalization::set_base_reference_frame(std::string&& value) {
+  
+  base_reference_frame_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:v1.model.ROSLocalization.base_reference_frame)
+}
+inline void ROSLocalization::set_base_reference_frame(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  base_reference_frame_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.model.ROSLocalization.base_reference_frame)
+}
+inline void ROSLocalization::set_base_reference_frame(const char* value, size_t size) {
+  
+  base_reference_frame_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:v1.model.ROSLocalization.base_reference_frame)
+}
+inline std::string* ROSLocalization::_internal_mutable_base_reference_frame() {
+  
+  return base_reference_frame_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* ROSLocalization::release_base_reference_frame() {
+  // @@protoc_insertion_point(field_release:v1.model.ROSLocalization.base_reference_frame)
+  
+  return base_reference_frame_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void ROSLocalization::set_allocated_base_reference_frame(std::string* base_reference_frame) {
+  if (base_reference_frame != nullptr) {
+    
+  } else {
+    
+  }
+  base_reference_frame_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), base_reference_frame);
+  // @@protoc_insertion_point(field_set_allocated:v1.model.ROSLocalization.base_reference_frame)
 }
 
 // -------------------------------------------------------------------

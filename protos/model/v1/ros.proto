@@ -18,6 +18,7 @@ message ROSLocalization {
   repeated string point_cloud_topics = 3;
   string path_topic = 4;
   string goal_topic = 5;
+  string base_reference_frame = 6;
 }
 
 message ROSTransformTree {
