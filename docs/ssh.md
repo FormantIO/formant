@@ -2,7 +2,7 @@
 
 Robots are commonly deployed behind NAT devices. These devices restrict the methods that can be used to access the robot. Notably, you cannot dial directly into the robot since it does not have a static, global address and port. The primary goal of this feature is to provide a mechanism that allows you to connect via SSH directly to your robot running the Formant agent.
 
-The Formant agent can be installed with [port_forwarding](./install-agent.md/#port-forwarding) enabled which allows:
+The Formant agent can be installed with [port_forwarding](./agent-debian-install.md/#port-forwarding) enabled which allows:
 
 -   Secure file transfer using sftp
 -   Secure copy using scp
