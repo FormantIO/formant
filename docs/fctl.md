@@ -6,7 +6,7 @@
 
 ### Linux:
 
-You can follow the same repo setup steps for the agent found [here](./install-agent.md/#repo-setup).
+You can follow the same repo setup steps for the agent found [here](./agent-debian-install.md/#repo-setup).
 
 Next, update and install the fctl debian package:
 
