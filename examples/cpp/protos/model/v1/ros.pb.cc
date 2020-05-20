@@ -124,6 +124,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fros_2epr
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, point_cloud_topics_),
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, path_topic_),
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, goal_topic_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::ROSLocalization, base_reference_frame_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSTransformTree, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -149,8 +150,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fros_2epr
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::v1::model::ROSTopic)},
   { 7, -1, sizeof(::v1::model::ROSLocalization)},
-  { 17, -1, sizeof(::v1::model::ROSTransformTree)},
-  { 23, -1, sizeof(::v1::model::ROSMessageToPublish)},
+  { 18, -1, sizeof(::v1::model::ROSTransformTree)},
+  { 24, -1, sizeof(::v1::model::ROSMessageToPublish)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -164,28 +165,30 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto[] PROTOBU
   "\n\031protos/model/v1/ros.proto\022\010v1.model\032\032p"
   "rotos/model/v1/math.proto\032 protos/model/"
   "v1/navigation.proto\"2\n\010ROSTopic\022\022\n\004name\030"
-  "\001 \001(\tR\004name\022\022\n\004path\030\002 \001(\tR\004path\"\271\001\n\017ROSL"
+  "\001 \001(\tR\004name\022\022\n\004path\030\002 \001(\tR\004path\"\353\001\n\017ROSL"
   "ocalization\022\033\n\tmap_topic\030\001 \001(\tR\010mapTopic"
   "\022\035\n\nodom_topic\030\002 \001(\tR\todomTopic\022,\n\022point"
   "_cloud_topics\030\003 \003(\tR\020pointCloudTopics\022\035\n"
   "\npath_topic\030\004 \001(\tR\tpathTopic\022\035\n\ngoal_top"
-  "ic\030\005 \001(\tR\tgoalTopic\"D\n\020ROSTransformTree\022"
-  "0\n\024base_reference_frame\030\001 \001(\tR\022baseRefer"
-  "enceFrame\"\307\002\n\023ROSMessageToPublish\022\026\n\006str"
-  "eam\030\001 \001(\tR\006stream\022\031\n\010frame_id\030\007 \001(\tR\007fra"
-  "meId\022\034\n\ttimestamp\030\010 \001(\004R\ttimestamp\022\'\n\005tw"
-  "ist\030\002 \001(\0132\017.v1.model.TwistH\000R\005twist\022\024\n\004b"
-  "ool\030\003 \001(\010H\000R\004bool\022+\n\020compressed_image\030\004 "
-  "\001(\014H\000R\017compressedImage\022\024\n\004text\030\005 \001(\tH\000R\004"
-  "text\022)\n\004pose\030\006 \001(\0132\023.v1.model.TransformH"
-  "\000R\004pose\022*\n\006goalID\030\t \001(\0132\020.v1.model.GoalI"
-  "DH\000R\006goalIDB\006\n\004data*\307\001\n\014ROSTopicType\022\013\n\007"
-  "UNKNOWN\020\000\022\021\n\rSTD_MSGS_BOOL\020\001\022 \n\034SENSOR_M"
-  "SGS_COMPRESSED_IMAGE\020\002\022\023\n\017STD_MSGS_STRIN"
-  "G\020\003\022\026\n\022GEOMETRY_MSGS_POSE\020\004\022\031\n\025ACTIONLIB"
-  "_MSGS_GOALID\020\005\022\027\n\023GEOMETRY_MSGS_TWIST\020\006\022"
-  "\024\n\020H264_VIDEO_FRAME\020\007B+Z)github.com/Form"
-  "antIO/genproto/go/v1/modelb\006proto3"
+  "ic\030\005 \001(\tR\tgoalTopic\0220\n\024base_reference_fr"
+  "ame\030\006 \001(\tR\022baseReferenceFrame\"D\n\020ROSTran"
+  "sformTree\0220\n\024base_reference_frame\030\001 \001(\tR"
+  "\022baseReferenceFrame\"\307\002\n\023ROSMessageToPubl"
+  "ish\022\026\n\006stream\030\001 \001(\tR\006stream\022\031\n\010frame_id\030"
+  "\007 \001(\tR\007frameId\022\034\n\ttimestamp\030\010 \001(\004R\ttimes"
+  "tamp\022\'\n\005twist\030\002 \001(\0132\017.v1.model.TwistH\000R\005"
+  "twist\022\024\n\004bool\030\003 \001(\010H\000R\004bool\022+\n\020compresse"
+  "d_image\030\004 \001(\014H\000R\017compressedImage\022\024\n\004text"
+  "\030\005 \001(\tH\000R\004text\022)\n\004pose\030\006 \001(\0132\023.v1.model."
+  "TransformH\000R\004pose\022*\n\006goalID\030\t \001(\0132\020.v1.m"
+  "odel.GoalIDH\000R\006goalIDB\006\n\004data*\307\001\n\014ROSTop"
+  "icType\022\013\n\007UNKNOWN\020\000\022\021\n\rSTD_MSGS_BOOL\020\001\022 "
+  "\n\034SENSOR_MSGS_COMPRESSED_IMAGE\020\002\022\023\n\017STD_"
+  "MSGS_STRING\020\003\022\026\n\022GEOMETRY_MSGS_POSE\020\004\022\031\n"
+  "\025ACTIONLIB_MSGS_GOALID\020\005\022\027\n\023GEOMETRY_MSG"
+  "S_TWIST\020\006\022\024\n\020H264_VIDEO_FRAME\020\007B+Z)githu"
+  "b.com/FormantIO/genproto/go/v1/modelb\006pr"
+  "oto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_deps[2] = {
   &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
@@ -200,7 +203,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fros_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto, "protos/model/v1/ros.proto", 994,
+  &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fros_2eproto, "protos/model/v1/ros.proto", 1044,
   &descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fros_2eproto_deps, 4, 2,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fros_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fros_2eproto, 4, file_level_enum_descriptors_protos_2fmodel_2fv1_2fros_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fros_2eproto,
@@ -503,6 +506,10 @@ ROSLocalization::ROSLocalization(const ROSLocalization& from)
   if (!from._internal_goal_topic().empty()) {
     goal_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.goal_topic_);
   }
+  base_reference_frame_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_base_reference_frame().empty()) {
+    base_reference_frame_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.base_reference_frame_);
+  }
   // @@protoc_insertion_point(copy_constructor:v1.model.ROSLocalization)
 }
 
@@ -512,6 +519,7 @@ void ROSLocalization::SharedCtor() {
   odom_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   path_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   goal_topic_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  base_reference_frame_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ROSLocalization::~ROSLocalization() {
@@ -524,6 +532,7 @@ void ROSLocalization::SharedDtor() {
   odom_topic_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   path_topic_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   goal_topic_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  base_reference_frame_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void ROSLocalization::SetCachedSize(int size) const {
@@ -546,6 +555,7 @@ void ROSLocalization::Clear() {
   odom_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   path_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   goal_topic_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  base_reference_frame_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
@@ -603,6 +613,15 @@ const char* ROSLocalization::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           auto str = _internal_mutable_goal_topic();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.ROSLocalization.goal_topic"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string base_reference_frame = 6[json_name = "baseReferenceFrame"];
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          auto str = _internal_mutable_base_reference_frame();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.ROSLocalization.base_reference_frame"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -682,6 +701,16 @@ failure:
         5, this->_internal_goal_topic(), target);
   }
 
+  // string base_reference_frame = 6[json_name = "baseReferenceFrame"];
+  if (this->base_reference_frame().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_base_reference_frame().data(), static_cast<int>(this->_internal_base_reference_frame().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "v1.model.ROSLocalization.base_reference_frame");
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_base_reference_frame(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -734,6 +763,13 @@ size_t ROSLocalization::ByteSizeLong() const {
         this->_internal_goal_topic());
   }
 
+  // string base_reference_frame = 6[json_name = "baseReferenceFrame"];
+  if (this->base_reference_frame().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_base_reference_frame());
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -782,6 +818,10 @@ void ROSLocalization::MergeFrom(const ROSLocalization& from) {
 
     goal_topic_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.goal_topic_);
   }
+  if (from.base_reference_frame().size() > 0) {
+
+    base_reference_frame_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.base_reference_frame_);
+  }
 }
 
 void ROSLocalization::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -813,6 +853,8 @@ void ROSLocalization::InternalSwap(ROSLocalization* other) {
   path_topic_.Swap(&other->path_topic_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   goal_topic_.Swap(&other->goal_topic_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  base_reference_frame_.Swap(&other->base_reference_frame_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
 }
 
