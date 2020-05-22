@@ -25,6 +25,14 @@ service Agent {
    * shutting down. */
   rpc PostData(model.Datapoint) returns (PostDataResponse) {
   }
+  /* PostDataMulti accepts an array of datapoints per invocation. An OK status
+   * code indicates that all datapoints were accepted and queued for uploading
+   * to the Formant cloud. If certain datapoints failed or were throttled the
+   * response will include the index of those datapoints as well as the reason
+   * for failure. All documentation that applies to PostData also applies to
+   * this RPC. */
+  rpc PostDataMulti(PostDataMultiRequest) returns (PostDataMultiResponse) {
+  }
   /* CreateInterventionRequest creates an intervention request. The returned
    * InterventionRequest's 'id' field will be populated if the call succeeds. An
    * Unavailable status code will be returned if an upstream network error
@@ -87,6 +95,24 @@ message StreamDataResponse {
 }
 
 message PostDataResponse {
+}
+
+message PostDataError {
+  uint32 index = 1;
+  uint32 code = 2;
+  bool retryable = 3;
+  string message = 4;
+}
+
+message PostDataMultiRequest {
+  repeated model.Datapoint datapoints = 1;
+}
+
+message PostDataMultiResponse {
+}
+
+message PostDataMultiError {
+  repeated PostDataError errors = 1;
 }
 
 message GetInterventionRequestRequest {

@@ -19,6 +19,9 @@ class MockAgentStub : public Agent::StubInterface {
   MOCK_METHOD3(PostData, ::grpc::Status(::grpc::ClientContext* context, const ::v1::model::Datapoint& request, ::v1::agent::PostDataResponse* response));
   MOCK_METHOD3(AsyncPostDataRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::PostDataResponse>*(::grpc::ClientContext* context, const ::v1::model::Datapoint& request, ::grpc::CompletionQueue* cq));
   MOCK_METHOD3(PrepareAsyncPostDataRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::PostDataResponse>*(::grpc::ClientContext* context, const ::v1::model::Datapoint& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(PostDataMulti, ::grpc::Status(::grpc::ClientContext* context, const ::v1::agent::PostDataMultiRequest& request, ::v1::agent::PostDataMultiResponse* response));
+  MOCK_METHOD3(AsyncPostDataMultiRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::PostDataMultiResponse>*(::grpc::ClientContext* context, const ::v1::agent::PostDataMultiRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(PrepareAsyncPostDataMultiRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::PostDataMultiResponse>*(::grpc::ClientContext* context, const ::v1::agent::PostDataMultiRequest& request, ::grpc::CompletionQueue* cq));
   MOCK_METHOD3(CreateInterventionRequest, ::grpc::Status(::grpc::ClientContext* context, const ::v1::model::InterventionRequest& request, ::v1::model::InterventionRequest* response));
   MOCK_METHOD3(AsyncCreateInterventionRequestRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::model::InterventionRequest>*(::grpc::ClientContext* context, const ::v1::model::InterventionRequest& request, ::grpc::CompletionQueue* cq));
   MOCK_METHOD3(PrepareAsyncCreateInterventionRequestRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::model::InterventionRequest>*(::grpc::ClientContext* context, const ::v1::model::InterventionRequest& request, ::grpc::CompletionQueue* cq));

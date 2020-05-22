@@ -52,7 +52,7 @@ struct TableStruct_protos_2fagent_2fv1_2fagent_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[21]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[25]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -103,6 +103,18 @@ extern HealthRequestDefaultTypeInternal _HealthRequest_default_instance_;
 class HealthResponse;
 class HealthResponseDefaultTypeInternal;
 extern HealthResponseDefaultTypeInternal _HealthResponse_default_instance_;
+class PostDataError;
+class PostDataErrorDefaultTypeInternal;
+extern PostDataErrorDefaultTypeInternal _PostDataError_default_instance_;
+class PostDataMultiError;
+class PostDataMultiErrorDefaultTypeInternal;
+extern PostDataMultiErrorDefaultTypeInternal _PostDataMultiError_default_instance_;
+class PostDataMultiRequest;
+class PostDataMultiRequestDefaultTypeInternal;
+extern PostDataMultiRequestDefaultTypeInternal _PostDataMultiRequest_default_instance_;
+class PostDataMultiResponse;
+class PostDataMultiResponseDefaultTypeInternal;
+extern PostDataMultiResponseDefaultTypeInternal _PostDataMultiResponse_default_instance_;
 class PostDataResponse;
 class PostDataResponseDefaultTypeInternal;
 extern PostDataResponseDefaultTypeInternal _PostDataResponse_default_instance_;
@@ -141,6 +153,10 @@ template<> ::v1::agent::GetStreamsConfigurationRequest* Arena::CreateMaybeMessag
 template<> ::v1::agent::GetStreamsConfigurationResponse* Arena::CreateMaybeMessage<::v1::agent::GetStreamsConfigurationResponse>(Arena*);
 template<> ::v1::agent::HealthRequest* Arena::CreateMaybeMessage<::v1::agent::HealthRequest>(Arena*);
 template<> ::v1::agent::HealthResponse* Arena::CreateMaybeMessage<::v1::agent::HealthResponse>(Arena*);
+template<> ::v1::agent::PostDataError* Arena::CreateMaybeMessage<::v1::agent::PostDataError>(Arena*);
+template<> ::v1::agent::PostDataMultiError* Arena::CreateMaybeMessage<::v1::agent::PostDataMultiError>(Arena*);
+template<> ::v1::agent::PostDataMultiRequest* Arena::CreateMaybeMessage<::v1::agent::PostDataMultiRequest>(Arena*);
+template<> ::v1::agent::PostDataMultiResponse* Arena::CreateMaybeMessage<::v1::agent::PostDataMultiResponse>(Arena*);
 template<> ::v1::agent::PostDataResponse* Arena::CreateMaybeMessage<::v1::agent::PostDataResponse>(Arena*);
 template<> ::v1::agent::PostTransformFrameResponse* Arena::CreateMaybeMessage<::v1::agent::PostTransformFrameResponse>(Arena*);
 template<> ::v1::agent::SendCommandResponseRequest* Arena::CreateMaybeMessage<::v1::agent::SendCommandResponseRequest>(Arena*);
@@ -384,6 +400,563 @@ class PostDataResponse :
 };
 // -------------------------------------------------------------------
 
+class PostDataError :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.PostDataError) */ {
+ public:
+  PostDataError();
+  virtual ~PostDataError();
+
+  PostDataError(const PostDataError& from);
+  PostDataError(PostDataError&& from) noexcept
+    : PostDataError() {
+    *this = ::std::move(from);
+  }
+
+  inline PostDataError& operator=(const PostDataError& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PostDataError& operator=(PostDataError&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const PostDataError& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PostDataError* internal_default_instance() {
+    return reinterpret_cast<const PostDataError*>(
+               &_PostDataError_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(PostDataError& a, PostDataError& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PostDataError* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PostDataError* New() const final {
+    return CreateMaybeMessage<PostDataError>(nullptr);
+  }
+
+  PostDataError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PostDataError>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const PostDataError& from);
+  void MergeFrom(const PostDataError& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PostDataError* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.PostDataError";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMessageFieldNumber = 4,
+    kIndexFieldNumber = 1,
+    kCodeFieldNumber = 2,
+    kRetryableFieldNumber = 3,
+  };
+  // string message = 4[json_name = "message"];
+  void clear_message();
+  const std::string& message() const;
+  void set_message(const std::string& value);
+  void set_message(std::string&& value);
+  void set_message(const char* value);
+  void set_message(const char* value, size_t size);
+  std::string* mutable_message();
+  std::string* release_message();
+  void set_allocated_message(std::string* message);
+  private:
+  const std::string& _internal_message() const;
+  void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
+  public:
+
+  // uint32 index = 1[json_name = "index"];
+  void clear_index();
+  ::PROTOBUF_NAMESPACE_ID::uint32 index() const;
+  void set_index(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_index() const;
+  void _internal_set_index(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // uint32 code = 2[json_name = "code"];
+  void clear_code();
+  ::PROTOBUF_NAMESPACE_ID::uint32 code() const;
+  void set_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_code() const;
+  void _internal_set_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // bool retryable = 3[json_name = "retryable"];
+  void clear_retryable();
+  bool retryable() const;
+  void set_retryable(bool value);
+  private:
+  bool _internal_retryable() const;
+  void _internal_set_retryable(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.agent.PostDataError)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 index_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 code_;
+  bool retryable_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
+// -------------------------------------------------------------------
+
+class PostDataMultiRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.PostDataMultiRequest) */ {
+ public:
+  PostDataMultiRequest();
+  virtual ~PostDataMultiRequest();
+
+  PostDataMultiRequest(const PostDataMultiRequest& from);
+  PostDataMultiRequest(PostDataMultiRequest&& from) noexcept
+    : PostDataMultiRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline PostDataMultiRequest& operator=(const PostDataMultiRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PostDataMultiRequest& operator=(PostDataMultiRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const PostDataMultiRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PostDataMultiRequest* internal_default_instance() {
+    return reinterpret_cast<const PostDataMultiRequest*>(
+               &_PostDataMultiRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(PostDataMultiRequest& a, PostDataMultiRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PostDataMultiRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PostDataMultiRequest* New() const final {
+    return CreateMaybeMessage<PostDataMultiRequest>(nullptr);
+  }
+
+  PostDataMultiRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PostDataMultiRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const PostDataMultiRequest& from);
+  void MergeFrom(const PostDataMultiRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PostDataMultiRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.PostDataMultiRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kDatapointsFieldNumber = 1,
+  };
+  // repeated .v1.model.Datapoint datapoints = 1[json_name = "datapoints"];
+  int datapoints_size() const;
+  private:
+  int _internal_datapoints_size() const;
+  public:
+  void clear_datapoints();
+  ::v1::model::Datapoint* mutable_datapoints(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Datapoint >*
+      mutable_datapoints();
+  private:
+  const ::v1::model::Datapoint& _internal_datapoints(int index) const;
+  ::v1::model::Datapoint* _internal_add_datapoints();
+  public:
+  const ::v1::model::Datapoint& datapoints(int index) const;
+  ::v1::model::Datapoint* add_datapoints();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Datapoint >&
+      datapoints() const;
+
+  // @@protoc_insertion_point(class_scope:v1.agent.PostDataMultiRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Datapoint > datapoints_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
+// -------------------------------------------------------------------
+
+class PostDataMultiResponse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.PostDataMultiResponse) */ {
+ public:
+  PostDataMultiResponse();
+  virtual ~PostDataMultiResponse();
+
+  PostDataMultiResponse(const PostDataMultiResponse& from);
+  PostDataMultiResponse(PostDataMultiResponse&& from) noexcept
+    : PostDataMultiResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline PostDataMultiResponse& operator=(const PostDataMultiResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PostDataMultiResponse& operator=(PostDataMultiResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const PostDataMultiResponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PostDataMultiResponse* internal_default_instance() {
+    return reinterpret_cast<const PostDataMultiResponse*>(
+               &_PostDataMultiResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(PostDataMultiResponse& a, PostDataMultiResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PostDataMultiResponse* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PostDataMultiResponse* New() const final {
+    return CreateMaybeMessage<PostDataMultiResponse>(nullptr);
+  }
+
+  PostDataMultiResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PostDataMultiResponse>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const PostDataMultiResponse& from);
+  void MergeFrom(const PostDataMultiResponse& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PostDataMultiResponse* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.PostDataMultiResponse";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:v1.agent.PostDataMultiResponse)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
+// -------------------------------------------------------------------
+
+class PostDataMultiError :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.PostDataMultiError) */ {
+ public:
+  PostDataMultiError();
+  virtual ~PostDataMultiError();
+
+  PostDataMultiError(const PostDataMultiError& from);
+  PostDataMultiError(PostDataMultiError&& from) noexcept
+    : PostDataMultiError() {
+    *this = ::std::move(from);
+  }
+
+  inline PostDataMultiError& operator=(const PostDataMultiError& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PostDataMultiError& operator=(PostDataMultiError&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const PostDataMultiError& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PostDataMultiError* internal_default_instance() {
+    return reinterpret_cast<const PostDataMultiError*>(
+               &_PostDataMultiError_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(PostDataMultiError& a, PostDataMultiError& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PostDataMultiError* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PostDataMultiError* New() const final {
+    return CreateMaybeMessage<PostDataMultiError>(nullptr);
+  }
+
+  PostDataMultiError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PostDataMultiError>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const PostDataMultiError& from);
+  void MergeFrom(const PostDataMultiError& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PostDataMultiError* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.PostDataMultiError";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kErrorsFieldNumber = 1,
+  };
+  // repeated .v1.agent.PostDataError errors = 1[json_name = "errors"];
+  int errors_size() const;
+  private:
+  int _internal_errors_size() const;
+  public:
+  void clear_errors();
+  ::v1::agent::PostDataError* mutable_errors(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::agent::PostDataError >*
+      mutable_errors();
+  private:
+  const ::v1::agent::PostDataError& _internal_errors(int index) const;
+  ::v1::agent::PostDataError* _internal_add_errors();
+  public:
+  const ::v1::agent::PostDataError& errors(int index) const;
+  ::v1::agent::PostDataError* add_errors();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::agent::PostDataError >&
+      errors() const;
+
+  // @@protoc_insertion_point(class_scope:v1.agent.PostDataMultiError)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::agent::PostDataError > errors_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
+// -------------------------------------------------------------------
+
 class GetInterventionRequestRequest :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.GetInterventionRequestRequest) */ {
  public:
@@ -426,7 +999,7 @@ class GetInterventionRequestRequest :
                &_GetInterventionRequestRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    6;
 
   friend void swap(GetInterventionRequestRequest& a, GetInterventionRequestRequest& b) {
     a.Swap(&b);
@@ -561,7 +1134,7 @@ class GetInterventionResponseRequest :
                &_GetInterventionResponseRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    7;
 
   friend void swap(GetInterventionResponseRequest& a, GetInterventionResponseRequest& b) {
     a.Swap(&b);
@@ -696,7 +1269,7 @@ class GetStreamsConfigurationRequest :
                &_GetStreamsConfigurationRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    8;
 
   friend void swap(GetStreamsConfigurationRequest& a, GetStreamsConfigurationRequest& b) {
     a.Swap(&b);
@@ -811,7 +1384,7 @@ class GetStreamsConfigurationResponse :
                &_GetStreamsConfigurationResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    9;
 
   friend void swap(GetStreamsConfigurationResponse& a, GetStreamsConfigurationResponse& b) {
     a.Swap(&b);
@@ -948,7 +1521,7 @@ class GetApplicationConfigurationRequest :
                &_GetApplicationConfigurationRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    10;
 
   friend void swap(GetApplicationConfigurationRequest& a, GetApplicationConfigurationRequest& b) {
     a.Swap(&b);
@@ -1063,7 +1636,7 @@ class GetApplicationConfigurationResponse :
                &_GetApplicationConfigurationResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    11;
 
   friend void swap(GetApplicationConfigurationResponse& a, GetApplicationConfigurationResponse& b) {
     a.Swap(&b);
@@ -1197,7 +1770,7 @@ class GetAgentConfigurationRequest :
                &_GetAgentConfigurationRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    12;
 
   friend void swap(GetAgentConfigurationRequest& a, GetAgentConfigurationRequest& b) {
     a.Swap(&b);
@@ -1312,7 +1885,7 @@ class GetAgentConfigurationResponse :
                &_GetAgentConfigurationResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    13;
 
   friend void swap(GetAgentConfigurationResponse& a, GetAgentConfigurationResponse& b) {
     a.Swap(&b);
@@ -1446,7 +2019,7 @@ class HealthRequest :
                &_HealthRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    14;
 
   friend void swap(HealthRequest& a, HealthRequest& b) {
     a.Swap(&b);
@@ -1561,7 +2134,7 @@ class HealthResponse :
                &_HealthResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    15;
 
   friend void swap(HealthResponse& a, HealthResponse& b) {
     a.Swap(&b);
@@ -1676,7 +2249,7 @@ class GetCommandRequestRequest :
                &_GetCommandRequestRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    16;
 
   friend void swap(GetCommandRequestRequest& a, GetCommandRequestRequest& b) {
     a.Swap(&b);
@@ -1819,7 +2392,7 @@ class GetCommandRequestResponse :
                &_GetCommandRequestResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    17;
 
   friend void swap(GetCommandRequestResponse& a, GetCommandRequestResponse& b) {
     a.Swap(&b);
@@ -1953,7 +2526,7 @@ class SendCommandResponseRequest :
                &_SendCommandResponseRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    18;
 
   friend void swap(SendCommandResponseRequest& a, SendCommandResponseRequest& b) {
     a.Swap(&b);
@@ -2087,7 +2660,7 @@ class SendCommandResponseResponse :
                &_SendCommandResponseResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    19;
 
   friend void swap(SendCommandResponseResponse& a, SendCommandResponseResponse& b) {
     a.Swap(&b);
@@ -2202,7 +2775,7 @@ class GetCommandRequestStreamRequest :
                &_GetCommandRequestStreamRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    20;
 
   friend void swap(GetCommandRequestStreamRequest& a, GetCommandRequestStreamRequest& b) {
     a.Swap(&b);
@@ -2345,7 +2918,7 @@ class GetCommandRequestStreamResponse :
                &_GetCommandRequestStreamResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    21;
 
   friend void swap(GetCommandRequestStreamResponse& a, GetCommandRequestStreamResponse& b) {
     a.Swap(&b);
@@ -2479,7 +3052,7 @@ class PostTransformFrameResponse :
                &_PostTransformFrameResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    22;
 
   friend void swap(PostTransformFrameResponse& a, PostTransformFrameResponse& b) {
     a.Swap(&b);
@@ -2594,7 +3167,7 @@ class SetBaseFrameIDRequest :
                &_SetBaseFrameIDRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    23;
 
   friend void swap(SetBaseFrameIDRequest& a, SetBaseFrameIDRequest& b) {
     a.Swap(&b);
@@ -2729,7 +3302,7 @@ class SetBaseFrameIDResponse :
                &_SetBaseFrameIDResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    24;
 
   friend void swap(SetBaseFrameIDResponse& a, SetBaseFrameIDResponse& b) {
     a.Swap(&b);
@@ -2814,6 +3387,217 @@ class SetBaseFrameIDResponse :
 // -------------------------------------------------------------------
 
 // PostDataResponse
+
+// -------------------------------------------------------------------
+
+// PostDataError
+
+// uint32 index = 1[json_name = "index"];
+inline void PostDataError::clear_index() {
+  index_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 PostDataError::_internal_index() const {
+  return index_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 PostDataError::index() const {
+  // @@protoc_insertion_point(field_get:v1.agent.PostDataError.index)
+  return _internal_index();
+}
+inline void PostDataError::_internal_set_index(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  index_ = value;
+}
+inline void PostDataError::set_index(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_index(value);
+  // @@protoc_insertion_point(field_set:v1.agent.PostDataError.index)
+}
+
+// uint32 code = 2[json_name = "code"];
+inline void PostDataError::clear_code() {
+  code_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 PostDataError::_internal_code() const {
+  return code_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 PostDataError::code() const {
+  // @@protoc_insertion_point(field_get:v1.agent.PostDataError.code)
+  return _internal_code();
+}
+inline void PostDataError::_internal_set_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  code_ = value;
+}
+inline void PostDataError::set_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_code(value);
+  // @@protoc_insertion_point(field_set:v1.agent.PostDataError.code)
+}
+
+// bool retryable = 3[json_name = "retryable"];
+inline void PostDataError::clear_retryable() {
+  retryable_ = false;
+}
+inline bool PostDataError::_internal_retryable() const {
+  return retryable_;
+}
+inline bool PostDataError::retryable() const {
+  // @@protoc_insertion_point(field_get:v1.agent.PostDataError.retryable)
+  return _internal_retryable();
+}
+inline void PostDataError::_internal_set_retryable(bool value) {
+  
+  retryable_ = value;
+}
+inline void PostDataError::set_retryable(bool value) {
+  _internal_set_retryable(value);
+  // @@protoc_insertion_point(field_set:v1.agent.PostDataError.retryable)
+}
+
+// string message = 4[json_name = "message"];
+inline void PostDataError::clear_message() {
+  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& PostDataError::message() const {
+  // @@protoc_insertion_point(field_get:v1.agent.PostDataError.message)
+  return _internal_message();
+}
+inline void PostDataError::set_message(const std::string& value) {
+  _internal_set_message(value);
+  // @@protoc_insertion_point(field_set:v1.agent.PostDataError.message)
+}
+inline std::string* PostDataError::mutable_message() {
+  // @@protoc_insertion_point(field_mutable:v1.agent.PostDataError.message)
+  return _internal_mutable_message();
+}
+inline const std::string& PostDataError::_internal_message() const {
+  return message_.GetNoArena();
+}
+inline void PostDataError::_internal_set_message(const std::string& value) {
+  
+  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void PostDataError::set_message(std::string&& value) {
+  
+  message_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:v1.agent.PostDataError.message)
+}
+inline void PostDataError::set_message(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.agent.PostDataError.message)
+}
+inline void PostDataError::set_message(const char* value, size_t size) {
+  
+  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:v1.agent.PostDataError.message)
+}
+inline std::string* PostDataError::_internal_mutable_message() {
+  
+  return message_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* PostDataError::release_message() {
+  // @@protoc_insertion_point(field_release:v1.agent.PostDataError.message)
+  
+  return message_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void PostDataError::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    
+  } else {
+    
+  }
+  message_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message);
+  // @@protoc_insertion_point(field_set_allocated:v1.agent.PostDataError.message)
+}
+
+// -------------------------------------------------------------------
+
+// PostDataMultiRequest
+
+// repeated .v1.model.Datapoint datapoints = 1[json_name = "datapoints"];
+inline int PostDataMultiRequest::_internal_datapoints_size() const {
+  return datapoints_.size();
+}
+inline int PostDataMultiRequest::datapoints_size() const {
+  return _internal_datapoints_size();
+}
+inline ::v1::model::Datapoint* PostDataMultiRequest::mutable_datapoints(int index) {
+  // @@protoc_insertion_point(field_mutable:v1.agent.PostDataMultiRequest.datapoints)
+  return datapoints_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Datapoint >*
+PostDataMultiRequest::mutable_datapoints() {
+  // @@protoc_insertion_point(field_mutable_list:v1.agent.PostDataMultiRequest.datapoints)
+  return &datapoints_;
+}
+inline const ::v1::model::Datapoint& PostDataMultiRequest::_internal_datapoints(int index) const {
+  return datapoints_.Get(index);
+}
+inline const ::v1::model::Datapoint& PostDataMultiRequest::datapoints(int index) const {
+  // @@protoc_insertion_point(field_get:v1.agent.PostDataMultiRequest.datapoints)
+  return _internal_datapoints(index);
+}
+inline ::v1::model::Datapoint* PostDataMultiRequest::_internal_add_datapoints() {
+  return datapoints_.Add();
+}
+inline ::v1::model::Datapoint* PostDataMultiRequest::add_datapoints() {
+  // @@protoc_insertion_point(field_add:v1.agent.PostDataMultiRequest.datapoints)
+  return _internal_add_datapoints();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::model::Datapoint >&
+PostDataMultiRequest::datapoints() const {
+  // @@protoc_insertion_point(field_list:v1.agent.PostDataMultiRequest.datapoints)
+  return datapoints_;
+}
+
+// -------------------------------------------------------------------
+
+// PostDataMultiResponse
+
+// -------------------------------------------------------------------
+
+// PostDataMultiError
+
+// repeated .v1.agent.PostDataError errors = 1[json_name = "errors"];
+inline int PostDataMultiError::_internal_errors_size() const {
+  return errors_.size();
+}
+inline int PostDataMultiError::errors_size() const {
+  return _internal_errors_size();
+}
+inline void PostDataMultiError::clear_errors() {
+  errors_.Clear();
+}
+inline ::v1::agent::PostDataError* PostDataMultiError::mutable_errors(int index) {
+  // @@protoc_insertion_point(field_mutable:v1.agent.PostDataMultiError.errors)
+  return errors_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::agent::PostDataError >*
+PostDataMultiError::mutable_errors() {
+  // @@protoc_insertion_point(field_mutable_list:v1.agent.PostDataMultiError.errors)
+  return &errors_;
+}
+inline const ::v1::agent::PostDataError& PostDataMultiError::_internal_errors(int index) const {
+  return errors_.Get(index);
+}
+inline const ::v1::agent::PostDataError& PostDataMultiError::errors(int index) const {
+  // @@protoc_insertion_point(field_get:v1.agent.PostDataMultiError.errors)
+  return _internal_errors(index);
+}
+inline ::v1::agent::PostDataError* PostDataMultiError::_internal_add_errors() {
+  return errors_.Add();
+}
+inline ::v1::agent::PostDataError* PostDataMultiError::add_errors() {
+  // @@protoc_insertion_point(field_add:v1.agent.PostDataMultiError.errors)
+  return _internal_add_errors();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::v1::agent::PostDataError >&
+PostDataMultiError::errors() const {
+  // @@protoc_insertion_point(field_list:v1.agent.PostDataMultiError.errors)
+  return errors_;
+}
 
 // -------------------------------------------------------------------
 
@@ -3528,6 +4312,14 @@ inline void SetBaseFrameIDRequest::set_allocated_id(std::string* id) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
