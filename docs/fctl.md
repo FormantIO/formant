@@ -4,6 +4,14 @@
 
 ## Install fctl
 
+### Convenience Script
+
+For Linux and Mac we provide a simple convenience script:
+
+```
+bash <(curl -s https://app.formant.io/install-fctl.sh)
+```
+
 ### Linux:
 
 You can follow the same repo setup steps for the agent found [here](./install-agent.md/#repo-setup).

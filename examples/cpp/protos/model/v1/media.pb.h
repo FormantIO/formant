@@ -315,11 +315,6 @@ class PointCloud :
     DATA_NOT_SET = 0,
   };
 
-  enum TransformCase {
-    kWorldToLocal = 3,
-    TRANSFORM_NOT_SET = 0,
-  };
-
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
   static inline const PointCloud* internal_default_instance() {
     return reinterpret_cast<const PointCloud*>(
@@ -390,10 +385,25 @@ class PointCloud :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kWorldToLocalFieldNumber = 3,
     kUrlFieldNumber = 1,
     kRawFieldNumber = 2,
-    kWorldToLocalFieldNumber = 3,
   };
+  // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
+  bool has_world_to_local() const;
+  private:
+  bool _internal_has_world_to_local() const;
+  public:
+  void clear_world_to_local();
+  const ::v1::model::Transform& world_to_local() const;
+  ::v1::model::Transform* release_world_to_local();
+  ::v1::model::Transform* mutable_world_to_local();
+  void set_allocated_world_to_local(::v1::model::Transform* world_to_local);
+  private:
+  const ::v1::model::Transform& _internal_world_to_local() const;
+  ::v1::model::Transform* _internal_mutable_world_to_local();
+  public:
+
   // string url = 1[json_name = "url"];
   private:
   bool _internal_has_url() const;
@@ -432,50 +442,26 @@ class PointCloud :
   std::string* _internal_mutable_raw();
   public:
 
-  // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
-  bool has_world_to_local() const;
-  private:
-  bool _internal_has_world_to_local() const;
-  public:
-  void clear_world_to_local();
-  const ::v1::model::Transform& world_to_local() const;
-  ::v1::model::Transform* release_world_to_local();
-  ::v1::model::Transform* mutable_world_to_local();
-  void set_allocated_world_to_local(::v1::model::Transform* world_to_local);
-  private:
-  const ::v1::model::Transform& _internal_world_to_local() const;
-  ::v1::model::Transform* _internal_mutable_world_to_local();
-  public:
-
   void clear_data();
   DataCase data_case() const;
-  void clear_transform();
-  TransformCase transform_case() const;
   // @@protoc_insertion_point(class_scope:v1.model.PointCloud)
  private:
   class _Internal;
   void set_has_url();
   void set_has_raw();
-  void set_has_world_to_local();
 
   inline bool has_data() const;
   inline void clear_has_data();
 
-  inline bool has_transform() const;
-  inline void clear_has_transform();
-
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::v1::model::Transform* world_to_local_;
   union DataUnion {
     DataUnion() {}
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr raw_;
   } data_;
-  union TransformUnion {
-    TransformUnion() {}
-    ::v1::model::Transform* world_to_local_;
-  } transform_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[2];
+  ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
 
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fmedia_2eproto;
 };
@@ -1114,46 +1100,56 @@ inline void PointCloud::set_allocated_raw(std::string* raw) {
 
 // .v1.model.Transform world_to_local = 3[json_name = "worldToLocal"];
 inline bool PointCloud::_internal_has_world_to_local() const {
-  return transform_case() == kWorldToLocal;
+  return this != internal_default_instance() && world_to_local_ != nullptr;
 }
 inline bool PointCloud::has_world_to_local() const {
   return _internal_has_world_to_local();
 }
-inline void PointCloud::set_has_world_to_local() {
-  _oneof_case_[1] = kWorldToLocal;
-}
-inline ::v1::model::Transform* PointCloud::release_world_to_local() {
-  // @@protoc_insertion_point(field_release:v1.model.PointCloud.world_to_local)
-  if (_internal_has_world_to_local()) {
-    clear_has_transform();
-      ::v1::model::Transform* temp = transform_.world_to_local_;
-    transform_.world_to_local_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
 inline const ::v1::model::Transform& PointCloud::_internal_world_to_local() const {
-  return _internal_has_world_to_local()
-      ? *transform_.world_to_local_
-      : *reinterpret_cast< ::v1::model::Transform*>(&::v1::model::_Transform_default_instance_);
+  const ::v1::model::Transform* p = world_to_local_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::Transform*>(
+      &::v1::model::_Transform_default_instance_);
 }
 inline const ::v1::model::Transform& PointCloud::world_to_local() const {
   // @@protoc_insertion_point(field_get:v1.model.PointCloud.world_to_local)
   return _internal_world_to_local();
 }
+inline ::v1::model::Transform* PointCloud::release_world_to_local() {
+  // @@protoc_insertion_point(field_release:v1.model.PointCloud.world_to_local)
+  
+  ::v1::model::Transform* temp = world_to_local_;
+  world_to_local_ = nullptr;
+  return temp;
+}
 inline ::v1::model::Transform* PointCloud::_internal_mutable_world_to_local() {
-  if (!_internal_has_world_to_local()) {
-    clear_transform();
-    set_has_world_to_local();
-    transform_.world_to_local_ = CreateMaybeMessage< ::v1::model::Transform >(
-        GetArenaNoVirtual());
+  
+  if (world_to_local_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::Transform>(GetArenaNoVirtual());
+    world_to_local_ = p;
   }
-  return transform_.world_to_local_;
+  return world_to_local_;
 }
 inline ::v1::model::Transform* PointCloud::mutable_world_to_local() {
   // @@protoc_insertion_point(field_mutable:v1.model.PointCloud.world_to_local)
   return _internal_mutable_world_to_local();
+}
+inline void PointCloud::set_allocated_world_to_local(::v1::model::Transform* world_to_local) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(world_to_local_);
+  }
+  if (world_to_local) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      world_to_local = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, world_to_local, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  world_to_local_ = world_to_local;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.PointCloud.world_to_local)
 }
 
 inline bool PointCloud::has_data() const {
@@ -1162,17 +1158,8 @@ inline bool PointCloud::has_data() const {
 inline void PointCloud::clear_has_data() {
   _oneof_case_[0] = DATA_NOT_SET;
 }
-inline bool PointCloud::has_transform() const {
-  return transform_case() != TRANSFORM_NOT_SET;
-}
-inline void PointCloud::clear_has_transform() {
-  _oneof_case_[1] = TRANSFORM_NOT_SET;
-}
 inline PointCloud::DataCase PointCloud::data_case() const {
   return PointCloud::DataCase(_oneof_case_[0]);
-}
-inline PointCloud::TransformCase PointCloud::transform_case() const {
-  return PointCloud::TransformCase(_oneof_case_[1]);
 }
 // -------------------------------------------------------------------
 

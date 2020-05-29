@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='v1.model',
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
-  serialized_pb=b'\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"Z\n\x05Image\x12!\n\x0c\x63ontent_type\x18\x01 \x01(\tR\x0b\x63ontentType\x12\x12\n\x03url\x18\x02 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x03 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"\x86\x01\n\nPointCloud\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03raw\x12;\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformH\x01R\x0cworldToLocalB\x06\n\x04\x64\x61taB\x0b\n\ttransform\"[\n\x0eH264VideoFrame\x12\x14\n\x05index\x18\x01 \x01(\x05R\x05index\x12\x14\n\x05\x66lags\x18\x02 \x01(\x05R\x05\x66lags\x12\x1d\n\nframe_data\x18\x03 \x01(\x0cR\tframeDataB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"Z\n\x05Image\x12!\n\x0c\x63ontent_type\x18\x01 \x01(\tR\x0b\x63ontentType\x12\x12\n\x03url\x18\x02 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x03 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"w\n\nPointCloud\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03raw\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocalB\x06\n\x04\x64\x61ta\"[\n\x0eH264VideoFrame\x12\x14\n\x05index\x18\x01 \x01(\x05R\x05index\x12\x14\n\x05\x66lags\x18\x02 \x01(\x05R\x05\x66lags\x12\x1d\n\nframe_data\x18\x03 \x01(\x0cR\tframeDataB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,])
 
@@ -116,12 +116,9 @@ _POINTCLOUD = _descriptor.Descriptor(
     _descriptor.OneofDescriptor(
       name='data', full_name='v1.model.PointCloud.data',
       index=0, containing_type=None, fields=[]),
-    _descriptor.OneofDescriptor(
-      name='transform', full_name='v1.model.PointCloud.transform',
-      index=1, containing_type=None, fields=[]),
   ],
-  serialized_start=162,
-  serialized_end=296,
+  serialized_start=161,
+  serialized_end=280,
 )
 
 
@@ -165,8 +162,8 @@ _H264VIDEOFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=298,
-  serialized_end=389,
+  serialized_start=282,
+  serialized_end=373,
 )
 
 _IMAGE.oneofs_by_name['data'].fields.append(
@@ -182,9 +179,6 @@ _POINTCLOUD.fields_by_name['url'].containing_oneof = _POINTCLOUD.oneofs_by_name[
 _POINTCLOUD.oneofs_by_name['data'].fields.append(
   _POINTCLOUD.fields_by_name['raw'])
 _POINTCLOUD.fields_by_name['raw'].containing_oneof = _POINTCLOUD.oneofs_by_name['data']
-_POINTCLOUD.oneofs_by_name['transform'].fields.append(
-  _POINTCLOUD.fields_by_name['world_to_local'])
-_POINTCLOUD.fields_by_name['world_to_local'].containing_oneof = _POINTCLOUD.oneofs_by_name['transform']
 DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
 DESCRIPTOR.message_types_by_name['PointCloud'] = _POINTCLOUD
 DESCRIPTOR.message_types_by_name['H264VideoFrame'] = _H264VIDEOFRAME

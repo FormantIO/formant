@@ -24,9 +24,8 @@ message PointCloud {
     // 2MB limit
     bytes raw = 2;
   }
-  oneof transform {
-    Transform world_to_local = 3;
-  }
+  // The transform of the map relative to a common reference frame.
+  Transform world_to_local = 3;
 }
 
 message H264VideoFrame {
