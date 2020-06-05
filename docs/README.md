@@ -7,3 +7,5 @@ Documentation for using Formant.
 ## [SSH to my robot](./ssh.md)
 
 ## [fctl](./fctl.md)
+
+## [offline data ingestion with fctl](./fctl-upload.md)

@@ -12,6 +12,8 @@ For Linux and Mac we provide a simple convenience script:
 bash <(curl -s https://app.formant.io/install-fctl.sh)
 ```
 
+This will intstall `fctl` on your system and prop you for admin credentials. This will also configure your `~/.ssh/config` for ssh over Formant's peer-to-peer connection.
+
 ### Linux:
 
 You can follow the same repo setup steps for the agent found [here](./install-agent.md/#repo-setup).
@@ -59,7 +61,6 @@ Usage:
 fctl [command]
 
 Available Commands:
-apply Apply configuration to devices
 completion Generate completion scripts
 create Create a resource
 describe Describe a resource

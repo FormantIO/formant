@@ -1,0 +1,13 @@
+version: "3"
+
+volumes:
+  formant:
+
+services:
+  example:
+    build: .
+    restart: always
+    env_file:
+      - formant.env
+    volumes:
+      - "formant:/var/lib/formant"

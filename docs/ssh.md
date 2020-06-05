@@ -14,7 +14,7 @@ It is assumed that an SSH server is already running on the robot. SSH server sof
 
 ## Setup
 
-First make sure you have setup [`fctl`](./fctl.md).
+First make sure you have setup [`fctl`](./fctl.md). You you use the [Convenience Script](./fctl.md/#convenience-script) you can skip to [ssh](#ssh).
 
 ## Setup ssh config file
 
