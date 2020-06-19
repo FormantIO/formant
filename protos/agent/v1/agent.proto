@@ -7,6 +7,7 @@ import "protos/model/v1/intervention.proto";
 import "protos/model/v1/commands.proto";
 import "protos/model/v1/config.proto";
 import "protos/model/v1/math.proto";
+import "protos/model/v1/event.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/agent";
 
@@ -32,6 +33,9 @@ service Agent {
    * for failure. All documentation that applies to PostData also applies to
    * this RPC. */
   rpc PostDataMulti(PostDataMultiRequest) returns (PostDataMultiResponse) {
+  }
+  /* CreateEvent creates a custom event. */
+  rpc CreateEvent(CreateEventRequest) returns (CreateEventResponse) {
   }
   /* CreateInterventionRequest creates an intervention request. The returned
    * InterventionRequest's 'id' field will be populated if the call succeeds. An
@@ -180,4 +184,15 @@ message SetBaseFrameIDRequest {
 }
 
 message SetBaseFrameIDResponse {
+}
+
+message CreateEventRequest {
+  model.Event event = 1;
+}
+
+message CreateEventResponse {
+}
+
+message CreateEventError {
+  bool retryable = 1;
 }

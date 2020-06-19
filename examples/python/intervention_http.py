@@ -11,19 +11,13 @@ data = {
     "severity": "INFO",
     "timestamp": int(time.time() * 1000),
     "labeling_request": {
-        "title":
-            "Select Inventory",
-        "image": {
-            "content-type": "image/png",
-            "url": ("%s/data/cargo.png" % path)
-        },
-        "instruction":
-            "Draw box around all cargo palettes",
-        "labels": [{
-            "value": "53e3f75e-63a6-4e38-a19a-02893021be89",
-            "display_name": "Cargo",
-        }]
-    }
+        "title": "Select Inventory",
+        "image": {"content-type": "image/png", "url": ("%s/data/cargo.png" % path)},
+        "instruction": "Draw box around all cargo palettes",
+        "labels": [
+            {"value": "53e3f75e-63a6-4e38-a19a-02893021be89", "display_name": "Cargo",}
+        ],
+    },
 }
 req = Request("http://%s:5502/v1/intervention-requests" % host)
 req.add_header("Content-Type", "application/json")

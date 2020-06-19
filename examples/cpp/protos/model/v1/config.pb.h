@@ -2139,6 +2139,7 @@ class StreamConfiguration :
     kTagsFieldNumber = 2,
     kNameFieldNumber = 1,
     kThrottleHzFieldNumber = 8,
+    kDisabledFieldNumber = 19,
     kRosTopicFieldNumber = 3,
     kRosLocalizationFieldNumber = 4,
     kDirectoryWatchFieldNumber = 5,
@@ -2192,6 +2193,21 @@ class StreamConfiguration :
   private:
   const PROTOBUF_NAMESPACE_ID::DoubleValue& _internal_throttle_hz() const;
   PROTOBUF_NAMESPACE_ID::DoubleValue* _internal_mutable_throttle_hz();
+  public:
+
+  // .google.protobuf.BoolValue disabled = 19[json_name = "disabled"];
+  bool has_disabled() const;
+  private:
+  bool _internal_has_disabled() const;
+  public:
+  void clear_disabled();
+  const PROTOBUF_NAMESPACE_ID::BoolValue& disabled() const;
+  PROTOBUF_NAMESPACE_ID::BoolValue* release_disabled();
+  PROTOBUF_NAMESPACE_ID::BoolValue* mutable_disabled();
+  void set_allocated_disabled(PROTOBUF_NAMESPACE_ID::BoolValue* disabled);
+  private:
+  const PROTOBUF_NAMESPACE_ID::BoolValue& _internal_disabled() const;
+  PROTOBUF_NAMESPACE_ID::BoolValue* _internal_mutable_disabled();
   public:
 
   // .v1.model.ROSTopic ros_topic = 3[json_name = "rosTopic"];
@@ -2308,6 +2324,7 @@ class StreamConfiguration :
       0 > tags_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   PROTOBUF_NAMESPACE_ID::DoubleValue* throttle_hz_;
+  PROTOBUF_NAMESPACE_ID::BoolValue* disabled_;
   union ConfigurationUnion {
     ConfigurationUnion() {}
     ::v1::model::ROSTopic* ros_topic_;
@@ -4463,6 +4480,61 @@ inline void StreamConfiguration::set_allocated_throttle_hz(PROTOBUF_NAMESPACE_ID
   }
   throttle_hz_ = throttle_hz;
   // @@protoc_insertion_point(field_set_allocated:v1.model.StreamConfiguration.throttle_hz)
+}
+
+// .google.protobuf.BoolValue disabled = 19[json_name = "disabled"];
+inline bool StreamConfiguration::_internal_has_disabled() const {
+  return this != internal_default_instance() && disabled_ != nullptr;
+}
+inline bool StreamConfiguration::has_disabled() const {
+  return _internal_has_disabled();
+}
+inline const PROTOBUF_NAMESPACE_ID::BoolValue& StreamConfiguration::_internal_disabled() const {
+  const PROTOBUF_NAMESPACE_ID::BoolValue* p = disabled_;
+  return p != nullptr ? *p : *reinterpret_cast<const PROTOBUF_NAMESPACE_ID::BoolValue*>(
+      &PROTOBUF_NAMESPACE_ID::_BoolValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::BoolValue& StreamConfiguration::disabled() const {
+  // @@protoc_insertion_point(field_get:v1.model.StreamConfiguration.disabled)
+  return _internal_disabled();
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* StreamConfiguration::release_disabled() {
+  // @@protoc_insertion_point(field_release:v1.model.StreamConfiguration.disabled)
+  
+  PROTOBUF_NAMESPACE_ID::BoolValue* temp = disabled_;
+  disabled_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* StreamConfiguration::_internal_mutable_disabled() {
+  
+  if (disabled_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::BoolValue>(GetArenaNoVirtual());
+    disabled_ = p;
+  }
+  return disabled_;
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* StreamConfiguration::mutable_disabled() {
+  // @@protoc_insertion_point(field_mutable:v1.model.StreamConfiguration.disabled)
+  return _internal_mutable_disabled();
+}
+inline void StreamConfiguration::set_allocated_disabled(PROTOBUF_NAMESPACE_ID::BoolValue* disabled) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(disabled_);
+  }
+  if (disabled) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(disabled)->GetArena();
+    if (message_arena != submessage_arena) {
+      disabled = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, disabled, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  disabled_ = disabled;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.StreamConfiguration.disabled)
 }
 
 inline bool StreamConfiguration::has_configuration() const {

@@ -19,6 +19,7 @@ extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fdatapoint_2eproto ::PROTOB
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2ffile_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_File_protos_2fmodel_2fv1_2ffile_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fhealth_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmedia_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Image_protos_2fmodel_2fv1_2fmedia_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2ftext_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Json_protos_2fmodel_2fv1_2ftext_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fnavigation_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_protos_2fmodel_2fv1_2fmath_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_MetricSet_protos_2fmodel_2fv1_2fmath_2eproto;
@@ -44,6 +45,7 @@ class DatapointDefaultTypeInternal {
   const ::v1::model::Location* location_;
   const ::v1::model::Localization* localization_;
   const ::v1::model::Health* health_;
+  const ::v1::model::Json* json_;
 } _Datapoint_default_instance_;
 }  // namespace model
 }  // namespace v1
@@ -58,8 +60,8 @@ static void InitDefaultsscc_info_Datapoint_protos_2fmodel_2fv1_2fdatapoint_2epro
   ::v1::model::Datapoint::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<11> scc_info_Datapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 11, 0, InitDefaultsscc_info_Datapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<12> scc_info_Datapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 12, 0, InitDefaultsscc_info_Datapoint_protos_2fmodel_2fv1_2fdatapoint_2eproto}, {
       &scc_info_Datapoint_TagsEntry_DoNotUse_protos_2fmodel_2fv1_2fdatapoint_2eproto.base,
       &scc_info_Text_protos_2fmodel_2fv1_2ftext_2eproto.base,
       &scc_info_Numeric_protos_2fmodel_2fv1_2fmath_2eproto.base,
@@ -70,7 +72,8 @@ static void InitDefaultsscc_info_Datapoint_protos_2fmodel_2fv1_2fdatapoint_2epro
       &scc_info_PointCloud_protos_2fmodel_2fv1_2fmedia_2eproto.base,
       &scc_info_Location_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
       &scc_info_Localization_protos_2fmodel_2fv1_2fnavigation_2eproto.base,
-      &scc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto.base,}};
+      &scc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto.base,
+      &scc_info_Json_protos_2fmodel_2fv1_2ftext_2eproto.base,}};
 
 static void InitDefaultsscc_info_Datapoint_TagsEntry_DoNotUse_protos_2fmodel_2fv1_2fdatapoint_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -117,6 +120,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fdatapoin
   offsetof(::v1::model::DatapointDefaultTypeInternal, location_),
   offsetof(::v1::model::DatapointDefaultTypeInternal, localization_),
   offsetof(::v1::model::DatapointDefaultTypeInternal, health_),
+  offsetof(::v1::model::DatapointDefaultTypeInternal, json_),
   PROTOBUF_FIELD_OFFSET(::v1::model::Datapoint, data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -135,7 +139,7 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto[] P
   "model/v1/health.proto\032\032protos/model/v1/m"
   "ath.proto\032 protos/model/v1/navigation.pr"
   "oto\032\032protos/model/v1/text.proto\032\033protos/"
-  "model/v1/media.proto\"\220\005\n\tDatapoint\022\026\n\006st"
+  "model/v1/media.proto\"\266\005\n\tDatapoint\022\026\n\006st"
   "ream\030\001 \001(\tR\006stream\022\034\n\ttimestamp\030\002 \001(\003R\tt"
   "imestamp\0221\n\004tags\030\003 \003(\0132\035.v1.model.Datapo"
   "int.TagsEntryR\004tags\022$\n\004text\030\004 \001(\0132\016.v1.m"
@@ -150,10 +154,11 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto[] P
   "1.model.LocationH\000R\010location\022<\n\014localiza"
   "tion\030\014 \001(\0132\026.v1.model.LocalizationH\000R\014lo"
   "calization\022*\n\006health\030\r \001(\0132\020.v1.model.He"
-  "althH\000R\006health\0327\n\tTagsEntry\022\020\n\003key\030\001 \001(\t"
-  "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001B\006\n\004dataB"
-  "+Z)github.com/FormantIO/genproto/go/v1/m"
-  "odelb\006proto3"
+  "althH\000R\006health\022$\n\004json\030\016 \001(\0132\016.v1.model."
+  "JsonH\000R\004json\0327\n\tTagsEntry\022\020\n\003key\030\001 \001(\tR\003"
+  "key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001B\006\n\004dataB+Z"
+  ")github.com/FormantIO/genproto/go/v1/mod"
+  "elb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_deps[6] = {
   &::descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto,
@@ -170,7 +175,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto, "protos/model/v1/datapoint.proto", 932,
+  &descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto, "protos/model/v1/datapoint.proto", 970,
   &descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_deps, 2, 6,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fdatapoint_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fdatapoint_2eproto, 2, file_level_enum_descriptors_protos_2fmodel_2fv1_2fdatapoint_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fdatapoint_2eproto,
@@ -221,6 +226,8 @@ void Datapoint::InitAsDefaultInstance() {
       ::v1::model::Localization::internal_default_instance());
   ::v1::model::_Datapoint_default_instance_.health_ = const_cast< ::v1::model::Health*>(
       ::v1::model::Health::internal_default_instance());
+  ::v1::model::_Datapoint_default_instance_.json_ = const_cast< ::v1::model::Json*>(
+      ::v1::model::Json::internal_default_instance());
 }
 class Datapoint::_Internal {
  public:
@@ -234,6 +241,7 @@ class Datapoint::_Internal {
   static const ::v1::model::Location& location(const Datapoint* msg);
   static const ::v1::model::Localization& localization(const Datapoint* msg);
   static const ::v1::model::Health& health(const Datapoint* msg);
+  static const ::v1::model::Json& json(const Datapoint* msg);
 };
 
 const ::v1::model::Text&
@@ -275,6 +283,10 @@ Datapoint::_Internal::localization(const Datapoint* msg) {
 const ::v1::model::Health&
 Datapoint::_Internal::health(const Datapoint* msg) {
   return *msg->data_.health_;
+}
+const ::v1::model::Json&
+Datapoint::_Internal::json(const Datapoint* msg) {
+  return *msg->data_.json_;
 }
 void Datapoint::set_allocated_text(::v1::model::Text* text) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
@@ -476,6 +488,26 @@ void Datapoint::clear_health() {
     clear_has_data();
   }
 }
+void Datapoint::set_allocated_json(::v1::model::Json* json) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  clear_data();
+  if (json) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      json = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, json, submessage_arena);
+    }
+    set_has_json();
+    data_.json_ = json;
+  }
+  // @@protoc_insertion_point(field_set_allocated:v1.model.Datapoint.json)
+}
+void Datapoint::clear_json() {
+  if (_internal_has_json()) {
+    delete data_.json_;
+    clear_has_data();
+  }
+}
 Datapoint::Datapoint()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -531,6 +563,10 @@ Datapoint::Datapoint(const Datapoint& from)
     }
     case kHealth: {
       _internal_mutable_health()->::v1::model::Health::MergeFrom(from._internal_health());
+      break;
+    }
+    case kJson: {
+      _internal_mutable_json()->::v1::model::Json::MergeFrom(from._internal_json());
       break;
     }
     case DATA_NOT_SET: {
@@ -609,6 +645,10 @@ void Datapoint::clear_data() {
     }
     case kHealth: {
       delete data_.health_;
+      break;
+    }
+    case kJson: {
+      delete data_.json_;
       break;
     }
     case DATA_NOT_SET: {
@@ -734,6 +774,13 @@ const char* Datapoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_health(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .v1.model.Json json = 14[json_name = "json"];
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
+          ptr = ctx->ParseMessage(_internal_mutable_json(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -904,6 +951,14 @@ failure:
         13, _Internal::health(this), target, stream);
   }
 
+  // .v1.model.Json json = 14[json_name = "json"];
+  if (_internal_has_json()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        14, _Internal::json(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -1014,6 +1069,13 @@ size_t Datapoint::ByteSizeLong() const {
           *data_.health_);
       break;
     }
+    // .v1.model.Json json = 14[json_name = "json"];
+    case kJson: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *data_.json_);
+      break;
+    }
     case DATA_NOT_SET: {
       break;
     }
@@ -1096,6 +1158,10 @@ void Datapoint::MergeFrom(const Datapoint& from) {
     }
     case kHealth: {
       _internal_mutable_health()->::v1::model::Health::MergeFrom(from._internal_health());
+      break;
+    }
+    case kJson: {
+      _internal_mutable_json()->::v1::model::Json::MergeFrom(from._internal_json());
       break;
     }
     case DATA_NOT_SET: {

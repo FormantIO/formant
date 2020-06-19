@@ -3,8 +3,8 @@ import time
 
 import grpc
 
-from protos.agent.v1 import agent_pb2, agent_pb2_grpc
-from protos.model.v1 import intervention_pb2
+from formant.protos.agent.v1 import agent_pb2, agent_pb2_grpc
+from formant.protos.model.v1 import intervention_pb2
 
 path = os.path.dirname(os.path.realpath(__file__))
 channel = grpc.insecure_channel("localhost:5501")

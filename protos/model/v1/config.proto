@@ -81,6 +81,7 @@ message StreamConfiguration {
     Custom custom = 9;
   }
   google.protobuf.DoubleValue throttle_hz = 8;
+  google.protobuf.BoolValue disabled = 19;
 }
 
 enum FileFormat {

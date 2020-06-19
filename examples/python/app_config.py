@@ -3,7 +3,7 @@
 
 import grpc
 
-from protos.agent.v1 import agent_pb2, agent_pb2_grpc
+from formant.protos.agent.v1 import agent_pb2, agent_pb2_grpc
 
 channel = grpc.insecure_channel("localhost:5501")
 agent = agent_pb2_grpc.AgentStub(channel)

@@ -4,8 +4,16 @@ This directory contains example Python scripts that interact with Formant Agent.
 
 ## Setup
 
+### Formant pip module
+
+1. Make sure Formant Agent is running.
+2. `pip install formant`
+
+### Using protos folder directly
+
 1. Make sure Formant Agent is running.
 2. `pip install -r requirements.txt`
+3. Import gRPC classes from `protos` instead of from the `formant` module, e.g. `protos.agent.v1` instead of `formant.protos.agent.v1`
 
 ## Usage
 

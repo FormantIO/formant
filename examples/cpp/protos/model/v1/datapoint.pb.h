@@ -163,6 +163,7 @@ class Datapoint :
     kLocation = 11,
     kLocalization = 12,
     kHealth = 13,
+    kJson = 14,
     DATA_NOT_SET = 0,
   };
 
@@ -250,6 +251,7 @@ class Datapoint :
     kLocationFieldNumber = 11,
     kLocalizationFieldNumber = 12,
     kHealthFieldNumber = 13,
+    kJsonFieldNumber = 14,
   };
   // map<string, string> tags = 3[json_name = "tags"];
   int tags_size() const;
@@ -443,6 +445,21 @@ class Datapoint :
   ::v1::model::Health* _internal_mutable_health();
   public:
 
+  // .v1.model.Json json = 14[json_name = "json"];
+  bool has_json() const;
+  private:
+  bool _internal_has_json() const;
+  public:
+  void clear_json();
+  const ::v1::model::Json& json() const;
+  ::v1::model::Json* release_json();
+  ::v1::model::Json* mutable_json();
+  void set_allocated_json(::v1::model::Json* json);
+  private:
+  const ::v1::model::Json& _internal_json() const;
+  ::v1::model::Json* _internal_mutable_json();
+  public:
+
   void clear_data();
   DataCase data_case() const;
   // @@protoc_insertion_point(class_scope:v1.model.Datapoint)
@@ -458,6 +475,7 @@ class Datapoint :
   void set_has_location();
   void set_has_localization();
   void set_has_health();
+  void set_has_json();
 
   inline bool has_data() const;
   inline void clear_has_data();
@@ -483,6 +501,7 @@ class Datapoint :
     ::v1::model::Location* location_;
     ::v1::model::Localization* localization_;
     ::v1::model::Health* health_;
+    ::v1::model::Json* json_;
   } data_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -1049,6 +1068,50 @@ inline ::v1::model::Health* Datapoint::_internal_mutable_health() {
 inline ::v1::model::Health* Datapoint::mutable_health() {
   // @@protoc_insertion_point(field_mutable:v1.model.Datapoint.health)
   return _internal_mutable_health();
+}
+
+// .v1.model.Json json = 14[json_name = "json"];
+inline bool Datapoint::_internal_has_json() const {
+  return data_case() == kJson;
+}
+inline bool Datapoint::has_json() const {
+  return _internal_has_json();
+}
+inline void Datapoint::set_has_json() {
+  _oneof_case_[0] = kJson;
+}
+inline ::v1::model::Json* Datapoint::release_json() {
+  // @@protoc_insertion_point(field_release:v1.model.Datapoint.json)
+  if (_internal_has_json()) {
+    clear_has_data();
+      ::v1::model::Json* temp = data_.json_;
+    data_.json_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::v1::model::Json& Datapoint::_internal_json() const {
+  return _internal_has_json()
+      ? *data_.json_
+      : *reinterpret_cast< ::v1::model::Json*>(&::v1::model::_Json_default_instance_);
+}
+inline const ::v1::model::Json& Datapoint::json() const {
+  // @@protoc_insertion_point(field_get:v1.model.Datapoint.json)
+  return _internal_json();
+}
+inline ::v1::model::Json* Datapoint::_internal_mutable_json() {
+  if (!_internal_has_json()) {
+    clear_data();
+    set_has_json();
+    data_.json_ = CreateMaybeMessage< ::v1::model::Json >(
+        GetArenaNoVirtual());
+  }
+  return data_.json_;
+}
+inline ::v1::model::Json* Datapoint::mutable_json() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Datapoint.json)
+  return _internal_mutable_json();
 }
 
 inline bool Datapoint::has_data() const {

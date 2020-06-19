@@ -37,6 +37,7 @@
 #include "protos/model/v1/commands.pb.h"
 #include "protos/model/v1/config.pb.h"
 #include "protos/model/v1/math.pb.h"
+#include "protos/model/v1/event.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_protos_2fagent_2fv1_2fagent_2eproto
@@ -52,7 +53,7 @@ struct TableStruct_protos_2fagent_2fv1_2fagent_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[25]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[28]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -61,6 +62,15 @@ struct TableStruct_protos_2fagent_2fv1_2fagent_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fagent_2fv1_2fagent_2eproto;
 namespace v1 {
 namespace agent {
+class CreateEventError;
+class CreateEventErrorDefaultTypeInternal;
+extern CreateEventErrorDefaultTypeInternal _CreateEventError_default_instance_;
+class CreateEventRequest;
+class CreateEventRequestDefaultTypeInternal;
+extern CreateEventRequestDefaultTypeInternal _CreateEventRequest_default_instance_;
+class CreateEventResponse;
+class CreateEventResponseDefaultTypeInternal;
+extern CreateEventResponseDefaultTypeInternal _CreateEventResponse_default_instance_;
 class GetAgentConfigurationRequest;
 class GetAgentConfigurationRequestDefaultTypeInternal;
 extern GetAgentConfigurationRequestDefaultTypeInternal _GetAgentConfigurationRequest_default_instance_;
@@ -139,6 +149,9 @@ extern StreamDataResponseDefaultTypeInternal _StreamDataResponse_default_instanc
 }  // namespace agent
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
+template<> ::v1::agent::CreateEventError* Arena::CreateMaybeMessage<::v1::agent::CreateEventError>(Arena*);
+template<> ::v1::agent::CreateEventRequest* Arena::CreateMaybeMessage<::v1::agent::CreateEventRequest>(Arena*);
+template<> ::v1::agent::CreateEventResponse* Arena::CreateMaybeMessage<::v1::agent::CreateEventResponse>(Arena*);
 template<> ::v1::agent::GetAgentConfigurationRequest* Arena::CreateMaybeMessage<::v1::agent::GetAgentConfigurationRequest>(Arena*);
 template<> ::v1::agent::GetAgentConfigurationResponse* Arena::CreateMaybeMessage<::v1::agent::GetAgentConfigurationResponse>(Arena*);
 template<> ::v1::agent::GetApplicationConfigurationRequest* Arena::CreateMaybeMessage<::v1::agent::GetApplicationConfigurationRequest>(Arena*);
@@ -3373,6 +3386,383 @@ class SetBaseFrameIDResponse :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
 };
+// -------------------------------------------------------------------
+
+class CreateEventRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.CreateEventRequest) */ {
+ public:
+  CreateEventRequest();
+  virtual ~CreateEventRequest();
+
+  CreateEventRequest(const CreateEventRequest& from);
+  CreateEventRequest(CreateEventRequest&& from) noexcept
+    : CreateEventRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline CreateEventRequest& operator=(const CreateEventRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateEventRequest& operator=(CreateEventRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const CreateEventRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CreateEventRequest* internal_default_instance() {
+    return reinterpret_cast<const CreateEventRequest*>(
+               &_CreateEventRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    25;
+
+  friend void swap(CreateEventRequest& a, CreateEventRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CreateEventRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CreateEventRequest* New() const final {
+    return CreateMaybeMessage<CreateEventRequest>(nullptr);
+  }
+
+  CreateEventRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CreateEventRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const CreateEventRequest& from);
+  void MergeFrom(const CreateEventRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CreateEventRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.CreateEventRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEventFieldNumber = 1,
+  };
+  // .v1.model.Event event = 1[json_name = "event"];
+  bool has_event() const;
+  private:
+  bool _internal_has_event() const;
+  public:
+  void clear_event();
+  const ::v1::model::Event& event() const;
+  ::v1::model::Event* release_event();
+  ::v1::model::Event* mutable_event();
+  void set_allocated_event(::v1::model::Event* event);
+  private:
+  const ::v1::model::Event& _internal_event() const;
+  ::v1::model::Event* _internal_mutable_event();
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.agent.CreateEventRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::v1::model::Event* event_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CreateEventResponse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.CreateEventResponse) */ {
+ public:
+  CreateEventResponse();
+  virtual ~CreateEventResponse();
+
+  CreateEventResponse(const CreateEventResponse& from);
+  CreateEventResponse(CreateEventResponse&& from) noexcept
+    : CreateEventResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline CreateEventResponse& operator=(const CreateEventResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateEventResponse& operator=(CreateEventResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const CreateEventResponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CreateEventResponse* internal_default_instance() {
+    return reinterpret_cast<const CreateEventResponse*>(
+               &_CreateEventResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    26;
+
+  friend void swap(CreateEventResponse& a, CreateEventResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CreateEventResponse* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CreateEventResponse* New() const final {
+    return CreateMaybeMessage<CreateEventResponse>(nullptr);
+  }
+
+  CreateEventResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CreateEventResponse>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const CreateEventResponse& from);
+  void MergeFrom(const CreateEventResponse& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CreateEventResponse* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.CreateEventResponse";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:v1.agent.CreateEventResponse)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CreateEventError :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.CreateEventError) */ {
+ public:
+  CreateEventError();
+  virtual ~CreateEventError();
+
+  CreateEventError(const CreateEventError& from);
+  CreateEventError(CreateEventError&& from) noexcept
+    : CreateEventError() {
+    *this = ::std::move(from);
+  }
+
+  inline CreateEventError& operator=(const CreateEventError& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateEventError& operator=(CreateEventError&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const CreateEventError& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CreateEventError* internal_default_instance() {
+    return reinterpret_cast<const CreateEventError*>(
+               &_CreateEventError_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    27;
+
+  friend void swap(CreateEventError& a, CreateEventError& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CreateEventError* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CreateEventError* New() const final {
+    return CreateMaybeMessage<CreateEventError>(nullptr);
+  }
+
+  CreateEventError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CreateEventError>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const CreateEventError& from);
+  void MergeFrom(const CreateEventError& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CreateEventError* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.CreateEventError";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRetryableFieldNumber = 1,
+  };
+  // bool retryable = 1[json_name = "retryable"];
+  void clear_retryable();
+  bool retryable() const;
+  void set_retryable(bool value);
+  private:
+  bool _internal_retryable() const;
+  void _internal_set_retryable(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.agent.CreateEventError)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  bool retryable_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
 // ===================================================================
 
 
@@ -4309,9 +4699,101 @@ inline void SetBaseFrameIDRequest::set_allocated_id(std::string* id) {
 
 // SetBaseFrameIDResponse
 
+// -------------------------------------------------------------------
+
+// CreateEventRequest
+
+// .v1.model.Event event = 1[json_name = "event"];
+inline bool CreateEventRequest::_internal_has_event() const {
+  return this != internal_default_instance() && event_ != nullptr;
+}
+inline bool CreateEventRequest::has_event() const {
+  return _internal_has_event();
+}
+inline const ::v1::model::Event& CreateEventRequest::_internal_event() const {
+  const ::v1::model::Event* p = event_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::v1::model::Event*>(
+      &::v1::model::_Event_default_instance_);
+}
+inline const ::v1::model::Event& CreateEventRequest::event() const {
+  // @@protoc_insertion_point(field_get:v1.agent.CreateEventRequest.event)
+  return _internal_event();
+}
+inline ::v1::model::Event* CreateEventRequest::release_event() {
+  // @@protoc_insertion_point(field_release:v1.agent.CreateEventRequest.event)
+  
+  ::v1::model::Event* temp = event_;
+  event_ = nullptr;
+  return temp;
+}
+inline ::v1::model::Event* CreateEventRequest::_internal_mutable_event() {
+  
+  if (event_ == nullptr) {
+    auto* p = CreateMaybeMessage<::v1::model::Event>(GetArenaNoVirtual());
+    event_ = p;
+  }
+  return event_;
+}
+inline ::v1::model::Event* CreateEventRequest::mutable_event() {
+  // @@protoc_insertion_point(field_mutable:v1.agent.CreateEventRequest.event)
+  return _internal_mutable_event();
+}
+inline void CreateEventRequest::set_allocated_event(::v1::model::Event* event) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(event_);
+  }
+  if (event) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      event = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, event, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  event_ = event;
+  // @@protoc_insertion_point(field_set_allocated:v1.agent.CreateEventRequest.event)
+}
+
+// -------------------------------------------------------------------
+
+// CreateEventResponse
+
+// -------------------------------------------------------------------
+
+// CreateEventError
+
+// bool retryable = 1[json_name = "retryable"];
+inline void CreateEventError::clear_retryable() {
+  retryable_ = false;
+}
+inline bool CreateEventError::_internal_retryable() const {
+  return retryable_;
+}
+inline bool CreateEventError::retryable() const {
+  // @@protoc_insertion_point(field_get:v1.agent.CreateEventError.retryable)
+  return _internal_retryable();
+}
+inline void CreateEventError::_internal_set_retryable(bool value) {
+  
+  retryable_ = value;
+}
+inline void CreateEventError::set_retryable(bool value) {
+  _internal_set_retryable(value);
+  // @@protoc_insertion_point(field_set:v1.agent.CreateEventError.retryable)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

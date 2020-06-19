@@ -28,5 +28,6 @@ message Datapoint {
     Location location = 11;
     Localization localization = 12;
     Health health = 13;
+    Json json = 14;
   }
 }
