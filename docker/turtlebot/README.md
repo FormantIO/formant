@@ -5,7 +5,7 @@ This directory contains a container based turtlebot simulator that can be driven
 To run turtlebot locally:
 
 ```bash
-docker run -it --net --cpus 2 host -a stderr -a stdin -a stdout formant/turtlebot
+docker run -it --net host -a stderr -a stdin -a stdout formant/turtlebot
 ```
 
 You will see output like this if everything is working properly:
