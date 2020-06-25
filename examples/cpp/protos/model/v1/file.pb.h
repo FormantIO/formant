@@ -182,7 +182,6 @@ class File :
 
   enum : int {
     kFilenameFieldNumber = 3,
-    kSizeFieldNumber = 4,
     kUrlFieldNumber = 1,
     kRawFieldNumber = 2,
   };
@@ -200,15 +199,6 @@ class File :
   const std::string& _internal_filename() const;
   void _internal_set_filename(const std::string& value);
   std::string* _internal_mutable_filename();
-  public:
-
-  // int64 size = 4[json_name = "size"];
-  void clear_size();
-  ::PROTOBUF_NAMESPACE_ID::int64 size() const;
-  void set_size(::PROTOBUF_NAMESPACE_ID::int64 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int64 _internal_size() const;
-  void _internal_set_size(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
   // string url = 1[json_name = "url"];
@@ -262,7 +252,6 @@ class File :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filename_;
-  ::PROTOBUF_NAMESPACE_ID::int64 size_;
   union DataUnion {
     DataUnion() {}
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
@@ -538,26 +527,6 @@ inline void File::set_allocated_filename(std::string* filename) {
   }
   filename_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), filename);
   // @@protoc_insertion_point(field_set_allocated:v1.model.File.filename)
-}
-
-// int64 size = 4[json_name = "size"];
-inline void File::clear_size() {
-  size_ = PROTOBUF_LONGLONG(0);
-}
-inline ::PROTOBUF_NAMESPACE_ID::int64 File::_internal_size() const {
-  return size_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int64 File::size() const {
-  // @@protoc_insertion_point(field_get:v1.model.File.size)
-  return _internal_size();
-}
-inline void File::_internal_set_size(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  
-  size_ = value;
-}
-inline void File::set_size(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_size(value);
-  // @@protoc_insertion_point(field_set:v1.model.File.size)
 }
 
 inline bool File::has_data() const {
