@@ -11,8 +11,8 @@ data = {
     "event": {
         "timestamp": int(time.time() * 1000),
         "message": "Synchronized transporter annular confinement beam to warp frequency 0.72e-17 hz",
-        "notificationEnabled": True,
-        "tags": {"Region": "South"}
+        "notification_enabled": True,
+        "tags": {"Region": "South"},
     }
 }
 req = Request("http://%s:5502/v1/events" % host)

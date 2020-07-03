@@ -257,36 +257,36 @@ class Event :
   std::string* _internal_mutable_message();
   public:
 
-  // string streamName = 3[json_name = "streamName"];
-  void clear_streamname();
-  const std::string& streamname() const;
-  void set_streamname(const std::string& value);
-  void set_streamname(std::string&& value);
-  void set_streamname(const char* value);
-  void set_streamname(const char* value, size_t size);
-  std::string* mutable_streamname();
-  std::string* release_streamname();
-  void set_allocated_streamname(std::string* streamname);
+  // string stream_name = 3[json_name = "streamName"];
+  void clear_stream_name();
+  const std::string& stream_name() const;
+  void set_stream_name(const std::string& value);
+  void set_stream_name(std::string&& value);
+  void set_stream_name(const char* value);
+  void set_stream_name(const char* value, size_t size);
+  std::string* mutable_stream_name();
+  std::string* release_stream_name();
+  void set_allocated_stream_name(std::string* stream_name);
   private:
-  const std::string& _internal_streamname() const;
-  void _internal_set_streamname(const std::string& value);
-  std::string* _internal_mutable_streamname();
+  const std::string& _internal_stream_name() const;
+  void _internal_set_stream_name(const std::string& value);
+  std::string* _internal_mutable_stream_name();
   public:
 
-  // string streamType = 4[json_name = "streamType"];
-  void clear_streamtype();
-  const std::string& streamtype() const;
-  void set_streamtype(const std::string& value);
-  void set_streamtype(std::string&& value);
-  void set_streamtype(const char* value);
-  void set_streamtype(const char* value, size_t size);
-  std::string* mutable_streamtype();
-  std::string* release_streamtype();
-  void set_allocated_streamtype(std::string* streamtype);
+  // string stream_type = 4[json_name = "streamType"];
+  void clear_stream_type();
+  const std::string& stream_type() const;
+  void set_stream_type(const std::string& value);
+  void set_stream_type(std::string&& value);
+  void set_stream_type(const char* value);
+  void set_stream_type(const char* value, size_t size);
+  std::string* mutable_stream_type();
+  std::string* release_stream_type();
+  void set_allocated_stream_type(std::string* stream_type);
   private:
-  const std::string& _internal_streamtype() const;
-  void _internal_set_streamtype(const std::string& value);
-  std::string* _internal_mutable_streamtype();
+  const std::string& _internal_stream_type() const;
+  void _internal_set_stream_type(const std::string& value);
+  std::string* _internal_mutable_stream_type();
   public:
 
   // int64 timestamp = 1[json_name = "timestamp"];
@@ -298,13 +298,13 @@ class Event :
   void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // bool notificationEnabled = 5[json_name = "notificationEnabled"];
-  void clear_notificationenabled();
-  bool notificationenabled() const;
-  void set_notificationenabled(bool value);
+  // bool notification_enabled = 5[json_name = "notificationEnabled"];
+  void clear_notification_enabled();
+  bool notification_enabled() const;
+  void set_notification_enabled(bool value);
   private:
-  bool _internal_notificationenabled() const;
-  void _internal_set_notificationenabled(bool value);
+  bool _internal_notification_enabled() const;
+  void _internal_set_notification_enabled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:v1.model.Event)
@@ -319,10 +319,10 @@ class Event :
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
       0 > tags_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr streamname_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr streamtype_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr stream_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr stream_type_;
   ::PROTOBUF_NAMESPACE_ID::int64 timestamp_;
-  bool notificationenabled_;
+  bool notification_enabled_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fevent_2eproto;
 };
@@ -419,144 +419,144 @@ inline void Event::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:v1.model.Event.message)
 }
 
-// string streamName = 3[json_name = "streamName"];
-inline void Event::clear_streamname() {
-  streamname_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// string stream_name = 3[json_name = "streamName"];
+inline void Event::clear_stream_name() {
+  stream_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& Event::streamname() const {
-  // @@protoc_insertion_point(field_get:v1.model.Event.streamName)
-  return _internal_streamname();
+inline const std::string& Event::stream_name() const {
+  // @@protoc_insertion_point(field_get:v1.model.Event.stream_name)
+  return _internal_stream_name();
 }
-inline void Event::set_streamname(const std::string& value) {
-  _internal_set_streamname(value);
-  // @@protoc_insertion_point(field_set:v1.model.Event.streamName)
+inline void Event::set_stream_name(const std::string& value) {
+  _internal_set_stream_name(value);
+  // @@protoc_insertion_point(field_set:v1.model.Event.stream_name)
 }
-inline std::string* Event::mutable_streamname() {
-  // @@protoc_insertion_point(field_mutable:v1.model.Event.streamName)
-  return _internal_mutable_streamname();
+inline std::string* Event::mutable_stream_name() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Event.stream_name)
+  return _internal_mutable_stream_name();
 }
-inline const std::string& Event::_internal_streamname() const {
-  return streamname_.GetNoArena();
+inline const std::string& Event::_internal_stream_name() const {
+  return stream_name_.GetNoArena();
 }
-inline void Event::_internal_set_streamname(const std::string& value) {
+inline void Event::_internal_set_stream_name(const std::string& value) {
   
-  streamname_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  stream_name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
 }
-inline void Event::set_streamname(std::string&& value) {
+inline void Event::set_stream_name(std::string&& value) {
   
-  streamname_.SetNoArena(
+  stream_name_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:v1.model.Event.streamName)
+  // @@protoc_insertion_point(field_set_rvalue:v1.model.Event.stream_name)
 }
-inline void Event::set_streamname(const char* value) {
+inline void Event::set_stream_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  streamname_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:v1.model.Event.streamName)
+  stream_name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.model.Event.stream_name)
 }
-inline void Event::set_streamname(const char* value, size_t size) {
+inline void Event::set_stream_name(const char* value, size_t size) {
   
-  streamname_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  stream_name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:v1.model.Event.streamName)
+  // @@protoc_insertion_point(field_set_pointer:v1.model.Event.stream_name)
 }
-inline std::string* Event::_internal_mutable_streamname() {
+inline std::string* Event::_internal_mutable_stream_name() {
   
-  return streamname_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return stream_name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* Event::release_streamname() {
-  // @@protoc_insertion_point(field_release:v1.model.Event.streamName)
+inline std::string* Event::release_stream_name() {
+  // @@protoc_insertion_point(field_release:v1.model.Event.stream_name)
   
-  return streamname_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return stream_name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void Event::set_allocated_streamname(std::string* streamname) {
-  if (streamname != nullptr) {
+inline void Event::set_allocated_stream_name(std::string* stream_name) {
+  if (stream_name != nullptr) {
     
   } else {
     
   }
-  streamname_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), streamname);
-  // @@protoc_insertion_point(field_set_allocated:v1.model.Event.streamName)
+  stream_name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), stream_name);
+  // @@protoc_insertion_point(field_set_allocated:v1.model.Event.stream_name)
 }
 
-// string streamType = 4[json_name = "streamType"];
-inline void Event::clear_streamtype() {
-  streamtype_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// string stream_type = 4[json_name = "streamType"];
+inline void Event::clear_stream_type() {
+  stream_type_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& Event::streamtype() const {
-  // @@protoc_insertion_point(field_get:v1.model.Event.streamType)
-  return _internal_streamtype();
+inline const std::string& Event::stream_type() const {
+  // @@protoc_insertion_point(field_get:v1.model.Event.stream_type)
+  return _internal_stream_type();
 }
-inline void Event::set_streamtype(const std::string& value) {
-  _internal_set_streamtype(value);
-  // @@protoc_insertion_point(field_set:v1.model.Event.streamType)
+inline void Event::set_stream_type(const std::string& value) {
+  _internal_set_stream_type(value);
+  // @@protoc_insertion_point(field_set:v1.model.Event.stream_type)
 }
-inline std::string* Event::mutable_streamtype() {
-  // @@protoc_insertion_point(field_mutable:v1.model.Event.streamType)
-  return _internal_mutable_streamtype();
+inline std::string* Event::mutable_stream_type() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Event.stream_type)
+  return _internal_mutable_stream_type();
 }
-inline const std::string& Event::_internal_streamtype() const {
-  return streamtype_.GetNoArena();
+inline const std::string& Event::_internal_stream_type() const {
+  return stream_type_.GetNoArena();
 }
-inline void Event::_internal_set_streamtype(const std::string& value) {
+inline void Event::_internal_set_stream_type(const std::string& value) {
   
-  streamtype_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  stream_type_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
 }
-inline void Event::set_streamtype(std::string&& value) {
+inline void Event::set_stream_type(std::string&& value) {
   
-  streamtype_.SetNoArena(
+  stream_type_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:v1.model.Event.streamType)
+  // @@protoc_insertion_point(field_set_rvalue:v1.model.Event.stream_type)
 }
-inline void Event::set_streamtype(const char* value) {
+inline void Event::set_stream_type(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  streamtype_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:v1.model.Event.streamType)
+  stream_type_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:v1.model.Event.stream_type)
 }
-inline void Event::set_streamtype(const char* value, size_t size) {
+inline void Event::set_stream_type(const char* value, size_t size) {
   
-  streamtype_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  stream_type_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:v1.model.Event.streamType)
+  // @@protoc_insertion_point(field_set_pointer:v1.model.Event.stream_type)
 }
-inline std::string* Event::_internal_mutable_streamtype() {
+inline std::string* Event::_internal_mutable_stream_type() {
   
-  return streamtype_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return stream_type_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* Event::release_streamtype() {
-  // @@protoc_insertion_point(field_release:v1.model.Event.streamType)
+inline std::string* Event::release_stream_type() {
+  // @@protoc_insertion_point(field_release:v1.model.Event.stream_type)
   
-  return streamtype_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return stream_type_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void Event::set_allocated_streamtype(std::string* streamtype) {
-  if (streamtype != nullptr) {
+inline void Event::set_allocated_stream_type(std::string* stream_type) {
+  if (stream_type != nullptr) {
     
   } else {
     
   }
-  streamtype_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), streamtype);
-  // @@protoc_insertion_point(field_set_allocated:v1.model.Event.streamType)
+  stream_type_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), stream_type);
+  // @@protoc_insertion_point(field_set_allocated:v1.model.Event.stream_type)
 }
 
-// bool notificationEnabled = 5[json_name = "notificationEnabled"];
-inline void Event::clear_notificationenabled() {
-  notificationenabled_ = false;
+// bool notification_enabled = 5[json_name = "notificationEnabled"];
+inline void Event::clear_notification_enabled() {
+  notification_enabled_ = false;
 }
-inline bool Event::_internal_notificationenabled() const {
-  return notificationenabled_;
+inline bool Event::_internal_notification_enabled() const {
+  return notification_enabled_;
 }
-inline bool Event::notificationenabled() const {
-  // @@protoc_insertion_point(field_get:v1.model.Event.notificationEnabled)
-  return _internal_notificationenabled();
+inline bool Event::notification_enabled() const {
+  // @@protoc_insertion_point(field_get:v1.model.Event.notification_enabled)
+  return _internal_notification_enabled();
 }
-inline void Event::_internal_set_notificationenabled(bool value) {
+inline void Event::_internal_set_notification_enabled(bool value) {
   
-  notificationenabled_ = value;
+  notification_enabled_ = value;
 }
-inline void Event::set_notificationenabled(bool value) {
-  _internal_set_notificationenabled(value);
-  // @@protoc_insertion_point(field_set:v1.model.Event.notificationEnabled)
+inline void Event::set_notification_enabled(bool value) {
+  _internal_set_notification_enabled(value);
+  // @@protoc_insertion_point(field_set:v1.model.Event.notification_enabled)
 }
 
 // map<string, string> tags = 6[json_name = "tags"];

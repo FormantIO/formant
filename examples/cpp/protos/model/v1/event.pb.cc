@@ -76,9 +76,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fevent_2e
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::v1::model::Event, timestamp_),
   PROTOBUF_FIELD_OFFSET(::v1::model::Event, message_),
-  PROTOBUF_FIELD_OFFSET(::v1::model::Event, streamname_),
-  PROTOBUF_FIELD_OFFSET(::v1::model::Event, streamtype_),
-  PROTOBUF_FIELD_OFFSET(::v1::model::Event, notificationenabled_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Event, stream_name_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Event, stream_type_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Event, notification_enabled_),
   PROTOBUF_FIELD_OFFSET(::v1::model::Event, tags_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -93,15 +93,15 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2fevent_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\033protos/model/v1/event.proto\022\010v1.model\""
-  "\231\002\n\005Event\022\034\n\ttimestamp\030\001 \001(\003R\ttimestamp\022"
-  "\030\n\007message\030\002 \001(\tR\007message\022\036\n\nstreamName\030"
-  "\003 \001(\tR\nstreamName\022\036\n\nstreamType\030\004 \001(\tR\ns"
-  "treamType\0220\n\023notificationEnabled\030\005 \001(\010R\023"
-  "notificationEnabled\022-\n\004tags\030\006 \003(\0132\031.v1.m"
-  "odel.Event.TagsEntryR\004tags\0327\n\tTagsEntry\022"
-  "\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:"
-  "\0028\001B+Z)github.com/FormantIO/genproto/go/"
-  "v1/modelb\006proto3"
+  "\234\002\n\005Event\022\034\n\ttimestamp\030\001 \001(\003R\ttimestamp\022"
+  "\030\n\007message\030\002 \001(\tR\007message\022\037\n\013stream_name"
+  "\030\003 \001(\tR\nstreamName\022\037\n\013stream_type\030\004 \001(\tR"
+  "\nstreamType\0221\n\024notification_enabled\030\005 \001("
+  "\010R\023notificationEnabled\022-\n\004tags\030\006 \003(\0132\031.v"
+  "1.model.Event.TagsEntryR\004tags\0327\n\tTagsEnt"
+  "ry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005val"
+  "ue:\0028\001B+Z)github.com/FormantIO/genproto/"
+  "go/v1/modelb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto_deps[1] = {
 };
@@ -112,7 +112,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fevent_2eproto, "protos/model/v1/event.proto", 376,
+  &descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fevent_2eproto, "protos/model/v1/event.proto", 379,
   &descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fevent_2eproto_deps, 2, 0,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fevent_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fevent_2eproto, 2, file_level_enum_descriptors_protos_2fmodel_2fv1_2fevent_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fevent_2eproto,
@@ -162,28 +162,28 @@ Event::Event(const Event& from)
   if (!from._internal_message().empty()) {
     message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
   }
-  streamname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_streamname().empty()) {
-    streamname_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.streamname_);
+  stream_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_stream_name().empty()) {
+    stream_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.stream_name_);
   }
-  streamtype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_streamtype().empty()) {
-    streamtype_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.streamtype_);
+  stream_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_stream_type().empty()) {
+    stream_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.stream_type_);
   }
   ::memcpy(&timestamp_, &from.timestamp_,
-    static_cast<size_t>(reinterpret_cast<char*>(&notificationenabled_) -
-    reinterpret_cast<char*>(&timestamp_)) + sizeof(notificationenabled_));
+    static_cast<size_t>(reinterpret_cast<char*>(&notification_enabled_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(notification_enabled_));
   // @@protoc_insertion_point(copy_constructor:v1.model.Event)
 }
 
 void Event::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Event_protos_2fmodel_2fv1_2fevent_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  streamname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  streamtype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stream_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stream_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&notificationenabled_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(notificationenabled_));
+      reinterpret_cast<char*>(&notification_enabled_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(notification_enabled_));
 }
 
 Event::~Event() {
@@ -193,8 +193,8 @@ Event::~Event() {
 
 void Event::SharedDtor() {
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  streamname_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  streamtype_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stream_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stream_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void Event::SetCachedSize(int size) const {
@@ -214,11 +214,11 @@ void Event::Clear() {
 
   tags_.Clear();
   message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  streamname_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  streamtype_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stream_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stream_type_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&notificationenabled_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(notificationenabled_));
+      reinterpret_cast<char*>(&notification_enabled_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(notification_enabled_));
   _internal_metadata_.Clear();
 }
 
@@ -245,28 +245,28 @@ const char* Event::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string streamName = 3[json_name = "streamName"];
+      // string stream_name = 3[json_name = "streamName"];
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_streamname();
+          auto str = _internal_mutable_stream_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.Event.streamName"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.Event.stream_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string streamType = 4[json_name = "streamType"];
+      // string stream_type = 4[json_name = "streamType"];
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          auto str = _internal_mutable_streamtype();
+          auto str = _internal_mutable_stream_type();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.Event.streamType"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "v1.model.Event.stream_type"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool notificationEnabled = 5[json_name = "notificationEnabled"];
+      // bool notification_enabled = 5[json_name = "notificationEnabled"];
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          notificationenabled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          notification_enabled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -324,30 +324,30 @@ failure:
         2, this->_internal_message(), target);
   }
 
-  // string streamName = 3[json_name = "streamName"];
-  if (this->streamname().size() > 0) {
+  // string stream_name = 3[json_name = "streamName"];
+  if (this->stream_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_streamname().data(), static_cast<int>(this->_internal_streamname().length()),
+      this->_internal_stream_name().data(), static_cast<int>(this->_internal_stream_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "v1.model.Event.streamName");
+      "v1.model.Event.stream_name");
     target = stream->WriteStringMaybeAliased(
-        3, this->_internal_streamname(), target);
+        3, this->_internal_stream_name(), target);
   }
 
-  // string streamType = 4[json_name = "streamType"];
-  if (this->streamtype().size() > 0) {
+  // string stream_type = 4[json_name = "streamType"];
+  if (this->stream_type().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_streamtype().data(), static_cast<int>(this->_internal_streamtype().length()),
+      this->_internal_stream_type().data(), static_cast<int>(this->_internal_stream_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "v1.model.Event.streamType");
+      "v1.model.Event.stream_type");
     target = stream->WriteStringMaybeAliased(
-        4, this->_internal_streamtype(), target);
+        4, this->_internal_stream_type(), target);
   }
 
-  // bool notificationEnabled = 5[json_name = "notificationEnabled"];
-  if (this->notificationenabled() != 0) {
+  // bool notification_enabled = 5[json_name = "notificationEnabled"];
+  if (this->notification_enabled() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_notificationenabled(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_notification_enabled(), target);
   }
 
   // map<string, string> tags = 6[json_name = "tags"];
@@ -427,18 +427,18 @@ size_t Event::ByteSizeLong() const {
         this->_internal_message());
   }
 
-  // string streamName = 3[json_name = "streamName"];
-  if (this->streamname().size() > 0) {
+  // string stream_name = 3[json_name = "streamName"];
+  if (this->stream_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_streamname());
+        this->_internal_stream_name());
   }
 
-  // string streamType = 4[json_name = "streamType"];
-  if (this->streamtype().size() > 0) {
+  // string stream_type = 4[json_name = "streamType"];
+  if (this->stream_type().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_streamtype());
+        this->_internal_stream_type());
   }
 
   // int64 timestamp = 1[json_name = "timestamp"];
@@ -448,8 +448,8 @@ size_t Event::ByteSizeLong() const {
         this->_internal_timestamp());
   }
 
-  // bool notificationEnabled = 5[json_name = "notificationEnabled"];
-  if (this->notificationenabled() != 0) {
+  // bool notification_enabled = 5[json_name = "notificationEnabled"];
+  if (this->notification_enabled() != 0) {
     total_size += 1 + 1;
   }
 
@@ -489,19 +489,19 @@ void Event::MergeFrom(const Event& from) {
 
     message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
   }
-  if (from.streamname().size() > 0) {
+  if (from.stream_name().size() > 0) {
 
-    streamname_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.streamname_);
+    stream_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.stream_name_);
   }
-  if (from.streamtype().size() > 0) {
+  if (from.stream_type().size() > 0) {
 
-    streamtype_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.streamtype_);
+    stream_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.stream_type_);
   }
   if (from.timestamp() != 0) {
     _internal_set_timestamp(from._internal_timestamp());
   }
-  if (from.notificationenabled() != 0) {
-    _internal_set_notificationenabled(from._internal_notificationenabled());
+  if (from.notification_enabled() != 0) {
+    _internal_set_notification_enabled(from._internal_notification_enabled());
   }
 }
 
@@ -529,12 +529,12 @@ void Event::InternalSwap(Event* other) {
   tags_.Swap(&other->tags_);
   message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  streamname_.Swap(&other->streamname_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  stream_name_.Swap(&other->stream_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  streamtype_.Swap(&other->streamtype_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  stream_type_.Swap(&other->stream_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(timestamp_, other->timestamp_);
-  swap(notificationenabled_, other->notificationenabled_);
+  swap(notification_enabled_, other->notification_enabled_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Event::GetMetadata() const {
