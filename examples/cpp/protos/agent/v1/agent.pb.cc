@@ -124,6 +124,14 @@ class SetBaseFrameIDResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SetBaseFrameIDResponse> _instance;
 } _SetBaseFrameIDResponse_default_instance_;
+class ClearTransformTreeRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ClearTransformTreeRequest> _instance;
+} _ClearTransformTreeRequest_default_instance_;
+class ClearTransformTreeResponseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ClearTransformTreeResponse> _instance;
+} _ClearTransformTreeResponse_default_instance_;
 class CreateEventRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateEventRequest> _instance;
@@ -138,6 +146,34 @@ class CreateEventErrorDefaultTypeInternal {
 } _CreateEventError_default_instance_;
 }  // namespace agent
 }  // namespace v1
+static void InitDefaultsscc_info_ClearTransformTreeRequest_protos_2fagent_2fv1_2fagent_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::v1::agent::_ClearTransformTreeRequest_default_instance_;
+    new (ptr) ::v1::agent::ClearTransformTreeRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::v1::agent::ClearTransformTreeRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ClearTransformTreeRequest_protos_2fagent_2fv1_2fagent_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ClearTransformTreeRequest_protos_2fagent_2fv1_2fagent_2eproto}, {}};
+
+static void InitDefaultsscc_info_ClearTransformTreeResponse_protos_2fagent_2fv1_2fagent_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::v1::agent::_ClearTransformTreeResponse_default_instance_;
+    new (ptr) ::v1::agent::ClearTransformTreeResponse();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::v1::agent::ClearTransformTreeResponse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ClearTransformTreeResponse_protos_2fagent_2fv1_2fagent_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ClearTransformTreeResponse_protos_2fagent_2fv1_2fagent_2eproto}, {}};
+
 static void InitDefaultsscc_info_CreateEventError_protos_2fagent_2fv1_2fagent_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -539,7 +575,7 @@ static void InitDefaultsscc_info_StreamDataResponse_protos_2fagent_2fv1_2fagent_
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StreamDataResponse_protos_2fagent_2fv1_2fagent_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_StreamDataResponse_protos_2fagent_2fv1_2fagent_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fagent_2fv1_2fagent_2eproto[28];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fagent_2fv1_2fagent_2eproto[30];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_protos_2fagent_2fv1_2fagent_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_protos_2fagent_2fv1_2fagent_2eproto = nullptr;
 
@@ -687,6 +723,16 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fagent_2fv1_2fagent_2e
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::v1::agent::ClearTransformTreeRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::v1::agent::ClearTransformTreeResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::agent::CreateEventRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -730,9 +776,11 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 126, -1, sizeof(::v1::agent::PostTransformFrameResponse)},
   { 131, -1, sizeof(::v1::agent::SetBaseFrameIDRequest)},
   { 137, -1, sizeof(::v1::agent::SetBaseFrameIDResponse)},
-  { 142, -1, sizeof(::v1::agent::CreateEventRequest)},
-  { 148, -1, sizeof(::v1::agent::CreateEventResponse)},
-  { 153, -1, sizeof(::v1::agent::CreateEventError)},
+  { 142, -1, sizeof(::v1::agent::ClearTransformTreeRequest)},
+  { 147, -1, sizeof(::v1::agent::ClearTransformTreeResponse)},
+  { 152, -1, sizeof(::v1::agent::CreateEventRequest)},
+  { 158, -1, sizeof(::v1::agent::CreateEventResponse)},
+  { 163, -1, sizeof(::v1::agent::CreateEventError)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -761,6 +809,8 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::agent::_PostTransformFrameResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::agent::_SetBaseFrameIDRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::agent::_SetBaseFrameIDResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::agent::_ClearTransformTreeRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::agent::_ClearTransformTreeResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::agent::_CreateEventRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::agent::_CreateEventResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::agent::_CreateEventError_default_instance_),
@@ -807,50 +857,54 @@ const char descriptor_table_protodef_protos_2fagent_2fv1_2fagent_2eproto[] PROTO
   "Response\0222\n\007request\030\001 \001(\0132\030.v1.model.Com"
   "mandRequestR\007request\"\034\n\032PostTransformFra"
   "meResponse\"\'\n\025SetBaseFrameIDRequest\022\016\n\002i"
-  "d\030\001 \001(\tR\002id\"\030\n\026SetBaseFrameIDResponse\";\n"
-  "\022CreateEventRequest\022%\n\005event\030\001 \001(\0132\017.v1."
-  "model.EventR\005event\"\025\n\023CreateEventRespons"
-  "e\"0\n\020CreateEventError\022\034\n\tretryable\030\001 \001(\010"
-  "R\tretryable2\331\013\n\005Agent\022C\n\nStreamData\022\023.v1"
-  ".model.Datapoint\032\034.v1.agent.StreamDataRe"
-  "sponse\"\000(\001\022=\n\010PostData\022\023.v1.model.Datapo"
-  "int\032\032.v1.agent.PostDataResponse\"\000\022R\n\rPos"
-  "tDataMulti\022\036.v1.agent.PostDataMultiReque"
-  "st\032\037.v1.agent.PostDataMultiResponse\"\000\022L\n"
-  "\013CreateEvent\022\034.v1.agent.CreateEventReque"
-  "st\032\035.v1.agent.CreateEventResponse\"\000\022[\n\031C"
-  "reateInterventionRequest\022\035.v1.model.Inte"
-  "rventionRequest\032\035.v1.model.InterventionR"
-  "equest\"\000\022b\n\026GetInterventionRequest\022\'.v1."
-  "agent.GetInterventionRequestRequest\032\035.v1"
-  ".model.InterventionRequest\"\000\022e\n\027GetInter"
-  "ventionResponse\022(.v1.agent.GetInterventi"
-  "onResponseRequest\032\036.v1.model.Interventio"
-  "nResponse\"\000\022p\n\027GetStreamsConfiguration\022("
-  ".v1.agent.GetStreamsConfigurationRequest"
-  "\032).v1.agent.GetStreamsConfigurationRespo"
-  "nse\"\000\022|\n\033GetApplicationConfiguration\022,.v"
-  "1.agent.GetApplicationConfigurationReque"
-  "st\032-.v1.agent.GetApplicationConfiguratio"
-  "nResponse\"\000\022j\n\025GetAgentConfiguration\022&.v"
-  "1.agent.GetAgentConfigurationRequest\032\'.v"
-  "1.agent.GetAgentConfigurationResponse\"\000\022"
-  "=\n\006Health\022\027.v1.agent.HealthRequest\032\030.v1."
-  "agent.HealthResponse\"\000\022^\n\021GetCommandRequ"
-  "est\022\".v1.agent.GetCommandRequestRequest\032"
-  "#.v1.agent.GetCommandRequestResponse\"\000\022r"
-  "\n\027GetCommandRequestStream\022(.v1.agent.Get"
-  "CommandRequestStreamRequest\032).v1.agent.G"
-  "etCommandRequestStreamResponse\"\0000\001\022d\n\023Se"
-  "ndCommandResponse\022$.v1.agent.SendCommand"
-  "ResponseRequest\032%.v1.agent.SendCommandRe"
-  "sponseResponse\"\000\022V\n\022PostTransformFrame\022\030"
-  ".v1.model.TransformFrame\032$.v1.agent.Post"
-  "TransformFrameResponse\"\000\022U\n\016SetBaseFrame"
-  "ID\022\037.v1.agent.SetBaseFrameIDRequest\032 .v1"
-  ".agent.SetBaseFrameIDResponse\"\000B+Z)githu"
-  "b.com/FormantIO/genproto/go/v1/agentb\006pr"
-  "oto3"
+  "d\030\001 \001(\tR\002id\"\030\n\026SetBaseFrameIDResponse\"\033\n"
+  "\031ClearTransformTreeRequest\"\034\n\032ClearTrans"
+  "formTreeResponse\";\n\022CreateEventRequest\022%"
+  "\n\005event\030\001 \001(\0132\017.v1.model.EventR\005event\"\025\n"
+  "\023CreateEventResponse\"0\n\020CreateEventError"
+  "\022\034\n\tretryable\030\001 \001(\010R\tretryable2\274\014\n\005Agent"
+  "\022C\n\nStreamData\022\023.v1.model.Datapoint\032\034.v1"
+  ".agent.StreamDataResponse\"\000(\001\022=\n\010PostDat"
+  "a\022\023.v1.model.Datapoint\032\032.v1.agent.PostDa"
+  "taResponse\"\000\022R\n\rPostDataMulti\022\036.v1.agent"
+  ".PostDataMultiRequest\032\037.v1.agent.PostDat"
+  "aMultiResponse\"\000\022L\n\013CreateEvent\022\034.v1.age"
+  "nt.CreateEventRequest\032\035.v1.agent.CreateE"
+  "ventResponse\"\000\022[\n\031CreateInterventionRequ"
+  "est\022\035.v1.model.InterventionRequest\032\035.v1."
+  "model.InterventionRequest\"\000\022b\n\026GetInterv"
+  "entionRequest\022\'.v1.agent.GetIntervention"
+  "RequestRequest\032\035.v1.model.InterventionRe"
+  "quest\"\000\022e\n\027GetInterventionResponse\022(.v1."
+  "agent.GetInterventionResponseRequest\032\036.v"
+  "1.model.InterventionResponse\"\000\022p\n\027GetStr"
+  "eamsConfiguration\022(.v1.agent.GetStreamsC"
+  "onfigurationRequest\032).v1.agent.GetStream"
+  "sConfigurationResponse\"\000\022|\n\033GetApplicati"
+  "onConfiguration\022,.v1.agent.GetApplicatio"
+  "nConfigurationRequest\032-.v1.agent.GetAppl"
+  "icationConfigurationResponse\"\000\022j\n\025GetAge"
+  "ntConfiguration\022&.v1.agent.GetAgentConfi"
+  "gurationRequest\032\'.v1.agent.GetAgentConfi"
+  "gurationResponse\"\000\022=\n\006Health\022\027.v1.agent."
+  "HealthRequest\032\030.v1.agent.HealthResponse\""
+  "\000\022^\n\021GetCommandRequest\022\".v1.agent.GetCom"
+  "mandRequestRequest\032#.v1.agent.GetCommand"
+  "RequestResponse\"\000\022r\n\027GetCommandRequestSt"
+  "ream\022(.v1.agent.GetCommandRequestStreamR"
+  "equest\032).v1.agent.GetCommandRequestStrea"
+  "mResponse\"\0000\001\022d\n\023SendCommandResponse\022$.v"
+  "1.agent.SendCommandResponseRequest\032%.v1."
+  "agent.SendCommandResponseResponse\"\000\022V\n\022P"
+  "ostTransformFrame\022\030.v1.model.TransformFr"
+  "ame\032$.v1.agent.PostTransformFrameRespons"
+  "e\"\000\022U\n\016SetBaseFrameID\022\037.v1.agent.SetBase"
+  "FrameIDRequest\032 .v1.agent.SetBaseFrameID"
+  "Response\"\000\022a\n\022ClearTransformTree\022#.v1.ag"
+  "ent.ClearTransformTreeRequest\032$.v1.agent"
+  ".ClearTransformTreeResponse\"\000B+Z)github."
+  "com/FormantIO/genproto/go/v1/agentb\006prot"
+  "o3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_deps[6] = {
   &::descriptor_table_protos_2fmodel_2fv1_2fcommands_2eproto,
@@ -860,7 +914,9 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_protos_2fmodel_2fv1_2fintervention_2eproto,
   &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_sccs[28] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_sccs[30] = {
+  &scc_info_ClearTransformTreeRequest_protos_2fagent_2fv1_2fagent_2eproto.base,
+  &scc_info_ClearTransformTreeResponse_protos_2fagent_2fv1_2fagent_2eproto.base,
   &scc_info_CreateEventError_protos_2fagent_2fv1_2fagent_2eproto.base,
   &scc_info_CreateEventRequest_protos_2fagent_2fv1_2fagent_2eproto.base,
   &scc_info_CreateEventResponse_protos_2fagent_2fv1_2fagent_2eproto.base,
@@ -893,10 +949,10 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_once;
 static bool descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fagent_2fv1_2fagent_2eproto = {
-  &descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_initialized, descriptor_table_protodef_protos_2fagent_2fv1_2fagent_2eproto, "protos/agent/v1/agent.proto", 3324,
-  &descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_once, descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_sccs, descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_deps, 28, 6,
+  &descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_initialized, descriptor_table_protodef_protos_2fagent_2fv1_2fagent_2eproto, "protos/agent/v1/agent.proto", 3482,
+  &descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_once, descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_sccs, descriptor_table_protos_2fagent_2fv1_2fagent_2eproto_deps, 30, 6,
   schemas, file_default_instances, TableStruct_protos_2fagent_2fv1_2fagent_2eproto::offsets,
-  file_level_metadata_protos_2fagent_2fv1_2fagent_2eproto, 28, file_level_enum_descriptors_protos_2fagent_2fv1_2fagent_2eproto, file_level_service_descriptors_protos_2fagent_2fv1_2fagent_2eproto,
+  file_level_metadata_protos_2fagent_2fv1_2fagent_2eproto, 30, file_level_enum_descriptors_protos_2fagent_2fv1_2fagent_2eproto, file_level_service_descriptors_protos_2fagent_2fv1_2fagent_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -5496,6 +5552,314 @@ void SetBaseFrameIDResponse::InternalSwap(SetBaseFrameIDResponse* other) {
 
 // ===================================================================
 
+void ClearTransformTreeRequest::InitAsDefaultInstance() {
+}
+class ClearTransformTreeRequest::_Internal {
+ public:
+};
+
+ClearTransformTreeRequest::ClearTransformTreeRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:v1.agent.ClearTransformTreeRequest)
+}
+ClearTransformTreeRequest::ClearTransformTreeRequest(const ClearTransformTreeRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:v1.agent.ClearTransformTreeRequest)
+}
+
+void ClearTransformTreeRequest::SharedCtor() {
+}
+
+ClearTransformTreeRequest::~ClearTransformTreeRequest() {
+  // @@protoc_insertion_point(destructor:v1.agent.ClearTransformTreeRequest)
+  SharedDtor();
+}
+
+void ClearTransformTreeRequest::SharedDtor() {
+}
+
+void ClearTransformTreeRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ClearTransformTreeRequest& ClearTransformTreeRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ClearTransformTreeRequest_protos_2fagent_2fv1_2fagent_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ClearTransformTreeRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:v1.agent.ClearTransformTreeRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear();
+}
+
+const char* ClearTransformTreeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ClearTransformTreeRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:v1.agent.ClearTransformTreeRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:v1.agent.ClearTransformTreeRequest)
+  return target;
+}
+
+size_t ClearTransformTreeRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:v1.agent.ClearTransformTreeRequest)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ClearTransformTreeRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:v1.agent.ClearTransformTreeRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ClearTransformTreeRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ClearTransformTreeRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.agent.ClearTransformTreeRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.agent.ClearTransformTreeRequest)
+    MergeFrom(*source);
+  }
+}
+
+void ClearTransformTreeRequest::MergeFrom(const ClearTransformTreeRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:v1.agent.ClearTransformTreeRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void ClearTransformTreeRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:v1.agent.ClearTransformTreeRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ClearTransformTreeRequest::CopyFrom(const ClearTransformTreeRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:v1.agent.ClearTransformTreeRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ClearTransformTreeRequest::IsInitialized() const {
+  return true;
+}
+
+void ClearTransformTreeRequest::InternalSwap(ClearTransformTreeRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ClearTransformTreeRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void ClearTransformTreeResponse::InitAsDefaultInstance() {
+}
+class ClearTransformTreeResponse::_Internal {
+ public:
+};
+
+ClearTransformTreeResponse::ClearTransformTreeResponse()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:v1.agent.ClearTransformTreeResponse)
+}
+ClearTransformTreeResponse::ClearTransformTreeResponse(const ClearTransformTreeResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:v1.agent.ClearTransformTreeResponse)
+}
+
+void ClearTransformTreeResponse::SharedCtor() {
+}
+
+ClearTransformTreeResponse::~ClearTransformTreeResponse() {
+  // @@protoc_insertion_point(destructor:v1.agent.ClearTransformTreeResponse)
+  SharedDtor();
+}
+
+void ClearTransformTreeResponse::SharedDtor() {
+}
+
+void ClearTransformTreeResponse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ClearTransformTreeResponse& ClearTransformTreeResponse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ClearTransformTreeResponse_protos_2fagent_2fv1_2fagent_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ClearTransformTreeResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:v1.agent.ClearTransformTreeResponse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear();
+}
+
+const char* ClearTransformTreeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ClearTransformTreeResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:v1.agent.ClearTransformTreeResponse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:v1.agent.ClearTransformTreeResponse)
+  return target;
+}
+
+size_t ClearTransformTreeResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:v1.agent.ClearTransformTreeResponse)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ClearTransformTreeResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:v1.agent.ClearTransformTreeResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ClearTransformTreeResponse* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ClearTransformTreeResponse>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.agent.ClearTransformTreeResponse)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.agent.ClearTransformTreeResponse)
+    MergeFrom(*source);
+  }
+}
+
+void ClearTransformTreeResponse::MergeFrom(const ClearTransformTreeResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:v1.agent.ClearTransformTreeResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void ClearTransformTreeResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:v1.agent.ClearTransformTreeResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ClearTransformTreeResponse::CopyFrom(const ClearTransformTreeResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:v1.agent.ClearTransformTreeResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ClearTransformTreeResponse::IsInitialized() const {
+  return true;
+}
+
+void ClearTransformTreeResponse::InternalSwap(ClearTransformTreeResponse* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ClearTransformTreeResponse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void CreateEventRequest::InitAsDefaultInstance() {
   ::v1::agent::_CreateEventRequest_default_instance_._instance.get_mutable()->event_ = const_cast< ::v1::model::Event*>(
       ::v1::model::Event::internal_default_instance());
@@ -6120,6 +6484,12 @@ template<> PROTOBUF_NOINLINE ::v1::agent::SetBaseFrameIDRequest* Arena::CreateMa
 }
 template<> PROTOBUF_NOINLINE ::v1::agent::SetBaseFrameIDResponse* Arena::CreateMaybeMessage< ::v1::agent::SetBaseFrameIDResponse >(Arena* arena) {
   return Arena::CreateInternal< ::v1::agent::SetBaseFrameIDResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::v1::agent::ClearTransformTreeRequest* Arena::CreateMaybeMessage< ::v1::agent::ClearTransformTreeRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::v1::agent::ClearTransformTreeRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::v1::agent::ClearTransformTreeResponse* Arena::CreateMaybeMessage< ::v1::agent::ClearTransformTreeResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::v1::agent::ClearTransformTreeResponse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::agent::CreateEventRequest* Arena::CreateMaybeMessage< ::v1::agent::CreateEventRequest >(Arena* arena) {
   return Arena::CreateInternal< ::v1::agent::CreateEventRequest >(arena);

@@ -12,17 +12,17 @@ jsonData = json.dumps({
     "items": [
         {
             "name": "Veggie Burrito",
-            "unit_price": 7.55,
+            "unitPrice": 7.55,
             "quantity": 2
         },
         {
             "name": "+Chicken (Burrito)",
-            "unit_price": 1.99,
+            "unitPrice": 1.99,
             "quantity": 4
         },
         {
             "name": "Guacamole (Side)",
-            "unit_price": 5.99,
+            "unitPrice": 5.99,
             "quantity": 1
         }
     ]

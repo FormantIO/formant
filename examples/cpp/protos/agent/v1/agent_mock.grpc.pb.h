@@ -61,6 +61,9 @@ class MockAgentStub : public Agent::StubInterface {
   MOCK_METHOD3(SetBaseFrameID, ::grpc::Status(::grpc::ClientContext* context, const ::v1::agent::SetBaseFrameIDRequest& request, ::v1::agent::SetBaseFrameIDResponse* response));
   MOCK_METHOD3(AsyncSetBaseFrameIDRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::SetBaseFrameIDResponse>*(::grpc::ClientContext* context, const ::v1::agent::SetBaseFrameIDRequest& request, ::grpc::CompletionQueue* cq));
   MOCK_METHOD3(PrepareAsyncSetBaseFrameIDRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::SetBaseFrameIDResponse>*(::grpc::ClientContext* context, const ::v1::agent::SetBaseFrameIDRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(ClearTransformTree, ::grpc::Status(::grpc::ClientContext* context, const ::v1::agent::ClearTransformTreeRequest& request, ::v1::agent::ClearTransformTreeResponse* response));
+  MOCK_METHOD3(AsyncClearTransformTreeRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::ClearTransformTreeResponse>*(::grpc::ClientContext* context, const ::v1::agent::ClearTransformTreeRequest& request, ::grpc::CompletionQueue* cq));
+  MOCK_METHOD3(PrepareAsyncClearTransformTreeRaw, ::grpc::ClientAsyncResponseReaderInterface< ::v1::agent::ClearTransformTreeResponse>*(::grpc::ClientContext* context, const ::v1::agent::ClearTransformTreeRequest& request, ::grpc::CompletionQueue* cq));
 };
 
 } // namespace v1

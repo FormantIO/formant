@@ -151,3 +151,7 @@ The restricted permissions are:
 ```
 formant ALL=(ALL) NOPASSWD:/usr/bin/apt update, /usr/bin/apt install --upgrade-only -y formant-agent, /usr/bin/apt install --upgrade-only -y formant-agent=[0-9]*.[0-9]*.[0-9]*, /usr/bin/apt remove formant-agent, /usr/bin/apt remove --purge formant-agent
 ```
+
+## Running into trouble?
+
+[See the agent installation FAQ and troubleshooting guide.](./agent-faq-and-troubleshooting.md).

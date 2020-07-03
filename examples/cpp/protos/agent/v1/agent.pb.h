@@ -53,7 +53,7 @@ struct TableStruct_protos_2fagent_2fv1_2fagent_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[28]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[30]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -62,6 +62,12 @@ struct TableStruct_protos_2fagent_2fv1_2fagent_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fagent_2fv1_2fagent_2eproto;
 namespace v1 {
 namespace agent {
+class ClearTransformTreeRequest;
+class ClearTransformTreeRequestDefaultTypeInternal;
+extern ClearTransformTreeRequestDefaultTypeInternal _ClearTransformTreeRequest_default_instance_;
+class ClearTransformTreeResponse;
+class ClearTransformTreeResponseDefaultTypeInternal;
+extern ClearTransformTreeResponseDefaultTypeInternal _ClearTransformTreeResponse_default_instance_;
 class CreateEventError;
 class CreateEventErrorDefaultTypeInternal;
 extern CreateEventErrorDefaultTypeInternal _CreateEventError_default_instance_;
@@ -149,6 +155,8 @@ extern StreamDataResponseDefaultTypeInternal _StreamDataResponse_default_instanc
 }  // namespace agent
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
+template<> ::v1::agent::ClearTransformTreeRequest* Arena::CreateMaybeMessage<::v1::agent::ClearTransformTreeRequest>(Arena*);
+template<> ::v1::agent::ClearTransformTreeResponse* Arena::CreateMaybeMessage<::v1::agent::ClearTransformTreeResponse>(Arena*);
 template<> ::v1::agent::CreateEventError* Arena::CreateMaybeMessage<::v1::agent::CreateEventError>(Arena*);
 template<> ::v1::agent::CreateEventRequest* Arena::CreateMaybeMessage<::v1::agent::CreateEventRequest>(Arena*);
 template<> ::v1::agent::CreateEventResponse* Arena::CreateMaybeMessage<::v1::agent::CreateEventResponse>(Arena*);
@@ -3388,6 +3396,236 @@ class SetBaseFrameIDResponse :
 };
 // -------------------------------------------------------------------
 
+class ClearTransformTreeRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.ClearTransformTreeRequest) */ {
+ public:
+  ClearTransformTreeRequest();
+  virtual ~ClearTransformTreeRequest();
+
+  ClearTransformTreeRequest(const ClearTransformTreeRequest& from);
+  ClearTransformTreeRequest(ClearTransformTreeRequest&& from) noexcept
+    : ClearTransformTreeRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline ClearTransformTreeRequest& operator=(const ClearTransformTreeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClearTransformTreeRequest& operator=(ClearTransformTreeRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ClearTransformTreeRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ClearTransformTreeRequest* internal_default_instance() {
+    return reinterpret_cast<const ClearTransformTreeRequest*>(
+               &_ClearTransformTreeRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    25;
+
+  friend void swap(ClearTransformTreeRequest& a, ClearTransformTreeRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClearTransformTreeRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClearTransformTreeRequest* New() const final {
+    return CreateMaybeMessage<ClearTransformTreeRequest>(nullptr);
+  }
+
+  ClearTransformTreeRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClearTransformTreeRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ClearTransformTreeRequest& from);
+  void MergeFrom(const ClearTransformTreeRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClearTransformTreeRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.ClearTransformTreeRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:v1.agent.ClearTransformTreeRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClearTransformTreeResponse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.ClearTransformTreeResponse) */ {
+ public:
+  ClearTransformTreeResponse();
+  virtual ~ClearTransformTreeResponse();
+
+  ClearTransformTreeResponse(const ClearTransformTreeResponse& from);
+  ClearTransformTreeResponse(ClearTransformTreeResponse&& from) noexcept
+    : ClearTransformTreeResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline ClearTransformTreeResponse& operator=(const ClearTransformTreeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClearTransformTreeResponse& operator=(ClearTransformTreeResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ClearTransformTreeResponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ClearTransformTreeResponse* internal_default_instance() {
+    return reinterpret_cast<const ClearTransformTreeResponse*>(
+               &_ClearTransformTreeResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    26;
+
+  friend void swap(ClearTransformTreeResponse& a, ClearTransformTreeResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClearTransformTreeResponse* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClearTransformTreeResponse* New() const final {
+    return CreateMaybeMessage<ClearTransformTreeResponse>(nullptr);
+  }
+
+  ClearTransformTreeResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClearTransformTreeResponse>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ClearTransformTreeResponse& from);
+  void MergeFrom(const ClearTransformTreeResponse& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClearTransformTreeResponse* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.agent.ClearTransformTreeResponse";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto);
+    return ::descriptor_table_protos_2fagent_2fv1_2fagent_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:v1.agent.ClearTransformTreeResponse)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fagent_2fv1_2fagent_2eproto;
+};
+// -------------------------------------------------------------------
+
 class CreateEventRequest :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.agent.CreateEventRequest) */ {
  public:
@@ -3430,7 +3668,7 @@ class CreateEventRequest :
                &_CreateEventRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    27;
 
   friend void swap(CreateEventRequest& a, CreateEventRequest& b) {
     a.Swap(&b);
@@ -3564,7 +3802,7 @@ class CreateEventResponse :
                &_CreateEventResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    28;
 
   friend void swap(CreateEventResponse& a, CreateEventResponse& b) {
     a.Swap(&b);
@@ -3679,7 +3917,7 @@ class CreateEventError :
                &_CreateEventError_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    29;
 
   friend void swap(CreateEventError& a, CreateEventError& b) {
     a.Swap(&b);
@@ -4701,6 +4939,14 @@ inline void SetBaseFrameIDRequest::set_allocated_id(std::string* id) {
 
 // -------------------------------------------------------------------
 
+// ClearTransformTreeRequest
+
+// -------------------------------------------------------------------
+
+// ClearTransformTreeResponse
+
+// -------------------------------------------------------------------
+
 // CreateEventRequest
 
 // .v1.model.Event event = 1[json_name = "event"];
@@ -4788,6 +5034,10 @@ inline void CreateEventError::set_retryable(bool value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

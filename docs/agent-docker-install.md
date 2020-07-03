@@ -50,3 +50,7 @@ To provision the agent, make sure that you set the `FORMANT_PROVISIONING_TOKEN` 
 The Agent is available as a standalone container on [dockerhub](https://hub.docker.com/r/formant/agent)
 
 There are a variety of tags that are avialble. Versions without a customizer are a standalone agent with no dependencies. Versions with `melodic` are based on the `ros:melodic-robot` container image. We also have `arm` and `arm64` variants of all of these.
+
+## Running into trouble?
+
+[See the agent installation FAQ and troubleshooting guide.](./agent-faq-and-troubleshooting.md).

@@ -36,6 +36,7 @@ static const char* Agent_method_names[] = {
   "/v1.agent.Agent/SendCommandResponse",
   "/v1.agent.Agent/PostTransformFrame",
   "/v1.agent.Agent/SetBaseFrameID",
+  "/v1.agent.Agent/ClearTransformTree",
 };
 
 std::unique_ptr< Agent::Stub> Agent::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -61,6 +62,7 @@ Agent::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   , rpcmethod_SendCommandResponse_(Agent_method_names[13], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_PostTransformFrame_(Agent_method_names[14], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_SetBaseFrameID_(Agent_method_names[15], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ClearTransformTree_(Agent_method_names[16], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::ClientWriter< ::v1::model::Datapoint>* Agent::Stub::StreamDataRaw(::grpc::ClientContext* context, ::v1::agent::StreamDataResponse* response) {
@@ -487,6 +489,34 @@ void Agent::Stub::experimental_async::SetBaseFrameID(::grpc::ClientContext* cont
   return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::v1::agent::SetBaseFrameIDResponse>::Create(channel_.get(), cq, rpcmethod_SetBaseFrameID_, context, request, false);
 }
 
+::grpc::Status Agent::Stub::ClearTransformTree(::grpc::ClientContext* context, const ::v1::agent::ClearTransformTreeRequest& request, ::v1::agent::ClearTransformTreeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ClearTransformTree_, context, request, response);
+}
+
+void Agent::Stub::experimental_async::ClearTransformTree(::grpc::ClientContext* context, const ::v1::agent::ClearTransformTreeRequest* request, ::v1::agent::ClearTransformTreeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ClearTransformTree_, context, request, response, std::move(f));
+}
+
+void Agent::Stub::experimental_async::ClearTransformTree(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::v1::agent::ClearTransformTreeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ClearTransformTree_, context, request, response, std::move(f));
+}
+
+void Agent::Stub::experimental_async::ClearTransformTree(::grpc::ClientContext* context, const ::v1::agent::ClearTransformTreeRequest* request, ::v1::agent::ClearTransformTreeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ClearTransformTree_, context, request, response, reactor);
+}
+
+void Agent::Stub::experimental_async::ClearTransformTree(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::v1::agent::ClearTransformTreeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ClearTransformTree_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::v1::agent::ClearTransformTreeResponse>* Agent::Stub::AsyncClearTransformTreeRaw(::grpc::ClientContext* context, const ::v1::agent::ClearTransformTreeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::v1::agent::ClearTransformTreeResponse>::Create(channel_.get(), cq, rpcmethod_ClearTransformTree_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::v1::agent::ClearTransformTreeResponse>* Agent::Stub::PrepareAsyncClearTransformTreeRaw(::grpc::ClientContext* context, const ::v1::agent::ClearTransformTreeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::v1::agent::ClearTransformTreeResponse>::Create(channel_.get(), cq, rpcmethod_ClearTransformTree_, context, request, false);
+}
+
 Agent::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[0],
@@ -568,6 +598,11 @@ Agent::Service::Service() {
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::SetBaseFrameIDRequest, ::v1::agent::SetBaseFrameIDResponse>(
           std::mem_fn(&Agent::Service::SetBaseFrameID), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      Agent_method_names[16],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::ClearTransformTreeRequest, ::v1::agent::ClearTransformTreeResponse>(
+          std::mem_fn(&Agent::Service::ClearTransformTree), this)));
 }
 
 Agent::Service::~Service() {
@@ -679,6 +714,13 @@ Agent::Service::~Service() {
 }
 
 ::grpc::Status Agent::Service::SetBaseFrameID(::grpc::ServerContext* context, const ::v1::agent::SetBaseFrameIDRequest* request, ::v1::agent::SetBaseFrameIDResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status Agent::Service::ClearTransformTree(::grpc::ServerContext* context, const ::v1::agent::ClearTransformTreeRequest* request, ::v1::agent::ClearTransformTreeResponse* response) {
   (void) context;
   (void) request;
   (void) response;

@@ -93,6 +93,11 @@ service Agent {
    * visualizations. */
   rpc SetBaseFrameID(SetBaseFrameIDRequest) returns (SetBaseFrameIDResponse) {
   }
+  /* ClearTransformTree clears the entire TransformTree graph stored in the
+   * agent. This maintains the base frame id as the root of the graph. */
+  rpc ClearTransformTree(ClearTransformTreeRequest)
+      returns (ClearTransformTreeResponse) {
+  }
 }
 
 message StreamDataResponse {
@@ -184,6 +189,12 @@ message SetBaseFrameIDRequest {
 }
 
 message SetBaseFrameIDResponse {
+}
+
+message ClearTransformTreeRequest {
+}
+
+message ClearTransformTreeResponse {
 }
 
 message CreateEventRequest {
