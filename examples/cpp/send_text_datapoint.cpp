@@ -16,7 +16,6 @@ using grpc::Status;
 using v1::agent::Agent;
 using v1::agent::PostDataResponse;
 using v1::model::Datapoint;
-using v1::model::File;
 using v1::model::Text;
 
 
@@ -51,6 +50,8 @@ public:
     
       if (!status.ok()) {
          std::cout << "gRPC error: " << status.error_code() << ": " << status.error_message() << std::endl;
+      } else {
+         std::cout << "complete" << std::endl;
       }
    }
 

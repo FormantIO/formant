@@ -38,3 +38,14 @@ target_link_libraries(
   gRPC::grpc++
   protobuf::libprotobuf
 )
+
+add_executable(
+  send_file_datapoint 
+  send_file_datapoint.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  send_file_datapoint 
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
