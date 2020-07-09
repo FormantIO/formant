@@ -27,7 +27,7 @@ public:
       const std::string &stream,
       const std::string &filePath
    ) {
-      std::cout << "posting file datapoint on " << stream << std::endl;
+      std::cout << "posting file datapoint on stream '" << stream << "'" << std::endl;
 
       Datapoint datapoint;
       
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
   
    // Send a file datapoint based on user input
    std::string filePath;
-   std::cout << "enter full file path: ";
+   std::cout << "enter the full file path: ";
    std::cin >> filePath;
    client.PostFileDatapoint("example.file", filePath);
    

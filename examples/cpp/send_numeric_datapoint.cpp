@@ -27,7 +27,7 @@ public:
       const std::string &stream,
       const float &payload
    ) {
-      std::cout << "posting numeric datapoint on " << stream << std::endl;
+      std::cout << "posting numeric datapoint on stream '" << stream << "'" << std::endl;
 
       Datapoint datapoint;
       

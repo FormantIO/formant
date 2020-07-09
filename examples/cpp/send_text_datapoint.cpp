@@ -27,7 +27,7 @@ public:
       const std::string &stream,
       const std::string &payload
    ) {
-      std::cout << "posting text datapoint on " << stream << std::endl;
+      std::cout << "posting text datapoint on stream '" << stream << "'" << std::endl;
 
       Datapoint datapoint;
 
