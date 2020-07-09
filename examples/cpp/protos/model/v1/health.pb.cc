@@ -58,12 +58,12 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2fhealth_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\034protos/model/v1/health.proto\022\010v1.model"
-  "\"8\n\006Health\022.\n\006status\030\001 \001(\0162\026.v1.model.He"
-  "althStatusR\006status*`\n\014HealthStatus\022\022\n\016HE"
-  "ALTH_UNKNOWN\020\000\022\026\n\022HEALTH_OPERATIONAL\020\001\022\022"
-  "\n\016HEALTH_OFFLINE\020\002\022\020\n\014HEALTH_ERROR\020\003B+Z)"
-  "github.com/FormantIO/genproto/go/v1/mode"
-  "lb\006proto3"
+  "\"0\n\006Health\022&\n\006status\030\001 \001(\0162\026.v1.model.He"
+  "althStatus*`\n\014HealthStatus\022\022\n\016HEALTH_UNK"
+  "NOWN\020\000\022\026\n\022HEALTH_OPERATIONAL\020\001\022\022\n\016HEALTH"
+  "_OFFLINE\020\002\022\020\n\014HEALTH_ERROR\020\003B+Z)github.c"
+  "om/FormantIO/genproto/go/v1/modelb\006proto"
+  "3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_deps[1] = {
 };
@@ -71,16 +71,15 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
   &scc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_once;
-static bool descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fhealth_2eproto, "protos/model/v1/health.proto", 249,
+  false, false, descriptor_table_protodef_protos_2fmodel_2fv1_2fhealth_2eproto, "protos/model/v1/health.proto", 241,
   &descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fhealth_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fhealth_2eproto, 1, file_level_enum_descriptors_protos_2fmodel_2fv1_2fhealth_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fhealth_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fhealth_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto), true);
+static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fhealth_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto)), true);
 namespace v1 {
 namespace model {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* HealthStatus_descriptor() {
@@ -108,15 +107,15 @@ class Health::_Internal {
  public:
 };
 
-Health::Health()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+Health::Health(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.Health)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.Health)
 }
 Health::Health(const Health& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   status_ = from.status_;
   // @@protoc_insertion_point(copy_constructor:v1.model.Health)
 }
@@ -128,11 +127,19 @@ void Health::SharedCtor() {
 Health::~Health() {
   // @@protoc_insertion_point(destructor:v1.model.Health)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Health::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void Health::ArenaDtor(void* object) {
+  Health* _this = reinterpret_cast< Health* >(object);
+  (void)_this;
+}
+void Health::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Health::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -149,20 +156,21 @@ void Health::Clear() {
   (void) cached_has_bits;
 
   status_ = 0;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Health::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .v1.model.HealthStatus status = 1[json_name = "status"];
+      // .v1.model.HealthStatus status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_status(static_cast<::v1::model::HealthStatus>(val));
         } else goto handle_unusual;
@@ -173,7 +181,9 @@ const char* Health::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -193,7 +203,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .v1.model.HealthStatus status = 1[json_name = "status"];
+  // .v1.model.HealthStatus status = 1;
   if (this->status() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -202,7 +212,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.Health)
   return target;
@@ -216,7 +226,7 @@ size_t Health::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .v1.model.HealthStatus status = 1[json_name = "status"];
+  // .v1.model.HealthStatus status = 1;
   if (this->status() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_status());
@@ -249,7 +259,7 @@ void Health::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void Health::MergeFrom(const Health& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Health)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -278,7 +288,7 @@ bool Health::IsInitialized() const {
 
 void Health::InternalSwap(Health* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(status_, other->status_);
 }
 
@@ -292,7 +302,7 @@ void Health::InternalSwap(Health* other) {
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::v1::model::Health* Arena::CreateMaybeMessage< ::v1::model::Health >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::Health >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::Health >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

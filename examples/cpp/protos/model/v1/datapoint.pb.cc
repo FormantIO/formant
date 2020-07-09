@@ -139,26 +139,22 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto[] P
   "model/v1/health.proto\032\032protos/model/v1/m"
   "ath.proto\032 protos/model/v1/navigation.pr"
   "oto\032\032protos/model/v1/text.proto\032\033protos/"
-  "model/v1/media.proto\"\266\005\n\tDatapoint\022\026\n\006st"
-  "ream\030\001 \001(\tR\006stream\022\034\n\ttimestamp\030\002 \001(\003R\tt"
-  "imestamp\0221\n\004tags\030\003 \003(\0132\035.v1.model.Datapo"
-  "int.TagsEntryR\004tags\022$\n\004text\030\004 \001(\0132\016.v1.m"
-  "odel.TextH\000R\004text\022-\n\007numeric\030\005 \001(\0132\021.v1."
-  "model.NumericH\000R\007numeric\0224\n\nmetric_set\030\006"
-  " \001(\0132\023.v1.model.MetricSetH\000R\tmetricSet\022*"
-  "\n\006bitset\030\007 \001(\0132\020.v1.model.BitsetH\000R\006bits"
-  "et\022$\n\004file\030\010 \001(\0132\016.v1.model.FileH\000R\004file"
-  "\022\'\n\005image\030\t \001(\0132\017.v1.model.ImageH\000R\005imag"
-  "e\0227\n\013point_cloud\030\n \001(\0132\024.v1.model.PointC"
-  "loudH\000R\npointCloud\0220\n\010location\030\013 \001(\0132\022.v"
-  "1.model.LocationH\000R\010location\022<\n\014localiza"
-  "tion\030\014 \001(\0132\026.v1.model.LocalizationH\000R\014lo"
-  "calization\022*\n\006health\030\r \001(\0132\020.v1.model.He"
-  "althH\000R\006health\022$\n\004json\030\016 \001(\0132\016.v1.model."
-  "JsonH\000R\004json\0327\n\tTagsEntry\022\020\n\003key\030\001 \001(\tR\003"
-  "key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001B\006\n\004dataB+Z"
-  ")github.com/FormantIO/genproto/go/v1/mod"
-  "elb\006proto3"
+  "model/v1/media.proto\"\260\004\n\tDatapoint\022\016\n\006st"
+  "ream\030\001 \001(\t\022\021\n\ttimestamp\030\002 \001(\003\022+\n\004tags\030\003 "
+  "\003(\0132\035.v1.model.Datapoint.TagsEntry\022\036\n\004te"
+  "xt\030\004 \001(\0132\016.v1.model.TextH\000\022$\n\007numeric\030\005 "
+  "\001(\0132\021.v1.model.NumericH\000\022)\n\nmetric_set\030\006"
+  " \001(\0132\023.v1.model.MetricSetH\000\022\"\n\006bitset\030\007 "
+  "\001(\0132\020.v1.model.BitsetH\000\022\036\n\004file\030\010 \001(\0132\016."
+  "v1.model.FileH\000\022 \n\005image\030\t \001(\0132\017.v1.mode"
+  "l.ImageH\000\022+\n\013point_cloud\030\n \001(\0132\024.v1.mode"
+  "l.PointCloudH\000\022&\n\010location\030\013 \001(\0132\022.v1.mo"
+  "del.LocationH\000\022.\n\014localization\030\014 \001(\0132\026.v"
+  "1.model.LocalizationH\000\022\"\n\006health\030\r \001(\0132\020"
+  ".v1.model.HealthH\000\022\036\n\004json\030\016 \001(\0132\016.v1.mo"
+  "del.JsonH\000\032+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005"
+  "value\030\002 \001(\t:\0028\001B\006\n\004dataB+Z)github.com/Fo"
+  "rmantIO/genproto/go/v1/modelb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_deps[6] = {
   &::descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto,
@@ -173,16 +169,15 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
   &scc_info_Datapoint_TagsEntry_DoNotUse_protos_2fmodel_2fv1_2fdatapoint_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_once;
-static bool descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto, "protos/model/v1/datapoint.proto", 970,
+  false, false, descriptor_table_protodef_protos_2fmodel_2fv1_2fdatapoint_2eproto, "protos/model/v1/datapoint.proto", 836,
   &descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto_deps, 2, 6,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fdatapoint_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fdatapoint_2eproto, 2, file_level_enum_descriptors_protos_2fmodel_2fv1_2fdatapoint_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fdatapoint_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fdatapoint_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto), true);
+static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fdatapoint_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fdatapoint_2eproto)), true);
 namespace v1 {
 namespace model {
 
@@ -289,10 +284,11 @@ Datapoint::_Internal::json(const Datapoint* msg) {
   return *msg->data_.json_;
 }
 void Datapoint::set_allocated_text(::v1::model::Text* text) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (text) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(text)->GetArena();
     if (message_arena != submessage_arena) {
       text = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, text, submessage_arena);
@@ -304,15 +300,18 @@ void Datapoint::set_allocated_text(::v1::model::Text* text) {
 }
 void Datapoint::clear_text() {
   if (_internal_has_text()) {
-    delete data_.text_;
+    if (GetArena() == nullptr) {
+      delete data_.text_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_numeric(::v1::model::Numeric* numeric) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (numeric) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(numeric)->GetArena();
     if (message_arena != submessage_arena) {
       numeric = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, numeric, submessage_arena);
@@ -324,15 +323,18 @@ void Datapoint::set_allocated_numeric(::v1::model::Numeric* numeric) {
 }
 void Datapoint::clear_numeric() {
   if (_internal_has_numeric()) {
-    delete data_.numeric_;
+    if (GetArena() == nullptr) {
+      delete data_.numeric_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_metric_set(::v1::model::MetricSet* metric_set) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (metric_set) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metric_set)->GetArena();
     if (message_arena != submessage_arena) {
       metric_set = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, metric_set, submessage_arena);
@@ -344,15 +346,18 @@ void Datapoint::set_allocated_metric_set(::v1::model::MetricSet* metric_set) {
 }
 void Datapoint::clear_metric_set() {
   if (_internal_has_metric_set()) {
-    delete data_.metric_set_;
+    if (GetArena() == nullptr) {
+      delete data_.metric_set_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_bitset(::v1::model::Bitset* bitset) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (bitset) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(bitset)->GetArena();
     if (message_arena != submessage_arena) {
       bitset = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, bitset, submessage_arena);
@@ -364,15 +369,18 @@ void Datapoint::set_allocated_bitset(::v1::model::Bitset* bitset) {
 }
 void Datapoint::clear_bitset() {
   if (_internal_has_bitset()) {
-    delete data_.bitset_;
+    if (GetArena() == nullptr) {
+      delete data_.bitset_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_file(::v1::model::File* file) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (file) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(file)->GetArena();
     if (message_arena != submessage_arena) {
       file = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, file, submessage_arena);
@@ -384,15 +392,18 @@ void Datapoint::set_allocated_file(::v1::model::File* file) {
 }
 void Datapoint::clear_file() {
   if (_internal_has_file()) {
-    delete data_.file_;
+    if (GetArena() == nullptr) {
+      delete data_.file_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_image(::v1::model::Image* image) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (image) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(image)->GetArena();
     if (message_arena != submessage_arena) {
       image = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, image, submessage_arena);
@@ -404,15 +415,18 @@ void Datapoint::set_allocated_image(::v1::model::Image* image) {
 }
 void Datapoint::clear_image() {
   if (_internal_has_image()) {
-    delete data_.image_;
+    if (GetArena() == nullptr) {
+      delete data_.image_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_point_cloud(::v1::model::PointCloud* point_cloud) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (point_cloud) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(point_cloud)->GetArena();
     if (message_arena != submessage_arena) {
       point_cloud = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, point_cloud, submessage_arena);
@@ -424,15 +438,18 @@ void Datapoint::set_allocated_point_cloud(::v1::model::PointCloud* point_cloud) 
 }
 void Datapoint::clear_point_cloud() {
   if (_internal_has_point_cloud()) {
-    delete data_.point_cloud_;
+    if (GetArena() == nullptr) {
+      delete data_.point_cloud_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_location(::v1::model::Location* location) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (location) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(location)->GetArena();
     if (message_arena != submessage_arena) {
       location = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, location, submessage_arena);
@@ -444,15 +461,18 @@ void Datapoint::set_allocated_location(::v1::model::Location* location) {
 }
 void Datapoint::clear_location() {
   if (_internal_has_location()) {
-    delete data_.location_;
+    if (GetArena() == nullptr) {
+      delete data_.location_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_localization(::v1::model::Localization* localization) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (localization) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(localization)->GetArena();
     if (message_arena != submessage_arena) {
       localization = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, localization, submessage_arena);
@@ -464,15 +484,18 @@ void Datapoint::set_allocated_localization(::v1::model::Localization* localizati
 }
 void Datapoint::clear_localization() {
   if (_internal_has_localization()) {
-    delete data_.localization_;
+    if (GetArena() == nullptr) {
+      delete data_.localization_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_health(::v1::model::Health* health) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (health) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(health)->GetArena();
     if (message_arena != submessage_arena) {
       health = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, health, submessage_arena);
@@ -484,15 +507,18 @@ void Datapoint::set_allocated_health(::v1::model::Health* health) {
 }
 void Datapoint::clear_health() {
   if (_internal_has_health()) {
-    delete data_.health_;
+    if (GetArena() == nullptr) {
+      delete data_.health_;
+    }
     clear_has_data();
   }
 }
 void Datapoint::set_allocated_json(::v1::model::Json* json) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (json) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(json)->GetArena();
     if (message_arena != submessage_arena) {
       json = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, json, submessage_arena);
@@ -504,23 +530,27 @@ void Datapoint::set_allocated_json(::v1::model::Json* json) {
 }
 void Datapoint::clear_json() {
   if (_internal_has_json()) {
-    delete data_.json_;
+    if (GetArena() == nullptr) {
+      delete data_.json_;
+    }
     clear_has_data();
   }
 }
-Datapoint::Datapoint()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+Datapoint::Datapoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  tags_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.Datapoint)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.Datapoint)
 }
 Datapoint::Datapoint(const Datapoint& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   tags_.MergeFrom(from.tags_);
   stream_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_stream().empty()) {
-    stream_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.stream_);
+    stream_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_stream(),
+      GetArena());
   }
   timestamp_ = from.timestamp_;
   clear_has_data();
@@ -586,15 +616,23 @@ void Datapoint::SharedCtor() {
 Datapoint::~Datapoint() {
   // @@protoc_insertion_point(destructor:v1.model.Datapoint)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Datapoint::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   stream_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (has_data()) {
     clear_data();
   }
 }
 
+void Datapoint::ArenaDtor(void* object) {
+  Datapoint* _this = reinterpret_cast< Datapoint* >(object);
+  (void)_this;
+}
+void Datapoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Datapoint::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -608,47 +646,69 @@ void Datapoint::clear_data() {
 // @@protoc_insertion_point(one_of_clear_start:v1.model.Datapoint)
   switch (data_case()) {
     case kText: {
-      delete data_.text_;
+      if (GetArena() == nullptr) {
+        delete data_.text_;
+      }
       break;
     }
     case kNumeric: {
-      delete data_.numeric_;
+      if (GetArena() == nullptr) {
+        delete data_.numeric_;
+      }
       break;
     }
     case kMetricSet: {
-      delete data_.metric_set_;
+      if (GetArena() == nullptr) {
+        delete data_.metric_set_;
+      }
       break;
     }
     case kBitset: {
-      delete data_.bitset_;
+      if (GetArena() == nullptr) {
+        delete data_.bitset_;
+      }
       break;
     }
     case kFile: {
-      delete data_.file_;
+      if (GetArena() == nullptr) {
+        delete data_.file_;
+      }
       break;
     }
     case kImage: {
-      delete data_.image_;
+      if (GetArena() == nullptr) {
+        delete data_.image_;
+      }
       break;
     }
     case kPointCloud: {
-      delete data_.point_cloud_;
+      if (GetArena() == nullptr) {
+        delete data_.point_cloud_;
+      }
       break;
     }
     case kLocation: {
-      delete data_.location_;
+      if (GetArena() == nullptr) {
+        delete data_.location_;
+      }
       break;
     }
     case kLocalization: {
-      delete data_.localization_;
+      if (GetArena() == nullptr) {
+        delete data_.localization_;
+      }
       break;
     }
     case kHealth: {
-      delete data_.health_;
+      if (GetArena() == nullptr) {
+        delete data_.health_;
+      }
       break;
     }
     case kJson: {
-      delete data_.json_;
+      if (GetArena() == nullptr) {
+        delete data_.json_;
+      }
       break;
     }
     case DATA_NOT_SET: {
@@ -666,20 +726,21 @@ void Datapoint::Clear() {
   (void) cached_has_bits;
 
   tags_.Clear();
-  stream_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stream_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   timestamp_ = PROTOBUF_LONGLONG(0);
   clear_data();
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Datapoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string stream = 1[json_name = "stream"];
+      // string stream = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_stream();
@@ -688,14 +749,14 @@ const char* Datapoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int64 timestamp = 2[json_name = "timestamp"];
+      // int64 timestamp = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // map<string, string> tags = 3[json_name = "tags"];
+      // map<string, string> tags = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr -= 1;
@@ -707,77 +768,77 @@ const char* Datapoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
-      // .v1.model.Text text = 4[json_name = "text"];
+      // .v1.model.Text text = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_text(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Numeric numeric = 5[json_name = "numeric"];
+      // .v1.model.Numeric numeric = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_numeric(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.MetricSet metric_set = 6[json_name = "metricSet"];
+      // .v1.model.MetricSet metric_set = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_metric_set(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Bitset bitset = 7[json_name = "bitset"];
+      // .v1.model.Bitset bitset = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_bitset(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.File file = 8[json_name = "file"];
+      // .v1.model.File file = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_file(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Image image = 9[json_name = "image"];
+      // .v1.model.Image image = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_image(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.PointCloud point_cloud = 10[json_name = "pointCloud"];
+      // .v1.model.PointCloud point_cloud = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_point_cloud(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Location location = 11[json_name = "location"];
+      // .v1.model.Location location = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_location(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Localization localization = 12[json_name = "localization"];
+      // .v1.model.Localization localization = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_localization(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Health health = 13[json_name = "health"];
+      // .v1.model.Health health = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_health(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Json json = 14[json_name = "json"];
+      // .v1.model.Json json = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
           ptr = ctx->ParseMessage(_internal_mutable_json(), ptr);
@@ -790,7 +851,9 @@ const char* Datapoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -810,7 +873,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string stream = 1[json_name = "stream"];
+  // string stream = 1;
   if (this->stream().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_stream().data(), static_cast<int>(this->_internal_stream().length()),
@@ -820,13 +883,13 @@ failure:
         1, this->_internal_stream(), target);
   }
 
-  // int64 timestamp = 2[json_name = "timestamp"];
+  // int64 timestamp = 2;
   if (this->timestamp() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_timestamp(), target);
   }
 
-  // map<string, string> tags = 3[json_name = "tags"];
+  // map<string, string> tags = 3;
   if (!this->_internal_tags().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
@@ -871,7 +934,7 @@ failure:
     }
   }
 
-  // .v1.model.Text text = 4[json_name = "text"];
+  // .v1.model.Text text = 4;
   if (_internal_has_text()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -879,7 +942,7 @@ failure:
         4, _Internal::text(this), target, stream);
   }
 
-  // .v1.model.Numeric numeric = 5[json_name = "numeric"];
+  // .v1.model.Numeric numeric = 5;
   if (_internal_has_numeric()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -887,7 +950,7 @@ failure:
         5, _Internal::numeric(this), target, stream);
   }
 
-  // .v1.model.MetricSet metric_set = 6[json_name = "metricSet"];
+  // .v1.model.MetricSet metric_set = 6;
   if (_internal_has_metric_set()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -895,7 +958,7 @@ failure:
         6, _Internal::metric_set(this), target, stream);
   }
 
-  // .v1.model.Bitset bitset = 7[json_name = "bitset"];
+  // .v1.model.Bitset bitset = 7;
   if (_internal_has_bitset()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -903,7 +966,7 @@ failure:
         7, _Internal::bitset(this), target, stream);
   }
 
-  // .v1.model.File file = 8[json_name = "file"];
+  // .v1.model.File file = 8;
   if (_internal_has_file()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -911,7 +974,7 @@ failure:
         8, _Internal::file(this), target, stream);
   }
 
-  // .v1.model.Image image = 9[json_name = "image"];
+  // .v1.model.Image image = 9;
   if (_internal_has_image()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -919,7 +982,7 @@ failure:
         9, _Internal::image(this), target, stream);
   }
 
-  // .v1.model.PointCloud point_cloud = 10[json_name = "pointCloud"];
+  // .v1.model.PointCloud point_cloud = 10;
   if (_internal_has_point_cloud()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -927,7 +990,7 @@ failure:
         10, _Internal::point_cloud(this), target, stream);
   }
 
-  // .v1.model.Location location = 11[json_name = "location"];
+  // .v1.model.Location location = 11;
   if (_internal_has_location()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -935,7 +998,7 @@ failure:
         11, _Internal::location(this), target, stream);
   }
 
-  // .v1.model.Localization localization = 12[json_name = "localization"];
+  // .v1.model.Localization localization = 12;
   if (_internal_has_localization()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -943,7 +1006,7 @@ failure:
         12, _Internal::localization(this), target, stream);
   }
 
-  // .v1.model.Health health = 13[json_name = "health"];
+  // .v1.model.Health health = 13;
   if (_internal_has_health()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -951,7 +1014,7 @@ failure:
         13, _Internal::health(this), target, stream);
   }
 
-  // .v1.model.Json json = 14[json_name = "json"];
+  // .v1.model.Json json = 14;
   if (_internal_has_json()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -961,7 +1024,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.Datapoint)
   return target;
@@ -975,7 +1038,7 @@ size_t Datapoint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // map<string, string> tags = 3[json_name = "tags"];
+  // map<string, string> tags = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_tags_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
@@ -984,14 +1047,14 @@ size_t Datapoint::ByteSizeLong() const {
     total_size += Datapoint_TagsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
-  // string stream = 1[json_name = "stream"];
+  // string stream = 1;
   if (this->stream().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_stream());
   }
 
-  // int64 timestamp = 2[json_name = "timestamp"];
+  // int64 timestamp = 2;
   if (this->timestamp() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
@@ -999,77 +1062,77 @@ size_t Datapoint::ByteSizeLong() const {
   }
 
   switch (data_case()) {
-    // .v1.model.Text text = 4[json_name = "text"];
+    // .v1.model.Text text = 4;
     case kText: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.text_);
       break;
     }
-    // .v1.model.Numeric numeric = 5[json_name = "numeric"];
+    // .v1.model.Numeric numeric = 5;
     case kNumeric: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.numeric_);
       break;
     }
-    // .v1.model.MetricSet metric_set = 6[json_name = "metricSet"];
+    // .v1.model.MetricSet metric_set = 6;
     case kMetricSet: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.metric_set_);
       break;
     }
-    // .v1.model.Bitset bitset = 7[json_name = "bitset"];
+    // .v1.model.Bitset bitset = 7;
     case kBitset: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.bitset_);
       break;
     }
-    // .v1.model.File file = 8[json_name = "file"];
+    // .v1.model.File file = 8;
     case kFile: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.file_);
       break;
     }
-    // .v1.model.Image image = 9[json_name = "image"];
+    // .v1.model.Image image = 9;
     case kImage: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.image_);
       break;
     }
-    // .v1.model.PointCloud point_cloud = 10[json_name = "pointCloud"];
+    // .v1.model.PointCloud point_cloud = 10;
     case kPointCloud: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.point_cloud_);
       break;
     }
-    // .v1.model.Location location = 11[json_name = "location"];
+    // .v1.model.Location location = 11;
     case kLocation: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.location_);
       break;
     }
-    // .v1.model.Localization localization = 12[json_name = "localization"];
+    // .v1.model.Localization localization = 12;
     case kLocalization: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.localization_);
       break;
     }
-    // .v1.model.Health health = 13[json_name = "health"];
+    // .v1.model.Health health = 13;
     case kHealth: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.health_);
       break;
     }
-    // .v1.model.Json json = 14[json_name = "json"];
+    // .v1.model.Json json = 14;
     case kJson: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1107,14 +1170,13 @@ void Datapoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void Datapoint::MergeFrom(const Datapoint& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Datapoint)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   tags_.MergeFrom(from.tags_);
   if (from.stream().size() > 0) {
-
-    stream_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.stream_);
+    _internal_set_stream(from._internal_stream());
   }
   if (from.timestamp() != 0) {
     _internal_set_timestamp(from._internal_timestamp());
@@ -1190,10 +1252,9 @@ bool Datapoint::IsInitialized() const {
 
 void Datapoint::InternalSwap(Datapoint* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   tags_.Swap(&other->tags_);
-  stream_.Swap(&other->stream_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  stream_.Swap(&other->stream_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(timestamp_, other->timestamp_);
   swap(data_, other->data_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
@@ -1209,10 +1270,10 @@ void Datapoint::InternalSwap(Datapoint* other) {
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::v1::model::Datapoint_TagsEntry_DoNotUse* Arena::CreateMaybeMessage< ::v1::model::Datapoint_TagsEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::Datapoint_TagsEntry_DoNotUse >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::Datapoint_TagsEntry_DoNotUse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::Datapoint* Arena::CreateMaybeMessage< ::v1::model::Datapoint >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::Datapoint >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::Datapoint >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

@@ -62,11 +62,11 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2ffile_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\032protos/model/v1/file.proto\022\010v1.model\"X"
-  "\n\004File\022\022\n\003url\030\001 \001(\tH\000R\003url\022\022\n\003raw\030\002 \001(\014H"
-  "\000R\003raw\022\032\n\010filename\030\003 \001(\tR\010filenameB\006\n\004da"
-  "taJ\004\010\004\020\005B+Z)github.com/FormantIO/genprot"
-  "o/go/v1/modelb\006proto3"
+  "\n\032protos/model/v1/file.proto\022\010v1.model\"D"
+  "\n\004File\022\r\n\003url\030\001 \001(\tH\000\022\r\n\003raw\030\002 \001(\014H\000\022\020\n\010"
+  "filename\030\003 \001(\tB\006\n\004dataJ\004\010\004\020\005B+Z)github.c"
+  "om/FormantIO/genproto/go/v1/modelb\006proto"
+  "3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto_deps[1] = {
 };
@@ -74,16 +74,15 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
   &scc_info_File_protos_2fmodel_2fv1_2ffile_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto_once;
-static bool descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2ffile_2eproto, "protos/model/v1/file.proto", 181,
+  false, false, descriptor_table_protodef_protos_2fmodel_2fv1_2ffile_2eproto, "protos/model/v1/file.proto", 161,
   &descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2ffile_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2ffile_2eproto, 1, file_level_enum_descriptors_protos_2fmodel_2fv1_2ffile_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2ffile_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_protos_2fmodel_2fv1_2ffile_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto), true);
+static bool dynamic_init_dummy_protos_2fmodel_2fv1_2ffile_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2ffile_2eproto)), true);
 namespace v1 {
 namespace model {
 
@@ -99,18 +98,19 @@ class File::_Internal {
  public:
 };
 
-File::File()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+File::File(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.File)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.File)
 }
 File::File(const File& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   filename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_filename().empty()) {
-    filename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.filename_);
+    filename_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_filename(),
+      GetArena());
   }
   clear_has_data();
   switch (from.data_case()) {
@@ -138,15 +138,23 @@ void File::SharedCtor() {
 File::~File() {
   // @@protoc_insertion_point(destructor:v1.model.File)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void File::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   filename_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (has_data()) {
     clear_data();
   }
 }
 
+void File::ArenaDtor(void* object) {
+  File* _this = reinterpret_cast< File* >(object);
+  (void)_this;
+}
+void File::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void File::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -160,11 +168,11 @@ void File::clear_data() {
 // @@protoc_insertion_point(one_of_clear_start:v1.model.File)
   switch (data_case()) {
     case kUrl: {
-      data_.url_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+      data_.url_.Destroy(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
       break;
     }
     case kRaw: {
-      data_.raw_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+      data_.raw_.Destroy(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
       break;
     }
     case DATA_NOT_SET: {
@@ -181,19 +189,20 @@ void File::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  filename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  filename_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   clear_data();
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* File::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string url = 1[json_name = "url"];
+      // string url = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_url();
@@ -202,7 +211,7 @@ const char* File::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bytes raw = 2[json_name = "raw"];
+      // bytes raw = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_raw();
@@ -210,7 +219,7 @@ const char* File::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string filename = 3[json_name = "filename"];
+      // string filename = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_filename();
@@ -225,7 +234,9 @@ const char* File::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -245,7 +256,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string url = 1[json_name = "url"];
+  // string url = 1;
   if (_internal_has_url()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_url().data(), static_cast<int>(this->_internal_url().length()),
@@ -255,13 +266,13 @@ failure:
         1, this->_internal_url(), target);
   }
 
-  // bytes raw = 2[json_name = "raw"];
+  // bytes raw = 2;
   if (_internal_has_raw()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_raw(), target);
   }
 
-  // string filename = 3[json_name = "filename"];
+  // string filename = 3;
   if (this->filename().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_filename().data(), static_cast<int>(this->_internal_filename().length()),
@@ -273,7 +284,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.File)
   return target;
@@ -287,7 +298,7 @@ size_t File::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string filename = 3[json_name = "filename"];
+  // string filename = 3;
   if (this->filename().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -295,14 +306,14 @@ size_t File::ByteSizeLong() const {
   }
 
   switch (data_case()) {
-    // string url = 1[json_name = "url"];
+    // string url = 1;
     case kUrl: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
           this->_internal_url());
       break;
     }
-    // bytes raw = 2[json_name = "raw"];
+    // bytes raw = 2;
     case kRaw: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -340,13 +351,12 @@ void File::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void File::MergeFrom(const File& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.File)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.filename().size() > 0) {
-
-    filename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.filename_);
+    _internal_set_filename(from._internal_filename());
   }
   switch (from.data_case()) {
     case kUrl: {
@@ -383,9 +393,8 @@ bool File::IsInitialized() const {
 
 void File::InternalSwap(File* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  filename_.Swap(&other->filename_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  filename_.Swap(&other->filename_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(data_, other->data_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
@@ -400,7 +409,7 @@ void File::InternalSwap(File* other) {
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::v1::model::File* Arena::CreateMaybeMessage< ::v1::model::File >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::File >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::File >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

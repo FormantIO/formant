@@ -588,81 +588,68 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\034protos/model/v1/config.proto\022\010v1.model"
   "\032\031protos/model/v1/ros.proto\032\036google/prot"
-  "obuf/wrappers.proto\"\202\001\n\027AgentConfigurati"
-  "onStore\022#\n\ragent_version\030\001 \001(\tR\014agentVer"
-  "sion\022B\n\rconfiguration\030\002 \001(\0132\034.v1.model.A"
-  "gentConfigurationR\rconfiguration\"z\n\022Agen"
-  "tConfiguration\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002"
-  " \001(\tR\004name\022@\n\010document\030\003 \001(\0132$.v1.model."
-  "AgentConfigurationDocumentR\010document\"\200\004\n"
-  "\032AgentConfigurationDocument\022\030\n\007version\030\001"
-  " \001(\003R\007version\022B\n\004tags\030\002 \003(\0132..v1.model.A"
-  "gentConfigurationDocument.TagsEntryR\004tag"
-  "s\022>\n\ttelemetry\030\003 \001(\0132 .v1.model.Telemetr"
-  "yConfigurationR\ttelemetry\022>\n\tresources\030\004"
-  " \001(\0132 .v1.model.ResourcesConfigurationR\t"
-  "resources\022D\n\013application\030\005 \001(\0132\".v1.mode"
-  "l.ApplicationConfigurationR\013application\022"
-  "5\n\006teleop\030\006 \001(\0132\035.v1.model.TeleopConfigu"
-  "rationR\006teleop\022N\n\017port_forwarding\030\007 \001(\0132"
-  "%.v1.model.PortForwardingConfigurationR\016"
-  "portForwarding\0327\n\tTagsEntry\022\020\n\003key\030\001 \001(\t"
-  "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"^\n\023Teleo"
-  "pConfiguration\022G\n\013ros_streams\030\001 \003(\0132&.v1"
-  ".model.TeleopRosStreamConfigurationR\nros"
-  "Streams\"S\n\033PortForwardingConfiguration\0224"
-  "\n\007enabled\030\001 \001(\0132\032.google.protobuf.BoolVa"
-  "lueR\007enabled\"\264\001\n\034TeleopRosStreamConfigur"
-  "ation\022\035\n\ntopic_name\030\001 \001(\tR\ttopicName\0225\n\n"
-  "topic_type\030\002 \001(\0162\026.v1.model.ROSTopicType"
-  "R\ttopicType\022>\n\004mode\030\003 \001(\0162*.v1.model.Tel"
-  "eopRosStreamConfigurationModeR\004mode\"\177\n\026T"
-  "elemetryConfiguration\0227\n\007streams\030\001 \003(\0132\035"
-  ".v1.model.StreamConfigurationR\007streams\022,"
-  "\n\003ros\030\002 \001(\0132\032.v1.model.ROSConfigurationR"
-  "\003ros\"\306\001\n\030ApplicationConfiguration\022e\n\021con"
-  "figuration_map\030\001 \003(\01328.v1.model.Applicat"
-  "ionConfiguration.ConfigurationMapEntryR\020"
-  "configurationMap\032C\n\025ConfigurationMapEntr"
-  "y\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005valu"
-  "e:\0028\001\"\225\001\n\026ResourcesConfiguration\022/\n\004disk"
-  "\030\001 \001(\0132\033.v1.model.DiskConfigurationR\004dis"
-  "k\022J\n\022stream_throttle_hz\030\002 \001(\0132\034.google.p"
-  "rotobuf.DoubleValueR\020streamThrottleHz\"4\n"
-  "\021DiskConfiguration\022\037\n\013buffer_size\030\001 \001(\003R"
-  "\nbufferSize\"K\n\020ROSConfiguration\0227\n\030world"
-  "_reference_frame_id\030\001 \001(\tR\025worldReferenc"
-  "eFrameId\"\222\005\n\023StreamConfiguration\022\022\n\004name"
-  "\030\001 \001(\tR\004name\022;\n\004tags\030\002 \003(\0132\'.v1.model.St"
-  "reamConfiguration.TagsEntryR\004tags\0221\n\tros"
-  "_topic\030\003 \001(\0132\022.v1.model.ROSTopicH\000R\010rosT"
-  "opic\022F\n\020ros_localization\030\004 \001(\0132\031.v1.mode"
-  "l.ROSLocalizationH\000R\017rosLocalization\022C\n\017"
-  "directory_watch\030\005 \001(\0132\030.v1.model.Directo"
-  "ryWatchH\000R\016directoryWatch\0221\n\tfile_tail\030\006"
-  " \001(\0132\022.v1.model.FileTailH\000R\010fileTail\022J\n\022"
-  "ros_transform_tree\030\007 \001(\0132\032.v1.model.ROST"
-  "ransformTreeH\000R\020rosTransformTree\022*\n\006cust"
-  "om\030\t \001(\0132\020.v1.model.CustomH\000R\006custom\022=\n\013"
-  "throttle_hz\030\010 \001(\0132\034.google.protobuf.Doub"
-  "leValueR\nthrottleHz\0226\n\010disabled\030\023 \001(\0132\032."
-  "google.protobuf.BoolValueR\010disabled\0327\n\tT"
-  "agsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001("
-  "\tR\005value:\0028\001B\017\n\rconfiguration\"\010\n\006Custom\""
-  "\240\001\n\016DirectoryWatch\022\034\n\tdirectory\030\001 \001(\tR\td"
-  "irectory\022\034\n\textension\030\002 \001(\tR\textension\022/"
-  "\n\tfile_type\030\003 \001(\0162\022.v1.model.FileTypeR\010f"
-  "ileType\022!\n\014remote_agent\030\004 \001(\010R\013remoteAge"
-  "nt\"\257\001\n\010FileTail\022\032\n\010filename\030\001 \001(\tR\010filen"
-  "ame\0225\n\013file_format\030\002 \001(\0162\024.v1.model.File"
-  "FormatR\nfileFormat\022\031\n\010time_key\030\003 \001(\tR\007ti"
-  "meKey\022\037\n\013time_format\030\004 \001(\tR\ntimeFormat\022\024"
-  "\n\005regex\030\005 \001(\tR\005regex*<\n TeleopRosStreamC"
-  "onfigurationMode\022\013\n\007COMMAND\020\000\022\013\n\007OBSERVE"
-  "\020\001*&\n\nFileFormat\022\016\n\nPLAIN_TEXT\020\000\022\010\n\004JSON"
-  "\020\001*0\n\010FileType\022\010\n\004FILE\020\000\022\t\n\005IMAGE\020\001\022\017\n\013P"
-  "OINT_CLOUD\020\004B+Z)github.com/FormantIO/gen"
-  "proto/go/v1/modelb\006proto3"
+  "obuf/wrappers.proto\"e\n\027AgentConfiguratio"
+  "nStore\022\025\n\ragent_version\030\001 \001(\t\0223\n\rconfigu"
+  "ration\030\002 \001(\0132\034.v1.model.AgentConfigurati"
+  "on\"f\n\022AgentConfiguration\022\n\n\002id\030\001 \001(\t\022\014\n\004"
+  "name\030\002 \001(\t\0226\n\010document\030\003 \001(\0132$.v1.model."
+  "AgentConfigurationDocument\"\252\003\n\032AgentConf"
+  "igurationDocument\022\017\n\007version\030\001 \001(\003\022<\n\004ta"
+  "gs\030\002 \003(\0132..v1.model.AgentConfigurationDo"
+  "cument.TagsEntry\0223\n\ttelemetry\030\003 \001(\0132 .v1"
+  ".model.TelemetryConfiguration\0223\n\tresourc"
+  "es\030\004 \001(\0132 .v1.model.ResourcesConfigurati"
+  "on\0227\n\013application\030\005 \001(\0132\".v1.model.Appli"
+  "cationConfiguration\022-\n\006teleop\030\006 \001(\0132\035.v1"
+  ".model.TeleopConfiguration\022>\n\017port_forwa"
+  "rding\030\007 \001(\0132%.v1.model.PortForwardingCon"
+  "figuration\032+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005"
+  "value\030\002 \001(\t:\0028\001\"R\n\023TeleopConfiguration\022;"
+  "\n\013ros_streams\030\001 \003(\0132&.v1.model.TeleopRos"
+  "StreamConfiguration\"J\n\033PortForwardingCon"
+  "figuration\022+\n\007enabled\030\001 \001(\0132\032.google.pro"
+  "tobuf.BoolValue\"\230\001\n\034TeleopRosStreamConfi"
+  "guration\022\022\n\ntopic_name\030\001 \001(\t\022*\n\ntopic_ty"
+  "pe\030\002 \001(\0162\026.v1.model.ROSTopicType\0228\n\004mode"
+  "\030\003 \001(\0162*.v1.model.TeleopRosStreamConfigu"
+  "rationMode\"q\n\026TelemetryConfiguration\022.\n\007"
+  "streams\030\001 \003(\0132\035.v1.model.StreamConfigura"
+  "tion\022\'\n\003ros\030\002 \001(\0132\032.v1.model.ROSConfigur"
+  "ation\"\250\001\n\030ApplicationConfiguration\022S\n\021co"
+  "nfiguration_map\030\001 \003(\01328.v1.model.Applica"
+  "tionConfiguration.ConfigurationMapEntry\032"
+  "7\n\025ConfigurationMapEntry\022\013\n\003key\030\001 \001(\t\022\r\n"
+  "\005value\030\002 \001(\t:\0028\001\"}\n\026ResourcesConfigurati"
+  "on\022)\n\004disk\030\001 \001(\0132\033.v1.model.DiskConfigur"
+  "ation\0228\n\022stream_throttle_hz\030\002 \001(\0132\034.goog"
+  "le.protobuf.DoubleValue\"(\n\021DiskConfigura"
+  "tion\022\023\n\013buffer_size\030\001 \001(\003\"4\n\020ROSConfigur"
+  "ation\022 \n\030world_reference_frame_id\030\001 \001(\t\""
+  "\225\004\n\023StreamConfiguration\022\014\n\004name\030\001 \001(\t\0225\n"
+  "\004tags\030\002 \003(\0132\'.v1.model.StreamConfigurati"
+  "on.TagsEntry\022\'\n\tros_topic\030\003 \001(\0132\022.v1.mod"
+  "el.ROSTopicH\000\0225\n\020ros_localization\030\004 \001(\0132"
+  "\031.v1.model.ROSLocalizationH\000\0223\n\017director"
+  "y_watch\030\005 \001(\0132\030.v1.model.DirectoryWatchH"
+  "\000\022\'\n\tfile_tail\030\006 \001(\0132\022.v1.model.FileTail"
+  "H\000\0228\n\022ros_transform_tree\030\007 \001(\0132\032.v1.mode"
+  "l.ROSTransformTreeH\000\022\"\n\006custom\030\t \001(\0132\020.v"
+  "1.model.CustomH\000\0221\n\013throttle_hz\030\010 \001(\0132\034."
+  "google.protobuf.DoubleValue\022,\n\010disabled\030"
+  "\023 \001(\0132\032.google.protobuf.BoolValue\032+\n\tTag"
+  "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017"
+  "\n\rconfiguration\"\010\n\006Custom\"s\n\016DirectoryWa"
+  "tch\022\021\n\tdirectory\030\001 \001(\t\022\021\n\textension\030\002 \001("
+  "\t\022%\n\tfile_type\030\003 \001(\0162\022.v1.model.FileType"
+  "\022\024\n\014remote_agent\030\004 \001(\010\"}\n\010FileTail\022\020\n\010fi"
+  "lename\030\001 \001(\t\022)\n\013file_format\030\002 \001(\0162\024.v1.m"
+  "odel.FileFormat\022\020\n\010time_key\030\003 \001(\t\022\023\n\013tim"
+  "e_format\030\004 \001(\t\022\r\n\005regex\030\005 \001(\t*<\n TeleopR"
+  "osStreamConfigurationMode\022\013\n\007COMMAND\020\000\022\013"
+  "\n\007OBSERVE\020\001*&\n\nFileFormat\022\016\n\nPLAIN_TEXT\020"
+  "\000\022\010\n\004JSON\020\001*0\n\010FileType\022\010\n\004FILE\020\000\022\t\n\005IMA"
+  "GE\020\001\022\017\n\013POINT_CLOUD\020\004B+Z)github.com/Form"
+  "antIO/genproto/go/v1/modelb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_deps[2] = {
   &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
@@ -689,16 +676,15 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
   &scc_info_TeleopRosStreamConfiguration_protos_2fmodel_2fv1_2fconfig_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_once;
-static bool descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto, "protos/model/v1/config.proto", 3065,
+  false, false, descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto, "protos/model/v1/config.proto", 2554,
   &descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_deps, 18, 2,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fconfig_2eproto, 18, file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fconfig_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto), true);
+static bool dynamic_init_dummy_protos_2fmodel_2fv1_2fconfig_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto)), true);
 namespace v1 {
 namespace model {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* TeleopRosStreamConfigurationMode_descriptor() {
@@ -760,18 +746,19 @@ const ::v1::model::AgentConfiguration&
 AgentConfigurationStore::_Internal::configuration(const AgentConfigurationStore* msg) {
   return *msg->configuration_;
 }
-AgentConfigurationStore::AgentConfigurationStore()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+AgentConfigurationStore::AgentConfigurationStore(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.AgentConfigurationStore)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.AgentConfigurationStore)
 }
 AgentConfigurationStore::AgentConfigurationStore(const AgentConfigurationStore& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   agent_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_agent_version().empty()) {
-    agent_version_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.agent_version_);
+    agent_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_agent_version(),
+      GetArena());
   }
   if (from._internal_has_configuration()) {
     configuration_ = new ::v1::model::AgentConfiguration(*from.configuration_);
@@ -790,13 +777,21 @@ void AgentConfigurationStore::SharedCtor() {
 AgentConfigurationStore::~AgentConfigurationStore() {
   // @@protoc_insertion_point(destructor:v1.model.AgentConfigurationStore)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void AgentConfigurationStore::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   agent_version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete configuration_;
 }
 
+void AgentConfigurationStore::ArenaDtor(void* object) {
+  AgentConfigurationStore* _this = reinterpret_cast< AgentConfigurationStore* >(object);
+  (void)_this;
+}
+void AgentConfigurationStore::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void AgentConfigurationStore::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -812,22 +807,23 @@ void AgentConfigurationStore::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  agent_version_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && configuration_ != nullptr) {
+  agent_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && configuration_ != nullptr) {
     delete configuration_;
   }
   configuration_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* AgentConfigurationStore::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string agent_version = 1[json_name = "agentVersion"];
+      // string agent_version = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_agent_version();
@@ -836,7 +832,7 @@ const char* AgentConfigurationStore::_InternalParse(const char* ptr, ::PROTOBUF_
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.AgentConfiguration configuration = 2[json_name = "configuration"];
+      // .v1.model.AgentConfiguration configuration = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_configuration(), ptr);
@@ -849,7 +845,9 @@ const char* AgentConfigurationStore::_InternalParse(const char* ptr, ::PROTOBUF_
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -869,7 +867,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string agent_version = 1[json_name = "agentVersion"];
+  // string agent_version = 1;
   if (this->agent_version().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_agent_version().data(), static_cast<int>(this->_internal_agent_version().length()),
@@ -879,7 +877,7 @@ failure:
         1, this->_internal_agent_version(), target);
   }
 
-  // .v1.model.AgentConfiguration configuration = 2[json_name = "configuration"];
+  // .v1.model.AgentConfiguration configuration = 2;
   if (this->has_configuration()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -889,7 +887,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.AgentConfigurationStore)
   return target;
@@ -903,14 +901,14 @@ size_t AgentConfigurationStore::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string agent_version = 1[json_name = "agentVersion"];
+  // string agent_version = 1;
   if (this->agent_version().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_agent_version());
   }
 
-  // .v1.model.AgentConfiguration configuration = 2[json_name = "configuration"];
+  // .v1.model.AgentConfiguration configuration = 2;
   if (this->has_configuration()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -944,13 +942,12 @@ void AgentConfigurationStore::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& 
 void AgentConfigurationStore::MergeFrom(const AgentConfigurationStore& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.AgentConfigurationStore)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.agent_version().size() > 0) {
-
-    agent_version_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.agent_version_);
+    _internal_set_agent_version(from._internal_agent_version());
   }
   if (from.has_configuration()) {
     _internal_mutable_configuration()->::v1::model::AgentConfiguration::MergeFrom(from._internal_configuration());
@@ -977,9 +974,8 @@ bool AgentConfigurationStore::IsInitialized() const {
 
 void AgentConfigurationStore::InternalSwap(AgentConfigurationStore* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  agent_version_.Swap(&other->agent_version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  agent_version_.Swap(&other->agent_version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(configuration_, other->configuration_);
 }
 
@@ -1003,22 +999,24 @@ const ::v1::model::AgentConfigurationDocument&
 AgentConfiguration::_Internal::document(const AgentConfiguration* msg) {
   return *msg->document_;
 }
-AgentConfiguration::AgentConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+AgentConfiguration::AgentConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.AgentConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.AgentConfiguration)
 }
 AgentConfiguration::AgentConfiguration(const AgentConfiguration& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_id().empty()) {
-    id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
+    id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_id(),
+      GetArena());
   }
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
   if (from._internal_has_document()) {
     document_ = new ::v1::model::AgentConfigurationDocument(*from.document_);
@@ -1038,14 +1036,22 @@ void AgentConfiguration::SharedCtor() {
 AgentConfiguration::~AgentConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.AgentConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void AgentConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete document_;
 }
 
+void AgentConfiguration::ArenaDtor(void* object) {
+  AgentConfiguration* _this = reinterpret_cast< AgentConfiguration* >(object);
+  (void)_this;
+}
+void AgentConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void AgentConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -1061,23 +1067,24 @@ void AgentConfiguration::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && document_ != nullptr) {
+  id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && document_ != nullptr) {
     delete document_;
   }
   document_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* AgentConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string id = 1[json_name = "id"];
+      // string id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_id();
@@ -1086,7 +1093,7 @@ const char* AgentConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string name = 2[json_name = "name"];
+      // string name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_name();
@@ -1095,7 +1102,7 @@ const char* AgentConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.AgentConfigurationDocument document = 3[json_name = "document"];
+      // .v1.model.AgentConfigurationDocument document = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_document(), ptr);
@@ -1108,7 +1115,9 @@ const char* AgentConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -1128,7 +1137,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string id = 1[json_name = "id"];
+  // string id = 1;
   if (this->id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
@@ -1138,7 +1147,7 @@ failure:
         1, this->_internal_id(), target);
   }
 
-  // string name = 2[json_name = "name"];
+  // string name = 2;
   if (this->name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
@@ -1148,7 +1157,7 @@ failure:
         2, this->_internal_name(), target);
   }
 
-  // .v1.model.AgentConfigurationDocument document = 3[json_name = "document"];
+  // .v1.model.AgentConfigurationDocument document = 3;
   if (this->has_document()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1158,7 +1167,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.AgentConfiguration)
   return target;
@@ -1172,21 +1181,21 @@ size_t AgentConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string id = 1[json_name = "id"];
+  // string id = 1;
   if (this->id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_id());
   }
 
-  // string name = 2[json_name = "name"];
+  // string name = 2;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
   }
 
-  // .v1.model.AgentConfigurationDocument document = 3[json_name = "document"];
+  // .v1.model.AgentConfigurationDocument document = 3;
   if (this->has_document()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1220,17 +1229,15 @@ void AgentConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from)
 void AgentConfiguration::MergeFrom(const AgentConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.AgentConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.id().size() > 0) {
-
-    id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
+    _internal_set_id(from._internal_id());
   }
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _internal_set_name(from._internal_name());
   }
   if (from.has_document()) {
     _internal_mutable_document()->::v1::model::AgentConfigurationDocument::MergeFrom(from._internal_document());
@@ -1257,11 +1264,9 @@ bool AgentConfiguration::IsInitialized() const {
 
 void AgentConfiguration::InternalSwap(AgentConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  id_.Swap(&other->id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  id_.Swap(&other->id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(document_, other->document_);
 }
 
@@ -1330,15 +1335,16 @@ const ::v1::model::PortForwardingConfiguration&
 AgentConfigurationDocument::_Internal::port_forwarding(const AgentConfigurationDocument* msg) {
   return *msg->port_forwarding_;
 }
-AgentConfigurationDocument::AgentConfigurationDocument()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+AgentConfigurationDocument::AgentConfigurationDocument(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  tags_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.AgentConfigurationDocument)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.AgentConfigurationDocument)
 }
 AgentConfigurationDocument::AgentConfigurationDocument(const AgentConfigurationDocument& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   tags_.MergeFrom(from.tags_);
   if (from._internal_has_telemetry()) {
     telemetry_ = new ::v1::model::TelemetryConfiguration(*from.telemetry_);
@@ -1379,9 +1385,11 @@ void AgentConfigurationDocument::SharedCtor() {
 AgentConfigurationDocument::~AgentConfigurationDocument() {
   // @@protoc_insertion_point(destructor:v1.model.AgentConfigurationDocument)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void AgentConfigurationDocument::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete telemetry_;
   if (this != internal_default_instance()) delete resources_;
   if (this != internal_default_instance()) delete application_;
@@ -1389,6 +1397,12 @@ void AgentConfigurationDocument::SharedDtor() {
   if (this != internal_default_instance()) delete port_forwarding_;
 }
 
+void AgentConfigurationDocument::ArenaDtor(void* object) {
+  AgentConfigurationDocument* _this = reinterpret_cast< AgentConfigurationDocument* >(object);
+  (void)_this;
+}
+void AgentConfigurationDocument::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void AgentConfigurationDocument::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -1405,45 +1419,46 @@ void AgentConfigurationDocument::Clear() {
   (void) cached_has_bits;
 
   tags_.Clear();
-  if (GetArenaNoVirtual() == nullptr && telemetry_ != nullptr) {
+  if (GetArena() == nullptr && telemetry_ != nullptr) {
     delete telemetry_;
   }
   telemetry_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && resources_ != nullptr) {
+  if (GetArena() == nullptr && resources_ != nullptr) {
     delete resources_;
   }
   resources_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && application_ != nullptr) {
+  if (GetArena() == nullptr && application_ != nullptr) {
     delete application_;
   }
   application_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && teleop_ != nullptr) {
+  if (GetArena() == nullptr && teleop_ != nullptr) {
     delete teleop_;
   }
   teleop_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && port_forwarding_ != nullptr) {
+  if (GetArena() == nullptr && port_forwarding_ != nullptr) {
     delete port_forwarding_;
   }
   port_forwarding_ = nullptr;
   version_ = PROTOBUF_LONGLONG(0);
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* AgentConfigurationDocument::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // int64 version = 1[json_name = "version"];
+      // int64 version = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          version_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          version_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // map<string, string> tags = 2[json_name = "tags"];
+      // map<string, string> tags = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr -= 1;
@@ -1455,35 +1470,35 @@ const char* AgentConfigurationDocument::_InternalParse(const char* ptr, ::PROTOB
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
-      // .v1.model.TelemetryConfiguration telemetry = 3[json_name = "telemetry"];
+      // .v1.model.TelemetryConfiguration telemetry = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_telemetry(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.ResourcesConfiguration resources = 4[json_name = "resources"];
+      // .v1.model.ResourcesConfiguration resources = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_resources(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.ApplicationConfiguration application = 5[json_name = "application"];
+      // .v1.model.ApplicationConfiguration application = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_application(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.TeleopConfiguration teleop = 6[json_name = "teleop"];
+      // .v1.model.TeleopConfiguration teleop = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_teleop(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.PortForwardingConfiguration port_forwarding = 7[json_name = "portForwarding"];
+      // .v1.model.PortForwardingConfiguration port_forwarding = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_port_forwarding(), ptr);
@@ -1496,7 +1511,9 @@ const char* AgentConfigurationDocument::_InternalParse(const char* ptr, ::PROTOB
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -1516,13 +1533,13 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int64 version = 1[json_name = "version"];
+  // int64 version = 1;
   if (this->version() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_version(), target);
   }
 
-  // map<string, string> tags = 2[json_name = "tags"];
+  // map<string, string> tags = 2;
   if (!this->_internal_tags().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
@@ -1567,7 +1584,7 @@ failure:
     }
   }
 
-  // .v1.model.TelemetryConfiguration telemetry = 3[json_name = "telemetry"];
+  // .v1.model.TelemetryConfiguration telemetry = 3;
   if (this->has_telemetry()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1575,7 +1592,7 @@ failure:
         3, _Internal::telemetry(this), target, stream);
   }
 
-  // .v1.model.ResourcesConfiguration resources = 4[json_name = "resources"];
+  // .v1.model.ResourcesConfiguration resources = 4;
   if (this->has_resources()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1583,7 +1600,7 @@ failure:
         4, _Internal::resources(this), target, stream);
   }
 
-  // .v1.model.ApplicationConfiguration application = 5[json_name = "application"];
+  // .v1.model.ApplicationConfiguration application = 5;
   if (this->has_application()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1591,7 +1608,7 @@ failure:
         5, _Internal::application(this), target, stream);
   }
 
-  // .v1.model.TeleopConfiguration teleop = 6[json_name = "teleop"];
+  // .v1.model.TeleopConfiguration teleop = 6;
   if (this->has_teleop()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1599,7 +1616,7 @@ failure:
         6, _Internal::teleop(this), target, stream);
   }
 
-  // .v1.model.PortForwardingConfiguration port_forwarding = 7[json_name = "portForwarding"];
+  // .v1.model.PortForwardingConfiguration port_forwarding = 7;
   if (this->has_port_forwarding()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1609,7 +1626,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.AgentConfigurationDocument)
   return target;
@@ -1623,7 +1640,7 @@ size_t AgentConfigurationDocument::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // map<string, string> tags = 2[json_name = "tags"];
+  // map<string, string> tags = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_tags_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
@@ -1632,42 +1649,42 @@ size_t AgentConfigurationDocument::ByteSizeLong() const {
     total_size += AgentConfigurationDocument_TagsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
-  // .v1.model.TelemetryConfiguration telemetry = 3[json_name = "telemetry"];
+  // .v1.model.TelemetryConfiguration telemetry = 3;
   if (this->has_telemetry()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *telemetry_);
   }
 
-  // .v1.model.ResourcesConfiguration resources = 4[json_name = "resources"];
+  // .v1.model.ResourcesConfiguration resources = 4;
   if (this->has_resources()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *resources_);
   }
 
-  // .v1.model.ApplicationConfiguration application = 5[json_name = "application"];
+  // .v1.model.ApplicationConfiguration application = 5;
   if (this->has_application()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *application_);
   }
 
-  // .v1.model.TeleopConfiguration teleop = 6[json_name = "teleop"];
+  // .v1.model.TeleopConfiguration teleop = 6;
   if (this->has_teleop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *teleop_);
   }
 
-  // .v1.model.PortForwardingConfiguration port_forwarding = 7[json_name = "portForwarding"];
+  // .v1.model.PortForwardingConfiguration port_forwarding = 7;
   if (this->has_port_forwarding()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *port_forwarding_);
   }
 
-  // int64 version = 1[json_name = "version"];
+  // int64 version = 1;
   if (this->version() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
@@ -1701,7 +1718,7 @@ void AgentConfigurationDocument::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Messag
 void AgentConfigurationDocument::MergeFrom(const AgentConfigurationDocument& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.AgentConfigurationDocument)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1746,14 +1763,14 @@ bool AgentConfigurationDocument::IsInitialized() const {
 
 void AgentConfigurationDocument::InternalSwap(AgentConfigurationDocument* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   tags_.Swap(&other->tags_);
-  swap(telemetry_, other->telemetry_);
-  swap(resources_, other->resources_);
-  swap(application_, other->application_);
-  swap(teleop_, other->teleop_);
-  swap(port_forwarding_, other->port_forwarding_);
-  swap(version_, other->version_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AgentConfigurationDocument, version_)
+      + sizeof(AgentConfigurationDocument::version_)
+      - PROTOBUF_FIELD_OFFSET(AgentConfigurationDocument, telemetry_)>(
+          reinterpret_cast<char*>(&telemetry_),
+          reinterpret_cast<char*>(&other->telemetry_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AgentConfigurationDocument::GetMetadata() const {
@@ -1769,16 +1786,17 @@ class TeleopConfiguration::_Internal {
  public:
 };
 
-TeleopConfiguration::TeleopConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+TeleopConfiguration::TeleopConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  ros_streams_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.TeleopConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.TeleopConfiguration)
 }
 TeleopConfiguration::TeleopConfiguration(const TeleopConfiguration& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr),
       ros_streams_(from.ros_streams_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:v1.model.TeleopConfiguration)
 }
 
@@ -1789,11 +1807,19 @@ void TeleopConfiguration::SharedCtor() {
 TeleopConfiguration::~TeleopConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.TeleopConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void TeleopConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void TeleopConfiguration::ArenaDtor(void* object) {
+  TeleopConfiguration* _this = reinterpret_cast< TeleopConfiguration* >(object);
+  (void)_this;
+}
+void TeleopConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void TeleopConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -1810,17 +1836,18 @@ void TeleopConfiguration::Clear() {
   (void) cached_has_bits;
 
   ros_streams_.Clear();
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* TeleopConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated .v1.model.TeleopRosStreamConfiguration ros_streams = 1[json_name = "rosStreams"];
+      // repeated .v1.model.TeleopRosStreamConfiguration ros_streams = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr -= 1;
@@ -1838,7 +1865,9 @@ const char* TeleopConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -1858,7 +1887,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .v1.model.TeleopRosStreamConfiguration ros_streams = 1[json_name = "rosStreams"];
+  // repeated .v1.model.TeleopRosStreamConfiguration ros_streams = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_ros_streams_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -1868,7 +1897,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.TeleopConfiguration)
   return target;
@@ -1882,7 +1911,7 @@ size_t TeleopConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .v1.model.TeleopRosStreamConfiguration ros_streams = 1[json_name = "rosStreams"];
+  // repeated .v1.model.TeleopRosStreamConfiguration ros_streams = 1;
   total_size += 1UL * this->_internal_ros_streams_size();
   for (const auto& msg : this->ros_streams_) {
     total_size +=
@@ -1916,7 +1945,7 @@ void TeleopConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from
 void TeleopConfiguration::MergeFrom(const TeleopConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.TeleopConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1943,7 +1972,7 @@ bool TeleopConfiguration::IsInitialized() const {
 
 void TeleopConfiguration::InternalSwap(TeleopConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   ros_streams_.InternalSwap(&other->ros_streams_);
 }
 
@@ -1968,20 +1997,20 @@ PortForwardingConfiguration::_Internal::enabled(const PortForwardingConfiguratio
   return *msg->enabled_;
 }
 void PortForwardingConfiguration::clear_enabled() {
-  if (GetArenaNoVirtual() == nullptr && enabled_ != nullptr) {
+  if (GetArena() == nullptr && enabled_ != nullptr) {
     delete enabled_;
   }
   enabled_ = nullptr;
 }
-PortForwardingConfiguration::PortForwardingConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+PortForwardingConfiguration::PortForwardingConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.PortForwardingConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.PortForwardingConfiguration)
 }
 PortForwardingConfiguration::PortForwardingConfiguration(const PortForwardingConfiguration& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_enabled()) {
     enabled_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.enabled_);
   } else {
@@ -1998,12 +2027,20 @@ void PortForwardingConfiguration::SharedCtor() {
 PortForwardingConfiguration::~PortForwardingConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.PortForwardingConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void PortForwardingConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete enabled_;
 }
 
+void PortForwardingConfiguration::ArenaDtor(void* object) {
+  PortForwardingConfiguration* _this = reinterpret_cast< PortForwardingConfiguration* >(object);
+  (void)_this;
+}
+void PortForwardingConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void PortForwardingConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -2019,21 +2056,22 @@ void PortForwardingConfiguration::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && enabled_ != nullptr) {
+  if (GetArena() == nullptr && enabled_ != nullptr) {
     delete enabled_;
   }
   enabled_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PortForwardingConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .google.protobuf.BoolValue enabled = 1[json_name = "enabled"];
+      // .google.protobuf.BoolValue enabled = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_enabled(), ptr);
@@ -2046,7 +2084,9 @@ const char* PortForwardingConfiguration::_InternalParse(const char* ptr, ::PROTO
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -2066,7 +2106,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .google.protobuf.BoolValue enabled = 1[json_name = "enabled"];
+  // .google.protobuf.BoolValue enabled = 1;
   if (this->has_enabled()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -2076,7 +2116,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.PortForwardingConfiguration)
   return target;
@@ -2090,7 +2130,7 @@ size_t PortForwardingConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .google.protobuf.BoolValue enabled = 1[json_name = "enabled"];
+  // .google.protobuf.BoolValue enabled = 1;
   if (this->has_enabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -2124,7 +2164,7 @@ void PortForwardingConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Messa
 void PortForwardingConfiguration::MergeFrom(const PortForwardingConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.PortForwardingConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2153,7 +2193,7 @@ bool PortForwardingConfiguration::IsInitialized() const {
 
 void PortForwardingConfiguration::InternalSwap(PortForwardingConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(enabled_, other->enabled_);
 }
 
@@ -2170,18 +2210,19 @@ class TeleopRosStreamConfiguration::_Internal {
  public:
 };
 
-TeleopRosStreamConfiguration::TeleopRosStreamConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+TeleopRosStreamConfiguration::TeleopRosStreamConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.TeleopRosStreamConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.TeleopRosStreamConfiguration)
 }
 TeleopRosStreamConfiguration::TeleopRosStreamConfiguration(const TeleopRosStreamConfiguration& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   topic_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_topic_name().empty()) {
-    topic_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.topic_name_);
+    topic_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_topic_name(),
+      GetArena());
   }
   ::memcpy(&topic_type_, &from.topic_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&mode_) -
@@ -2200,12 +2241,20 @@ void TeleopRosStreamConfiguration::SharedCtor() {
 TeleopRosStreamConfiguration::~TeleopRosStreamConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.TeleopRosStreamConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void TeleopRosStreamConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   topic_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void TeleopRosStreamConfiguration::ArenaDtor(void* object) {
+  TeleopRosStreamConfiguration* _this = reinterpret_cast< TeleopRosStreamConfiguration* >(object);
+  (void)_this;
+}
+void TeleopRosStreamConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void TeleopRosStreamConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -2221,21 +2270,22 @@ void TeleopRosStreamConfiguration::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  topic_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  topic_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&topic_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&mode_) -
       reinterpret_cast<char*>(&topic_type_)) + sizeof(mode_));
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* TeleopRosStreamConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string topic_name = 1[json_name = "topicName"];
+      // string topic_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_topic_name();
@@ -2244,18 +2294,18 @@ const char* TeleopRosStreamConfiguration::_InternalParse(const char* ptr, ::PROT
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.ROSTopicType topic_type = 2[json_name = "topicType"];
+      // .v1.model.ROSTopicType topic_type = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_topic_type(static_cast<::v1::model::ROSTopicType>(val));
         } else goto handle_unusual;
         continue;
-      // .v1.model.TeleopRosStreamConfigurationMode mode = 3[json_name = "mode"];
+      // .v1.model.TeleopRosStreamConfigurationMode mode = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_mode(static_cast<::v1::model::TeleopRosStreamConfigurationMode>(val));
         } else goto handle_unusual;
@@ -2266,7 +2316,9 @@ const char* TeleopRosStreamConfiguration::_InternalParse(const char* ptr, ::PROT
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -2286,7 +2338,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string topic_name = 1[json_name = "topicName"];
+  // string topic_name = 1;
   if (this->topic_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_topic_name().data(), static_cast<int>(this->_internal_topic_name().length()),
@@ -2296,14 +2348,14 @@ failure:
         1, this->_internal_topic_name(), target);
   }
 
-  // .v1.model.ROSTopicType topic_type = 2[json_name = "topicType"];
+  // .v1.model.ROSTopicType topic_type = 2;
   if (this->topic_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       2, this->_internal_topic_type(), target);
   }
 
-  // .v1.model.TeleopRosStreamConfigurationMode mode = 3[json_name = "mode"];
+  // .v1.model.TeleopRosStreamConfigurationMode mode = 3;
   if (this->mode() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -2312,7 +2364,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.TeleopRosStreamConfiguration)
   return target;
@@ -2326,20 +2378,20 @@ size_t TeleopRosStreamConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string topic_name = 1[json_name = "topicName"];
+  // string topic_name = 1;
   if (this->topic_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_topic_name());
   }
 
-  // .v1.model.ROSTopicType topic_type = 2[json_name = "topicType"];
+  // .v1.model.ROSTopicType topic_type = 2;
   if (this->topic_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_topic_type());
   }
 
-  // .v1.model.TeleopRosStreamConfigurationMode mode = 3[json_name = "mode"];
+  // .v1.model.TeleopRosStreamConfigurationMode mode = 3;
   if (this->mode() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_mode());
@@ -2372,13 +2424,12 @@ void TeleopRosStreamConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Mess
 void TeleopRosStreamConfiguration::MergeFrom(const TeleopRosStreamConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.TeleopRosStreamConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.topic_name().size() > 0) {
-
-    topic_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.topic_name_);
+    _internal_set_topic_name(from._internal_topic_name());
   }
   if (from.topic_type() != 0) {
     _internal_set_topic_type(from._internal_topic_type());
@@ -2408,11 +2459,14 @@ bool TeleopRosStreamConfiguration::IsInitialized() const {
 
 void TeleopRosStreamConfiguration::InternalSwap(TeleopRosStreamConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  topic_name_.Swap(&other->topic_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(topic_type_, other->topic_type_);
-  swap(mode_, other->mode_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  topic_name_.Swap(&other->topic_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(TeleopRosStreamConfiguration, mode_)
+      + sizeof(TeleopRosStreamConfiguration::mode_)
+      - PROTOBUF_FIELD_OFFSET(TeleopRosStreamConfiguration, topic_type_)>(
+          reinterpret_cast<char*>(&topic_type_),
+          reinterpret_cast<char*>(&other->topic_type_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TeleopRosStreamConfiguration::GetMetadata() const {
@@ -2435,16 +2489,17 @@ const ::v1::model::ROSConfiguration&
 TelemetryConfiguration::_Internal::ros(const TelemetryConfiguration* msg) {
   return *msg->ros_;
 }
-TelemetryConfiguration::TelemetryConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+TelemetryConfiguration::TelemetryConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  streams_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.TelemetryConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.TelemetryConfiguration)
 }
 TelemetryConfiguration::TelemetryConfiguration(const TelemetryConfiguration& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr),
       streams_(from.streams_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_ros()) {
     ros_ = new ::v1::model::ROSConfiguration(*from.ros_);
   } else {
@@ -2461,12 +2516,20 @@ void TelemetryConfiguration::SharedCtor() {
 TelemetryConfiguration::~TelemetryConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.TelemetryConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void TelemetryConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete ros_;
 }
 
+void TelemetryConfiguration::ArenaDtor(void* object) {
+  TelemetryConfiguration* _this = reinterpret_cast< TelemetryConfiguration* >(object);
+  (void)_this;
+}
+void TelemetryConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void TelemetryConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -2483,21 +2546,22 @@ void TelemetryConfiguration::Clear() {
   (void) cached_has_bits;
 
   streams_.Clear();
-  if (GetArenaNoVirtual() == nullptr && ros_ != nullptr) {
+  if (GetArena() == nullptr && ros_ != nullptr) {
     delete ros_;
   }
   ros_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* TelemetryConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated .v1.model.StreamConfiguration streams = 1[json_name = "streams"];
+      // repeated .v1.model.StreamConfiguration streams = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr -= 1;
@@ -2509,7 +2573,7 @@ const char* TelemetryConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_N
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else goto handle_unusual;
         continue;
-      // .v1.model.ROSConfiguration ros = 2[json_name = "ros"];
+      // .v1.model.ROSConfiguration ros = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_ros(), ptr);
@@ -2522,7 +2586,9 @@ const char* TelemetryConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_N
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -2542,7 +2608,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .v1.model.StreamConfiguration streams = 1[json_name = "streams"];
+  // repeated .v1.model.StreamConfiguration streams = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_streams_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -2550,7 +2616,7 @@ failure:
       InternalWriteMessage(1, this->_internal_streams(i), target, stream);
   }
 
-  // .v1.model.ROSConfiguration ros = 2[json_name = "ros"];
+  // .v1.model.ROSConfiguration ros = 2;
   if (this->has_ros()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -2560,7 +2626,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.TelemetryConfiguration)
   return target;
@@ -2574,14 +2640,14 @@ size_t TelemetryConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .v1.model.StreamConfiguration streams = 1[json_name = "streams"];
+  // repeated .v1.model.StreamConfiguration streams = 1;
   total_size += 1UL * this->_internal_streams_size();
   for (const auto& msg : this->streams_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // .v1.model.ROSConfiguration ros = 2[json_name = "ros"];
+  // .v1.model.ROSConfiguration ros = 2;
   if (this->has_ros()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -2615,7 +2681,7 @@ void TelemetryConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& f
 void TelemetryConfiguration::MergeFrom(const TelemetryConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.TelemetryConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2645,7 +2711,7 @@ bool TelemetryConfiguration::IsInitialized() const {
 
 void TelemetryConfiguration::InternalSwap(TelemetryConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   streams_.InternalSwap(&other->streams_);
   swap(ros_, other->ros_);
 }
@@ -2680,15 +2746,16 @@ class ApplicationConfiguration::_Internal {
  public:
 };
 
-ApplicationConfiguration::ApplicationConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+ApplicationConfiguration::ApplicationConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  configuration_map_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.ApplicationConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.ApplicationConfiguration)
 }
 ApplicationConfiguration::ApplicationConfiguration(const ApplicationConfiguration& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   configuration_map_.MergeFrom(from.configuration_map_);
   // @@protoc_insertion_point(copy_constructor:v1.model.ApplicationConfiguration)
 }
@@ -2700,11 +2767,19 @@ void ApplicationConfiguration::SharedCtor() {
 ApplicationConfiguration::~ApplicationConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.ApplicationConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ApplicationConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void ApplicationConfiguration::ArenaDtor(void* object) {
+  ApplicationConfiguration* _this = reinterpret_cast< ApplicationConfiguration* >(object);
+  (void)_this;
+}
+void ApplicationConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void ApplicationConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -2721,17 +2796,18 @@ void ApplicationConfiguration::Clear() {
   (void) cached_has_bits;
 
   configuration_map_.Clear();
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ApplicationConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // map<string, string> configuration_map = 1[json_name = "configurationMap"];
+      // map<string, string> configuration_map = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr -= 1;
@@ -2749,7 +2825,9 @@ const char* ApplicationConfiguration::_InternalParse(const char* ptr, ::PROTOBUF
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -2769,7 +2847,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // map<string, string> configuration_map = 1[json_name = "configurationMap"];
+  // map<string, string> configuration_map = 1;
   if (!this->_internal_configuration_map().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
@@ -2816,7 +2894,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.ApplicationConfiguration)
   return target;
@@ -2830,7 +2908,7 @@ size_t ApplicationConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // map<string, string> configuration_map = 1[json_name = "configurationMap"];
+  // map<string, string> configuration_map = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_configuration_map_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
@@ -2866,7 +2944,7 @@ void ApplicationConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message&
 void ApplicationConfiguration::MergeFrom(const ApplicationConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.ApplicationConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2893,7 +2971,7 @@ bool ApplicationConfiguration::IsInitialized() const {
 
 void ApplicationConfiguration::InternalSwap(ApplicationConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   configuration_map_.Swap(&other->configuration_map_);
 }
 
@@ -2925,20 +3003,20 @@ ResourcesConfiguration::_Internal::stream_throttle_hz(const ResourcesConfigurati
   return *msg->stream_throttle_hz_;
 }
 void ResourcesConfiguration::clear_stream_throttle_hz() {
-  if (GetArenaNoVirtual() == nullptr && stream_throttle_hz_ != nullptr) {
+  if (GetArena() == nullptr && stream_throttle_hz_ != nullptr) {
     delete stream_throttle_hz_;
   }
   stream_throttle_hz_ = nullptr;
 }
-ResourcesConfiguration::ResourcesConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+ResourcesConfiguration::ResourcesConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.ResourcesConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.ResourcesConfiguration)
 }
 ResourcesConfiguration::ResourcesConfiguration(const ResourcesConfiguration& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_disk()) {
     disk_ = new ::v1::model::DiskConfiguration(*from.disk_);
   } else {
@@ -2962,13 +3040,21 @@ void ResourcesConfiguration::SharedCtor() {
 ResourcesConfiguration::~ResourcesConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.ResourcesConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ResourcesConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete disk_;
   if (this != internal_default_instance()) delete stream_throttle_hz_;
 }
 
+void ResourcesConfiguration::ArenaDtor(void* object) {
+  ResourcesConfiguration* _this = reinterpret_cast< ResourcesConfiguration* >(object);
+  (void)_this;
+}
+void ResourcesConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void ResourcesConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -2984,32 +3070,33 @@ void ResourcesConfiguration::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && disk_ != nullptr) {
+  if (GetArena() == nullptr && disk_ != nullptr) {
     delete disk_;
   }
   disk_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && stream_throttle_hz_ != nullptr) {
+  if (GetArena() == nullptr && stream_throttle_hz_ != nullptr) {
     delete stream_throttle_hz_;
   }
   stream_throttle_hz_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ResourcesConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .v1.model.DiskConfiguration disk = 1[json_name = "disk"];
+      // .v1.model.DiskConfiguration disk = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_disk(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .google.protobuf.DoubleValue stream_throttle_hz = 2[json_name = "streamThrottleHz"];
+      // .google.protobuf.DoubleValue stream_throttle_hz = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_stream_throttle_hz(), ptr);
@@ -3022,7 +3109,9 @@ const char* ResourcesConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_N
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -3042,7 +3131,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .v1.model.DiskConfiguration disk = 1[json_name = "disk"];
+  // .v1.model.DiskConfiguration disk = 1;
   if (this->has_disk()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3050,7 +3139,7 @@ failure:
         1, _Internal::disk(this), target, stream);
   }
 
-  // .google.protobuf.DoubleValue stream_throttle_hz = 2[json_name = "streamThrottleHz"];
+  // .google.protobuf.DoubleValue stream_throttle_hz = 2;
   if (this->has_stream_throttle_hz()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3060,7 +3149,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.ResourcesConfiguration)
   return target;
@@ -3074,14 +3163,14 @@ size_t ResourcesConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .v1.model.DiskConfiguration disk = 1[json_name = "disk"];
+  // .v1.model.DiskConfiguration disk = 1;
   if (this->has_disk()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *disk_);
   }
 
-  // .google.protobuf.DoubleValue stream_throttle_hz = 2[json_name = "streamThrottleHz"];
+  // .google.protobuf.DoubleValue stream_throttle_hz = 2;
   if (this->has_stream_throttle_hz()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3115,7 +3204,7 @@ void ResourcesConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& f
 void ResourcesConfiguration::MergeFrom(const ResourcesConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.ResourcesConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3147,9 +3236,13 @@ bool ResourcesConfiguration::IsInitialized() const {
 
 void ResourcesConfiguration::InternalSwap(ResourcesConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(disk_, other->disk_);
-  swap(stream_throttle_hz_, other->stream_throttle_hz_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ResourcesConfiguration, stream_throttle_hz_)
+      + sizeof(ResourcesConfiguration::stream_throttle_hz_)
+      - PROTOBUF_FIELD_OFFSET(ResourcesConfiguration, disk_)>(
+          reinterpret_cast<char*>(&disk_),
+          reinterpret_cast<char*>(&other->disk_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourcesConfiguration::GetMetadata() const {
@@ -3165,15 +3258,15 @@ class DiskConfiguration::_Internal {
  public:
 };
 
-DiskConfiguration::DiskConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+DiskConfiguration::DiskConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.DiskConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.DiskConfiguration)
 }
 DiskConfiguration::DiskConfiguration(const DiskConfiguration& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   buffer_size_ = from.buffer_size_;
   // @@protoc_insertion_point(copy_constructor:v1.model.DiskConfiguration)
 }
@@ -3185,11 +3278,19 @@ void DiskConfiguration::SharedCtor() {
 DiskConfiguration::~DiskConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.DiskConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void DiskConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void DiskConfiguration::ArenaDtor(void* object) {
+  DiskConfiguration* _this = reinterpret_cast< DiskConfiguration* >(object);
+  (void)_this;
+}
+void DiskConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void DiskConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -3206,20 +3307,21 @@ void DiskConfiguration::Clear() {
   (void) cached_has_bits;
 
   buffer_size_ = PROTOBUF_LONGLONG(0);
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* DiskConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // int64 buffer_size = 1[json_name = "bufferSize"];
+      // int64 buffer_size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          buffer_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          buffer_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3229,7 +3331,9 @@ const char* DiskConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -3249,7 +3353,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int64 buffer_size = 1[json_name = "bufferSize"];
+  // int64 buffer_size = 1;
   if (this->buffer_size() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_buffer_size(), target);
@@ -3257,7 +3361,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.DiskConfiguration)
   return target;
@@ -3271,7 +3375,7 @@ size_t DiskConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 buffer_size = 1[json_name = "bufferSize"];
+  // int64 buffer_size = 1;
   if (this->buffer_size() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
@@ -3305,7 +3409,7 @@ void DiskConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) 
 void DiskConfiguration::MergeFrom(const DiskConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.DiskConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3334,7 +3438,7 @@ bool DiskConfiguration::IsInitialized() const {
 
 void DiskConfiguration::InternalSwap(DiskConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(buffer_size_, other->buffer_size_);
 }
 
@@ -3351,18 +3455,19 @@ class ROSConfiguration::_Internal {
  public:
 };
 
-ROSConfiguration::ROSConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+ROSConfiguration::ROSConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.ROSConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.ROSConfiguration)
 }
 ROSConfiguration::ROSConfiguration(const ROSConfiguration& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   world_reference_frame_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_world_reference_frame_id().empty()) {
-    world_reference_frame_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.world_reference_frame_id_);
+    world_reference_frame_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_world_reference_frame_id(),
+      GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:v1.model.ROSConfiguration)
 }
@@ -3375,12 +3480,20 @@ void ROSConfiguration::SharedCtor() {
 ROSConfiguration::~ROSConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.ROSConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ROSConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   world_reference_frame_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void ROSConfiguration::ArenaDtor(void* object) {
+  ROSConfiguration* _this = reinterpret_cast< ROSConfiguration* >(object);
+  (void)_this;
+}
+void ROSConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void ROSConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -3396,18 +3509,19 @@ void ROSConfiguration::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  world_reference_frame_id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
+  world_reference_frame_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ROSConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string world_reference_frame_id = 1[json_name = "worldReferenceFrameId"];
+      // string world_reference_frame_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_world_reference_frame_id();
@@ -3422,7 +3536,9 @@ const char* ROSConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -3442,7 +3558,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string world_reference_frame_id = 1[json_name = "worldReferenceFrameId"];
+  // string world_reference_frame_id = 1;
   if (this->world_reference_frame_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_world_reference_frame_id().data(), static_cast<int>(this->_internal_world_reference_frame_id().length()),
@@ -3454,7 +3570,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.ROSConfiguration)
   return target;
@@ -3468,7 +3584,7 @@ size_t ROSConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string world_reference_frame_id = 1[json_name = "worldReferenceFrameId"];
+  // string world_reference_frame_id = 1;
   if (this->world_reference_frame_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -3502,13 +3618,12 @@ void ROSConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ROSConfiguration::MergeFrom(const ROSConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.ROSConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.world_reference_frame_id().size() > 0) {
-
-    world_reference_frame_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.world_reference_frame_id_);
+    _internal_set_world_reference_frame_id(from._internal_world_reference_frame_id());
   }
 }
 
@@ -3532,9 +3647,8 @@ bool ROSConfiguration::IsInitialized() const {
 
 void ROSConfiguration::InternalSwap(ROSConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  world_reference_frame_id_.Swap(&other->world_reference_frame_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  world_reference_frame_id_.Swap(&other->world_reference_frame_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ROSConfiguration::GetMetadata() const {
@@ -3624,10 +3738,11 @@ StreamConfiguration::_Internal::disabled(const StreamConfiguration* msg) {
   return *msg->disabled_;
 }
 void StreamConfiguration::set_allocated_ros_topic(::v1::model::ROSTopic* ros_topic) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_configuration();
   if (ros_topic) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ros_topic)->GetArena();
     if (message_arena != submessage_arena) {
       ros_topic = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ros_topic, submessage_arena);
@@ -3639,15 +3754,18 @@ void StreamConfiguration::set_allocated_ros_topic(::v1::model::ROSTopic* ros_top
 }
 void StreamConfiguration::clear_ros_topic() {
   if (_internal_has_ros_topic()) {
-    delete configuration_.ros_topic_;
+    if (GetArena() == nullptr) {
+      delete configuration_.ros_topic_;
+    }
     clear_has_configuration();
   }
 }
 void StreamConfiguration::set_allocated_ros_localization(::v1::model::ROSLocalization* ros_localization) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_configuration();
   if (ros_localization) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ros_localization)->GetArena();
     if (message_arena != submessage_arena) {
       ros_localization = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ros_localization, submessage_arena);
@@ -3659,15 +3777,18 @@ void StreamConfiguration::set_allocated_ros_localization(::v1::model::ROSLocaliz
 }
 void StreamConfiguration::clear_ros_localization() {
   if (_internal_has_ros_localization()) {
-    delete configuration_.ros_localization_;
+    if (GetArena() == nullptr) {
+      delete configuration_.ros_localization_;
+    }
     clear_has_configuration();
   }
 }
 void StreamConfiguration::set_allocated_directory_watch(::v1::model::DirectoryWatch* directory_watch) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_configuration();
   if (directory_watch) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(directory_watch);
     if (message_arena != submessage_arena) {
       directory_watch = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, directory_watch, submessage_arena);
@@ -3678,10 +3799,11 @@ void StreamConfiguration::set_allocated_directory_watch(::v1::model::DirectoryWa
   // @@protoc_insertion_point(field_set_allocated:v1.model.StreamConfiguration.directory_watch)
 }
 void StreamConfiguration::set_allocated_file_tail(::v1::model::FileTail* file_tail) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_configuration();
   if (file_tail) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(file_tail);
     if (message_arena != submessage_arena) {
       file_tail = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, file_tail, submessage_arena);
@@ -3692,10 +3814,11 @@ void StreamConfiguration::set_allocated_file_tail(::v1::model::FileTail* file_ta
   // @@protoc_insertion_point(field_set_allocated:v1.model.StreamConfiguration.file_tail)
 }
 void StreamConfiguration::set_allocated_ros_transform_tree(::v1::model::ROSTransformTree* ros_transform_tree) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_configuration();
   if (ros_transform_tree) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ros_transform_tree)->GetArena();
     if (message_arena != submessage_arena) {
       ros_transform_tree = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ros_transform_tree, submessage_arena);
@@ -3707,15 +3830,18 @@ void StreamConfiguration::set_allocated_ros_transform_tree(::v1::model::ROSTrans
 }
 void StreamConfiguration::clear_ros_transform_tree() {
   if (_internal_has_ros_transform_tree()) {
-    delete configuration_.ros_transform_tree_;
+    if (GetArena() == nullptr) {
+      delete configuration_.ros_transform_tree_;
+    }
     clear_has_configuration();
   }
 }
 void StreamConfiguration::set_allocated_custom(::v1::model::Custom* custom) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_configuration();
   if (custom) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(custom);
     if (message_arena != submessage_arena) {
       custom = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, custom, submessage_arena);
@@ -3726,30 +3852,32 @@ void StreamConfiguration::set_allocated_custom(::v1::model::Custom* custom) {
   // @@protoc_insertion_point(field_set_allocated:v1.model.StreamConfiguration.custom)
 }
 void StreamConfiguration::clear_throttle_hz() {
-  if (GetArenaNoVirtual() == nullptr && throttle_hz_ != nullptr) {
+  if (GetArena() == nullptr && throttle_hz_ != nullptr) {
     delete throttle_hz_;
   }
   throttle_hz_ = nullptr;
 }
 void StreamConfiguration::clear_disabled() {
-  if (GetArenaNoVirtual() == nullptr && disabled_ != nullptr) {
+  if (GetArena() == nullptr && disabled_ != nullptr) {
     delete disabled_;
   }
   disabled_ = nullptr;
 }
-StreamConfiguration::StreamConfiguration()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+StreamConfiguration::StreamConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  tags_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.StreamConfiguration)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.StreamConfiguration)
 }
 StreamConfiguration::StreamConfiguration(const StreamConfiguration& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   tags_.MergeFrom(from.tags_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
   if (from._internal_has_throttle_hz()) {
     throttle_hz_ = new PROTOBUF_NAMESPACE_ID::DoubleValue(*from.throttle_hz_);
@@ -3806,9 +3934,11 @@ void StreamConfiguration::SharedCtor() {
 StreamConfiguration::~StreamConfiguration() {
   // @@protoc_insertion_point(destructor:v1.model.StreamConfiguration)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void StreamConfiguration::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete throttle_hz_;
   if (this != internal_default_instance()) delete disabled_;
@@ -3817,6 +3947,12 @@ void StreamConfiguration::SharedDtor() {
   }
 }
 
+void StreamConfiguration::ArenaDtor(void* object) {
+  StreamConfiguration* _this = reinterpret_cast< StreamConfiguration* >(object);
+  (void)_this;
+}
+void StreamConfiguration::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void StreamConfiguration::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -3830,27 +3966,39 @@ void StreamConfiguration::clear_configuration() {
 // @@protoc_insertion_point(one_of_clear_start:v1.model.StreamConfiguration)
   switch (configuration_case()) {
     case kRosTopic: {
-      delete configuration_.ros_topic_;
+      if (GetArena() == nullptr) {
+        delete configuration_.ros_topic_;
+      }
       break;
     }
     case kRosLocalization: {
-      delete configuration_.ros_localization_;
+      if (GetArena() == nullptr) {
+        delete configuration_.ros_localization_;
+      }
       break;
     }
     case kDirectoryWatch: {
-      delete configuration_.directory_watch_;
+      if (GetArena() == nullptr) {
+        delete configuration_.directory_watch_;
+      }
       break;
     }
     case kFileTail: {
-      delete configuration_.file_tail_;
+      if (GetArena() == nullptr) {
+        delete configuration_.file_tail_;
+      }
       break;
     }
     case kRosTransformTree: {
-      delete configuration_.ros_transform_tree_;
+      if (GetArena() == nullptr) {
+        delete configuration_.ros_transform_tree_;
+      }
       break;
     }
     case kCustom: {
-      delete configuration_.custom_;
+      if (GetArena() == nullptr) {
+        delete configuration_.custom_;
+      }
       break;
     }
     case CONFIGURATION_NOT_SET: {
@@ -3868,27 +4016,28 @@ void StreamConfiguration::Clear() {
   (void) cached_has_bits;
 
   tags_.Clear();
-  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && throttle_hz_ != nullptr) {
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && throttle_hz_ != nullptr) {
     delete throttle_hz_;
   }
   throttle_hz_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && disabled_ != nullptr) {
+  if (GetArena() == nullptr && disabled_ != nullptr) {
     delete disabled_;
   }
   disabled_ = nullptr;
   clear_configuration();
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* StreamConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string name = 1[json_name = "name"];
+      // string name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_name();
@@ -3897,7 +4046,7 @@ const char* StreamConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // map<string, string> tags = 2[json_name = "tags"];
+      // map<string, string> tags = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr -= 1;
@@ -3909,56 +4058,56 @@ const char* StreamConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
-      // .v1.model.ROSTopic ros_topic = 3[json_name = "rosTopic"];
+      // .v1.model.ROSTopic ros_topic = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_ros_topic(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.ROSLocalization ros_localization = 4[json_name = "rosLocalization"];
+      // .v1.model.ROSLocalization ros_localization = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_ros_localization(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.DirectoryWatch directory_watch = 5[json_name = "directoryWatch"];
+      // .v1.model.DirectoryWatch directory_watch = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_directory_watch(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.FileTail file_tail = 6[json_name = "fileTail"];
+      // .v1.model.FileTail file_tail = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_file_tail(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.ROSTransformTree ros_transform_tree = 7[json_name = "rosTransformTree"];
+      // .v1.model.ROSTransformTree ros_transform_tree = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_ros_transform_tree(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .google.protobuf.DoubleValue throttle_hz = 8[json_name = "throttleHz"];
+      // .google.protobuf.DoubleValue throttle_hz = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_throttle_hz(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Custom custom = 9[json_name = "custom"];
+      // .v1.model.Custom custom = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_custom(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .google.protobuf.BoolValue disabled = 19[json_name = "disabled"];
+      // .google.protobuf.BoolValue disabled = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
           ptr = ctx->ParseMessage(_internal_mutable_disabled(), ptr);
@@ -3971,7 +4120,9 @@ const char* StreamConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -3991,7 +4142,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1[json_name = "name"];
+  // string name = 1;
   if (this->name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
@@ -4001,7 +4152,7 @@ failure:
         1, this->_internal_name(), target);
   }
 
-  // map<string, string> tags = 2[json_name = "tags"];
+  // map<string, string> tags = 2;
   if (!this->_internal_tags().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
@@ -4046,7 +4197,7 @@ failure:
     }
   }
 
-  // .v1.model.ROSTopic ros_topic = 3[json_name = "rosTopic"];
+  // .v1.model.ROSTopic ros_topic = 3;
   if (_internal_has_ros_topic()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4054,7 +4205,7 @@ failure:
         3, _Internal::ros_topic(this), target, stream);
   }
 
-  // .v1.model.ROSLocalization ros_localization = 4[json_name = "rosLocalization"];
+  // .v1.model.ROSLocalization ros_localization = 4;
   if (_internal_has_ros_localization()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4062,7 +4213,7 @@ failure:
         4, _Internal::ros_localization(this), target, stream);
   }
 
-  // .v1.model.DirectoryWatch directory_watch = 5[json_name = "directoryWatch"];
+  // .v1.model.DirectoryWatch directory_watch = 5;
   if (_internal_has_directory_watch()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4070,7 +4221,7 @@ failure:
         5, _Internal::directory_watch(this), target, stream);
   }
 
-  // .v1.model.FileTail file_tail = 6[json_name = "fileTail"];
+  // .v1.model.FileTail file_tail = 6;
   if (_internal_has_file_tail()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4078,7 +4229,7 @@ failure:
         6, _Internal::file_tail(this), target, stream);
   }
 
-  // .v1.model.ROSTransformTree ros_transform_tree = 7[json_name = "rosTransformTree"];
+  // .v1.model.ROSTransformTree ros_transform_tree = 7;
   if (_internal_has_ros_transform_tree()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4086,7 +4237,7 @@ failure:
         7, _Internal::ros_transform_tree(this), target, stream);
   }
 
-  // .google.protobuf.DoubleValue throttle_hz = 8[json_name = "throttleHz"];
+  // .google.protobuf.DoubleValue throttle_hz = 8;
   if (this->has_throttle_hz()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4094,7 +4245,7 @@ failure:
         8, _Internal::throttle_hz(this), target, stream);
   }
 
-  // .v1.model.Custom custom = 9[json_name = "custom"];
+  // .v1.model.Custom custom = 9;
   if (_internal_has_custom()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4102,7 +4253,7 @@ failure:
         9, _Internal::custom(this), target, stream);
   }
 
-  // .google.protobuf.BoolValue disabled = 19[json_name = "disabled"];
+  // .google.protobuf.BoolValue disabled = 19;
   if (this->has_disabled()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4112,7 +4263,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.StreamConfiguration)
   return target;
@@ -4126,7 +4277,7 @@ size_t StreamConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // map<string, string> tags = 2[json_name = "tags"];
+  // map<string, string> tags = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_tags_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
@@ -4135,21 +4286,21 @@ size_t StreamConfiguration::ByteSizeLong() const {
     total_size += StreamConfiguration_TagsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
-  // string name = 1[json_name = "name"];
+  // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
   }
 
-  // .google.protobuf.DoubleValue throttle_hz = 8[json_name = "throttleHz"];
+  // .google.protobuf.DoubleValue throttle_hz = 8;
   if (this->has_throttle_hz()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *throttle_hz_);
   }
 
-  // .google.protobuf.BoolValue disabled = 19[json_name = "disabled"];
+  // .google.protobuf.BoolValue disabled = 19;
   if (this->has_disabled()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4157,42 +4308,42 @@ size_t StreamConfiguration::ByteSizeLong() const {
   }
 
   switch (configuration_case()) {
-    // .v1.model.ROSTopic ros_topic = 3[json_name = "rosTopic"];
+    // .v1.model.ROSTopic ros_topic = 3;
     case kRosTopic: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *configuration_.ros_topic_);
       break;
     }
-    // .v1.model.ROSLocalization ros_localization = 4[json_name = "rosLocalization"];
+    // .v1.model.ROSLocalization ros_localization = 4;
     case kRosLocalization: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *configuration_.ros_localization_);
       break;
     }
-    // .v1.model.DirectoryWatch directory_watch = 5[json_name = "directoryWatch"];
+    // .v1.model.DirectoryWatch directory_watch = 5;
     case kDirectoryWatch: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *configuration_.directory_watch_);
       break;
     }
-    // .v1.model.FileTail file_tail = 6[json_name = "fileTail"];
+    // .v1.model.FileTail file_tail = 6;
     case kFileTail: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *configuration_.file_tail_);
       break;
     }
-    // .v1.model.ROSTransformTree ros_transform_tree = 7[json_name = "rosTransformTree"];
+    // .v1.model.ROSTransformTree ros_transform_tree = 7;
     case kRosTransformTree: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *configuration_.ros_transform_tree_);
       break;
     }
-    // .v1.model.Custom custom = 9[json_name = "custom"];
+    // .v1.model.Custom custom = 9;
     case kCustom: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4230,14 +4381,13 @@ void StreamConfiguration::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from
 void StreamConfiguration::MergeFrom(const StreamConfiguration& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.StreamConfiguration)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   tags_.MergeFrom(from.tags_);
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _internal_set_name(from._internal_name());
   }
   if (from.has_throttle_hz()) {
     _internal_mutable_throttle_hz()->PROTOBUF_NAMESPACE_ID::DoubleValue::MergeFrom(from._internal_throttle_hz());
@@ -4296,12 +4446,15 @@ bool StreamConfiguration::IsInitialized() const {
 
 void StreamConfiguration::InternalSwap(StreamConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   tags_.Swap(&other->tags_);
-  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(throttle_hz_, other->throttle_hz_);
-  swap(disabled_, other->disabled_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(StreamConfiguration, disabled_)
+      + sizeof(StreamConfiguration::disabled_)
+      - PROTOBUF_FIELD_OFFSET(StreamConfiguration, throttle_hz_)>(
+          reinterpret_cast<char*>(&throttle_hz_),
+          reinterpret_cast<char*>(&other->throttle_hz_));
   swap(configuration_, other->configuration_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
@@ -4319,15 +4472,15 @@ class Custom::_Internal {
  public:
 };
 
-Custom::Custom()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+Custom::Custom(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.Custom)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.Custom)
 }
 Custom::Custom(const Custom& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:v1.model.Custom)
 }
 
@@ -4337,11 +4490,19 @@ void Custom::SharedCtor() {
 Custom::~Custom() {
   // @@protoc_insertion_point(destructor:v1.model.Custom)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Custom::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void Custom::ArenaDtor(void* object) {
+  Custom* _this = reinterpret_cast< Custom* >(object);
+  (void)_this;
+}
+void Custom::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Custom::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -4357,11 +4518,12 @@ void Custom::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Custom::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4370,7 +4532,9 @@ const char* Custom::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
   }  // while
@@ -4390,7 +4554,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.Custom)
   return target;
@@ -4431,7 +4595,7 @@ void Custom::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void Custom::MergeFrom(const Custom& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Custom)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4457,7 +4621,7 @@ bool Custom::IsInitialized() const {
 
 void Custom::InternalSwap(Custom* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Custom::GetMetadata() const {
@@ -4473,22 +4637,24 @@ class DirectoryWatch::_Internal {
  public:
 };
 
-DirectoryWatch::DirectoryWatch()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+DirectoryWatch::DirectoryWatch(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.DirectoryWatch)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.DirectoryWatch)
 }
 DirectoryWatch::DirectoryWatch(const DirectoryWatch& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   directory_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_directory().empty()) {
-    directory_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.directory_);
+    directory_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_directory(),
+      GetArena());
   }
   extension_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_extension().empty()) {
-    extension_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.extension_);
+    extension_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_extension(),
+      GetArena());
   }
   ::memcpy(&file_type_, &from.file_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&remote_agent_) -
@@ -4508,13 +4674,21 @@ void DirectoryWatch::SharedCtor() {
 DirectoryWatch::~DirectoryWatch() {
   // @@protoc_insertion_point(destructor:v1.model.DirectoryWatch)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void DirectoryWatch::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   directory_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   extension_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void DirectoryWatch::ArenaDtor(void* object) {
+  DirectoryWatch* _this = reinterpret_cast< DirectoryWatch* >(object);
+  (void)_this;
+}
+void DirectoryWatch::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void DirectoryWatch::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -4530,22 +4704,23 @@ void DirectoryWatch::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  directory_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  extension_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  directory_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  extension_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&file_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&remote_agent_) -
       reinterpret_cast<char*>(&file_type_)) + sizeof(remote_agent_));
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* DirectoryWatch::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string directory = 1[json_name = "directory"];
+      // string directory = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_directory();
@@ -4554,7 +4729,7 @@ const char* DirectoryWatch::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string extension = 2[json_name = "extension"];
+      // string extension = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_extension();
@@ -4563,18 +4738,18 @@ const char* DirectoryWatch::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.FileType file_type = 3[json_name = "fileType"];
+      // .v1.model.FileType file_type = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_file_type(static_cast<::v1::model::FileType>(val));
         } else goto handle_unusual;
         continue;
-      // bool remote_agent = 4[json_name = "remoteAgent"];
+      // bool remote_agent = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          remote_agent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          remote_agent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4584,7 +4759,9 @@ const char* DirectoryWatch::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -4604,7 +4781,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string directory = 1[json_name = "directory"];
+  // string directory = 1;
   if (this->directory().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_directory().data(), static_cast<int>(this->_internal_directory().length()),
@@ -4614,7 +4791,7 @@ failure:
         1, this->_internal_directory(), target);
   }
 
-  // string extension = 2[json_name = "extension"];
+  // string extension = 2;
   if (this->extension().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_extension().data(), static_cast<int>(this->_internal_extension().length()),
@@ -4624,14 +4801,14 @@ failure:
         2, this->_internal_extension(), target);
   }
 
-  // .v1.model.FileType file_type = 3[json_name = "fileType"];
+  // .v1.model.FileType file_type = 3;
   if (this->file_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       3, this->_internal_file_type(), target);
   }
 
-  // bool remote_agent = 4[json_name = "remoteAgent"];
+  // bool remote_agent = 4;
   if (this->remote_agent() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_remote_agent(), target);
@@ -4639,7 +4816,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.DirectoryWatch)
   return target;
@@ -4653,27 +4830,27 @@ size_t DirectoryWatch::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string directory = 1[json_name = "directory"];
+  // string directory = 1;
   if (this->directory().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_directory());
   }
 
-  // string extension = 2[json_name = "extension"];
+  // string extension = 2;
   if (this->extension().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_extension());
   }
 
-  // .v1.model.FileType file_type = 3[json_name = "fileType"];
+  // .v1.model.FileType file_type = 3;
   if (this->file_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_file_type());
   }
 
-  // bool remote_agent = 4[json_name = "remoteAgent"];
+  // bool remote_agent = 4;
   if (this->remote_agent() != 0) {
     total_size += 1 + 1;
   }
@@ -4705,17 +4882,15 @@ void DirectoryWatch::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void DirectoryWatch::MergeFrom(const DirectoryWatch& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.DirectoryWatch)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.directory().size() > 0) {
-
-    directory_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.directory_);
+    _internal_set_directory(from._internal_directory());
   }
   if (from.extension().size() > 0) {
-
-    extension_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.extension_);
+    _internal_set_extension(from._internal_extension());
   }
   if (from.file_type() != 0) {
     _internal_set_file_type(from._internal_file_type());
@@ -4745,13 +4920,15 @@ bool DirectoryWatch::IsInitialized() const {
 
 void DirectoryWatch::InternalSwap(DirectoryWatch* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  directory_.Swap(&other->directory_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  extension_.Swap(&other->extension_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(file_type_, other->file_type_);
-  swap(remote_agent_, other->remote_agent_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  directory_.Swap(&other->directory_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  extension_.Swap(&other->extension_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DirectoryWatch, remote_agent_)
+      + sizeof(DirectoryWatch::remote_agent_)
+      - PROTOBUF_FIELD_OFFSET(DirectoryWatch, file_type_)>(
+          reinterpret_cast<char*>(&file_type_),
+          reinterpret_cast<char*>(&other->file_type_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DirectoryWatch::GetMetadata() const {
@@ -4767,30 +4944,34 @@ class FileTail::_Internal {
  public:
 };
 
-FileTail::FileTail()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+FileTail::FileTail(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.FileTail)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.FileTail)
 }
 FileTail::FileTail(const FileTail& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   filename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_filename().empty()) {
-    filename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.filename_);
+    filename_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_filename(),
+      GetArena());
   }
   time_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_time_key().empty()) {
-    time_key_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.time_key_);
+    time_key_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_time_key(),
+      GetArena());
   }
   time_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_time_format().empty()) {
-    time_format_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.time_format_);
+    time_format_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_time_format(),
+      GetArena());
   }
   regex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_regex().empty()) {
-    regex_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.regex_);
+    regex_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_regex(),
+      GetArena());
   }
   file_format_ = from.file_format_;
   // @@protoc_insertion_point(copy_constructor:v1.model.FileTail)
@@ -4808,15 +4989,23 @@ void FileTail::SharedCtor() {
 FileTail::~FileTail() {
   // @@protoc_insertion_point(destructor:v1.model.FileTail)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void FileTail::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   filename_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   time_key_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   time_format_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   regex_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void FileTail::ArenaDtor(void* object) {
+  FileTail* _this = reinterpret_cast< FileTail* >(object);
+  (void)_this;
+}
+void FileTail::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void FileTail::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -4832,22 +5021,23 @@ void FileTail::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  filename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  time_key_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  time_format_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  regex_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  filename_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  time_key_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  time_format_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  regex_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   file_format_ = 0;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileTail::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string filename = 1[json_name = "filename"];
+      // string filename = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_filename();
@@ -4856,15 +5046,15 @@ const char* FileTail::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.FileFormat file_format = 2[json_name = "fileFormat"];
+      // .v1.model.FileFormat file_format = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_file_format(static_cast<::v1::model::FileFormat>(val));
         } else goto handle_unusual;
         continue;
-      // string time_key = 3[json_name = "timeKey"];
+      // string time_key = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_time_key();
@@ -4873,7 +5063,7 @@ const char* FileTail::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string time_format = 4[json_name = "timeFormat"];
+      // string time_format = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_time_format();
@@ -4882,7 +5072,7 @@ const char* FileTail::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string regex = 5[json_name = "regex"];
+      // string regex = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_regex();
@@ -4897,7 +5087,9 @@ const char* FileTail::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -4917,7 +5109,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string filename = 1[json_name = "filename"];
+  // string filename = 1;
   if (this->filename().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_filename().data(), static_cast<int>(this->_internal_filename().length()),
@@ -4927,14 +5119,14 @@ failure:
         1, this->_internal_filename(), target);
   }
 
-  // .v1.model.FileFormat file_format = 2[json_name = "fileFormat"];
+  // .v1.model.FileFormat file_format = 2;
   if (this->file_format() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       2, this->_internal_file_format(), target);
   }
 
-  // string time_key = 3[json_name = "timeKey"];
+  // string time_key = 3;
   if (this->time_key().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_time_key().data(), static_cast<int>(this->_internal_time_key().length()),
@@ -4944,7 +5136,7 @@ failure:
         3, this->_internal_time_key(), target);
   }
 
-  // string time_format = 4[json_name = "timeFormat"];
+  // string time_format = 4;
   if (this->time_format().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_time_format().data(), static_cast<int>(this->_internal_time_format().length()),
@@ -4954,7 +5146,7 @@ failure:
         4, this->_internal_time_format(), target);
   }
 
-  // string regex = 5[json_name = "regex"];
+  // string regex = 5;
   if (this->regex().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_regex().data(), static_cast<int>(this->_internal_regex().length()),
@@ -4966,7 +5158,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.FileTail)
   return target;
@@ -4980,35 +5172,35 @@ size_t FileTail::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string filename = 1[json_name = "filename"];
+  // string filename = 1;
   if (this->filename().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_filename());
   }
 
-  // string time_key = 3[json_name = "timeKey"];
+  // string time_key = 3;
   if (this->time_key().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_time_key());
   }
 
-  // string time_format = 4[json_name = "timeFormat"];
+  // string time_format = 4;
   if (this->time_format().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_time_format());
   }
 
-  // string regex = 5[json_name = "regex"];
+  // string regex = 5;
   if (this->regex().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_regex());
   }
 
-  // .v1.model.FileFormat file_format = 2[json_name = "fileFormat"];
+  // .v1.model.FileFormat file_format = 2;
   if (this->file_format() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_file_format());
@@ -5041,25 +5233,21 @@ void FileTail::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void FileTail::MergeFrom(const FileTail& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.FileTail)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.filename().size() > 0) {
-
-    filename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.filename_);
+    _internal_set_filename(from._internal_filename());
   }
   if (from.time_key().size() > 0) {
-
-    time_key_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.time_key_);
+    _internal_set_time_key(from._internal_time_key());
   }
   if (from.time_format().size() > 0) {
-
-    time_format_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.time_format_);
+    _internal_set_time_format(from._internal_time_format());
   }
   if (from.regex().size() > 0) {
-
-    regex_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.regex_);
+    _internal_set_regex(from._internal_regex());
   }
   if (from.file_format() != 0) {
     _internal_set_file_format(from._internal_file_format());
@@ -5086,15 +5274,11 @@ bool FileTail::IsInitialized() const {
 
 void FileTail::InternalSwap(FileTail* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  filename_.Swap(&other->filename_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  time_key_.Swap(&other->time_key_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  time_format_.Swap(&other->time_format_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  regex_.Swap(&other->regex_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  filename_.Swap(&other->filename_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  time_key_.Swap(&other->time_key_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  time_format_.Swap(&other->time_format_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  regex_.Swap(&other->regex_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(file_format_, other->file_format_);
 }
 
@@ -5108,58 +5292,58 @@ void FileTail::InternalSwap(FileTail* other) {
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::v1::model::AgentConfigurationStore* Arena::CreateMaybeMessage< ::v1::model::AgentConfigurationStore >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::AgentConfigurationStore >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::AgentConfigurationStore >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::AgentConfiguration* Arena::CreateMaybeMessage< ::v1::model::AgentConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::AgentConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::AgentConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::AgentConfigurationDocument_TagsEntry_DoNotUse* Arena::CreateMaybeMessage< ::v1::model::AgentConfigurationDocument_TagsEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::AgentConfigurationDocument_TagsEntry_DoNotUse >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::AgentConfigurationDocument_TagsEntry_DoNotUse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::AgentConfigurationDocument* Arena::CreateMaybeMessage< ::v1::model::AgentConfigurationDocument >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::AgentConfigurationDocument >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::AgentConfigurationDocument >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::TeleopConfiguration* Arena::CreateMaybeMessage< ::v1::model::TeleopConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::TeleopConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::TeleopConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::PortForwardingConfiguration* Arena::CreateMaybeMessage< ::v1::model::PortForwardingConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::PortForwardingConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::PortForwardingConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::TeleopRosStreamConfiguration* Arena::CreateMaybeMessage< ::v1::model::TeleopRosStreamConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::TeleopRosStreamConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::TeleopRosStreamConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::TelemetryConfiguration* Arena::CreateMaybeMessage< ::v1::model::TelemetryConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::TelemetryConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::TelemetryConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::ApplicationConfiguration_ConfigurationMapEntry_DoNotUse* Arena::CreateMaybeMessage< ::v1::model::ApplicationConfiguration_ConfigurationMapEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::ApplicationConfiguration_ConfigurationMapEntry_DoNotUse >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::ApplicationConfiguration_ConfigurationMapEntry_DoNotUse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::ApplicationConfiguration* Arena::CreateMaybeMessage< ::v1::model::ApplicationConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::ApplicationConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::ApplicationConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::ResourcesConfiguration* Arena::CreateMaybeMessage< ::v1::model::ResourcesConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::ResourcesConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::ResourcesConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::DiskConfiguration* Arena::CreateMaybeMessage< ::v1::model::DiskConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::DiskConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::DiskConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::ROSConfiguration* Arena::CreateMaybeMessage< ::v1::model::ROSConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::ROSConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::ROSConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::StreamConfiguration_TagsEntry_DoNotUse* Arena::CreateMaybeMessage< ::v1::model::StreamConfiguration_TagsEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::StreamConfiguration_TagsEntry_DoNotUse >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::StreamConfiguration_TagsEntry_DoNotUse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::StreamConfiguration* Arena::CreateMaybeMessage< ::v1::model::StreamConfiguration >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::StreamConfiguration >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::StreamConfiguration >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::Custom* Arena::CreateMaybeMessage< ::v1::model::Custom >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::Custom >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::Custom >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::DirectoryWatch* Arena::CreateMaybeMessage< ::v1::model::DirectoryWatch >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::DirectoryWatch >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::DirectoryWatch >(arena);
 }
 template<> PROTOBUF_NOINLINE ::v1::model::FileTail* Arena::CreateMaybeMessage< ::v1::model::FileTail >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::FileTail >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::FileTail >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

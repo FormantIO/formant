@@ -11,9 +11,12 @@
 #include <grpcpp/impl/codegen/channel_interface.h>
 #include <grpcpp/impl/codegen/client_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
 #include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/rpc_service_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
+#include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
 namespace v1 {
@@ -522,87 +525,172 @@ Agent::Service::Service() {
       Agent_method_names[0],
       ::grpc::internal::RpcMethod::CLIENT_STREAMING,
       new ::grpc::internal::ClientStreamingHandler< Agent::Service, ::v1::model::Datapoint, ::v1::agent::StreamDataResponse>(
-          std::mem_fn(&Agent::Service::StreamData), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             ::grpc_impl::ServerReader<::v1::model::Datapoint>* reader,
+             ::v1::agent::StreamDataResponse* resp) {
+               return service->StreamData(ctx, reader, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::model::Datapoint, ::v1::agent::PostDataResponse>(
-          std::mem_fn(&Agent::Service::PostData), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::model::Datapoint* req,
+             ::v1::agent::PostDataResponse* resp) {
+               return service->PostData(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::PostDataMultiRequest, ::v1::agent::PostDataMultiResponse>(
-          std::mem_fn(&Agent::Service::PostDataMulti), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::PostDataMultiRequest* req,
+             ::v1::agent::PostDataMultiResponse* resp) {
+               return service->PostDataMulti(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::CreateEventRequest, ::v1::agent::CreateEventResponse>(
-          std::mem_fn(&Agent::Service::CreateEvent), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::CreateEventRequest* req,
+             ::v1::agent::CreateEventResponse* resp) {
+               return service->CreateEvent(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::model::InterventionRequest, ::v1::model::InterventionRequest>(
-          std::mem_fn(&Agent::Service::CreateInterventionRequest), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::model::InterventionRequest* req,
+             ::v1::model::InterventionRequest* resp) {
+               return service->CreateInterventionRequest(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::GetInterventionRequestRequest, ::v1::model::InterventionRequest>(
-          std::mem_fn(&Agent::Service::GetInterventionRequest), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::GetInterventionRequestRequest* req,
+             ::v1::model::InterventionRequest* resp) {
+               return service->GetInterventionRequest(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::GetInterventionResponseRequest, ::v1::model::InterventionResponse>(
-          std::mem_fn(&Agent::Service::GetInterventionResponse), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::GetInterventionResponseRequest* req,
+             ::v1::model::InterventionResponse* resp) {
+               return service->GetInterventionResponse(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[7],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::GetStreamsConfigurationRequest, ::v1::agent::GetStreamsConfigurationResponse>(
-          std::mem_fn(&Agent::Service::GetStreamsConfiguration), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::GetStreamsConfigurationRequest* req,
+             ::v1::agent::GetStreamsConfigurationResponse* resp) {
+               return service->GetStreamsConfiguration(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[8],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::GetApplicationConfigurationRequest, ::v1::agent::GetApplicationConfigurationResponse>(
-          std::mem_fn(&Agent::Service::GetApplicationConfiguration), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::GetApplicationConfigurationRequest* req,
+             ::v1::agent::GetApplicationConfigurationResponse* resp) {
+               return service->GetApplicationConfiguration(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[9],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::GetAgentConfigurationRequest, ::v1::agent::GetAgentConfigurationResponse>(
-          std::mem_fn(&Agent::Service::GetAgentConfiguration), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::GetAgentConfigurationRequest* req,
+             ::v1::agent::GetAgentConfigurationResponse* resp) {
+               return service->GetAgentConfiguration(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[10],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::HealthRequest, ::v1::agent::HealthResponse>(
-          std::mem_fn(&Agent::Service::Health), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::HealthRequest* req,
+             ::v1::agent::HealthResponse* resp) {
+               return service->Health(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[11],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::GetCommandRequestRequest, ::v1::agent::GetCommandRequestResponse>(
-          std::mem_fn(&Agent::Service::GetCommandRequest), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::GetCommandRequestRequest* req,
+             ::v1::agent::GetCommandRequestResponse* resp) {
+               return service->GetCommandRequest(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[12],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< Agent::Service, ::v1::agent::GetCommandRequestStreamRequest, ::v1::agent::GetCommandRequestStreamResponse>(
-          std::mem_fn(&Agent::Service::GetCommandRequestStream), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::GetCommandRequestStreamRequest* req,
+             ::grpc_impl::ServerWriter<::v1::agent::GetCommandRequestStreamResponse>* writer) {
+               return service->GetCommandRequestStream(ctx, req, writer);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[13],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::SendCommandResponseRequest, ::v1::agent::SendCommandResponseResponse>(
-          std::mem_fn(&Agent::Service::SendCommandResponse), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::SendCommandResponseRequest* req,
+             ::v1::agent::SendCommandResponseResponse* resp) {
+               return service->SendCommandResponse(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[14],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::model::TransformFrame, ::v1::agent::PostTransformFrameResponse>(
-          std::mem_fn(&Agent::Service::PostTransformFrame), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::model::TransformFrame* req,
+             ::v1::agent::PostTransformFrameResponse* resp) {
+               return service->PostTransformFrame(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[15],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::SetBaseFrameIDRequest, ::v1::agent::SetBaseFrameIDResponse>(
-          std::mem_fn(&Agent::Service::SetBaseFrameID), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::SetBaseFrameIDRequest* req,
+             ::v1::agent::SetBaseFrameIDResponse* resp) {
+               return service->SetBaseFrameID(ctx, req, resp);
+             }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Agent_method_names[16],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Agent::Service, ::v1::agent::ClearTransformTreeRequest, ::v1::agent::ClearTransformTreeResponse>(
-          std::mem_fn(&Agent::Service::ClearTransformTree), this)));
+          [](Agent::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::v1::agent::ClearTransformTreeRequest* req,
+             ::v1::agent::ClearTransformTreeResponse* resp) {
+               return service->ClearTransformTree(ctx, req, resp);
+             }, this)));
 }
 
 Agent::Service::~Service() {

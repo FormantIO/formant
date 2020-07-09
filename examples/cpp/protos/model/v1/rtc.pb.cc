@@ -78,16 +78,14 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto[] PROTOBU
   "\n\031protos/model/v1/rtc.proto\022\010v1.model\032\032p"
   "rotos/model/v1/math.proto\032 protos/model/"
   "v1/navigation.proto\032\033protos/model/v1/med"
-  "ia.proto\"\251\002\n\nRTCMessage\022\026\n\006stream\030\001 \001(\tR"
-  "\006stream\022\034\n\ttimestamp\030\002 \001(\003R\ttimestamp\022\'\n"
-  "\005twist\030\003 \001(\0132\017.v1.model.TwistH\000R\005twist\022\024"
-  "\n\004bool\030\004 \001(\010H\000R\004bool\022+\n\020compressed_image"
-  "\030\005 \001(\014H\000R\017compressedImage\022+\n\007goal_id\030\006 \001"
-  "(\0132\020.v1.model.GoalIDH\000R\006goalId\022D\n\020h264_v"
-  "ideo_frame\030\007 \001(\0132\030.v1.model.H264VideoFra"
-  "meH\000R\016h264VideoFrameB\006\n\004dataB+Z)github.c"
-  "om/FormantIO/genproto/go/v1/modelb\006proto"
-  "3"
+  "ia.proto\"\340\001\n\nRTCMessage\022\016\n\006stream\030\001 \001(\t\022"
+  "\021\n\ttimestamp\030\002 \001(\003\022 \n\005twist\030\003 \001(\0132\017.v1.m"
+  "odel.TwistH\000\022\016\n\004bool\030\004 \001(\010H\000\022\032\n\020compress"
+  "ed_image\030\005 \001(\014H\000\022#\n\007goal_id\030\006 \001(\0132\020.v1.m"
+  "odel.GoalIDH\000\0224\n\020h264_video_frame\030\007 \001(\0132"
+  "\030.v1.model.H264VideoFrameH\000B\006\n\004dataB+Z)g"
+  "ithub.com/FormantIO/genproto/go/v1/model"
+  "b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps[3] = {
   &::descriptor_table_protos_2fmodel_2fv1_2fmath_2eproto,
@@ -98,16 +96,15 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
   &scc_info_RTCMessage_protos_2fmodel_2fv1_2frtc_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_once;
-static bool descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto, "protos/model/v1/rtc.proto", 481,
+  false, false, descriptor_table_protodef_protos_2fmodel_2fv1_2frtc_2eproto, "protos/model/v1/rtc.proto", 408,
   &descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto_deps, 1, 3,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2frtc_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2frtc_2eproto, 1, file_level_enum_descriptors_protos_2fmodel_2fv1_2frtc_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2frtc_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_protos_2fmodel_2fv1_2frtc_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto), true);
+static bool dynamic_init_dummy_protos_2fmodel_2fv1_2frtc_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_protos_2fmodel_2fv1_2frtc_2eproto)), true);
 namespace v1 {
 namespace model {
 
@@ -144,10 +141,11 @@ RTCMessage::_Internal::h264_video_frame(const RTCMessage* msg) {
   return *msg->data_.h264_video_frame_;
 }
 void RTCMessage::set_allocated_twist(::v1::model::Twist* twist) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (twist) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(twist)->GetArena();
     if (message_arena != submessage_arena) {
       twist = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, twist, submessage_arena);
@@ -159,15 +157,18 @@ void RTCMessage::set_allocated_twist(::v1::model::Twist* twist) {
 }
 void RTCMessage::clear_twist() {
   if (_internal_has_twist()) {
-    delete data_.twist_;
+    if (GetArena() == nullptr) {
+      delete data_.twist_;
+    }
     clear_has_data();
   }
 }
 void RTCMessage::set_allocated_goal_id(::v1::model::GoalID* goal_id) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (goal_id) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(goal_id)->GetArena();
     if (message_arena != submessage_arena) {
       goal_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, goal_id, submessage_arena);
@@ -179,15 +180,18 @@ void RTCMessage::set_allocated_goal_id(::v1::model::GoalID* goal_id) {
 }
 void RTCMessage::clear_goal_id() {
   if (_internal_has_goal_id()) {
-    delete data_.goal_id_;
+    if (GetArena() == nullptr) {
+      delete data_.goal_id_;
+    }
     clear_has_data();
   }
 }
 void RTCMessage::set_allocated_h264_video_frame(::v1::model::H264VideoFrame* h264_video_frame) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (h264_video_frame) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(h264_video_frame)->GetArena();
     if (message_arena != submessage_arena) {
       h264_video_frame = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, h264_video_frame, submessage_arena);
@@ -199,22 +203,25 @@ void RTCMessage::set_allocated_h264_video_frame(::v1::model::H264VideoFrame* h26
 }
 void RTCMessage::clear_h264_video_frame() {
   if (_internal_has_h264_video_frame()) {
-    delete data_.h264_video_frame_;
+    if (GetArena() == nullptr) {
+      delete data_.h264_video_frame_;
+    }
     clear_has_data();
   }
 }
-RTCMessage::RTCMessage()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+RTCMessage::RTCMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:v1.model.RTCMessage)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:v1.model.RTCMessage)
 }
 RTCMessage::RTCMessage(const RTCMessage& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   stream_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_stream().empty()) {
-    stream_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.stream_);
+    stream_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_stream(),
+      GetArena());
   }
   timestamp_ = from.timestamp_;
   clear_has_data();
@@ -256,15 +263,23 @@ void RTCMessage::SharedCtor() {
 RTCMessage::~RTCMessage() {
   // @@protoc_insertion_point(destructor:v1.model.RTCMessage)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void RTCMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   stream_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (has_data()) {
     clear_data();
   }
 }
 
+void RTCMessage::ArenaDtor(void* object) {
+  RTCMessage* _this = reinterpret_cast< RTCMessage* >(object);
+  (void)_this;
+}
+void RTCMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RTCMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -278,7 +293,9 @@ void RTCMessage::clear_data() {
 // @@protoc_insertion_point(one_of_clear_start:v1.model.RTCMessage)
   switch (data_case()) {
     case kTwist: {
-      delete data_.twist_;
+      if (GetArena() == nullptr) {
+        delete data_.twist_;
+      }
       break;
     }
     case kBool: {
@@ -286,15 +303,19 @@ void RTCMessage::clear_data() {
       break;
     }
     case kCompressedImage: {
-      data_.compressed_image_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+      data_.compressed_image_.Destroy(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
       break;
     }
     case kGoalId: {
-      delete data_.goal_id_;
+      if (GetArena() == nullptr) {
+        delete data_.goal_id_;
+      }
       break;
     }
     case kH264VideoFrame: {
-      delete data_.h264_video_frame_;
+      if (GetArena() == nullptr) {
+        delete data_.h264_video_frame_;
+      }
       break;
     }
     case DATA_NOT_SET: {
@@ -311,20 +332,21 @@ void RTCMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  stream_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stream_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   timestamp_ = PROTOBUF_LONGLONG(0);
   clear_data();
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* RTCMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string stream = 1[json_name = "stream"];
+      // string stream = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_stream();
@@ -333,28 +355,28 @@ const char* RTCMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int64 timestamp = 2[json_name = "timestamp"];
+      // int64 timestamp = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.Twist twist = 3[json_name = "twist"];
+      // .v1.model.Twist twist = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_twist(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool bool = 4[json_name = "bool"];
+      // bool bool = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          _internal_set_bool_(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          _internal_set_bool_(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bytes compressed_image = 5[json_name = "compressedImage"];
+      // bytes compressed_image = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_compressed_image();
@@ -362,14 +384,14 @@ const char* RTCMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.GoalID goal_id = 6[json_name = "goalId"];
+      // .v1.model.GoalID goal_id = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_goal_id(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .v1.model.H264VideoFrame h264_video_frame = 7[json_name = "h264VideoFrame"];
+      // .v1.model.H264VideoFrame h264_video_frame = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_h264_video_frame(), ptr);
@@ -382,7 +404,9 @@ const char* RTCMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
           ctx->SetLastTag(tag);
           goto success;
         }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
       }
@@ -402,7 +426,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string stream = 1[json_name = "stream"];
+  // string stream = 1;
   if (this->stream().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_stream().data(), static_cast<int>(this->_internal_stream().length()),
@@ -412,13 +436,13 @@ failure:
         1, this->_internal_stream(), target);
   }
 
-  // int64 timestamp = 2[json_name = "timestamp"];
+  // int64 timestamp = 2;
   if (this->timestamp() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_timestamp(), target);
   }
 
-  // .v1.model.Twist twist = 3[json_name = "twist"];
+  // .v1.model.Twist twist = 3;
   if (_internal_has_twist()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -426,19 +450,19 @@ failure:
         3, _Internal::twist(this), target, stream);
   }
 
-  // bool bool = 4[json_name = "bool"];
+  // bool bool = 4;
   if (_internal_has_bool_()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_bool_(), target);
   }
 
-  // bytes compressed_image = 5[json_name = "compressedImage"];
+  // bytes compressed_image = 5;
   if (_internal_has_compressed_image()) {
     target = stream->WriteBytesMaybeAliased(
         5, this->_internal_compressed_image(), target);
   }
 
-  // .v1.model.GoalID goal_id = 6[json_name = "goalId"];
+  // .v1.model.GoalID goal_id = 6;
   if (_internal_has_goal_id()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -446,7 +470,7 @@ failure:
         6, _Internal::goal_id(this), target, stream);
   }
 
-  // .v1.model.H264VideoFrame h264_video_frame = 7[json_name = "h264VideoFrame"];
+  // .v1.model.H264VideoFrame h264_video_frame = 7;
   if (_internal_has_h264_video_frame()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -456,7 +480,7 @@ failure:
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:v1.model.RTCMessage)
   return target;
@@ -470,14 +494,14 @@ size_t RTCMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string stream = 1[json_name = "stream"];
+  // string stream = 1;
   if (this->stream().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_stream());
   }
 
-  // int64 timestamp = 2[json_name = "timestamp"];
+  // int64 timestamp = 2;
   if (this->timestamp() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
@@ -485,33 +509,33 @@ size_t RTCMessage::ByteSizeLong() const {
   }
 
   switch (data_case()) {
-    // .v1.model.Twist twist = 3[json_name = "twist"];
+    // .v1.model.Twist twist = 3;
     case kTwist: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.twist_);
       break;
     }
-    // bool bool = 4[json_name = "bool"];
+    // bool bool = 4;
     case kBool: {
       total_size += 1 + 1;
       break;
     }
-    // bytes compressed_image = 5[json_name = "compressedImage"];
+    // bytes compressed_image = 5;
     case kCompressedImage: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_compressed_image());
       break;
     }
-    // .v1.model.GoalID goal_id = 6[json_name = "goalId"];
+    // .v1.model.GoalID goal_id = 6;
     case kGoalId: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.goal_id_);
       break;
     }
-    // .v1.model.H264VideoFrame h264_video_frame = 7[json_name = "h264VideoFrame"];
+    // .v1.model.H264VideoFrame h264_video_frame = 7;
     case kH264VideoFrame: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -549,13 +573,12 @@ void RTCMessage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void RTCMessage::MergeFrom(const RTCMessage& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:v1.model.RTCMessage)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.stream().size() > 0) {
-
-    stream_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.stream_);
+    _internal_set_stream(from._internal_stream());
   }
   if (from.timestamp() != 0) {
     _internal_set_timestamp(from._internal_timestamp());
@@ -607,9 +630,8 @@ bool RTCMessage::IsInitialized() const {
 
 void RTCMessage::InternalSwap(RTCMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  stream_.Swap(&other->stream_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  stream_.Swap(&other->stream_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(timestamp_, other->timestamp_);
   swap(data_, other->data_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
@@ -625,7 +647,7 @@ void RTCMessage::InternalSwap(RTCMessage* other) {
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::v1::model::RTCMessage* Arena::CreateMaybeMessage< ::v1::model::RTCMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::v1::model::RTCMessage >(arena);
+  return Arena::CreateMessageInternal< ::v1::model::RTCMessage >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
