@@ -12,9 +12,9 @@ agent = agent_pb2_grpc.AgentStub(channel)
 
 file_datapoint = file_pb2.File()
 file_path = "%s/data/planets.csv" % path
+print(file_path)
 file_datapoint.url = file_path
 file_datapoint.filename = "planets.csv"
-file_datapoint.size = 1024
 request = datapoint_pb2.Datapoint(
     stream="test.file", file=file_datapoint, timestamp=int(time.time() * 1000)
 )
