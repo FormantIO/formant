@@ -1,6 +1,6 @@
 ## Content
 
-This directory contains example C++ source code that interacts with Formant Agent.
+This directory contains example C++ source code that interacts with Formant Agent. It is built to run on Ubuntu Linux 18.04.
 
 ## Setup
 
@@ -32,7 +32,7 @@ git clone https://github.com/FormantIO/formant.git
 cd formant/examples/cpp
 ```
 
-4. Generate the C++ gRPC code.
+4. Generate the C++ gRPC code. It is already checked in with the repository, and this step is only necessary if your installed `protoc` version differs substantially from the version used to previously generate the code.
 ```
 protoc -I ../.. --grpc_out=. --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` ../../protos/*/v1/*.proto
 protoc -I ../.. --cpp_out=. ../../protos/*/v1/*.proto

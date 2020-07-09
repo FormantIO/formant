@@ -1,4 +1,4 @@
-#### Contents
+### Contents
 
 This repository provides software releases and other miscellaneous resources for development with Formant.
 
