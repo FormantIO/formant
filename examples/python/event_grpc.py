@@ -1,10 +1,8 @@
-import os
 import time
 
 import grpc
 
-from protos.agent.v1 import agent_pb2, agent_pb2_grpc
-from protos.model.v1 import event_pb2
+from formant.protos.agent.v1 import agent_pb2, agent_pb2_grpc
 
 agent = agent_pb2_grpc.AgentStub(grpc.insecure_channel("localhost:5501"))
 request = agent_pb2.CreateEventRequest()
