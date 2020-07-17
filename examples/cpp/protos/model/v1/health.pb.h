@@ -48,7 +48,7 @@ struct TableStruct_protos_2fmodel_2fv1_2fhealth_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[1]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[2]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -57,12 +57,16 @@ struct TableStruct_protos_2fmodel_2fv1_2fhealth_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto;
 namespace v1 {
 namespace model {
+class Battery;
+class BatteryDefaultTypeInternal;
+extern BatteryDefaultTypeInternal _Battery_default_instance_;
 class Health;
 class HealthDefaultTypeInternal;
 extern HealthDefaultTypeInternal _Health_default_instance_;
 }  // namespace model
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
+template<> ::v1::model::Battery* Arena::CreateMaybeMessage<::v1::model::Battery>(Arena*);
 template<> ::v1::model::Health* Arena::CreateMaybeMessage<::v1::model::Health>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace v1 {
@@ -223,6 +227,167 @@ class Health :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fhealth_2eproto;
 };
+// -------------------------------------------------------------------
+
+class Battery :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:v1.model.Battery) */ {
+ public:
+  Battery();
+  virtual ~Battery();
+
+  Battery(const Battery& from);
+  Battery(Battery&& from) noexcept
+    : Battery() {
+    *this = ::std::move(from);
+  }
+
+  inline Battery& operator=(const Battery& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Battery& operator=(Battery&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Battery& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Battery* internal_default_instance() {
+    return reinterpret_cast<const Battery*>(
+               &_Battery_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(Battery& a, Battery& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Battery* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Battery* New() const final {
+    return CreateMaybeMessage<Battery>(nullptr);
+  }
+
+  Battery* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Battery>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Battery& from);
+  void MergeFrom(const Battery& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Battery* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "v1.model.Battery";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto);
+    return ::descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPercentageFieldNumber = 1,
+    kVoltageFieldNumber = 2,
+    kCurrentFieldNumber = 3,
+    kChargeFieldNumber = 4,
+  };
+  // double percentage = 1[json_name = "percentage"];
+  void clear_percentage();
+  double percentage() const;
+  void set_percentage(double value);
+  private:
+  double _internal_percentage() const;
+  void _internal_set_percentage(double value);
+  public:
+
+  // double voltage = 2[json_name = "voltage"];
+  void clear_voltage();
+  double voltage() const;
+  void set_voltage(double value);
+  private:
+  double _internal_voltage() const;
+  void _internal_set_voltage(double value);
+  public:
+
+  // double current = 3[json_name = "current"];
+  void clear_current();
+  double current() const;
+  void set_current(double value);
+  private:
+  double _internal_current() const;
+  void _internal_set_current(double value);
+  public:
+
+  // double charge = 4[json_name = "charge"];
+  void clear_charge();
+  double charge() const;
+  void set_charge(double value);
+  private:
+  double _internal_charge() const;
+  void _internal_set_charge(double value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:v1.model.Battery)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  double percentage_;
+  double voltage_;
+  double current_;
+  double charge_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_protos_2fmodel_2fv1_2fhealth_2eproto;
+};
 // ===================================================================
 
 
@@ -254,9 +419,95 @@ inline void Health::set_status(::v1::model::HealthStatus value) {
   // @@protoc_insertion_point(field_set:v1.model.Health.status)
 }
 
+// -------------------------------------------------------------------
+
+// Battery
+
+// double percentage = 1[json_name = "percentage"];
+inline void Battery::clear_percentage() {
+  percentage_ = 0;
+}
+inline double Battery::_internal_percentage() const {
+  return percentage_;
+}
+inline double Battery::percentage() const {
+  // @@protoc_insertion_point(field_get:v1.model.Battery.percentage)
+  return _internal_percentage();
+}
+inline void Battery::_internal_set_percentage(double value) {
+  
+  percentage_ = value;
+}
+inline void Battery::set_percentage(double value) {
+  _internal_set_percentage(value);
+  // @@protoc_insertion_point(field_set:v1.model.Battery.percentage)
+}
+
+// double voltage = 2[json_name = "voltage"];
+inline void Battery::clear_voltage() {
+  voltage_ = 0;
+}
+inline double Battery::_internal_voltage() const {
+  return voltage_;
+}
+inline double Battery::voltage() const {
+  // @@protoc_insertion_point(field_get:v1.model.Battery.voltage)
+  return _internal_voltage();
+}
+inline void Battery::_internal_set_voltage(double value) {
+  
+  voltage_ = value;
+}
+inline void Battery::set_voltage(double value) {
+  _internal_set_voltage(value);
+  // @@protoc_insertion_point(field_set:v1.model.Battery.voltage)
+}
+
+// double current = 3[json_name = "current"];
+inline void Battery::clear_current() {
+  current_ = 0;
+}
+inline double Battery::_internal_current() const {
+  return current_;
+}
+inline double Battery::current() const {
+  // @@protoc_insertion_point(field_get:v1.model.Battery.current)
+  return _internal_current();
+}
+inline void Battery::_internal_set_current(double value) {
+  
+  current_ = value;
+}
+inline void Battery::set_current(double value) {
+  _internal_set_current(value);
+  // @@protoc_insertion_point(field_set:v1.model.Battery.current)
+}
+
+// double charge = 4[json_name = "charge"];
+inline void Battery::clear_charge() {
+  charge_ = 0;
+}
+inline double Battery::_internal_charge() const {
+  return charge_;
+}
+inline double Battery::charge() const {
+  // @@protoc_insertion_point(field_get:v1.model.Battery.charge)
+  return _internal_charge();
+}
+inline void Battery::_internal_set_charge(double value) {
+  
+  charge_ = value;
+}
+inline void Battery::set_charge(double value) {
+  _internal_set_charge(value);
+  // @@protoc_insertion_point(field_set:v1.model.Battery.charge)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 

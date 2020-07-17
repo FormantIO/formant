@@ -487,6 +487,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fconfig_2
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::v1::model::DiskConfiguration, buffer_size_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::DiskConfiguration, on_demand_buffer_size_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::model::ROSConfiguration, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -517,6 +518,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fconfig_2
   offsetof(::v1::model::StreamConfigurationDefaultTypeInternal, custom_),
   PROTOBUF_FIELD_OFFSET(::v1::model::StreamConfiguration, throttle_hz_),
   PROTOBUF_FIELD_OFFSET(::v1::model::StreamConfiguration, disabled_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::StreamConfiguration, on_demand_),
   PROTOBUF_FIELD_OFFSET(::v1::model::StreamConfiguration, configuration_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::v1::model::Custom, _internal_metadata_),
@@ -556,12 +558,12 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 72, -1, sizeof(::v1::model::ApplicationConfiguration)},
   { 78, -1, sizeof(::v1::model::ResourcesConfiguration)},
   { 85, -1, sizeof(::v1::model::DiskConfiguration)},
-  { 91, -1, sizeof(::v1::model::ROSConfiguration)},
-  { 97, 104, sizeof(::v1::model::StreamConfiguration_TagsEntry_DoNotUse)},
-  { 106, -1, sizeof(::v1::model::StreamConfiguration)},
-  { 122, -1, sizeof(::v1::model::Custom)},
-  { 127, -1, sizeof(::v1::model::DirectoryWatch)},
-  { 136, -1, sizeof(::v1::model::FileTail)},
+  { 92, -1, sizeof(::v1::model::ROSConfiguration)},
+  { 98, 105, sizeof(::v1::model::StreamConfiguration_TagsEntry_DoNotUse)},
+  { 107, -1, sizeof(::v1::model::StreamConfiguration)},
+  { 124, -1, sizeof(::v1::model::Custom)},
+  { 129, -1, sizeof(::v1::model::DirectoryWatch)},
+  { 138, -1, sizeof(::v1::model::FileTail)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -628,41 +630,44 @@ const char descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto[] PROT
   "e:\0028\001\"\225\001\n\026ResourcesConfiguration\022/\n\004disk"
   "\030\001 \001(\0132\033.v1.model.DiskConfigurationR\004dis"
   "k\022J\n\022stream_throttle_hz\030\002 \001(\0132\034.google.p"
-  "rotobuf.DoubleValueR\020streamThrottleHz\"4\n"
+  "rotobuf.DoubleValueR\020streamThrottleHz\"g\n"
   "\021DiskConfiguration\022\037\n\013buffer_size\030\001 \001(\003R"
-  "\nbufferSize\"K\n\020ROSConfiguration\0227\n\030world"
-  "_reference_frame_id\030\001 \001(\tR\025worldReferenc"
-  "eFrameId\"\222\005\n\023StreamConfiguration\022\022\n\004name"
-  "\030\001 \001(\tR\004name\022;\n\004tags\030\002 \003(\0132\'.v1.model.St"
-  "reamConfiguration.TagsEntryR\004tags\0221\n\tros"
-  "_topic\030\003 \001(\0132\022.v1.model.ROSTopicH\000R\010rosT"
-  "opic\022F\n\020ros_localization\030\004 \001(\0132\031.v1.mode"
-  "l.ROSLocalizationH\000R\017rosLocalization\022C\n\017"
-  "directory_watch\030\005 \001(\0132\030.v1.model.Directo"
-  "ryWatchH\000R\016directoryWatch\0221\n\tfile_tail\030\006"
-  " \001(\0132\022.v1.model.FileTailH\000R\010fileTail\022J\n\022"
-  "ros_transform_tree\030\007 \001(\0132\032.v1.model.ROST"
-  "ransformTreeH\000R\020rosTransformTree\022*\n\006cust"
-  "om\030\t \001(\0132\020.v1.model.CustomH\000R\006custom\022=\n\013"
-  "throttle_hz\030\010 \001(\0132\034.google.protobuf.Doub"
-  "leValueR\nthrottleHz\0226\n\010disabled\030\023 \001(\0132\032."
-  "google.protobuf.BoolValueR\010disabled\0327\n\tT"
-  "agsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001("
-  "\tR\005value:\0028\001B\017\n\rconfiguration\"\010\n\006Custom\""
-  "\240\001\n\016DirectoryWatch\022\034\n\tdirectory\030\001 \001(\tR\td"
-  "irectory\022\034\n\textension\030\002 \001(\tR\textension\022/"
-  "\n\tfile_type\030\003 \001(\0162\022.v1.model.FileTypeR\010f"
-  "ileType\022!\n\014remote_agent\030\004 \001(\010R\013remoteAge"
-  "nt\"\257\001\n\010FileTail\022\032\n\010filename\030\001 \001(\tR\010filen"
-  "ame\0225\n\013file_format\030\002 \001(\0162\024.v1.model.File"
-  "FormatR\nfileFormat\022\031\n\010time_key\030\003 \001(\tR\007ti"
-  "meKey\022\037\n\013time_format\030\004 \001(\tR\ntimeFormat\022\024"
-  "\n\005regex\030\005 \001(\tR\005regex*<\n TeleopRosStreamC"
-  "onfigurationMode\022\013\n\007COMMAND\020\000\022\013\n\007OBSERVE"
-  "\020\001*&\n\nFileFormat\022\016\n\nPLAIN_TEXT\020\000\022\010\n\004JSON"
-  "\020\001*0\n\010FileType\022\010\n\004FILE\020\000\022\t\n\005IMAGE\020\001\022\017\n\013P"
-  "OINT_CLOUD\020\004B+Z)github.com/FormantIO/gen"
-  "proto/go/v1/modelb\006proto3"
+  "\nbufferSize\0221\n\025on_demand_buffer_size\030\002 \001"
+  "(\003R\022onDemandBufferSize\"K\n\020ROSConfigurati"
+  "on\0227\n\030world_reference_frame_id\030\001 \001(\tR\025wo"
+  "rldReferenceFrameId\"\313\005\n\023StreamConfigurat"
+  "ion\022\022\n\004name\030\001 \001(\tR\004name\022;\n\004tags\030\002 \003(\0132\'."
+  "v1.model.StreamConfiguration.TagsEntryR\004"
+  "tags\0221\n\tros_topic\030\003 \001(\0132\022.v1.model.ROSTo"
+  "picH\000R\010rosTopic\022F\n\020ros_localization\030\004 \001("
+  "\0132\031.v1.model.ROSLocalizationH\000R\017rosLocal"
+  "ization\022C\n\017directory_watch\030\005 \001(\0132\030.v1.mo"
+  "del.DirectoryWatchH\000R\016directoryWatch\0221\n\t"
+  "file_tail\030\006 \001(\0132\022.v1.model.FileTailH\000R\010f"
+  "ileTail\022J\n\022ros_transform_tree\030\007 \001(\0132\032.v1"
+  ".model.ROSTransformTreeH\000R\020rosTransformT"
+  "ree\022*\n\006custom\030\t \001(\0132\020.v1.model.CustomH\000R"
+  "\006custom\022=\n\013throttle_hz\030\010 \001(\0132\034.google.pr"
+  "otobuf.DoubleValueR\nthrottleHz\0226\n\010disabl"
+  "ed\030\023 \001(\0132\032.google.protobuf.BoolValueR\010di"
+  "sabled\0227\n\ton_demand\030\024 \001(\0132\032.google.proto"
+  "buf.BoolValueR\010onDemand\0327\n\tTagsEntry\022\020\n\003"
+  "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001"
+  "B\017\n\rconfiguration\"\010\n\006Custom\"\240\001\n\016Director"
+  "yWatch\022\034\n\tdirectory\030\001 \001(\tR\tdirectory\022\034\n\t"
+  "extension\030\002 \001(\tR\textension\022/\n\tfile_type\030"
+  "\003 \001(\0162\022.v1.model.FileTypeR\010fileType\022!\n\014r"
+  "emote_agent\030\004 \001(\010R\013remoteAgent\"\257\001\n\010FileT"
+  "ail\022\032\n\010filename\030\001 \001(\tR\010filename\0225\n\013file_"
+  "format\030\002 \001(\0162\024.v1.model.FileFormatR\nfile"
+  "Format\022\031\n\010time_key\030\003 \001(\tR\007timeKey\022\037\n\013tim"
+  "e_format\030\004 \001(\tR\ntimeFormat\022\024\n\005regex\030\005 \001("
+  "\tR\005regex*<\n TeleopRosStreamConfiguration"
+  "Mode\022\013\n\007COMMAND\020\000\022\013\n\007OBSERVE\020\001*&\n\nFileFo"
+  "rmat\022\016\n\nPLAIN_TEXT\020\000\022\010\n\004JSON\020\001*0\n\010FileTy"
+  "pe\022\010\n\004FILE\020\000\022\t\n\005IMAGE\020\001\022\017\n\013POINT_CLOUD\020\004"
+  "B+Z)github.com/FormantIO/genproto/go/v1/"
+  "modelb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_deps[2] = {
   &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
@@ -691,7 +696,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto, "protos/model/v1/config.proto", 3065,
+  &descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fconfig_2eproto, "protos/model/v1/config.proto", 3173,
   &descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fconfig_2eproto_deps, 18, 2,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto::offsets,
   file_level_metadata_protos_2fmodel_2fv1_2fconfig_2eproto, 18, file_level_enum_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fconfig_2eproto,
@@ -3174,12 +3179,16 @@ DiskConfiguration::DiskConfiguration(const DiskConfiguration& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  buffer_size_ = from.buffer_size_;
+  ::memcpy(&buffer_size_, &from.buffer_size_,
+    static_cast<size_t>(reinterpret_cast<char*>(&on_demand_buffer_size_) -
+    reinterpret_cast<char*>(&buffer_size_)) + sizeof(on_demand_buffer_size_));
   // @@protoc_insertion_point(copy_constructor:v1.model.DiskConfiguration)
 }
 
 void DiskConfiguration::SharedCtor() {
-  buffer_size_ = PROTOBUF_LONGLONG(0);
+  ::memset(&buffer_size_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&on_demand_buffer_size_) -
+      reinterpret_cast<char*>(&buffer_size_)) + sizeof(on_demand_buffer_size_));
 }
 
 DiskConfiguration::~DiskConfiguration() {
@@ -3205,7 +3214,9 @@ void DiskConfiguration::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  buffer_size_ = PROTOBUF_LONGLONG(0);
+  ::memset(&buffer_size_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&on_demand_buffer_size_) -
+      reinterpret_cast<char*>(&buffer_size_)) + sizeof(on_demand_buffer_size_));
   _internal_metadata_.Clear();
 }
 
@@ -3220,6 +3231,13 @@ const char* DiskConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           buffer_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int64 on_demand_buffer_size = 2[json_name = "onDemandBufferSize"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          on_demand_buffer_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3255,6 +3273,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_buffer_size(), target);
   }
 
+  // int64 on_demand_buffer_size = 2[json_name = "onDemandBufferSize"];
+  if (this->on_demand_buffer_size() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_on_demand_buffer_size(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -3276,6 +3300,13 @@ size_t DiskConfiguration::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_buffer_size());
+  }
+
+  // int64 on_demand_buffer_size = 2[json_name = "onDemandBufferSize"];
+  if (this->on_demand_buffer_size() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_on_demand_buffer_size());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3312,6 +3343,9 @@ void DiskConfiguration::MergeFrom(const DiskConfiguration& from) {
   if (from.buffer_size() != 0) {
     _internal_set_buffer_size(from._internal_buffer_size());
   }
+  if (from.on_demand_buffer_size() != 0) {
+    _internal_set_on_demand_buffer_size(from._internal_on_demand_buffer_size());
+  }
 }
 
 void DiskConfiguration::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -3336,6 +3370,7 @@ void DiskConfiguration::InternalSwap(DiskConfiguration* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(buffer_size_, other->buffer_size_);
+  swap(on_demand_buffer_size_, other->on_demand_buffer_size_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DiskConfiguration::GetMetadata() const {
@@ -3578,6 +3613,8 @@ void StreamConfiguration::InitAsDefaultInstance() {
       PROTOBUF_NAMESPACE_ID::DoubleValue::internal_default_instance());
   ::v1::model::_StreamConfiguration_default_instance_._instance.get_mutable()->disabled_ = const_cast< PROTOBUF_NAMESPACE_ID::BoolValue*>(
       PROTOBUF_NAMESPACE_ID::BoolValue::internal_default_instance());
+  ::v1::model::_StreamConfiguration_default_instance_._instance.get_mutable()->on_demand_ = const_cast< PROTOBUF_NAMESPACE_ID::BoolValue*>(
+      PROTOBUF_NAMESPACE_ID::BoolValue::internal_default_instance());
 }
 class StreamConfiguration::_Internal {
  public:
@@ -3589,6 +3626,7 @@ class StreamConfiguration::_Internal {
   static const ::v1::model::Custom& custom(const StreamConfiguration* msg);
   static const PROTOBUF_NAMESPACE_ID::DoubleValue& throttle_hz(const StreamConfiguration* msg);
   static const PROTOBUF_NAMESPACE_ID::BoolValue& disabled(const StreamConfiguration* msg);
+  static const PROTOBUF_NAMESPACE_ID::BoolValue& on_demand(const StreamConfiguration* msg);
 };
 
 const ::v1::model::ROSTopic&
@@ -3622,6 +3660,10 @@ StreamConfiguration::_Internal::throttle_hz(const StreamConfiguration* msg) {
 const PROTOBUF_NAMESPACE_ID::BoolValue&
 StreamConfiguration::_Internal::disabled(const StreamConfiguration* msg) {
   return *msg->disabled_;
+}
+const PROTOBUF_NAMESPACE_ID::BoolValue&
+StreamConfiguration::_Internal::on_demand(const StreamConfiguration* msg) {
+  return *msg->on_demand_;
 }
 void StreamConfiguration::set_allocated_ros_topic(::v1::model::ROSTopic* ros_topic) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
@@ -3737,6 +3779,12 @@ void StreamConfiguration::clear_disabled() {
   }
   disabled_ = nullptr;
 }
+void StreamConfiguration::clear_on_demand() {
+  if (GetArenaNoVirtual() == nullptr && on_demand_ != nullptr) {
+    delete on_demand_;
+  }
+  on_demand_ = nullptr;
+}
 StreamConfiguration::StreamConfiguration()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -3760,6 +3808,11 @@ StreamConfiguration::StreamConfiguration(const StreamConfiguration& from)
     disabled_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.disabled_);
   } else {
     disabled_ = nullptr;
+  }
+  if (from._internal_has_on_demand()) {
+    on_demand_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.on_demand_);
+  } else {
+    on_demand_ = nullptr;
   }
   clear_has_configuration();
   switch (from.configuration_case()) {
@@ -3798,8 +3851,8 @@ void StreamConfiguration::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_StreamConfiguration_protos_2fmodel_2fv1_2fconfig_2eproto.base);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&throttle_hz_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&disabled_) -
-      reinterpret_cast<char*>(&throttle_hz_)) + sizeof(disabled_));
+      reinterpret_cast<char*>(&on_demand_) -
+      reinterpret_cast<char*>(&throttle_hz_)) + sizeof(on_demand_));
   clear_has_configuration();
 }
 
@@ -3812,6 +3865,7 @@ void StreamConfiguration::SharedDtor() {
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete throttle_hz_;
   if (this != internal_default_instance()) delete disabled_;
+  if (this != internal_default_instance()) delete on_demand_;
   if (has_configuration()) {
     clear_configuration();
   }
@@ -3877,6 +3931,10 @@ void StreamConfiguration::Clear() {
     delete disabled_;
   }
   disabled_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && on_demand_ != nullptr) {
+    delete on_demand_;
+  }
+  on_demand_ = nullptr;
   clear_configuration();
   _internal_metadata_.Clear();
 }
@@ -3962,6 +4020,13 @@ const char* StreamConfiguration::_InternalParse(const char* ptr, ::PROTOBUF_NAME
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
           ptr = ctx->ParseMessage(_internal_mutable_disabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.BoolValue on_demand = 20[json_name = "onDemand"];
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 162)) {
+          ptr = ctx->ParseMessage(_internal_mutable_on_demand(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4110,6 +4175,14 @@ failure:
         19, _Internal::disabled(this), target, stream);
   }
 
+  // .google.protobuf.BoolValue on_demand = 20[json_name = "onDemand"];
+  if (this->has_on_demand()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        20, _Internal::on_demand(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -4154,6 +4227,13 @@ size_t StreamConfiguration::ByteSizeLong() const {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *disabled_);
+  }
+
+  // .google.protobuf.BoolValue on_demand = 20[json_name = "onDemand"];
+  if (this->has_on_demand()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *on_demand_);
   }
 
   switch (configuration_case()) {
@@ -4245,6 +4325,9 @@ void StreamConfiguration::MergeFrom(const StreamConfiguration& from) {
   if (from.has_disabled()) {
     _internal_mutable_disabled()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_disabled());
   }
+  if (from.has_on_demand()) {
+    _internal_mutable_on_demand()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_on_demand());
+  }
   switch (from.configuration_case()) {
     case kRosTopic: {
       _internal_mutable_ros_topic()->::v1::model::ROSTopic::MergeFrom(from._internal_ros_topic());
@@ -4302,6 +4385,7 @@ void StreamConfiguration::InternalSwap(StreamConfiguration* other) {
     GetArenaNoVirtual());
   swap(throttle_hz_, other->throttle_hz_);
   swap(disabled_, other->disabled_);
+  swap(on_demand_, other->on_demand_);
   swap(configuration_, other->configuration_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }

@@ -1829,6 +1829,7 @@ class DiskConfiguration :
 
   enum : int {
     kBufferSizeFieldNumber = 1,
+    kOnDemandBufferSizeFieldNumber = 2,
   };
   // int64 buffer_size = 1[json_name = "bufferSize"];
   void clear_buffer_size();
@@ -1839,12 +1840,22 @@ class DiskConfiguration :
   void _internal_set_buffer_size(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
+  // int64 on_demand_buffer_size = 2[json_name = "onDemandBufferSize"];
+  void clear_on_demand_buffer_size();
+  ::PROTOBUF_NAMESPACE_ID::int64 on_demand_buffer_size() const;
+  void set_on_demand_buffer_size(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_on_demand_buffer_size() const;
+  void _internal_set_on_demand_buffer_size(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
   // @@protoc_insertion_point(class_scope:v1.model.DiskConfiguration)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::int64 buffer_size_;
+  ::PROTOBUF_NAMESPACE_ID::int64 on_demand_buffer_size_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protos_2fmodel_2fv1_2fconfig_2eproto;
 };
@@ -2140,6 +2151,7 @@ class StreamConfiguration :
     kNameFieldNumber = 1,
     kThrottleHzFieldNumber = 8,
     kDisabledFieldNumber = 19,
+    kOnDemandFieldNumber = 20,
     kRosTopicFieldNumber = 3,
     kRosLocalizationFieldNumber = 4,
     kDirectoryWatchFieldNumber = 5,
@@ -2208,6 +2220,21 @@ class StreamConfiguration :
   private:
   const PROTOBUF_NAMESPACE_ID::BoolValue& _internal_disabled() const;
   PROTOBUF_NAMESPACE_ID::BoolValue* _internal_mutable_disabled();
+  public:
+
+  // .google.protobuf.BoolValue on_demand = 20[json_name = "onDemand"];
+  bool has_on_demand() const;
+  private:
+  bool _internal_has_on_demand() const;
+  public:
+  void clear_on_demand();
+  const PROTOBUF_NAMESPACE_ID::BoolValue& on_demand() const;
+  PROTOBUF_NAMESPACE_ID::BoolValue* release_on_demand();
+  PROTOBUF_NAMESPACE_ID::BoolValue* mutable_on_demand();
+  void set_allocated_on_demand(PROTOBUF_NAMESPACE_ID::BoolValue* on_demand);
+  private:
+  const PROTOBUF_NAMESPACE_ID::BoolValue& _internal_on_demand() const;
+  PROTOBUF_NAMESPACE_ID::BoolValue* _internal_mutable_on_demand();
   public:
 
   // .v1.model.ROSTopic ros_topic = 3[json_name = "rosTopic"];
@@ -2325,6 +2352,7 @@ class StreamConfiguration :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   PROTOBUF_NAMESPACE_ID::DoubleValue* throttle_hz_;
   PROTOBUF_NAMESPACE_ID::BoolValue* disabled_;
+  PROTOBUF_NAMESPACE_ID::BoolValue* on_demand_;
   union ConfigurationUnion {
     ConfigurationUnion() {}
     ::v1::model::ROSTopic* ros_topic_;
@@ -3986,6 +4014,26 @@ inline void DiskConfiguration::set_buffer_size(::PROTOBUF_NAMESPACE_ID::int64 va
   // @@protoc_insertion_point(field_set:v1.model.DiskConfiguration.buffer_size)
 }
 
+// int64 on_demand_buffer_size = 2[json_name = "onDemandBufferSize"];
+inline void DiskConfiguration::clear_on_demand_buffer_size() {
+  on_demand_buffer_size_ = PROTOBUF_LONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 DiskConfiguration::_internal_on_demand_buffer_size() const {
+  return on_demand_buffer_size_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 DiskConfiguration::on_demand_buffer_size() const {
+  // @@protoc_insertion_point(field_get:v1.model.DiskConfiguration.on_demand_buffer_size)
+  return _internal_on_demand_buffer_size();
+}
+inline void DiskConfiguration::_internal_set_on_demand_buffer_size(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  
+  on_demand_buffer_size_ = value;
+}
+inline void DiskConfiguration::set_on_demand_buffer_size(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_on_demand_buffer_size(value);
+  // @@protoc_insertion_point(field_set:v1.model.DiskConfiguration.on_demand_buffer_size)
+}
+
 // -------------------------------------------------------------------
 
 // ROSConfiguration
@@ -4535,6 +4583,61 @@ inline void StreamConfiguration::set_allocated_disabled(PROTOBUF_NAMESPACE_ID::B
   }
   disabled_ = disabled;
   // @@protoc_insertion_point(field_set_allocated:v1.model.StreamConfiguration.disabled)
+}
+
+// .google.protobuf.BoolValue on_demand = 20[json_name = "onDemand"];
+inline bool StreamConfiguration::_internal_has_on_demand() const {
+  return this != internal_default_instance() && on_demand_ != nullptr;
+}
+inline bool StreamConfiguration::has_on_demand() const {
+  return _internal_has_on_demand();
+}
+inline const PROTOBUF_NAMESPACE_ID::BoolValue& StreamConfiguration::_internal_on_demand() const {
+  const PROTOBUF_NAMESPACE_ID::BoolValue* p = on_demand_;
+  return p != nullptr ? *p : *reinterpret_cast<const PROTOBUF_NAMESPACE_ID::BoolValue*>(
+      &PROTOBUF_NAMESPACE_ID::_BoolValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::BoolValue& StreamConfiguration::on_demand() const {
+  // @@protoc_insertion_point(field_get:v1.model.StreamConfiguration.on_demand)
+  return _internal_on_demand();
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* StreamConfiguration::release_on_demand() {
+  // @@protoc_insertion_point(field_release:v1.model.StreamConfiguration.on_demand)
+  
+  PROTOBUF_NAMESPACE_ID::BoolValue* temp = on_demand_;
+  on_demand_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* StreamConfiguration::_internal_mutable_on_demand() {
+  
+  if (on_demand_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::BoolValue>(GetArenaNoVirtual());
+    on_demand_ = p;
+  }
+  return on_demand_;
+}
+inline PROTOBUF_NAMESPACE_ID::BoolValue* StreamConfiguration::mutable_on_demand() {
+  // @@protoc_insertion_point(field_mutable:v1.model.StreamConfiguration.on_demand)
+  return _internal_mutable_on_demand();
+}
+inline void StreamConfiguration::set_allocated_on_demand(PROTOBUF_NAMESPACE_ID::BoolValue* on_demand) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(on_demand_);
+  }
+  if (on_demand) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(on_demand)->GetArena();
+    if (message_arena != submessage_arena) {
+      on_demand = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, on_demand, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  on_demand_ = on_demand;
+  // @@protoc_insertion_point(field_set_allocated:v1.model.StreamConfiguration.on_demand)
 }
 
 inline bool StreamConfiguration::has_configuration() const {

@@ -164,6 +164,7 @@ class Datapoint :
     kLocalization = 12,
     kHealth = 13,
     kJson = 14,
+    kBattery = 15,
     DATA_NOT_SET = 0,
   };
 
@@ -252,6 +253,7 @@ class Datapoint :
     kLocalizationFieldNumber = 12,
     kHealthFieldNumber = 13,
     kJsonFieldNumber = 14,
+    kBatteryFieldNumber = 15,
   };
   // map<string, string> tags = 3[json_name = "tags"];
   int tags_size() const;
@@ -460,6 +462,21 @@ class Datapoint :
   ::v1::model::Json* _internal_mutable_json();
   public:
 
+  // .v1.model.Battery battery = 15[json_name = "battery"];
+  bool has_battery() const;
+  private:
+  bool _internal_has_battery() const;
+  public:
+  void clear_battery();
+  const ::v1::model::Battery& battery() const;
+  ::v1::model::Battery* release_battery();
+  ::v1::model::Battery* mutable_battery();
+  void set_allocated_battery(::v1::model::Battery* battery);
+  private:
+  const ::v1::model::Battery& _internal_battery() const;
+  ::v1::model::Battery* _internal_mutable_battery();
+  public:
+
   void clear_data();
   DataCase data_case() const;
   // @@protoc_insertion_point(class_scope:v1.model.Datapoint)
@@ -476,6 +493,7 @@ class Datapoint :
   void set_has_localization();
   void set_has_health();
   void set_has_json();
+  void set_has_battery();
 
   inline bool has_data() const;
   inline void clear_has_data();
@@ -502,6 +520,7 @@ class Datapoint :
     ::v1::model::Localization* localization_;
     ::v1::model::Health* health_;
     ::v1::model::Json* json_;
+    ::v1::model::Battery* battery_;
   } data_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -1112,6 +1131,50 @@ inline ::v1::model::Json* Datapoint::_internal_mutable_json() {
 inline ::v1::model::Json* Datapoint::mutable_json() {
   // @@protoc_insertion_point(field_mutable:v1.model.Datapoint.json)
   return _internal_mutable_json();
+}
+
+// .v1.model.Battery battery = 15[json_name = "battery"];
+inline bool Datapoint::_internal_has_battery() const {
+  return data_case() == kBattery;
+}
+inline bool Datapoint::has_battery() const {
+  return _internal_has_battery();
+}
+inline void Datapoint::set_has_battery() {
+  _oneof_case_[0] = kBattery;
+}
+inline ::v1::model::Battery* Datapoint::release_battery() {
+  // @@protoc_insertion_point(field_release:v1.model.Datapoint.battery)
+  if (_internal_has_battery()) {
+    clear_has_data();
+      ::v1::model::Battery* temp = data_.battery_;
+    data_.battery_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::v1::model::Battery& Datapoint::_internal_battery() const {
+  return _internal_has_battery()
+      ? *data_.battery_
+      : *reinterpret_cast< ::v1::model::Battery*>(&::v1::model::_Battery_default_instance_);
+}
+inline const ::v1::model::Battery& Datapoint::battery() const {
+  // @@protoc_insertion_point(field_get:v1.model.Datapoint.battery)
+  return _internal_battery();
+}
+inline ::v1::model::Battery* Datapoint::_internal_mutable_battery() {
+  if (!_internal_has_battery()) {
+    clear_data();
+    set_has_battery();
+    data_.battery_ = CreateMaybeMessage< ::v1::model::Battery >(
+        GetArenaNoVirtual());
+  }
+  return data_.battery_;
+}
+inline ::v1::model::Battery* Datapoint::mutable_battery() {
+  // @@protoc_insertion_point(field_mutable:v1.model.Datapoint.battery)
+  return _internal_mutable_battery();
 }
 
 inline bool Datapoint::has_data() const {

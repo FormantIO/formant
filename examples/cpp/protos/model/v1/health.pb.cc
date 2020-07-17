@@ -20,8 +20,26 @@ class HealthDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Health> _instance;
 } _Health_default_instance_;
+class BatteryDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Battery> _instance;
+} _Battery_default_instance_;
 }  // namespace model
 }  // namespace v1
+static void InitDefaultsscc_info_Battery_protos_2fmodel_2fv1_2fhealth_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::v1::model::_Battery_default_instance_;
+    new (ptr) ::v1::model::Battery();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::v1::model::Battery::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Battery_protos_2fmodel_2fv1_2fhealth_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Battery_protos_2fmodel_2fv1_2fhealth_2eproto}, {}};
+
 static void InitDefaultsscc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -36,7 +54,7 @@ static void InitDefaultsscc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2fhealth_2eproto[1];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_protos_2fmodel_2fv1_2fhealth_2eproto[2];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_protos_2fmodel_2fv1_2fhealth_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_protos_2fmodel_2fv1_2fhealth_2eproto = nullptr;
 
@@ -47,36 +65,51 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_protos_2fmodel_2fv1_2fhealth_2
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::v1::model::Health, status_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::v1::model::Battery, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::v1::model::Battery, percentage_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Battery, voltage_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Battery, current_),
+  PROTOBUF_FIELD_OFFSET(::v1::model::Battery, charge_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::v1::model::Health)},
+  { 6, -1, sizeof(::v1::model::Battery)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Health_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::v1::model::_Battery_default_instance_),
 };
 
 const char descriptor_table_protodef_protos_2fmodel_2fv1_2fhealth_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\034protos/model/v1/health.proto\022\010v1.model"
   "\"8\n\006Health\022.\n\006status\030\001 \001(\0162\026.v1.model.He"
-  "althStatusR\006status*`\n\014HealthStatus\022\022\n\016HE"
-  "ALTH_UNKNOWN\020\000\022\026\n\022HEALTH_OPERATIONAL\020\001\022\022"
-  "\n\016HEALTH_OFFLINE\020\002\022\020\n\014HEALTH_ERROR\020\003B+Z)"
-  "github.com/FormantIO/genproto/go/v1/mode"
-  "lb\006proto3"
+  "althStatusR\006status\"u\n\007Battery\022\036\n\npercent"
+  "age\030\001 \001(\001R\npercentage\022\030\n\007voltage\030\002 \001(\001R\007"
+  "voltage\022\030\n\007current\030\003 \001(\001R\007current\022\026\n\006cha"
+  "rge\030\004 \001(\001R\006charge*`\n\014HealthStatus\022\022\n\016HEA"
+  "LTH_UNKNOWN\020\000\022\026\n\022HEALTH_OPERATIONAL\020\001\022\022\n"
+  "\016HEALTH_OFFLINE\020\002\022\020\n\014HEALTH_ERROR\020\003B+Z)g"
+  "ithub.com/FormantIO/genproto/go/v1/model"
+  "b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_sccs[1] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_sccs[2] = {
+  &scc_info_Battery_protos_2fmodel_2fv1_2fhealth_2eproto.base,
   &scc_info_Health_protos_2fmodel_2fv1_2fhealth_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_once;
 static bool descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto = {
-  &descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fhealth_2eproto, "protos/model/v1/health.proto", 249,
-  &descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_deps, 1, 0,
+  &descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_initialized, descriptor_table_protodef_protos_2fmodel_2fv1_2fhealth_2eproto, "protos/model/v1/health.proto", 368,
+  &descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_once, descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_sccs, descriptor_table_protos_2fmodel_2fv1_2fhealth_2eproto_deps, 2, 0,
   schemas, file_default_instances, TableStruct_protos_2fmodel_2fv1_2fhealth_2eproto::offsets,
-  file_level_metadata_protos_2fmodel_2fv1_2fhealth_2eproto, 1, file_level_enum_descriptors_protos_2fmodel_2fv1_2fhealth_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fhealth_2eproto,
+  file_level_metadata_protos_2fmodel_2fv1_2fhealth_2eproto, 2, file_level_enum_descriptors_protos_2fmodel_2fv1_2fhealth_2eproto, file_level_service_descriptors_protos_2fmodel_2fv1_2fhealth_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -287,12 +320,271 @@ void Health::InternalSwap(Health* other) {
 }
 
 
+// ===================================================================
+
+void Battery::InitAsDefaultInstance() {
+}
+class Battery::_Internal {
+ public:
+};
+
+Battery::Battery()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:v1.model.Battery)
+}
+Battery::Battery(const Battery& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&percentage_, &from.percentage_,
+    static_cast<size_t>(reinterpret_cast<char*>(&charge_) -
+    reinterpret_cast<char*>(&percentage_)) + sizeof(charge_));
+  // @@protoc_insertion_point(copy_constructor:v1.model.Battery)
+}
+
+void Battery::SharedCtor() {
+  ::memset(&percentage_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&charge_) -
+      reinterpret_cast<char*>(&percentage_)) + sizeof(charge_));
+}
+
+Battery::~Battery() {
+  // @@protoc_insertion_point(destructor:v1.model.Battery)
+  SharedDtor();
+}
+
+void Battery::SharedDtor() {
+}
+
+void Battery::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Battery& Battery::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Battery_protos_2fmodel_2fv1_2fhealth_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Battery::Clear() {
+// @@protoc_insertion_point(message_clear_start:v1.model.Battery)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&percentage_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&charge_) -
+      reinterpret_cast<char*>(&percentage_)) + sizeof(charge_));
+  _internal_metadata_.Clear();
+}
+
+const char* Battery::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // double percentage = 1[json_name = "percentage"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 9)) {
+          percentage_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // double voltage = 2[json_name = "voltage"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
+          voltage_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // double current = 3[json_name = "current"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
+          current_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // double charge = 4[json_name = "charge"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 33)) {
+          charge_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Battery::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:v1.model.Battery)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // double percentage = 1[json_name = "percentage"];
+  if (!(this->percentage() <= 0 && this->percentage() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_percentage(), target);
+  }
+
+  // double voltage = 2[json_name = "voltage"];
+  if (!(this->voltage() <= 0 && this->voltage() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_voltage(), target);
+  }
+
+  // double current = 3[json_name = "current"];
+  if (!(this->current() <= 0 && this->current() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_current(), target);
+  }
+
+  // double charge = 4[json_name = "charge"];
+  if (!(this->charge() <= 0 && this->charge() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_charge(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:v1.model.Battery)
+  return target;
+}
+
+size_t Battery::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:v1.model.Battery)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // double percentage = 1[json_name = "percentage"];
+  if (!(this->percentage() <= 0 && this->percentage() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  // double voltage = 2[json_name = "voltage"];
+  if (!(this->voltage() <= 0 && this->voltage() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  // double current = 3[json_name = "current"];
+  if (!(this->current() <= 0 && this->current() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  // double charge = 4[json_name = "charge"];
+  if (!(this->charge() <= 0 && this->charge() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Battery::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:v1.model.Battery)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Battery* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Battery>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:v1.model.Battery)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:v1.model.Battery)
+    MergeFrom(*source);
+  }
+}
+
+void Battery::MergeFrom(const Battery& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:v1.model.Battery)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!(from.percentage() <= 0 && from.percentage() >= 0)) {
+    _internal_set_percentage(from._internal_percentage());
+  }
+  if (!(from.voltage() <= 0 && from.voltage() >= 0)) {
+    _internal_set_voltage(from._internal_voltage());
+  }
+  if (!(from.current() <= 0 && from.current() >= 0)) {
+    _internal_set_current(from._internal_current());
+  }
+  if (!(from.charge() <= 0 && from.charge() >= 0)) {
+    _internal_set_charge(from._internal_charge());
+  }
+}
+
+void Battery::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:v1.model.Battery)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Battery::CopyFrom(const Battery& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:v1.model.Battery)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Battery::IsInitialized() const {
+  return true;
+}
+
+void Battery::InternalSwap(Battery* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(percentage_, other->percentage_);
+  swap(voltage_, other->voltage_);
+  swap(current_, other->current_);
+  swap(charge_, other->charge_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Battery::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace model
 }  // namespace v1
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::v1::model::Health* Arena::CreateMaybeMessage< ::v1::model::Health >(Arena* arena) {
   return Arena::CreateInternal< ::v1::model::Health >(arena);
+}
+template<> PROTOBUF_NOINLINE ::v1::model::Battery* Arena::CreateMaybeMessage< ::v1::model::Battery >(Arena* arena) {
+  return Arena::CreateInternal< ::v1::model::Battery >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
