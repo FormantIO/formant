@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package v1.model;
+
+import "protos/model/v1/math.proto";
+import "protos/model/v1/media.proto";
+
+option go_package = "github.com/FormantIO/genproto/go/v1/model";
+
+message Location {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+message Localization {
+    Odometry odometry = 1;
+    Map map = 2;
+    repeated PointCloud point_clouds = 3;
+    Path path = 4;
+    Goal goal = 5;
+}
+
+message Odometry {
+    Transform pose = 1;
+    Twist twist = 2;
+    // The transform of the odometry relative to a common reference frame.
+    Transform world_to_local = 3;
+}
+
+message Map {
+    // The resolution of each pixel/grid cell in the map.
+    // May be expressed in any unit; should be consistent with odometry units.
+    double resolution  = 1;
+    uint32 width = 2;
+    uint32 height = 3;
+    // The origin of the map in the map reference frame. Currently this is ignored in Formant visualizations.
+    Transform origin = 4;
+    // The transform of the map relative to a common reference frame.
+    Transform world_to_local = 5;
+    oneof data {
+        OccupancyGrid occupancy_grid = 6;
+        // The 'url' and 'raw' fields are for png data only.
+        // Must be a file on the local filesystem
+        string url = 7;
+        // 2MB limit
+        bytes raw = 8;
+    }
+}
+
+message OccupancyGrid {
+    // The map data, in row-major order, starting with (0,0).
+    // Occupancy probabilities are in the range [0,100], unknown is -1.
+    repeated int32 data = 1;
+}
+
+message Path {
+    Transform world_to_local = 1;
+    repeated Transform poses = 2;
+}
+
+message Goal {
+    Transform world_to_local = 1;
+    Transform pose = 2;
+}
+
+message GoalID {
+    string id = 1;
+}

@@ -1,0 +1,209 @@
+syntax = "proto3";
+
+package v1.agent;
+
+import "protos/model/v1/datapoint.proto";
+import "protos/model/v1/intervention.proto";
+import "protos/model/v1/commands.proto";
+import "protos/model/v1/config.proto";
+import "protos/model/v1/math.proto";
+import "protos/model/v1/event.proto";
+
+option go_package = "github.com/FormantIO/genproto/go/v1/agent";
+
+/* Agent is the Formant Agent gRPC API. */
+service Agent {
+  /* StreamData accepts a stream of data points. See PostData for information on
+   * expected error conditions and codes. */
+  rpc StreamData(stream model.Datapoint) returns (StreamDataResponse) {
+  }
+  /* PostData accepts a single data point per invocation. An OK status code will
+   * be returned if the data point was accepted and queued for uploading to the
+   * Formant cloud. PostData will return an InvalidArgument status code if the
+   * data point is malformed or has more than 10 tags attached. A
+   * ResourceExhausted code will be returned if the data point was throttled. An
+   * Unavailable code will be returned if the Agent is in the process of
+   * shutting down. */
+  rpc PostData(model.Datapoint) returns (PostDataResponse) {
+  }
+  /* PostDataMulti accepts an array of datapoints per invocation. An OK status
+   * code indicates that all datapoints were accepted and queued for uploading
+   * to the Formant cloud. If certain datapoints failed or were throttled the
+   * response will include the index of those datapoints as well as the reason
+   * for failure. All documentation that applies to PostData also applies to
+   * this RPC. */
+  rpc PostDataMulti(PostDataMultiRequest) returns (PostDataMultiResponse) {
+  }
+  /* CreateEvent creates a custom event. */
+  rpc CreateEvent(CreateEventRequest) returns (CreateEventResponse) {
+  }
+  /* CreateInterventionRequest creates an intervention request. The returned
+   * InterventionRequest's 'id' field will be populated if the call succeeds. An
+   * Unavailable status code will be returned if an upstream network error
+   * occurs while trying to create the request. */
+  rpc CreateInterventionRequest(model.InterventionRequest)
+      returns (model.InterventionRequest) {
+  }
+  /* GetInterventionRequest returns an existing InterventionRequest. The
+   * InterventionRequest's 'responses' field will be empty if an operator has
+   * yet to respond. */
+  rpc GetInterventionRequest(GetInterventionRequestRequest)
+      returns (model.InterventionRequest) {
+  }
+  /* GetInterventionResponse returns the first InterventionResponse for the
+   * provided intervention request. This RPC blocks until an
+   * InterventionResponse is available to be returned. */
+  rpc GetInterventionResponse(GetInterventionResponseRequest)
+      returns (model.InterventionResponse) {
+  }
+  /* GetStreamsConfiguration returns the configured streams. */
+  rpc GetStreamsConfiguration(GetStreamsConfigurationRequest)
+      returns (GetStreamsConfigurationResponse) {
+  }
+  /* GetApplicationConfiguration returns application (user-defined)
+   * configuration data. */
+  rpc GetApplicationConfiguration(GetApplicationConfigurationRequest)
+      returns (GetApplicationConfigurationResponse) {
+  }
+  /* GetAgentConfiguration returns the Agent configuration. */
+  rpc GetAgentConfiguration(GetAgentConfigurationRequest)
+      returns (GetAgentConfigurationResponse) {
+  }
+  /* Health can be used to check if the Agent is running and its gRPC API is
+   * available. */
+  rpc Health(HealthRequest) returns (HealthResponse) {
+  }
+  /* GetCommandRequest returns the latest pending command request. */
+  rpc GetCommandRequest(GetCommandRequestRequest)
+      returns (GetCommandRequestResponse) {
+  }
+  rpc GetCommandRequestStream(GetCommandRequestStreamRequest)
+      returns (stream GetCommandRequestStreamResponse) {
+  }
+  /* SendCommandResponse sends a response to a command request. */
+  rpc SendCommandResponse(SendCommandResponseRequest)
+      returns (SendCommandResponseResponse) {
+  }
+  /* PostTransformFrame posts a transform between a parent and child. This
+   * updates a transform tree within the agent. */
+  rpc PostTransformFrame(model.TransformFrame)
+      returns (PostTransformFrameResponse) {
+  }
+  /* SetBaseFrameID sets the base frame Id to be used for transform
+   * visualizations. */
+  rpc SetBaseFrameID(SetBaseFrameIDRequest) returns (SetBaseFrameIDResponse) {
+  }
+  /* ClearTransformTree clears the entire TransformTree graph stored in the
+   * agent. This maintains the base frame id as the root of the graph. */
+  rpc ClearTransformTree(ClearTransformTreeRequest)
+      returns (ClearTransformTreeResponse) {
+  }
+}
+
+message StreamDataResponse {
+}
+
+message PostDataResponse {
+}
+
+message PostDataError {
+  uint32 index = 1;
+  uint32 code = 2;
+  bool retryable = 3;
+  string message = 4;
+}
+
+message PostDataMultiRequest {
+  repeated model.Datapoint datapoints = 1;
+}
+
+message PostDataMultiResponse {
+}
+
+message PostDataMultiError {
+  repeated PostDataError errors = 1;
+}
+
+message GetInterventionRequestRequest {
+  string id = 1;
+}
+
+message GetInterventionResponseRequest {
+  string request_id = 1;
+}
+
+message GetStreamsConfigurationRequest {
+}
+
+message GetStreamsConfigurationResponse {
+  repeated model.StreamConfiguration streams = 1;
+}
+
+message GetApplicationConfigurationRequest {
+}
+
+message GetApplicationConfigurationResponse {
+  model.ApplicationConfiguration configuration = 1;
+}
+
+message GetAgentConfigurationRequest {
+}
+
+message GetAgentConfigurationResponse {
+  model.AgentConfiguration configuration = 1;
+}
+message HealthRequest {
+}
+
+message HealthResponse {
+}
+
+message GetCommandRequestRequest {
+  repeated string command_filter = 1;
+}
+
+message GetCommandRequestResponse {
+  model.CommandRequest request = 1;
+}
+
+message SendCommandResponseRequest {
+  model.CommandResponse response = 1;
+}
+
+message SendCommandResponseResponse {
+}
+
+message GetCommandRequestStreamRequest {
+  repeated string command_filter = 1;
+}
+
+message GetCommandRequestStreamResponse {
+  model.CommandRequest request = 1;
+}
+
+message PostTransformFrameResponse {
+}
+
+message SetBaseFrameIDRequest {
+  string id = 1;
+}
+
+message SetBaseFrameIDResponse {
+}
+
+message ClearTransformTreeRequest {
+}
+
+message ClearTransformTreeResponse {
+}
+
+message CreateEventRequest {
+  model.Event event = 1;
+}
+
+message CreateEventResponse {
+}
+
+message CreateEventError {
+  bool retryable = 1;
+}
