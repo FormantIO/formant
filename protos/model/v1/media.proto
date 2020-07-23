@@ -38,3 +38,17 @@ message H264VideoFrame {
   // byte array containing frame
   bytes frame_data = 3;
 }
+
+message Video {
+  // Mime Type 
+  string mime_type = 1; // Supported types:  ["video/mp4"]
+  // Duration of video clip in milliseconds
+  int64 duration = 2;
+  oneof data {
+    // Absolute path to a file on the local filesystem
+    string url = 3;
+    // 2MB limit
+    bytes raw = 4;
+  }
+
+}

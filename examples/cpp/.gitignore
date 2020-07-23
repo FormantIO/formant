@@ -1,0 +1,20 @@
+# Generated code
+protos
+
+# grpc
+grpc
+
+# CMake artifacts
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+
+# Example binaries
+send_text_datapoint
+send_numeric_datapoint
+send_file_datapoint
+receive_commands
+get_config_params
+send_json_datapoint
+send_bitset_datapoint

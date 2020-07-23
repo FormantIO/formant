@@ -30,5 +30,6 @@ message Datapoint {
     Health health = 13;
     Json json = 14;
     Battery battery = 15;
+    Video video = 16;
   }
 }

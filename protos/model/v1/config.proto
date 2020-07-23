@@ -96,6 +96,7 @@ enum FileType {
   FILE = 0;
   IMAGE = 1;
   POINT_CLOUD = 4;
+  VIDEO = 5;
 }
 
 message Custom {}
