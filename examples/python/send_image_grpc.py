@@ -8,7 +8,7 @@ from formant.protos.model.v1.media_pb2 import Image
 channel = grpc.insecure_channel("localhost:5501")
 agent = agent_pb2_grpc.AgentStub(channel)
 
-f = open("data/cargo.png", "rb")
+f = open("../data/cargo.png", "rb")
 image = f.read()
 f.close()
 

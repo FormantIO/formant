@@ -64,7 +64,7 @@ private:
       gettimeofday(&tp, NULL);
 
       return tp.tv_sec * 1000 + tp.tv_usec / 1000;
-  }
+   }
 };
 
 int main(int argc, char **argv)

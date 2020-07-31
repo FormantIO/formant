@@ -6,7 +6,7 @@ This directory contains example C++ source code that interacts with Formant Agen
 
 1. Install apt dependencies:
 ```
-sudo apt-get install build-essential autoconf libtool pkg-config automake curl cmake
+sudo apt-get install build-essential autoconf libtool pkg-config automake curl cmake libjsoncpp-dev
 ```
 
 2. Install gRPC using CMake.
@@ -64,6 +64,12 @@ systemctl status formant-agent | grep Active:
 ./send_file_datapoint
 
 ./send_json_datapoint
+
+./send_image_datapoint
+
+./send_localization_datapoint
+
+./send_gps_location_datapoint
 ```
 
 3. Run the commands listener and then trigger a command from the app:

@@ -11,7 +11,7 @@ channel = grpc.insecure_channel("localhost:5501")
 agent = agent_pb2_grpc.AgentStub(channel)
 
 file_datapoint = file_pb2.File()
-file_path = "%s/data/planets.csv" % path
+file_path = "%s/../data/planets.csv" % path
 file_datapoint.url = file_path
 file_datapoint.filename = "planets.csv"
 request = datapoint_pb2.Datapoint(

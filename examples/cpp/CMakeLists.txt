@@ -93,3 +93,37 @@ target_link_libraries(
   gRPC::grpc++
   protobuf::libprotobuf
 )
+
+add_executable(
+  send_image_datapoint
+  send_image_datapoint.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  send_image_datapoint 
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
+
+add_executable(
+  send_gps_location_datapoint
+  send_gps_location_datapoint.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  send_gps_location_datapoint
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
+
+add_executable(
+  send_localization_datapoint
+  send_localization_datapoint.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  send_localization_datapoint
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
+

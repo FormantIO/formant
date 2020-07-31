@@ -16,32 +16,33 @@ using grpc::Status;
 using v1::agent::Agent;
 using v1::agent::PostDataResponse;
 using v1::model::Datapoint;
-using v1::model::Text;
-
+using v1::model::Location;
 
 class FormantAgentClient {
 public:
    FormantAgentClient(std::shared_ptr<Channel> channel) : stub_(Agent::NewStub(channel)) {}
 
-   void PostTextDatapoint(
+   void PostLocationDatapoint(
       const std::string &stream,
-      const std::string &payload
+      const float &latitude,
+      const float &longitude
    ) {
-      std::cout << "posting text datapoint on stream '" << stream << "'" << std::endl;
+      std::cout << "posting location datapoint on stream '" << stream << "'" << std::endl;
 
       Datapoint datapoint;
-
+      
       // Set the stream name
       datapoint.set_stream(stream);
-      
+
       // Set the timestamp to now
       datapoint.set_timestamp(GetCurrentTimestamp());
 
-      // Set the text value
-      datapoint.mutable_text()->set_value(payload);
+      // Set the gps coordinate values
+      datapoint.mutable_location()->set_latitude(latitude);
+      datapoint.mutable_location()->set_longitude(longitude);
 
       // Set tags if desired
-      (*datapoint.mutable_tags())["annotation"] = "formant_exp_001";
+      (*datapoint.mutable_tags())["example_tag_key"] = "example_tag_value";
 
       // Send the datapoint to the Formant Agent
       PostDataResponse response;
@@ -73,7 +74,7 @@ int main(int argc, char **argv)
    FormantAgentClient client(grpc::CreateChannel("localhost:5501", grpc::InsecureChannelCredentials()));
   
    // Send a numeric datapoint
-   client.PostTextDatapoint("example.text", "example datapoint");
+   client.PostLocationDatapoint("example.location", 40.473926, -79.948547);
    
    return 0;
 }
