@@ -80,7 +80,7 @@ Setup the `root` user `ssh_config` by adding this snippet to `/root/.ssh/config`
 
 ```
 Host *.formant
-    ProxyCommand fctl port-forward $(echo %h | sed "s/\.formant$//") -r 127.0.0.1 -p %p --config-directory /root/.formant
+  ProxyCommand fctl port-forward $(echo %h | sed "s/\.formant$//") -r 127.0.0.1 -p %p --config-directory /root/.formant
 ```
 
 ## SSH Commands on client

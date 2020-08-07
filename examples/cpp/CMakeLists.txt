@@ -127,3 +127,24 @@ target_link_libraries(
   protobuf::libprotobuf
 )
 
+add_executable(
+  send_event
+  send_event.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  send_event
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
+
+add_executable(
+  send_receive_intervention_request
+  send_receive_intervention_request.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  send_receive_intervention_request
+  gRPC::grpc++
+  protobuf::libprotobuf
+)

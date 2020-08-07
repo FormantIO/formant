@@ -21,3 +21,5 @@ send_bitset_datapoint
 send_image_datapoint
 send_localization_datapoint
 send_gps_location_datapoint
+send_receive_intervention_request
+send_event

@@ -70,6 +70,8 @@ systemctl status formant-agent | grep Active:
 ./send_localization_datapoint
 
 ./send_gps_location_datapoint
+
+./send_event
 ```
 
 3. Run the commands listener and then trigger a command from the app:
@@ -81,3 +83,9 @@ systemctl status formant-agent | grep Active:
 ```
 ./get_config_params
 ```
+
+5. Run an intervention request
+```
+./send_receive_intervention_request
+```
+This will pause after sending the request in order for you to respond to it in the Formant app.

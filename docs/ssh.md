@@ -24,14 +24,14 @@ Add the following to the top of your ~/.ssh/config file
 
 ```bash
 Host *.formant
-        ProxyCommand fctl port-forward $(echo %h | sed "s/\.formant$//") -r 127.0.0.1 -p %p
+  ProxyCommand fctl port-forward $(echo %h | sed "s/\.formant$//") -r 127.0.0.1 -p %p
 ```
 
 ### Docker
 
 ```bash
 Host *.formant
-        ProxyCommand docker run -i -a stderr -a stdin -a stdout --rm -v <permanent_storage>:/root/.formant formant/fctl port-forward $(echo %h | sed "s/\.formant$//") -r 127.0.0.1 -p %p
+  ProxyCommand docker run -i -a stderr -a stdin -a stdout --rm -v <permanent_storage>:/root/.formant formant/fctl port-forward $(echo %h | sed "s/\.formant$//") -r 127.0.0.1 -p %p
 ```
 
 Replace `<permanent_storage>` with a mount path on your local host system, and fill in your admin credentials.
