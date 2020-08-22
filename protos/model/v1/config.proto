@@ -45,6 +45,7 @@ message TeleopRosStreamConfiguration {
   string topic_name = 1;
   ROSTopicType topic_type = 2;
   TeleopRosStreamConfigurationMode mode = 3;
+  bool encode_video = 4;
 }
 
 message TelemetryConfiguration {
