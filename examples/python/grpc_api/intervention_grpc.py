@@ -17,7 +17,7 @@ request.selection_request.title = "Identify Color"
 request.selection_request.hint = 1
 request.selection_request.instruction = "Select the color of the pallet in the picker."
 request.selection_request.image.content_type = "image/png"
-request.selection_request.image.url = "%s/../data/picker.png" % path
+request.selection_request.image.url = "%s/../../data/picker.png" % path
 request.selection_request.options.extend(["Pink", "White", "Orange", "Blue"])
 create_response = agent_stub.CreateInterventionRequest(request)
 print("Created intervention request %s" % create_response)

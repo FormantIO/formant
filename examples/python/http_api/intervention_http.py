@@ -12,7 +12,7 @@ data = {
     "timestamp": int(time.time() * 1000),
     "labeling_request": {
         "title": "Select Inventory",
-        "image": {"content-type": "image/png", "url": ("%s/../data/cargo.png" % path)},
+        "image": {"content-type": "image/png", "url": ("%s/../../data/cargo.png" % path)},
         "instruction": "Draw box around all cargo palettes",
         "labels": [
             {"value": "53e3f75e-63a6-4e38-a19a-02893021be89", "display_name": "Cargo",}
