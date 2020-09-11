@@ -20,7 +20,7 @@ message Datapoint {
   oneof data {  // payload, use one of the fields below.
     Text text = 4;
     Numeric numeric = 5;
-    MetricSet metric_set = 6;
+    NumericSet numeric_set = 17;
     Bitset bitset = 7;
     File file = 8;
     Image image = 9;
@@ -32,4 +32,5 @@ message Datapoint {
     Battery battery = 15;
     Video video = 16;
   }
+  reserved 6;
 }

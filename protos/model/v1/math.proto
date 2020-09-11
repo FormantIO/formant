@@ -8,13 +8,14 @@ message Numeric {
   double value = 1;
 }
 
-message MetricSet {
-  repeated Metric metrics = 1;
+message NumericSetEntry {
+  double value = 1;
+  string label = 2;
+  string unit = 3;
 }
 
-message Metric {
-  double value = 1;
-  string unit = 2;
+message NumericSet {
+  repeated NumericSetEntry numerics = 1;
 }
 
 message Bit {

@@ -9,6 +9,17 @@ if __name__ == "__main__":
     # Ingest numeric datapoint
     fclient.post_numeric("example.numeric", 3.0)
 
+    # Ingest numericset datapoint, 'percent' and '%' units adds
+    # additional donut visualization
+    fclient.post_numericset(
+        "example.numericset2",
+        {
+            "frequency": (998, "Hz"),
+            "usage": (30, "percent"),
+            "warp factor": (6.0, None),
+        },
+    )
+
     # Ingest bitset datapoint
     fclient.post_bitset(
         "example.bitset", {"standing": False, "walking": False, "sitting": True}
