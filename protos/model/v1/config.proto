@@ -26,6 +26,7 @@ message AgentConfigurationDocument {
   ApplicationConfiguration application = 5;
   TeleopConfiguration teleop = 6;
   PortForwardingConfiguration port_forwarding = 7;
+  BlobData blob_data = 8;
 }
 
 message TeleopConfiguration {
@@ -89,6 +90,10 @@ message StreamConfiguration {
   google.protobuf.BoolValue on_demand = 20;
 }
 
+message BlobData {
+  string data = 1;
+}
+
 enum FileFormat {
   PLAIN_TEXT = 0;
   JSON = 1;
@@ -101,7 +106,8 @@ enum FileType {
   VIDEO = 5;
 }
 
-message Custom {}
+message Custom {
+}
 
 message DirectoryWatch {
   string directory = 1;

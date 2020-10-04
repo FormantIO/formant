@@ -65,6 +65,10 @@ service Agent {
   rpc GetApplicationConfiguration(GetApplicationConfigurationRequest)
       returns (GetApplicationConfigurationResponse) {
   }
+  /* GetConfigBlobData returns user-defined blob data */
+  rpc GetConfigBlobData(GetConfigBlobDataRequest)
+      returns (GetConfigBlobDataResponse) {
+  }
   /* GetAgentConfiguration returns the Agent configuration. */
   rpc GetAgentConfiguration(GetAgentConfigurationRequest)
       returns (GetAgentConfigurationResponse) {
@@ -144,6 +148,13 @@ message GetApplicationConfigurationRequest {
 
 message GetApplicationConfigurationResponse {
   model.ApplicationConfiguration configuration = 1;
+}
+
+message GetConfigBlobDataRequest {
+}
+
+message GetConfigBlobDataResponse {
+  model.BlobData blob_data = 1;
 }
 
 message GetAgentConfigurationRequest {
