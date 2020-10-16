@@ -34,6 +34,11 @@ service Agent {
    * this RPC. */
   rpc PostDataMulti(PostDataMultiRequest) returns (PostDataMultiResponse) {
   }
+  /* GetTeleopControlDataStream returns a stream of datapoints sent to this device as
+   * they arrive from Formant teleop. */
+  rpc GetTeleopControlDataStream(GetTeleopControlDataStreamRequest)
+      returns (stream GetTeleopControlDataStreamResponse) {
+  }
   /* CreateEvent creates a custom event. */
   rpc CreateEvent(CreateEventRequest) returns (CreateEventResponse) {
   }
@@ -190,6 +195,14 @@ message GetCommandRequestStreamRequest {
 
 message GetCommandRequestStreamResponse {
   model.CommandRequest request = 1;
+}
+
+message GetTeleopControlDataStreamRequest {
+  repeated string stream_filter = 1;
+}
+
+message GetTeleopControlDataStreamResponse {
+  model.ControlDatapoint control_datapoint = 1;
 }
 
 message PostTransformFrameResponse {

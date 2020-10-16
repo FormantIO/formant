@@ -34,3 +34,14 @@ message Datapoint {
   }
   reserved 6;
 }
+
+/* ControlDatapoint contains data sent from Formant teleop. */
+ message ControlDatapoint {
+  string stream = 1;
+  int64 timestamp = 2;  // unix epoch time in milliseconds
+  oneof data {  // payload, use one of the fields below.
+    Bitset bitset = 3;
+    Twist twist = 4;
+    Transform pose = 5;
+  }
+}

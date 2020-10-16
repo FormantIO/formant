@@ -3,6 +3,7 @@ syntax = "proto3";
 package v1.model;
 
 import "protos/model/v1/ros.proto";
+import "protos/model/v1/rtc.proto";
 import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/model";
@@ -27,17 +28,19 @@ message AgentConfigurationDocument {
   TeleopConfiguration teleop = 6;
   PortForwardingConfiguration port_forwarding = 7;
   BlobData blob_data = 8;
+  Diagnostics diagnostics = 9;
 }
 
 message TeleopConfiguration {
   repeated TeleopRosStreamConfiguration ros_streams = 1;
+  repeated TeleopCustomStreamConfiguration custom_streams = 2;
 }
 
 message PortForwardingConfiguration {
   google.protobuf.BoolValue enabled = 1;
 }
 
-enum TeleopRosStreamConfigurationMode {
+enum TeleopMode {
   COMMAND = 0;
   OBSERVE = 1;
 }
@@ -45,7 +48,14 @@ enum TeleopRosStreamConfigurationMode {
 message TeleopRosStreamConfiguration {
   string topic_name = 1;
   ROSTopicType topic_type = 2;
-  TeleopRosStreamConfigurationMode mode = 3;
+  TeleopMode mode = 3;
+  bool encode_video = 4;
+}
+
+message TeleopCustomStreamConfiguration {
+  string name = 1;
+  string rtc_stream_type = 2;
+  TeleopMode mode = 3;
   bool encode_video = 4;
 }
 
@@ -92,6 +102,11 @@ message StreamConfiguration {
 
 message BlobData {
   string data = 1;
+}
+
+message Diagnostics {
+  google.protobuf.BoolValue report_logs = 1;
+  google.protobuf.BoolValue report_metrics = 2;
 }
 
 enum FileFormat {
