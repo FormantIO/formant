@@ -21,13 +21,13 @@ numeric_msg2.value = random.uniform(0, 100)
 numeric_msg2.label = "usage"
 numeric_msg2.unit = "percent"
 
-numeric_set = math_pb2.NumericSet()
-numeric_set.numerics.append(numeric_msg1)
-numeric_set.numerics.append(numeric_msg2)
+numericset_msg = math_pb2.NumericSet()
+numericset_msg.numerics.append(numeric_msg1)
+numericset_msg.numerics.append(numeric_msg2)
 
 data_point = datapoint_pb2.Datapoint(
-    stream="test_numericset",
-    numeric_set=numeric_set,
+    stream="test.numeric_set",
+    numeric_set=numericset_msg,
     timestamp=int(time.time() * 1000),
 )
 agent.PostData(data_point)
