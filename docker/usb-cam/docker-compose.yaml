@@ -1,0 +1,38 @@
+version: "2.2"
+
+networks:
+  formant:
+    driver: bridge
+
+volumes:
+  formant:
+
+services:
+  ros-master:
+    image: ros:melodic-ros-core
+    command: stdbuf -o L roscore
+    networks:
+      - formant
+    restart: always
+  ros-usb-cam:
+    image: formant/ros-usb-cam
+    networks:
+      - formant
+    devices:
+      - /dev/video0
+    env_file:
+      - usb_cam.env
+    restart: always
+  formant-agent:
+    container_name: ros-formant-agent
+    image: formant/agent:ros-melodic
+    restart: always
+    env_file:
+      - formant.env
+    ports:
+      - "5501:5501"
+      - "5502:5502"
+    volumes:
+      - "formant:/var/lib/formant"
+    networks:
+      - formant
