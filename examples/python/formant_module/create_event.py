@@ -7,6 +7,7 @@ if __name__ == "__main__":
         "Synchronized transporter annular confinement beam to warp frequency 0.4e17 hz",
         notify=True,
         tags={"Region": "North"},
+        severity="warning",  # one of "info", "warning", "error", "critical"
     )
 
     print("Successfully created event.")

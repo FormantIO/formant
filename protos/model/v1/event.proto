@@ -11,7 +11,16 @@ message Event {
   string stream_name = 3;
   string stream_type = 4;
   bool notification_enabled = 5;
+  Severity severity = 9;
   map<string, string> tags = 6;
+  reserved 7;
+}
+
+enum Severity {
+  INFO = 0;
+  WARNING = 1;
+  ERROR = 2;
+  CRITICAL = 3;
 }
 
 message AgentEventConfiguration {

@@ -6,16 +6,25 @@ networks:
 
 volumes:
   formant:
+  catkin_ws: # share catkin workspace from ROS application container (turtlebot) into Agent for custom messages.
 
 services:
   ros-master:
+    container_name: ros-master
     image: ros:melodic-ros-core
     command: stdbuf -o L roscore
     networks:
       - formant
     restart: always
+  turtlebot:
+    container_name: turtlebot
+    image: formant/turtlebot
+    network_mode: host
+    restart: always
+    volumes:
+      - "catkin_ws:/catkin_ws"
   formant-agent:
-    container_name: ros-formant-agent
+    container_name: formant-agent
     image: formant/agent:ros-melodic
     restart: always
     env_file:
@@ -25,5 +34,6 @@ services:
       - "5502:5502"
     volumes:
       - "formant:/var/lib/formant"
+      - "catkin_ws:/catkin_ws"
     networks:
       - formant

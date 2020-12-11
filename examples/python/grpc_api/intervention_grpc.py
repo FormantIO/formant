@@ -4,7 +4,7 @@ import time
 import grpc
 
 from formant.protos.agent.v1 import agent_pb2, agent_pb2_grpc
-from formant.protos.model.v1 import intervention_pb2
+from formant.protos.model.v1 import intervention_pb2, event_pb2
 
 path = os.path.dirname(os.path.realpath(__file__))
 channel = grpc.insecure_channel("localhost:5501")
@@ -12,7 +12,7 @@ agent_stub = agent_pb2_grpc.AgentStub(channel)
 
 request = intervention_pb2.InterventionRequest()
 request.timestamp = int(time.time() * 1000)
-request.severity = intervention_pb2.INFO
+request.severity = event_pb2.INFO
 request.selection_request.title = "Identify Color"
 request.selection_request.hint = 1
 request.selection_request.instruction = "Select the color of the pallet in the picker."
