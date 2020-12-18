@@ -2,7 +2,7 @@
 
 ## Supported Systems
 
-We currently support `xenial`, `bionic`, `stretch`, `jessie`, and `buster` on `amd64`, `arm64`, and `arm`.
+We currently support `xenial`, `bionic`, `focal`, `stretch`, `jessie`, and `buster` on `amd64`, `arm64`, and `arm`.
 
 ## Repo Setup
 
