@@ -1,4 +1,4 @@
-# Pre-requisites for using the formant python module
+# Pre-requisites for using the formant agent python module
 
 1. `pip install formant`, or `pip3 install formant`
 2. Make sure Formant Agent is running
