@@ -28,6 +28,7 @@ message AgentConfigurationDocument {
   PortForwardingConfiguration port_forwarding = 7;
   BlobData blob_data = 8;
   Diagnostics diagnostics = 9;
+  google.protobuf.BoolValue terminal_access = 10;
 }
 
 message TeleopConfiguration {
@@ -49,6 +50,7 @@ message TeleopRosStreamConfiguration {
   ROSTopicType topic_type = 2;
   TeleopMode mode = 3;
   bool encode_video = 4;
+  string audio_codec = 5;
 }
 
 message TeleopCustomStreamConfiguration {

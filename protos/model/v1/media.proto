@@ -39,6 +39,15 @@ message H264VideoFrame {
   bytes frame_data = 3;
 }
 
+message AudioChunk {
+  // Index of current chunk, used to ensure we are in order and not duplicating
+  int32 index = 1;
+  // format of audio chunk
+  string format = 2;
+  // byte array containing chunk
+  bytes chunk_data = 3;
+}
+
 message Video {
   // Mime Type 
   string mime_type = 1; // Supported types:  ["video/mp4"]
