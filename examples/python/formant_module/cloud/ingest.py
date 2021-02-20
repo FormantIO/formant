@@ -1,6 +1,9 @@
 from formant.sdk.cloud.v1 import Client as FormantClient
 
 if __name__ == "__main__":
+    # to authenticate set FORMANT_EMAIL and FORMANT_PASSWORD
+    # environment variables for an existing user or service account
+    # NOTE: the account must have administrator access to ingest data
     fclient = FormantClient()
 
     device_id = "572f5ff3-63e9-4687-b242-c0d8a4891d80"

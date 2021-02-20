@@ -10,6 +10,22 @@ option go_package = "github.com/FormantIO/genproto/go/v1/model";
 message AgentConfigurationStore {
   string agent_version = 1;
   AgentConfiguration configuration = 2;
+  AgentFeatureSet feature_set = 3;
+}
+
+message AgentFeatureSet {
+  bool telemetry = 1;
+  bool internal_telemetry = 2;
+  bool teleop = 3;
+  bool custom_events = 4;
+  bool triggered_events = 5;
+  bool ssh = 6;
+  bool port_forwarding = 7;
+  bool commands = 8;
+  bool interventions = 9;
+  bool on_demand = 10;
+  bool app_config = 11;
+  bool blob_storage = 12;
 }
 
 message AgentConfiguration {
@@ -34,6 +50,7 @@ message AgentConfigurationDocument {
 message TeleopConfiguration {
   repeated TeleopRosStreamConfiguration ros_streams = 1;
   repeated TeleopCustomStreamConfiguration custom_streams = 2;
+  repeated TeleopHardwareStreamConfiguration hardware_streams=3;
 }
 
 message PortForwardingConfiguration {
@@ -51,6 +68,13 @@ message TeleopRosStreamConfiguration {
   TeleopMode mode = 3;
   bool encode_video = 4;
   string audio_codec = 5;
+}
+
+message TeleopHardwareStreamConfiguration {
+  string name = 1;
+  string rtc_stream_type = 2;
+  TeleopMode mode = 3;
+  string hw_descriptor = 4;
 }
 
 message TeleopCustomStreamConfiguration {
@@ -99,6 +123,11 @@ message StreamConfiguration {
   google.protobuf.DoubleValue throttle_hz = 8;
   google.protobuf.BoolValue disabled = 19;
   google.protobuf.BoolValue on_demand = 20;
+  StreamTransformConfiguration transform = 21;
+}
+
+message StreamTransformConfiguration {
+  google.protobuf.BoolValue video_encoding_enabled = 1;
 }
 
 message BlobData {

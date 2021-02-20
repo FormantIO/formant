@@ -13,7 +13,7 @@ RUN apt-key adv --fetch-keys https://keys.formant.io/formant.pub.gpg
 RUN echo "deb https://repo.formant.io/formant/debian <VERSION_CODENAME> main" | tee -a /etc/apt/sources.list > /dev/null
 ```
 
-These directives setup the Formant repository. Make sure to replace `<VERSION_CODENAME>` with your linux distro (`xenial` `bionic` `jessie` `stretch` `buster`).
+These directives setup the Formant repository. Make sure to replace `<VERSION_CODENAME>` with your linux distro.
 
 Next set the `service_enable` debconf parameter to `false`. This ensures the normal interactive debian workflow:
 

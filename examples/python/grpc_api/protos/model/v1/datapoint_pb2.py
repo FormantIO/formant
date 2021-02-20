@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1fprotos/model/v1/datapoint.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/file.proto\x1a\x1cprotos/model/v1/health.proto\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\x1a\x1aprotos/model/v1/text.proto\x1a\x1bprotos/model/v1/media.proto\"\x97\x06\n\tDatapoint\x12\x16\n\x06stream\x18\x01 \x01(\tR\x06stream\x12\x1c\n\ttimestamp\x18\x02 \x01(\x03R\ttimestamp\x12\x31\n\x04tags\x18\x03 \x03(\x0b\x32\x1d.v1.model.Datapoint.TagsEntryR\x04tags\x12$\n\x04text\x18\x04 \x01(\x0b\x32\x0e.v1.model.TextH\x00R\x04text\x12-\n\x07numeric\x18\x05 \x01(\x0b\x32\x11.v1.model.NumericH\x00R\x07numeric\x12\x37\n\x0bnumeric_set\x18\x11 \x01(\x0b\x32\x14.v1.model.NumericSetH\x00R\nnumericSet\x12*\n\x06\x62itset\x18\x07 \x01(\x0b\x32\x10.v1.model.BitsetH\x00R\x06\x62itset\x12$\n\x04\x66ile\x18\x08 \x01(\x0b\x32\x0e.v1.model.FileH\x00R\x04\x66ile\x12\'\n\x05image\x18\t \x01(\x0b\x32\x0f.v1.model.ImageH\x00R\x05image\x12\x37\n\x0bpoint_cloud\x18\n \x01(\x0b\x32\x14.v1.model.PointCloudH\x00R\npointCloud\x12\x30\n\x08location\x18\x0b \x01(\x0b\x32\x12.v1.model.LocationH\x00R\x08location\x12<\n\x0clocalization\x18\x0c \x01(\x0b\x32\x16.v1.model.LocalizationH\x00R\x0clocalization\x12*\n\x06health\x18\r \x01(\x0b\x32\x10.v1.model.HealthH\x00R\x06health\x12$\n\x04json\x18\x0e \x01(\x0b\x32\x0e.v1.model.JsonH\x00R\x04json\x12-\n\x07\x62\x61ttery\x18\x0f \x01(\x0b\x32\x11.v1.model.BatteryH\x00R\x07\x62\x61ttery\x12\'\n\x05video\x18\x10 \x01(\x0b\x32\x0f.v1.model.VideoH\x00R\x05video\x1a\x37\n\tTagsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x42\x06\n\x04\x64\x61taJ\x04\x08\x06\x10\x07\"\xd0\x01\n\x10\x43ontrolDatapoint\x12\x16\n\x06stream\x18\x01 \x01(\tR\x06stream\x12\x1c\n\ttimestamp\x18\x02 \x01(\x03R\ttimestamp\x12*\n\x06\x62itset\x18\x03 \x01(\x0b\x32\x10.v1.model.BitsetH\x00R\x06\x62itset\x12\'\n\x05twist\x18\x04 \x01(\x0b\x32\x0f.v1.model.TwistH\x00R\x05twist\x12)\n\x04pose\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformH\x00R\x04poseB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1fprotos/model/v1/datapoint.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/file.proto\x1a\x1cprotos/model/v1/health.proto\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\x1a\x1aprotos/model/v1/text.proto\x1a\x1bprotos/model/v1/media.proto\"\x97\x06\n\tDatapoint\x12\x16\n\x06stream\x18\x01 \x01(\tR\x06stream\x12\x1c\n\ttimestamp\x18\x02 \x01(\x03R\ttimestamp\x12\x31\n\x04tags\x18\x03 \x03(\x0b\x32\x1d.v1.model.Datapoint.TagsEntryR\x04tags\x12$\n\x04text\x18\x04 \x01(\x0b\x32\x0e.v1.model.TextH\x00R\x04text\x12-\n\x07numeric\x18\x05 \x01(\x0b\x32\x11.v1.model.NumericH\x00R\x07numeric\x12\x37\n\x0bnumeric_set\x18\x11 \x01(\x0b\x32\x14.v1.model.NumericSetH\x00R\nnumericSet\x12*\n\x06\x62itset\x18\x07 \x01(\x0b\x32\x10.v1.model.BitsetH\x00R\x06\x62itset\x12$\n\x04\x66ile\x18\x08 \x01(\x0b\x32\x0e.v1.model.FileH\x00R\x04\x66ile\x12\'\n\x05image\x18\t \x01(\x0b\x32\x0f.v1.model.ImageH\x00R\x05image\x12\x37\n\x0bpoint_cloud\x18\n \x01(\x0b\x32\x14.v1.model.PointCloudH\x00R\npointCloud\x12\x30\n\x08location\x18\x0b \x01(\x0b\x32\x12.v1.model.LocationH\x00R\x08location\x12<\n\x0clocalization\x18\x0c \x01(\x0b\x32\x16.v1.model.LocalizationH\x00R\x0clocalization\x12*\n\x06health\x18\r \x01(\x0b\x32\x10.v1.model.HealthH\x00R\x06health\x12$\n\x04json\x18\x0e \x01(\x0b\x32\x0e.v1.model.JsonH\x00R\x04json\x12-\n\x07\x62\x61ttery\x18\x0f \x01(\x0b\x32\x11.v1.model.BatteryH\x00R\x07\x62\x61ttery\x12\'\n\x05video\x18\x10 \x01(\x0b\x32\x0f.v1.model.VideoH\x00R\x05video\x1a\x37\n\tTagsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x42\x06\n\x04\x64\x61taJ\x04\x08\x06\x10\x07\"\xff\x01\n\x10\x43ontrolDatapoint\x12\x16\n\x06stream\x18\x01 \x01(\tR\x06stream\x12\x1c\n\ttimestamp\x18\x02 \x01(\x03R\ttimestamp\x12*\n\x06\x62itset\x18\x03 \x01(\x0b\x32\x10.v1.model.BitsetH\x00R\x06\x62itset\x12\'\n\x05twist\x18\x04 \x01(\x0b\x32\x0f.v1.model.TwistH\x00R\x05twist\x12)\n\x04pose\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformH\x00R\x04pose\x12-\n\x07numeric\x18\x06 \x01(\x0b\x32\x11.v1.model.NumericH\x00R\x07numericB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_file__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_health__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_navigation__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_text__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_media__pb2.DESCRIPTOR,])
 
@@ -255,6 +255,13 @@ _CONTROLDATAPOINT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='pose', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='numeric', full_name='v1.model.ControlDatapoint.numeric', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='numeric', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -273,7 +280,7 @@ _CONTROLDATAPOINT = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=1017,
-  serialized_end=1225,
+  serialized_end=1272,
 )
 
 _DATAPOINT_TAGSENTRY.containing_type = _DATAPOINT
@@ -333,6 +340,7 @@ _DATAPOINT.fields_by_name['video'].containing_oneof = _DATAPOINT.oneofs_by_name[
 _CONTROLDATAPOINT.fields_by_name['bitset'].message_type = protos_dot_model_dot_v1_dot_math__pb2._BITSET
 _CONTROLDATAPOINT.fields_by_name['twist'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TWIST
 _CONTROLDATAPOINT.fields_by_name['pose'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
+_CONTROLDATAPOINT.fields_by_name['numeric'].message_type = protos_dot_model_dot_v1_dot_math__pb2._NUMERIC
 _CONTROLDATAPOINT.oneofs_by_name['data'].fields.append(
   _CONTROLDATAPOINT.fields_by_name['bitset'])
 _CONTROLDATAPOINT.fields_by_name['bitset'].containing_oneof = _CONTROLDATAPOINT.oneofs_by_name['data']
@@ -342,6 +350,9 @@ _CONTROLDATAPOINT.fields_by_name['twist'].containing_oneof = _CONTROLDATAPOINT.o
 _CONTROLDATAPOINT.oneofs_by_name['data'].fields.append(
   _CONTROLDATAPOINT.fields_by_name['pose'])
 _CONTROLDATAPOINT.fields_by_name['pose'].containing_oneof = _CONTROLDATAPOINT.oneofs_by_name['data']
+_CONTROLDATAPOINT.oneofs_by_name['data'].fields.append(
+  _CONTROLDATAPOINT.fields_by_name['numeric'])
+_CONTROLDATAPOINT.fields_by_name['numeric'].containing_oneof = _CONTROLDATAPOINT.oneofs_by_name['data']
 DESCRIPTOR.message_types_by_name['Datapoint'] = _DATAPOINT
 DESCRIPTOR.message_types_by_name['ControlDatapoint'] = _CONTROLDATAPOINT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)

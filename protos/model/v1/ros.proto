@@ -37,6 +37,7 @@ message ROSMessageToPublish {
     string text = 5;
     model.Transform pose = 6;
     model.GoalID goalID = 9;
+    model.Numeric numeric = 10;
   }
 }
 
@@ -50,4 +51,5 @@ enum ROSTopicType {
   GEOMETRY_MSGS_TWIST = 6;
   H264_VIDEO_FRAME = 7;
   AUDIO_CHUNK = 8;
+  STD_MSGS_FLOAT64 = 9;
 }

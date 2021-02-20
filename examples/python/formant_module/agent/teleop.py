@@ -33,7 +33,10 @@ def handle_buttons(_):
 
 
 if __name__ == "__main__":
-    fclient = FormantClient(ignore_throttled=True, ignore_unavailable=True,)
+    fclient = FormantClient(
+        ignore_throttled=True,
+        ignore_unavailable=True,
+    )
 
     # Handling data ...
     fclient.register_teleop_callback(

@@ -43,5 +43,6 @@ message Datapoint {
     Bitset bitset = 3;
     Twist twist = 4;
     Transform pose = 5;
+    Numeric numeric = 6;
   }
 }
