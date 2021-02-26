@@ -107,6 +107,10 @@ service Agent {
   rpc ClearTransformTree(ClearTransformTreeRequest)
       returns (ClearTransformTreeResponse) {
   }
+  /* GetTeleopInfo returns info on how many active teleop connections there are */
+  rpc GetTeleopInfo(GetTeleopInfoRequest)
+      returns (GetTeleopInfoResponse) {
+  }
 }
 
 message StreamDataResponse {
@@ -230,4 +234,11 @@ message CreateEventResponse {
 
 message CreateEventError {
   bool retryable = 1;
+}
+
+message GetTeleopInfoRequest {  
+}
+
+message GetTeleopInfoResponse {
+  uint32 connection_count = 1;
 }

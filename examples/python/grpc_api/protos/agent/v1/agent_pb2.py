@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/agent',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bprotos/agent/v1/agent.proto\x12\x08v1.agent\x1a\x1fprotos/model/v1/datapoint.proto\x1a\"protos/model/v1/intervention.proto\x1a\x1eprotos/model/v1/commands.proto\x1a\x1cprotos/model/v1/config.proto\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/event.proto\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"q\n\rPostDataError\x12\x14\n\x05index\x18\x01 \x01(\rR\x05index\x12\x12\n\x04\x63ode\x18\x02 \x01(\rR\x04\x63ode\x12\x1c\n\tretryable\x18\x03 \x01(\x08R\tretryable\x12\x18\n\x07message\x18\x04 \x01(\tR\x07message\"K\n\x14PostDataMultiRequest\x12\x33\n\ndatapoints\x18\x01 \x03(\x0b\x32\x13.v1.model.DatapointR\ndatapoints\"\x17\n\x15PostDataMultiResponse\"E\n\x12PostDataMultiError\x12/\n\x06\x65rrors\x18\x01 \x03(\x0b\x32\x17.v1.agent.PostDataErrorR\x06\x65rrors\"/\n\x1dGetInterventionRequestRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"?\n\x1eGetInterventionResponseRequest\x12\x1d\n\nrequest_id\x18\x01 \x01(\tR\trequestId\" \n\x1eGetStreamsConfigurationRequest\"Z\n\x1fGetStreamsConfigurationResponse\x12\x37\n\x07streams\x18\x01 \x03(\x0b\x32\x1d.v1.model.StreamConfigurationR\x07streams\"$\n\"GetApplicationConfigurationRequest\"o\n#GetApplicationConfigurationResponse\x12H\n\rconfiguration\x18\x01 \x01(\x0b\x32\".v1.model.ApplicationConfigurationR\rconfiguration\"\x1a\n\x18GetConfigBlobDataRequest\"L\n\x19GetConfigBlobDataResponse\x12/\n\tblob_data\x18\x01 \x01(\x0b\x32\x12.v1.model.BlobDataR\x08\x62lobData\"\x1e\n\x1cGetAgentConfigurationRequest\"c\n\x1dGetAgentConfigurationResponse\x12\x42\n\rconfiguration\x18\x01 \x01(\x0b\x32\x1c.v1.model.AgentConfigurationR\rconfiguration\"\x0f\n\rHealthRequest\"\x10\n\x0eHealthResponse\"A\n\x18GetCommandRequestRequest\x12%\n\x0e\x63ommand_filter\x18\x01 \x03(\tR\rcommandFilter\"O\n\x19GetCommandRequestResponse\x12\x32\n\x07request\x18\x01 \x01(\x0b\x32\x18.v1.model.CommandRequestR\x07request\"S\n\x1aSendCommandResponseRequest\x12\x35\n\x08response\x18\x01 \x01(\x0b\x32\x19.v1.model.CommandResponseR\x08response\"\x1d\n\x1bSendCommandResponseResponse\"G\n\x1eGetCommandRequestStreamRequest\x12%\n\x0e\x63ommand_filter\x18\x01 \x03(\tR\rcommandFilter\"U\n\x1fGetCommandRequestStreamResponse\x12\x32\n\x07request\x18\x01 \x01(\x0b\x32\x18.v1.model.CommandRequestR\x07request\"H\n!GetTeleopControlDataStreamRequest\x12#\n\rstream_filter\x18\x01 \x03(\tR\x0cstreamFilter\"m\n\"GetTeleopControlDataStreamResponse\x12G\n\x11\x63ontrol_datapoint\x18\x01 \x01(\x0b\x32\x1a.v1.model.ControlDatapointR\x10\x63ontrolDatapoint\"\x1c\n\x1aPostTransformFrameResponse\"\'\n\x15SetBaseFrameIDRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"\x18\n\x16SetBaseFrameIDResponse\"\x1b\n\x19\x43learTransformTreeRequest\"\x1c\n\x1a\x43learTransformTreeResponse\";\n\x12\x43reateEventRequest\x12%\n\x05\x65vent\x18\x01 \x01(\x0b\x32\x0f.v1.model.EventR\x05\x65vent\"\x15\n\x13\x43reateEventResponse\"0\n\x10\x43reateEventError\x12\x1c\n\tretryable\x18\x01 \x01(\x08R\tretryable2\x99\x0e\n\x05\x41gent\x12\x43\n\nStreamData\x12\x13.v1.model.Datapoint\x1a\x1c.v1.agent.StreamDataResponse\"\x00(\x01\x12=\n\x08PostData\x12\x13.v1.model.Datapoint\x1a\x1a.v1.agent.PostDataResponse\"\x00\x12R\n\rPostDataMulti\x12\x1e.v1.agent.PostDataMultiRequest\x1a\x1f.v1.agent.PostDataMultiResponse\"\x00\x12{\n\x1aGetTeleopControlDataStream\x12+.v1.agent.GetTeleopControlDataStreamRequest\x1a,.v1.agent.GetTeleopControlDataStreamResponse\"\x00\x30\x01\x12L\n\x0b\x43reateEvent\x12\x1c.v1.agent.CreateEventRequest\x1a\x1d.v1.agent.CreateEventResponse\"\x00\x12[\n\x19\x43reateInterventionRequest\x12\x1d.v1.model.InterventionRequest\x1a\x1d.v1.model.InterventionRequest\"\x00\x12\x62\n\x16GetInterventionRequest\x12\'.v1.agent.GetInterventionRequestRequest\x1a\x1d.v1.model.InterventionRequest\"\x00\x12\x65\n\x17GetInterventionResponse\x12(.v1.agent.GetInterventionResponseRequest\x1a\x1e.v1.model.InterventionResponse\"\x00\x12p\n\x17GetStreamsConfiguration\x12(.v1.agent.GetStreamsConfigurationRequest\x1a).v1.agent.GetStreamsConfigurationResponse\"\x00\x12|\n\x1bGetApplicationConfiguration\x12,.v1.agent.GetApplicationConfigurationRequest\x1a-.v1.agent.GetApplicationConfigurationResponse\"\x00\x12^\n\x11GetConfigBlobData\x12\".v1.agent.GetConfigBlobDataRequest\x1a#.v1.agent.GetConfigBlobDataResponse\"\x00\x12j\n\x15GetAgentConfiguration\x12&.v1.agent.GetAgentConfigurationRequest\x1a\'.v1.agent.GetAgentConfigurationResponse\"\x00\x12=\n\x06Health\x12\x17.v1.agent.HealthRequest\x1a\x18.v1.agent.HealthResponse\"\x00\x12^\n\x11GetCommandRequest\x12\".v1.agent.GetCommandRequestRequest\x1a#.v1.agent.GetCommandRequestResponse\"\x00\x12r\n\x17GetCommandRequestStream\x12(.v1.agent.GetCommandRequestStreamRequest\x1a).v1.agent.GetCommandRequestStreamResponse\"\x00\x30\x01\x12\x64\n\x13SendCommandResponse\x12$.v1.agent.SendCommandResponseRequest\x1a%.v1.agent.SendCommandResponseResponse\"\x00\x12V\n\x12PostTransformFrame\x12\x18.v1.model.TransformFrame\x1a$.v1.agent.PostTransformFrameResponse\"\x00\x12U\n\x0eSetBaseFrameID\x12\x1f.v1.agent.SetBaseFrameIDRequest\x1a .v1.agent.SetBaseFrameIDResponse\"\x00\x12\x61\n\x12\x43learTransformTree\x12#.v1.agent.ClearTransformTreeRequest\x1a$.v1.agent.ClearTransformTreeResponse\"\x00\x42+Z)github.com/FormantIO/genproto/go/v1/agentb\x06proto3'
+  serialized_pb=b'\n\x1bprotos/agent/v1/agent.proto\x12\x08v1.agent\x1a\x1fprotos/model/v1/datapoint.proto\x1a\"protos/model/v1/intervention.proto\x1a\x1eprotos/model/v1/commands.proto\x1a\x1cprotos/model/v1/config.proto\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/event.proto\"\x14\n\x12StreamDataResponse\"\x12\n\x10PostDataResponse\"q\n\rPostDataError\x12\x14\n\x05index\x18\x01 \x01(\rR\x05index\x12\x12\n\x04\x63ode\x18\x02 \x01(\rR\x04\x63ode\x12\x1c\n\tretryable\x18\x03 \x01(\x08R\tretryable\x12\x18\n\x07message\x18\x04 \x01(\tR\x07message\"K\n\x14PostDataMultiRequest\x12\x33\n\ndatapoints\x18\x01 \x03(\x0b\x32\x13.v1.model.DatapointR\ndatapoints\"\x17\n\x15PostDataMultiResponse\"E\n\x12PostDataMultiError\x12/\n\x06\x65rrors\x18\x01 \x03(\x0b\x32\x17.v1.agent.PostDataErrorR\x06\x65rrors\"/\n\x1dGetInterventionRequestRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"?\n\x1eGetInterventionResponseRequest\x12\x1d\n\nrequest_id\x18\x01 \x01(\tR\trequestId\" \n\x1eGetStreamsConfigurationRequest\"Z\n\x1fGetStreamsConfigurationResponse\x12\x37\n\x07streams\x18\x01 \x03(\x0b\x32\x1d.v1.model.StreamConfigurationR\x07streams\"$\n\"GetApplicationConfigurationRequest\"o\n#GetApplicationConfigurationResponse\x12H\n\rconfiguration\x18\x01 \x01(\x0b\x32\".v1.model.ApplicationConfigurationR\rconfiguration\"\x1a\n\x18GetConfigBlobDataRequest\"L\n\x19GetConfigBlobDataResponse\x12/\n\tblob_data\x18\x01 \x01(\x0b\x32\x12.v1.model.BlobDataR\x08\x62lobData\"\x1e\n\x1cGetAgentConfigurationRequest\"c\n\x1dGetAgentConfigurationResponse\x12\x42\n\rconfiguration\x18\x01 \x01(\x0b\x32\x1c.v1.model.AgentConfigurationR\rconfiguration\"\x0f\n\rHealthRequest\"\x10\n\x0eHealthResponse\"A\n\x18GetCommandRequestRequest\x12%\n\x0e\x63ommand_filter\x18\x01 \x03(\tR\rcommandFilter\"O\n\x19GetCommandRequestResponse\x12\x32\n\x07request\x18\x01 \x01(\x0b\x32\x18.v1.model.CommandRequestR\x07request\"S\n\x1aSendCommandResponseRequest\x12\x35\n\x08response\x18\x01 \x01(\x0b\x32\x19.v1.model.CommandResponseR\x08response\"\x1d\n\x1bSendCommandResponseResponse\"G\n\x1eGetCommandRequestStreamRequest\x12%\n\x0e\x63ommand_filter\x18\x01 \x03(\tR\rcommandFilter\"U\n\x1fGetCommandRequestStreamResponse\x12\x32\n\x07request\x18\x01 \x01(\x0b\x32\x18.v1.model.CommandRequestR\x07request\"H\n!GetTeleopControlDataStreamRequest\x12#\n\rstream_filter\x18\x01 \x03(\tR\x0cstreamFilter\"m\n\"GetTeleopControlDataStreamResponse\x12G\n\x11\x63ontrol_datapoint\x18\x01 \x01(\x0b\x32\x1a.v1.model.ControlDatapointR\x10\x63ontrolDatapoint\"\x1c\n\x1aPostTransformFrameResponse\"\'\n\x15SetBaseFrameIDRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"\x18\n\x16SetBaseFrameIDResponse\"\x1b\n\x19\x43learTransformTreeRequest\"\x1c\n\x1a\x43learTransformTreeResponse\";\n\x12\x43reateEventRequest\x12%\n\x05\x65vent\x18\x01 \x01(\x0b\x32\x0f.v1.model.EventR\x05\x65vent\"\x15\n\x13\x43reateEventResponse\"0\n\x10\x43reateEventError\x12\x1c\n\tretryable\x18\x01 \x01(\x08R\tretryable\"\x16\n\x14GetTeleopInfoRequest\"B\n\x15GetTeleopInfoResponse\x12)\n\x10\x63onnection_count\x18\x01 \x01(\rR\x0f\x63onnectionCount2\xed\x0e\n\x05\x41gent\x12\x43\n\nStreamData\x12\x13.v1.model.Datapoint\x1a\x1c.v1.agent.StreamDataResponse\"\x00(\x01\x12=\n\x08PostData\x12\x13.v1.model.Datapoint\x1a\x1a.v1.agent.PostDataResponse\"\x00\x12R\n\rPostDataMulti\x12\x1e.v1.agent.PostDataMultiRequest\x1a\x1f.v1.agent.PostDataMultiResponse\"\x00\x12{\n\x1aGetTeleopControlDataStream\x12+.v1.agent.GetTeleopControlDataStreamRequest\x1a,.v1.agent.GetTeleopControlDataStreamResponse\"\x00\x30\x01\x12L\n\x0b\x43reateEvent\x12\x1c.v1.agent.CreateEventRequest\x1a\x1d.v1.agent.CreateEventResponse\"\x00\x12[\n\x19\x43reateInterventionRequest\x12\x1d.v1.model.InterventionRequest\x1a\x1d.v1.model.InterventionRequest\"\x00\x12\x62\n\x16GetInterventionRequest\x12\'.v1.agent.GetInterventionRequestRequest\x1a\x1d.v1.model.InterventionRequest\"\x00\x12\x65\n\x17GetInterventionResponse\x12(.v1.agent.GetInterventionResponseRequest\x1a\x1e.v1.model.InterventionResponse\"\x00\x12p\n\x17GetStreamsConfiguration\x12(.v1.agent.GetStreamsConfigurationRequest\x1a).v1.agent.GetStreamsConfigurationResponse\"\x00\x12|\n\x1bGetApplicationConfiguration\x12,.v1.agent.GetApplicationConfigurationRequest\x1a-.v1.agent.GetApplicationConfigurationResponse\"\x00\x12^\n\x11GetConfigBlobData\x12\".v1.agent.GetConfigBlobDataRequest\x1a#.v1.agent.GetConfigBlobDataResponse\"\x00\x12j\n\x15GetAgentConfiguration\x12&.v1.agent.GetAgentConfigurationRequest\x1a\'.v1.agent.GetAgentConfigurationResponse\"\x00\x12=\n\x06Health\x12\x17.v1.agent.HealthRequest\x1a\x18.v1.agent.HealthResponse\"\x00\x12^\n\x11GetCommandRequest\x12\".v1.agent.GetCommandRequestRequest\x1a#.v1.agent.GetCommandRequestResponse\"\x00\x12r\n\x17GetCommandRequestStream\x12(.v1.agent.GetCommandRequestStreamRequest\x1a).v1.agent.GetCommandRequestStreamResponse\"\x00\x30\x01\x12\x64\n\x13SendCommandResponse\x12$.v1.agent.SendCommandResponseRequest\x1a%.v1.agent.SendCommandResponseResponse\"\x00\x12V\n\x12PostTransformFrame\x12\x18.v1.model.TransformFrame\x1a$.v1.agent.PostTransformFrameResponse\"\x00\x12U\n\x0eSetBaseFrameID\x12\x1f.v1.agent.SetBaseFrameIDRequest\x1a .v1.agent.SetBaseFrameIDResponse\"\x00\x12\x61\n\x12\x43learTransformTree\x12#.v1.agent.ClearTransformTreeRequest\x1a$.v1.agent.ClearTransformTreeResponse\"\x00\x12R\n\rGetTeleopInfo\x12\x1e.v1.agent.GetTeleopInfoRequest\x1a\x1f.v1.agent.GetTeleopInfoResponse\"\x00\x42+Z)github.com/FormantIO/genproto/go/v1/agentb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_datapoint__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_intervention__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_commands__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_config__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_event__pb2.DESCRIPTOR,])
 
@@ -1035,6 +1035,63 @@ _CREATEEVENTERROR = _descriptor.Descriptor(
   serialized_end=2121,
 )
 
+
+_GETTELEOPINFOREQUEST = _descriptor.Descriptor(
+  name='GetTeleopInfoRequest',
+  full_name='v1.agent.GetTeleopInfoRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2123,
+  serialized_end=2145,
+)
+
+
+_GETTELEOPINFORESPONSE = _descriptor.Descriptor(
+  name='GetTeleopInfoResponse',
+  full_name='v1.agent.GetTeleopInfoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='connection_count', full_name='v1.agent.GetTeleopInfoResponse.connection_count', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='connectionCount', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2147,
+  serialized_end=2213,
+)
+
 _POSTDATAMULTIREQUEST.fields_by_name['datapoints'].message_type = protos_dot_model_dot_v1_dot_datapoint__pb2._DATAPOINT
 _POSTDATAMULTIERROR.fields_by_name['errors'].message_type = _POSTDATAERROR
 _GETSTREAMSCONFIGURATIONRESPONSE.fields_by_name['streams'].message_type = protos_dot_model_dot_v1_dot_config__pb2._STREAMCONFIGURATION
@@ -1080,6 +1137,8 @@ DESCRIPTOR.message_types_by_name['ClearTransformTreeResponse'] = _CLEARTRANSFORM
 DESCRIPTOR.message_types_by_name['CreateEventRequest'] = _CREATEEVENTREQUEST
 DESCRIPTOR.message_types_by_name['CreateEventResponse'] = _CREATEEVENTRESPONSE
 DESCRIPTOR.message_types_by_name['CreateEventError'] = _CREATEEVENTERROR
+DESCRIPTOR.message_types_by_name['GetTeleopInfoRequest'] = _GETTELEOPINFOREQUEST
+DESCRIPTOR.message_types_by_name['GetTeleopInfoResponse'] = _GETTELEOPINFORESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 StreamDataResponse = _reflection.GeneratedProtocolMessageType('StreamDataResponse', (_message.Message,), {
@@ -1320,6 +1379,20 @@ CreateEventError = _reflection.GeneratedProtocolMessageType('CreateEventError', 
   })
 _sym_db.RegisterMessage(CreateEventError)
 
+GetTeleopInfoRequest = _reflection.GeneratedProtocolMessageType('GetTeleopInfoRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETTELEOPINFOREQUEST,
+  '__module__' : 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.GetTeleopInfoRequest)
+  })
+_sym_db.RegisterMessage(GetTeleopInfoRequest)
+
+GetTeleopInfoResponse = _reflection.GeneratedProtocolMessageType('GetTeleopInfoResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETTELEOPINFORESPONSE,
+  '__module__' : 'protos.agent.v1.agent_pb2'
+  # @@protoc_insertion_point(class_scope:v1.agent.GetTeleopInfoResponse)
+  })
+_sym_db.RegisterMessage(GetTeleopInfoResponse)
+
 
 DESCRIPTOR._options = None
 
@@ -1330,8 +1403,8 @@ _AGENT = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2124,
-  serialized_end=3941,
+  serialized_start=2216,
+  serialized_end=4117,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamData',
@@ -1520,6 +1593,16 @@ _AGENT = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CLEARTRANSFORMTREEREQUEST,
     output_type=_CLEARTRANSFORMTREERESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetTeleopInfo',
+    full_name='v1.agent.Agent.GetTeleopInfo',
+    index=19,
+    containing_service=None,
+    input_type=_GETTELEOPINFOREQUEST,
+    output_type=_GETTELEOPINFORESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

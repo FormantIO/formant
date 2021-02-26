@@ -75,6 +75,7 @@ message TeleopHardwareStreamConfiguration {
   string rtc_stream_type = 2;
   TeleopMode mode = 3;
   string hw_descriptor = 4;
+  string quality = 5;
 }
 
 message TeleopCustomStreamConfiguration {
@@ -119,6 +120,7 @@ message StreamConfiguration {
     FileTail file_tail = 6;
     ROSTransformTree ros_transform_tree = 7;
     Custom custom = 9;
+    Hardware hardware = 10;
   }
   google.protobuf.DoubleValue throttle_hz = 8;
   google.protobuf.BoolValue disabled = 19;
@@ -152,6 +154,11 @@ enum FileType {
 }
 
 message Custom {
+}
+
+message Hardware {
+  string hw_descriptor = 1;
+  string quality = 2;
 }
 
 message DirectoryWatch {

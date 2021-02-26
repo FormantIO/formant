@@ -112,6 +112,11 @@ class AgentStub(object):
                 request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.ClearTransformTreeRequest.SerializeToString,
                 response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.ClearTransformTreeResponse.FromString,
                 )
+        self.GetTeleopInfo = channel.unary_unary(
+                '/v1.agent.Agent/GetTeleopInfo',
+                request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoRequest.SerializeToString,
+                response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoResponse.FromString,
+                )
 
 
 class AgentServicer(object):
@@ -231,6 +236,12 @@ class AgentServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetTeleopInfo(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_AgentServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -328,6 +339,11 @@ def add_AgentServicer_to_server(servicer, server):
                     servicer.ClearTransformTree,
                     request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.ClearTransformTreeRequest.FromString,
                     response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.ClearTransformTreeResponse.SerializeToString,
+            ),
+            'GetTeleopInfo': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetTeleopInfo,
+                    request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoRequest.FromString,
+                    response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -659,5 +675,22 @@ class Agent(object):
         return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/ClearTransformTree',
             protos_dot_agent_dot_v1_dot_agent__pb2.ClearTransformTreeRequest.SerializeToString,
             protos_dot_agent_dot_v1_dot_agent__pb2.ClearTransformTreeResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetTeleopInfo(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/GetTeleopInfo',
+            protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoRequest.SerializeToString,
+            protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
