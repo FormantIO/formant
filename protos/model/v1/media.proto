@@ -32,8 +32,10 @@ message H264VideoFrame {
   // Index of current frame, used to ensure we are not decoding duplicates
   int32 index = 1;
   // Flag to indicate special frame 
-  // 0: Normal
-  // 1: Initialization frame
+  // 0: post-initialization fmp4 frame
+  // 1: fmp4 initialization segment
+  // 2: bytestream access unit
+  // 3: keyframe
   int32 flags = 2;
   // byte array containing frame
   bytes frame_data = 3;
