@@ -1,4 +1,6 @@
 from typing import Optional
+import os
+import sys
 import time
 import uuid
 import subprocess
@@ -18,19 +20,22 @@ COMMAND_SCRIPT_MAPPING = {
 
 class SearchableTestAdapter:
     def __init__(self):
-        self.id: Optional[str] = None
-        self.start_time: Optional[int] = None
-        self.software_version: Optional[str] = None
-        self.log_level: Optional[str] = None
-        self.is_shutdown: bool = False
+        self.id = None  # type: Optional[str]
+        self.start_timestamp = None  # type: Optional[int]
+        self.software_version = None  # type: Optional[str]
+        self.log_level = None  # type: Optional[str]
+        self.is_shutdown = False  # type: bool
 
         self.fclient = FormantClient(ignore_unavailable=True)
+
+        # listen for commands
         self.fclient.register_command_request_callback(
             self.issue_command, command_filter=COMMAND_SCRIPT_MAPPING.keys()
         )
 
+        # listen for changes to Formant application configuration
         self.update_app_config()
-        self.fclient.register_app_config_update_callback(self.update_app_config)
+        self.fclient.register_config_update_callback(self.update_app_config)
 
         # idly spin while the command request callback listens for commands
         while not self.is_shutdown:
@@ -51,25 +56,28 @@ class SearchableTestAdapter:
         self.start_time = 1000 * int(time.time())
 
     def run_script(self, path):
-        subprocess.run("bash " + path, shell=True, check=True)
+        if os.path.exists(path):
+            subprocess.run("bash " + path, shell=True, check=True)
 
     def issue_command(self, request):
-        if request.name == "start_recording":
+        if request.command == "start_recording":
             self.reset_session()
         elif (
-            request.name == "stop_recording"
+            request.command == "stop_recording"
             and self.id is not None
             and self.start_time is not None
         ):
             self.fclient.create_event(
                 self.id + ": Recording session",
-                start_time=self.start_time,
-                end_time=1000 * int(time.time()),
+                timestamp=self.start_time,
+                end_timestamp=1000 * int(time.time()),
             )
+            self.id = None
+            self.start_time = None
 
         success = True
         try:
-            self.run_script(COMMAND_SCRIPT_MAPPING.get(request.name))
+            self.run_script(COMMAND_SCRIPT_MAPPING.get(request.command))
         except Exception:
             success = False
 
@@ -77,4 +85,7 @@ class SearchableTestAdapter:
 
 
 if __name__ == "__main__":
-    SearchableTestAdapter()
+    try:
+        SearchableTestAdapter()
+    except KeyboardInterrupt:
+        sys.exit()

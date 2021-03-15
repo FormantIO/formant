@@ -116,6 +116,17 @@ Examples:
 
 Use the `create_event` method to create new events with levels of severity. Create an in-app notification with the `notify` keyword argument. Please refer to the example below for more information.
 
+`create_event` method parameters:
+
+```
+message : str
+notify=False : bool
+tags=None : Optional[Dict[str,str]]
+timestamp=None : Optional[int]
+end_timestamp=None : Optional[int]
+severity="info" : Literal["info", "warning", "critical", "error"]
+```
+
 Examples:
 
 -   [Create event](./create_event.py)
