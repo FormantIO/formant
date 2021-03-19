@@ -159,6 +159,7 @@ message Custom {
 message Hardware {
   string hw_descriptor = 1;
   string quality = 2;
+  string audio_hw_descriptor = 3;
 }
 
 message DirectoryWatch {
