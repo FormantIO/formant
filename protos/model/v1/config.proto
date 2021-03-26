@@ -68,6 +68,8 @@ message TeleopRosStreamConfiguration {
   TeleopMode mode = 3;
   bool encode_video = 4;
   string audio_codec = 5;
+  string quality = 6;
+
 }
 
 message TeleopHardwareStreamConfiguration {
@@ -83,6 +85,8 @@ message TeleopCustomStreamConfiguration {
   string rtc_stream_type = 2;
   TeleopMode mode = 3;
   bool encode_video = 4;
+  string quality = 5;
+
 }
 
 message TelemetryConfiguration {
@@ -126,6 +130,8 @@ message StreamConfiguration {
   google.protobuf.BoolValue disabled = 19;
   google.protobuf.BoolValue on_demand = 20;
   StreamTransformConfiguration transform = 21;
+  string quality = 22;
+
 }
 
 message StreamTransformConfiguration {
@@ -158,7 +164,6 @@ message Custom {
 
 message Hardware {
   string hw_descriptor = 1;
-  string quality = 2;
   string audio_hw_descriptor = 3;
 }
 
