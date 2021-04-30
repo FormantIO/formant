@@ -39,6 +39,11 @@ service Agent {
   rpc GetTeleopControlDataStream(GetTeleopControlDataStreamRequest)
       returns (stream GetTeleopControlDataStreamResponse) {
   }
+  /* GetTeleopHeartbeatStream returns a stream of GetTeleopHeartbeatStreamResponse
+   * as heartbeat messages arrive from Formant teleop. */
+  rpc GetTeleopHeartbeatStream(GetTeleopHeartbeatStreamRequest)
+      returns (stream GetTeleopHeartbeatStreamResponse) {
+  }
   /* CreateEvent creates a custom event. */
   rpc CreateEvent(CreateEventRequest) returns (CreateEventResponse) {
   }
@@ -207,6 +212,13 @@ message GetTeleopControlDataStreamRequest {
 
 message GetTeleopControlDataStreamResponse {
   model.ControlDatapoint control_datapoint = 1;
+}
+
+message GetTeleopHeartbeatStreamRequest {}
+
+message GetTeleopHeartbeatStreamResponse {
+  string peer_id = 1;
+  bool is_disconnect = 2;
 }
 
 message PostTransformFrameResponse {
