@@ -10,7 +10,7 @@ message Image {
   // e.g. "image/png" for png images.
   string content_type = 1;
   oneof data {
-    // Absolute path to a file on the local filesystem
+    // Absolute path to a file on the local filesystem or valid remote URL for remote files
     string url = 2;
     // 2MB limit
     bytes raw = 3;
@@ -19,7 +19,7 @@ message Image {
 
 message PointCloud {
   oneof data {
-    // Absolute path to a file on the local filesystem
+    // Absolute path to a file on the local filesystem or valid remote URL for remote files
     string url = 1;
     // 2MB limit
     bytes raw = 2;
@@ -56,10 +56,9 @@ message Video {
   // Duration of video clip in milliseconds
   int64 duration = 2;
   oneof data {
-    // Absolute path to a file on the local filesystem
+    // Absolute path to a file on the local filesystem or valid remote URL for remote files
     string url = 3;
     // 2MB limit
     bytes raw = 4;
   }
-
 }
