@@ -23,7 +23,25 @@ if __name__ == "__main__":
         }
     )
     print(command_result)
+    print("\n")
 
+    # file id obtained by uploading to formant file storage
+    # see files.py for an example
+    file_id = "ffcd8958-6f94-4b0d-b9a9-3cbf105c3df5"
+
+    print("Sending command with large payload ...")
+    command_result = fclient.create_command(
+        {
+            "deviceId": device_id,
+            "command": "snapshot",
+            "parameter": {
+                "scrubberTime": get_current_isodate(),
+                "files": [{"id": file_id, "name": "view_0.jpg"}],
+            },
+        }
+    )
+
+    print(command_result)
     print("\n")
 
     print("Querying for device's currently undelivered commands ...")

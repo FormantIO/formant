@@ -58,6 +58,13 @@ message Path {
     repeated Transform poses = 2;
 }
 
+message JointState {
+    repeated string name = 1;
+    repeated double position = 2;
+    repeated double velocity = 3;
+    repeated double effort = 4;
+}
+
 message Goal {
     Transform world_to_local = 1;
     Transform pose = 2;
@@ -65,4 +72,9 @@ message Goal {
 
 message GoalID {
     string id = 1;
+}
+
+message PoseWithCovariance {
+    Transform pose = 1;
+    repeated double covariance = 2;
 }

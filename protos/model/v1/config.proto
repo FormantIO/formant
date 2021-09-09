@@ -45,6 +45,14 @@ message AgentConfigurationDocument {
   BlobData blob_data = 8;
   Diagnostics diagnostics = 9;
   google.protobuf.BoolValue terminal_access = 10;
+  repeated AdapterConfiguration adapters = 11;
+}
+
+message AdapterConfiguration {
+  string id = 1;
+  string name = 2;
+  string file_id = 3;
+  string exec_command = 4;
 }
 
 message TeleopConfiguration {
@@ -78,6 +86,11 @@ message TeleopHardwareStreamConfiguration {
   TeleopMode mode = 3;
   string hw_descriptor = 4;
   string quality = 5;
+  string hardware_type = 6;
+  bool rtsp_encoding_needed = 7;
+  bool is_onvif = 8;
+  string ip_cam_username = 9;
+  string ip_cam_password = 10;
 }
 
 message TeleopCustomStreamConfiguration {
@@ -165,6 +178,11 @@ message Custom {
 message Hardware {
   string hw_descriptor = 1;
   string audio_hw_descriptor = 3;
+  string hardware_type = 4;
+  bool rtsp_encoding_needed = 5;
+  bool is_onvif = 6;
+  string ip_cam_username = 7;
+  string ip_cam_password = 8;
 }
 
 message DirectoryWatch {

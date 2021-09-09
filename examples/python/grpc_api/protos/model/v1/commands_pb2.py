@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1eprotos/model/v1/commands.proto\x12\x08v1.model\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fprotos/model/v1/datapoint.proto\"\x9e\x01\n\x0e\x43ommandRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x18\n\x07\x63ommand\x18\x02 \x01(\tR\x07\x63ommand\x12\x14\n\x04text\x18\x03 \x01(\tH\x00R\x04text\x12?\n\rscrubber_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x0cscrubberTimeB\x0b\n\tparameter\"\x89\x01\n\x0f\x43ommandResponse\x12\x1d\n\nrequest_id\x18\x01 \x01(\tR\trequestId\x12\x18\n\x07success\x18\x02 \x01(\x08R\x07success\x12\x33\n\tdatapoint\x18\x03 \x01(\x0b\x32\x13.v1.model.DatapointH\x00R\tdatapointB\x08\n\x06resultB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1eprotos/model/v1/commands.proto\x12\x08v1.model\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fprotos/model/v1/datapoint.proto\"\xc8\x01\n\x0e\x43ommandRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x18\n\x07\x63ommand\x18\x02 \x01(\tR\x07\x63ommand\x12\x14\n\x04text\x18\x03 \x01(\tH\x00R\x04text\x12?\n\rscrubber_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x0cscrubberTime\x12(\n\x05\x66iles\x18\x05 \x03(\x0b\x32\x12.v1.model.FileInfoR\x05\x66ilesB\x0b\n\tparameter\"\x89\x01\n\x0f\x43ommandResponse\x12\x1d\n\nrequest_id\x18\x01 \x01(\tR\trequestId\x12\x18\n\x07success\x18\x02 \x01(\x08R\x07success\x12\x33\n\tdatapoint\x18\x03 \x01(\x0b\x32\x13.v1.model.DatapointH\x00R\tdatapointB\x08\n\x06result\"@\n\x08\x46ileInfo\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name\x12\x10\n\x03url\x18\x03 \x01(\tR\x03urlB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_datapoint__pb2.DESCRIPTOR,])
 
@@ -64,6 +64,13 @@ _COMMANDREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='scrubberTime', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='files', full_name='v1.model.CommandRequest.files', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='files', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -82,7 +89,7 @@ _COMMANDREQUEST = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=111,
-  serialized_end=269,
+  serialized_end=311,
 )
 
 
@@ -132,11 +139,58 @@ _COMMANDRESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=272,
-  serialized_end=409,
+  serialized_start=314,
+  serialized_end=451,
+)
+
+
+_FILEINFO = _descriptor.Descriptor(
+  name='FileInfo',
+  full_name='v1.model.FileInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='v1.model.FileInfo.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='id', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='v1.model.FileInfo.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='name', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='url', full_name='v1.model.FileInfo.url', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='url', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=453,
+  serialized_end=517,
 )
 
 _COMMANDREQUEST.fields_by_name['scrubber_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_COMMANDREQUEST.fields_by_name['files'].message_type = _FILEINFO
 _COMMANDREQUEST.oneofs_by_name['parameter'].fields.append(
   _COMMANDREQUEST.fields_by_name['text'])
 _COMMANDREQUEST.fields_by_name['text'].containing_oneof = _COMMANDREQUEST.oneofs_by_name['parameter']
@@ -146,6 +200,7 @@ _COMMANDRESPONSE.oneofs_by_name['result'].fields.append(
 _COMMANDRESPONSE.fields_by_name['datapoint'].containing_oneof = _COMMANDRESPONSE.oneofs_by_name['result']
 DESCRIPTOR.message_types_by_name['CommandRequest'] = _COMMANDREQUEST
 DESCRIPTOR.message_types_by_name['CommandResponse'] = _COMMANDRESPONSE
+DESCRIPTOR.message_types_by_name['FileInfo'] = _FILEINFO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CommandRequest = _reflection.GeneratedProtocolMessageType('CommandRequest', (_message.Message,), {
@@ -161,6 +216,13 @@ CommandResponse = _reflection.GeneratedProtocolMessageType('CommandResponse', (_
   # @@protoc_insertion_point(class_scope:v1.model.CommandResponse)
   })
 _sym_db.RegisterMessage(CommandResponse)
+
+FileInfo = _reflection.GeneratedProtocolMessageType('FileInfo', (_message.Message,), {
+  'DESCRIPTOR' : _FILEINFO,
+  '__module__' : 'protos.model.v1.commands_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.FileInfo)
+  })
+_sym_db.RegisterMessage(FileInfo)
 
 
 DESCRIPTOR._options = None

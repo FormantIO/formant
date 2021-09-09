@@ -44,6 +44,16 @@ service Agent {
   rpc GetTeleopHeartbeatStream(GetTeleopHeartbeatStreamRequest)
       returns (stream GetTeleopHeartbeatStreamResponse) {
   }
+  /* GetTelemetryListenerStream returns a stream of telemetry datapoints that have been posted
+  * to this agent as they arrive, pre-throttling. */
+  rpc GetTelemetryListenerStream(GetTelemetryListenerStreamRequest)
+      returns (stream GetTelemetryListenerStreamResponse) {
+  }
+  /* GetCustomDataChannelMessageStream returns a stream of messages
+    received on custom data channels */
+  rpc GetCustomDataChannelMessageStream(GetCustomDataChannelMessageStreamRequest)
+      returns (stream GetCustomDataChannelMessageStreamResponse) {
+  }
   /* CreateEvent creates a custom event. */
   rpc CreateEvent(CreateEventRequest) returns (CreateEventResponse) {
   }
@@ -115,6 +125,17 @@ service Agent {
   /* GetTeleopInfo returns info on how many active teleop connections there are */
   rpc GetTeleopInfo(GetTeleopInfoRequest)
       returns (GetTeleopInfoResponse) {
+  }
+  /* PostLanRtcOffer takes a JSON-encoded WebRTC offer and returns a JSON-encoded answer that can be used
+    to establish a LAN real-time session. The answering side (agent) will not use ICE candidates,
+    so this can only be used to establish a LAN connection. */
+  rpc PostLanRtcOffer(PostLanRtcOfferRequest)
+      returns (PostLanRtcOfferResponse) {
+  }
+  /* SendOnCustomDataChannel sends the provided payload on the given custom data channel name,
+   * if the channel exists. */
+  rpc SendOnCustomDataChannel(SendOnCustomDataChannelRequest)
+      returns (SendOnCustomDataChannelResponse) {
   }
 }
 
@@ -221,6 +242,14 @@ message GetTeleopHeartbeatStreamResponse {
   bool is_disconnect = 2;
 }
 
+message GetTelemetryListenerStreamRequest {
+  repeated string stream_filter = 1;
+}
+
+message GetTelemetryListenerStreamResponse {
+  model.Datapoint datapoint = 1;
+}
+
 message PostTransformFrameResponse {
 }
 
@@ -253,4 +282,30 @@ message GetTeleopInfoRequest {
 
 message GetTeleopInfoResponse {
   uint32 connection_count = 1;
+}
+
+message PostLanRtcOfferRequest {
+  string offer = 1;
+}
+
+message PostLanRtcOfferResponse {
+  string answer = 1;
+}
+
+message SendOnCustomDataChannelRequest {
+  string channel_name = 1;
+  bytes payload = 2;
+}
+
+message SendOnCustomDataChannelResponse {
+}
+
+message GetCustomDataChannelMessageStreamRequest {
+  repeated string channel_name_filter = 1;
+}
+
+message GetCustomDataChannelMessageStreamResponse {
+  string peer_id = 1;
+  string channel_name = 2;
+  bytes payload = 3;
 }

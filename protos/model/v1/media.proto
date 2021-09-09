@@ -62,3 +62,12 @@ message Video {
     bytes raw = 4;
   }
 }
+
+message TransformTree {
+    oneof data {
+    // Absolute path to a file on the local filesystem or valid remote URL for remote files
+    string url = 1;
+    // 2MB limit
+    bytes raw = 2;
+  }
+}

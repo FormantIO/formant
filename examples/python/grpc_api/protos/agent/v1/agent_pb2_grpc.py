@@ -42,6 +42,16 @@ class AgentStub(object):
                 request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopHeartbeatStreamRequest.SerializeToString,
                 response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopHeartbeatStreamResponse.FromString,
                 )
+        self.GetTelemetryListenerStream = channel.unary_stream(
+                '/v1.agent.Agent/GetTelemetryListenerStream',
+                request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTelemetryListenerStreamRequest.SerializeToString,
+                response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTelemetryListenerStreamResponse.FromString,
+                )
+        self.GetCustomDataChannelMessageStream = channel.unary_stream(
+                '/v1.agent.Agent/GetCustomDataChannelMessageStream',
+                request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCustomDataChannelMessageStreamRequest.SerializeToString,
+                response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCustomDataChannelMessageStreamResponse.FromString,
+                )
         self.CreateEvent = channel.unary_unary(
                 '/v1.agent.Agent/CreateEvent',
                 request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.CreateEventRequest.SerializeToString,
@@ -122,6 +132,16 @@ class AgentStub(object):
                 request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoRequest.SerializeToString,
                 response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoResponse.FromString,
                 )
+        self.PostLanRtcOffer = channel.unary_unary(
+                '/v1.agent.Agent/PostLanRtcOffer',
+                request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostLanRtcOfferRequest.SerializeToString,
+                response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostLanRtcOfferResponse.FromString,
+                )
+        self.SendOnCustomDataChannel = channel.unary_unary(
+                '/v1.agent.Agent/SendOnCustomDataChannel',
+                request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelRequest.SerializeToString,
+                response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelResponse.FromString,
+                )
 
 
 class AgentServicer(object):
@@ -152,6 +172,18 @@ class AgentServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def GetTeleopHeartbeatStream(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetTelemetryListenerStream(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCustomDataChannelMessageStream(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -253,6 +285,18 @@ class AgentServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def PostLanRtcOffer(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def SendOnCustomDataChannel(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_AgentServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -280,6 +324,16 @@ def add_AgentServicer_to_server(servicer, server):
                     servicer.GetTeleopHeartbeatStream,
                     request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopHeartbeatStreamRequest.FromString,
                     response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopHeartbeatStreamResponse.SerializeToString,
+            ),
+            'GetTelemetryListenerStream': grpc.unary_stream_rpc_method_handler(
+                    servicer.GetTelemetryListenerStream,
+                    request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTelemetryListenerStreamRequest.FromString,
+                    response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTelemetryListenerStreamResponse.SerializeToString,
+            ),
+            'GetCustomDataChannelMessageStream': grpc.unary_stream_rpc_method_handler(
+                    servicer.GetCustomDataChannelMessageStream,
+                    request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCustomDataChannelMessageStreamRequest.FromString,
+                    response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetCustomDataChannelMessageStreamResponse.SerializeToString,
             ),
             'CreateEvent': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateEvent,
@@ -360,6 +414,16 @@ def add_AgentServicer_to_server(servicer, server):
                     servicer.GetTeleopInfo,
                     request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoRequest.FromString,
                     response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoResponse.SerializeToString,
+            ),
+            'PostLanRtcOffer': grpc.unary_unary_rpc_method_handler(
+                    servicer.PostLanRtcOffer,
+                    request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostLanRtcOfferRequest.FromString,
+                    response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostLanRtcOfferResponse.SerializeToString,
+            ),
+            'SendOnCustomDataChannel': grpc.unary_unary_rpc_method_handler(
+                    servicer.SendOnCustomDataChannel,
+                    request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelRequest.FromString,
+                    response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -453,6 +517,40 @@ class Agent(object):
         return grpc.experimental.unary_stream(request, target, '/v1.agent.Agent/GetTeleopHeartbeatStream',
             protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopHeartbeatStreamRequest.SerializeToString,
             protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopHeartbeatStreamResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetTelemetryListenerStream(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/v1.agent.Agent/GetTelemetryListenerStream',
+            protos_dot_agent_dot_v1_dot_agent__pb2.GetTelemetryListenerStreamRequest.SerializeToString,
+            protos_dot_agent_dot_v1_dot_agent__pb2.GetTelemetryListenerStreamResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCustomDataChannelMessageStream(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/v1.agent.Agent/GetCustomDataChannelMessageStream',
+            protos_dot_agent_dot_v1_dot_agent__pb2.GetCustomDataChannelMessageStreamRequest.SerializeToString,
+            protos_dot_agent_dot_v1_dot_agent__pb2.GetCustomDataChannelMessageStreamResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -725,5 +823,39 @@ class Agent(object):
         return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/GetTeleopInfo',
             protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoRequest.SerializeToString,
             protos_dot_agent_dot_v1_dot_agent__pb2.GetTeleopInfoResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def PostLanRtcOffer(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/PostLanRtcOffer',
+            protos_dot_agent_dot_v1_dot_agent__pb2.PostLanRtcOfferRequest.SerializeToString,
+            protos_dot_agent_dot_v1_dot_agent__pb2.PostLanRtcOfferResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def SendOnCustomDataChannel(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/SendOnCustomDataChannel',
+            protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelRequest.SerializeToString,
+            protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

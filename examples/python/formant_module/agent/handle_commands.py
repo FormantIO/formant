@@ -27,6 +27,16 @@ def handle_command_request(request):
     else:
         return
 
+    if request.files is not None:
+        for file in request.files:
+            # example of reading files from a command
+            print(
+                "Command sent with file "
+                + file["name"]
+                + " accessible via "
+                + file["url"]
+            )
+
     success = not (False in list(map(ping, addresses)))
     fclient.send_command_response(request.id, success=success)
 
