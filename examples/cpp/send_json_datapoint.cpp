@@ -70,7 +70,7 @@ private:
 int main(int argc, char **argv)
 {
    // Create the Formant Agent client object
-   FormantAgentClient client(grpc::CreateChannel("localhost:5501", grpc::InsecureChannelCredentials()));
+   FormantAgentClient client(grpc::CreateChannel("192.168.0.12:5501", grpc::InsecureChannelCredentials()));
   
    // Send a json string as a datapoint
     auto json = "{\"values\": [1, 2, 3], \"states\": [true, false, true]}";
