@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/media.proto\"D\n\x08Location\x12\x1a\n\x08latitude\x18\x01 \x01(\x01R\x08latitude\x12\x1c\n\tlongitude\x18\x02 \x01(\x01R\tlongitude\"\xe0\x01\n\x0cLocalization\x12.\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.OdometryR\x08odometry\x12\x1f\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.MapR\x03map\x12\x37\n\x0cpoint_clouds\x18\x03 \x03(\x0b\x32\x14.v1.model.PointCloudR\x0bpointClouds\x12\"\n\x04path\x18\x04 \x01(\x0b\x32\x0e.v1.model.PathR\x04path\x12\"\n\x04goal\x18\x05 \x01(\x0b\x32\x0e.v1.model.GoalR\x04goal\"\x95\x01\n\x08Odometry\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12%\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistR\x05twist\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"\xad\x02\n\x03Map\x12\x1e\n\nresolution\x18\x01 \x01(\x01R\nresolution\x12\x14\n\x05width\x18\x02 \x01(\rR\x05width\x12\x16\n\x06height\x18\x03 \x01(\rR\x06height\x12+\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.TransformR\x06origin\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12@\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00R\roccupancyGrid\x12\x12\n\x03url\x18\x07 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x08 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"#\n\rOccupancyGrid\x12\x12\n\x04\x64\x61ta\x18\x01 \x03(\x05R\x04\x64\x61ta\"l\n\x04Path\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12)\n\x05poses\x18\x02 \x03(\x0b\x32\x13.v1.model.TransformR\x05poses\"p\n\nJointState\x12\x12\n\x04name\x18\x01 \x03(\tR\x04name\x12\x1a\n\x08position\x18\x02 \x03(\x01R\x08position\x12\x1a\n\x08velocity\x18\x03 \x03(\x01R\x08velocity\x12\x16\n\x06\x65\x66\x66ort\x18\x04 \x03(\x01R\x06\x65\x66\x66ort\"j\n\x04Goal\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\'\n\x04pose\x18\x02 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\"\x18\n\x06GoalID\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"]\n\x12PoseWithCovariance\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12\x1e\n\ncovariance\x18\x02 \x03(\x01R\ncovarianceB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/media.proto\"D\n\x08Location\x12\x1a\n\x08latitude\x18\x01 \x01(\x01R\x08latitude\x12\x1c\n\tlongitude\x18\x02 \x01(\x01R\tlongitude\"\xe0\x01\n\x0cLocalization\x12.\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.OdometryR\x08odometry\x12\x1f\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.MapR\x03map\x12\x37\n\x0cpoint_clouds\x18\x03 \x03(\x0b\x32\x14.v1.model.PointCloudR\x0bpointClouds\x12\"\n\x04path\x18\x04 \x01(\x0b\x32\x0e.v1.model.PathR\x04path\x12\"\n\x04goal\x18\x05 \x01(\x0b\x32\x0e.v1.model.GoalR\x04goal\"\x95\x01\n\x08Odometry\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12%\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistR\x05twist\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"\xad\x02\n\x03Map\x12\x1e\n\nresolution\x18\x01 \x01(\x01R\nresolution\x12\x14\n\x05width\x18\x02 \x01(\rR\x05width\x12\x16\n\x06height\x18\x03 \x01(\rR\x06height\x12+\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.TransformR\x06origin\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12@\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00R\roccupancyGrid\x12\x12\n\x03url\x18\x07 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x08 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"#\n\rOccupancyGrid\x12\x12\n\x04\x64\x61ta\x18\x01 \x03(\x05R\x04\x64\x61ta\"l\n\x04Path\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12)\n\x05poses\x18\x02 \x03(\x0b\x32\x13.v1.model.TransformR\x05poses\"\xab\x01\n\nJointState\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\x12\n\x04name\x18\x01 \x03(\tR\x04name\x12\x1a\n\x08position\x18\x02 \x03(\x01R\x08position\x12\x1a\n\x08velocity\x18\x03 \x03(\x01R\x08velocity\x12\x16\n\x06\x65\x66\x66ort\x18\x04 \x03(\x01R\x06\x65\x66\x66ort\"j\n\x04Goal\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\'\n\x04pose\x18\x02 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\"\x18\n\x06GoalID\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"]\n\x12PoseWithCovariance\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12\x1e\n\ncovariance\x18\x02 \x03(\x01R\ncovarianceB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_media__pb2.DESCRIPTOR,])
 
@@ -339,28 +339,35 @@ _JOINTSTATE = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='v1.model.JointState.name', index=0,
+      name='world_to_local', full_name='v1.model.JointState.world_to_local', index=0,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='v1.model.JointState.name', index=1,
       number=1, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='name', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='position', full_name='v1.model.JointState.position', index=1,
+      name='position', full_name='v1.model.JointState.position', index=2,
       number=2, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='position', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='velocity', full_name='v1.model.JointState.velocity', index=2,
+      name='velocity', full_name='v1.model.JointState.velocity', index=3,
       number=3, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='velocity', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='effort', full_name='v1.model.JointState.effort', index=3,
+      name='effort', full_name='v1.model.JointState.effort', index=4,
       number=4, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -378,8 +385,8 @@ _JOINTSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1003,
-  serialized_end=1115,
+  serialized_start=1004,
+  serialized_end=1175,
 )
 
 
@@ -417,8 +424,8 @@ _GOAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1117,
-  serialized_end=1223,
+  serialized_start=1177,
+  serialized_end=1283,
 )
 
 
@@ -449,8 +456,8 @@ _GOALID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1225,
-  serialized_end=1249,
+  serialized_start=1285,
+  serialized_end=1309,
 )
 
 
@@ -488,8 +495,8 @@ _POSEWITHCOVARIANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1251,
-  serialized_end=1344,
+  serialized_start=1311,
+  serialized_end=1404,
 )
 
 _LOCALIZATION.fields_by_name['odometry'].message_type = _ODOMETRY
@@ -514,6 +521,7 @@ _MAP.oneofs_by_name['data'].fields.append(
 _MAP.fields_by_name['raw'].containing_oneof = _MAP.oneofs_by_name['data']
 _PATH.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _PATH.fields_by_name['poses'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
+_JOINTSTATE.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _GOAL.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _GOAL.fields_by_name['pose'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _POSEWITHCOVARIANCE.fields_by_name['pose'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM

@@ -59,6 +59,7 @@ message Path {
 }
 
 message JointState {
+    Transform world_to_local = 5;
     repeated string name = 1;
     repeated double position = 2;
     repeated double velocity = 3;

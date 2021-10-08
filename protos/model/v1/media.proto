@@ -28,6 +28,12 @@ message PointCloud {
   Transform world_to_local = 3;
 }
 
+message RtcPointCloud {
+  bytes data = 1;
+  Transform world_to_local = 2;
+
+}
+
 message H264VideoFrame {
   // Index of current frame, used to ensure we are not decoding duplicates
   int32 index = 1;

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"Z\n\x05Image\x12!\n\x0c\x63ontent_type\x18\x01 \x01(\tR\x0b\x63ontentType\x12\x12\n\x03url\x18\x02 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x03 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"w\n\nPointCloud\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03raw\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocalB\x06\n\x04\x64\x61ta\"[\n\x0eH264VideoFrame\x12\x14\n\x05index\x18\x01 \x01(\x05R\x05index\x12\x14\n\x05\x66lags\x18\x02 \x01(\x05R\x05\x66lags\x12\x1d\n\nframe_data\x18\x03 \x01(\x0cR\tframeData\"Y\n\nAudioChunk\x12\x14\n\x05index\x18\x01 \x01(\x05R\x05index\x12\x16\n\x06\x66ormat\x18\x02 \x01(\tR\x06\x66ormat\x12\x1d\n\nchunk_data\x18\x03 \x01(\x0cR\tchunkData\"p\n\x05Video\x12\x1b\n\tmime_type\x18\x01 \x01(\tR\x08mimeType\x12\x1a\n\x08\x64uration\x18\x02 \x01(\x03R\x08\x64uration\x12\x12\n\x03url\x18\x03 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x04 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"?\n\rTransformTree\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"Z\n\x05Image\x12!\n\x0c\x63ontent_type\x18\x01 \x01(\tR\x0b\x63ontentType\x12\x12\n\x03url\x18\x02 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x03 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"w\n\nPointCloud\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03raw\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocalB\x06\n\x04\x64\x61ta\"^\n\rRtcPointCloud\x12\x12\n\x04\x64\x61ta\x18\x01 \x01(\x0cR\x04\x64\x61ta\x12\x39\n\x0eworld_to_local\x18\x02 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"[\n\x0eH264VideoFrame\x12\x14\n\x05index\x18\x01 \x01(\x05R\x05index\x12\x14\n\x05\x66lags\x18\x02 \x01(\x05R\x05\x66lags\x12\x1d\n\nframe_data\x18\x03 \x01(\x0cR\tframeData\"Y\n\nAudioChunk\x12\x14\n\x05index\x18\x01 \x01(\x05R\x05index\x12\x16\n\x06\x66ormat\x18\x02 \x01(\tR\x06\x66ormat\x12\x1d\n\nchunk_data\x18\x03 \x01(\x0cR\tchunkData\"p\n\x05Video\x12\x1b\n\tmime_type\x18\x01 \x01(\tR\x08mimeType\x12\x1a\n\x08\x64uration\x18\x02 \x01(\x03R\x08\x64uration\x12\x12\n\x03url\x18\x03 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x04 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"?\n\rTransformTree\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,])
 
@@ -129,6 +129,45 @@ _POINTCLOUD = _descriptor.Descriptor(
 )
 
 
+_RTCPOINTCLOUD = _descriptor.Descriptor(
+  name='RtcPointCloud',
+  full_name='v1.model.RtcPointCloud',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='v1.model.RtcPointCloud.data', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='data', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='world_to_local', full_name='v1.model.RtcPointCloud.world_to_local', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=282,
+  serialized_end=376,
+)
+
+
 _H264VIDEOFRAME = _descriptor.Descriptor(
   name='H264VideoFrame',
   full_name='v1.model.H264VideoFrame',
@@ -170,8 +209,8 @@ _H264VIDEOFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=282,
-  serialized_end=373,
+  serialized_start=378,
+  serialized_end=469,
 )
 
 
@@ -216,8 +255,8 @@ _AUDIOCHUNK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=375,
-  serialized_end=464,
+  serialized_start=471,
+  serialized_end=560,
 )
 
 
@@ -274,8 +313,8 @@ _VIDEO = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=466,
-  serialized_end=578,
+  serialized_start=562,
+  serialized_end=674,
 )
 
 
@@ -318,8 +357,8 @@ _TRANSFORMTREE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=580,
-  serialized_end=643,
+  serialized_start=676,
+  serialized_end=739,
 )
 
 _IMAGE.oneofs_by_name['data'].fields.append(
@@ -335,6 +374,7 @@ _POINTCLOUD.fields_by_name['url'].containing_oneof = _POINTCLOUD.oneofs_by_name[
 _POINTCLOUD.oneofs_by_name['data'].fields.append(
   _POINTCLOUD.fields_by_name['raw'])
 _POINTCLOUD.fields_by_name['raw'].containing_oneof = _POINTCLOUD.oneofs_by_name['data']
+_RTCPOINTCLOUD.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _VIDEO.oneofs_by_name['data'].fields.append(
   _VIDEO.fields_by_name['url'])
 _VIDEO.fields_by_name['url'].containing_oneof = _VIDEO.oneofs_by_name['data']
@@ -349,6 +389,7 @@ _TRANSFORMTREE.oneofs_by_name['data'].fields.append(
 _TRANSFORMTREE.fields_by_name['raw'].containing_oneof = _TRANSFORMTREE.oneofs_by_name['data']
 DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
 DESCRIPTOR.message_types_by_name['PointCloud'] = _POINTCLOUD
+DESCRIPTOR.message_types_by_name['RtcPointCloud'] = _RTCPOINTCLOUD
 DESCRIPTOR.message_types_by_name['H264VideoFrame'] = _H264VIDEOFRAME
 DESCRIPTOR.message_types_by_name['AudioChunk'] = _AUDIOCHUNK
 DESCRIPTOR.message_types_by_name['Video'] = _VIDEO
@@ -368,6 +409,13 @@ PointCloud = _reflection.GeneratedProtocolMessageType('PointCloud', (_message.Me
   # @@protoc_insertion_point(class_scope:v1.model.PointCloud)
   })
 _sym_db.RegisterMessage(PointCloud)
+
+RtcPointCloud = _reflection.GeneratedProtocolMessageType('RtcPointCloud', (_message.Message,), {
+  'DESCRIPTOR' : _RTCPOINTCLOUD,
+  '__module__' : 'protos.model.v1.media_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.RtcPointCloud)
+  })
+_sym_db.RegisterMessage(RtcPointCloud)
 
 H264VideoFrame = _reflection.GeneratedProtocolMessageType('H264VideoFrame', (_message.Message,), {
   'DESCRIPTOR' : _H264VIDEOFRAME,

@@ -39,6 +39,7 @@ message ROSMessageToPublish {
     model.GoalID goalID = 9;
     model.Numeric numeric = 10;
     model.PoseWithCovariance pose_with_covariance = 11;
+    model.Point point = 12;
   }
 }
 
@@ -55,4 +56,7 @@ enum ROSTopicType {
   STD_MSGS_FLOAT64 = 9;
   SENSOR_MSGS_JOINT_STATE = 10;
   GEOMETRY_MSGS_POSE_WITH_COVARIANCE = 11;
+  SENSOR_MSGS_POINT_CLOUD2 = 12;
+  SENSOR_MSGS_LASER_SCAN = 13;
+  GEOMETRY_MSGS_POINT=14;
 }

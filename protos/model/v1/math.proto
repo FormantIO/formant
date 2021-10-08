@@ -49,6 +49,13 @@ message Vector3 {
   double z = 3;
 }
 
+message Point {
+  double x = 1;
+  double y = 2;
+  double z = 3;
+}
+
+
 message Quaternion {
   double x = 1;
   double y = 2;

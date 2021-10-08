@@ -46,5 +46,6 @@ message Datapoint {
     Transform pose = 5;
     Numeric numeric = 6;
     PoseWithCovariance pose_with_covariance = 7;
+    Point point = 8;
   }
 }

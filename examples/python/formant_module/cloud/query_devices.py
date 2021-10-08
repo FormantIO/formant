@@ -5,5 +5,5 @@ if __name__ == "__main__":
     # environment variables for an existing service account
     fclient = FormantClient()
 
-    result = fclient.query_devices({"tags": {"location": "sf"}})
+    result = fclient.query_devices({"tags": {"location": ["sf"]}})
     print(result)

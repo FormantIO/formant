@@ -77,6 +77,8 @@ message TeleopRosStreamConfiguration {
   bool encode_video = 4;
   string audio_codec = 5;
   string quality = 6;
+  string base_reference_frame = 7;
+  string local_frame = 8;
 
 }
 
