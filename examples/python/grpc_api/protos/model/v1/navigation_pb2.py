@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/media.proto\"D\n\x08Location\x12\x1a\n\x08latitude\x18\x01 \x01(\x01R\x08latitude\x12\x1c\n\tlongitude\x18\x02 \x01(\x01R\tlongitude\"\xe0\x01\n\x0cLocalization\x12.\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.OdometryR\x08odometry\x12\x1f\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.MapR\x03map\x12\x37\n\x0cpoint_clouds\x18\x03 \x03(\x0b\x32\x14.v1.model.PointCloudR\x0bpointClouds\x12\"\n\x04path\x18\x04 \x01(\x0b\x32\x0e.v1.model.PathR\x04path\x12\"\n\x04goal\x18\x05 \x01(\x0b\x32\x0e.v1.model.GoalR\x04goal\"\x95\x01\n\x08Odometry\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12%\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistR\x05twist\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"\xad\x02\n\x03Map\x12\x1e\n\nresolution\x18\x01 \x01(\x01R\nresolution\x12\x14\n\x05width\x18\x02 \x01(\rR\x05width\x12\x16\n\x06height\x18\x03 \x01(\rR\x06height\x12+\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.TransformR\x06origin\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12@\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00R\roccupancyGrid\x12\x12\n\x03url\x18\x07 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x08 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"#\n\rOccupancyGrid\x12\x12\n\x04\x64\x61ta\x18\x01 \x03(\x05R\x04\x64\x61ta\"l\n\x04Path\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12)\n\x05poses\x18\x02 \x03(\x0b\x32\x13.v1.model.TransformR\x05poses\"\xab\x01\n\nJointState\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\x12\n\x04name\x18\x01 \x03(\tR\x04name\x12\x1a\n\x08position\x18\x02 \x03(\x01R\x08position\x12\x1a\n\x08velocity\x18\x03 \x03(\x01R\x08velocity\x12\x16\n\x06\x65\x66\x66ort\x18\x04 \x03(\x01R\x06\x65\x66\x66ort\"j\n\x04Goal\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\'\n\x04pose\x18\x02 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\"\x18\n\x06GoalID\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"]\n\x12PoseWithCovariance\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12\x1e\n\ncovariance\x18\x02 \x03(\x01R\ncovarianceB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/media.proto\"\xa9\x01\n\x08Location\x12\x1a\n\x08latitude\x18\x01 \x01(\x01R\x08latitude\x12\x1c\n\tlongitude\x18\x02 \x01(\x01R\tlongitude\x12\x1f\n\x08\x61ltitude\x18\x03 \x01(\x01H\x00R\x08\x61ltitude\x88\x01\x01\x12%\n\x0borientation\x18\x04 \x01(\x01H\x01R\x0borientation\x88\x01\x01\x42\x0b\n\t_altitudeB\x0e\n\x0c_orientation\"\xe0\x01\n\x0cLocalization\x12.\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.OdometryR\x08odometry\x12\x1f\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.MapR\x03map\x12\x37\n\x0cpoint_clouds\x18\x03 \x03(\x0b\x32\x14.v1.model.PointCloudR\x0bpointClouds\x12\"\n\x04path\x18\x04 \x01(\x0b\x32\x0e.v1.model.PathR\x04path\x12\"\n\x04goal\x18\x05 \x01(\x0b\x32\x0e.v1.model.GoalR\x04goal\"\x95\x01\n\x08Odometry\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12%\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistR\x05twist\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"\xad\x02\n\x03Map\x12\x1e\n\nresolution\x18\x01 \x01(\x01R\nresolution\x12\x14\n\x05width\x18\x02 \x01(\rR\x05width\x12\x16\n\x06height\x18\x03 \x01(\rR\x06height\x12+\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.TransformR\x06origin\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12@\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00R\roccupancyGrid\x12\x12\n\x03url\x18\x07 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x08 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"#\n\rOccupancyGrid\x12\x12\n\x04\x64\x61ta\x18\x01 \x03(\x05R\x04\x64\x61ta\"l\n\x04Path\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12)\n\x05poses\x18\x02 \x03(\x0b\x32\x13.v1.model.TransformR\x05poses\"\xab\x01\n\nJointState\x12\x39\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\x12\n\x04name\x18\x01 \x03(\tR\x04name\x12\x1a\n\x08position\x18\x02 \x03(\x01R\x08position\x12\x1a\n\x08velocity\x18\x03 \x03(\x01R\x08velocity\x12\x16\n\x06\x65\x66\x66ort\x18\x04 \x03(\x01R\x06\x65\x66\x66ort\"j\n\x04Goal\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\'\n\x04pose\x18\x02 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\"\x18\n\x06GoalID\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"]\n\x12PoseWithCovariance\x12\'\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12\x1e\n\ncovariance\x18\x02 \x03(\x01R\ncovariance\"C\n\tColorRGBA\x12\x0c\n\x01r\x18\x01 \x01(\x02R\x01r\x12\x0c\n\x01g\x18\x02 \x01(\x02R\x01g\x12\x0c\n\x01\x62\x18\x03 \x01(\x02R\x01\x62\x12\x0c\n\x01\x61\x18\x04 \x01(\x02R\x01\x61\"\x9d\x04\n\x08Marker3D\x12\x39\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\x12\x0e\n\x02ns\x18\x02 \x01(\tR\x02ns\x12\x0e\n\x02id\x18\x03 \x01(\x05R\x02id\x12\x12\n\x04type\x18\x04 \x01(\tR\x04type\x12\x16\n\x06\x61\x63tion\x18\x05 \x01(\tR\x06\x61\x63tion\x12\'\n\x04pose\x18\x06 \x01(\x0b\x32\x13.v1.model.TransformR\x04pose\x12\'\n\x05scale\x18\x07 \x01(\x0b\x32\x11.v1.model.Vector3R\x05scale\x12)\n\x05\x63olor\x18\x08 \x01(\x0b\x32\x13.v1.model.ColorRGBAR\x05\x63olor\x12\x1a\n\x08lifetime\x18\t \x01(\x01R\x08lifetime\x12!\n\x0c\x66rame_locked\x18\n \x01(\x08R\x0b\x66rameLocked\x12)\n\x06points\x18\x0b \x03(\x0b\x32\x11.v1.model.Vector3R\x06points\x12+\n\x06\x63olors\x18\x0c \x03(\x0b\x32\x13.v1.model.ColorRGBAR\x06\x63olors\x12\x12\n\x04text\x18\r \x01(\tR\x04text\x12#\n\rmesh_resource\x18\x0e \x01(\tR\x0cmeshResource\x12=\n\x1bmesh_use_embedded_materials\x18\x0f \x01(\x08R\x18meshUseEmbeddedMaterials\"=\n\rMarker3DArray\x12,\n\x07markers\x18\x01 \x03(\x0b\x32\x12.v1.model.Marker3DR\x07markersB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_media__pb2.DESCRIPTOR,])
 
@@ -50,6 +50,20 @@ _LOCATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='longitude', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='altitude', full_name='v1.model.Location.altitude', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='altitude', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='orientation', full_name='v1.model.Location.orientation', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='orientation', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -61,9 +75,19 @@ _LOCATION = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
+    _descriptor.OneofDescriptor(
+      name='_altitude', full_name='v1.model.Location._altitude',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+    _descriptor.OneofDescriptor(
+      name='_orientation', full_name='v1.model.Location._orientation',
+      index=1, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
   ],
-  serialized_start=103,
-  serialized_end=171,
+  serialized_start=104,
+  serialized_end=273,
 )
 
 
@@ -122,8 +146,8 @@ _LOCALIZATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=174,
-  serialized_end=398,
+  serialized_start=276,
+  serialized_end=500,
 )
 
 
@@ -168,8 +192,8 @@ _ODOMETRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=401,
-  serialized_end=550,
+  serialized_start=503,
+  serialized_end=652,
 )
 
 
@@ -254,8 +278,8 @@ _MAP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=553,
-  serialized_end=854,
+  serialized_start=655,
+  serialized_end=956,
 )
 
 
@@ -286,8 +310,8 @@ _OCCUPANCYGRID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=856,
-  serialized_end=891,
+  serialized_start=958,
+  serialized_end=993,
 )
 
 
@@ -325,8 +349,8 @@ _PATH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=893,
-  serialized_end=1001,
+  serialized_start=995,
+  serialized_end=1103,
 )
 
 
@@ -385,8 +409,8 @@ _JOINTSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1004,
-  serialized_end=1175,
+  serialized_start=1106,
+  serialized_end=1277,
 )
 
 
@@ -424,8 +448,8 @@ _GOAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1177,
-  serialized_end=1283,
+  serialized_start=1279,
+  serialized_end=1385,
 )
 
 
@@ -456,8 +480,8 @@ _GOALID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1285,
-  serialized_end=1309,
+  serialized_start=1387,
+  serialized_end=1411,
 )
 
 
@@ -495,10 +519,231 @@ _POSEWITHCOVARIANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1311,
-  serialized_end=1404,
+  serialized_start=1413,
+  serialized_end=1506,
 )
 
+
+_COLORRGBA = _descriptor.Descriptor(
+  name='ColorRGBA',
+  full_name='v1.model.ColorRGBA',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='r', full_name='v1.model.ColorRGBA.r', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='r', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='g', full_name='v1.model.ColorRGBA.g', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='g', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='b', full_name='v1.model.ColorRGBA.b', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='b', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='a', full_name='v1.model.ColorRGBA.a', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='a', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1508,
+  serialized_end=1575,
+)
+
+
+_MARKER3D = _descriptor.Descriptor(
+  name='Marker3D',
+  full_name='v1.model.Marker3D',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='world_to_local', full_name='v1.model.Marker3D.world_to_local', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ns', full_name='v1.model.Marker3D.ns', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='ns', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='v1.model.Marker3D.id', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='id', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='v1.model.Marker3D.type', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='type', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='v1.model.Marker3D.action', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='action', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pose', full_name='v1.model.Marker3D.pose', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='pose', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='scale', full_name='v1.model.Marker3D.scale', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='scale', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='color', full_name='v1.model.Marker3D.color', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='color', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lifetime', full_name='v1.model.Marker3D.lifetime', index=8,
+      number=9, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='lifetime', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='frame_locked', full_name='v1.model.Marker3D.frame_locked', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='frameLocked', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='points', full_name='v1.model.Marker3D.points', index=10,
+      number=11, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='points', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='colors', full_name='v1.model.Marker3D.colors', index=11,
+      number=12, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='colors', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='text', full_name='v1.model.Marker3D.text', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='text', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='mesh_resource', full_name='v1.model.Marker3D.mesh_resource', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='meshResource', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='mesh_use_embedded_materials', full_name='v1.model.Marker3D.mesh_use_embedded_materials', index=14,
+      number=15, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='meshUseEmbeddedMaterials', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1578,
+  serialized_end=2119,
+)
+
+
+_MARKER3DARRAY = _descriptor.Descriptor(
+  name='Marker3DArray',
+  full_name='v1.model.Marker3DArray',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='markers', full_name='v1.model.Marker3DArray.markers', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='markers', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2121,
+  serialized_end=2182,
+)
+
+_LOCATION.oneofs_by_name['_altitude'].fields.append(
+  _LOCATION.fields_by_name['altitude'])
+_LOCATION.fields_by_name['altitude'].containing_oneof = _LOCATION.oneofs_by_name['_altitude']
+_LOCATION.oneofs_by_name['_orientation'].fields.append(
+  _LOCATION.fields_by_name['orientation'])
+_LOCATION.fields_by_name['orientation'].containing_oneof = _LOCATION.oneofs_by_name['_orientation']
 _LOCALIZATION.fields_by_name['odometry'].message_type = _ODOMETRY
 _LOCALIZATION.fields_by_name['map'].message_type = _MAP
 _LOCALIZATION.fields_by_name['point_clouds'].message_type = protos_dot_model_dot_v1_dot_media__pb2._POINTCLOUD
@@ -525,6 +770,13 @@ _JOINTSTATE.fields_by_name['world_to_local'].message_type = protos_dot_model_dot
 _GOAL.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _GOAL.fields_by_name['pose'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
 _POSEWITHCOVARIANCE.fields_by_name['pose'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
+_MARKER3D.fields_by_name['world_to_local'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
+_MARKER3D.fields_by_name['pose'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TRANSFORM
+_MARKER3D.fields_by_name['scale'].message_type = protos_dot_model_dot_v1_dot_math__pb2._VECTOR3
+_MARKER3D.fields_by_name['color'].message_type = _COLORRGBA
+_MARKER3D.fields_by_name['points'].message_type = protos_dot_model_dot_v1_dot_math__pb2._VECTOR3
+_MARKER3D.fields_by_name['colors'].message_type = _COLORRGBA
+_MARKER3DARRAY.fields_by_name['markers'].message_type = _MARKER3D
 DESCRIPTOR.message_types_by_name['Location'] = _LOCATION
 DESCRIPTOR.message_types_by_name['Localization'] = _LOCALIZATION
 DESCRIPTOR.message_types_by_name['Odometry'] = _ODOMETRY
@@ -535,6 +787,9 @@ DESCRIPTOR.message_types_by_name['JointState'] = _JOINTSTATE
 DESCRIPTOR.message_types_by_name['Goal'] = _GOAL
 DESCRIPTOR.message_types_by_name['GoalID'] = _GOALID
 DESCRIPTOR.message_types_by_name['PoseWithCovariance'] = _POSEWITHCOVARIANCE
+DESCRIPTOR.message_types_by_name['ColorRGBA'] = _COLORRGBA
+DESCRIPTOR.message_types_by_name['Marker3D'] = _MARKER3D
+DESCRIPTOR.message_types_by_name['Marker3DArray'] = _MARKER3DARRAY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Location = _reflection.GeneratedProtocolMessageType('Location', (_message.Message,), {
@@ -606,6 +861,27 @@ PoseWithCovariance = _reflection.GeneratedProtocolMessageType('PoseWithCovarianc
   # @@protoc_insertion_point(class_scope:v1.model.PoseWithCovariance)
   })
 _sym_db.RegisterMessage(PoseWithCovariance)
+
+ColorRGBA = _reflection.GeneratedProtocolMessageType('ColorRGBA', (_message.Message,), {
+  'DESCRIPTOR' : _COLORRGBA,
+  '__module__' : 'protos.model.v1.navigation_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.ColorRGBA)
+  })
+_sym_db.RegisterMessage(ColorRGBA)
+
+Marker3D = _reflection.GeneratedProtocolMessageType('Marker3D', (_message.Message,), {
+  'DESCRIPTOR' : _MARKER3D,
+  '__module__' : 'protos.model.v1.navigation_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.Marker3D)
+  })
+_sym_db.RegisterMessage(Marker3D)
+
+Marker3DArray = _reflection.GeneratedProtocolMessageType('Marker3DArray', (_message.Message,), {
+  'DESCRIPTOR' : _MARKER3DARRAY,
+  '__module__' : 'protos.model.v1.navigation_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.Marker3DArray)
+  })
+_sym_db.RegisterMessage(Marker3DArray)
 
 
 DESCRIPTOR._options = None

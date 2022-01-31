@@ -10,6 +10,8 @@ option go_package = "github.com/FormantIO/genproto/go/v1/model";
 message Location {
     double latitude = 1;
     double longitude = 2;
+    optional double altitude = 3;
+    optional double orientation = 4;
 }
 
 message Localization {
@@ -78,4 +80,33 @@ message GoalID {
 message PoseWithCovariance {
     Transform pose = 1;
     repeated double covariance = 2;
+}
+
+message ColorRGBA {
+    float r = 1;
+    float g = 2;
+    float b = 3;
+    float a = 4;
+}
+
+message Marker3D {
+    Transform world_to_local = 1;
+    string ns = 2;
+    int32 id = 3;
+    string type = 4;
+    string action = 5;
+    Transform pose = 6;
+    Vector3 scale = 7;
+    ColorRGBA color = 8;
+    double lifetime = 9;
+    bool frame_locked = 10;
+    repeated Vector3 points = 11;
+    repeated ColorRGBA colors = 12;
+    string text = 13;
+    string mesh_resource = 14;
+    bool mesh_use_embedded_materials = 15;
+}
+
+message Marker3DArray {
+    repeated Marker3D markers = 1;
 }
