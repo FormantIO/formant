@@ -105,6 +105,7 @@ message Marker3D {
     string text = 13;
     string mesh_resource = 14;
     bool mesh_use_embedded_materials = 15;
+    string frame_id = 16;
 }
 
 message Marker3DArray {
