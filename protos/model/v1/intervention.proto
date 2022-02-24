@@ -16,6 +16,7 @@ message InterventionRequest {
     oneof data {
         SelectionRequest selection_request = 4;
         LabelingRequest labeling_request = 5;
+        TeleopRequest teleop_request = 8;
     }
     map <string, string> tags = 6;
     repeated InterventionResponse responses = 7;
@@ -28,6 +29,7 @@ message InterventionResponse {
     oneof data {
         SelectionResponse selection_response = 4;
         LabelingResponse labeling_response = 5;
+        TeleopResponse teleop_response = 6;
     }
 }
 
@@ -70,4 +72,13 @@ message SelectionRequest {
 
 message SelectionResponse {
     uint32 value = 1;
+}
+
+message TeleopRequest {
+    string instruction = 1;
+}
+
+message TeleopResponse {
+    string state = 1;
+    string notes = 2;
 }

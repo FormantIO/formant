@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"protos/model/v1/intervention.proto\x12\x08v1.model\x1a\x1bprotos/model/v1/media.proto\x1a\x1bprotos/model/v1/event.proto\"\xc2\x03\n\x13InterventionRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x1c\n\ttimestamp\x18\x02 \x01(\x03R\ttimestamp\x12.\n\x08severity\x18\x03 \x01(\x0e\x32\x12.v1.model.SeverityR\x08severity\x12I\n\x11selection_request\x18\x04 \x01(\x0b\x32\x1a.v1.model.SelectionRequestH\x00R\x10selectionRequest\x12\x46\n\x10labeling_request\x18\x05 \x01(\x0b\x32\x19.v1.model.LabelingRequestH\x00R\x0flabelingRequest\x12;\n\x04tags\x18\x06 \x03(\x0b\x32\'.v1.model.InterventionRequest.TagsEntryR\x04tags\x12<\n\tresponses\x18\x07 \x03(\x0b\x32\x1e.v1.model.InterventionResponseR\tresponses\x1a\x37\n\tTagsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x42\x06\n\x04\x64\x61ta\"\x84\x02\n\x14InterventionResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n\nrequest_id\x18\x02 \x01(\tR\trequestId\x12\x1c\n\ttimestamp\x18\x03 \x01(\x03R\ttimestamp\x12L\n\x12selection_response\x18\x04 \x01(\x0b\x32\x1b.v1.model.SelectionResponseH\x00R\x11selectionResponse\x12I\n\x11labeling_response\x18\x05 \x01(\x0b\x32\x1a.v1.model.LabelingResponseH\x00R\x10labelingResponseB\x06\n\x04\x64\x61ta\"@\n\x05Label\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\x12!\n\x0c\x64isplay_name\x18\x02 \x01(\tR\x0b\x64isplayName\"V\n\x0eLabeledPolygon\x12,\n\x08vertices\x18\x01 \x03(\x0b\x32\x10.v1.model.VertexR\x08vertices\x12\x16\n\x06labels\x18\x02 \x03(\tR\x06labels\"$\n\x06Vertex\x12\x0c\n\x01x\x18\x01 \x01(\x01R\x01x\x12\x0c\n\x01y\x18\x02 \x01(\x01R\x01y\"\xc7\x01\n\x0fLabelingRequest\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0binstruction\x18\x02 \x01(\tR\x0binstruction\x12%\n\x05image\x18\x03 \x01(\x0b\x32\x0f.v1.model.ImageR\x05image\x12\'\n\x06labels\x18\x04 \x03(\x0b\x32\x0f.v1.model.LabelR\x06labels\x12,\n\x04hint\x18\x05 \x03(\x0b\x32\x18.v1.model.LabeledPolygonR\x04hint\"B\n\x10LabelingResponse\x12.\n\x05value\x18\x01 \x03(\x0b\x32\x18.v1.model.LabeledPolygonR\x05value\"\xa9\x01\n\x10SelectionRequest\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12\'\n\x05image\x18\x02 \x01(\x0b\x32\x0f.v1.model.ImageH\x00R\x05image\x12 \n\x0binstruction\x18\x03 \x01(\tR\x0binstruction\x12\x18\n\x07options\x18\x04 \x03(\tR\x07options\x12\x12\n\x04hint\x18\x05 \x01(\rR\x04hintB\x06\n\x04\x64\x61ta\")\n\x11SelectionResponse\x12\x14\n\x05value\x18\x01 \x01(\rR\x05valueB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\"protos/model/v1/intervention.proto\x12\x08v1.model\x1a\x1bprotos/model/v1/media.proto\x1a\x1bprotos/model/v1/event.proto\"\x84\x04\n\x13InterventionRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x1c\n\ttimestamp\x18\x02 \x01(\x03R\ttimestamp\x12.\n\x08severity\x18\x03 \x01(\x0e\x32\x12.v1.model.SeverityR\x08severity\x12I\n\x11selection_request\x18\x04 \x01(\x0b\x32\x1a.v1.model.SelectionRequestH\x00R\x10selectionRequest\x12\x46\n\x10labeling_request\x18\x05 \x01(\x0b\x32\x19.v1.model.LabelingRequestH\x00R\x0flabelingRequest\x12@\n\x0eteleop_request\x18\x08 \x01(\x0b\x32\x17.v1.model.TeleopRequestH\x00R\rteleopRequest\x12;\n\x04tags\x18\x06 \x03(\x0b\x32\'.v1.model.InterventionRequest.TagsEntryR\x04tags\x12<\n\tresponses\x18\x07 \x03(\x0b\x32\x1e.v1.model.InterventionResponseR\tresponses\x1a\x37\n\tTagsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x42\x06\n\x04\x64\x61ta\"\xc9\x02\n\x14InterventionResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n\nrequest_id\x18\x02 \x01(\tR\trequestId\x12\x1c\n\ttimestamp\x18\x03 \x01(\x03R\ttimestamp\x12L\n\x12selection_response\x18\x04 \x01(\x0b\x32\x1b.v1.model.SelectionResponseH\x00R\x11selectionResponse\x12I\n\x11labeling_response\x18\x05 \x01(\x0b\x32\x1a.v1.model.LabelingResponseH\x00R\x10labelingResponse\x12\x43\n\x0fteleop_response\x18\x06 \x01(\x0b\x32\x18.v1.model.TeleopResponseH\x00R\x0eteleopResponseB\x06\n\x04\x64\x61ta\"@\n\x05Label\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\x12!\n\x0c\x64isplay_name\x18\x02 \x01(\tR\x0b\x64isplayName\"V\n\x0eLabeledPolygon\x12,\n\x08vertices\x18\x01 \x03(\x0b\x32\x10.v1.model.VertexR\x08vertices\x12\x16\n\x06labels\x18\x02 \x03(\tR\x06labels\"$\n\x06Vertex\x12\x0c\n\x01x\x18\x01 \x01(\x01R\x01x\x12\x0c\n\x01y\x18\x02 \x01(\x01R\x01y\"\xc7\x01\n\x0fLabelingRequest\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0binstruction\x18\x02 \x01(\tR\x0binstruction\x12%\n\x05image\x18\x03 \x01(\x0b\x32\x0f.v1.model.ImageR\x05image\x12\'\n\x06labels\x18\x04 \x03(\x0b\x32\x0f.v1.model.LabelR\x06labels\x12,\n\x04hint\x18\x05 \x03(\x0b\x32\x18.v1.model.LabeledPolygonR\x04hint\"B\n\x10LabelingResponse\x12.\n\x05value\x18\x01 \x03(\x0b\x32\x18.v1.model.LabeledPolygonR\x05value\"\xa9\x01\n\x10SelectionRequest\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12\'\n\x05image\x18\x02 \x01(\x0b\x32\x0f.v1.model.ImageH\x00R\x05image\x12 \n\x0binstruction\x18\x03 \x01(\tR\x0binstruction\x12\x18\n\x07options\x18\x04 \x03(\tR\x07options\x12\x12\n\x04hint\x18\x05 \x01(\rR\x04hintB\x06\n\x04\x64\x61ta\")\n\x11SelectionResponse\x12\x14\n\x05value\x18\x01 \x01(\rR\x05value\"1\n\rTeleopRequest\x12 \n\x0binstruction\x18\x01 \x01(\tR\x0binstruction\"<\n\x0eTeleopResponse\x12\x14\n\x05state\x18\x01 \x01(\tR\x05state\x12\x14\n\x05notes\x18\x02 \x01(\tR\x05notesB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_media__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_event__pb2.DESCRIPTOR,])
 
@@ -62,8 +62,8 @@ _INTERVENTIONREQUEST_TAGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=494,
-  serialized_end=549,
+  serialized_start=560,
+  serialized_end=615,
 )
 
 _INTERVENTIONREQUEST = _descriptor.Descriptor(
@@ -110,14 +110,21 @@ _INTERVENTIONREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='labelingRequest', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='v1.model.InterventionRequest.tags', index=5,
+      name='teleop_request', full_name='v1.model.InterventionRequest.teleop_request', index=5,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='teleopRequest', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='v1.model.InterventionRequest.tags', index=6,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='tags', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='responses', full_name='v1.model.InterventionRequest.responses', index=6,
+      name='responses', full_name='v1.model.InterventionRequest.responses', index=7,
       number=7, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -141,7 +148,7 @@ _INTERVENTIONREQUEST = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=107,
-  serialized_end=557,
+  serialized_end=623,
 )
 
 
@@ -188,6 +195,13 @@ _INTERVENTIONRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='labelingResponse', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='teleop_response', full_name='v1.model.InterventionResponse.teleop_response', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='teleopResponse', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -205,8 +219,8 @@ _INTERVENTIONRESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=560,
-  serialized_end=820,
+  serialized_start=626,
+  serialized_end=955,
 )
 
 
@@ -244,8 +258,8 @@ _LABEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=822,
-  serialized_end=886,
+  serialized_start=957,
+  serialized_end=1021,
 )
 
 
@@ -283,8 +297,8 @@ _LABELEDPOLYGON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=888,
-  serialized_end=974,
+  serialized_start=1023,
+  serialized_end=1109,
 )
 
 
@@ -322,8 +336,8 @@ _VERTEX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=976,
-  serialized_end=1012,
+  serialized_start=1111,
+  serialized_end=1147,
 )
 
 
@@ -382,8 +396,8 @@ _LABELINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1015,
-  serialized_end=1214,
+  serialized_start=1150,
+  serialized_end=1349,
 )
 
 
@@ -414,8 +428,8 @@ _LABELINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1216,
-  serialized_end=1282,
+  serialized_start=1351,
+  serialized_end=1417,
 )
 
 
@@ -479,8 +493,8 @@ _SELECTIONREQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1285,
-  serialized_end=1454,
+  serialized_start=1420,
+  serialized_end=1589,
 )
 
 
@@ -511,14 +525,86 @@ _SELECTIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1456,
-  serialized_end=1497,
+  serialized_start=1591,
+  serialized_end=1632,
+)
+
+
+_TELEOPREQUEST = _descriptor.Descriptor(
+  name='TeleopRequest',
+  full_name='v1.model.TeleopRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='instruction', full_name='v1.model.TeleopRequest.instruction', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='instruction', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1634,
+  serialized_end=1683,
+)
+
+
+_TELEOPRESPONSE = _descriptor.Descriptor(
+  name='TeleopResponse',
+  full_name='v1.model.TeleopResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='state', full_name='v1.model.TeleopResponse.state', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='state', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='notes', full_name='v1.model.TeleopResponse.notes', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='notes', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1685,
+  serialized_end=1745,
 )
 
 _INTERVENTIONREQUEST_TAGSENTRY.containing_type = _INTERVENTIONREQUEST
 _INTERVENTIONREQUEST.fields_by_name['severity'].enum_type = protos_dot_model_dot_v1_dot_event__pb2._SEVERITY
 _INTERVENTIONREQUEST.fields_by_name['selection_request'].message_type = _SELECTIONREQUEST
 _INTERVENTIONREQUEST.fields_by_name['labeling_request'].message_type = _LABELINGREQUEST
+_INTERVENTIONREQUEST.fields_by_name['teleop_request'].message_type = _TELEOPREQUEST
 _INTERVENTIONREQUEST.fields_by_name['tags'].message_type = _INTERVENTIONREQUEST_TAGSENTRY
 _INTERVENTIONREQUEST.fields_by_name['responses'].message_type = _INTERVENTIONRESPONSE
 _INTERVENTIONREQUEST.oneofs_by_name['data'].fields.append(
@@ -527,14 +613,21 @@ _INTERVENTIONREQUEST.fields_by_name['selection_request'].containing_oneof = _INT
 _INTERVENTIONREQUEST.oneofs_by_name['data'].fields.append(
   _INTERVENTIONREQUEST.fields_by_name['labeling_request'])
 _INTERVENTIONREQUEST.fields_by_name['labeling_request'].containing_oneof = _INTERVENTIONREQUEST.oneofs_by_name['data']
+_INTERVENTIONREQUEST.oneofs_by_name['data'].fields.append(
+  _INTERVENTIONREQUEST.fields_by_name['teleop_request'])
+_INTERVENTIONREQUEST.fields_by_name['teleop_request'].containing_oneof = _INTERVENTIONREQUEST.oneofs_by_name['data']
 _INTERVENTIONRESPONSE.fields_by_name['selection_response'].message_type = _SELECTIONRESPONSE
 _INTERVENTIONRESPONSE.fields_by_name['labeling_response'].message_type = _LABELINGRESPONSE
+_INTERVENTIONRESPONSE.fields_by_name['teleop_response'].message_type = _TELEOPRESPONSE
 _INTERVENTIONRESPONSE.oneofs_by_name['data'].fields.append(
   _INTERVENTIONRESPONSE.fields_by_name['selection_response'])
 _INTERVENTIONRESPONSE.fields_by_name['selection_response'].containing_oneof = _INTERVENTIONRESPONSE.oneofs_by_name['data']
 _INTERVENTIONRESPONSE.oneofs_by_name['data'].fields.append(
   _INTERVENTIONRESPONSE.fields_by_name['labeling_response'])
 _INTERVENTIONRESPONSE.fields_by_name['labeling_response'].containing_oneof = _INTERVENTIONRESPONSE.oneofs_by_name['data']
+_INTERVENTIONRESPONSE.oneofs_by_name['data'].fields.append(
+  _INTERVENTIONRESPONSE.fields_by_name['teleop_response'])
+_INTERVENTIONRESPONSE.fields_by_name['teleop_response'].containing_oneof = _INTERVENTIONRESPONSE.oneofs_by_name['data']
 _LABELEDPOLYGON.fields_by_name['vertices'].message_type = _VERTEX
 _LABELINGREQUEST.fields_by_name['image'].message_type = protos_dot_model_dot_v1_dot_media__pb2._IMAGE
 _LABELINGREQUEST.fields_by_name['labels'].message_type = _LABEL
@@ -553,6 +646,8 @@ DESCRIPTOR.message_types_by_name['LabelingRequest'] = _LABELINGREQUEST
 DESCRIPTOR.message_types_by_name['LabelingResponse'] = _LABELINGRESPONSE
 DESCRIPTOR.message_types_by_name['SelectionRequest'] = _SELECTIONREQUEST
 DESCRIPTOR.message_types_by_name['SelectionResponse'] = _SELECTIONRESPONSE
+DESCRIPTOR.message_types_by_name['TeleopRequest'] = _TELEOPREQUEST
+DESCRIPTOR.message_types_by_name['TeleopResponse'] = _TELEOPRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 InterventionRequest = _reflection.GeneratedProtocolMessageType('InterventionRequest', (_message.Message,), {
@@ -625,6 +720,20 @@ SelectionResponse = _reflection.GeneratedProtocolMessageType('SelectionResponse'
   # @@protoc_insertion_point(class_scope:v1.model.SelectionResponse)
   })
 _sym_db.RegisterMessage(SelectionResponse)
+
+TeleopRequest = _reflection.GeneratedProtocolMessageType('TeleopRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TELEOPREQUEST,
+  '__module__' : 'protos.model.v1.intervention_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.TeleopRequest)
+  })
+_sym_db.RegisterMessage(TeleopRequest)
+
+TeleopResponse = _reflection.GeneratedProtocolMessageType('TeleopResponse', (_message.Message,), {
+  'DESCRIPTOR' : _TELEOPRESPONSE,
+  '__module__' : 'protos.model.v1.intervention_pb2'
+  # @@protoc_insertion_point(class_scope:v1.model.TeleopResponse)
+  })
+_sym_db.RegisterMessage(TeleopResponse)
 
 
 DESCRIPTOR._options = None
