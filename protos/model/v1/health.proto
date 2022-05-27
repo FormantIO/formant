@@ -12,6 +12,9 @@ enum HealthStatus {
 }
 message Health {
   HealthStatus status = 1;
+  oneof clock {
+    int64 skew_ms = 2;
+  }
 }
 
 message Battery {
