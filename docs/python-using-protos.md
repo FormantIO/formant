@@ -10,7 +10,7 @@ This command will also install the required dependencies to communicate with the
 
 ```
 grpcio==1.37.0
-protobuf==3.7.0
+protobuf==3.17.2
 six==1.12.0
 grpcio-status == 1.29.0
 ```
