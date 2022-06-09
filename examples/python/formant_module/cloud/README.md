@@ -8,7 +8,7 @@
 
 Service account authentication is necessary to use the Formant cloud SDK. To create a service account, we can use `fctl`, the Formant administrative command line tool.
 
-See: https://help.formant.io/device-management/installing-fctl
+See: https://docs.formant.io/device-management/installing-fctl
 
 Once you have installed and authenticated `fctl` with your administrator email and password, we can create a service account. Run:
 
