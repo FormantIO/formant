@@ -6,15 +6,15 @@ if __name__ == "__main__":
     # environment variables for an existing service account
 
     """Example query params (only start and end time are required):
-    {
-        start: "2021-01-01T01:00:00.000Z",
-        end: "2021-01-01T02:00:00.000Z",
-        deviceIds: ["99e8ee37-0a27-4a11-bba2-521facabefa3"],
-        names: ["engine_temp"],
-        types: ["numeric"],
-        tags: {"location":["sf","la"]},
-        notNames: ["speed"],
-    }
+        {
+            start: "2021-01-01T01:00:00.000Z",
+            end: "2021-01-01T02:00:00.000Z",
+            deviceIds: ["99e8ee37-0a27-4a11-bba2-521facabefa3"],
+            names: ["engine_temp"],
+            types: ["numeric"],
+            tags: {"location":["sf","la"]},
+            notNames: ["speed"],
+        }
     """
 
     fclient = FormantClient()
@@ -46,7 +46,7 @@ if __name__ == "__main__":
         {
             "start": "2020-06-01T00:00:00.000Z",
             "end": "2021-06-01T00:00:00.000Z",
-            "types": ["file"],
+            "types": ["file"]
         }
     )
     print(file_query_result)
@@ -60,7 +60,7 @@ if __name__ == "__main__":
             file_name = datapoint[1]["filename"]
             file_size = datapoint[1]["size"]
             file_url = datapoint[1]["url"]
-
+            
             if "bag" in file_name:
                 rosbags.append(
                     {
@@ -68,8 +68,8 @@ if __name__ == "__main__":
                         "stream_name": stream_name,
                         "file_name": file_name,
                         "file_size": file_size,
-                        "file_url": file_url,
+                        "file_url": file_url
                     }
                 )
-
+    
     print(rosbags)

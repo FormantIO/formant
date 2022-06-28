@@ -25,6 +25,14 @@ if __name__ == "__main__":
     print(command_result)
     print("\n")
 
+    print("requesting on demand data")
+    now = datetime.datetime.now(tz=datetime.timezone.utc)
+    yesterday = now - datetime.timedelta(days=1)
+
+    on_demand_result = fclient.demand_device_data(device_id, now, yesterday)
+    print(on_demand_result)
+    print("\n")
+
     # file id obtained by uploading to formant file storage
     # see files.py for an example
     file_id = "ffcd8958-6f94-4b0d-b9a9-3cbf105c3df5"
