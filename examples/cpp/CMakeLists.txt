@@ -62,6 +62,17 @@ target_link_libraries(
 )
 
 add_executable(
+  send_receive_custom_data_channel 
+  send_receive_custom_data_channel.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  send_receive_custom_data_channel 
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
+
+add_executable(
   get_config_params
   get_config_params.cpp
   ${INCLUDES}
@@ -145,6 +156,28 @@ add_executable(
 )
 target_link_libraries(
   send_receive_intervention_request
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
+
+add_executable(
+  teleop 
+  teleop.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  teleop 
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
+
+add_executable(
+  teleop_heartbeat_callback 
+  teleop_heartbeat_callback.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  teleop_heartbeat_callback 
   gRPC::grpc++
   protobuf::libprotobuf
 )
