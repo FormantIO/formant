@@ -148,3 +148,14 @@ target_link_libraries(
   gRPC::grpc++
   protobuf::libprotobuf
 )
+
+add_executable(
+  formant_agent_client
+  formant_agent_client.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  formant_agent_client
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
