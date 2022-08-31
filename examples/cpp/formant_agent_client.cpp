@@ -245,10 +245,10 @@ private:
 
         // We need to setup all these variables to
         // make a GRPC call
-        ClientContext stream_context;
-        register_command_receiver_context(&stream_context);
+        ClientContext * stream_context = new ClientContext();
+        register_command_receiver_context(stream_context);
         GetCommandRequestStreamRequest request = command_stream_request;
-        auto stream = stub_->GetCommandRequestStream(&stream_context, request);
+        auto stream = stub_->GetCommandRequestStream(stream_context, request);
         GetCommandRequestStreamResponse message;
 
         command_stream_thread_started = true;
@@ -286,6 +286,7 @@ private:
     {
         command_stream_context->TryCancel();
         command_stream_thread.join();
+        delete command_stream_context; 
         command_stream_thread_started = false;
     }
 
