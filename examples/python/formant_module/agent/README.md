@@ -47,11 +47,17 @@ Examples:
 
 ## Handling commands
 
-Use the `register_command_request_callback` and `send_command_response` methods to handle commands sent from the Formant application on your device. Refer to the examples for usage.
+Use the `register_command_request_callback` and `send_command_response` methods to handle commands sent from the Formant application on your device. Refer to the examples for further usage. 
 
 Examples:
 
--   [Handling commands](./handle_commands.py)
+-   [Handling commands](./handle_commands.py) :   Outlines how to use the specific command type "get_file", which is a built-in command in the Formant UI. 
+-   [Create PoseStamped msg from commands](./position_cmd.py):  Outlines the basic idea of how to receive a command from the Formant UI and convert this command into a PoseStamped position for the robot. The code accepts a command with parameters (x,y,theta) from the Formant platform, unpacks the parameters to create a PoseStamped message which prints in the agent logs. To set up a command, go to Settings > Commands > Add Command. The script looks for "send_to_position" string from the command (as shown in the second screenshot below) and uses the parameters to accept x,y and theta.
+
+<img src="./images/create_command.png" width="1100" height="750" class="center"/>
+<img src="./images/configure_command.png" width="1100" height="750" class="center"/>
+
+
 
 ## Reading application configuration
 
