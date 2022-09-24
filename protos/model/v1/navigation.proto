@@ -30,6 +30,8 @@ message Odometry {
 }
 
 message Map {
+    // The UUID to determine if the map is the same or not
+    string uuid = 9;
     // The resolution of each pixel/grid cell in the map.
     // May be expressed in any unit; should be consistent with odometry units.
     double resolution  = 1;

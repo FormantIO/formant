@@ -18,6 +18,8 @@ message Image {
 }
 
 message PointCloud {
+  // The UUID to determine if the pointcloud is the same or not
+  string uuid = 4;
   oneof data {
     // Absolute path to a file on the local filesystem or valid remote URL for remote files
     string url = 1;
