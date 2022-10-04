@@ -1,0 +1,6 @@
+{
+    "ping_adapter_configuration":{
+        "hostname":"host name",
+        "interval": 5
+    }
+}

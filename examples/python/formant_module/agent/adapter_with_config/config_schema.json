@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://formant.io/formant_ping_adapter_configuration.schema.json",
+    "title": "Formant Ping Adapter Configuration",
+    "description": "Configuration for the ping adapter.",
+    "type": "object",
+    "properties": {
+        "hostname": {
+            "description": "The host to ping.",
+            "type": "string",
+            "format": "hostname"
+        },
+        "interval": {
+            "description": "The interval in seconds between ping attempts.",
+            "type": "number",
+            "exclusiveMinimum": 0
+        },
+        "timeout": {
+            "description": "The timeout in seconds to wait for a response from the host.",
+            "type": "number",
+            "minimum": 0
+        },
+        "formant_stream": {
+            "description": "The Formant stream to send the ping results to.",
+            "type": "string"
+        }
+    }
+  }
