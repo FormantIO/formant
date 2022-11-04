@@ -46,6 +46,7 @@ message AgentConfigurationDocument {
   Diagnostics diagnostics = 9;
   google.protobuf.BoolValue terminal_access = 10;
   repeated AdapterConfiguration adapters = 11;
+  RtcInfo rtc_info = 12;
 }
 
 message AdapterConfiguration {
@@ -201,4 +202,9 @@ message FileTail {
   string time_key = 3;
   string time_format = 4;
   string regex = 5;
+}
+
+message RtcInfo {
+  repeated string rtc_ice_transport_policies = 1;
+  string rtc_ice_server_protocol = 2;
 }
