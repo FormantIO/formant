@@ -207,4 +207,5 @@ message FileTail {
 message RtcInfo {
   repeated string rtc_ice_transport_policies = 1;
   string rtc_ice_server_protocol = 2;
+  bool use_all_servers = 3;
 }
