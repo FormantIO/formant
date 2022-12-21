@@ -54,6 +54,7 @@ message AdapterConfiguration {
   string name = 2;
   string file_id = 3;
   string exec_command = 4;
+  string configuration = 5;
 }
 
 message TeleopConfiguration {
