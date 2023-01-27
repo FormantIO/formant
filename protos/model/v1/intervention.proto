@@ -71,7 +71,7 @@ message SelectionRequest {
 }
 
 message SelectionResponse {
-    optional uint32 value = 1;
+    uint32 value = 1;
 }
 
 message TeleopRequest {
