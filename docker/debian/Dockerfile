@@ -16,5 +16,4 @@ RUN apt update && apt install -y \
 RUN mkdir -p /catkin_ws
 
 COPY entrypoint.sh /entrypoint.sh
-COPY test.txt /test.txt
 ENTRYPOINT [ "/entrypoint.sh" ]
