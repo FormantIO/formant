@@ -1,13 +1,12 @@
 version: "3"
 
-volumes:
-  formant:
 
 services:
   example:
+    network_mode: host
     build: .
     restart: always
     env_file:
       - formant.env
     volumes:
-      - "formant:/var/lib/formant"
+      - /var/lib/formant:/var/lib/formant
