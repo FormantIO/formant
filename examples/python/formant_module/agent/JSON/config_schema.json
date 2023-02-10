@@ -1,0 +1,111 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "",
+    "title": "Formant JSON Adapter Configuration",
+    "description": "Configuration for all data to be read from JSON.",
+    "type": "object",
+    "properties": {
+        "json_path": {
+            "description": "File path where JSON files are generated",
+            "type": "string"
+        },
+        "json_adapter_configuration": {
+            "description": "A list of the data to pull from the json.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "paths": {
+                        "description": "A list of paths within the json to select data from for a particular stream.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "properties": {
+                                "path": {
+                                    "description": "The path of the data queried in the system state json."
+                                }
+                            },
+                            "required": [
+                                "path"
+                            ]
+                        }
+                    },
+                    "indices": {
+                        "description": "List of individual indices to grab from an array entry",
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "properties": {
+                                "index": {
+                                    "description": "If the path leads to a list, specify which index from the list to ingest"
+                                }
+                            }
+                        }
+                    },
+                    "fields": {
+                        "description": "List of field values",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "properties": {
+                                "field": {
+                                    "description": "If retrieving data from a list (i.e if index is used), you can optionally specify a specific field form the item"
+                                }
+                            }
+                        }
+                    },
+                    "stream_name": {
+                        "description": "The Formant stream name to ingest data using.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "The Formant Client function that should be used to ingest this data; e.g text, json, numeric. (https://docs.formant.io/reference/sending-basic-datapoints)",
+                        "type": "string"
+                    },
+                    "data_key": {
+                        "description": "The list of keys to use for bitset or numeric set data.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "properties": {
+                                "key": {
+                                    "description": "The key of the tag to use for this data."
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        }
+                    },
+                    "data_units": {
+                        "description": "The units to use for numeric set data.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "properties": {
+                                "unit": {
+                                    "description": "The unit use for this data."
+                                }
+                            },
+                            "required": [
+                                "unit"
+                            ]
+                        }
+                    },
+                    "tag_key": {
+                        "description": "The key of the tag to use for this data.",
+                        "type": "string"
+                    },
+                    "tag_value": {
+                        "description": "The value of the tag to use for this data.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "paths",
+                    "type"
+                ]
+            }
+        }
+    }
+}

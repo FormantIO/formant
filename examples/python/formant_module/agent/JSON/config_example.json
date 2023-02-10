@@ -1,0 +1,46 @@
+{
+    "json_path": "/home/tanim/telemetry/public/examples/python/formant_module/agent/JSON",
+    "json_adapter_configuration": [
+        {
+            "paths": [
+                "book"
+            ],
+            "indices": [
+                0
+            ],
+            "fields": [
+                "id"
+            ],
+            "stream_name": "book id",
+            "type": "numeric",
+            "tag_key": "",
+            "tag_value": ""
+        },
+        {
+            "paths": [
+                "book",
+                "book"
+            ],
+            "indices": [
+                0,
+                1
+            ],
+            "fields": [
+                "id",
+                "id"
+            ],
+            "stream_name": "books_set",
+            "type": "numeric_set",
+            "data_key": [
+                "first edition",
+                "second ediition"
+            ],
+            "data_units": [
+                "",
+                ""
+            ],
+            "tag_key": "",
+            "tag_value": ""
+        }
+    ]
+}
