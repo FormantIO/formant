@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"Z\n\x05Image\x12!\n\x0c\x63ontent_type\x18\x01 \x01(\tR\x0b\x63ontentType\x12\x12\n\x03url\x18\x02 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x03 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"\x8b\x01\n\nPointCloud\x12\x12\n\x04uuid\x18\x04 \x01(\tR\x04uuid\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03raw\x12\x39\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocalB\x06\n\x04\x64\x61ta\"^\n\rRtcPointCloud\x12\x12\n\x04\x64\x61ta\x18\x01 \x01(\x0cR\x04\x64\x61ta\x12\x39\n\x0eworld_to_local\x18\x02 \x01(\x0b\x32\x13.v1.model.TransformR\x0cworldToLocal\"[\n\x0eH264VideoFrame\x12\x14\n\x05index\x18\x01 \x01(\x05R\x05index\x12\x14\n\x05\x66lags\x18\x02 \x01(\x05R\x05\x66lags\x12\x1d\n\nframe_data\x18\x03 \x01(\x0cR\tframeData\"Y\n\nAudioChunk\x12\x14\n\x05index\x18\x01 \x01(\x05R\x05index\x12\x16\n\x06\x66ormat\x18\x02 \x01(\tR\x06\x66ormat\x12\x1d\n\nchunk_data\x18\x03 \x01(\x0cR\tchunkData\"p\n\x05Video\x12\x1b\n\tmime_type\x18\x01 \x01(\tR\x08mimeType\x12\x1a\n\x08\x64uration\x18\x02 \x01(\x03R\x08\x64uration\x12\x12\n\x03url\x18\x03 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x04 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61ta\"?\n\rTransformTree\x12\x12\n\x03url\x18\x01 \x01(\tH\x00R\x03url\x12\x12\n\x03raw\x18\x02 \x01(\x0cH\x00R\x03rawB\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1bprotos/model/v1/media.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\"C\n\x05Image\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\r\n\x03url\x18\x02 \x01(\tH\x00\x12\r\n\x03raw\x18\x03 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"m\n\nPointCloud\x12\x0c\n\x04uuid\x18\x04 \x01(\t\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x12+\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.TransformB\x06\n\x04\x64\x61ta\"J\n\rRtcPointCloud\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12+\n\x0eworld_to_local\x18\x02 \x01(\x0b\x32\x13.v1.model.Transform\"B\n\x0eH264VideoFrame\x12\r\n\x05index\x18\x01 \x01(\x05\x12\r\n\x05\x66lags\x18\x02 \x01(\x05\x12\x12\n\nframe_data\x18\x03 \x01(\x0c\"?\n\nAudioChunk\x12\r\n\x05index\x18\x01 \x01(\x05\x12\x0e\n\x06\x66ormat\x18\x02 \x01(\t\x12\x12\n\nchunk_data\x18\x03 \x01(\x0c\"R\n\x05Video\x12\x11\n\tmime_type\x18\x01 \x01(\t\x12\x10\n\x08\x64uration\x18\x02 \x01(\x03\x12\r\n\x03url\x18\x03 \x01(\tH\x00\x12\r\n\x03raw\x18\x04 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"5\n\rTransformTree\x12\r\n\x03url\x18\x01 \x01(\tH\x00\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61taB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,])
 
@@ -41,21 +41,21 @@ _IMAGE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='contentType', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='url', full_name='v1.model.Image.url', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='url', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='raw', full_name='v1.model.Image.raw', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='raw', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -74,7 +74,7 @@ _IMAGE = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=69,
-  serialized_end=159,
+  serialized_end=136,
 )
 
 
@@ -92,28 +92,28 @@ _POINTCLOUD = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='uuid', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='url', full_name='v1.model.PointCloud.url', index=1,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='url', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='raw', full_name='v1.model.PointCloud.raw', index=2,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='raw', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='world_to_local', full_name='v1.model.PointCloud.world_to_local', index=3,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -131,8 +131,8 @@ _POINTCLOUD = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=162,
-  serialized_end=301,
+  serialized_start=138,
+  serialized_end=247,
 )
 
 
@@ -150,14 +150,14 @@ _RTCPOINTCLOUD = _descriptor.Descriptor(
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='data', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='world_to_local', full_name='v1.model.RtcPointCloud.world_to_local', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='worldToLocal', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -170,8 +170,8 @@ _RTCPOINTCLOUD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=303,
-  serialized_end=397,
+  serialized_start=249,
+  serialized_end=323,
 )
 
 
@@ -189,21 +189,21 @@ _H264VIDEOFRAME = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='index', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='flags', full_name='v1.model.H264VideoFrame.flags', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='flags', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='frame_data', full_name='v1.model.H264VideoFrame.frame_data', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='frameData', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -216,8 +216,8 @@ _H264VIDEOFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=399,
-  serialized_end=490,
+  serialized_start=325,
+  serialized_end=391,
 )
 
 
@@ -235,21 +235,21 @@ _AUDIOCHUNK = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='index', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='format', full_name='v1.model.AudioChunk.format', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='format', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='chunk_data', full_name='v1.model.AudioChunk.chunk_data', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='chunkData', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -262,8 +262,8 @@ _AUDIOCHUNK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=492,
-  serialized_end=581,
+  serialized_start=393,
+  serialized_end=456,
 )
 
 
@@ -281,28 +281,28 @@ _VIDEO = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='mimeType', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='duration', full_name='v1.model.Video.duration', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='duration', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='url', full_name='v1.model.Video.url', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='url', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='raw', full_name='v1.model.Video.raw', index=3,
       number=4, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='raw', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -320,8 +320,8 @@ _VIDEO = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=583,
-  serialized_end=695,
+  serialized_start=458,
+  serialized_end=540,
 )
 
 
@@ -339,14 +339,14 @@ _TRANSFORMTREE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='url', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='raw', full_name='v1.model.TransformTree.raw', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='raw', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -364,8 +364,8 @@ _TRANSFORMTREE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=697,
-  serialized_end=760,
+  serialized_start=542,
+  serialized_end=595,
 )
 
 _IMAGE.oneofs_by_name['data'].fields.append(

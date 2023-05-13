@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bprotos/model/v1/event.proto\x12\x08v1.model\"\xf7\x02\n\x05\x45vent\x12\x1c\n\ttimestamp\x18\x01 \x01(\x03R\ttimestamp\x12#\n\rend_timestamp\x18\x08 \x01(\x03R\x0c\x65ndTimestamp\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x1f\n\x0bstream_name\x18\x03 \x01(\tR\nstreamName\x12\x1f\n\x0bstream_type\x18\x04 \x01(\tR\nstreamType\x12\x31\n\x14notification_enabled\x18\x05 \x01(\x08R\x13notificationEnabled\x12.\n\x08severity\x18\t \x01(\x0e\x32\x12.v1.model.SeverityR\x08severity\x12-\n\x04tags\x18\x06 \x03(\x0b\x32\x19.v1.model.Event.TagsEntryR\x04tags\x1a\x37\n\tTagsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01J\x04\x08\x07\x10\x08\"\x80\x01\n\x17\x41gentEventConfiguration\x12\x42\n\x0e\x65vent_triggers\x18\x01 \x03(\x0b\x32\x1b.v1.model.AgentEventTriggerR\reventTriggers\x12!\n\x0clast_updated\x18\x02 \x01(\x03R\x0blastUpdated\"\xf4\x02\n\x11\x41gentEventTrigger\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x16\n\x06stream\x18\x02 \x01(\tR\x06stream\x12\x1a\n\x08interval\x18\x03 \x01(\x03R\x08interval\x12\x45\n\x08presence\x18\x04 \x01(\x0b\x32\'.v1.model.PresenceEventTriggerConditionH\x00R\x08presence\x12H\n\tthreshold\x18\x05 \x01(\x0b\x32(.v1.model.ThresholdEventTriggerConditionH\x00R\tthreshold\x12<\n\x05regex\x18\x06 \x01(\x0b\x32$.v1.model.RegexEventTriggerConditionH\x00R\x05regex\x12?\n\x06\x62itset\x18\x07 \x01(\x0b\x32%.v1.model.BitsetEventTriggerConditionH\x00R\x06\x62itsetB\x0b\n\tcondition\"\x1f\n\x1dPresenceEventTriggerCondition\"o\n\x1eThresholdEventTriggerCondition\x12\x14\n\x05value\x18\x01 \x01(\x01R\x05value\x12\x37\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ThresholdOperatorR\x08operator\"2\n\x1aRegexEventTriggerCondition\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\"\x95\x01\n\x1b\x42itsetEventTriggerCondition\x12@\n\x0e\x62it_conditions\x18\x01 \x03(\x0b\x32\x19.v1.model.BitsetConditionR\rbitConditions\x12\x34\n\x08operator\x18\x02 \x01(\x0e\x32\x18.v1.model.BitsetOperatorR\x08operator\"M\n\x0f\x42itsetCondition\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x12\n\x04true\x18\x02 \x01(\x08R\x04true\x12\x14\n\x05\x66\x61lse\x18\x03 \x01(\x08R\x05\x66\x61lse*:\n\x08Severity\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x0c\n\x08\x43RITICAL\x10\x03*F\n\x11ThresholdOperator\x12\x06\n\x02LT\x10\x00\x12\x07\n\x03LTE\x10\x01\x12\x06\n\x02GT\x10\x02\x12\x07\n\x03GTE\x10\x03\x12\x06\n\x02\x45Q\x10\x04\x12\x07\n\x03NEQ\x10\x05*\"\n\x0e\x42itsetOperator\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x41LL\x10\x01\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1bprotos/model/v1/event.proto\x12\x08v1.model\"\x8c\x02\n\x05\x45vent\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x15\n\rend_timestamp\x18\x08 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x13\n\x0bstream_name\x18\x03 \x01(\t\x12\x13\n\x0bstream_type\x18\x04 \x01(\t\x12\x1c\n\x14notification_enabled\x18\x05 \x01(\x08\x12$\n\x08severity\x18\t \x01(\x0e\x32\x12.v1.model.Severity\x12\'\n\x04tags\x18\x06 \x03(\x0b\x32\x19.v1.model.Event.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01J\x04\x08\x07\x10\x08\"d\n\x17\x41gentEventConfiguration\x12\x33\n\x0e\x65vent_triggers\x18\x01 \x03(\x0b\x32\x1b.v1.model.AgentEventTrigger\x12\x14\n\x0clast_updated\x18\x02 \x01(\x03\"\xba\x02\n\x11\x41gentEventTrigger\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06stream\x18\x02 \x01(\t\x12\x10\n\x08interval\x18\x03 \x01(\x03\x12;\n\x08presence\x18\x04 \x01(\x0b\x32\'.v1.model.PresenceEventTriggerConditionH\x00\x12=\n\tthreshold\x18\x05 \x01(\x0b\x32(.v1.model.ThresholdEventTriggerConditionH\x00\x12\x35\n\x05regex\x18\x06 \x01(\x0b\x32$.v1.model.RegexEventTriggerConditionH\x00\x12\x37\n\x06\x62itset\x18\x07 \x01(\x0b\x32%.v1.model.BitsetEventTriggerConditionH\x00\x42\x0b\n\tcondition\"\x1f\n\x1dPresenceEventTriggerCondition\"^\n\x1eThresholdEventTriggerCondition\x12\r\n\x05value\x18\x01 \x01(\x01\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ThresholdOperator\"+\n\x1aRegexEventTriggerCondition\x12\r\n\x05value\x18\x01 \x01(\t\"|\n\x1b\x42itsetEventTriggerCondition\x12\x31\n\x0e\x62it_conditions\x18\x01 \x03(\x0b\x32\x19.v1.model.BitsetCondition\x12*\n\x08operator\x18\x02 \x01(\x0e\x32\x18.v1.model.BitsetOperator\";\n\x0f\x42itsetCondition\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x0c\n\x04true\x18\x02 \x01(\x08\x12\r\n\x05\x66\x61lse\x18\x03 \x01(\x08*:\n\x08Severity\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x0c\n\x08\x43RITICAL\x10\x03*F\n\x11ThresholdOperator\x12\x06\n\x02LT\x10\x00\x12\x07\n\x03LTE\x10\x01\x12\x06\n\x02GT\x10\x02\x12\x07\n\x03GTE\x10\x03\x12\x06\n\x02\x45Q\x10\x04\x12\x07\n\x03NEQ\x10\x05*\"\n\x0e\x42itsetOperator\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x41LL\x10\x01\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
 )
 
 _SEVERITY = _descriptor.EnumDescriptor(
@@ -53,8 +53,8 @@ _SEVERITY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1354,
-  serialized_end=1412,
+  serialized_start=1092,
+  serialized_end=1150,
 )
 _sym_db.RegisterEnumDescriptor(_SEVERITY)
 
@@ -99,8 +99,8 @@ _THRESHOLDOPERATOR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1414,
-  serialized_end=1484,
+  serialized_start=1152,
+  serialized_end=1222,
 )
 _sym_db.RegisterEnumDescriptor(_THRESHOLDOPERATOR)
 
@@ -125,8 +125,8 @@ _BITSETOPERATOR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1486,
-  serialized_end=1520,
+  serialized_start=1224,
+  serialized_end=1258,
 )
 _sym_db.RegisterEnumDescriptor(_BITSETOPERATOR)
 
@@ -160,14 +160,14 @@ _EVENT_TAGSENTRY = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='key', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='value', full_name='v1.model.Event.TagsEntry.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='value', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -180,8 +180,8 @@ _EVENT_TAGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=356,
-  serialized_end=411,
+  serialized_start=261,
+  serialized_end=304,
 )
 
 _EVENT = _descriptor.Descriptor(
@@ -198,56 +198,56 @@ _EVENT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='timestamp', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='end_timestamp', full_name='v1.model.Event.end_timestamp', index=1,
       number=8, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='endTimestamp', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='message', full_name='v1.model.Event.message', index=2,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='message', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='stream_name', full_name='v1.model.Event.stream_name', index=3,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='streamName', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='stream_type', full_name='v1.model.Event.stream_type', index=4,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='streamType', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='notification_enabled', full_name='v1.model.Event.notification_enabled', index=5,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='notificationEnabled', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='severity', full_name='v1.model.Event.severity', index=6,
       number=9, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='severity', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='tags', full_name='v1.model.Event.tags', index=7,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='tags', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -261,7 +261,7 @@ _EVENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=42,
-  serialized_end=417,
+  serialized_end=310,
 )
 
 
@@ -279,14 +279,14 @@ _AGENTEVENTCONFIGURATION = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='eventTriggers', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='last_updated', full_name='v1.model.AgentEventConfiguration.last_updated', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='lastUpdated', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -299,8 +299,8 @@ _AGENTEVENTCONFIGURATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=420,
-  serialized_end=548,
+  serialized_start=312,
+  serialized_end=412,
 )
 
 
@@ -318,49 +318,49 @@ _AGENTEVENTTRIGGER = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='id', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='stream', full_name='v1.model.AgentEventTrigger.stream', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='stream', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='interval', full_name='v1.model.AgentEventTrigger.interval', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='interval', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='presence', full_name='v1.model.AgentEventTrigger.presence', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='presence', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='threshold', full_name='v1.model.AgentEventTrigger.threshold', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='threshold', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='regex', full_name='v1.model.AgentEventTrigger.regex', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='regex', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='bitset', full_name='v1.model.AgentEventTrigger.bitset', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='bitset', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -378,8 +378,8 @@ _AGENTEVENTTRIGGER = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=551,
-  serialized_end=923,
+  serialized_start=415,
+  serialized_end=729,
 )
 
 
@@ -403,8 +403,8 @@ _PRESENCEEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=925,
-  serialized_end=956,
+  serialized_start=731,
+  serialized_end=762,
 )
 
 
@@ -422,14 +422,14 @@ _THRESHOLDEVENTTRIGGERCONDITION = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='value', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='operator', full_name='v1.model.ThresholdEventTriggerCondition.operator', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='operator', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -442,8 +442,8 @@ _THRESHOLDEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=958,
-  serialized_end=1069,
+  serialized_start=764,
+  serialized_end=858,
 )
 
 
@@ -461,7 +461,7 @@ _REGEXEVENTTRIGGERCONDITION = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='value', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -474,8 +474,8 @@ _REGEXEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1071,
-  serialized_end=1121,
+  serialized_start=860,
+  serialized_end=903,
 )
 
 
@@ -493,14 +493,14 @@ _BITSETEVENTTRIGGERCONDITION = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='bitConditions', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='operator', full_name='v1.model.BitsetEventTriggerCondition.operator', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='operator', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -513,8 +513,8 @@ _BITSETEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1124,
-  serialized_end=1273,
+  serialized_start=905,
+  serialized_end=1029,
 )
 
 
@@ -532,21 +532,21 @@ _BITSETCONDITION = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='key', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='true', full_name='v1.model.BitsetCondition.true', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='true', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='false', full_name='v1.model.BitsetCondition.false', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='false', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -559,8 +559,8 @@ _BITSETCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1275,
-  serialized_end=1352,
+  serialized_start=1031,
+  serialized_end=1090,
 )
 
 _EVENT_TAGSENTRY.containing_type = _EVENT

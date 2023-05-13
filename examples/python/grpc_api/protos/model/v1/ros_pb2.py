@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x19protos/model/v1/ros.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\"U\n\x08ROSTopic\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04path\x18\x02 \x01(\tR\x04path\x12!\n\x0c\x65ncode_video\x18\x03 \x01(\x08R\x0b\x65ncodeVideo\"\xeb\x01\n\x0fROSLocalization\x12\x1b\n\tmap_topic\x18\x01 \x01(\tR\x08mapTopic\x12\x1d\n\nodom_topic\x18\x02 \x01(\tR\todomTopic\x12,\n\x12point_cloud_topics\x18\x03 \x03(\tR\x10pointCloudTopics\x12\x1d\n\npath_topic\x18\x04 \x01(\tR\tpathTopic\x12\x1d\n\ngoal_topic\x18\x05 \x01(\tR\tgoalTopic\x12\x30\n\x14\x62\x61se_reference_frame\x18\x06 \x01(\tR\x12\x62\x61seReferenceFrame\"D\n\x10ROSTransformTree\x12\x30\n\x14\x62\x61se_reference_frame\x18\x01 \x01(\tR\x12\x62\x61seReferenceFrame\"\xf1\x03\n\x13ROSMessageToPublish\x12\x16\n\x06stream\x18\x01 \x01(\tR\x06stream\x12\x19\n\x08\x66rame_id\x18\x07 \x01(\tR\x07\x66rameId\x12\x1c\n\ttimestamp\x18\x08 \x01(\x04R\ttimestamp\x12\'\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistH\x00R\x05twist\x12\x14\n\x04\x62ool\x18\x03 \x01(\x08H\x00R\x04\x62ool\x12+\n\x10\x63ompressed_image\x18\x04 \x01(\x0cH\x00R\x0f\x63ompressedImage\x12\x14\n\x04text\x18\x05 \x01(\tH\x00R\x04text\x12)\n\x04pose\x18\x06 \x01(\x0b\x32\x13.v1.model.TransformH\x00R\x04pose\x12*\n\x06goalID\x18\t \x01(\x0b\x32\x10.v1.model.GoalIDH\x00R\x06goalID\x12-\n\x07numeric\x18\n \x01(\x0b\x32\x11.v1.model.NumericH\x00R\x07numeric\x12P\n\x14pose_with_covariance\x18\x0b \x01(\x0b\x32\x1c.v1.model.PoseWithCovarianceH\x00R\x12poseWithCovariance\x12\'\n\x05point\x18\x0c \x01(\x0b\x32\x0f.v1.model.PointH\x00R\x05pointB\x06\n\x04\x64\x61ta*\xab\x03\n\x0cROSTopicType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x11\n\rSTD_MSGS_BOOL\x10\x01\x12 \n\x1cSENSOR_MSGS_COMPRESSED_IMAGE\x10\x02\x12\x13\n\x0fSTD_MSGS_STRING\x10\x03\x12\x16\n\x12GEOMETRY_MSGS_POSE\x10\x04\x12\x19\n\x15\x41\x43TIONLIB_MSGS_GOALID\x10\x05\x12\x17\n\x13GEOMETRY_MSGS_TWIST\x10\x06\x12\x14\n\x10H264_VIDEO_FRAME\x10\x07\x12\x0f\n\x0b\x41UDIO_CHUNK\x10\x08\x12\x14\n\x10STD_MSGS_FLOAT64\x10\t\x12\x1b\n\x17SENSOR_MSGS_JOINT_STATE\x10\n\x12&\n\"GEOMETRY_MSGS_POSE_WITH_COVARIANCE\x10\x0b\x12\x1c\n\x18SENSOR_MSGS_POINT_CLOUD2\x10\x0c\x12\x1a\n\x16SENSOR_MSGS_LASER_SCAN\x10\r\x12\x17\n\x13GEOMETRY_MSGS_POINT\x10\x0e\x12#\n\x1fVISUALIZATION_MSGS_MARKER_ARRAY\x10\x0f\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x19protos/model/v1/ros.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\"<\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\x14\n\x0c\x65ncode_video\x18\x03 \x01(\x08\"\x9a\x01\n\x0fROSLocalization\x12\x11\n\tmap_topic\x18\x01 \x01(\t\x12\x12\n\nodom_topic\x18\x02 \x01(\t\x12\x1a\n\x12point_cloud_topics\x18\x03 \x03(\t\x12\x12\n\npath_topic\x18\x04 \x01(\t\x12\x12\n\ngoal_topic\x18\x05 \x01(\t\x12\x1c\n\x14\x62\x61se_reference_frame\x18\x06 \x01(\t\"0\n\x10ROSTransformTree\x12\x1c\n\x14\x62\x61se_reference_frame\x18\x01 \x01(\t\"\xff\x02\n\x13ROSMessageToPublish\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x10\n\x08\x66rame_id\x18\x07 \x01(\t\x12\x11\n\ttimestamp\x18\x08 \x01(\x04\x12 \n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistH\x00\x12\x0e\n\x04\x62ool\x18\x03 \x01(\x08H\x00\x12\x1a\n\x10\x63ompressed_image\x18\x04 \x01(\x0cH\x00\x12\x0e\n\x04text\x18\x05 \x01(\tH\x00\x12#\n\x04pose\x18\x06 \x01(\x0b\x32\x13.v1.model.TransformH\x00\x12\"\n\x06goalID\x18\t \x01(\x0b\x32\x10.v1.model.GoalIDH\x00\x12$\n\x07numeric\x18\n \x01(\x0b\x32\x11.v1.model.NumericH\x00\x12<\n\x14pose_with_covariance\x18\x0b \x01(\x0b\x32\x1c.v1.model.PoseWithCovarianceH\x00\x12 \n\x05point\x18\x0c \x01(\x0b\x32\x0f.v1.model.PointH\x00\x42\x06\n\x04\x64\x61ta*\xab\x03\n\x0cROSTopicType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x11\n\rSTD_MSGS_BOOL\x10\x01\x12 \n\x1cSENSOR_MSGS_COMPRESSED_IMAGE\x10\x02\x12\x13\n\x0fSTD_MSGS_STRING\x10\x03\x12\x16\n\x12GEOMETRY_MSGS_POSE\x10\x04\x12\x19\n\x15\x41\x43TIONLIB_MSGS_GOALID\x10\x05\x12\x17\n\x13GEOMETRY_MSGS_TWIST\x10\x06\x12\x14\n\x10H264_VIDEO_FRAME\x10\x07\x12\x0f\n\x0b\x41UDIO_CHUNK\x10\x08\x12\x14\n\x10STD_MSGS_FLOAT64\x10\t\x12\x1b\n\x17SENSOR_MSGS_JOINT_STATE\x10\n\x12&\n\"GEOMETRY_MSGS_POSE_WITH_COVARIANCE\x10\x0b\x12\x1c\n\x18SENSOR_MSGS_POINT_CLOUD2\x10\x0c\x12\x1a\n\x16SENSOR_MSGS_LASER_SCAN\x10\r\x12\x17\n\x13GEOMETRY_MSGS_POINT\x10\x0e\x12#\n\x1fVISUALIZATION_MSGS_MARKER_ARRAY\x10\x0f\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_navigation__pb2.DESCRIPTOR,])
 
@@ -116,8 +116,8 @@ _ROSTOPICTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=997,
-  serialized_end=1424,
+  serialized_start=757,
+  serialized_end=1184,
 )
 _sym_db.RegisterEnumDescriptor(_ROSTOPICTYPE)
 
@@ -155,21 +155,21 @@ _ROSTOPIC = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='name', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='path', full_name='v1.model.ROSTopic.path', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='path', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='encode_video', full_name='v1.model.ROSTopic.encode_video', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='encodeVideo', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -183,7 +183,7 @@ _ROSTOPIC = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=101,
-  serialized_end=186,
+  serialized_end=161,
 )
 
 
@@ -201,42 +201,42 @@ _ROSLOCALIZATION = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='mapTopic', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='odom_topic', full_name='v1.model.ROSLocalization.odom_topic', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='odomTopic', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='point_cloud_topics', full_name='v1.model.ROSLocalization.point_cloud_topics', index=2,
       number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='pointCloudTopics', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='path_topic', full_name='v1.model.ROSLocalization.path_topic', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='pathTopic', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='goal_topic', full_name='v1.model.ROSLocalization.goal_topic', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='goalTopic', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='base_reference_frame', full_name='v1.model.ROSLocalization.base_reference_frame', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='baseReferenceFrame', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -249,8 +249,8 @@ _ROSLOCALIZATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=189,
-  serialized_end=424,
+  serialized_start=164,
+  serialized_end=318,
 )
 
 
@@ -268,7 +268,7 @@ _ROSTRANSFORMTREE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='baseReferenceFrame', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -281,8 +281,8 @@ _ROSTRANSFORMTREE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=426,
-  serialized_end=494,
+  serialized_start=320,
+  serialized_end=368,
 )
 
 
@@ -300,84 +300,84 @@ _ROSMESSAGETOPUBLISH = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='stream', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='frame_id', full_name='v1.model.ROSMessageToPublish.frame_id', index=1,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='frameId', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='timestamp', full_name='v1.model.ROSMessageToPublish.timestamp', index=2,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='timestamp', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='twist', full_name='v1.model.ROSMessageToPublish.twist', index=3,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='twist', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='bool', full_name='v1.model.ROSMessageToPublish.bool', index=4,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='bool', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='compressed_image', full_name='v1.model.ROSMessageToPublish.compressed_image', index=5,
       number=4, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='compressedImage', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='text', full_name='v1.model.ROSMessageToPublish.text', index=6,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='text', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='pose', full_name='v1.model.ROSMessageToPublish.pose', index=7,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='pose', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='goalID', full_name='v1.model.ROSMessageToPublish.goalID', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='goalID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='numeric', full_name='v1.model.ROSMessageToPublish.numeric', index=9,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='numeric', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='pose_with_covariance', full_name='v1.model.ROSMessageToPublish.pose_with_covariance', index=10,
       number=11, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='poseWithCovariance', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='point', full_name='v1.model.ROSMessageToPublish.point', index=11,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='point', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -395,8 +395,8 @@ _ROSMESSAGETOPUBLISH = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=497,
-  serialized_end=994,
+  serialized_start=371,
+  serialized_end=754,
 )
 
 _ROSMESSAGETOPUBLISH.fields_by_name['twist'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TWIST

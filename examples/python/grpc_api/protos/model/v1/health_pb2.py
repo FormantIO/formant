@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1cprotos/model/v1/health.proto\x12\x08v1.model\"\\\n\x06Health\x12.\n\x06status\x18\x01 \x01(\x0e\x32\x16.v1.model.HealthStatusR\x06status\x12\x19\n\x07skew_ms\x18\x02 \x01(\x03H\x00R\x06skewMsB\x07\n\x05\x63lock\"u\n\x07\x42\x61ttery\x12\x1e\n\npercentage\x18\x01 \x01(\x01R\npercentage\x12\x18\n\x07voltage\x18\x02 \x01(\x01R\x07voltage\x12\x18\n\x07\x63urrent\x18\x03 \x01(\x01R\x07\x63urrent\x12\x16\n\x06\x63harge\x18\x04 \x01(\x01R\x06\x63harge*`\n\x0cHealthStatus\x12\x12\n\x0eHEALTH_UNKNOWN\x10\x00\x12\x16\n\x12HEALTH_OPERATIONAL\x10\x01\x12\x12\n\x0eHEALTH_OFFLINE\x10\x02\x12\x10\n\x0cHEALTH_ERROR\x10\x03\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1cprotos/model/v1/health.proto\x12\x08v1.model\"L\n\x06Health\x12&\n\x06status\x18\x01 \x01(\x0e\x32\x16.v1.model.HealthStatus\x12\x11\n\x07skew_ms\x18\x02 \x01(\x03H\x00\x42\x07\n\x05\x63lock\"O\n\x07\x42\x61ttery\x12\x12\n\npercentage\x18\x01 \x01(\x01\x12\x0f\n\x07voltage\x18\x02 \x01(\x01\x12\x0f\n\x07\x63urrent\x18\x03 \x01(\x01\x12\x0e\n\x06\x63harge\x18\x04 \x01(\x01*`\n\x0cHealthStatus\x12\x12\n\x0eHEALTH_UNKNOWN\x10\x00\x12\x16\n\x12HEALTH_OPERATIONAL\x10\x01\x12\x12\n\x0eHEALTH_OFFLINE\x10\x02\x12\x10\n\x0cHEALTH_ERROR\x10\x03\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
 )
 
 _HEALTHSTATUS = _descriptor.EnumDescriptor(
@@ -53,8 +53,8 @@ _HEALTHSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=255,
-  serialized_end=351,
+  serialized_start=201,
+  serialized_end=297,
 )
 _sym_db.RegisterEnumDescriptor(_HEALTHSTATUS)
 
@@ -80,14 +80,14 @@ _HEALTH = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='status', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='skew_ms', full_name='v1.model.Health.skew_ms', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='skewMs', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -106,7 +106,7 @@ _HEALTH = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=42,
-  serialized_end=134,
+  serialized_end=118,
 )
 
 
@@ -124,28 +124,28 @@ _BATTERY = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='percentage', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='voltage', full_name='v1.model.Battery.voltage', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='voltage', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='current', full_name='v1.model.Battery.current', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='current', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='charge', full_name='v1.model.Battery.charge', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='charge', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -158,8 +158,8 @@ _BATTERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=136,
-  serialized_end=253,
+  serialized_start=120,
+  serialized_end=199,
 )
 
 _HEALTH.fields_by_name['status'].enum_type = _HEALTHSTATUS

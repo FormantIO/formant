@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1aprotos/model/v1/text.proto\x12\x08v1.model\"\x1c\n\x04Text\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\"\x1c\n\x04Json\x12\x14\n\x05value\x18\x01 \x01(\tR\x05valueB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1aprotos/model/v1/text.proto\x12\x08v1.model\"\x15\n\x04Text\x12\r\n\x05value\x18\x01 \x01(\t\"\x15\n\x04Json\x12\r\n\x05value\x18\x01 \x01(\tB+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
 )
 
 
@@ -39,7 +39,7 @@ _TEXT = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='value', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -53,7 +53,7 @@ _TEXT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=40,
-  serialized_end=68,
+  serialized_end=61,
 )
 
 
@@ -71,7 +71,7 @@ _JSON = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='value', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -84,8 +84,8 @@ _JSON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=70,
-  serialized_end=98,
+  serialized_start=63,
+  serialized_end=84,
 )
 
 DESCRIPTOR.message_types_by_name['Text'] = _TEXT

@@ -9,7 +9,8 @@ from protos.model.v1 import math_pb2 as protos_dot_model_dot_v1_dot_math__pb2
 
 
 class AgentStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Agent is the Formant Agent gRPC API. 
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -145,106 +146,149 @@ class AgentStub(object):
 
 
 class AgentServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Agent is the Formant Agent gRPC API. 
+    """
 
     def StreamData(self, request_iterator, context):
-        """Missing associated documentation comment in .proto file."""
+        """StreamData accepts a stream of data points. See PostData for information on
+        expected error conditions and codes. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def PostData(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """PostData accepts a single data point per invocation. An OK status code will
+        be returned if the data point was accepted and queued for uploading to the
+        Formant cloud. PostData will return an InvalidArgument status code if the
+        data point is malformed or has more than 10 tags attached. A
+        ResourceExhausted code will be returned if the data point was throttled. An
+        Unavailable code will be returned if the Agent is in the process of
+        shutting down. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def PostDataMulti(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """PostDataMulti accepts an array of datapoints per invocation. An OK status
+        code indicates that all datapoints were accepted and queued for uploading
+        to the Formant cloud. If certain datapoints failed or were throttled the
+        response will include the index of those datapoints as well as the reason
+        for failure. All documentation that applies to PostData also applies to
+        this RPC. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetTeleopControlDataStream(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetTeleopControlDataStream returns a stream of datapoints sent to this device as
+        they arrive from Formant teleop. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetTeleopHeartbeatStream(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetTeleopHeartbeatStream returns a stream of GetTeleopHeartbeatStreamResponse
+        as heartbeat messages arrive from Formant teleop. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetTelemetryListenerStream(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetTelemetryListenerStream returns a stream of telemetry datapoints that have been posted
+        to this agent as they arrive, pre-throttling. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetCustomDataChannelMessageStream(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetCustomDataChannelMessageStream returns a stream of messages
+        received on custom data channels 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateEvent(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """CreateEvent creates a custom event. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateInterventionRequest(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """CreateInterventionRequest creates an intervention request. The returned
+        InterventionRequest's 'id' field will be populated if the call succeeds. An
+        Unavailable status code will be returned if an upstream network error
+        occurs while trying to create the request. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetInterventionRequest(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetInterventionRequest returns an existing InterventionRequest. The
+        InterventionRequest's 'responses' field will be empty if an operator has
+        yet to respond. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetInterventionResponse(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetInterventionResponse returns the first InterventionResponse for the
+        provided intervention request. This RPC blocks until an
+        InterventionResponse is available to be returned. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetStreamsConfiguration(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetStreamsConfiguration returns the configured streams. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetApplicationConfiguration(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetApplicationConfiguration returns application (user-defined)
+        configuration data. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetConfigBlobData(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetConfigBlobData returns user-defined blob data 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetAgentConfiguration(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetAgentConfiguration returns the Agent configuration. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def Health(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Health can be used to check if the Agent is running and its gRPC API is
+        available. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetCommandRequest(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetCommandRequest returns the latest pending command request. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -256,43 +300,56 @@ class AgentServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def SendCommandResponse(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """SendCommandResponse sends a response to a command request. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def PostTransformFrame(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """PostTransformFrame posts a transform between a parent and child. This
+        updates a transform tree within the agent. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def SetBaseFrameID(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """SetBaseFrameID sets the base frame Id to be used for transform
+        visualizations. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ClearTransformTree(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """ClearTransformTree clears the entire TransformTree graph stored in the
+        agent. This maintains the base frame id as the root of the graph. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetTeleopInfo(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """GetTeleopInfo returns info on how many active teleop connections there are 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def PostLanRtcOffer(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """PostLanRtcOffer takes a JSON-encoded WebRTC offer and returns a JSON-encoded answer that can be used
+        to establish a LAN real-time session. The answering side (agent) will not use ICE candidates,
+        so this can only be used to establish a LAN connection. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def SendOnCustomDataChannel(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """SendOnCustomDataChannel sends the provided payload on the given custom data channel name,
+        if the channel exists. 
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -433,7 +490,8 @@ def add_AgentServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class Agent(object):
-    """Missing associated documentation comment in .proto file."""
+    """Agent is the Formant Agent gRPC API. 
+    """
 
     @staticmethod
     def StreamData(request_iterator,
