@@ -240,6 +240,7 @@ message GetTeleopHeartbeatStreamRequest {}
 message GetTeleopHeartbeatStreamResponse {
   string peer_id = 1;
   bool is_disconnect = 2;
+  string session_type = 3;
 }
 
 message GetTelemetryListenerStreamRequest {
@@ -277,7 +278,7 @@ message CreateEventError {
   bool retryable = 1;
 }
 
-message GetTeleopInfoRequest {  
+message GetTeleopInfoRequest {
 }
 
 message GetTeleopInfoResponse {

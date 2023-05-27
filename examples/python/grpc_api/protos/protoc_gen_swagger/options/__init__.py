@@ -1,5 +1,5 @@
-import protos.protoc_gen_swagger.options.annotations_pb2 as annotations_pb2
-import protos.protoc_gen_swagger.options.openapiv2_pb2 as openapiv2_pb2
+from . import annotations_pb2
+from . import openapiv2_pb2
 
-import protos.protoc_gen_swagger.options.annotations_pb2_grpc as annotations_pb2_grpc
-import protos.protoc_gen_swagger.options.openapiv2_pb2_grpc as openapiv2_pb2_grpc
+from . import annotations_pb2_grpc
+from . import openapiv2_pb2_grpc

@@ -10,11 +10,12 @@ def trigger_disconnected():
     print("Disconnected")
 
 
-def f(_):
+def f(message):
     global current_timer
     if current_timer is not None:
         current_timer.cancel()
     print("Received heartbeat callback at", time.time())
+    print("Received heartbeat:", message)
     current_timer = threading.Timer(
         NO_HEARTBEAT_DISCONNECTION_THRESHOLD, trigger_disconnected
     )
