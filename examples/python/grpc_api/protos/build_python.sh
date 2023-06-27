@@ -1,1 +1,4 @@
-/home/runner/.cache/bazel/_bazel_runner/99f2fd8f084fd873dcd6a27389bda427/execroot/formant/protos/build_python.sh
+#! /bin/bash
+set -e
+
+python3 -m grpc_tools.protoc -I ./  --python_out=. --grpc_python_out=. protos/*/v1/*.proto
