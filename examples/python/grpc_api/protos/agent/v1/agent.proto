@@ -137,6 +137,26 @@ service Agent {
   rpc SendOnCustomDataChannel(SendOnCustomDataChannelRequest)
       returns (SendOnCustomDataChannelResponse) {
   }
+
+  /* PostGenericAPIRequest posts a generic API request to the Formant cloud, with the option of injecting Formant authentication */
+  rpc PostGenericAPIRequest(model.GenericAPIDatapoint)
+      returns (PostGenericAPIRequestResponse) {
+  }
+
+  /* PostGenericAPIUnbufferedRequest posts a generic API request to the Formant cloud, with the option of injecting Formant authentication.
+  This method also returns a response from the Formant cloud to the user.
+  */
+  rpc PostGenericAPIUnbufferedRequest(model.GenericAPIDatapoint)
+      returns (PostGenericAPIUnbufferedRequestResponse) {
+  }
+}
+
+message PostGenericAPIUnbufferedRequestResponse {
+  uint32 statusCode = 1;
+  string responseBody = 2;
+}
+
+message PostGenericAPIRequestResponse {
 }
 
 message StreamDataResponse {

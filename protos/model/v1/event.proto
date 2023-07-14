@@ -25,6 +25,7 @@ enum Severity {
 
 message AgentEventConfiguration {
   repeated AgentEventTrigger event_triggers = 1;
+  repeated AgentEventTrigger stateful_event_triggers = 3;
   int64 last_updated = 2;
 }
 
@@ -32,11 +33,25 @@ message AgentEventTrigger {
   string id = 1;
   string stream = 2;
   int64 interval = 3;
+  Condition condition = 4;
+  Condition exitCondition = 5;
+  bool isStatefulTrigger = 6;
+  StatefulTriggerConfiguration statefulTriggerConfiguration = 7;
+  string message = 8;
+  string messageFormat = 11;
+  string severity = 9;
+  bool notification_enabled = 10;
+}
+
+message Condition {
+  string stream = 1;
   oneof condition {
-    PresenceEventTriggerCondition presence = 4;
-    ThresholdEventTriggerCondition threshold = 5;
-    RegexEventTriggerCondition regex = 6;
-    BitsetEventTriggerCondition bitset = 7;
+    PresenceEventTriggerCondition presence = 2;
+    ThresholdEventTriggerCondition threshold = 3;
+    RegexEventTriggerCondition regex = 4;
+    BitsetEventTriggerCondition bitset = 5;
+    BatteryEventTriggerCondition battery = 6;
+    NumericSetEventTriggerCondition numeric = 7;
   }
 }
 
@@ -48,13 +63,41 @@ message ThresholdEventTriggerCondition {
   ThresholdOperator operator = 2;
 }
 
+message NumericCondition {
+  string label = 1;
+  ThresholdEventTriggerCondition condition = 2;
+}
+
+message NumericSetEventTriggerCondition {
+  repeated NumericCondition conditions = 1;
+  ConditionOperator operator = 2;
+}
+
+enum BatteryField {
+  Charge = 0;
+  Current = 1;
+  Percentage = 2;
+  Voltage = 3;
+}
+
+message BatteryCondition {
+  BatteryField field = 1;
+  ThresholdEventTriggerCondition condition = 2;
+  ConditionOperator operator = 3;
+}
+
+message BatteryEventTriggerCondition {
+  repeated BatteryCondition conditions = 1;
+  ConditionOperator operator = 2;
+}
+
 message RegexEventTriggerCondition {
   string value = 1;
 }
 
 message BitsetEventTriggerCondition {
   repeated BitsetCondition bit_conditions = 1;
-  BitsetOperator operator = 2;
+  ConditionOperator operator = 2;
 }
 
 message BitsetCondition {
@@ -72,7 +115,12 @@ enum ThresholdOperator {
   NEQ = 5;
 }
 
-enum BitsetOperator {
+enum ConditionOperator {
   ANY = 0;
   ALL = 1;
+}
+
+message StatefulTriggerConfiguration {
+  bool emitOnEnteringState = 1;
+  bool emitOnLeavingState = 2;
 }

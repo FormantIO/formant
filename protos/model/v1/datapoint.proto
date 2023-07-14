@@ -32,6 +32,7 @@ message Datapoint {
     Battery battery = 15;
     Video video = 16;
     TransformTree transform_tree = 18;
+    Odometry odometry = 19;
   }
   reserved 6;
 }
@@ -48,4 +49,17 @@ message Datapoint {
     PoseWithCovariance pose_with_covariance = 7;
     Point point = 8;
   }
+}
+
+/* GenericAPIDatapoint is a generic api call datapoint.
+  the Bearer token is automatically injected into the headers.
+ */
+message GenericAPIDatapoint {
+  string Method = 1;
+  string Endpoint = 2;
+  map<string, string> Headers = 3;
+  string Body = 4;
+  bool IsRetryable = 5;
+  bool RequireFormantAuth = 6;
+  repeated int64 RetryableStatusCodes = 7;
 }

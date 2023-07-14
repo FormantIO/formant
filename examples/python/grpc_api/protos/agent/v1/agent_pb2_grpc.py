@@ -143,6 +143,16 @@ class AgentStub(object):
                 request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelRequest.SerializeToString,
                 response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelResponse.FromString,
                 )
+        self.PostGenericAPIRequest = channel.unary_unary(
+                '/v1.agent.Agent/PostGenericAPIRequest',
+                request_serializer=protos_dot_model_dot_v1_dot_datapoint__pb2.GenericAPIDatapoint.SerializeToString,
+                response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostGenericAPIRequestResponse.FromString,
+                )
+        self.PostGenericAPIUnbufferedRequest = channel.unary_unary(
+                '/v1.agent.Agent/PostGenericAPIUnbufferedRequest',
+                request_serializer=protos_dot_model_dot_v1_dot_datapoint__pb2.GenericAPIDatapoint.SerializeToString,
+                response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostGenericAPIUnbufferedRequestResponse.FromString,
+                )
 
 
 class AgentServicer(object):
@@ -354,6 +364,21 @@ class AgentServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def PostGenericAPIRequest(self, request, context):
+        """PostGenericAPIRequest posts a generic API request to the Formant cloud, with the option of injecting Formant authentication 
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def PostGenericAPIUnbufferedRequest(self, request, context):
+        """PostGenericAPIUnbufferedRequest posts a generic API request to the Formant cloud, with the option of injecting Formant authentication.
+        This method also returns a response from the Formant cloud to the user.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_AgentServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -481,6 +506,16 @@ def add_AgentServicer_to_server(servicer, server):
                     servicer.SendOnCustomDataChannel,
                     request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelRequest.FromString,
                     response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelResponse.SerializeToString,
+            ),
+            'PostGenericAPIRequest': grpc.unary_unary_rpc_method_handler(
+                    servicer.PostGenericAPIRequest,
+                    request_deserializer=protos_dot_model_dot_v1_dot_datapoint__pb2.GenericAPIDatapoint.FromString,
+                    response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostGenericAPIRequestResponse.SerializeToString,
+            ),
+            'PostGenericAPIUnbufferedRequest': grpc.unary_unary_rpc_method_handler(
+                    servicer.PostGenericAPIUnbufferedRequest,
+                    request_deserializer=protos_dot_model_dot_v1_dot_datapoint__pb2.GenericAPIDatapoint.FromString,
+                    response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.PostGenericAPIUnbufferedRequestResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -915,5 +950,39 @@ class Agent(object):
         return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/SendOnCustomDataChannel',
             protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelRequest.SerializeToString,
             protos_dot_agent_dot_v1_dot_agent__pb2.SendOnCustomDataChannelResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def PostGenericAPIRequest(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/PostGenericAPIRequest',
+            protos_dot_model_dot_v1_dot_datapoint__pb2.GenericAPIDatapoint.SerializeToString,
+            protos_dot_agent_dot_v1_dot_agent__pb2.PostGenericAPIRequestResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def PostGenericAPIUnbufferedRequest(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/PostGenericAPIUnbufferedRequest',
+            protos_dot_model_dot_v1_dot_datapoint__pb2.GenericAPIDatapoint.SerializeToString,
+            protos_dot_agent_dot_v1_dot_agent__pb2.PostGenericAPIUnbufferedRequestResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
