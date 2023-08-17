@@ -119,6 +119,10 @@ message ResourcesConfiguration {
   DiskConfiguration disk = 1;
   google.protobuf.DoubleValue stream_throttle_hz = 2;
   bool low_bandwidth_agent = 3; 
+  uint64 datapoint_batch_size = 4;
+  uint64 datapoint_batchLifetime_ms = 5;
+  uint64 asset_batch_size = 6;
+  uint64 asset_batch_lifetime_ms = 7;
 }
 
 message DiskConfiguration {

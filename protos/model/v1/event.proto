@@ -52,6 +52,7 @@ message Condition {
     BitsetEventTriggerCondition bitset = 5;
     BatteryEventTriggerCondition battery = 6;
     NumericSetEventTriggerCondition numeric = 7;
+    JsonEventTriggerCondition json = 8;
   }
 }
 
@@ -104,6 +105,10 @@ message BitsetCondition {
   string key = 1;
   bool true = 2;
   bool false = 3;
+}
+
+message JsonEventTriggerCondition {
+  string jqQuery = 1; 
 }
 
 enum ThresholdOperator {
