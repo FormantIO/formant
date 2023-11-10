@@ -53,10 +53,14 @@ message Condition {
     BatteryEventTriggerCondition battery = 6;
     NumericSetEventTriggerCondition numeric = 7;
     JsonEventTriggerCondition json = 8;
+    AutoresolveEventTriggerCondition autoresolve = 9;
   }
 }
 
 message PresenceEventTriggerCondition {
+}
+
+message AutoresolveEventTriggerCondition {
 }
 
 message ThresholdEventTriggerCondition {
