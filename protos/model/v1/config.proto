@@ -81,7 +81,7 @@ message TeleopRosStreamConfiguration {
   string quality = 6;
   string base_reference_frame = 7;
   string local_frame = 8;
-
+  bool overlay_clock = 9;
 }
 
 message TeleopHardwareStreamConfiguration {
@@ -95,6 +95,7 @@ message TeleopHardwareStreamConfiguration {
   bool is_onvif = 8;
   string ip_cam_username = 9;
   string ip_cam_password = 10;
+  bool overlay_clock = 11;
 }
 
 message TeleopCustomStreamConfiguration {
@@ -103,7 +104,7 @@ message TeleopCustomStreamConfiguration {
   TeleopMode mode = 3;
   bool encode_video = 4;
   string quality = 5;
-
+  bool overlay_clock = 6;
 }
 
 message TelemetryConfiguration {
@@ -192,6 +193,7 @@ message Hardware {
   bool is_onvif = 6;
   string ip_cam_username = 7;
   string ip_cam_password = 8;
+  bool overlay_clock = 9;
 }
 
 message DirectoryWatch {
