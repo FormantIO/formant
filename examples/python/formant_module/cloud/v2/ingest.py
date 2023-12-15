@@ -25,7 +25,7 @@ if __name__ == "__main__":
     ingestion_request.add_numeric_set("test_numeric_set", numeric_set_value)
 
     # Example for bitset
-    bitset_value = {"keys": ["bit_set_label_1", "bit_set_label_2"],  "values": [True, False]}
+    bitset_value = {"test_bitset": [True, True]}
     ingestion_request.add_bitset("test_bitset", bitset_value)
 
     # Example for battery
