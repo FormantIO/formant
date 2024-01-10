@@ -30,13 +30,13 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y formant-agent --
 The last step is to startup the agent when your container starts. If you are using the entrypoint directive with a shell script you can add:
 
 ```bash
-/usr/lib/formant/formant-agent &
+/usr/lib/formant/agent/formant-agent &
 ```
 
 You can send the agent logs to `/dev/null` as well to not intefere with your application's output:
 
 ```bash
-/usr/lib/formant/formant-agent > /dev/null 2>&1 &
+/usr/lib/formant/agent/formant-agent > /dev/null 2>&1 &
 ```
 
 To it to run the agent as a forked process.
