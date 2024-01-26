@@ -218,6 +218,7 @@ message GetAgentConfigurationRequest {
 message GetAgentConfigurationResponse {
   model.AgentConfiguration configuration = 1;
 }
+
 message HealthRequest {
 }
 

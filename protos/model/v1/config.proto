@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package v1.model;
 
+import "protos/model/v1/commands.proto";
 import "protos/model/v1/ros.proto";
 import "google/protobuf/wrappers.proto";
 
@@ -11,6 +12,7 @@ message AgentConfigurationStore {
   string agent_version = 1;
   AgentConfiguration configuration = 2;
   AgentFeatureSet feature_set = 3;
+  CommandsMetadata commands = 4;
 }
 
 message AgentFeatureSet {

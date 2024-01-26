@@ -30,3 +30,19 @@ message FileInfo {
   string name = 2;
   string url = 3;
 }
+
+message CommandsMetadata {
+  repeated CommandMetadata commands = 1;
+}
+
+message CommandMetadata {
+  string name = 1;
+  string command = 2;
+  string description = 3;
+  bool parameter_enabled = 4;
+  string parameter_value = 5;
+  map<string, string> parameter_meta = 6;
+  bool enabled = 7;
+  string id = 8;
+  map<string, string> tags = 9;
+}
