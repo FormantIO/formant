@@ -23,3 +23,11 @@ message Battery {
   double current = 3;     // Amps
   double charge = 4;      // Amp-hours
 }
+
+message BufferMetadata {
+  string session_id = 1;
+  uint64 latest_ttl_stream_channel_buffered_bytes = 2;
+  uint64 reliable_stream_channel_buffered_bytes = 3;
+  uint64 latest_reliable_stream_channel_buffered_bytes = 4;
+  uint64 latest_try_once_stream_channel_buffered_bytes = 5;
+}
