@@ -93,6 +93,11 @@ class AgentStub(object):
                 request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationRequest.SerializeToString,
                 response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationResponse.FromString,
                 )
+        self.GetBufferMetadata = channel.unary_unary(
+                '/v1.agent.Agent/GetBufferMetadata',
+                request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetBufferMetadataRequest.SerializeToString,
+                response_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetBufferMetadataResponse.FromString,
+                )
         self.Health = channel.unary_unary(
                 '/v1.agent.Agent/Health',
                 request_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.HealthRequest.SerializeToString,
@@ -288,6 +293,13 @@ class AgentServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetBufferMetadata(self, request, context):
+        """GetBufferMetadata returns the metadata for the webRTC buffer. 
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def Health(self, request, context):
         """Health can be used to check if the Agent is running and its gRPC API is
         available. 
@@ -456,6 +468,11 @@ def add_AgentServicer_to_server(servicer, server):
                     servicer.GetAgentConfiguration,
                     request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationRequest.FromString,
                     response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationResponse.SerializeToString,
+            ),
+            'GetBufferMetadata': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetBufferMetadata,
+                    request_deserializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetBufferMetadataRequest.FromString,
+                    response_serializer=protos_dot_agent_dot_v1_dot_agent__pb2.GetBufferMetadataResponse.SerializeToString,
             ),
             'Health': grpc.unary_unary_rpc_method_handler(
                     servicer.Health,
@@ -780,6 +797,23 @@ class Agent(object):
         return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/GetAgentConfiguration',
             protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationRequest.SerializeToString,
             protos_dot_agent_dot_v1_dot_agent__pb2.GetAgentConfigurationResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetBufferMetadata(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.agent.Agent/GetBufferMetadata',
+            protos_dot_agent_dot_v1_dot_agent__pb2.GetBufferMetadataRequest.SerializeToString,
+            protos_dot_agent_dot_v1_dot_agent__pb2.GetBufferMetadataResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

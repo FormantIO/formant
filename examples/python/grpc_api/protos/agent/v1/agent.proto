@@ -8,6 +8,7 @@ import "protos/model/v1/commands.proto";
 import "protos/model/v1/config.proto";
 import "protos/model/v1/math.proto";
 import "protos/model/v1/event.proto";
+import "protos/model/v1/health.proto";
 
 option go_package = "github.com/FormantIO/genproto/go/v1/agent";
 
@@ -93,6 +94,10 @@ service Agent {
   rpc GetAgentConfiguration(GetAgentConfigurationRequest)
       returns (GetAgentConfigurationResponse) {
   }
+  /* GetBufferMetadata returns the metadata for the webRTC buffer. */
+  rpc GetBufferMetadata(GetBufferMetadataRequest)
+    returns (GetBufferMetadataResponse) {
+    }
   /* Health can be used to check if the Agent is running and its gRPC API is
    * available. */
   rpc Health(HealthRequest) returns (HealthResponse) {
@@ -218,7 +223,12 @@ message GetAgentConfigurationRequest {
 message GetAgentConfigurationResponse {
   model.AgentConfiguration configuration = 1;
 }
+message GetBufferMetadataRequest {
+}
 
+message GetBufferMetadataResponse {
+  repeated model.BufferMetadata connections = 1;
+}
 message HealthRequest {
 }
 
