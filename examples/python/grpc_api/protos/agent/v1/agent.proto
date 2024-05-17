@@ -96,8 +96,16 @@ service Agent {
   }
   /* GetBufferMetadata returns the metadata for the webRTC buffer. */
   rpc GetBufferMetadata(GetBufferMetadataRequest)
-    returns (GetBufferMetadataResponse) {
-    }
+      returns (GetBufferMetadataResponse) {
+  }
+  /* QueryDatapoints returns datapoints matching the specified parameters */
+  rpc QueryDatapoints(QueryDatapointsRequest)
+      returns (QueryDatapointsResponse) {
+  }
+  /* QueryEvents returns events matching the specified parameters */
+  rpc QueryEvents(QueryEventsRequest)
+      returns (QueryEventsResponse) {
+  }
   /* Health can be used to check if the Agent is running and its gRPC API is
    * available. */
   rpc Health(HealthRequest) returns (HealthResponse) {
@@ -224,6 +232,29 @@ message GetAgentConfigurationResponse {
   model.AgentConfiguration configuration = 1;
 }
 message GetBufferMetadataRequest {
+}
+
+message QueryDatapointsRequest {
+  string stream_name = 1;
+  string start = 2;
+  string end = 3;
+  uint32 limit = 4;
+  uint32 offset = 5;
+}
+
+message QueryDatapointsResponse {
+  repeated model.Datapoint results = 1;
+}
+
+message QueryEventsRequest {
+  string start = 1;
+  string end = 2;
+  uint32 limit = 3;
+  uint32 offset = 4;
+}
+
+message QueryEventsResponse {
+  repeated model.Event results = 1;
 }
 
 message GetBufferMetadataResponse {

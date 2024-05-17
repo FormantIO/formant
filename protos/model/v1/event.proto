@@ -12,6 +12,9 @@ message Event {
   string stream_type = 4;
   bool notification_enabled = 5;
   Severity severity = 9;
+  string id = 10;
+  string type = 11;
+  string event_trigger_id = 12;
   map<string, string> tags = 6;
   reserved 7;
 }

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bprotos/model/v1/event.proto\x12\x08v1.model\"\x8c\x02\n\x05\x45vent\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x15\n\rend_timestamp\x18\x08 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x13\n\x0bstream_name\x18\x03 \x01(\t\x12\x13\n\x0bstream_type\x18\x04 \x01(\t\x12\x1c\n\x14notification_enabled\x18\x05 \x01(\x08\x12$\n\x08severity\x18\t \x01(\x0e\x32\x12.v1.model.Severity\x12\'\n\x04tags\x18\x06 \x03(\x0b\x32\x19.v1.model.Event.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01J\x04\x08\x07\x10\x08\"\xa2\x01\n\x17\x41gentEventConfiguration\x12\x33\n\x0e\x65vent_triggers\x18\x01 \x03(\x0b\x32\x1b.v1.model.AgentEventTrigger\x12<\n\x17stateful_event_triggers\x18\x03 \x03(\x0b\x32\x1b.v1.model.AgentEventTrigger\x12\x14\n\x0clast_updated\x18\x02 \x01(\x03\"\xd6\x02\n\x11\x41gentEventTrigger\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06stream\x18\x02 \x01(\t\x12\x10\n\x08interval\x18\x03 \x01(\x03\x12&\n\tcondition\x18\x04 \x01(\x0b\x32\x13.v1.model.Condition\x12*\n\rexitCondition\x18\x05 \x01(\x0b\x32\x13.v1.model.Condition\x12\x19\n\x11isStatefulTrigger\x18\x06 \x01(\x08\x12L\n\x1cstatefulTriggerConfiguration\x18\x07 \x01(\x0b\x32&.v1.model.StatefulTriggerConfiguration\x12\x0f\n\x07message\x18\x08 \x01(\t\x12\x15\n\rmessageFormat\x18\x0b \x01(\t\x12\x10\n\x08severity\x18\t \x01(\t\x12\x1c\n\x14notification_enabled\x18\n \x01(\x08\"\x85\x04\n\tCondition\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12;\n\x08presence\x18\x02 \x01(\x0b\x32\'.v1.model.PresenceEventTriggerConditionH\x00\x12=\n\tthreshold\x18\x03 \x01(\x0b\x32(.v1.model.ThresholdEventTriggerConditionH\x00\x12\x35\n\x05regex\x18\x04 \x01(\x0b\x32$.v1.model.RegexEventTriggerConditionH\x00\x12\x37\n\x06\x62itset\x18\x05 \x01(\x0b\x32%.v1.model.BitsetEventTriggerConditionH\x00\x12\x39\n\x07\x62\x61ttery\x18\x06 \x01(\x0b\x32&.v1.model.BatteryEventTriggerConditionH\x00\x12<\n\x07numeric\x18\x07 \x01(\x0b\x32).v1.model.NumericSetEventTriggerConditionH\x00\x12\x33\n\x04json\x18\x08 \x01(\x0b\x32#.v1.model.JsonEventTriggerConditionH\x00\x12\x41\n\x0b\x61utoresolve\x18\t \x01(\x0b\x32*.v1.model.AutoresolveEventTriggerConditionH\x00\x42\x0b\n\tcondition\"\x1f\n\x1dPresenceEventTriggerCondition\"\"\n AutoresolveEventTriggerCondition\"^\n\x1eThresholdEventTriggerCondition\x12\r\n\x05value\x18\x01 \x01(\x01\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ThresholdOperator\"^\n\x10NumericCondition\x12\r\n\x05label\x18\x01 \x01(\t\x12;\n\tcondition\x18\x02 \x01(\x0b\x32(.v1.model.ThresholdEventTriggerCondition\"\x80\x01\n\x1fNumericSetEventTriggerCondition\x12.\n\nconditions\x18\x01 \x03(\x0b\x32\x1a.v1.model.NumericCondition\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ConditionOperator\"\xa5\x01\n\x10\x42\x61tteryCondition\x12%\n\x05\x66ield\x18\x01 \x01(\x0e\x32\x16.v1.model.BatteryField\x12;\n\tcondition\x18\x02 \x01(\x0b\x32(.v1.model.ThresholdEventTriggerCondition\x12-\n\x08operator\x18\x03 \x01(\x0e\x32\x1b.v1.model.ConditionOperator\"}\n\x1c\x42\x61tteryEventTriggerCondition\x12.\n\nconditions\x18\x01 \x03(\x0b\x32\x1a.v1.model.BatteryCondition\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ConditionOperator\"+\n\x1aRegexEventTriggerCondition\x12\r\n\x05value\x18\x01 \x01(\t\"\x7f\n\x1b\x42itsetEventTriggerCondition\x12\x31\n\x0e\x62it_conditions\x18\x01 \x03(\x0b\x32\x19.v1.model.BitsetCondition\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ConditionOperator\";\n\x0f\x42itsetCondition\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x0c\n\x04true\x18\x02 \x01(\x08\x12\r\n\x05\x66\x61lse\x18\x03 \x01(\x08\",\n\x19JsonEventTriggerCondition\x12\x0f\n\x07jqQuery\x18\x01 \x01(\t\"W\n\x1cStatefulTriggerConfiguration\x12\x1b\n\x13\x65mitOnEnteringState\x18\x01 \x01(\x08\x12\x1a\n\x12\x65mitOnLeavingState\x18\x02 \x01(\x08*:\n\x08Severity\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x0c\n\x08\x43RITICAL\x10\x03*D\n\x0c\x42\x61tteryField\x12\n\n\x06\x43harge\x10\x00\x12\x0b\n\x07\x43urrent\x10\x01\x12\x0e\n\nPercentage\x10\x02\x12\x0b\n\x07Voltage\x10\x03*F\n\x11ThresholdOperator\x12\x06\n\x02LT\x10\x00\x12\x07\n\x03LTE\x10\x01\x12\x06\n\x02GT\x10\x02\x12\x07\n\x03GTE\x10\x03\x12\x06\n\x02\x45Q\x10\x04\x12\x07\n\x03NEQ\x10\x05*%\n\x11\x43onditionOperator\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x41LL\x10\x01\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x1bprotos/model/v1/event.proto\x12\x08v1.model\"\xc0\x02\n\x05\x45vent\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x15\n\rend_timestamp\x18\x08 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x13\n\x0bstream_name\x18\x03 \x01(\t\x12\x13\n\x0bstream_type\x18\x04 \x01(\t\x12\x1c\n\x14notification_enabled\x18\x05 \x01(\x08\x12$\n\x08severity\x18\t \x01(\x0e\x32\x12.v1.model.Severity\x12\n\n\x02id\x18\n \x01(\t\x12\x0c\n\x04type\x18\x0b \x01(\t\x12\x18\n\x10\x65vent_trigger_id\x18\x0c \x01(\t\x12\'\n\x04tags\x18\x06 \x03(\x0b\x32\x19.v1.model.Event.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01J\x04\x08\x07\x10\x08\"\xa2\x01\n\x17\x41gentEventConfiguration\x12\x33\n\x0e\x65vent_triggers\x18\x01 \x03(\x0b\x32\x1b.v1.model.AgentEventTrigger\x12<\n\x17stateful_event_triggers\x18\x03 \x03(\x0b\x32\x1b.v1.model.AgentEventTrigger\x12\x14\n\x0clast_updated\x18\x02 \x01(\x03\"\xd6\x02\n\x11\x41gentEventTrigger\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06stream\x18\x02 \x01(\t\x12\x10\n\x08interval\x18\x03 \x01(\x03\x12&\n\tcondition\x18\x04 \x01(\x0b\x32\x13.v1.model.Condition\x12*\n\rexitCondition\x18\x05 \x01(\x0b\x32\x13.v1.model.Condition\x12\x19\n\x11isStatefulTrigger\x18\x06 \x01(\x08\x12L\n\x1cstatefulTriggerConfiguration\x18\x07 \x01(\x0b\x32&.v1.model.StatefulTriggerConfiguration\x12\x0f\n\x07message\x18\x08 \x01(\t\x12\x15\n\rmessageFormat\x18\x0b \x01(\t\x12\x10\n\x08severity\x18\t \x01(\t\x12\x1c\n\x14notification_enabled\x18\n \x01(\x08\"\x85\x04\n\tCondition\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12;\n\x08presence\x18\x02 \x01(\x0b\x32\'.v1.model.PresenceEventTriggerConditionH\x00\x12=\n\tthreshold\x18\x03 \x01(\x0b\x32(.v1.model.ThresholdEventTriggerConditionH\x00\x12\x35\n\x05regex\x18\x04 \x01(\x0b\x32$.v1.model.RegexEventTriggerConditionH\x00\x12\x37\n\x06\x62itset\x18\x05 \x01(\x0b\x32%.v1.model.BitsetEventTriggerConditionH\x00\x12\x39\n\x07\x62\x61ttery\x18\x06 \x01(\x0b\x32&.v1.model.BatteryEventTriggerConditionH\x00\x12<\n\x07numeric\x18\x07 \x01(\x0b\x32).v1.model.NumericSetEventTriggerConditionH\x00\x12\x33\n\x04json\x18\x08 \x01(\x0b\x32#.v1.model.JsonEventTriggerConditionH\x00\x12\x41\n\x0b\x61utoresolve\x18\t \x01(\x0b\x32*.v1.model.AutoresolveEventTriggerConditionH\x00\x42\x0b\n\tcondition\"\x1f\n\x1dPresenceEventTriggerCondition\"\"\n AutoresolveEventTriggerCondition\"^\n\x1eThresholdEventTriggerCondition\x12\r\n\x05value\x18\x01 \x01(\x01\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ThresholdOperator\"^\n\x10NumericCondition\x12\r\n\x05label\x18\x01 \x01(\t\x12;\n\tcondition\x18\x02 \x01(\x0b\x32(.v1.model.ThresholdEventTriggerCondition\"\x80\x01\n\x1fNumericSetEventTriggerCondition\x12.\n\nconditions\x18\x01 \x03(\x0b\x32\x1a.v1.model.NumericCondition\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ConditionOperator\"\xa5\x01\n\x10\x42\x61tteryCondition\x12%\n\x05\x66ield\x18\x01 \x01(\x0e\x32\x16.v1.model.BatteryField\x12;\n\tcondition\x18\x02 \x01(\x0b\x32(.v1.model.ThresholdEventTriggerCondition\x12-\n\x08operator\x18\x03 \x01(\x0e\x32\x1b.v1.model.ConditionOperator\"}\n\x1c\x42\x61tteryEventTriggerCondition\x12.\n\nconditions\x18\x01 \x03(\x0b\x32\x1a.v1.model.BatteryCondition\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ConditionOperator\"+\n\x1aRegexEventTriggerCondition\x12\r\n\x05value\x18\x01 \x01(\t\"\x7f\n\x1b\x42itsetEventTriggerCondition\x12\x31\n\x0e\x62it_conditions\x18\x01 \x03(\x0b\x32\x19.v1.model.BitsetCondition\x12-\n\x08operator\x18\x02 \x01(\x0e\x32\x1b.v1.model.ConditionOperator\";\n\x0f\x42itsetCondition\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x0c\n\x04true\x18\x02 \x01(\x08\x12\r\n\x05\x66\x61lse\x18\x03 \x01(\x08\",\n\x19JsonEventTriggerCondition\x12\x0f\n\x07jqQuery\x18\x01 \x01(\t\"W\n\x1cStatefulTriggerConfiguration\x12\x1b\n\x13\x65mitOnEnteringState\x18\x01 \x01(\x08\x12\x1a\n\x12\x65mitOnLeavingState\x18\x02 \x01(\x08*:\n\x08Severity\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x0c\n\x08\x43RITICAL\x10\x03*D\n\x0c\x42\x61tteryField\x12\n\n\x06\x43harge\x10\x00\x12\x0b\n\x07\x43urrent\x10\x01\x12\x0e\n\nPercentage\x10\x02\x12\x0b\n\x07Voltage\x10\x03*F\n\x11ThresholdOperator\x12\x06\n\x02LT\x10\x00\x12\x07\n\x03LTE\x10\x01\x12\x06\n\x02GT\x10\x02\x12\x07\n\x03GTE\x10\x03\x12\x06\n\x02\x45Q\x10\x04\x12\x07\n\x03NEQ\x10\x05*%\n\x11\x43onditionOperator\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x41LL\x10\x01\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
 )
 
 _SEVERITY = _descriptor.EnumDescriptor(
@@ -53,8 +53,8 @@ _SEVERITY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2399,
-  serialized_end=2457,
+  serialized_start=2451,
+  serialized_end=2509,
 )
 _sym_db.RegisterEnumDescriptor(_SEVERITY)
 
@@ -89,8 +89,8 @@ _BATTERYFIELD = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2459,
-  serialized_end=2527,
+  serialized_start=2511,
+  serialized_end=2579,
 )
 _sym_db.RegisterEnumDescriptor(_BATTERYFIELD)
 
@@ -135,8 +135,8 @@ _THRESHOLDOPERATOR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2529,
-  serialized_end=2599,
+  serialized_start=2581,
+  serialized_end=2651,
 )
 _sym_db.RegisterEnumDescriptor(_THRESHOLDOPERATOR)
 
@@ -161,8 +161,8 @@ _CONDITIONOPERATOR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2601,
-  serialized_end=2638,
+  serialized_start=2653,
+  serialized_end=2690,
 )
 _sym_db.RegisterEnumDescriptor(_CONDITIONOPERATOR)
 
@@ -220,8 +220,8 @@ _EVENT_TAGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=261,
-  serialized_end=304,
+  serialized_start=313,
+  serialized_end=356,
 )
 
 _EVENT = _descriptor.Descriptor(
@@ -282,7 +282,28 @@ _EVENT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='v1.model.Event.tags', index=7,
+      name='id', full_name='v1.model.Event.id', index=7,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='v1.model.Event.type', index=8,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='event_trigger_id', full_name='v1.model.Event.event_trigger_id', index=9,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='v1.model.Event.tags', index=10,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -301,7 +322,7 @@ _EVENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=42,
-  serialized_end=310,
+  serialized_end=362,
 )
 
 
@@ -346,8 +367,8 @@ _AGENTEVENTCONFIGURATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=313,
-  serialized_end=475,
+  serialized_start=365,
+  serialized_end=527,
 )
 
 
@@ -448,8 +469,8 @@ _AGENTEVENTTRIGGER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=478,
-  serialized_end=820,
+  serialized_start=530,
+  serialized_end=872,
 )
 
 
@@ -541,8 +562,8 @@ _CONDITION = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=823,
-  serialized_end=1340,
+  serialized_start=875,
+  serialized_end=1392,
 )
 
 
@@ -566,8 +587,8 @@ _PRESENCEEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1342,
-  serialized_end=1373,
+  serialized_start=1394,
+  serialized_end=1425,
 )
 
 
@@ -591,8 +612,8 @@ _AUTORESOLVEEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1375,
-  serialized_end=1409,
+  serialized_start=1427,
+  serialized_end=1461,
 )
 
 
@@ -630,8 +651,8 @@ _THRESHOLDEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1411,
-  serialized_end=1505,
+  serialized_start=1463,
+  serialized_end=1557,
 )
 
 
@@ -669,8 +690,8 @@ _NUMERICCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1507,
-  serialized_end=1601,
+  serialized_start=1559,
+  serialized_end=1653,
 )
 
 
@@ -708,8 +729,8 @@ _NUMERICSETEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1604,
-  serialized_end=1732,
+  serialized_start=1656,
+  serialized_end=1784,
 )
 
 
@@ -754,8 +775,8 @@ _BATTERYCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1735,
-  serialized_end=1900,
+  serialized_start=1787,
+  serialized_end=1952,
 )
 
 
@@ -793,8 +814,8 @@ _BATTERYEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1902,
-  serialized_end=2027,
+  serialized_start=1954,
+  serialized_end=2079,
 )
 
 
@@ -825,8 +846,8 @@ _REGEXEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2029,
-  serialized_end=2072,
+  serialized_start=2081,
+  serialized_end=2124,
 )
 
 
@@ -864,8 +885,8 @@ _BITSETEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2074,
-  serialized_end=2201,
+  serialized_start=2126,
+  serialized_end=2253,
 )
 
 
@@ -910,8 +931,8 @@ _BITSETCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2203,
-  serialized_end=2262,
+  serialized_start=2255,
+  serialized_end=2314,
 )
 
 
@@ -942,8 +963,8 @@ _JSONEVENTTRIGGERCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2264,
-  serialized_end=2308,
+  serialized_start=2316,
+  serialized_end=2360,
 )
 
 
@@ -981,8 +1002,8 @@ _STATEFULTRIGGERCONFIGURATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2310,
-  serialized_end=2397,
+  serialized_start=2362,
+  serialized_end=2449,
 )
 
 _EVENT_TAGSENTRY.containing_type = _EVENT
