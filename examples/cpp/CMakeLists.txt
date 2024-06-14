@@ -7,6 +7,12 @@ add_compile_options(-std=c++11)
 find_package(Threads REQUIRED)
 find_package(protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
+find_package(Boost)
+
+IF (Boost_FOUND)
+    INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+    ADD_DEFINITIONS( "-DHAS_BOOST" )
+ENDIF()
 
 include_directories(.)
 include_directories(protos)
@@ -57,6 +63,17 @@ add_executable(
 )
 target_link_libraries(
   receive_commands 
+  gRPC::grpc++
+  protobuf::libprotobuf
+)
+
+add_executable(
+  formant_client_example 
+  formant_client_example.cpp
+  ${INCLUDES}
+)
+target_link_libraries(
+  formant_client_example 
   gRPC::grpc++
   protobuf::libprotobuf
 )
