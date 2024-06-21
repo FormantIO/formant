@@ -3,6 +3,7 @@ syntax = "proto3";
 package v1.model;
 
 import "protos/model/v1/commands.proto";
+import "protos/model/v1/views.proto";
 import "protos/model/v1/ros.proto";
 import "google/protobuf/wrappers.proto";
 
@@ -13,6 +14,7 @@ message AgentConfigurationStore {
   AgentConfiguration configuration = 2;
   AgentFeatureSet feature_set = 3;
   CommandsMetadata commands = 4;
+  ViewsMetadata views = 5;
 }
 
 message AgentFeatureSet {
@@ -127,7 +129,7 @@ message ApplicationConfiguration {
 message ResourcesConfiguration {
   DiskConfiguration disk = 1;
   google.protobuf.DoubleValue stream_throttle_hz = 2;
-  bool low_bandwidth_agent = 3; 
+  bool low_bandwidth_agent = 3;
   uint64 datapoint_batch_size = 4;
   uint64 datapoint_batchLifetime_ms = 5;
   uint64 asset_batch_size = 6;

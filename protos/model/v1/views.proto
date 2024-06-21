@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "protos/model/v1/datapoint.proto";
+import "google/protobuf/struct.proto";
+
+package v1.model;
+
+option go_package = "github.com/FormantIO/genproto/go/v1/model";
+
+
+message ViewsMetadata {
+  repeated ViewMetadata views = 1;
+}
+
+message ViewMetadata {
+  string id = 1;
+  map<string, string> tags = 2;
+  string organizationId = 3;
+  string name = 4;
+  string description = 5;
+  string url = 6;
+  bool showOnSingleDevice = 7;
+  bool showOnMultiDevice = 8;
+  bool showOnTeleop = 9;
+  bool showOnAnalytics = 10;
+  bool showTimeline = 11;
+  Filter filter = 12;
+  google.protobuf.Struct layout = 13;
+  string layoutType = 14;
+  repeated ViewConfiguration configuration = 15;
+  string smartFleetId = 16;
+  int64 index = 17;
+
+    enum LayoutType {
+      DASHBOARD = 0;
+      OBSERVE = 1;
+      FULLSCREEN = 2;
+      ANALYTICS = 3;
+      TELEOP = 4;
+  }
+}
+
+message Filter {
+  map<string, string> tags = 1;
+  repeated string names = 2;
+  repeated string types = 3;
+  repeated string deviceIds = 4;
+  map<string, string> notTags = 5;
+  repeated string notNames = 6;
+  repeated string agentIds = 7;
+}
+
+message ViewConfiguration {
+  string streamName = 1;
+  string type = 2;
+  google.protobuf.Struct configuration = 3;
+}
+

@@ -10,6 +10,7 @@ from . import media_pb2
 from . import navigation_pb2
 from . import ros_pb2
 from . import text_pb2
+from . import views_pb2
 
 from . import commands_pb2_grpc
 from . import config_pb2_grpc
@@ -23,3 +24,4 @@ from . import media_pb2_grpc
 from . import navigation_pb2_grpc
 from . import ros_pb2_grpc
 from . import text_pb2_grpc
+from . import views_pb2_grpc
