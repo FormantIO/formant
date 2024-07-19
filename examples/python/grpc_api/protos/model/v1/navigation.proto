@@ -113,3 +113,8 @@ message Marker3D {
 message Marker3DArray {
     repeated Marker3D markers = 1;
 }
+
+message Joy {
+    repeated float axes = 1;
+    repeated int32 buttons = 2;
+}

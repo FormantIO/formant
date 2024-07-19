@@ -40,6 +40,7 @@ message ROSMessageToPublish {
     model.Numeric numeric = 10;
     model.PoseWithCovariance pose_with_covariance = 11;
     model.Point point = 12;
+    model.Joy joy = 13;
   }
 }
 
@@ -61,4 +62,5 @@ enum ROSTopicType {
   GEOMETRY_MSGS_POINT=14;
   VISUALIZATION_MSGS_MARKER_ARRAY = 15;
   NAV_MSGS_ODOMETRY = 16;
+  SENSOR_MSGS_JOY = 17;
 }

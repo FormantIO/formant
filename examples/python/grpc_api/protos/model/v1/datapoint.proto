@@ -48,6 +48,7 @@ message Datapoint {
     Numeric numeric = 6;
     PoseWithCovariance pose_with_covariance = 7;
     Point point = 8;
+    Joy joy = 9;
   }
 }
 

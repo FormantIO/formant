@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x19protos/model/v1/ros.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\"<\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\x14\n\x0c\x65ncode_video\x18\x03 \x01(\x08\"\x9a\x01\n\x0fROSLocalization\x12\x11\n\tmap_topic\x18\x01 \x01(\t\x12\x12\n\nodom_topic\x18\x02 \x01(\t\x12\x1a\n\x12point_cloud_topics\x18\x03 \x03(\t\x12\x12\n\npath_topic\x18\x04 \x01(\t\x12\x12\n\ngoal_topic\x18\x05 \x01(\t\x12\x1c\n\x14\x62\x61se_reference_frame\x18\x06 \x01(\t\"0\n\x10ROSTransformTree\x12\x1c\n\x14\x62\x61se_reference_frame\x18\x01 \x01(\t\"\xff\x02\n\x13ROSMessageToPublish\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x10\n\x08\x66rame_id\x18\x07 \x01(\t\x12\x11\n\ttimestamp\x18\x08 \x01(\x04\x12 \n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistH\x00\x12\x0e\n\x04\x62ool\x18\x03 \x01(\x08H\x00\x12\x1a\n\x10\x63ompressed_image\x18\x04 \x01(\x0cH\x00\x12\x0e\n\x04text\x18\x05 \x01(\tH\x00\x12#\n\x04pose\x18\x06 \x01(\x0b\x32\x13.v1.model.TransformH\x00\x12\"\n\x06goalID\x18\t \x01(\x0b\x32\x10.v1.model.GoalIDH\x00\x12$\n\x07numeric\x18\n \x01(\x0b\x32\x11.v1.model.NumericH\x00\x12<\n\x14pose_with_covariance\x18\x0b \x01(\x0b\x32\x1c.v1.model.PoseWithCovarianceH\x00\x12 \n\x05point\x18\x0c \x01(\x0b\x32\x0f.v1.model.PointH\x00\x42\x06\n\x04\x64\x61ta*\xc2\x03\n\x0cROSTopicType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x11\n\rSTD_MSGS_BOOL\x10\x01\x12 \n\x1cSENSOR_MSGS_COMPRESSED_IMAGE\x10\x02\x12\x13\n\x0fSTD_MSGS_STRING\x10\x03\x12\x16\n\x12GEOMETRY_MSGS_POSE\x10\x04\x12\x19\n\x15\x41\x43TIONLIB_MSGS_GOALID\x10\x05\x12\x17\n\x13GEOMETRY_MSGS_TWIST\x10\x06\x12\x14\n\x10H264_VIDEO_FRAME\x10\x07\x12\x0f\n\x0b\x41UDIO_CHUNK\x10\x08\x12\x14\n\x10STD_MSGS_FLOAT64\x10\t\x12\x1b\n\x17SENSOR_MSGS_JOINT_STATE\x10\n\x12&\n\"GEOMETRY_MSGS_POSE_WITH_COVARIANCE\x10\x0b\x12\x1c\n\x18SENSOR_MSGS_POINT_CLOUD2\x10\x0c\x12\x1a\n\x16SENSOR_MSGS_LASER_SCAN\x10\r\x12\x17\n\x13GEOMETRY_MSGS_POINT\x10\x0e\x12#\n\x1fVISUALIZATION_MSGS_MARKER_ARRAY\x10\x0f\x12\x15\n\x11NAV_MSGS_ODOMETRY\x10\x10\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n\x19protos/model/v1/ros.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a protos/model/v1/navigation.proto\"<\n\x08ROSTopic\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\x14\n\x0c\x65ncode_video\x18\x03 \x01(\x08\"\x9a\x01\n\x0fROSLocalization\x12\x11\n\tmap_topic\x18\x01 \x01(\t\x12\x12\n\nodom_topic\x18\x02 \x01(\t\x12\x1a\n\x12point_cloud_topics\x18\x03 \x03(\t\x12\x12\n\npath_topic\x18\x04 \x01(\t\x12\x12\n\ngoal_topic\x18\x05 \x01(\t\x12\x1c\n\x14\x62\x61se_reference_frame\x18\x06 \x01(\t\"0\n\x10ROSTransformTree\x12\x1c\n\x14\x62\x61se_reference_frame\x18\x01 \x01(\t\"\x9d\x03\n\x13ROSMessageToPublish\x12\x0e\n\x06stream\x18\x01 \x01(\t\x12\x10\n\x08\x66rame_id\x18\x07 \x01(\t\x12\x11\n\ttimestamp\x18\x08 \x01(\x04\x12 \n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.TwistH\x00\x12\x0e\n\x04\x62ool\x18\x03 \x01(\x08H\x00\x12\x1a\n\x10\x63ompressed_image\x18\x04 \x01(\x0cH\x00\x12\x0e\n\x04text\x18\x05 \x01(\tH\x00\x12#\n\x04pose\x18\x06 \x01(\x0b\x32\x13.v1.model.TransformH\x00\x12\"\n\x06goalID\x18\t \x01(\x0b\x32\x10.v1.model.GoalIDH\x00\x12$\n\x07numeric\x18\n \x01(\x0b\x32\x11.v1.model.NumericH\x00\x12<\n\x14pose_with_covariance\x18\x0b \x01(\x0b\x32\x1c.v1.model.PoseWithCovarianceH\x00\x12 \n\x05point\x18\x0c \x01(\x0b\x32\x0f.v1.model.PointH\x00\x12\x1c\n\x03joy\x18\r \x01(\x0b\x32\r.v1.model.JoyH\x00\x42\x06\n\x04\x64\x61ta*\xd7\x03\n\x0cROSTopicType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x11\n\rSTD_MSGS_BOOL\x10\x01\x12 \n\x1cSENSOR_MSGS_COMPRESSED_IMAGE\x10\x02\x12\x13\n\x0fSTD_MSGS_STRING\x10\x03\x12\x16\n\x12GEOMETRY_MSGS_POSE\x10\x04\x12\x19\n\x15\x41\x43TIONLIB_MSGS_GOALID\x10\x05\x12\x17\n\x13GEOMETRY_MSGS_TWIST\x10\x06\x12\x14\n\x10H264_VIDEO_FRAME\x10\x07\x12\x0f\n\x0b\x41UDIO_CHUNK\x10\x08\x12\x14\n\x10STD_MSGS_FLOAT64\x10\t\x12\x1b\n\x17SENSOR_MSGS_JOINT_STATE\x10\n\x12&\n\"GEOMETRY_MSGS_POSE_WITH_COVARIANCE\x10\x0b\x12\x1c\n\x18SENSOR_MSGS_POINT_CLOUD2\x10\x0c\x12\x1a\n\x16SENSOR_MSGS_LASER_SCAN\x10\r\x12\x17\n\x13GEOMETRY_MSGS_POINT\x10\x0e\x12#\n\x1fVISUALIZATION_MSGS_MARKER_ARRAY\x10\x0f\x12\x15\n\x11NAV_MSGS_ODOMETRY\x10\x10\x12\x13\n\x0fSENSOR_MSGS_JOY\x10\x11\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_navigation__pb2.DESCRIPTOR,])
 
@@ -118,11 +118,16 @@ _ROSTOPICTYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SENSOR_MSGS_JOY', index=17, number=17,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=757,
-  serialized_end=1207,
+  serialized_start=787,
+  serialized_end=1258,
 )
 _sym_db.RegisterEnumDescriptor(_ROSTOPICTYPE)
 
@@ -144,6 +149,7 @@ SENSOR_MSGS_LASER_SCAN = 13
 GEOMETRY_MSGS_POINT = 14
 VISUALIZATION_MSGS_MARKER_ARRAY = 15
 NAV_MSGS_ODOMETRY = 16
+SENSOR_MSGS_JOY = 17
 
 
 
@@ -384,6 +390,13 @@ _ROSMESSAGETOPUBLISH = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='joy', full_name='v1.model.ROSMessageToPublish.joy', index=12,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -402,7 +415,7 @@ _ROSMESSAGETOPUBLISH = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=371,
-  serialized_end=754,
+  serialized_end=784,
 )
 
 _ROSMESSAGETOPUBLISH.fields_by_name['twist'].message_type = protos_dot_model_dot_v1_dot_math__pb2._TWIST
@@ -411,6 +424,7 @@ _ROSMESSAGETOPUBLISH.fields_by_name['goalID'].message_type = protos_dot_model_do
 _ROSMESSAGETOPUBLISH.fields_by_name['numeric'].message_type = protos_dot_model_dot_v1_dot_math__pb2._NUMERIC
 _ROSMESSAGETOPUBLISH.fields_by_name['pose_with_covariance'].message_type = protos_dot_model_dot_v1_dot_navigation__pb2._POSEWITHCOVARIANCE
 _ROSMESSAGETOPUBLISH.fields_by_name['point'].message_type = protos_dot_model_dot_v1_dot_math__pb2._POINT
+_ROSMESSAGETOPUBLISH.fields_by_name['joy'].message_type = protos_dot_model_dot_v1_dot_navigation__pb2._JOY
 _ROSMESSAGETOPUBLISH.oneofs_by_name['data'].fields.append(
   _ROSMESSAGETOPUBLISH.fields_by_name['twist'])
 _ROSMESSAGETOPUBLISH.fields_by_name['twist'].containing_oneof = _ROSMESSAGETOPUBLISH.oneofs_by_name['data']
@@ -438,6 +452,9 @@ _ROSMESSAGETOPUBLISH.fields_by_name['pose_with_covariance'].containing_oneof = _
 _ROSMESSAGETOPUBLISH.oneofs_by_name['data'].fields.append(
   _ROSMESSAGETOPUBLISH.fields_by_name['point'])
 _ROSMESSAGETOPUBLISH.fields_by_name['point'].containing_oneof = _ROSMESSAGETOPUBLISH.oneofs_by_name['data']
+_ROSMESSAGETOPUBLISH.oneofs_by_name['data'].fields.append(
+  _ROSMESSAGETOPUBLISH.fields_by_name['joy'])
+_ROSMESSAGETOPUBLISH.fields_by_name['joy'].containing_oneof = _ROSMESSAGETOPUBLISH.oneofs_by_name['data']
 DESCRIPTOR.message_types_by_name['ROSTopic'] = _ROSTOPIC
 DESCRIPTOR.message_types_by_name['ROSLocalization'] = _ROSLOCALIZATION
 DESCRIPTOR.message_types_by_name['ROSTransformTree'] = _ROSTRANSFORMTREE
