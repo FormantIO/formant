@@ -35,6 +35,7 @@ message Datapoint {
     Odometry odometry = 19;
   }
   reserved 6;
+  string label = 20;
 }
 
 /* ControlDatapoint contains data sent from Formant teleop. */

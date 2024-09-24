@@ -51,6 +51,7 @@ message AgentConfigurationDocument {
   google.protobuf.BoolValue terminal_access = 10;
   repeated AdapterConfiguration adapters = 11;
   RtcInfo rtc_info = 12;
+  RealtimeConfiguration realtime = 13;
 }
 
 message AdapterConfiguration {
@@ -64,7 +65,13 @@ message AdapterConfiguration {
 message TeleopConfiguration {
   repeated TeleopRosStreamConfiguration ros_streams = 1;
   repeated TeleopCustomStreamConfiguration custom_streams = 2;
-  repeated TeleopHardwareStreamConfiguration hardware_streams=3;
+  repeated TeleopHardwareStreamConfiguration hardware_streams = 3;
+}
+
+message RealtimeConfiguration {
+  repeated TeleopRosStreamConfiguration ros_streams = 1;
+  repeated TeleopCustomStreamConfiguration custom_streams = 2;
+  repeated TeleopHardwareStreamConfiguration hardware_streams = 3;
 }
 
 message PortForwardingConfiguration {
@@ -88,6 +95,7 @@ message TeleopRosStreamConfiguration {
   bool overlay_clock = 9;
   int64 bitrate = 10;
   bool disable_adaptive_quality = 11;
+  string label = 12;
 }
 
 message TeleopHardwareStreamConfiguration {
@@ -104,6 +112,7 @@ message TeleopHardwareStreamConfiguration {
   bool overlay_clock = 11;
   int64 bitrate = 12;
   bool disable_adaptive_quality = 13;
+  string label = 14;
 }
 
 message TeleopCustomStreamConfiguration {
@@ -115,6 +124,7 @@ message TeleopCustomStreamConfiguration {
   bool overlay_clock = 6;
   int64 bitrate = 7;
   bool disable_adaptive_quality = 8;
+  string label = 9;
 }
 
 message TelemetryConfiguration {
