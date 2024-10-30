@@ -23,7 +23,7 @@ message ViewMetadata {
   bool showOnSingleDevice = 7;
   bool showOnMultiDevice = 8;
   bool showOnTeleop = 9;
-  bool showOnAnalytics = 10;
+  reserved 10;
   bool showTimeline = 11;
   Filter filter = 12;
   google.protobuf.Struct layout = 13;
