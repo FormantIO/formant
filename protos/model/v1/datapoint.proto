@@ -50,6 +50,7 @@ message Datapoint {
     PoseWithCovariance pose_with_covariance = 7;
     Point point = 8;
     Joy joy = 9;
+    Bit bit = 10;
   }
 }
 
