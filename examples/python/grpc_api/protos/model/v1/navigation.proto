@@ -20,6 +20,7 @@ message Localization {
     repeated PointCloud point_clouds = 3;
     Path path = 4;
     Goal goal = 5;
+    string rosVersion = 6; // "ROS-1" or "ROS-2"
 }
 
 message Odometry {

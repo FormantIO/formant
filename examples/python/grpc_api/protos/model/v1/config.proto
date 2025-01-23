@@ -96,6 +96,7 @@ message TeleopRosStreamConfiguration {
   int64 bitrate = 10;
   bool disable_adaptive_quality = 11;
   string label = 12;
+  string ros_version = 13;
 }
 
 message TeleopHardwareStreamConfiguration {

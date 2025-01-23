@@ -11,6 +11,7 @@ message ROSTopic {
   string name = 1;
   string path = 2;
   bool encode_video = 3;
+  string rosVersion = 4;
 }
 
 message ROSLocalization {
@@ -20,6 +21,7 @@ message ROSLocalization {
   string path_topic = 4;
   string goal_topic = 5;
   string base_reference_frame = 6;
+  string rosVersion = 7;
 }
 
 message ROSTransformTree {

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z)github.com/FormantIO/genproto/go/v1/model',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/media.proto\"}\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x12\x15\n\x08\x61ltitude\x18\x03 \x01(\x01H\x00\x88\x01\x01\x12\x18\n\x0borientation\x18\x04 \x01(\x01H\x01\x88\x01\x01\x42\x0b\n\t_altitudeB\x0e\n\x0c_orientation\"\xb8\x01\n\x0cLocalization\x12$\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.Odometry\x12\x1a\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.Map\x12*\n\x0cpoint_clouds\x18\x03 \x03(\x0b\x32\x14.v1.model.PointCloud\x12\x1c\n\x04path\x18\x04 \x01(\x0b\x32\x0e.v1.model.Path\x12\x1c\n\x04goal\x18\x05 \x01(\x0b\x32\x0e.v1.model.Goal\"z\n\x08Odometry\x12!\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\x1e\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.Twist\x12+\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.Transform\"\xf1\x01\n\x03Map\x12\x0c\n\x04uuid\x18\t \x01(\t\x12\x12\n\nresolution\x18\x01 \x01(\x01\x12\r\n\x05width\x18\x02 \x01(\r\x12\x0e\n\x06height\x18\x03 \x01(\r\x12#\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.Transform\x12+\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.Transform\x12\x31\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00\x12\r\n\x03url\x18\x07 \x01(\tH\x00\x12\r\n\x03raw\x18\x08 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"\x1d\n\rOccupancyGrid\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x05\"W\n\x04Path\x12+\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\"\n\x05poses\x18\x02 \x03(\x0b\x32\x13.v1.model.Transform\"{\n\nJointState\x12+\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.Transform\x12\x0c\n\x04name\x18\x01 \x03(\t\x12\x10\n\x08position\x18\x02 \x03(\x01\x12\x10\n\x08velocity\x18\x03 \x03(\x01\x12\x0e\n\x06\x65\x66\x66ort\x18\x04 \x03(\x01\"V\n\x04Goal\x12+\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12!\n\x04pose\x18\x02 \x01(\x0b\x32\x13.v1.model.Transform\"\x14\n\x06GoalID\x12\n\n\x02id\x18\x01 \x01(\t\"K\n\x12PoseWithCovariance\x12!\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\x12\n\ncovariance\x18\x02 \x03(\x01\"7\n\tColorRGBA\x12\t\n\x01r\x18\x01 \x01(\x02\x12\t\n\x01g\x18\x02 \x01(\x02\x12\t\n\x01\x62\x18\x03 \x01(\x02\x12\t\n\x01\x61\x18\x04 \x01(\x02\"\xa2\x03\n\x08Marker3D\x12+\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\n\n\x02ns\x18\x02 \x01(\t\x12\n\n\x02id\x18\x03 \x01(\x05\x12\x0c\n\x04type\x18\x04 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x05 \x01(\t\x12!\n\x04pose\x18\x06 \x01(\x0b\x32\x13.v1.model.Transform\x12 \n\x05scale\x18\x07 \x01(\x0b\x32\x11.v1.model.Vector3\x12\"\n\x05\x63olor\x18\x08 \x01(\x0b\x32\x13.v1.model.ColorRGBA\x12\x10\n\x08lifetime\x18\t \x01(\x01\x12\x14\n\x0c\x66rame_locked\x18\n \x01(\x08\x12!\n\x06points\x18\x0b \x03(\x0b\x32\x11.v1.model.Vector3\x12#\n\x06\x63olors\x18\x0c \x03(\x0b\x32\x13.v1.model.ColorRGBA\x12\x0c\n\x04text\x18\r \x01(\t\x12\x15\n\rmesh_resource\x18\x0e \x01(\t\x12#\n\x1bmesh_use_embedded_materials\x18\x0f \x01(\x08\x12\x10\n\x08\x66rame_id\x18\x10 \x01(\t\"4\n\rMarker3DArray\x12#\n\x07markers\x18\x01 \x03(\x0b\x32\x12.v1.model.Marker3D\"$\n\x03Joy\x12\x0c\n\x04\x61xes\x18\x01 \x03(\x02\x12\x0f\n\x07\x62uttons\x18\x02 \x03(\x05\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
+  serialized_pb=b'\n protos/model/v1/navigation.proto\x12\x08v1.model\x1a\x1aprotos/model/v1/math.proto\x1a\x1bprotos/model/v1/media.proto\"}\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x12\x15\n\x08\x61ltitude\x18\x03 \x01(\x01H\x00\x88\x01\x01\x12\x18\n\x0borientation\x18\x04 \x01(\x01H\x01\x88\x01\x01\x42\x0b\n\t_altitudeB\x0e\n\x0c_orientation\"\xcc\x01\n\x0cLocalization\x12$\n\x08odometry\x18\x01 \x01(\x0b\x32\x12.v1.model.Odometry\x12\x1a\n\x03map\x18\x02 \x01(\x0b\x32\r.v1.model.Map\x12*\n\x0cpoint_clouds\x18\x03 \x03(\x0b\x32\x14.v1.model.PointCloud\x12\x1c\n\x04path\x18\x04 \x01(\x0b\x32\x0e.v1.model.Path\x12\x1c\n\x04goal\x18\x05 \x01(\x0b\x32\x0e.v1.model.Goal\x12\x12\n\nrosVersion\x18\x06 \x01(\t\"z\n\x08Odometry\x12!\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\x1e\n\x05twist\x18\x02 \x01(\x0b\x32\x0f.v1.model.Twist\x12+\n\x0eworld_to_local\x18\x03 \x01(\x0b\x32\x13.v1.model.Transform\"\xf1\x01\n\x03Map\x12\x0c\n\x04uuid\x18\t \x01(\t\x12\x12\n\nresolution\x18\x01 \x01(\x01\x12\r\n\x05width\x18\x02 \x01(\r\x12\x0e\n\x06height\x18\x03 \x01(\r\x12#\n\x06origin\x18\x04 \x01(\x0b\x32\x13.v1.model.Transform\x12+\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.Transform\x12\x31\n\x0eoccupancy_grid\x18\x06 \x01(\x0b\x32\x17.v1.model.OccupancyGridH\x00\x12\r\n\x03url\x18\x07 \x01(\tH\x00\x12\r\n\x03raw\x18\x08 \x01(\x0cH\x00\x42\x06\n\x04\x64\x61ta\"\x1d\n\rOccupancyGrid\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x05\"W\n\x04Path\x12+\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\"\n\x05poses\x18\x02 \x03(\x0b\x32\x13.v1.model.Transform\"{\n\nJointState\x12+\n\x0eworld_to_local\x18\x05 \x01(\x0b\x32\x13.v1.model.Transform\x12\x0c\n\x04name\x18\x01 \x03(\t\x12\x10\n\x08position\x18\x02 \x03(\x01\x12\x10\n\x08velocity\x18\x03 \x03(\x01\x12\x0e\n\x06\x65\x66\x66ort\x18\x04 \x03(\x01\"V\n\x04Goal\x12+\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12!\n\x04pose\x18\x02 \x01(\x0b\x32\x13.v1.model.Transform\"\x14\n\x06GoalID\x12\n\n\x02id\x18\x01 \x01(\t\"K\n\x12PoseWithCovariance\x12!\n\x04pose\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\x12\n\ncovariance\x18\x02 \x03(\x01\"7\n\tColorRGBA\x12\t\n\x01r\x18\x01 \x01(\x02\x12\t\n\x01g\x18\x02 \x01(\x02\x12\t\n\x01\x62\x18\x03 \x01(\x02\x12\t\n\x01\x61\x18\x04 \x01(\x02\"\xa2\x03\n\x08Marker3D\x12+\n\x0eworld_to_local\x18\x01 \x01(\x0b\x32\x13.v1.model.Transform\x12\n\n\x02ns\x18\x02 \x01(\t\x12\n\n\x02id\x18\x03 \x01(\x05\x12\x0c\n\x04type\x18\x04 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x05 \x01(\t\x12!\n\x04pose\x18\x06 \x01(\x0b\x32\x13.v1.model.Transform\x12 \n\x05scale\x18\x07 \x01(\x0b\x32\x11.v1.model.Vector3\x12\"\n\x05\x63olor\x18\x08 \x01(\x0b\x32\x13.v1.model.ColorRGBA\x12\x10\n\x08lifetime\x18\t \x01(\x01\x12\x14\n\x0c\x66rame_locked\x18\n \x01(\x08\x12!\n\x06points\x18\x0b \x03(\x0b\x32\x11.v1.model.Vector3\x12#\n\x06\x63olors\x18\x0c \x03(\x0b\x32\x13.v1.model.ColorRGBA\x12\x0c\n\x04text\x18\r \x01(\t\x12\x15\n\rmesh_resource\x18\x0e \x01(\t\x12#\n\x1bmesh_use_embedded_materials\x18\x0f \x01(\x08\x12\x10\n\x08\x66rame_id\x18\x10 \x01(\t\"4\n\rMarker3DArray\x12#\n\x07markers\x18\x01 \x03(\x0b\x32\x12.v1.model.Marker3D\"$\n\x03Joy\x12\x0c\n\x04\x61xes\x18\x01 \x03(\x02\x12\x0f\n\x07\x62uttons\x18\x02 \x03(\x05\x42+Z)github.com/FormantIO/genproto/go/v1/modelb\x06proto3'
   ,
   dependencies=[protos_dot_model_dot_v1_dot_math__pb2.DESCRIPTOR,protos_dot_model_dot_v1_dot_media__pb2.DESCRIPTOR,])
 
@@ -134,6 +134,13 @@ _LOCALIZATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rosVersion', full_name='v1.model.Localization.rosVersion', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -147,7 +154,7 @@ _LOCALIZATION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=231,
-  serialized_end=415,
+  serialized_end=435,
 )
 
 
@@ -192,8 +199,8 @@ _ODOMETRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=417,
-  serialized_end=539,
+  serialized_start=437,
+  serialized_end=559,
 )
 
 
@@ -285,8 +292,8 @@ _MAP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=542,
-  serialized_end=783,
+  serialized_start=562,
+  serialized_end=803,
 )
 
 
@@ -317,8 +324,8 @@ _OCCUPANCYGRID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=785,
-  serialized_end=814,
+  serialized_start=805,
+  serialized_end=834,
 )
 
 
@@ -356,8 +363,8 @@ _PATH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=816,
-  serialized_end=903,
+  serialized_start=836,
+  serialized_end=923,
 )
 
 
@@ -416,8 +423,8 @@ _JOINTSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=905,
-  serialized_end=1028,
+  serialized_start=925,
+  serialized_end=1048,
 )
 
 
@@ -455,8 +462,8 @@ _GOAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1030,
-  serialized_end=1116,
+  serialized_start=1050,
+  serialized_end=1136,
 )
 
 
@@ -487,8 +494,8 @@ _GOALID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1118,
-  serialized_end=1138,
+  serialized_start=1138,
+  serialized_end=1158,
 )
 
 
@@ -526,8 +533,8 @@ _POSEWITHCOVARIANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1140,
-  serialized_end=1215,
+  serialized_start=1160,
+  serialized_end=1235,
 )
 
 
@@ -579,8 +586,8 @@ _COLORRGBA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1217,
-  serialized_end=1272,
+  serialized_start=1237,
+  serialized_end=1292,
 )
 
 
@@ -716,8 +723,8 @@ _MARKER3D = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1275,
-  serialized_end=1693,
+  serialized_start=1295,
+  serialized_end=1713,
 )
 
 
@@ -748,8 +755,8 @@ _MARKER3DARRAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1695,
-  serialized_end=1747,
+  serialized_start=1715,
+  serialized_end=1767,
 )
 
 
@@ -787,8 +794,8 @@ _JOY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1749,
-  serialized_end=1785,
+  serialized_start=1769,
+  serialized_end=1805,
 )
 
 _LOCATION.oneofs_by_name['_altitude'].fields.append(

@@ -15,6 +15,7 @@ message CommandRequest {
   }
   google.protobuf.Timestamp scrubber_time = 4;
   repeated FileInfo files = 5;
+  google.protobuf.Timestamp created_at = 6;
 }
 
 message CommandResponse {
