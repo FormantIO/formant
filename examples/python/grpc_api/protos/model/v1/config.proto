@@ -3,7 +3,6 @@ syntax = "proto3";
 package v1.model;
 
 import "protos/model/v1/commands.proto";
-import "protos/model/v1/views.proto";
 import "protos/model/v1/ros.proto";
 import "google/protobuf/wrappers.proto";
 
@@ -14,7 +13,8 @@ message AgentConfigurationStore {
   AgentConfiguration configuration = 2;
   AgentFeatureSet feature_set = 3;
   CommandsMetadata commands = 4;
-  ViewsMetadata views = 5;
+  reserved 5;
+  reserved "views";
 }
 
 message AgentFeatureSet {
@@ -145,6 +145,11 @@ message ResourcesConfiguration {
   uint64 datapoint_batchLifetime_ms = 5;
   uint64 asset_batch_size = 6;
   uint64 asset_batch_lifetime_ms = 7;
+  // Maximum age of buffered data in seconds. Data older than this
+  // will be discarded when read from buffer instead of uploaded.
+  // 0 = disabled (upload all buffered data, default behavior)
+  // Recommended: 60-180 seconds for live-priority use cases
+  uint64 buffer_max_age_seconds = 8;
 }
 
 message DiskConfiguration {

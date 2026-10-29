@@ -61,6 +61,8 @@ message OccupancyGrid {
 message Path {
     Transform world_to_local = 1;
     repeated Transform poses = 2;
+    string url = 3; // URL to the S3 asset (JSON containing poses and original world_to_local)
+    int64 size = 4; // Size of the S3 asset in bytes
 }
 
 message JointState {
@@ -96,8 +98,8 @@ message Marker3D {
     Transform world_to_local = 1;
     string ns = 2;
     int32 id = 3;
-    string type = 4;
-    string action = 5;
+    int32 type = 4;
+    int32 action = 5;
     Transform pose = 6;
     Vector3 scale = 7;
     ColorRGBA color = 8;

@@ -33,9 +33,19 @@ message Datapoint {
     Video video = 16;
     TransformTree transform_tree = 18;
     Odometry odometry = 19;
+    Map map = 21;
   }
   reserved 6;
   string label = 20;
+  /* Per-point attributes set by robot software at capture time (for example
+   * item_id, episode_id, class). Carried inside the point to the cloud and
+   * stored on the datapoint itself; never indexed as a tag, so values do not
+   * create new series the way `tags` do. Written once at capture, not editable
+   * afterwards. Caps, enforced by the agent and by ingestion: 16 keys, 64-char
+   * keys, 256-char values, 2 KB per point. (Named `attributes`, not `metadata`:
+   * "metadata" already means the series — device + stream + tags — everywhere
+   * else in Formant.) */
+  map<string, string> attributes = 22;
 }
 
 /* ControlDatapoint contains data sent from Formant teleop. */
@@ -51,6 +61,7 @@ message Datapoint {
     Point point = 8;
     Joy joy = 9;
     Bit bit = 10;
+    Text text = 11;
   }
 }
 
